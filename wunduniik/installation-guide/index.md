@@ -1,11 +1,8 @@
 ---
 layout: default
 title: Installation Guide
-dropdown: true
+parent: Wunduniik
 nav_order: 1
-children:
-  - title: System Requirements
-    permalink: /system-requirements/
 ---
 
 # Preamble
