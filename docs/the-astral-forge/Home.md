@@ -1,7 +1,5 @@
 ---
-layout: default
 title: Home
-parent: The Astral Forge
 nav_order: 1
 ---
 
