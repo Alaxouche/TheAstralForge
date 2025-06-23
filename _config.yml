@@ -1,5 +1,5 @@
-title: WTNC
-description: Documentation for Welcome to Night City and Cyberpunk THING
+title: Astral Forge
+description: Documentation for The Astral Forge modlists.
 remote_theme: just-the-docs/just-the-docs@v0.8.2
 color_scheme: dark
 nav_fold: false
@@ -13,7 +13,7 @@ search_enabled: true
 
 # Aux links for the upper right navigation
 aux_links:
-  "Collection Page":
-    - "https://next.nexusmods.com/cyberpunk2077/collections/iszwwe"
+  "Modlist Page":
+    - "https://www.nexusmods.com/skyrimspecialedition/mods/89632"
   "Discord":
-    - "https://discord.gg/eJdMQKnQVt"
+    - "https://discord.gg/gtr5hzvR69"
