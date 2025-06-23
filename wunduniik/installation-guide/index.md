@@ -9,6 +9,9 @@ has_toc: false
 permalink: false
 ---
 
+{% include custom-nav.html %}
+
+
 # Preamble
 This mod list is for Skyrim Special Edition 1.6.1170
 You must use this list with Anniversary Edition and the current updates of Skyrim. 
