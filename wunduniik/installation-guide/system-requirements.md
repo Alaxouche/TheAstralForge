@@ -1,10 +1,7 @@
 ---
 layout: default
 title: System Requirement
-parent: installation-guide
-nav_order: 1
-has_children: false
-permalink: /system-requirements/
+parent: Installation Guide
 ---
 
 # Preamble
