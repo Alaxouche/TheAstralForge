@@ -1,12 +1,11 @@
 ---
 layout: default
 title: Installation Guide
-slug: installation-guide
-parent: wunduniik
+dropdown: true
 nav_order: 1
-has_children: true
-has_toc: false
-permalink: false
+children:
+  - title: System Requirements
+    permalink: /books/
 ---
 
 {% include custom-nav.html %}
