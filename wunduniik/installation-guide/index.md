@@ -2,6 +2,7 @@
 layout: default
 title: Installation Guide
 slug: installation-guide
+parent: wunduniik
 nav_order: 1
 has_children: true
 has_toc: false
