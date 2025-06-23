@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Installation Guide
-parent: Ghost of the Grid
+parent: ghost-of-the-grid
 nav_order: 1
 ---
 
