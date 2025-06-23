@@ -1,0 +1,43 @@
+<style>
+  /* Custom link colors */
+  a {
+    color: #67B7D1;
+  }
+  
+  a:hover {
+    color: #89c9e3;
+  }
+  
+  /* Navigation links */
+  .site-nav .nav-list-link {
+    color: #67B7D1;
+  }
+  
+  /* Aux nav links (Collection Page, Discord) */
+  .site-header .aux-nav a {
+    color: #67B7D1;
+  }
+  
+  /* Active navigation item */
+  .nav-list-item .nav-list-link.active {
+    color: #67B7D1;
+  }
+  
+  /* Force ALL sections to be permanently expanded */
+  .nav-list-item > ul.nav-list {
+    display: block !important;
+  }
+  
+  /* Hide ALL expander arrows */
+  .nav-list-expander {
+    display: none !important;
+  }
+  
+  /* Add subtle underline only to main section headers (items with children) */
+  .nav-list-item:has(> ul.nav-list) > .nav-list-link {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+</style>
