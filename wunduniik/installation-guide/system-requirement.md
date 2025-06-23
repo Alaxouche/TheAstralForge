@@ -1,7 +1,7 @@
 ---
 layout: default
 title: System Requirement
-parent: Installation Guide
+parent: installation-guide
 nav_order: 1
 ---
 
