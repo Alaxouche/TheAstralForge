@@ -5,7 +5,7 @@ dropdown: true
 nav_order: 1
 children:
   - title: System Requirements
-    permalink: /books/
+    permalink: /system-requirements/
 ---
 
 {% include custom-nav.html %}
