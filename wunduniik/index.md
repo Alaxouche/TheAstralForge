@@ -6,5 +6,3 @@ has_children: true
 has_toc: true
 permalink: false
 ---
-
-{% include custom-nav.html %}
