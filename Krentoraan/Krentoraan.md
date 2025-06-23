@@ -1,1 +1,8 @@
-Ghost of the Grid
+---
+layout: default
+title: Krentoraan
+nav_order: 3
+has_children: true
+has_toc: false
+permalink: false
+---
