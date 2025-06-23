@@ -1,10 +1,10 @@
 ---
 layout: default
 title: System Requirement
-slug: system-requirement
 parent: installation-guide
 nav_order: 1
 has_children: false
+permalink: /system-requirements/
 ---
 
 {% include custom-nav.html %}
