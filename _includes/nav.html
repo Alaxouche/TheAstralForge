@@ -1,0 +1,18 @@
+<ul class="main-nav">
+  {%- comment -%} Pages sans parent → menu principal {%- endcomment -%}
+  {% assign roots = site.pages | where:"parent", nil | sort: "nav_order" %}
+  {% for p in roots %}
+    <li class="nav-item">
+      <a href="{{ p.url }}">{{ p.title }}</a>
+      {%- comment -%} Recherche des enfants de cette page {%- endcomment -%}
+      {% assign children = site.pages | where:"parent", p.slug | sort: "nav_order" %}
+      {% if children %}
+        <ul class="sub-nav">
+          {% for c in children %}
+            <li><a href="{{ c.url }}">{{ c.title }}</a></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
