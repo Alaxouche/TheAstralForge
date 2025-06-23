@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Installation Guide
-slug: Installation Guide
+slug: installation-guide
 nav_order: 1
 has_children: true
 has_toc: false
