@@ -1,5 +1,12 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
+gemspec
 
-gem "jekyll", "~> 3.9.5"
-gem "github-pages", "~> 231", group: :jekyll_plugins
-gem "just-the-docs", "0.10.1"
+gem "base64"
+gem "csv"
+
+gem "jekyll-github-metadata", ">= 2.15"
+
+gem "jekyll-include-cache", group: :jekyll_plugins
+gem "jekyll-sitemap", group: :jekyll_plugins
+
+gem "html-proofer", "~> 5.0", :group => :development
