@@ -158,18 +158,14 @@ GEM
     zeitwerk (2.7.2)
 
 PLATFORMS
-  arm64-darwin
-  x86_64-linux-gnu
+  arm64-darwin-23
+  x86_64-linux
 
 DEPENDENCIES
-  base64
-  bundler (>= 2.3.5)
-  csv
-  html-proofer (~> 5.0)
-  jekyll-github-metadata (>= 2.15)
-  jekyll-include-cache
-  jekyll-sitemap
-  just-the-docs!
+  jekyll (~> 4.4.1)
+  just-the-docs (= 0.10.1)
+  logger (= 1.6.4)
+  sass-embedded (= 1.78.0)
 
 BUNDLED WITH
    2.5.9
