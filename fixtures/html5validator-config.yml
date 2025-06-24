@@ -1,1 +1,5 @@
-root: _site
+# fixtures/html5validator-config.yml
+root: _site/          # dossier à scanner
+format: text          # au besoin
+ignore_re:
+  - "CSS: Parse Error"
