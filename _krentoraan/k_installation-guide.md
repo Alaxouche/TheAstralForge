@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Installation Guide
-parent: krentoraan
 nav_order: 1
 ---
 
