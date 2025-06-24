@@ -207,3 +207,30 @@ compress_html:
   profile: false
   # ignore:
   #   envs: all
+
+collections:
+  wunduniik:
+    permalink: "/:collection/:path/"
+    output: true
+
+  krentoraan:
+    permalink: "/:collection/:path/"
+    output: true
+
+  ghost-of-the-grid:
+    permalink: "/:collection/:path/"
+    output: true
+
+just_the_docs:
+  collections:
+    wunduniik:
+      name: Wunduniik
+      nav_fold: true
+
+    krentoraan:
+      name: Krentoraan
+      nav_fold: true
+
+    ghost-of-the-grid:
+      name: Ghost of the Grid
+      nav_fold: true
