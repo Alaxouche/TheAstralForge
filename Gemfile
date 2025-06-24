@@ -1,12 +1,11 @@
-source "https://rubygems.org"
-gemspec
+source 'https://rubygems.org'
 
-gem "base64"
-gem "csv"
+gem "jekyll", "~> 4.4.1" # installed by `gem jekyll`
+# gem "webrick"        # required when using Ruby >= 3 and Jekyll <= 4.2.2
 
-gem "jekyll-github-metadata", ">= 2.15"
+# gem "just-the-docs", "0.10.1" # pinned to the current release
+# gem "just-the-docs"        # always download the latest release
 
-gem "jekyll-include-cache", group: :jekyll_plugins
-gem "jekyll-sitemap", group: :jekyll_plugins
-
-gem "html-proofer", "~> 5.0", :group => :development
+gem "just-the-docs", "0.10.1"
+gem "sass-embedded", "1.78.0"
+gem "logger", "1.6.4"
