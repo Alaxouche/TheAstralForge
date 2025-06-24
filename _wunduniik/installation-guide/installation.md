@@ -14,7 +14,9 @@ nav_order: 2
 Before installing the modlist, here are some things you must do:  
 There is no workaround for a pirated copy of Skyrim, or pirated Creation Club content. If you ask for support with anything pirated, you will be banned.
 
-{: .warning }
+{: .warning}
+> **WARNING**
+>
 > If your Steam library is in Program Files, refer to this guide to move it elsewhere. Do not install do default Windows folders (Desktop, Documents, Downloads, etc.) as this will cause issues.
 
 In the Windows API (with some exceptions), the maximum length for a file path is 260 characters. For example, the maximum path on drive D is "D:\some 256-character path.
