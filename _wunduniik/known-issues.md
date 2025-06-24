@@ -25,5 +25,7 @@ While you play the list, you might run into a few issues that can vary from a si
 - Some NPCs you encounter might have neck seam or unmatching skin color.
 - Crash on entering whiterun jarl quarters. The issue was not identified yet.
 
-{: .warning }
+{: .warning}
+> **CAUTION**
+>
 > The vanilla start not working or being massively bugged is not an actual issue. The vanilla scene itself is extremely scripted and bugged already. With mods, especially other script or behavioral mods, it becomes unplayable. This is the reason why we use an alternate start mod. Please do not use the vanilla start and/or report a bug about it working, there is nothing to be done here.
