@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Installation Guide
-parent: Wunduniik
 nav_order: 1
 ---
 
