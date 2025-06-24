@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Installation
 parent: Installation Guide
 nav_order: 2
