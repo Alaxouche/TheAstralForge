@@ -86,7 +86,7 @@ jobs:
         with:
           root: _site/   
           config: fixtures/html5validator-config.yml
-          css: "false" 
+          css: false
       - name: Test with html-proofer
         run: bundle exec htmlproofer _site --ignore-urls "/github.com/,/web.archive.org/,/flickr.com/"
         env:
