@@ -85,6 +85,8 @@ jobs:
         uses: Cyb3r-Jak3/html5validator-action@8c6ac0aa42df299c0322ce9980fed61c10930a66
         with:
           config: fixtures/html5validator-config.yml
+          root: _site/
+          css: false
       - name: Test with html-proofer
         run: bundle exec htmlproofer _site --ignore-urls "/github.com/,/web.archive.org/,/flickr.com/"
         env:
