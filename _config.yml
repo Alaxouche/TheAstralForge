@@ -13,7 +13,7 @@ aux_links:
 back_to_top: true
 back_to_top_text: "Back to top"
 
-footer_content: "Copyright &copy; 2025 Gouldsonium"
+footer_content: "Copyright &copy; 2025 The Astral Forge"
 
 compress_html:
   clippings: all
