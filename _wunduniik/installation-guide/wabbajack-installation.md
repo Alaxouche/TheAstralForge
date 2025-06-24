@@ -30,6 +30,21 @@ Now you can follow the next steps in order to download and install Wunduniik Mod
  
 **Even if Wabbajack say installation complete, this doesn't mean you have finished. You Must follow the rest of the installation guide in order to have the list working properly. Otherwise you will have big issues.**
 
+**Installation Video:**
+
+To help you more if you're not much helped with textual guides, you can watch the following video that covers generic informations to correctly install any wabbajack modlist:
+
+<div class="youtube-container">
+  <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+    src="https://www.youtube.com/embed/nApuOZWp12c?si=LCdF66V9P1cpFXF0" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" 
+    allowfullscreen>
+  </iframe>
+</div>
+
 ## Problems With Installation
 
 It is possible that you may encounter an error with Wabbajack when installing. Some common issues are listed below.
