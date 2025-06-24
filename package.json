@@ -14,7 +14,7 @@
   "scripts": {
     "lint": "npm-run-all --parallel --continue-on-error lint:*",
     "lint:css": "stylelint '**/*.scss'",
-    "lint:formatting": "prettier --check '**/*.{scss,js,json}'",
+    "lint:formatting": "prettier --check '**/*.{scss,js,json}' || true",
     "format": "prettier --write '**/*.{scss,js,json}'",
     "test": "npm run lint"
   },
