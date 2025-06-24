@@ -26,17 +26,14 @@ For the modlist to work you must have some apps: Please ensure you have the late
 [https://dotnet.microsoft.com/download/dotnet/5.0/runtime](https://dotnet.microsoft.com/download/dotnet/5.0/runtime), and also [Visual C++ x64](https://aka.ms/vs/16/release/vc_redist.x64.exe).
 
 <p align="center">
-![Image](https://raw.githubusercontent.com/Lost-Outpost/lost-legacy/main/images/microsoft-net-5-0-installation.png)
+     <img src="https://raw.githubusercontent.com/Lost-Outpost/lost-legacy/main/images/microsoft-net-5-0-installation.png" >
 </p>
 
 To help you with the INIs configuration, I highly recommand to have installed [Sublime Text](https://www.sublimetext.com/)
 
-<img src="https://static.wixstatic.com/media/579922_da459dcbe3be46ad934f5ed3d962eca8~mv2.png/v1/fill/w_384,h_587,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e692b4cc9e2a94f37eec075d05c81bdd2d2a925dbf55944e1d2abfb660ab6d0f.png" 
-     alt="PageFile Configuration" 
-     align="right" 
-     width="200" />
-
 ## PageFile Configuration
+
+<img align="right" src="https://static.wixstatic.com/media/579922_da459dcbe3be46ad934f5ed3d962eca8~mv2.png/v1/fill/w_384,h_587,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e692b4cc9e2a94f37eec075d05c81bdd2d2a925dbf55944e1d2abfb660ab6d0f.png" alt="image" />
 
 **Bigger Skyrim modlists** need a lot of memory, and when there is not enough available it may fail allocating more.
 
@@ -63,12 +60,9 @@ To fix this, you’ll want to have a bigger pagefile. A pagefile is a file on yo
 
 **THIS IS NOT OPTIONAL, YOU CANNOT SKIP THIS STEP EVEN IF YOU HAVE 256 GB OF RAM.**
 
-<img src="[https://static.wixstatic.com/media/579922_1d3150…~mv2.jpg](https://static.wixstatic.com/media/579922_1d3150dfc46844dfaf1d657e56c723d3~mv2.jpg/v1/fill/w_396,h_478,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/579922_1d3150dfc46844dfaf1d657e56c723d3~mv2.jpg)" 
-     alt="Exclusions and AntiVirus" 
-     align="right" 
-     width="200" />
-     
 ## Exclusions and AntiVirus
+
+<img align="right" src="https://static.wixstatic.com/media/579922_1d3150dfc46844dfaf1d657e56c723d3~mv2.jpg/v1/fill/w_396,h_478,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/579922_1d3150dfc46844dfaf1d657e56c723d3~mv2.jpg" alt="image" />
 
 - Exclude **1)** `gamename.exe`, **2)** the game folder, and **3)** the shader cache folder from Windows Defender (or other) antivirus  
 - Also exclude the game from Control Flow Guard:  
