@@ -1,6 +1,6 @@
 ---
 title: Installation
-parent: Wunduniik
+parent: Installation Guide
 nav_order: 2
 ---
 
