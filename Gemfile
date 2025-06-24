@@ -7,5 +7,3 @@ gem "jekyll", "~> 4.4.1" # installed by `gem jekyll`
 # gem "just-the-docs"        # always download the latest release
 
 gem "just-the-docs", "0.10.1"
-gem "sass-embedded", "1.78.0"
-gem "logger", "1.6.4"
