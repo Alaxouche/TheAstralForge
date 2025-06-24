@@ -1,7 +1,7 @@
 title: The Astral Forge
 description: Documentation for The Astral Forge modlists
 theme: just-the-docs
-color_scheme: dark
+color_scheme: theastralforge
 url: "https://just-the-docs.com"
 baseurl: "" # Leave empty since it's at the root
 
