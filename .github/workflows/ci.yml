@@ -84,9 +84,9 @@ jobs:
       - name: Test with Nu Validator
         uses: Cyb3r-Jak3/html5validator-action@v7.2.0
         with:
+          root: _site/   
           config: fixtures/html5validator-config.yml
-          root: _site/
-          extra-args: --no-css
+          css: "false" 
       - name: Test with html-proofer
         run: bundle exec htmlproofer _site --ignore-urls "/github.com/,/web.archive.org/,/flickr.com/"
         env:
