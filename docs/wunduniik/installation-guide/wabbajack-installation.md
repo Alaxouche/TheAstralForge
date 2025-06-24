@@ -24,8 +24,8 @@ Now you can follow the next steps in order to download and install Wunduniik Mod
 9. Go and pet your nearest fluffy animal whilst Wabbajack does its thing. Alternatively read through this readme again.
 10. The installation is now complete. You can move on to the next section. If you have issues with installation, you can refer to Wabbajack Installation Issues.
 
-<div align="center">
-![Image](https://static.wixstatic.com/media/579922_21d8bf52feba448a8f93b5f734f3f2eb~mv2.png/v1/fill/w_600,h_313,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Wunduniik_Wabbajack.png)
+<p align="center">
+ <img src="https://static.wixstatic.com/media/579922_21d8bf52feba448a8f93b5f734f3f2eb~mv2.png/v1/fill/w_600,h_313,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Wunduniik_Wabbajack.png">
 </p>
  
 **Even if Wabbajack say installation complete, this doesn't mean you have finished. You Must follow the rest of the installation guide in order to have the list working properly. Otherwise you will have big issues.**
@@ -44,5 +44,5 @@ __A French translation mod is failing to download:__
 - - Start back the download. Once done you can revert those settings.
     
 <p align="center">
-![Image](https://static.wixstatic.com/media/579922_f5f5162f09f44b7dbcdf7719ae3699df~mv2.png/v1/fill/w_578,h_542,al_c,q_85,enc_avif,quality_auto/579922_f5f5162f09f44b7dbcdf7719ae3699df~mv2.png)
+ <img src="https://static.wixstatic.com/media/579922_f5f5162f09f44b7dbcdf7719ae3699df~mv2.png/v1/fill/w_578,h_542,al_c,q_85,enc_avif,quality_auto/579922_f5f5162f09f44b7dbcdf7719ae3699df~mv2.png">
 </p>
