@@ -2,6 +2,7 @@
 layout: default
 title: System Requirement
 parent: Installation Guide
+nav_order: 1
 ---
 
 # Preamble
