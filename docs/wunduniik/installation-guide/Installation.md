@@ -1,4 +1,8 @@
-
+---
+title: Installation
+parent: Wunduniik
+nav_order: 2
+---
 
 # Installation
 
