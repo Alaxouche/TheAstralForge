@@ -3,7 +3,6 @@ description: Documentation for The Astral Forge modlists
 theme: just-the-docs
 color_scheme: dark
 url: "https://just-the-docs.com"
-repository: Alaxouche/TheAstralForge
 baseurl: "" # Leave empty since it's at the root
 
 aux_links:
