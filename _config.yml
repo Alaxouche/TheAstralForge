@@ -13,11 +13,11 @@
 # you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Just the Docs
-description: A Jekyll theme for documentation
+title: The Astral Forge
+description: Documentation for The Astral Forge modlists
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://just-the-docs.com" # the base hostname & protocol for your site, e.g. http://example.com
-repository: just-the-docs/just-the-docs # for github-metadata
+repository: Alaxouche/TheAstralForge # for github-metadata
 
 permalink: pretty
 
@@ -110,8 +110,12 @@ heading_anchors: true
 
 # Aux links for the upper right navigation
 aux_links:
-  "Just the Docs on GitHub":
-    - "https://github.com/just-the-docs/just-the-docs"
+  "Discord":
+    - "https://discord.gg/gtr5hzvR69"
+  "Github":
+    - "https://github.com/Alaxouche/TheAstralForge"
+  "Patreon":
+    - "https://patreon.com/alaxouche"
 
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: false
