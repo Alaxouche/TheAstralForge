@@ -82,11 +82,9 @@ jobs:
       - name: Build Site
         run: bundle exec jekyll build
       - name: Test with Nu Validator
-        uses: Cyb3r-Jak3/html5validator-action@v7.2.0
+        uses: Cyb3r-Jak3/html5validator-action@8c6ac0aa42df299c0322ce9980fed61c10930a66
         with:
-          root: _site/   
           config: fixtures/html5validator-config.yml
-          css: false
       - name: Test with html-proofer
         run: bundle exec htmlproofer _site --ignore-urls "/github.com/,/web.archive.org/,/flickr.com/"
         env:
