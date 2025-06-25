@@ -1,13 +1,16 @@
 /* 1) TOCBOT de base */
 #tocbot-toc {
   position: fixed !important;
-  top: 90px;
-  /* si ton conteneur principal fait 1064px, tu peux calculer un right plus simple */
-  right: calc((100% - 1064px)/2);
+  top: var(--site-header-height, 80px);  /* adapte si ton header fait plus ou moins */
+  /* On part du centre (50%) + la moitié du container (ici 532px si ton container max-width = 1064px) + 1rem de gutter */
+  left: calc(50% + 532px + 1rem) !important;
   width: 250px;
-  z-index: 100;
-  background: rgba(255,255,255,0.9) !important;
+  padding: 1rem;
+  background: transparent !important;
+  border-left: 3px solid var(--color-primary, #5e7834) !important;
+  box-shadow: none !important;
   visibility: visible !important;
+  z-index: 10;
 }
 
 /* 2) Mode sombre */
@@ -28,5 +31,4 @@
 /* 3) Responsive (facultatif) */
 @media (max-width: 1200px) {
   #tocbot-toc { display: none !important; }
-  .main-content { margin-right: 0; }
 }
