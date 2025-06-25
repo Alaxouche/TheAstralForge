@@ -17,6 +17,8 @@ back_to_top_text: "Back to top"
 
 footer_content: "Copyright &copy; 2025 The Astral Forge"
 
+cache: true 
+
 compress_html:
   clippings: all
   comments: all
@@ -26,6 +28,29 @@ compress_html:
   profile: false
   # ignore:
   #   envs: all
+
+callouts_level: quiet # or loud
+callouts:
+  highlight:
+    color: yellow
+  important:
+    title: Important
+    color: blue
+  new:
+    title: New
+    color: green
+  tip:
+    title: Tip
+    color: green
+  note:
+    title: Note
+    color: purple
+  information:
+    title: Information
+    color: yellow
+  warning:
+    title: Warning
+    color: red
 
 collections:
   wunduniik:
