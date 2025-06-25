@@ -43,17 +43,5 @@ layout: table_wrappers
   {% if site.mermaid %}
     {% include components/mermaid.html %}
   {% endif %}
-  <script src="https://unpkg.com/tocbot@4/dist/tocbot.min.js"></script>
-  <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    tocbot.init({
-      tocSelector:  '.js-toc',
-      contentSelector: '.markdown-body',
-      headingSelector: 'h2, h3',
-      collapseDepth:   6,
-      scrollSmooth:    true
-    });
-  });
-  </script>
 </body>
 </html>
