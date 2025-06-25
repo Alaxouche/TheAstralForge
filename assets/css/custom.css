@@ -10,11 +10,6 @@
   visibility: visible !important;
 }
 
-/* décale réellement le contenu pour qu’il ne passe pas sous la TOC */
-.main-content {
-  margin-right: 290px;
-}
-
 /* 2) Mode sombre */
 .dark-mode #tocbot-toc {
   background-color: #1e1e1e !important;
