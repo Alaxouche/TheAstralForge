@@ -24,7 +24,7 @@ BethINI is a really useful tool to edit your Skyrim.ini, SkyrimCustom.ini and Sk
 - - iSize H=1080 -> Change this with your screen resolution Height
 - - iSize W=1920 -> Change this with your screen resolution Width
     <p>Those 2 lines can be changed directly through the Skyrim Launcher or BethINI
-</p>
+
 - [Launcher]
 - - sD3DDevice="NVIDIA GeForce RTX 3060TI" -> Change this with you GPU name  
 
