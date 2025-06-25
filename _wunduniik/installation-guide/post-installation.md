@@ -2,6 +2,7 @@
 layout: default
 title: Post Installation
 parent: Installation Guide
+usetocbot: true
 nav_order: 4
 ---
 
