@@ -19,7 +19,7 @@
 
   {% include_cached components/site_nav.html %}
 
-  <div class="js-toc"></div>
+  <script src="{{ '/assets/js/tocbot.min.js' | relative_url }}"></script>
 
   {% capture nav_footer_custom %}
     {%- include nav_footer_custom.html -%}
