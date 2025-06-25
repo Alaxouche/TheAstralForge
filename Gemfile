@@ -1,9 +1,11 @@
-source 'https://rubygems.org'
+# Gemfile
+source "https://rubygems.org"
 
-gem "jekyll", "~> 4.4.1" # installed by `gem jekyll`
-# gem "webrick"        # required when using Ruby >= 3 and Jekyll <= 4.2.2
+# Jekyll en version 4.4.1
+gem "jekyll", "~> 4.4.1"
 
-# gem "just-the-docs", "0.10.1" # pinned to the current release
-# gem "just-the-docs"        # always download the latest release
+# Thème Just-the-Docs (dernier patch de la 0.10.x)
+gem "just-the-docs", "~> 0.10.1"
 
-gem "just-the-docs", "0.10.1"
+# (Ruby ≥3.0 a retiré webrick de la stdlib ; utile si vous faites `jekyll serve`)
+gem "webrick", "~> 1.9"
