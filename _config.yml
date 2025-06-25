@@ -4,7 +4,7 @@ theme: just-the-docs
 color_scheme: dark
 logo: "/assets/logos/wunduniik.png"
 favicon_ico: "/assets/logos/wunduniik.ico"
-url: "https://www.wunduniikwiki.com"
+url: ""
 baseurl: "" # Leave empty since it's at the root
 
 aux_links:
