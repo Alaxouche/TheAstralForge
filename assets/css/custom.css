@@ -28,3 +28,23 @@
     margin-right: 0;
   }
 }
+
+/* Dark‐mode → tocbot */
+.dark-mode #tocbot-toc {
+  /* Fond plus foncé, sans “flash” blanc */
+  background-color: #1e1e1e !important;
+  border: 1px solid #333 !important;
+  box-shadow: none !important;
+  color: #ddd !important;
+}
+
+/* Liens du TOC en mode sombre */
+.dark-mode #tocbot-toc .toc-list a {
+  color: #8ab4f8 !important;
+}
+
+/* Lien actif / hover */
+.dark-mode #tocbot-toc .is-active-link > a,
+.dark-mode #tocbot-toc .toc-list a:hover {
+  color: #fff !important;
+}
