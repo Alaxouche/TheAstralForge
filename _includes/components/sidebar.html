@@ -19,13 +19,6 @@
 
   {% include_cached components/site_nav.html %}
 
-  <div class="sidebar__toc">
-    <h2>On this page</h2>
-    <div class="js-toc"></div>
-  </div>
-
-  <script src="{{ '/assets/js/tocbot.min.js' | relative_url }}"></script>
-
   {% capture nav_footer_custom %}
     {%- include nav_footer_custom.html -%}
   {% endcapture %}
