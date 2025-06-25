@@ -21,6 +21,8 @@ incremental: true
 
 cache: true
 
+heading_anchors: true
+
 compress_html:
   clippings: all
   comments: all
