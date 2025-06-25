@@ -2,11 +2,20 @@
 layout: default
 title: Post Installation
 parent: Installation Guide
+has_toc: true
 usetocbot: true
 nav_order: 4
 ---
 
-# Post Installation
+# {{ page.title }}
+{: .no_toc }
+
+## Table of Contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+---
 
 ## BethINI and INIs
 
