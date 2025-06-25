@@ -172,6 +172,13 @@ table tr:nth-child(even) th {
   list-style: none;
 }
 
+html.dark-mode .sidebar__toc {
+  background-color: var(--sidebar-color);  
+}
+html.dark-mode .js-toc a {
+  color: var(--link-color);
+}
+
 /**** FOR EMBEDDED YOUTUBE VIDEOS TO BE RESPONSIVE ****/
 /** See: https://youtu.be/9YffrCViTVk **/
 .iframe-container{
