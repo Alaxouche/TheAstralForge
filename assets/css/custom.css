@@ -1,50 +1,37 @@
-/**** FOR TOCBOT ******/
-/** See: https://tscanlin.github.io/tocbot/ **/
-/* =========== TOCBOT FIX =========== */
+/* 1) TOCBOT de base */
 #tocbot-toc {
   position: fixed !important;
   top: 90px;
-  /* on part du centre du viewport (+ la moitié du container) + un petit gap */
-  left: calc(50% + 532px + 20px);
-  /* ou plus simplement : right: calc((100% - 1064px)/2); */
+  /* si ton conteneur principal fait 1064px, tu peux calculer un right plus simple */
+  right: calc((100% - 1064px)/2);
   width: 250px;
-  z-index: 10;
-  background-color: rgba(255,255,255,0.9);
-  visibility: visible; /* si tu veux qu’il soit affiché */
+  z-index: 100;
+  background: rgba(255,255,255,0.9) !important;
+  visibility: visible !important;
 }
 
-/* on déplace le flux principal pour ne pas qu’il soit sous le TOC */
+/* décale réellement le contenu pour qu’il ne passe pas sous la TOC */
 .main-content {
-  /* 250px (toc) + 20px (gap) + 20px (repli éventuel) */
   margin-right: 290px;
 }
 
-/* déclencheur responsive (facultatif) */
-@media screen and (max-width: 1200px) {
-  #tocbot-toc {
-    display: none;
-  }
-  .main-content {
-    margin-right: 0;
-  }
-}
-
-/* Dark‐mode → tocbot */
+/* 2) Mode sombre */
 .dark-mode #tocbot-toc {
-  /* Fond plus foncé, sans “flash” blanc */
   background-color: #1e1e1e !important;
   border: 1px solid #333 !important;
   box-shadow: none !important;
   color: #ddd !important;
 }
-
-/* Liens du TOC en mode sombre */
 .dark-mode #tocbot-toc .toc-list a {
   color: #8ab4f8 !important;
 }
-
-/* Lien actif / hover */
 .dark-mode #tocbot-toc .is-active-link > a,
 .dark-mode #tocbot-toc .toc-list a:hover {
   color: #fff !important;
+}
+
+/* 3) Responsive (facultatif) */
+@media (max-width: 1200px) {
+  #tocbot-toc { display: none !important; }
+  .main-content { margin-right: 0; }
 }
