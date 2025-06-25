@@ -19,6 +19,11 @@
 
   {% include_cached components/site_nav.html %}
 
+  <div class="sidebar__toc">
+    <h2 class="sidebar__toc-title">On this page</h2>
+    <div class="js-toc"></div>
+  </div>
+
   {% capture nav_footer_custom %}
     {%- include nav_footer_custom.html -%}
   {% endcapture %}
