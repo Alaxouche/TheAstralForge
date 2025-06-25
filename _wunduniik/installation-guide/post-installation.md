@@ -7,8 +7,7 @@ usetocbot: true
 nav_order: 4
 ---
 
-# {{ page.title }}
-{: .no_toc }
+# Post Installation
 
 ## Table of Contents
 {: .no_toc .text-delta }
