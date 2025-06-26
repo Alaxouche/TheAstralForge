@@ -9,10 +9,14 @@ nav_order: 1
 
 ## System Requirements
 
-As Wunduniik is a modlist modlist based on graphics, you must have a good graphic card.  
-**YOU NEED 500GB free to download the modlist**
+Only, Windows 10 and 11 work with Wabbajack fully. LTSC, special variants, lightened editions or any other modified variant **WILL NOT WORK**. Your windows version **must be 21H2 or newer** to run both Wabbajack and Wunduniik.
 
-{: .note } If the space requirement is uncomfortable, remember that you can delete downloads and/or the french translations once the list is successfully installed. You can also set your download location to a different drive than the installation location; more on that later.
+Running the list from Hard Disk Drives or external drives is **STRONGLY ADVISED AGAINST**. A lot of content is swapped at game run time and, as a result, fast storage and RAM are needed.
+
+As Wunduniik is a modlist modlist based on graphics, you must have a good graphic card.  
+**YOU NEED 500GB free to download the modlist**: ~300GB for the installation size and ~180GB for the download size 
+
+{: .note } If the space requirement is uncomfortable, remember that you can delete downloads once the list is successfully installed. You can also set your download location to a different drive than the installation location; more on that later.
 
 | Configuration         | CPU        | GPU                | RAM          | Stockage               | Écran            | FPS |
 |-----------------------|------------|--------------------|--------------|------------------------|------------------|-----|
