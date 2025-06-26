@@ -9,22 +9,22 @@ nav_order: 4
 > This section shows you the exact content and order placement of Wunduniik's mods and plugins.  
 > Click to expand or collapse.
 
-<details>
+<details markdown="1">
   <summary><strong>Show / Hide plugins load order</strong></summary>
 
-  ```text
+  ```
   {% for plugin in site.data.loadorder %}
   {{ plugin }}
   {% endfor %}
-```  
+  ```  
 </details>
 
-<details>
+<details markdown="1">
   <summary><strong>Show / Hide mod order</strong></summary>
 
-  ```text
+  ```
   {% for plugin in site.data.modlist %}
   {{ plugin }}
   {% endfor %}
-```  
+  ```  
 </details>
