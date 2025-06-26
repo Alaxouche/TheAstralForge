@@ -2,48 +2,37 @@
 title: Home
 layout: home
 nav_order: 1
-description: "Documentation for **The Astral Forge** modlists."
+description: "Official documentation for **The Astral Forge** modlists."
 permalink: /
 ---
 
 # The Astral Forge
 {: .fs-9 }
 
-A collective of modlists and modlist authors for many game, primarely Skyrim Special Edition and Cyberpunk 2077.
+The Astral Forge is a collective repository of curated modlists and their authors, primarily for **The Elder Scrolls V: Skyrim Special Edition** and **Cyberpunk 2077**.
 {: .fs-6 .fw-300 }
 
-[Get started now](#getting-started){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[View it on GitHub][Just the Docs repo]{: .btn .fs-5 .mb-4 .mb-md-0 }
+[Get Started](#getting-started){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
+[View on GitHub][https://github.com/Alaxouche/TheAstralForge]{: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
 
-## Join Our Discord Server
+## Join Our Discord Community
 
-Get to [Alaxouche's Modding Hub](https://discord.gg/alaxouche-s-modding-hub-750268919201398805) in order to be able to talk with our community, to get help with your personal modding, share screenshots, talk about lore...
-We have also our own section for Wunduniik, including a help/bug report channel, an announcement channel, discussion channel... Polls and announcement concerning the future of the list are made regularly, you don't want to miss this!
-So join our discord server and meet with the Wunduniik Team and Alaxouche!
+Engage with our community on [Alaxouche’s Modding Hub](https://discord.gg/alaxouche-s-modding-hub-750268919201398805) to receive personalized modding assistance, share screenshots, discuss creative lore, and stay informed on project developments. We host dedicated channels for the **Wunduniik** modlist—including support, bug reporting, and announcements—and conduct regular polls and planning discussions. Join us to collaborate directly with the Wunduniik Team and our broader community.
 
-## Getting started
+## About Us
 
-The [Just the Docs Template] provides the simplest, quickest, and easiest way to create a new website that uses the Just the Docs theme. To get started with creating a site, just click "[use the template]"!
+The Astral Forge was established by Alaxouche in September 2020 as the official repository for the Wunduniik modlist. Since then, it has expanded and rebranded—first to Alaxouche’s Modding Hub and now to The Astral Forge—hosting four flagship modlists: **Wunduniik**, **Krentoraan**, **Ghost of the Grid**, and **Zuldolok**. We welcome submissions for additional modlists to increase visibility for authors and strengthen our collective credibility.
 
-{: .note }
-To use the theme, you do ***not*** need to clone or fork the [Just the Docs repo]! You should do that only if you intend to browse the theme docs locally, contribute to the development of the theme, or develop a new theme based on Just the Docs.
+This site replaces the former WunduniikWiki.com, offering a modern, responsive design with theme switching, a streamlined interface, and up-to-date, clearly organized information.
 
-You can easily set the site created by the template to be published on [GitHub Pages] – the [template README] file explains how to do that, along with other details.
+## Getting Started
 
-If [Jekyll] is installed on your computer, you can also build and preview the created site *locally*. This lets you test changes before committing them, and avoids waiting for GitHub Pages.[^2] And you will be able to deploy your local build to a different platform than GitHub Pages.
+Our documentation provides comprehensive installation guides, changelogs, load orders, and known-issue reports essential for a seamless mod installation experience. Future updates will include detailed gameplay guides to enhance user experience. At present, the Wunduniik installation guide is fully implemented.
 
-More specifically, the created site:
+## Code of Conduct
 
-- uses a gem-based approach, i.e. uses a `Gemfile` and loads the `just-the-docs` gem
-- uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages
+Just the Docs is committed to fostering an inclusive and respectful environment.
 
-Other than that, you're free to customize sites that you create with the template, however you like. You can easily change the versions of `just-the-docs` and Jekyll it uses, as well as adding further plugins.
-
-{: .note }
-See the theme [README][Just the Docs README] for how to use the theme as a gem without creating a new site.
-
-## About the project
-
-Just the Docs is &copy; 2017-{{ "now" | date: "%Y" }} by [Patrick Marsceill](https://patrickmarsceill.com).
+[Review our Code of Conduct](https://github.com/just-the-docs/just-the-docs/tree/main/CODE_OF_CONDUCT.md) on GitHub.
