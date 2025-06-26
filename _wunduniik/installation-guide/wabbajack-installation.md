@@ -2,7 +2,6 @@
 layout: default
 title: Wabbajack Installation
 parent: Installation Guide
-usetocbot: true
 nav_order: 3
 ---
 
