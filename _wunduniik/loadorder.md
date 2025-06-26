@@ -13,7 +13,7 @@ Click to expand or collapse.
   <summary><strong>Show / Hide plugins load order</strong></summary>
 
   ```plaintext
-  {% include_relative ../assets/loadorder/loadorder.txt %}
+  {% include loadorder/loadorder.txt %}
   ```
 </details>
 
@@ -21,6 +21,6 @@ Click to expand or collapse.
   <summary><strong>Show / Hide mod order</strong></summary>
 
   ```plaintext
-  {% include_relative ../assets/loadorder/modlist.txt %}
+  {% include loadorder/modlist.txt %}
   ```
 </details>
