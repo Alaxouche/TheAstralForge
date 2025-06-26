@@ -2,8 +2,8 @@ title: The Astral Forge
 description: Documentation for The Astral Forge modlists
 theme: just-the-docs
 color_scheme: dark
-logo: "/assets/logos/wunduniik.png"
-favicon_ico: "/assets/logos/wunduniik.ico"
+logo: "/assets/logos/theastralforge.png"
+favicon_ico: "/assets/logos/theastralforge.ico"
 url: ""
 baseurl: "" # Leave empty since it's at the root
 
