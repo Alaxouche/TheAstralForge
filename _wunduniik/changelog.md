@@ -9,10 +9,107 @@ nav_order: 2
 In this section you will find changelogs for the modlist since its release. You can track down precisely everything that gets added, removed, fixed, tweaked and updated.
 <div style="margin-bottom: 1rem;"></div>
 <details markdown="1">
+
+<summary>v5.9.0 - June 26, 2025</summary>
+
+Update Importance: MAJOR  
+NOT SAVE COMPATIBLE  
+
+SINCE THIS UPDATE, WUNDUNIIK HAS BECOME AN OFFICIAL MODLIST ON WABBAJACK  
+  
+### Additions
+- Added Metal Attracts Lightning - Lightning Rod
+- Added Wish Magic
+- Added Spooning of Skyrim
+- Added Dwemer Deep - Titans and Divers
+- Added BFCO Samurai - Dai Katana 2H Katana Animation
+- Added (ENB) Underwater Distortion Shader for ENB
+- Added Snazzy Upper Wardrobes - Skyrim 3D Furniture Patch
+- Added Viper Armor
+- Added Viper Armor - SPID
+- Added Wabbajack Rework
+- Added Retextured Pulsing Daedra Heart
+- Added Bird and Chicken Nests
+- Added Nordic Barnacle Redone
+- Added Talkative Seekers - Mihail Monsters and Animals
+- Added Dynamic Location Pop-ups
+- Added Creep Cluster Collision Fixes
+- Added Ice Wraith Teeth Collision Fixes
+- Added Animated Tentacles for the GlowingMushrooms
+- Added Glorious Doors of Skyrim - Immersion Patch and Worldspace Compatibility
+
+### Removals
+- Removed Icy Wraith Teeth
+- Removed Nocturnal Moths
+- Removed Kanjs - Bird Nests and Eggs - up to 4k
+- Removed Kanjs Nests Egg Harvesting Fix
+- Removed Kanjs - Skull of Corruption
+- Removed Kanjs - Chaurus Eggs Animated and Motion
+- Removed Kanjs - Briar Heart Beating and Animated
+- Removed Kanjs - Heart Stone Beating and Animated
+- Removed Kanjs - Daedra Heart Animated and Beating Motion
+- Removed Kanjs - Nordic Barnacle 3D Plus
+- Removed Diverse Bird's Nests - Base Object Swapper
+- Removed Unplayable Faction Armor SE - 3BA Realistic Bodyslide
+- Removed Edge UI - Wheeler Reskin
+- Removed No Sunlight Through Mountains
+- Removed Quick Item Transfer
+- Removed TMD Epic Waterfalls
+  
+### Fixes and Tweaks
+- Fixed potential CTDs caused by latest update of dyndolod DLL NG
+- Fixed potential CTDs caused by SMP
+- Fixed Understone Keep invisible bridge collision
+- Fixed floating signs near whiterun bridge
+- Fixed 2h katanas animations
+- Fixed Craddlestone barrow wrong teleport location
+- Fixed missing infos on widescreen UIs
+- Fixed Active effect overlaps with STB widgets
+- Fixed main menu for widescreen
+- Fixed first person torch lighting
+- Fixed the CPU affinity using my own values for everyone
+- Improved stability and performances again
+- Remade the website
+
+### Updates
+- Updated Dovahnique's Diverse Dark Elf Lanterns (BOS - ENB Lights - High Poly)
+- Updated Slightly Better Rock Cairns
+- Updated Precision Creatures
+- Updated Ryn's Alchemist's Shack - Patch Collection
+- Udpated Dynamic Female Weather Idles
+- Updated Campfire Animations
+- Updated Orc Exiles - Rift Watchtower
+- Updated Phoenix Compendium
+- Updated No Morthal Snow - Redone
+- Updated HDT-SMP Slot 32 fix
+- Updated Animated Ice Floes
+- Updated Locked Chests Have Keys - Patch Collection
+- Updated Natural Waterfalls
+- Updated Pandora Behaviour Engine
+- Updated Animation Ledge Block NG
+- Updated Dismembering Framework
+- Updated Chakra's Creatures - Scribers
+- Updated Edge UI - Explorer Addon
+- Updated Skyking Signs
+- Updated Skyking Unique Signs
+- Updated DynDOLOD DLL NG and Scripts
+- Updated Sanguine Symphony - Creature Compatibility Patch - SkyPatcher
+- Updated Diverse Chicken Coops - Base Object Swapper
+- Updated Core Impact Framework (CIF)
+- Updated Golden Dwemer Pipework Reworked
+- Updated NPC Spell Variance - Spell Variety AI
+- Updated Water for ENB
+- Updated RogueUnicorn - City Trees
+- Updated JellyFishInLoop SkyParkour animations
+- Updated Bjorn - Fully Voiced Follower
+- Updated Graywinter
+</details>
+
+<details markdown="1">
 <summary>v5.8.0 - June 18, 2025</summary>
 
-__**Update Importance: MAJOR**__  
-__**NOT SAVE COMPATIBLE**__
+Update Importance: MAJOR  
+NOT SAVE COMPATIBLE  
   
 ### Additions
 
