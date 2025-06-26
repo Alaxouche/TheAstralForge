@@ -6,25 +6,21 @@ nav_order: 4
 
 # Wunduniik Load Order
 
-> This section shows you the exact content and order placement of Wunduniik's mods and plugins.  
-> Click to expand or collapse.
+This section shows you the exact content and order placement of Wunduniik's mods and plugins.  
+Click to expand or collapse.
 
 <details markdown="1">
   <summary><strong>Show / Hide plugins load order</strong></summary>
 
+  ```plaintext
+  {% include_relative assets/loadorder/loadorder.txt %}
   ```
-  {% for plugin in site.data.loadorder %}
-  {{ plugin }}
-  {% endfor %}
-  ```  
 </details>
 
 <details markdown="1">
   <summary><strong>Show / Hide mod order</strong></summary>
 
+  ```plaintext
+  {% include_relative assets/loadorder/modlist.txt %}
   ```
-  {% for plugin in site.data.modlist %}
-  {{ plugin }}
-  {% endfor %}
-  ```  
 </details>
