@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Load Order"
-permalink: /mods/
+title: Load Order
+nav_order: 3
 ---
 
 # Wunduniik Load Order
