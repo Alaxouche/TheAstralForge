@@ -9,12 +9,12 @@ nav_order: 1
 
 ## System Requirements
 
-Only, Windows 10 and 11 work with Wabbajack fully. LTSC, special variants, lightened editions or any other modified variant **WILL NOT WORK**. Your windows version **must be 21H2 or newer** to run both Wabbajack and Wunduniik.
+Only, Windows 10 and 11 work with Wabbajack fully. LTSC, special variants, lightened editions or any other modified variant **WILL NOT WORK**. Your windows version **must be 21H2 or newer** to run both Wabbajack and Ghost of the Grid.
 
 Running the list from Hard Disk Drives or external drives is **STRONGLY ADVISED AGAINST**. A lot of content is swapped at game run time and, as a result, fast storage and RAM are needed.
 
-As Wunduniik is a modlist modlist based on graphics, you must have a good graphic card.  
-**YOU NEED 500GB free to download the modlist**: ~300GB for the installation size and ~180GB for the download size 
+As Ghost of the Grid is a modlist modlist based on graphics, you must have a good graphic card.  
+**YOU NEED 50GB free to download the modlist**: ~25GB for the installation size and ~25GB for the download size 
 
 {: .note } If the space requirement is uncomfortable, remember that you can delete downloads once the list is successfully installed. You can also set your download location to a different drive than the installation location; more on that later.
 
@@ -39,7 +39,7 @@ To help you with the INIs configuration, I highly recommand to have installed [S
 
 <img align="right" src="https://static.wixstatic.com/media/579922_da459dcbe3be46ad934f5ed3d962eca8~mv2.png/v1/fill/w_384,h_587,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e692b4cc9e2a94f37eec075d05c81bdd2d2a925dbf55944e1d2abfb660ab6d0f.png" alt="image" />
 
-**Bigger Skyrim modlists** need a lot of memory, and when there is not enough available it may fail allocating more.
+**Bigger Cyberpunk modlists** need a lot of memory, and when there is not enough available it may fail allocating more.
 
 To fix this, you’ll want to have a bigger pagefile. A pagefile is a file on your disk Windows will use when there is not enough RAM available.
 
@@ -75,7 +75,7 @@ To fix this, you’ll want to have a bigger pagefile. A pagefile is a file on yo
   3. Click **Program Settings**  
   4. Click **Add program to customize**  
   5. Click **Add by program name**  
-  6. Type **SKSE64_Loader.exe**  
+  6. Type **Cyberpunk2077.exe **  
   7. Scroll down to **Control flow guard (CFG)**  
   8. Click **Override**  
   9. Switch to **Off**
