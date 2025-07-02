@@ -10,6 +10,95 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 <details markdown="1">
 
+<summary>v5.10.0 - July 2, 2025</summary>
+
+Update Importance: MAJOR  
+NOT SAVE COMPATIBLE  
+  
+### Additions
+- Added Reinforced Civil War Camps
+- Added Reinforced Civil War Camps - Patch Collection
+- Added Hail - Hailstorms of Skyrim
+- Added Maybe Better Windhelm Valunstrad - Mesh Tweaks and Fixes
+- Added Helmet Toggle 2 - SMP Hair Fix
+- Added ElSopa - Misc Ruins Redone
+- Added More Capital Whiterun Expansion patches
+- Added Constellations - Additional Player Skills
+- Added Firmament
+- Added No More Glowy Effects
+- Added 3D Whiterun Trellis - Complex Material
+
+### Removals
+- Removed Ancient Pottery
+- Removed Ruins Large Urn ANCIENT POTTERY retexture
+- Removed Custom Skills Menu - A Custom Skills Framework Unified Menu
+- Removed Sets of Skills - Custom Skill Framework Conversion
+- Removed Custom Skills - VIGILANT
+- Removed Custom Skills - Unarmoured Defense
+- Removed Custom Skills Menu - Custom Icons
+- Removed Ruins Tools Retexture
+- Removed zzjay Skyrim Attire - Quick 3BA Conversion
+- Removed Pilgrim - Custom Skills Framework Addon
+- Removed Companions Perk Tree
+- Removed The Dragon Cult - Priesthood
+- Removed Frigid Frostmere Crypt - FuzzBeed's Dungeons
+- Removed Mythical Mzark - FuzzBeed's Dungeons
+- Removed Enigmatic Eldergleam Sanctuary - FuzzBeed's Dungeons
+- Removed Brutish Boulderfall Cave - FuzzBeed's Dungeons
+- Removed Markarth LOD Unlock
+- Removed Creepy Crawly Cronvangr Cave - FuzzBeed's Dungeons
+- Removed Dylbills Papyrus Functions
+  
+### Fixes and Tweaks
+- Fixed many CTDs caused by Dylbills Papyrus Functions
+- Tweaked custom skills tree to now appear in the main skill menu instead of a custom separate
+- Fixed some smp issues
+- Fixed most of meshes issues using SNIFF tool
+
+### Updates
+- Updated Ryn's Standing Stones
+- Updated Khajiit Has Tents
+- Updated Solitude Weaver's Lane
+- Updated Ultra Shields
+- Udpated Golden Dwemer Pipeworks Redone Patches for Various Mods
+- Updated Lux Orbis - Patch Hub
+- Updated Ryn's Mehrunes Dagon - Patch Collection
+- Updated G.I.R.T.H. - Gildergreen Is Really Thicc HD
+- Updated (ENB) Silent Horizons 2 - Universal Core
+- Updated (ENB) ENB Extender for Skyrim
+- Updated (ENB) Silent Horizons 2 - Shader Core
+- Updated ERM - Complex Parallax Material
+- Updated Leather Armors Retexture
+- Updated Modern Lighting Overhaul
+- Updated Northern Roads - Patches Compendium
+- Updated Golden Dwemer Pipework Reworked
+- Updated Adventurer's Start - An Alternate Perspective Addon
+- Updated Occlusion for Quest Mods
+- Updated Vanilla Dwemer Meshes - Golden Dwemer Pipeworks Redone Patch
+- Updated Roleplaying in Skyrim - Evolving Economy
+- Updated Helmet Toggle 2
+- Updated MfgFix NG
+- Updated Flat World Map Framework
+- Updated SkyPatcher
+- Updated Snazzy Dawnstar AIO
+- Updated Snazzy Riften AIO
+- Updated Snazzy Interiors - Patch Collection
+- Updated Snazzy Location Resources
+- Updated Vanaheimr - Ore Veins
+- Updated Better Optimized and Fixed Riften Meshes
+- Updated Bjorn - Fully Voiced Follower
+- Updated Spell Perk Item Distributor
+- Updated RogueUnicorn - City Trees
+- Updated NPC Spell Variance - Spell Variety AI
+- Updated Wish Magic
+- Updated Animated Ice Floes
+- Updated Slightly Better Rock Cairns
+- Updated Dwemer Deep - Titans and Divers
+- Updated Zzjay Skyrim Attire - CBBE 3BA
+</details>
+
+<details markdown="1">
+
 <summary>v5.9.0 - June 26, 2025</summary>
 
 Update Importance: MAJOR  
