@@ -13,7 +13,7 @@ Click to expand or collapse.
   <summary><strong>Show / Hide plugins load order</strong></summary>
 
   ```plaintext
-  {% include loadorder/loadorder.txt %}
+  {% include loadorder_wunduniik/loadorder.txt %}
   ```
 </details>
 
@@ -21,6 +21,6 @@ Click to expand or collapse.
   <summary><strong>Show / Hide mod order</strong></summary>
 
   ```plaintext
-  {% include loadorder/modlist.txt %}
+  {% include loadorder_wunduniik/modlist.txt %}
   ```
 </details>
