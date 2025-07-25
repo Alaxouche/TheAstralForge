@@ -10,6 +10,133 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v1.2.0 - July 25, 2025</summary>
+Update Importance: MAJOR  
+SAVE COMPATIBLE  
+
+Additions:
+- Added Never Fade Away - Main Menu Themes (2 Versions)
+- Added Responsive V
+- Added Netrunner Suit Pt7 - Both V
+- Added Particles Flickering Fix (Watson)
+- Added Filter Saves by Lifepath and Type
+- Added Streaming Bug Workaround
+- Added Vehicle Exit Fix for 2.3
+- Added Extra Hands (cyberware)
+- Added Enhanced Police Lights System
+- Added NISSAN GT-R 'Lone Wanderer'
+- Added Night City Fog Nulled
+- Added Stop spammers
+- Added NCPD Cache - New Iconic Weapons
+- Added EconomyPunk
+- Added New Game Plus - Native
+- Added H10 Apartment Exterior Trash Remover
+- Added HUD Fixes - fix disappearing HUD element and quest dialogs
+- Added The Passenger - Feature Settings
+- Added Better UI Character Lighting
+- Added Stash and Backpack Search
+- Added The RVC00N Dumpster - Techie Micro Jacket (M) (GS) (AXL)
+- Added Tactical Style Outfit Pt2 - Both V
+- Added Apartment Dropoffs
+- Added CasinoLoot - The Weapons Casino
+- Added Quickhack Hotkeys
+
+Removals:
+- Removed Preem Menu (Background Blur - Pause Menu - Animated Snow)
+- Removed Sound SFX Fixes
+- Removed Weapon Sound Remake
+- Removed Appearance Change Unlocker - Character Preset Manager
+
+Fixes and Tweaks:
+- Fixed all issues related to mods with v2.3
+- Removed some remaining Redmod mods
+
+Updates:
+- Updated Blur Begone (Clear Materials with Refraction)
+- Updated Cyberarms Collection 2.0 - Archive-XL
+- Updated Immersive Rippers - Dogtown
+- Updated Input Loader
+- Updated Lifepath Bonuses and Gang-Corp Traits
+- Updated Panam Romanced Enhanced
+- Updated Photo Mode Unlocker
+- Updated RED4ext
+- Updated Virtual Car Dealer
+- Updated Say Something Damn It
+- Updated Lizzie's Braindances
+- Updated Nissan Skyline 2000GT-R
+- Updated zzz_NeuroMultiMaterialXtender.zip
+- Updated H10 Megabuilding Unlocked
+- Updated Plate Carrier Vest and Tactical Belt - for both Vs
+- Updated Tyger Cache - New Iconic Weapons
+- Updated NISSAN GT-R 'Lone Wanderer'
+- Updated Dogtown Location Visuals Nulled - a general fix for lighting mods
+- Updated Military Palette Texture Library
+- Updated NC Fashion Virtual Atelier
+- Updated HUD Painter
+- Updated Manavortex Atelier Store
+- Updated NC Autoshop's Repair
+- Updated Immersive Food Vendors
+- Updated Immersive Food Vendors - Dogtown
+- Updated Cop Killer
+- Updated Toyota Supra
+- Updated Lamborghini Murcielago SV
+- Updated Damage Scaling and Balance (Formerly Level Scaling)
+- Updated VEEGEE SHOP 3
+- Updated ReLUX (Lighting Redux - Accurate Lighting)
+- Updated Lotus Esprit Turbo
+- Updated Third-Person (TPP) Vehicle Camera Tool
+- Updated Deceptious Bug Fixes
+- Updated Immersive Night City Fixes
+- Updated Custom Map Markers
+- Updated NCPD Cache - New Iconic Weapons
+- Updated Night City Enhanced and Expanded - NPCs
+- Updated Cyber Engine Tweaks
+- Updated Mitsubishi Eclipse GSX (1999)
+- Updated Hyst Hair Collection - CCXL
+- Updated Trigger Mode Control
+- Updated Limited HUD
+- Updated Quickhack Fixes
+- Updated Nissan 350Z
+- Updated Honda S2000
+- Updated Ducati Supersport
+- Updated RedFileSystem
+- Updated RedData
+- Updated Autoloot
+- Updated Mod Settings
+- Updated Muted Markers
+- Updated Night City Interactions - Core
+- Updated New Lifepath Intro - Fresh Start
+- Updated Night City Visuals Nulled
+- Updated TweakXL
+- Updated ArchiveXL
+- Updated In-World Navigation
+- Updated Immersive Bartenders
+- Updated Black Chrome - Cyberware Expansion
+- Updated e3 2018 bradbury district
+- Updated Immersive Night City Fixes
+- Updated Native Interactions Framework
+- Updated Stealthrunner - Stealth Gameplay Expansion
+- Updated Night City Enhanced and Expanded - Enemies
+- Updated The RVC00N Dumpster 2 - PinkyDude's Virtual Shop
+- Updated Untrack Quest Ultimate - No Main Quest re-tracking - No leftovers
+- Updated Fast Travel from anywhere to everywhere - Redscript
+- Updated Weapon Conditioning (Tier System Overhaul)
+- Updated Driver Combat 2.0
+- Updated They Will Remember
+- Updated KiasuBurger Cyberware Core
+- Updated Not So Good Draw Distance Mod
+- Updated No More Hard-coded Keybinds (Better Controls Menu continued)
+- Updated Inplace Streamingsectors Nulled
+- Updated Nova traffic swap car list and collection
+- Updated Codeware
+- Updated Database Fixes
+- Updated Luxury corporate the Glen apartment - archivexl
+- Updated Taxi Work in Night City
+- Updated Pagani Huayra
+
+</details>
+
+<details markdown="1">
 <summary>v1.1.0 - July 08, 2025</summary>
 Update Importance: MAJOR  
 SAVE COMPATIBLE  
