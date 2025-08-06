@@ -10,6 +10,169 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v1.3.0 - August 06, 2025</summary>
+Update Importance: MAJOR  
+SAVE COMPATIBLE  
+
+Additions:
+- Added EconomyPunk
+- Added ENV Tuner (Weather - Lighting - Vignette Adjustments without Conflict)
+- Added Improved Yaiba ARV-Q340 Semimaru
+- Added Enhanced Vehicle System
+- Added Extra Interiors
+- Added Shift (Customizable Dynamic Vehicle Camera)
+- Added Ragdoll Execution Fix
+- Added Better Throwing Knives and Weapons - Redscript
+- Added NCI Addon - Santo Domingo
+- Added NCI Addon - City Center
+- Added Metro Pocket Guide
+- Added Named Saves
+- Added Looting QoL
+- Added Loot Icons Extension
+- Added Light Beams Fix
+- Added Sound SFX Fixes
+- Added New Lifepath Intro - Fresh Start
+- Added ReLUX Plus (Riders on the Storm)
+- Added The Zenitex Military Store
+- Added Animals Cache - New Iconic Weapons
+- Added Night City Fog Nulled
+- Added Killing Moon - Lifepath Dialog Restored
+- Added Konpeki Plaza Restored
+- Added Yucca Restored
+- Added Cyber Vehicle Overhaul - DLC Bundle
+- Added Konpeki Plaza Unlocked 2.3
+- Added Spaceport Unlocked
+- Added Fast Travel To Spaceport
+- Added BlackRoot Sigil body tattoo
+- Added Never Fade Away - Main Menu Themes (2 Versions)
+- Added NC Autoshop's Repair
+- Added Responsive V
+- Added e3 2018 bradbury district
+- Added Enhanced Police Lights System
+- Added Particles Flickering Fix (Watson)
+- Added Vehicle Exit Fix for 2.3
+
+Removals:
+- Removed Authentic Shift (QoL Gear Ratios Shifts Audio Sound ASMR and OPTIONAL Tuning System)
+- Removed Custom Level Cap
+- Removed Custom Level Cap - Cyberware Vendor Fix
+- Removed E3 Smart Windows
+- Removed Extra Vehicle Controls
+- Removed Law Enforcement Overhaul
+- Removed E3 Menu Background
+- Removed Any Scope
+- Removed Better Optical Camo
+- Removed No More Tricks 2.0
+- Removed Upgrade Weapons Unlocked 2.12 FIX
+- Removed Immersive Breathing
+- Removed Purify The UI - disable annoying 2D ghosting blur and 3D perspective shader effects - No More Lens Distortion or Blurry Double Vision Interface HUD
+- Removed Blade from the bits (Blackwall)
+- Removed The Weapons ARE NOT broken 2.1
+- Removed John Wick Inspired - Baba Yaga
+- Removed The Lamp Lighter - Streetlamp Time Control
+- Removed Immersive Cyberware
+- Removed Improved Distant Shadows and Reflections
+- Removed Extract The Mods In Weapon Shops 2.1
+- Removed New Game Plus - Native
+- Removed Mod.Organizer-2.5.2
+
+Fixes and Tweaks:
+- Fixed CTD at first mission
+- Cleaned a lot of outdated mods, obsoletes mods or unstables ones
+- Cleaned the Mo2 executables
+- Cleaned some mo2 mod archives to save up some space
+- Fixed many CTDs and instability related to corrupted mods
+- New custom made LUT/ENV by Neishin
+
+Updates:
+- Updated -KS- UV Texture Framework
+- Updated Audioware
+- Updated Always First Equip
+- Updated Better Buildings - Preview
+- Updated Environment Textures Overhaul - ETO
+- Updated Enhanced Craft
+- Updated Mark To Sell
+- Updated H10 Food Vendor
+- Updated Inorganic Materials
+- Updated HQ Holo Travel
+- Updated M50 Military Gas Mask
+- Updated Military Zenitex Gloves
+- Updated Military Armored Ballistic Vest
+- Updated Military Combat Jacket
+- Updated Military Combat Pants
+- Updated Military Combat Boots
+- Updated Military Panam Pants
+- Updated Military Palette Texture Library
+- Updated Military Tactical Vest
+- Updated Modular Military Pistol Holsters
+- Updated Modular Military Combat Armor
+- Updated Modular Military Ballistic Mask
+- Updated Modular Military Helmet - Ops-Core FAST
+- Updated Modular Military Zenitex Backpack
+- Updated Modular Military Bodysuit - Zenitex Stealthsuit
+- Updated Military Accessories - Modular Armor Pads Pack
+- Updated Military Accessories - Zenitex Combat Goggles
+- Updated Zenitex Military Underwear
+- Updated Zenitex Sleeveless Turtleneck
+- Updated Zenitex Atelier
+- Updated Deceptious Bug Fixes
+- Updated Limited HUD
+- Updated CasinoLoot - The Weapons Casino
+- Updated KiasuBurger Cyberware Core
+- Updated Lamborghini Murcielago SV
+- Updated Toyota Supra
+- Updated Nissan 350Z
+- Updated Nissan Skyline 2000GT-R
+- Updated Nissan Skyline R33
+- Updated Honda S2000
+- Updated Mitsubishi Eclipse GSX (1999)
+- Updated Ducati Supersport
+- Updated Lotus Esprit Turbo
+- Updated Immersive Night City Fixes
+- Updated Extra Hands (cyberware)
+- Updated Third-Person (TPP) Vehicle Camera Tool
+- Updated Streaming Bug Workaround
+- Updated Night City Visuals Nulled
+- Updated Tachy Outfit Archive XL
+- Updated Judy Romanced Enhanced
+- Updated Kerry Romanced Enhanced
+- Updated Panam Romanced Enhanced
+- Updated River Romanced Enhanced
+- Updated NCI Addon - Heywood
+- Updated NCI Addon - Badlands and Pacifica
+- Updated NCI Addon - Watson
+- Updated NCI Addon - Westbrook
+- Updated Ricochet Redux
+- Updated VEEGEE SHOP 3
+- Updated Say Something Damn It
+- Updated Lizzie's Braindances
+- Updated NC Fashion Virtual Atelier
+- Updated Galena GT Widebody
+- Updated Quickhack Fixes
+- Updated Blur Begone (Clear Materials with Refraction)
+- Updated Immersive Fixers
+- Updated Lotus Evija
+- Updated Muted Markers
+- Updated Pagani Huayra
+- Updated RedFileSystem
+- Updated RedHttpClient
+- Updated RedData
+- Updated They Will Remember
+- Updated Virtual Atelier
+- Updated Virtual Car Dealer
+- Updated Manavortex Atelier Store
+- Updated The RVC00N Dumpster 2 - PinkyDude's Virtual Shop
+- Updated Visceral Blood Pools
+- Updated New Quest - Hot Fuzz
+- Updated Weather Switcher (Change Weather - Control Time - Customize Clouds)
+- Updated Repeatable NCPD Gigs - WIP
+- Updated Megingjord (hover legs cyberware)
+- Updated Jarngreipr (Lightning Projectile Launcher)
+- Updated Peachu - Hair Collection - CCXL
+
+</details>
+
+<details markdown="1">
 <summary>v1.2.0 - July 25, 2025</summary>
 Update Importance: MAJOR  
 SAVE COMPATIBLE  
