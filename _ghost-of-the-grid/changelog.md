@@ -10,6 +10,43 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v1.3.1 - August 07, 2025</summary>
+Update Importance: MEDIUM  
+POTENTIALLY NOT SAVE COMPATIBLE  
+
+Additions:
+- Added Enhanced Vehicle Collision FX
+- Added H10 Interactive Stash Door Restored (2.3 Supported)
+- Added Disable W-S Keys For Select Dialogue Options (Patch 2.3 Compatible)
+- Added Eddies Notification Fix (2.3 Supported)
+- Added Auto Drive Enhanced
+- Added Atone - Reset Your Street Cred
+- Added Pariah
+- Added Fast Travel Time
+
+Removals:
+- Removed Megabuilding H10 Ultimate Experience
+- Removed Combat Revolution(AI Overhaul and High-Stakes)
+- Removed H10 Megabuilding Unlocked
+- Removed Auto drive (Added to the game in 2.3)
+- Removed Fast Travel from anywhere to everywhere - Redscript
+- Removed FERRARI SF90 XX STRADALE
+
+Fixes and Tweaks:
+- Fixed CTD at H10 megabuilding
+- Fixed combat stutters, CTD and unfair kills
+- Cleaned a few more outdated mods, obsoletes mods or unstables ones
+
+Updates:
+- Updated General Shadows Fixes
+- Updated Luxury corporate the Glen apartment - archivexl
+- Updated Animals Cache - New Iconic Weapons
+- Updated Extra Interiors
+- Updated Blur Begone (Clear Materials with Refraction)
+
+</details>
+
+<details markdown="1">
 <summary>v1.3.0 - August 06, 2025</summary>
 Update Importance: MAJOR  
 SAVE COMPATIBLE  
