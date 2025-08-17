@@ -33,7 +33,7 @@ compress_html:
   # ignore:
   #   envs: all
 
-callouts_level: quiet # or loud
+callouts_level: loud # quit/loud
 callouts:
   highlight:
     color: yellow
