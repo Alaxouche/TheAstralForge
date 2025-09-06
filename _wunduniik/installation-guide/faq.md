@@ -11,6 +11,13 @@ nav_order: 6
   <dt><strong>Q:</strong> My compass doesn't show undiscovered locations!</dt>  
   <dd><strong>A:</strong> Go to Compass Navigation Overhaul and find bShowUndiscoveredLocationMarkers=0. Change the 0 to 1.</dd>
 
+  <dt><strong>Q:</strong> How do I start main quest in this list?</dt>  
+  <dd><strong>A:</strong> Quoting the Alternate Perspective modpage: To  begin the Main Quest, you want to head to Helgen's Inn and talk to the Innkeeper. Upon doing so, you will find the normal Innkeeper Dialogue and one extra Option, reading "I'd like to rent a room. (Start Intro (10 gold))", using this option will first seem like a normal bed renting - and is in fact a normal bed renting - however, the next time you sleep in Helgen's Inn, something special is going to happen...</dd>
+
+  <dt><strong>Q:</strong> When I exit game, a pop up asking me if I want to keep load order changes appears, what do I do?</dt>  
+  <dd><strong>A:</strong> Even though it is not dramatic if you click yes, you should always click no. The game should not get to automatically sort the plugins at the risk to break Load Order.</dd>
+
+
   <dt><strong>Q:</strong> How do I dismount my horse?</dt>  
   <dd><strong>A:</strong> Hold down E.</dd>
 
