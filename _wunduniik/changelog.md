@@ -8,8 +8,284 @@ nav_order: 2
 
 In this section you will find changelogs for the modlist since its release. You can track down precisely everything that gets added, removed, fixed, tweaked and updated.
 <div style="margin-bottom: 1rem;"></div>
+---
+layout: default
+title: Changelog
+nav_order: 2
+---
+
+# Changelog
+
+In this section you will find changelogs for the modlist since its release. You can track down precisely everything that gets added, removed, fixed, tweaked and updated.
+<div style="margin-bottom: 1rem;"></div>
 <details markdown="1">
 
+<summary>v6.0.0 - September 8, 2025</summary>
+
+Update Importance: MAJOR  
+NOT SAVE COMPATIBLE  
+
+### Additions
+- Added (ALTP) Happy Little Trees DynDOLOD Optimizations
+- Added Acheron - Death Alternative
+- Added Alternate High Poly Head
+- Added Ancient Death Magic
+- Added ATPD - Automatic Tool Plugin Disabler
+- Added Auto Saver
+- Added AutoExec Console Commands
+- Added Better Blended Mushrooms Fix
+- Added BIG STICK ENERGY
+- Added Cancel Attack SKSE
+- Added Capital Whiterun Expansion - Jorrvaskr Stairs Gap Fix (BOS)
+- Added CC Camping - Comfy Sleeping
+- Added CC Gray Cowl Returns - Thief Delay
+- Added Difficulty Global Variable
+- Added Dlizzio's Mesh Fixes Solitude Patches Collection
+- Added Dynamic Animation Framework
+- Added Dynamic Wetness
+- Added E.C.D. Every Cloud Different NAT Add On
+- Added FA ORCODONTIST - Orsimer Mouth and Teeth Fix
+- Added FallrimTools - Script cleaner and more
+- Added Fishing Map Markers
+- Added FSMPM - The FSMP MCM
+- Added Grand Solitude - The Walls of High King Erling
+- Added Grand Solitude Lite
+- Added Grand Solitude Patch Collection
+- Added Haunted Soul Gem Enchanting FX
+- Added Igniting Animation for Campfire
+- Added Immersive Diseases
+- Added Kodex - An Automated Mod List Support Reporter
+- Added LoreBox - Item and Spell Tooltips
+- Added NAT.ENB III - CENTRAL PATCHES
+- Added No More Blur on Hit
+- Added No Screen Blood and Radial Blur and Heart Pump
+- Added Nordic Farmfield Stonewalls
+- Added Nordic Stonewalls
+- Added Northern Roads - Collision and Placement Fix
+- Added NPC Mining Yields Ore
+- Added Open World Loot - SkyPatcher Edition
+- Added Outlaws Refuges
+- Added Outlaws Refuges Misc Patches
+- Added Pelage - CC Saturalia Addon
+- Added ReSavor
+- Added Rodryk's DB Mesh Optimization - Walkway Mesh Collision Fix
+- Added Salmon Roe
+- Added SD's Horn Candles Radiant ENB
+- Added SKSE Menu Framework
+- Added Skyfall's Fort Dawnguard Roofs
+- Added Skyrim diverse mushrooms
+- Added Snowy Ships for Snowy Regions - Realistic Nord Ships Patch
+- Added Somewhat Okay Snowdrifts - Blended Windhelm Bridge Snowdrifts - Base Object Swapper
+- Added SPAM - Potion Penalties
+- Added The Dragon Eggs
+- Added The Pigeon's Nest - Assortment of small mods and fixes
+- Added Underwater Solstheim
+- Added Vanaheimr - Northern Roads - Complex Material
+- Added Viper Armor - HDT-SMP
+
+### Removals
+- Removed Animated Ships
+- Removed Animated Ships - Realistic Nord Ships Patch
+- Removed Animated Ships Patches
+- Removed Autorun
+- Removed Backpack Repositioner - Immersive Equipment Displays
+- Removed CBPC Equipment physics SE and AE
+- Removed DK's Realistic and Lore-Friendly Nord Ships
+- Removed ElSopa - Northern Roads Resculpted
+- Removed ENB Helper Plus
+- Removed ENB Helper SE Updated
+- Removed Fortified Morthal - fixed and extended navmeshes
+- Removed Garlic - A Garlic Mod
+- Removed GIANT
+- Removed Green Thumb Solitude - FuzzBeed's Solitude
+- Removed Greymoor
+- Removed Guards pose with weapons IED-OAR
+- Removed HAGRAVEN
+- Removed Hair Colour Sync NG
+- Removed Helmet Toggle 2 - SMP Hair Fix
+- Removed Legendary Enemies
+- Removed No More Glowy Effects
+- Removed No more Radial Blur - Performance optimization
+- Removed NPCs Visit Solitude Weaver's Lane (SPID)
+- Removed Purchaseable Store-Display-Items
+- Removed Purchaseable Store-Display-Items - Settings Loader
+- Removed R - Complex Parallax 2 For Northern Roads and Dirt02
+- Removed Respawn - Soulslike Edition
+- Removed Respawn - Soulslike Edition and Rest By Campfire - Base Object Swapper Patch
+- Removed Sacks Remodeled
+- Removed Shadow Boost
+- Removed SIMP - Supreme Interior Mist Particles
+- Removed Soft Shadows
+- Removed Solitude Watchtower
+- Removed Solitude Watchtower - Khajiit Has Tents Patch
+- Removed Solitude Weaver's Lane
+- Removed Solitude Weaver's Lane - Fabled Forests Patch
+- Removed Steaming Hot Pies Tarts and Dumplings SE
+- Removed Titan of Solitude
+- Removed Titan of Solitude Fixed
+- Removed Unequip Quiver SE (NG)
+- Removed Whiterun Fence Base Seam Fix
+- Removed Whiterun Fence Walls Mesh Fix
+
+### Fixes and Tweaks
+- Changed the death system to be less annoying
+- Fixed broken grass LODs
+- Fixed broken midrange shadows
+- Fixed CTD on porturay cities
+- Fixed essential NPCs dying
+- Fixed glitched SMP equipment on player when rotating
+- Fixed huge square of water in sky in tundra
+- Fixed missing candles smoke
+- Fixed mountain weird pixelated textures
+- Fixed noble chest using wrong model
+- Fixed overbright water effects and waterfalls
+- Fixed parallax warping in Falkreath buildings
+- Fixed some landscape seams
+- Fixed some solitude misplaced objects, clipping and terrain errors
+- Fixed town doors textures inconsistencies
+- Fixed weird guard poses
+- Fixed whiterun missing walls in performance profile
+- Fixed HDT backpacks not working
+- Further optimized base game inis for better visuals and more performances
+- Tweaked ENB preset to have slight distant blur
+- Tweaked NPCs behavior to not use sprint attacks
+- Tweaked SSE Engine Fixes ToML to prevent CTDs and fixes/performances
+- Tweaked Water color and underwater visuals
+
+### Updates
+- Updated (ENB) ENB Extender for Skyrim
+- Updated (ENB) Silent Horizons 2 - Shader Core
+- Updated (RES) Children of Dawn's Beauty - A Resource for Certain Mods
+- Updated (RES) Children of the Ash - A Dunmer NPC Overhaul
+- Updated (RES) Children of the First - An Altmer NPC Overhaul
+- Updated (RES) Children of the Green - A Bosmer NPC Overhaul
+- Updated (RES) High Poly Orcs for JJerem's Strongholds
+- Updated A Friend in Mead - Quest Mod
+- Updated Aetherial Artifacts Rework
+- Updated Alternative Armors - Complex Material
+- Updated Armors of the Velothi (Beast Race Support)
+- Updated Armors Of The Velothi Pt. II
+- Updated Armors Of The Velothi Pt. II - Travelling Merchant Travels
+- Updated Assorted Mesh Fixes
+- Updated B612 - my little asteroid of useful UI components
+- Updated Children of the North Wind
+- Updated Core Impact Framework (CIF)
+- Updated DALC Fix KreatE Preset
+- Updated Death Drop Overhaul
+- Updated Death Idle Fix
+- Updated Dismembering Framework
+- Updated Dragons (Actually) Fall Down
+- Updated Dragons Use Thu'um*
+- Updated Dynamic Sprint Stop
+- Updated Edge UI - Explorer Addon
+- Updated For Honor in Skyrim
+- Updated Guards Armor Replacer - Complex Material
+- Updated H.O.A. - Hyperspecific Occlusion Addon
+- Updated HFs - Chests - My Snowy Patch
+- Updated Hit The Hay - A Hay Pile Replacer
+- Updated Hotkey Reminder
+- Updated Icy Mesh Remaster
+- Updated KreatE
+- Updated kryptopyr's Patch Hub
+- Updated Legacy of Ysgramor - Complex Material
+- Updated Lilebonymace's Patches
+- Updated Locked Chests Have Keys - Patch Collection
+- Updated Love Is In The Air - NPCs Get Married Too
+- Updated Mrf's Solitude
+- Updated Mu Dynamic NormalMap
+- Updated Narrative Gameplay Consistent Dialogue Tweaks
+- Updated Natural Waterfalls
+- Updated New Creature Animation - Dwarven Centurion - OAR
+- Updated No Grass In Objects
+- Updated NPC Spell Variance - Kittytail's Magic
+- Updated NPC Spell Variance - Mysticism
+- Updated NPC Spell Variance - Spell Variety AI
+- Updated Northern Scenery - Addons Patches and Fixes
+- Updated Object Categorization Framework - Some KID Patches
+- Updated Pandora Behaviour Engine
+- Updated Player Name Randomizer - Show in UI
+- Updated Powerofthree's Tweaks
+- Updated Reinforced Civil War Camps
+- Updated RMB SPIDified - Armors of the Velothi Pt 2
+- Updated RogueUnicorn - City Trees
+- Updated Ryn's Snazzy Last Vigil
+- Updated S.T.A.R. (So This Aint Right)
+- Updated Skeletons - Rudy Candles
+- Updated Skyrim Remastered - Glacier and Ice IMR Edition
+- Updated Small Oaks
+- Updated Simple Diving System (SDS) - Dive Into Water Animations and Modder Resource
+- Updated Simple Snow Improvements - Skyrim Fixes
+- Updated Simple Snow Improvements - The Great City of Winterhold (BOS)
+- Updated Smooth Moveset - OAR
+- Updated Snazzy Misc Locations
+- Updated Sons of Skyrim - Complex Material
+- Updated Spell Knight Armor - Complex Material
+- Updated SSE Engine Fixes
+- Updated StarRiseShine's Apothecary Patches
+- Updated StarRiseShine's Gourmet Patches
+- Updated The Dragonborn's Bestiary - Quest Patch Compendium
+- Updated Ultimate Optimized Scripts Compilation
+- Updated Unofficial Skyrim Special Edition Patch - USSEP
+- Updated Utenlands Nordic Tents - Replacer
+- Updated Water for ENB
+- Updated Winedave - Barrels
+</details>
+
+<details markdown="1">
+
+<summary>v6.0.0-Beta03.1 - August 23, 2025</summary>
+
+Update Importance: MEDIUM  
+SAVE COMPATIBLE  
+
+### Additions
+- Added Alternate Perspective Reborn
+- Added Emissive Eyes Patches
+- Added Footprints - Creation Club - Saturalia Holiday Pack
+- Added Kellan HDT-SMP Armor - CBBE 3BA Fix
+- Added Legendary Map
+- Added Maxsu Poise
+- Added Maxsu Poise - Angelic Preset
+- Added Oblivion Interaction Icons - Better Third Person Selection - MoreHUD Patch
+- Added Skyland Sovngarde
+
+### Removals
+- Removed Alternate Perspective - Animated Armoury Add-On
+- Removed Alternate Perspective - Modded Armors In Wardrobe - SkyPatched
+- Removed Flinching - Script Free Edition
+- Removed Game Settings Override
+- Removed Game Settings Override - Collection
+- Removed Sets of Skills - a Skyrim Class Mod - Settings Loader
+- Removed SkyClimb - Settings Loader
+
+### Fixes and Tweaks
+- Fixed black faces issues
+- Fixed CTD on new game for Ultra profile (related to DynDOLOD plugin errors)
+- Fixed CTD related to animated statics
+- Fixed Dodge roll for first person
+- Fixed double missive post in Solitude
+- Fixed floating skull at whiterun bridge
+- Fixed Kellan Armor broken mesh
+- Fixed ragdoll crazy animation
+- Fixed the crazy flinching animations
+- Fixed some ENB visuals
+- Further optimization and FPS gain
+- More plugin fixes
+- Removed racemenu CBBE 3BA morphs
+- Revampted the starting room
+
+### Updates
+- Updated Dragons (Actually) Fall Down
+- Updated JS Vanilla Circlets
+- Updated Mephala Revoiced
+- Updated NPC Spell Variance - Spell Variety AI
+- Updated Pandora Behaviour Engine
+- Updated Squares of Skyrim - NoTofu
+- Updated Ultimate Optimized Scripts Compilation
+- Updated Xelzaz - Custom Fully Voiced Argonian Telvanni Follower
+</details>
+
+<details markdown="1">
 <summary>v5.10.0 - July 2, 2025</summary>
 
 Update Importance: MAJOR  
