@@ -12,9 +12,6 @@ permalink: /
 The Astral Forge is a collective repository of curated modlists and their authors, primarily for **The Elder Scrolls V: Skyrim Special Edition** and **Cyberpunk 2077**.
 {: .fs-6 .fw-300 }
 
-[Get Started](#getting-started){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[View on GitHub][https://github.com/Alaxouche/TheAstralForge]{: .btn .fs-5 .mb-4 .mb-md-0 }
-
 ---
 
 ## Join Our Discord Community
