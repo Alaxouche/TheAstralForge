@@ -11,7 +11,7 @@ In this section you will find changelogs for the modlist since its release. You 
 
 <details markdown="1">
 
-<summary>Ghost of the Grid v1.4.0 - September 13, 2025</summary>
+<summary>v1.4.0 - September 13, 2025</summary>
 
 Update Importance: MAJOR  
 SAVE COMPATIBLE  
