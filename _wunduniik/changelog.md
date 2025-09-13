@@ -6,6 +6,87 @@ nav_order: 2
 
 In this section you will find changelogs for the modlist since its release. You can track down precisely everything that gets added, removed, fixed, tweaked and updated.
 <div style="margin-bottom: 1rem;"></div>
+
+<details markdown="1">
+
+<summary>v6.1.0 - September 12, 2025</summary>
+
+Update Importance: MAJOR  
+NOT SAVE COMPATIBLE  
+
+### Additions
+- Added Animated Interactions SKSE
+- Added Animated Reading Books - DAF
+- Added Animated Scroll Activation - DAF
+- Added C.O.C.K.S.ified
+- Added Complex Parallax for Northern Roads
+- Added CritterSpawn - Script Call Reduction
+- Added Farm Geese - More accurate heads
+- Added Immersive Diseases - NPC Module Tweaks
+- Added Japhet's Folly Paper Map for FWMF
+- Added Legendary Enemies
+- Added Pilgrim Religion Overhaul - Shrines fit for the Divine
+- Added Vibrant Weapons EAE - Animated Armoury Patch
+- Added Vibrant Weapons EAE Enchantment Lights
+- Added Vibrant Weapons EAE Particle Implementation
+- Added Wait I know You - Forcegreet Tweak
+
+### Removals
+- Removed eFPS - Anniversary Edition
+- Removed eFPS - Exlude Whiterun Patch
+- Removed eFPS - Exterior FPS boost
+- Removed eFPS - Falkreath Wilderness hotfix
+- Removed eFPS - Miscellaneous Patches
+- Removed eFPS - Official Patch Hub
+- Removed Enhanced Landscape - Mountain and Cliffs
+- Removed Navigator - Navmesh Fixes
+- Removed Navigator - Navmesh Fixes - Patch Collection
+- Removed Nordic Ruins
+- Removed Open World Loot - Incompatibilities begone
+- Removed Patchemonium - Random Patches
+- Removed SkyPatcher-Protected Citizens (or SPID) - Protected or Essential NPCs
+- Removed Sure of Stealing
+
+### Fixes and Tweaks
+- Changed the death system to be less annoying
+- Ensured maximum compatibility in ruins
+- Fixed double loading screen
+- Fixed essential NPCs dying
+- Fixed greybeards outfit issues
+- Fixed ivy color and meshes
+- Fixed landscape seam near windhelm
+- Fixed not working interaction animations
+- Fixed over distribution of equipment to NPCs
+- Fixed too dark fern texture
+- Made ENB Frame Generation disabled and optional by default now
+
+### Updates
+- Updated (DT) Debug Menu - In-Game Navmesh Viewer and More
+- Updated Ancient Death Magic
+- Updated Azura's Star Rework
+- Updated B612 - my little asteroid of useful UI components
+- Updated CC Myrwatch - Tweaks and Enhancements (MyrTE)
+- Updated Core Impact Framework (CIF)
+- Updated DALC Fix KreatE Preset
+- Updated Dwemer Deep - Titans and Divers
+- Updated DynDOLOD DLL NG and Scripts
+- Updated Elven Armors and Weapons Retexture
+- Updated Equipment Durability System NG
+- Updated Flat World Map Framework
+- Updated Immersive Diseases 2.0
+- Updated Improved Camera - Patch Collection
+- Updated Improved Camera SE
+- Updated Improved Camera SE - INI Tweaks
+- Updated Inns Can Be Closed
+- Updated Object Categorization Framework - Some KID Patches
+- Updated RaceMenu OverlayFix and Various Mod Fixes
+- Updated SPAM - Potion Penalties
+- Updated Unisexy SKSE - Gender-Neutral Head Parts
+- Updated Unmarked Locations Pack - All In One
+- Updated Watertowers of Skyrim - Patch Collection and Add-ons
+- Updated Windcaller - Greybeard Inspired Robes and Staff
+</details>
+
 <details markdown="1">
 
 <summary>v6.0.0 - September 8, 2025</summary>
