@@ -10,6 +10,307 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+
+<summary>Ghost of the Grid v1.4.0 - September 13, 2025</summary>
+
+Update Importance: MAJOR  
+SAVE COMPATIBLE  
+
+### Additions
+- Added (Venus Planet) Hair Pack 01 - CCXL
+- Added 4x Magazine Framework
+- Added 4x Poster Framework
+- Added 4x Vending Machine Framework
+- Added 7th Hell Bar Enhanced
+- Added Adaptive Traffic Headlights
+- Added Afterlife Expanded ( with Apartment )
+- Added Albany Esperanto
+- Added Arasaka JSH-X12 Nobunaga
+- Added Arasaka Shigure EX
+- Added Arasaka Tamayura Compact
+- Added AVI sound (Drive an Aerial Vehicle)
+- Added Beach Houses Open
+- Added Beautiful FRECKLES - 2K Realistic Cheek Makeup Textures - Material Edit - BOTH V
+- Added Better Movement - QOL Jog and Sprint
+- Added Biotechnica Hotel Enhanced ( with Apartment )
+- Added Black Sapphire Club ( with Apartment )
+- Added Blooming Wings - VTK and KSUV
+- Added Chevillon Thrax Invictus
+- Added Crunch Plaza Expanded ( Cut Content )
+- Added Cyber EYES DDD
+- Added Dandelion Cocktail Bar Enhanced
+- Added Dark Matter Club ( with Apartment )
+- Added Dedra's Truck Simulator (Convoy Delivery Mod)
+- Added Dialogues Overhaul
+- Added Dodge Coronet Super Bee 1970
+- Added Dogtown Airship ( with Apartment and NPC Party Below )
+- Added Downtown Yacht
+- Added Drive an Aerial Vehicle - Flight Mod Using AV and Helicopter
+- Added Drive-In Theater ( Working Movie Screen )
+- Added Drone Companions (Update 2.3)
+- Added DS Die-Hardman Mask - Archive XL (Both V)
+- Added E3 Menu Background
+- Added E3 Menu Background - FIX
+- Added Empathy Bar Enhanced
+- Added Exploded Vehicles Smoke Overhaul VFX
+- Added Fast Travel Time
+- Added Footwear Fix for Atlas Body
+- Added FORBIDDEN EYES - CCXL
+- Added Gaston Slaytons Apartment Enhanced
+- Added Glen Apartment Expanded - Redux
+- Added GMC Vandura Ash hauler
+- Added GoreRunner (Blood and Carnage Overhaul)
+- Added Hanako Inspired Eyes - CCXL
+- Added Head Cyberware CCXL
+- Added Heterochromia Eyes - CCXL
+- Added Immersive Odometer and Fuel System
+- Added Improved Vehicle Persistence
+- Added Johnny Silverhand Alternative Appearance Overhaul
+- Added Kills Counter Display
+- Added Kraken - a truly silent sniper rifle
+- Added Lizzies Bar Enhanced ( with Apartment )
+- Added Lucid Air Sapphire
+- Added Lucys Apartment - Reshape-Remaster Roof Improvement -AV-landing-fully-fixed-up-
+- Added lumad11's New Eyebrows CCXL
+- Added LUT Switcher 2 (Custom Pack Support - LUT Adjustments - Hotkeys)
+- Added M38 Shorty
+- Added Maxsu Poise
+- Added Maxsu Poise - Angelic Preset
+- Added Megabuilding 8 Expanded ( with Apartments )
+- Added Miscellaneous Settings Unlocker - Global Illumination and More
+- Added Multicolored Hair CCXL - Core - Resources
+- Added No More Duplicate Vehicles
+- Added No Panic Driving - Enhanced
+- Added Noble M600
+- Added Oblivion Interaction Icons - Better Third Person Selection - MoreHUD Patch
+- Added Petrel Street Apartment Enhanced
+- Added Pew Pew Plaza Enhanced
+- Added Playable Roulette - Gambling System
+- Added Proxima's Prop Paradise
+- Added Props - PhotoStudio
+- Added R Tattoo Studio CCXL
+- Added Realistic Eye Colors - CCXL
+- Added Realistic Traffic Density
+- Added Red Queens Club Enhanced
+- Added Redux UI - Wanted UI - White Wanted Stars
+- Added reduced Bullet Tracers
+- Added Regina's NCPD Headquarters
+- Added Revengers
+- Added Sandevistan CCXL Tattoo
+- Added Shard Audio Framework
+- Added Shard Audio Pack - Official - English
+- Added Solo Pose Pack Vol.4 (F)
+- Added Solo pose pack Vol 3 (F n M)
+- Added SOLO Vol.8 pose pack
+- Added Special Eye Colors - CCXL
+- Added SPC Open (Silver Pixel Cloud Drive-In Theater)
+- Added Steel and Ink Tattoo - CCXL
+- Added Streetwear PT4 - Both V
+- Added TPP Rooftop Hangout - Judy
+- Added Tech Back CYBERWARE CCXL version
+- Added Ugly Building Removed (E3)
+- Added Ultimate Kill Counter (2.3 Supported)
+- Added Underground Casino ( Working Roulette )
+- Added Unique Eyes to CCXL
+- Added Unlock Night City 2
+- Added V's Modest Netrunner Apartment
+- Added V's Pacifica Cabana Hideout
+- Added V's Sierra Sonora Villa
+- Added Veegee Wolf Mullet Hair - CCXL
+- Added Viktor Vektors Garage ( Fully Enterable )
+- Added Viktor Vektor's Garage Add-on (Vik will fix your car)
+- Added VTK - Story Tattoo (F and M)
+
+### Removals
+- Removed ABSTRACT 2 WAVES TATTOO - VTK - KSUV
+- Removed Advanced Control - Walk with Mouse Scroll - Lean Left Right - Toggle ADS - Inspect Weapons
+- Removed Advanced Control- Regained
+- Removed Alternative Hologram Adverts
+- Removed Badboy and Badgirl Tattoo
+- Removed Better Buildings - Preview (2.3)
+- Removed Casual Military Poses
+- Removed Casual Military Poses - Part 2
+- Removed Ceremonial Military Poses
+- Removed Combat Mission Poses - Part 1 - Action
+- Removed Combat Mission Poses - Part 2 - Walks and Idles
+- Removed Combat Mission Poses Props
+- Removed Edgerunner David's Pistol
+- Removed Edgerunner Lucy's Pistol
+- Removed Edgerunner Rebecca's Pistols
+- Removed Edgerunners Lucy NPC - Spawns in Night City plus AMM and Photomode AXL
+- Removed E3 Open Police Station
+- Removed Enemies of Night City
+- Removed Enhanced Vehicle System
+- Removed Extra Interiors
+- Removed FRAIL Inc. (Virtual Atelier Store)
+- Removed FRAIL Inc. - Corset Belt (Standalone)
+- Removed FRAIL Inc. - Grunge Sweater (Standalone)
+- Removed FRAIL Inc. - The 1990 Outfit (Standalone)
+- Removed FRAIL Inc. - Wretch Merch (Standalone)
+- Removed FRAIL Inc. - Netrunner Coat (Standalone)
+- Removed Gunsensical
+- Removed High Res Architecture - V's Apartment - MonstrrMagic Texture Series
+- Removed High Res Containers - MonstrrMagic Texture Series
+- Removed High Res Cyberware - MonstrrMagic Texture Series
+- Removed High Res Eyes and Brows - MonstrrMagic Texture Series
+- Removed High Res Genitalia - MonstrrMagic Texture Series
+- Removed High Res Graffiti - MonstrrMagic Texture Series
+- Removed High Res Makeup - MonstrrMagic Texture Series
+- Removed High Res Posters and Signs - MonstrrMagic Texture Series
+- Removed High Res Stickers - Upscaled Textures
+- Removed High Res Tattoos - MonstrrMagic Texture Series
+- Removed High Res Unnamed NPC Faces - MonstrrMagic Texture Series
+- Removed High-Res Clothing - Upscaled Textures
+- Removed High-Res Vending Machines - Upscaled Textures
+- Removed HUD Fixes - fix disappearing HUD element and quest dialogs
+- Removed HUD Painter
+- Removed Immersive First Person
+- Removed Improved Environment LODs
+- Removed Improved Vegetation LODs
+- Removed Improved Yaiba ARV-Q340 Semimaru
+- Removed InfiniteWave - car sound framework
+- Removed KTM X-BOW GTX
+- Removed Kurt Neck Cyberware for V
+- Removed Material and Texture Override
+- Removed Native Settings UI Side Menu Add-on
+- Removed Night City Fog Nulled
+- Removed No Cached Low-Res Advertisement Textures
+- Removed Not So Good Draw Distance Mod
+- Removed ORION UI - HUD Painter preset
+- Removed Project E3 - Drug Inhaler
+- Removed Spaceport Unlocked
+- Removed Story Tattoo (F and M)
+- Removed The RVC00N Dumpster - Candy Hoodie (M-F) (Archive XL)
+- Removed The RVC00N Dumpster - Colorful Hankies (M F) (Archive XL) (PRIDE)
+- Removed The RVC00N Dumpster - Sunny Cropshirt (M) (Archive XL)
+- Removed Vanillla Billboard LODs Improved
+- Removed zE3bra
+
+### Fixes and Tweaks
+- Fixed health bar flickering
+- Fixed many CTDs due to mod instabilities and incompatibilities
+- Fixed performances and stutters with the list
+- Fixed unability to run with guns
+- Fixed unbalanced combat
+- Fixed walkway weird texture
+
+### Updates
+- Updated (FULL) The RVC00N Dumpster (New releases on Dumpster2)
+- Updated -KS- UV Texture Framework
+- Updated Animals Cache - New Iconic Weapons
+- Updated Apartment Cats - The Glen
+- Updated ArchiveXL
+- Updated Audioware
+- Updated Auto Drive Enhanced
+- Updated Biotechnica Cache - New Iconic Weapons
+- Updated Blur Begone (Clear Materials with Refraction)
+- Updated Bounty class stars fix
+- Updated Browser Extension
+- Updated CCXL Kylin's Fluffy Wolfcut
+- Updated Clothing store at H10
+- Updated Codeware
+- Updated Cyber Engine Tweaks
+- Updated Cyberarms Collection 2.0 - Archive-XL
+- Updated Database Fixes
+- Updated Discord RPC 2
+- Updated Driver Combat 2.0
+- Updated EconomyPunk
+- Updated Enzo Ferrari - ArchiveXL
+- Updated ENV Tuner (Weather - Lighting - Vignette Adjustments without Conflict)
+- Updated Extra Iconics
+- Updated Flaming Crotch Man Romanced
+- Updated FlowerShop - Virtual Atelier Store
+- Updated General Shadows Fixes
+- Updated H10 Apartment Exterior Trash Remover
+- Updated Highway H10 Rework
+- Updated Immersive Main Menu Audio
+- Updated Immersive Night City Fixes
+- Updated Immersive Timeskip
+- Updated Improved NCPD Map Filters
+- Updated Improved Northside Motel - archivexl
+- Updated Inventory Adjustments Hub
+- Updated Judy's Voicemail
+- Updated Konpeki Plaza Restored
+- Updated Lamborghini Murcielago SV
+- Updated Limited HUD
+- Updated Loot Icons Extension
+- Updated Looting QoL
+- Updated Lotus Esprit Turbo
+- Updated Lotus Evija
+- Updated Lotus Supra
+- Updated Lotus Supra Mk4 Formula Drift - ArchiveXL
+- Updated Lotus Supra Toyota
+- Updated Manavortex Atelier Store
+- Updated M50 Military Gas Mask - ArchiveXL
+- Updated Melee Attacks Fixes And Enhancements
+- Updated Metro Pocket Guide
+- Updated Military Accessories - Balaclava Pack - ArchiveXL
+- Updated Military Accessories - Modular Armor Pads Pack - ArchiveXL
+- Updated Military Accessories - Zenitex Combat Goggles - ArchiveXL
+- Updated Military Armored Ballistic Vest - ArchiveXL
+- Updated Military Combat Boots - ArchiveXL
+- Updated Military Combat Jacket - ArchiveXL
+- Updated Military Combat Pants - ArchiveXL
+- Updated Military Palette Texture Library
+- Updated Military Panam Pants - ArchiveXL
+- Updated Military Tactical Vest - ArchiveXL
+- Updated Military Zenitex Combat Gloves - ArchiveXL
+- Updated Modular Military Ballistic Mask - ArchiveXL
+- Updated Modular Military Bodysuit - Zenitex Stealthsuit - ArchiveXL
+- Updated Modular Military Combat Armor - ArchiveXL
+- Updated Modular Military Helmet - Ops-Core FAST - ArchiveXL
+- Updated Modular Military Pistol Holsters - ArchiveXL
+- Updated Modular Military Zenitex Backpack - ArchiveXL
+- Updated NC Fashion Virtual Atelier
+- Updated New Lifepath Intro - Fresh Start
+- Updated New Quest - Californication
+- Updated New Quest - Encoree
+- Updated New Quest - Hot Fuzz
+- Updated Night City Enhanced and Expanded - NPCs
+- Updated Night City Visuals Nulled
+- Updated Nissan Skyline R32
+- Updated No More Hard-coded Keybinds (Better Controls Menu continued)
+- Updated Nova traffic swap car list and collection
+- Updated Pagani Huayra
+- Updated Pariah
+- Updated Pet Your Cat
+- Updated Photorealistic Eyes
+- Updated Plate Carrier Vest and Tactical Belt - for both Vs
+- Updated Quickhack Fixes
+- Updated RedData
+- Updated RedFileSystem
+- Updated RedHttpClient
+- Updated redscript
+- Updated Reinforcements System
+- Updated Repeatable NCPD Gigs - WIP
+- Updated Ripperdoc Cyberware Specializations
+- Updated Rita Wheeler Romanced
+- Updated Say Something Damn It
+- Updated Shift (Customizable Dynamic Vehicle Camera)
+- Updated The RVC00N Dumpster - Comfy Sweater (M) (Archive XL)
+- Updated The RVC00N Dumpster - Denim Edgerunner Set (M) (GS) (AXL)
+- Updated The RVC00N Dumpster - Stinky Jumpsuit (M) (Archive XL)
+- Updated The RVC00N Dumpster 2 - PinkyDude's Virtual Shop
+- Updated The Zenitex Military Store
+- Updated They Will Remember
+- Updated Third-Person (TPP) Vehicle Camera Tool
+- Updated Toyota Supra
+- Updated Trigger Mode Control
+- Updated Tyger Cache - New Iconic Weapons
+- Updated Undermine Quest Series
+- Updated Untrack Quest Ultimate - No Main Quest re-tracking - No leftovers
+- Updated Valentino Cyber Knees
+- Updated VegaCPMods Vendor
+- Updated Vehicle Durability Display
+- Updated VEEGEE SHOP 3
+- Updated Visible Bullets (Projectile Bullets Overhaul - TDO 2.0 - No More Hitscan etc.)
+- Updated Weather Switcher (Change Weather - Control Time - Customize Clouds)
+- Updated Zenitex Atelier
+- Updated Zenitex Military Underwear - ArchiveXL
+- Updated Zenitex Sleeveless Turtleneck - ArchiveXL
+</details>
+
+<details markdown="1">
 <summary>v1.3.1 - August 07, 2025</summary>
 Update Importance: MEDIUM  
 POTENTIALLY NOT SAVE COMPATIBLE  
