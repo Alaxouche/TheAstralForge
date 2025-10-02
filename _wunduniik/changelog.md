@@ -9,6 +9,431 @@ In this section you will find changelogs for the modlist since its release. You 
 
 <details markdown="1">
 
+<summary>v6.3.1.0 - October 03, 2025</summary>
+
+**Update Importance:** MAJOR  
+**NOT SAVE COMPATIBLE**
+
+### Additions
+- Added Darkelf Laterns - Animated
+- Added Main Menu Video
+- Added Divine Wardrobe Integration - Wrist Seam Fix For 3BA Refits
+- Added Light Greatswords - SPID
+- Added Precision Mudcrab(Random)
+- Added Precision Riekling spear
+- Added Racemenu - Improved Character Light
+- Added STB No save and load in combat
+- Added STB Quick Craft
+- Added Which Key NG
+- Added Encounter Zone Informer
+- Added Double Check Before Selling
+- Added Double Check Before Selling AE
+- Added ADXP I MCO Attack Speed Fix
+- Added Locked Empty Container Activate Text Fix
+- Added Slow Time Unbound
+- Added ADXP I MCO Attack Data Transition Fix (ADTF)
+- Added Perk Entry Point Extender
+- Added Survival Mode - Weapon Speed Patch
+- Added Comprehensive Attack Rate Patch - SKSE
+- Added Followers React to Crafting
+- Added LOTD Mesh Fixes
+- Added Meshes Optimization Project
+- Added Onethird Divergence - Wearable Spelltomes
+- Added Hagraven Shrunken Heads - Mihail's Shards of Immersion
+- Added Ultra Enemy - Good Death
+- Added OWrong Bodies - 3BA Bodyslide presets for OBody
+- Added Comprehensive Critical Damage Fix 
+- Added Ingredient Priority Fix NG
+- Added Flinching Glitch Workaround
+- Added Sun Reworked
+- Added Claymores of the North
+- Added Northman - Armor Mashup - HDT SMP
+- Added Northern Knight - Armor Mashup SMP
+- Added Hagraven - New models and Textures
+- Added Darkelf Laterns - Animated
+- Added Nightingale Hall Scene Fixes
+
+### Removals
+- Removed Carved Nordic Armors and Weapons Retexture SE
+- Removed Patreons Menu
+- Removed No Screen Blood and Radial Blur and Heart Pump
+- Removed Animated Interactions SKSE
+- Removed Dynamic Torches NG - OIF
+- Removed Item Equip Restrictor
+- Removed Critical Damage Fixes
+- Removed Diamond Body 3BA - BodySlide Preset
+- Removed Cleaned Skyrim SE Textures
+- Removed Nordic Faces - Immersive Characters Overhaul
+- Removed Immersive Weapon and Armor Restriction - Item Equip Restrictor
+- Removed SkyPatcher Keyword Framework
+- Removed Edible Roasted Ox Meat - BOS - OIF
+
+### Fixes and Tweaks
+- Fixed CTD and major issues caused by Wabbajack Texture Recompression system
+- Fixed purple maps in both profiles
+- Fixed CTD when picking up items
+- Fixed critical damages scaling issues and incompatibilities with Adamant
+- Fixed nerfed magic and magic items so mages build are less overpowered
+- Fixed equipment restriction due to perk overhauls incompatibility
+- Fixed starting cell unappearing button
+- Fixed some UI issues like wheeler reskin
+- Fixed some clipping or floating trees and items
+- Fixed some wrong worldspace names
+- Fixed pebbles texture issues
+- Fixed some plugins errors
+- Tweaked ENB to be less dark in interiors, but still dark to be realistic
+- Tweaked meshes and occlusion for perf boosts in cities and less issues 
+- Changed the smoothcam preset with a more dynamic one
+- Changed the armors in starting cell chest with cooler ones
+- Fixed wrist seams issue with Divine elegance clothes
+- Fixed infinite loading screen upon death
+- Tweaked many meshes and textures of the list to be a bit less demanding on ultra profile
+- Tweaked and provided slightly better performance and less RAM/VRAM usage
+- Downgraded SSE Engine Fixes to prevent FPS, Freezes and CTD issues
+- Downgraded NPC Infinite Block Fix - SkyPatched to prevent many bugs
+
+### Updates
+- Updated Steel Armors and Weapons Retexture
+- Updated Herectical Haemar's Shame - FuzzBeed's Daedra Dens
+- Updated More Thalmor Dossiers
+- Updated Legacy of the Dragonborn - Hall of Forgotten
+- Updated Vanaheimr - Landscapes - AIO
+- Updated Oblivion Interaction Icons - Phoenix's Patches
+- Updated ChickenMike's Random Assortment of Patches (C.R.A.P.)
+- Updated Roleplaying in Skyrim - Evolving Economy
+- Updated Spell Perk Item Distributor
+- Updated Enhanced Rocks and Mountains - Addon
+- Updated Snazzy Interiors - Patch Collection
+- Updated The Great Town of Ivarstead Patch Collection
+- Updated Hamvir Dustman - FuzzBeed's Dungeons
+- Updated Simple Diving System (SDS) - Dive Into Water Animations and Modder Resource
+- Updated Grand Solitude Patch Collection
+- Updated LOTD Hall of Forgotten TCC Patches
+- Updated SkyParkour - A SkyClimb Addon - 360 and Hold to Climb
+- Updated Northern Roads - Patch Collection
+- Updated Katana Crafting
+- Updated Lilebonymace's Patches
+- Updated Snazzy Solitude AIO
+- Updated Snazzy Misc Locations
+- Updated Snazzy Location Resources
+- Updated Rotols More Icons
+- Updated Quest Journal Overhaul - More Mod Support
+- Updated Roleplaying in Skyrim - Evolving Economy
+- Updated ECPLW -ENB Complex Particle Lights for Windows-
+- Updated H.O.A. - Hyperspecific Occlusion Addon
+- Updated Open World Loot - Encounter Zone and Loot Overhaul
+- Updated Dragon Races of Skyrim
+- Updated Andrealphus' Renaming Project (ARP)
+- Updated RaceMenu OverlayFix and Various Mod Fixes
+- Updated City Paper Map for FWMF by Mirhayasu
+</details>
+
+<details markdown="1">
+
+<summary>v6.3.0 - September 27, 2025</summary>
+
+**Update Importance:** MAJOR  
+**NOT SAVE COMPATIBLE**
+
+### Additions
+- Added Open World Loot - Incompatibilities begone
+- Added Better Difficulty Options
+- Added Dragon Souls to Perk Points
+- Added Lexicon SKSE
+- Added Actor Value Generator
+- Added PlayerPayCrimeGold Tweak (aka No Crime Teleport NG)
+- Added Scaleform Translation Plus Plus NG
+- Added SPID for Footprints - Player Footprints Fix
+- Added Improved Camera
+- Added Improved Camera - First Person Animations
+- Added Improved Camera - INI Tweaks
+- Added Improved Camera - Patch Collection
+- Added Nature's Respite - Hunters Rest Overhaul
+- Added Tempering That Makes Sense - Overhaul
+- Added Simonrim Skillrate Alternative
+- Added Kyne's Breath - A Froki's Shack Overhaul
+- Added Forgotten Vale Guardians - Chakra's Creatures
+- Added Selectively Unvarying Firewood
+- Added Whiterun Paper Map for FWMF by Mirhayasu
+- Added Double Life - Anises Cabin Overhaul
+- Added With Friends Like These - Abandoned Shack Overhaul
+- Added Man's Best Friend - A Meeko's Shack Overhaul
+- Added Object Impact Framework (OIF)
+- Added Tab Key Stuck Fix
+
+### Removals
+- Removed Frost Stamina Damage Nullifier (FSDN)
+- Removed Keyword Compatibility Framework
+- Removed No Crime Teleport RE
+- Removed Enhanced Death Cam
+- Removed Grab And Throw
+- Removed heavyarmor makes popping sounds
+- Removed Clutter Filter for BTPS
+- Removed Quieter Flying Crows
+- Removed Bandit Economy
+- Removed Extended UI
+- Removed Extended UI - Settings Loader
+- Removed Acoustic Space Improvement Fixes - SkyPatcher
+- Removed Lux - SkyPatcher
+- Removed Open World Loot - Tweaks and Addons
+- Removed Scaleform Translation Plus Plus NG - Updated
+- Removed Dynamic Stacked Object Models
+- Removed Diverse NPC Heights - Skypatcher
+- Removed Anises Cabin Exterior and Interior Overhaul 
+- Removed Flying Crows SSE
+- Removed Flying Crows Lite
+- Removed Allow Dialogue Progress Bugfix
+- Removed Cooking with Fire
+- Removed Dynamic Torches - Base Object Swapper
+- Removed Unisexy SKSE - Gender-Neutral Head Parts
+- Removed SkyPatcher - Survival Mode Food
+- Removed Relentless - LL Injection - SkyPatcher
+- Removed Mu Skeleton Editor
+- Removed Chaos Dragons SSE
+- Removed Chaos Dragon Tweaks
+- Removed Chaos Dragon 4thUnknown Dragon Edit
+- Removed BIG STICK ENERGY
+- Removed Mu Dynamic NormalMap
+- Removed SKSE Menu Framework
+- Removed DynDOLOD The Little Things
+- Removed Skyrim diverse mushrooms SE
+- Removed Open World Loot - SkyPatcher Edition
+
+### Fixes and Tweaks
+- Fixed CTD when selecting poison in inventory, caused by Yes Im Sure NG
+- Fixed CTD caused by wrong and old version of Scaleform Translation Plus Plus NG - Updated
+- Fixed CTD when selling a number of items
+- Fixed CTD and infinite loading screen caused by parallaxgen
+- Fixed CTD caused by some skypatcher mods
+- Fixed no face NPCs
+- Fixed display of skill trees having wrong names
+- Fixed dragons scripts and visual issues caused by chaos dragons and missing resources
+- Fixed loot distribution
+- Fixed Z position for some disabled objects to ensure they are not loaded on screen
+- Fixed infinite loading screen upon death
+- Tweaked performance profile to use now Community shaders
+- Tweaked many meshes and textures of the list to be a bit less demanding on ultra profile
+- Tweaked and provided slightly better performance and less RAM/VRAM usage
+
+### Updates
+- Updated ECPLW -ENB Complex Particle Lights for Windows-
+- Updated ECPLW -ENB Complex Particle Lights for Windows- (Patches HUB)
+- Updated Unique Armors and Weapons Retexture
+- Updated Character Suggestor
+- Updated Vanaheimr - Landscapes - AIO
+- Updated (ENB) ENB Extender for Skyrim
+- Updated Skyfall's Fort Dawnguard Roofs
+- Updated Roleplaying in Skyrim - Evolving Economy
+- Updated Elemental Mastery Magic
+- Updated Death Drop Overhaul
+- Updated Legacy of the Dragonborn Patches (Official)
+- Updated Andrealphus' Renaming Project (ARP)
+- Updated Dragons (Actually) Fall Down
+- Updated Core Impact Framework (CIF)
+- Updated Follower Stats
+- Updated Assorted Mesh Fixes
+- Updated Improved Table Sit Transition Animations
+- Updated SSE Engine Fixes
+- Updated Improved Barstool Exit Animation
+- Updated First Person Animations - For some mods
+- Updated Crafting Grants XP
+- Updated Snazzy Towns and Settlements
+- Updated HDT-SMP Slot 32 fix
+- Updated Ryn's Skyrim patch collection
+- Updated Helmet Toggle 2
+- Updated Dragon Races of Skyrim
+- Updated NPC Mining Yields Ore
+- Updated H.O.A. - Hyperspecific Occlusion Addon
+- Updated Menagerie - A Creation Club Pet Overhaul
+- Updated CC Hendraheim - Tweaks and Enhancements
+- Updated RaceMenu OverlayFix and Various Mod Fixes
+- Updated Praedy's Lava - Heat Distortion - Full ENB Light
+- Updated Magic Fixes and Tweaks SKSE
+- Updated Andrealphus' Renaming Project (ARP)
+- Updated Lore Gameplay Tweaks
+</details>
+
+<details markdown="1">
+
+<summary>v6.2.1.4 - September 23, 2025</summary>
+
+**Update Importance:** SMALL  
+**SAVE COMPATIBLE** 
+
+### Additions
+- Added Timber Rest - Anises Cabin Exterior and Interior Overhaul Patch
+- Added Andrealphus' Renaming Project (ARP)
+
+### Removals
+- Removed Dxvk Async ENB Injector / Vulkan for Skyrim
+
+### Fixes and Tweaks
+- Fixed clipping Timber Rest quest journal in Anise Cabin
+- Fixed high VRAM usage and lower FPS from the Vulkan API mod
+- Fixed skills not increasing due to a bad Simply Balanced MCM setting
+- Provided more FPS-friendly settings for Performance Profile
+- Re-enabled SSE FPS Stabilizer for Ultra Profile
+- Reverted by default to the Legacy Launcher (new launcher still available but use at your own risk)
+
+### Updates
+- Updated Roleplaying in Skyrim - Evolving Economy
+- Updated C.O.C.K.S.ified
+- Updated RogueUnicorn - City Trees
+- Updated Follower Stats
+- Updated Fort Greymoor
+- Updated Dragon Races of Skyrim
+</details>
+
+<details markdown="1">
+
+<summary>v6.2.1 - September 21, 2025</summary>
+
+**Update Importance:** MAJOR  
+**NOT SAVE COMPATIBLE**
+
+### Additions
+- Added Across the Border - Diverse Border Gates
+- Added Capital Whiterun Expansion - More Accurate Collision
+- Added RYFTEN DOWN - A little addition to the Riften canal
+- Added Blary's Booksets - Optimized
+- Added SkyPatcher-Protected Citizens (or SPID) - Protected or Essential NPCs
+- Added JellyFishFP - CROSSBOW (1st person animations series)
+- Added Babbling Brooks - A Water Audio Overhaul
+- Added Praedy's Lava
+- Added Praedy's Lava - Heat Distortion - Full ENB Light
+- Added Praedy and Willow's elder scroll and amulet
+
+### Removals
+- Removed Parallax Occlusion Mapping
+- Removed Crawling Bleedout
+- Removed Knockout Extensions SKSE
+- Removed Candle Flame VFX Edit
+- Removed Daedric Shrines by Mandragorasprouts - Legacy of the Dragonborn Add-on (LotD v5)
+
+### Fixes and Tweaks
+- Fixed Lava wrong texture and visuals
+- Fixed clipping daedra princes statues in Museum
+- Fixed Rock boulders snow variant shader issue
+- Fixed invisible RockL02 mesh
+- Fixed ALL blackfaced NPCs
+- Fixed candles flame going on and off
+- Fixed purple texture in whiterun maingate mesh
+- Fixed whiterun door misplacement
+- Fixed infinite loading probably caused by the save manager mod
+- Fixed enchanting skill using the wrong tree
+- Fixed essential NPCs dying
+- Tweaked A TON of meshes to optimize their shapes and provide a major perf boost with no visual difference
+- Tweaked SSE FPS Stabilizer settings to be more realistic and so more usable
+- Tweaked complex particle light big range to be more realistic and make light sources actually useful
+- Tweaked potion meshes to no more emit complex particle lights. Rooms will no more look like a night club
+
+### Updates
+- Updated The White Phial - Tweaks and Enhancements
+- Updated Snazzy Location Resources
+- Updated Snazzy Solitude AIO
+- Updated Petroglyphs of Skyrim
+- Updated Dragons (Actually) Fall Down
+- Updated Snazzy Misc Locations
+- Updated Edge UI - Explorer Addon
+- Updated DALC Fix KreatE Preset
+- Updated Icy Mesh Remaster
+- Updated Quest Journal Overhaul - More Mod Support
+- Updated Dragon Races of Skyrim
+- Updated Legendary Enemies
+- Updated Xelzaz - Custom Fully Voiced Argonian Telvanni Follower
+- Updated AutoExec Console Commands
+- Updated Rotols More Icons
+- Updated Player Name Randomizer - Show in UI
+- Updated Experience
+</details>
+
+<details markdown="1">
+
+<summary>v6.2.0 - September 19, 2025</summary>
+
+**Update Importance:** MAJOR  
+**NOT SAVE COMPATIBLE**
+
+### Additions
+- Added Combat Pathing Revolution Patches - Smooth Moveset (OAR) 1.5 - IED WeaponStyles 3.0
+- Added Dragon Races of Skyrim
+- Added Quest Journal Overhaul - More Mod Support
+- Added Acheron - Simple Rescue
+- Added Misc Utility Plugins
+- Added Extra Drawing Animations
+- Added Unofficial TCC Display Helper - Creation Club Patches
+- Added LOTD Hall of Forgotten TCC Patches
+- Added Legacy of the Dragonborn - The Curator's Companion
+- Added HFs - Grand Solitude - some market stuff
+- Added DynDOLOD The Little Things
+
+### Removals
+- Removed JK's Temple of the Divines
+- Removed Public Executions
+- Removed Better Two-Handed Axe Position - IED-OAR
+- Removed TMD Winery
+- Removed Medieval Wines for Dungeons and Tombs - Base Object Swapper
+- Removed Dynamic Random Spell Idle
+- Removed Open World Loot - Encounter Zone and Loot Overhaul
+- Removed Reforging - To the Masses (Weapons Expansion)
+- Removed Follower Death and Injury Chance - Followers Can Die
+- Removed XPMSSE - Nemesis - Papyrus Stack Fix
+- Removed XP32 Maximum Skeleton Special Extended - Fixed Scripts
+- Removed JK's Castle Dour
+- Removed Skyrim Character Sheet
+- Removed Weapon Armor and Clothing Clutter Fixes - CBBE 3BA
+- Removed Magic Fixes and Tweaks SKSE
+- Removed Immersive Weapon Switch - SKSE plugin
+- Removed Hail - Hailstorms of Skyrim
+- Removed Skyrim Character Sheet - Show in UI
+
+### Fixes and Tweaks
+- Fixed CTD in Reachend Cave and the Arena caused by Chaos Dragons unforwarded navmeshes
+- Fixed dragons taking no damage from player
+- Fixed interior issues in Castle Dour and Temple of the Divines caused by JK's Incompatibility between JK and Grand Solitude
+- Fixed CTD entering locations in third person with a lot of wine bottles, caused by TMD Winery
+- Fixed potential solitude CTDs caused by Public Executions
+- Fixed Solitude Museum LODs
+- Fixed somehow the draw/sheathe animations
+- Fixed battleaxe/warhammers overlapping position on back with greatsword
+- Fixed essential NPCs dying
+- Fixed some OWL Distributions and ensured that now Animated Armoury special weapons get distributed too
+- Fixed weapon switching annoyance and issues
+- Reverted inventory to vanilla layout, less busy screen and actually zoomable items
+- Fixed some plugin issues
+
+### Updates
+- Updated Alchemy Station Variants - Base Objects Swapper
+- Updated Simple Hunting Overhaul
+- Updated CC Bittercup - Tweaks and Enhancements
+- Updated Lux Orbis Misc Patches
+- Updated Photo Mode
+- Updated CBBE 3BA Vanilla Outfits Redone
+- Updated Northern Roads - Patch Collection
+- Updated Fully Harvest Hanging Carcasses and Coin Purses
+- Updated Weapon Switch Animations Complete
+- Updated Stress and Fear
+- Updated Thalmor Don't Report To Stormcloaks
+- Updated Vanaheimr AIO - Enhanced Rocks and Mountains Patch And Other Fixes
+- Updated (RES) Men of Skyrim Refined - COtR NPC Replacer
+- Updated (RES) True Sons Of Skyrim Refined - COtR NPC Replacer
+- Updated Assorted Mesh Fixes
+- Updated Death Drop Overhaul
+- Updated CC Hendraheim - Tweaks and Enhancements
+- Updated SkyParkour - A SkyClimb Addon - 360 and Hold to Climb
+- Updated Bjorn - Fully Voiced Follower
+- Updated RaceMenu OverlayFix and Various Mod Fixes
+- Updated Equipment Durability System NG
+- Updated B612 - my little asteroid of useful UI components
+- Updated Ancient Death Magic
+- Updated Unisexy SKSE - Gender-Neutral Head Parts
+- Updated Icy Mesh Remaster 
+- Updated Lilebonymace's Patches
+- Updated RogueUnicorn - City Trees 
+</details>
+
+<details markdown="1">
+
 <summary>v6.1.0 - September 12, 2025</summary>
 
 Update Importance: MAJOR  
