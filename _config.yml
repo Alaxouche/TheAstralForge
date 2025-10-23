@@ -5,8 +5,7 @@ color_scheme: dark
 logo: "/assets/logos/theastralforge.png"
 favicon_ico: "/assets/logos/theastralforge.ico"
 
-url: "https://alaxouche.github.io"
-baseurl: "/TheAstralForge"
+url: "https://github.com/Alaxouche/TheAstralForge"
 
 
 plugins:
