@@ -5,8 +5,8 @@ color_scheme: dark
 logo: "/assets/logos/theastralforge.png"
 favicon_ico: "/assets/logos/theastralforge.ico"
 
-url: "https://github.com/Alaxouche/TheAstralForge"
-
+url: "https://theastralforge.com"
+baseurl: ""
 
 plugins:
   - jekyll-include-cache
@@ -37,3 +37,4 @@ just_the_docs:
     wunduniik:        { name: Wunduniik,        nav_fold: true }
     krentoraan:       { name: Krentoraan,       nav_fold: true }
     ghost-of-the-grid: { name: Ghost of the Grid, nav_fold: true }
+    no-mans-sky-explorer: { name: No Mans Sky Explorer, nav_fold: true }
