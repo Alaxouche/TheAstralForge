@@ -9,6 +9,247 @@ In this section you will find changelogs for the modlist since its release. You 
 
 <details markdown="1">
 
+<summary>v6.4.0.0 - October 23, 2025</summary>
+
+**Update Importance:** MAJOR  
+**NOT SAVE COMPATIBLE**
+
+---
+
+### Additions
+- Added Claymores of the North
+- Added Meshes Optimization Project
+- Added Robber's Gorge Fixes
+- Added Skeps of Skyrim - Diverse Beehives
+- Added Ricochet - Arrow Physics Framework
+- Added Skyrim Freeze Fix NG
+- Added Orc Strongholds - AIO - Patches Collection
+- Added Scout Armor - My Patches
+- Added FuzzBeed's Fabulous Resource Repository
+- Added Modern Lighting Overhaul 2 (MLO2)
+- Added Animation Motion Fix - NPC Attack Accuracy
+- Added Pride of Cuhlecain - A Weynon Stones Overhaul
+- Added Atlas Map Markers Patches BETA
+- Added Medieval Markets - Whiterun Fixes
+- Added Medieval Markets
+- Added Medieval Markets - Patches Collection
+- Added Armor Filter Framework (AFF) - Patches
+- Added Wheeler - Show in UI
+- Added Animated ElSopa Potions Redone
+- Added The Walls of Dragon's Bridge - Settlement Overhaul
+- Added Torch Mechanics Fixed
+- Added Realistic Usable Lanterns
+- Added Some Open World Loot - SkyPatcher Edition Patches
+- Added Aggressive Combat AI
+- Added 4thunknown's Dremora Markynaz - CBBE 3BA
+- Added Orc Strongholds - All In One
+- Added Dragonsreach Dungeon Basement Floor Seams FIX
+- Added Immersive Sounds Compendium Armor Patches Collection - Sound Record Distributor
+- Added Hagraven Shrunken Heads - Mihail's Shards of Immersion
+- Added FUS RO DON'T - PushActorAway Crash Prevention Script Tweak
+- Added Quest Fixes
+- Added Sun Reworked
+- Added Flinching Glitch Workaround
+- Added Ingredient Priority Fix NG
+- Added Comprehensive Critical Damage Fix
+- Added Ultra Enemy - Good Death
+- Added Andrealletius' Jobs Overhaul (AJO)
+- Added Shouting Provokes Dragons
+- Added Darkelf Laterns - Animated
+- Added Broken Feathers (Full Skyrim Arrow Pack)
+- Added SC - VanillaPlus - Barset
+- Added SC - VanillaPlus - Common Furniture
+- Added PaulMix's dTry Key Utils extend
+- Added Mine Drawbridge Improved
+- Added TGC Town BOS Fix
+- Added Immersive Load Screens for ArteFakes
+- Added ArteFakes Remeshed. Believable Proportions
+- Added Starfish on Shores - Mihail's Shards of Immersion (SE-AE)
+- Added Fire Hurts NG Updated
+- Added Scout HDT-SMP Armor
+- Added Item Equip Restrictor
+- Added Item Equip Restrictor - Patches
+- Added Armor Filter Framework (AFF)
+- Added Partial Form Patcher
+- Added Beneficial Speech Checks
+- Added Shor's Bones - Window Bars for the Hall of Valor
+- Added Grand Solitude - High Quality Ivy Consistency
+- Added Stone Wave
+- Added The Dragonborn's Bestiary - Race Based Identification Addon
+- Added Hagraven - My Patches
+- Added Hawks Go to Sleep - Mihail's Shards of Immersion
+- Added Grand Solitude x Saviik's Solitude Mash-up
+- Added Dragonsreach Dungeon Basement Floor Seams FIX
+- Added Orc Exiles - Rift Watchtower - Patches Collection
+- Added Sassy Salt and Wind Hair Retexture - Vanilla and KS Hairdos
+- Added (Lore Accurate) Dagoth Ur Follower
+- Added Dramatic Atronach Effects
+- Added Birds of Prey and Felsaad Terns - Hawks Go To Sleep Patch
+
+---
+
+### Removals
+- Removed 4thunknown's Dremora Markynaz 3BA Bodyslide
+- Removed Lighting The 7000 Steps
+- Removed Vanilla hair - Salt and Wind
+- Removed Skyrim Arrow Overhaul (SAO) - Patch Collection
+- Removed Salt and Wind - Rough Hair for KS Hairdos SE
+- Removed Skyrim Arrow Overhaul - Adamant Eagle Eye Patch
+- Removed Skyrim Arrow Overhaul - Settings Loader
+- Removed Wolf Armor - Environment Mapped
+- Removed Skyrim Arrow Overhaul
+- Removed Blades Armors and Weapons Retexture SE
+- Removed Steel Plate with Tassets - Environment Mapped
+- Removed Orcish Armor and Weapon - Environment Mapped
+- Removed Blades Armors and Weapons - Environment Mapped
+- Removed Rally's Barsets
+- Removed Ebony Armors and Weapons - Environment Map Edit
+- Removed Daedric Armor and Weapon - Multilayer Parallaxed
+- Removed Imperial Armor and Weapon - Environment Mapped Reworked
+- Removed Nordic Armors and Weapons - Environment Map Edit
+- Removed Silver Armors and Weapons - Environment Map Edit
+- Removed Swords of the Sanctum - Environment Map Edit
+- Removed Ghosts of the Tribunal Weapons - Environment Map Edit
+- Removed Iron Armors and Weapons - Environment Mapped
+- Removed Vigil Enforcer - Environment Map Edit
+- Removed Leather Armor - Environment Mapped
+- Removed Skyrim Arrow Overhaul - Creation Club Patches
+- Removed Essential Supplies
+- Removed Dark's Whiterun market
+- Removed Modpocalypse NPCs - Dark's Whiterun Market
+- Removed ElSopa Potions Redone - Less Emissive and Fixed Inventory Size
+- Removed Orc Strongholds - Dushnikh Yal
+- Removed Orc Strongholds - Largashbur
+- Removed Orc Strongholds - Mor Khazgur
+- Removed Orc Strongholds - Narzulbur
+- Removed Chevalier's Armor Set HDT-SMP
+- Removed Saviik Solitude Misc Rx patches ESL
+- Removed Saviik's Solitude - Gray Cowl of Nocturnal Quest Patch
+- Removed Skyrim Arrow Overhaul English Localization Fixes
+- Removed Controller Support for SkyUI's Favorites Menu Groups
+- Removed JJerem's Orc Strongholds - Patch Collection
+- Removed Scarecrows of Skyrim
+- Removed Real Wheat Fields
+- Removed Quest Journal Overhaul
+- Removed Quest Journal Overhaul - More Mod Support
+- Removed Quest Journal Overhaul - Unofficial Mods Support
+- Removed Fabled Forests - Orc Strongholds - BOS Patch
+- Removed Orc Stronghold - Dushnikh Yal Occlusion Addon
+- Removed OnHit Animations Framework - SSE
+- Removed Mo's Ongoing Patches
+- Removed ze Patches - DK's Realistic Nord Ships
+- Removed Fortified Morthal - Enhanced Occlusion
+- Removed Weapons Armor Clothing and Clutter Fixes - CBBE 3BA (WACCF and ACE 3BA)
+- Removed Tempering That Makes Sense - Overhaul
+
+---
+
+### Fixes and Tweaks
+- Fixed compass disappearing due to quest journal overhaul
+- Fixed purple maps in both profiles
+- Fixed some randoms CTDs
+- Fixed crashes due to plugins inconsistencies
+- Tweaked ENB to be less dark in interiors, but still dark to be realistic
+
+---
+
+### Updates
+- Updated Enhanced Invisibility
+- Updated Icy Cave Remaster
+- Updated Papyrus Tweaks NG
+- Updated The Dragonborn's Bestiary - Addons
+- Updated Alaxouche's MO2 Plugins Repository
+- Updated Glowing Mushroom Collision Fixes
+- Updated Improved Solitude Walls
+- Updated Skyrim on Skooma
+- Updated M.O.I.S.T. - Massive Outstandingly Insane Swamp Tree
+- Updated CrashLogger
+- Updated Redoran Reverie - A Dunmer Bed Replacer
+- Updated Slightly Better Nordic Henges
+- Updated Optimised Scripts for Ordinator
+- Updated New Armory Series - Imperial Silver
+- Updated Reclusive Reachcliff Cave - FuzzBeed's Daedra Dens
+- Updated Ysmir's Tear II - FuzzBeed's Dungeons
+- Updated Bleak Falls Barrow Overhaul Version 2
+- Updated G.I.R.T.H. - Gildergreen Is Really Thicc HD
+- Updated Jesper the Guard - A Custom Voiced Follower
+- Updated Deadly Dragon Lair Locations - FuzzBeed's Dragon Lairs AIO
+- Updated ConsolePlusPlus
+- Updated Snozz's Resources
+- Updated Nature of the Wild Lands
+- Updated Witcherun - A Verdant Whiterun Overhaul
+- Updated True Directional Movement - Diagonal Sprinting Fix
+- Updated Ivy - Riverwood Timber Rest - Player Home
+- Updated Yggdrasil - Floating Tree Redux
+- Updated Ancient Death Magic
+- Updated Shrubbery Symphony - Enhanced Greenery
+- Updated Missing Follower Dialogue Edit
+- Updated Vampire Animations
+- Updated Main Menu Video
+- Updated RaceMenu OverlayFix and Various Mod Fixes
+- Updated Edge UI - Explorer Addon
+- Updated Phoenix Compendium
+- Updated Northern Roads - Patches Compendium
+- Updated Snazzy Riften AIO
+- Updated (Unofficial) Legacy of the Dragonborn - Additional Display Patches - Plus Serana and Teldryn Sero Safehouse Rooms
+- Updated Ultimate NPC Dodging
+- Updated The Dragonborn's Bestiary and Know Your Enemy 2 Patch
+- Updated Cisterns of Skyrim - A Rain Barrel and Blood Barrel Replacer
+- Updated Mostly Treeless Tundra - Patches Collection
+- Updated Fortified Morthal - Patch Collection
+- Updated Serana Dialogue Expansion
+- Updated SkyPatcher
+- Updated SkyInteract
+- Updated No Grass In Objects
+- Updated Squares of Skyrim - NoTofu
+- Updated (RES) Children of the Green - A Bosmer NPC Overhaul
+- Updated (RES) Children of the Ash - A Dunmer NPC Overhaul
+- Updated (RES) Children of Dawn's Beauty - A Resource for Certain Mods
+- Updated (RES) Children of the First - An Altmer NPC Overhaul
+- Updated (RES) True Sons Of Skyrim Refined - COtR NPC Replacer
+- Updated (RES) High Poly Orcs for JJerem's Strongholds
+- Updated LoreBox - Item and Spell Tooltips
+- Updated NPC Spell Variance - Spell Variety AI
+- Updated The Pigeon's Nest - Assortment of small mods and fixes
+- Updated For Honor in Skyrim
+- Updated Object Categorization Framework - Some KID Patches
+- Updated Flat World Map Framework
+- Updated Fully Harvest Hanging Carcasses and Coin Purses
+- Updated CritterSpawn - Script Call Reduction
+- Updated LOTD Hall of Forgotten TCC Patches
+- Updated RS Children - Bjorn - Fully Voiced Follower
+- Updated Riverwood Trader Is A Mess
+- Updated Kyne's Breath - A Froki's Shack Overhaul
+- Updated (CS) Light Placer
+- Updated (CS) Lux CS Patch
+- Updated RogueUnicorn - City Trees
+- Updated C.O.C.K.S.ified
+- Updated Lexicon SKSE
+- Updated Helmet Toggle 2
+- Updated Natural Waterfalls
+- Updated DALC Fix KreatE Preset
+- Updated Follower Stats
+- Updated Snazzy Solitude AIO
+- Updated Snazzy Interiors - Patch Collection
+- Updated SkyParkour - A SkyClimb Addon - 360 and Hold to Climb
+- Updated Oblivion Interaction Icons - Phoenix's Patches
+- Updated H.O.A. - Hyperspecific Occlusion Addon
+- Updated Actor Value Generator
+- Updated Lilebonymace's Patches
+- Updated Nature's Respite - Hunters Rest Overhaul
+- Updated Herectical Haemar's Shame - FuzzBeed's Daedra Dens
+- Updated Man's Best Friend - A Meeko's Shack Overhaul
+- Updated Rotols More Icons
+- Updated Double Life - Anises Cabin Overhaul
+- Updated Dragons (Actually) Fall Down
+- Updated With Friends Like These - Abandoned Shack Overhaul
+- Updated Stalactite Falls - OIF
+- Updated Assorted Mesh Fixes
+
+</details>
+
+<details markdown="1">
+
 <summary>v6.3.1.0 - October 03, 2025</summary>
 
 **Update Importance:** MAJOR  
