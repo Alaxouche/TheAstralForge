@@ -9,7 +9,7 @@ nav_order: 4
 
 ## Starting The List
 
-Open Mod Organizer.exe and launch 'Ghost of the Grid Launcher' through the executables. It should be already automatically selected. This is a custom executable of cyberpunk.exe with custom arguments to skip intro and redmod deployment. As the modlist is quite big, depending on your pc, it may take some time to load the game. **THIS IS NORMAL DON'T PANIC!** 
+Open Mod Organizer.exe and launch `Ghost of the Grid Launcher` through the executables. It should be already automatically selected. This is a custom executable of cyberpunk.exe with custom arguments to skip intro and redmod deployment. As the modlist is quite big, depending on your pc, it may take some time to load the game. **THIS IS NORMAL DON'T PANIC!** 
 
 {: .note } You can create a desktop shortcut in the shortcuts dropdown.
 
