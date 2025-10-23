@@ -31,6 +31,7 @@ collections:
   wunduniik:        { permalink: "/:collection/:path/", output: true }
   krentoraan:       { permalink: "/:collection/:path/", output: true }
   ghost-of-the-grid: { permalink: "/:collection/:path/", output: true }
+  no-mans-sky-explorer: { permalink: "/:collection/:path/", output: true }
 
 just_the_docs:
   collections:
