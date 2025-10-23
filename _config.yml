@@ -4,81 +4,37 @@ theme: just-the-docs
 color_scheme: dark
 logo: "/assets/logos/theastralforge.png"
 favicon_ico: "/assets/logos/theastralforge.ico"
-url: ""
+
+url: "https://https://alaxouche.github.io"
 baseurl: "" # Leave empty since it's at the root
 
-aux_links:
-  Discord: https://discord.gg/gtr5hzvR69
-  Wabbajack: https://www.wabbajack.org
-  Nexus: https://www.nexusmods.com/skyrimspecialedition/mods/89632
 
-back_to_top: true
-back_to_top_text: "Back to top"
-
-footer_content: "Copyright &copy; 2025 The Astral Forge"
-
-incremental: true
-
-cache: true
+plugins:
+  - jekyll-include-cache
+  - jekyll-seo-tag
 
 heading_anchors: true
+back_to_top: true
+back_to_top_text: "Back to top"
+footer_content: "Copyright © 2025 The Astral Forge"
 
-compress_html:
-  clippings: all
-  comments: all
-  endings: all
-  startings: []
-  blanklines: false
-  profile: false
-  # ignore:
-  #   envs: all
-
-callouts_level: loud # quit/loud
+callouts_level: loud
 callouts:
-  highlight:
-    color: yellow
-  important:
-    title: Important
-    color: blue
-  new:
-    title: New
-    color: green
-  tip:
-    title: Tip
-    color: green
-  note:
-    title: Note
-    color: purple
-  information:
-    title: Information
-    color: yellow
-  warning:
-    title: Warning
-    color: red
+  highlight: { color: yellow }
+  important: { title: Important, color: blue }
+  new:       { title: New,       color: green }
+  tip:       { title: Tip,       color: green }
+  note:      { title: Note,      color: purple }
+  information: { title: Information, color: yellow }
+  warning:   { title: Warning,   color: red }
 
 collections:
-  wunduniik:
-    permalink: "/:collection/:path/"
-    output: true
-
-  krentoraan:
-    permalink: "/:collection/:path/"
-    output: true
-
-  ghost-of-the-grid:
-    permalink: "/:collection/:path/"
-    output: true
+  wunduniik:        { permalink: "/:collection/:path/", output: true }
+  krentoraan:       { permalink: "/:collection/:path/", output: true }
+  ghost-of-the-grid:{ permalink: "/:collection/:path/", output: true }
 
 just_the_docs:
   collections:
-    wunduniik:
-      name: Wunduniik
-      nav_fold: true
-
-    krentoraan:
-      name: Krentoraan
-      nav_fold: true
-
-    ghost-of-the-grid:
-      name: Ghost of the Grid
-      nav_fold: true
+    wunduniik:        { name: Wunduniik,        nav_fold: true }
+    krentoraan:       { name: Krentoraan,       nav_fold: true }
+    ghost-of-the-grid:{ name: Ghost of the Grid, nav_fold: true }
