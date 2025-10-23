@@ -5,8 +5,8 @@ color_scheme: dark
 logo: "/assets/logos/theastralforge.png"
 favicon_ico: "/assets/logos/theastralforge.ico"
 
-url: "https://https://alaxouche.github.io"
-baseurl: "" # Leave empty since it's at the root
+url: "https://alaxouche.github.io"
+baseurl: "/TheAstralForge"
 
 
 plugins:
@@ -31,10 +31,10 @@ callouts:
 collections:
   wunduniik:        { permalink: "/:collection/:path/", output: true }
   krentoraan:       { permalink: "/:collection/:path/", output: true }
-  ghost-of-the-grid:{ permalink: "/:collection/:path/", output: true }
+  ghost-of-the-grid: { permalink: "/:collection/:path/", output: true }
 
 just_the_docs:
   collections:
     wunduniik:        { name: Wunduniik,        nav_fold: true }
     krentoraan:       { name: Krentoraan,       nav_fold: true }
-    ghost-of-the-grid:{ name: Ghost of the Grid, nav_fold: true }
+    ghost-of-the-grid: { name: Ghost of the Grid, nav_fold: true }
