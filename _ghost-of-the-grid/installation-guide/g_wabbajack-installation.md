@@ -18,7 +18,7 @@ Now you can follow the next steps in order to download and install Wunduniik Mod
 2. Go to the Search field and type Ghost of the Grid.
 3. Make sure Show NSFW is not checked and non-featured is checked.
 5. Press the download button on Wunduniik and wait for it to download.
-6. Set the installation folder to be somewhere like `C:\Games\Ghost` of the Grid. Do not install it to your desktop or downloads folder.
+6. Set the installation folder to be somewhere like `C:\Games\Ghost of the Grid`. Do not install it to your desktop or downloads folder.
 7. The download location does not need to be on an SSD but it makes installing a bit faster.
 8. Press the play button to begin.
 9. Go and pet your nearest fluffy animal whilst Wabbajack does its thing. Alternatively read through this readme again.
