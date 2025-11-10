@@ -11,10 +11,10 @@ In this section you will find changelogs for the modlist since its release. You 
 
 <details markdown="1">
 <summary>v1.1.0.0 - November 11, 2025</summary>
-Update Importance: MAJOR  
-SAVE COMPATIBLE
+**Update Importance:** MAJOR  
+**SAVE COMPATIBLE**
 
-Additions:
+# Additions:
 - Added DUD'S - Barren Colors  
 - Added DUD'S - Dead Colors  
 - Added DUD'S - Helios Glow FX  
@@ -59,14 +59,14 @@ Additions:
 - Added Keep Talking Chef  
 - Added Keep Gifting  
 
-Fixes and Tweaks:
+# Fixes and Tweaks:
 - Fixed incorrectly displayed modlist logo  
 - Ensured Breach update compatibility  
 
-Removals:
+# Removals:
 - Removed Natural Skies II  
 
-Updates:
+# Updates:
 - Updated Better Rewards  
 - Updated More Words  
 - Updated Reduce Pulse Speed Lines  
