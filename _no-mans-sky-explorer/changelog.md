@@ -10,7 +10,7 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
-<summary>v1.1.0.0 - 12/11/2025</summary>
+<summary>v1.1.0.0 - November 11, 2025</summary>
 Update Importance: MAJOR  
 SAVE COMPATIBLE  
 
