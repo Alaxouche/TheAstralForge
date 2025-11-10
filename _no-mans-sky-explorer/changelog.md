@@ -12,7 +12,7 @@ In this section you will find changelogs for the modlist since its release. You 
 <details markdown="1">
 <summary>v1.1.0.0 - November 11, 2025</summary>
 Update Importance: MAJOR  
-SAVE COMPATIBLE  
+SAVE COMPATIBLE
 
 Additions:
 - Added DUD'S - Barren Colors  
