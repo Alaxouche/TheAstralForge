@@ -8,6 +8,241 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v6.5.0.0 - November 15, 2025</summary>
+  
+**Update Importance:** MAJOR  
+**NOT SAVE COMPATIBLE**
+
+---
+
+### Additions:
+- Added The Walls of Dragon's Bridge - Settlement Overhaul  
+- Added (Lore Accurate) Dagoth Ur Follower  
+- Added Shout Progression  
+- Added Simplicity of Snow  
+- Added Simplicity of Snow - Cities of The North  
+- Added Snow Material UV Fixes (SOS)  
+- Added Jonado's random patches  
+- Added Farm Diversity - Feeding Troughs - Base Object Swapper  
+- Added (RES) Women of Skyrim Refined - COtR NPC Replacer  
+- Added RedBag's Shor's Stone - Some Useful Patches  
+- Added Missing Location Keywords FIX  
+- Added The Walls of Karthwasten - Location Overhaul (Mine - Fortress - City - Town)  
+- Added Angis Camp Overhaul  
+- Added B.O.O.B.I.E.S (aka Immersive Icons) - POTIONS  
+- Added Modular Pauldrons  
+- Added Fox Replacer - Mihail Monsters and Animals - Fluffy Patch  
+- Added Save and Load Accelerator for SKSE Cosaves - S.L.A.C.K  
+- Added OBodies - 3BA Preset Pack  
+- Added Picta - Critters of Aurbis  
+- Added Remembrance  
+- Added Smart Talk  
+- Added Embers XD (Less Poly)  
+- Added Abyssal Tides Magic - I4 Icons  
+- Added Divergence - Wearable Spelltomes Tweaked  
+- Added Born in a Barn - Door Curtains for Shacks - Base Object Swapper  
+- Added Improved Camera - First Person Animations  
+- Added Improved Camera - Ini file (1st Person view)  
+- Added Improved Camera - Patch Collection  
+- Added Improved Camera  
+- Added SIGMA - Mace animations (1st person)  
+- Added SIGMA - Shield animations (1st person)  
+- Added SIGMA - Waraxe animations (1st person)  
+- Added SIGMA - Sword animations (1st person)  
+- Added SIGMA - Battleaxe animations (1st person)  
+- Added Pelts 'o' Plenty - Fur Pelt Cloaks - Survival Fix  
+- Added Better Help Menu  
+- Added Follower Inventory Quick Access  
+- Added The Dragonborn's Bestiary - Show In UI  
+- Added Easy Console Commands  
+- Added Grumbledook Swordferns  
+- Added Grumbledook Ivy  
+- Added Default Object Manager Fix  
+- Added DynDOLOD FX Glow Accurate Disabler - Quality of Life  
+- Added (OPT) NPC Regen Nerfed  
+- Added (OPT) Shield Debuff  
+- Added Bow Charge Plus - Settings Loader  
+- Added MO2 Game Registry Proxy  
+- Added The Altar of Mehrunes Dagon With Beautiful Heads  
+- Added Medieval Markets - Less Bright Fruit  
+- Added Mute On Focus Loss  
+- Added (OPT) Save Restrictions  
+- Added Unlimited Fast Travel - Settings Loader  
+- Added (OPT) Stressful Darkness  
+- Added Ruins Over Riverwood - Lightweight Overhaul  
+- Added RedBag's Shor's Stone  
+- Added JellyFish One-Handed Sprint  
+- Added PapyrusUtil TFC Fix  
+- Added Dynamic Interface Patcher - DIP  
+- Added RaceMenu - Remove Useless Columns  
+- Added Misc Utility Plugins  
+- Added Siga NG - Casting and Aiming Slow Down Actors Movement  
+- Added Model Swapper  
+- Added More Wall Baskets  
+- Added Fixed Female Hand Size  
+- Added Sassy Salt and Wind Hair Retexture - Vanilla and KS Hairdos  
+- Added (Lore Accurate) Dagoth Ur Follower  
+- Added Dramatic Atronach Effects  
+- Added Birds of Prey and Felsaad Terns - Hawks Go To Sleep Patch  
+
+### Removals:
+- Removed RaceMenu - Animated Overlays  
+- Removed Fluffworks - Better Photoreal Foxes  
+- Removed Rob's Bug Fixes - TGC Karthwasten  
+- Removed Rob's Bug Fixes - TGC Shor's Stone Enhanced  
+- Removed Rob's Bug Fixes - TGC Shor's Stone  
+- Removed The Great Town of Karthwasten SSE  
+- Removed The Great Town of Shor's Stone SSE  
+- Removed The Great Town of Shor's Stone - Religion Mod Addons - Wintersun - Pilgrim  
+- Removed Modpocalypse NPCs - The Great Town of Shor's Stone  
+- Removed Modpocalypse NPCs - The Great Town of Karthwasten  
+- Removed Solitude Objects SMIMed - Solitude well  
+- Removed The Great Town of Karthwasten - Farmhouse Textures  
+- Removed Nightgate Inn Revived  
+- Removed Better Dynamic Snow SE  
+- Removed Better Dynamic Snow (v2 vs v3) Parallax and you (and some patches)  
+- Removed Better Dynamic Snow - Complex Parallax Materials  
+- Removed BJORN - Custom Voiced Follower with Quests  
+- Removed High Quality Ivy for Tree Stumps and Logs  
+- Removed Better Dynamic Snow - Embershard Mines Log Fix - BOS  
+- Removed Bust of Tiber Septim  
+- Removed High Quality Ivy for Riverwood's Gate - Base Object Swapper - NVFH Supported  
+- Removed Cathedral - 3D Sword Ferns  
+- Removed Snowy Surfaces Sound Collision and Aesthetics  
+- Removed Vampire Feeding Tweaks  
+- Removed Immersive Shortcuts - SE AE  
+- Removed Vende's HD Terrain Noise  
+- Removed The Great Town of Shor's Stone Patch Collection  
+- Removed The Great Town of Karthwasten Patch Collection  
+- Removed SkyFixes  
+- Removed High Quality Ivy Replacer - Base Object Swapper - Seasons of Skyrim  
+- Removed Woodland Wizard Robes - CBBE 3BA  
+- Removed Myrwatch - Editable Home Cells (Cell Bug Workaround)  
+- Removed Sunder and Wraithguard - Editable Vault Cell (Cell Bug Workaround)  
+- Removed Dreughs - Pixie's Creature Series  
+- Removed Snowy Altar for Shrine of Mehrunes Dagon  
+- Removed Diverse Witcher Missives Boards - Base Object Swapper  
+- Removed Comprehensive Falskaar Fixes  
+- Removed Onethird Divergence - Wearable Spelltomes  
+- Removed Bust of Tiber Septim - Expanded  
+- Removed Grand Solitude - High Quality Ivy Consistency  
+- Removed Vampire Animations  
+- Removed Desecration Icon - I4 Add-On  
+- Removed Quest Journal Overhaul - Unofficial Mods Support  
+- Removed Fabled Forests - Orc Strongholds - BOS Patch  
+- Removed Orc Stronghold - Dushnikh Yal Occlusion Addon  
+- Removed OnHit Animations Framework - SSE  
+- Removed Mo's Ongoing Patches  
+- Removed ze Patches - DK's Realistic Nord Ships  
+- Removed Fortified Morthal - Enhanced Occlusion  
+- Removed Weapons Armor Clothing and Clutter Fixes - CBBE 3BA (WACCF and ACE 3BA)  
+- Removed Tempering That Makes Sense - Overhaul  
+
+### Fixes and Tweaks:
+- Fixed vampire lord CTDs  
+- Fixed flickering in first person  
+- Fixed ivies textures and models  
+- New design for Karthwasten, Shor's Stone, Riverwood Outskirts, Dragon Bridge  
+- New ultra modular dashboard  
+- New 1st person combat animations  
+- Tweaked snow to have matching color everywhere  
+
+### Updates:
+- Updated Dynamic Female Rail Leaning  
+- Updated (RES) Children of the Hist  
+- Updated High Quality Ivy for SD's Farmhouse Fences  
+- Updated First Person Interactions  
+- Updated Snowy Ships for Snowy Regions  
+- Updated Burn'em Banners  
+- Updated Burn'em High-res Banners  
+- Updated Fluffapalooza  
+- Updated HFs - Diverse Satchel  
+- Updated Gore - A Companion Mod  
+- Updated Animated Ice Bergs  
+- Updated Holy Templar Magic  
+- Updated JK's Interiors Patch Collection  
+- Updated Anga's Mill - Cities of the North Addon - Patch Collection  
+- Updated Survival Mode Improved - SKSE  
+- Updated Woodland Wizard Robes  
+- Updated Skyrim 3D Furniture - Upper Furniture Addon  
+- Updated Diverse Woodchopping Blocks - Model Swapper  
+- Updated Wait Your Turn a la SOT patch only  
+- Updated (OPT) The New Gentleman  
+- Updated Fixed Meshes for Rugnarok - Lux Patch  
+- Updated Occlusion for Quest Mods  
+- Updated Animated Ice Floes  
+- Updated Better Dynamic Snow in New Lands  
+- Updated Legacy of the Dragonborn - Creation Club Patch Hub  
+- Updated Runemaster Magic  
+- Updated Handcarts - Base Object Swapper  
+- Updated Project Gap Close - NPC Sprint Attacks and Dynamic Combat Pathing Revolution  
+- Updated OBody Next Generation  
+- Updated Embers XD  
+- Updated Psychopatchist Purgatory  
+- Updated JK's Tel Mithryn Patch Collection  
+- Updated JK's College of Winterhold (Immersive and Obscure) Combo Patches  
+- Updated Master the Summit - Revised  
+- Updated The Dragonborn's Bestiary - Quest Patch Compendium  
+- Updated Reinforced Civil War Camps  
+- Updated StarRiseShine's Gourmet Patches  
+- Updated Next-Gen Decapitations  
+- Updated Utenlands Nordic Tents - Replacer  
+- Updated Difficulty Global Variable  
+- Updated Grand Solitude - The Walls of High King Erling  
+- Updated Dynamic Animation Framework  
+- Updated Icy Mesh Remaster  
+- Updated Aetherial Artifacts Rework  
+- Updated Vanaheimr - Northern Roads - Complex Material  
+- Updated Water for ENB  
+- Updated Snowy Ships for Snowy Regions - Realistic Nord Ships Patch  
+- Updated Legacy of the Dragonborn - The Curator's Companion  
+- Updated Stress and Fear  
+- Updated Experience  
+- Updated Forgotten Vale Guardians - Chakra's Creatures  
+- Updated First Person Animations - For some mods  
+- Updated (CS) NAT.CS III  
+- Updated Magic Fixes and Tweaks SKSE  
+- Updated Character Suggestor  
+- Updated LOTD Mesh Fixes  
+- Updated Enhanced Rocks and Mountains - Addon  
+- Updated Object Categorization Framework - Some KID Patches  
+- Updated Natural Waterfalls  
+- Updated Fully Harvest Hanging Carcasses and Coin Purses  
+- Updated Rotols More Icons  
+- Updated H.O.A. - Hyperspecific Occlusion Addon  
+- Updated Follower Stats  
+- Updated Assorted Mesh Fixes  
+- Updated (CS) Lux CS Patch  
+- Updated NPC Spell Variance - Spell Variety AI  
+- Updated Modern Lighting Overhaul 2 (MLO2)  
+- Updated Wheeler - Show in UI  
+- Updated Atlas Map Markers Patches BETA  
+- Updated PaulMix's dTry Key Utils Extend  
+- Updated RaceMenu OverlayFix and Various Mod Fixes  
+- Updated (RES) Children of Dawn's Beauty - A Resource for Certain Mods  
+- Updated (RES) Children of the First - An Altmer NPC Overhaul  
+- Updated (RES) Children of the Green - A Bosmer NPC Overhaul  
+- Updated (RES) Children of the Ash - A Dunmer NPC Overhaul  
+- Updated Cisterns of Skyrim - A Rain Barrel and Blood Barrel Replacer  
+- Updated RogueUnicorn - City Trees  
+- Updated DALC Fix KreatE Preset  
+- Updated Medieval Markets - Whiterun Fixes  
+- Updated SkyInteract  
+- Updated Medieval Markets  
+- Updated FuzzBeed's Fabulous Resource Repository  
+- Updated Serana Dialogue Expansion  
+- Updated Medieval Markets - Patches Collection  
+- Updated Realistic Usable Lanterns  
+- Updated Torch Mechanics Fixed  
+- Updated Ancient Death Magic  
+- Updated Chitin Bow  
+- Updated SSE Engine Fixes  
+- Updated Stalactite Falls - OIF  
+- Updated Assorted Mesh Fixes  
+
+</details>
+
+<details markdown="1">
 
 <summary>v6.4.0.0 - October 23, 2025</summary>
 
