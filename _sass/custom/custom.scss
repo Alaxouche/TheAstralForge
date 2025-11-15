@@ -23,7 +23,7 @@ $font-size-10-sm: 48px !default;
 
 
 @media print {
-  .side-bar
+  .side-bar,
   .page-header {
     display: none;
   }
@@ -34,17 +34,17 @@ $font-size-10-sm: 48px !default;
 }
 
 // Stop main content overlapping with sidebar when main content is too wide and produces a horizonal scroll bar
-.side-bar{
-	z-index:8;
+.side-bar {
+	z-index: 8;
 }
 
 // floating header
 @media screen and (min-width: 800px) {
 	.main-header {
-		position:Fixed;
+		position: fixed;
 		width: $content-width;
-		z-index:10;
-		background:$body-background-color;
+		z-index: 10;
+		background: $body-background-color;
 		
 	}
 }
@@ -55,8 +55,8 @@ $font-size-10-sm: 48px !default;
 }
 
 // to make scrolling links position 100px from top of screen
-html{
-    scroll-padding-top:100px;
+html {
+    scroll-padding-top: 100px;
 }
 
  
@@ -94,10 +94,10 @@ table {
 
 th {
    min-width: 50px;
-   background-color:#50098A;
+   background-color: #50098A;
    color: #ffffff;
    font-weight: bold;
-   text-align:center;
+   text-align: center;
 }
 
 td {
@@ -113,18 +113,18 @@ td {
 code {
     white-space : pre-wrap !important;
     word-break: break-word;
-    background-color:#462B53;
+    background-color: #462B53;
     color: #ffffff;
-    font-family:system-ui,-apple-system,blinkmacsystemfont,"Segoe UI",roboto,"Helvetica Neue",arial,sans-serif;
+    font-family: system-ui,-apple-system,blinkmacsystemfont,"Segoe UI",roboto,"Helvetica Neue",arial,sans-serif;
 }
 
 
 pre {
     white-space : pre-wrap !important;
     word-break: break-word;
-    background-color:#462B53;
+    background-color: #462B53;
     color: #ffffff;
-    font-family:system-ui,-apple-system,blinkmacsystemfont,"Segoe UI",roboto,"Helvetica Neue",arial,sans-serif;
+    font-family: system-ui,-apple-system,blinkmacsystemfont,"Segoe UI",roboto,"Helvetica Neue",arial,sans-serif;
 }
 
 .highlight,
@@ -133,7 +133,7 @@ pre.highlight {
     white-space : pre-wrap !important;
     word-break: break-word;
     color: #ffffff;
-    font-family:system-ui,-apple-system,blinkmacsystemfont,"Segoe UI",roboto,"Helvetica Neue",arial,sans-serif;
+    font-family: system-ui,-apple-system,blinkmacsystemfont,"Segoe UI",roboto,"Helvetica Neue",arial,sans-serif;
 }
 
 
@@ -210,7 +210,7 @@ background: transparent;
 .nav-list.nav-category-list {
   > .nav-list-item {
     margin: 0;
-	color: fff;
+	color: #fff;
 	line-height: 1.025;
 
  
