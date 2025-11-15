@@ -389,21 +389,23 @@ background: transparent;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   padding: 0;
-  margin: 0 8px;
+  margin: 0 8px 0 0;
   background: transparent;
-  border: none;
-  border-radius: 6px;
+  border: 1px solid rgba(244, 171, 255, 0.2);
+  border-radius: 4px;
   cursor: pointer;
   color: currentColor;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
   font-size: 18px;
+  flex-shrink: 0;
   position: relative;
 
   &:hover {
-    background-color: rgba(244, 171, 255, 0.1);
+    background-color: rgba(244, 171, 255, 0.08);
+    border-color: rgba(244, 171, 255, 0.4);
   }
 
   &:active {
@@ -411,12 +413,15 @@ background: transparent;
   }
 
   .icon {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
     stroke-linecap: round;
     stroke-linejoin: round;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.25s ease;
   }
 
   .icon-sun {
@@ -428,8 +433,19 @@ background: transparent;
   }
 }
 
+// When light mode is active, swap icons
+html.light .btn-theme-toggle {
+  .icon-sun {
+    opacity: 1;
+  }
+
+  .icon-moon {
+    opacity: 0;
+  }
+}
+
 // When dark mode is active, swap icons
-html.dark-mode .btn-theme-toggle {
+html.dark .btn-theme-toggle {
   .icon-sun {
     opacity: 0;
   }
