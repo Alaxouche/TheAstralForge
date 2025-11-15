@@ -12,17 +12,32 @@
   <link rel="stylesheet" href="{{ '/assets/css/print.css' | relative_url }}">
 {% else %}
 <script>
-  let themeLocalStorage = localStorage.getItem('theme');
-  if(!themeLocalStorage) {
-    let systemPrefersColorScheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? 'dark' : 'light';
-    localStorage.setItem('theme', systemPrefersColorScheme);
-  }
-  if (localStorage.getItem('theme') === 'dark') {
-    document.documentElement.classList.add('dark-mode');
-    document.getElementById('theme-style').href = '{{ "/assets/css/just-the-docs-dark.css" | relative_url }}';
-  } else {
-    document.documentElement.classList.add('light-mode');
-    document.getElementById('theme-style').href = '{{ "/assets/css/just-the-docs-light.css" | relative_url }}';
+  // Déterminer et appliquer le thème avant le rendu
+  (function() {
+    let themeLocalStorage = localStorage.getItem('theme');
+    if (!themeLocalStorage) {
+      let systemPrefersColorScheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? 'dark' : 'light';
+      localStorage.setItem('theme', systemPrefersColorScheme);
+      themeLocalStorage = systemPrefersColorScheme;
+    }
+    
+    // Appliquer la classe CSS immédiatement
+    if (themeLocalStorage === 'dark') {
+      document.documentElement.classList.add('dark-mode');
+    } else {
+      document.documentElement.classList.add('light-mode');
+    }
+  })();
+</script>
+<link id="theme-style" rel="stylesheet" href="">
+<script>
+  // Définir le lien CSS du thème
+  const theme = localStorage.getItem('theme') || 'dark';
+  const themeStyle = document.getElementById('theme-style');
+  if (themeStyle) {
+    themeStyle.href = theme === 'dark' 
+      ? '{{ "/assets/css/just-the-docs-dark.css" | relative_url }}'
+      : '{{ "/assets/css/just-the-docs-light.css" | relative_url }}';
   }
 </script>
 <script type="text/javascript" src="{{ '/assets/js/theme-switch.js' | relative_url }}" defer></script>
