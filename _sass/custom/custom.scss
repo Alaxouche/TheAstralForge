@@ -380,3 +380,212 @@ background: transparent;
   border: 1px solid #ddd; /* Add a grey border */
   margin-bottom: 12px; /* Add some space below the input */
 }
+
+// ========================================
+// Theme Toggle Button Styles
+// ========================================
+
+.btn-theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  margin: 0 8px;
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  color: currentColor;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 18px;
+
+  &:hover {
+    background-color: rgba(244, 171, 255, 0.1);
+    border-color: rgba(244, 171, 255, 0.3);
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  .icon {
+    width: 18px;
+    height: 18px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .icon-sun {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: rotate(0deg);
+  }
+
+  .icon-moon {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: rotate(180deg);
+    position: absolute;
+  }
+}
+
+// When dark mode is active, swap icons
+html.dark-mode .btn-theme-toggle {
+  .icon-sun {
+    opacity: 0;
+    transform: rotate(180deg);
+  }
+
+  .icon-moon {
+    display: block;
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+}
+
+// ========================================
+// Main Header Improvements
+// ========================================
+
+.main-header {
+  border-bottom: 1px solid rgba(244, 171, 255, 0.2);
+  background: $body-background-color;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+
+  .nav-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 $gutter-spacing;
+    height: 60px;
+    gap: 16px;
+  }
+
+  .nav-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .search-box {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+// ========================================
+// Visual Enhancements
+// ========================================
+
+// Smooth transitions for theme switching
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+// Improve link styling
+a {
+  transition: color 0.2s ease, opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+// Enhance button styles
+button, .btn-reset {
+  transition: all 0.2s ease;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+// Improve code blocks visibility
+code, pre {
+  background-color: #462B53;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+// Dark mode specific styling
+html.dark-mode {
+  code, pre {
+    background-color: #462B53;
+    color: #e8d5ff;
+  }
+}
+
+html.light-mode {
+  code, pre {
+    background-color: #f5f2f5;
+    color: #462B53;
+  }
+}
+
+// Better table styling
+table {
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+th {
+  transition: background-color 0.3s ease;
+}
+
+// Sidebar improvements
+.side-bar {
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.site-header {
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $gutter-spacing-sm;
+  border-bottom: 1px solid rgba(244, 171, 255, 0.2);
+}
+
+.site-title {
+  flex: 1;
+  transition: color 0.3s ease;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+// Responsive improvements
+@media screen and (max-width: 768px) {
+  .main-header {
+    .nav-wrap {
+      padding: 0 $gutter-spacing-sm;
+      gap: 8px;
+    }
+
+    .nav-content {
+      display: none;
+    }
+  }
+
+  .btn-theme-toggle {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+// Print mode improvements
+@media print {
+  .btn-theme-toggle,
+  .nav-button,
+  .search-box {
+    display: none;
+  }
+
+  .main-header {
+    display: none;
+  }
+}
