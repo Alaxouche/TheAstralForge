@@ -46,12 +46,18 @@
 <!-- Theme Toggle Button Injection -->
 <script>
   (function() {
+    console.log('[Theme Toggle] Script initialization started');
+    
     // Fonction pour initialiser le thème toggle
     function initThemeToggle() {
-      const pageHeader = document.querySelector('.page-header');
+      console.log('[Theme Toggle] initThemeToggle called');
+      
+      // Chercher le bon sélecteur - .site-header dans Just-the-Docs
+      const siteHeader = document.querySelector('.site-header');
+      console.log('[Theme Toggle] siteHeader found:', !!siteHeader);
       
       // Créer et injecter le bouton
-      if (pageHeader && !document.getElementById('theme-toggle')) {
+      if (siteHeader && !document.getElementById('theme-toggle')) {
         const themeButton = document.createElement('button');
         themeButton.id = 'theme-toggle';
         themeButton.className = 'btn-theme-toggle';
@@ -75,42 +81,56 @@
           </svg>
         `;
         
-        pageHeader.appendChild(themeButton);
+        // Ajouter le bouton au site header de JTD
+        siteHeader.appendChild(themeButton);
+        console.log('[Theme Toggle] Button injected into site-header');
       }
       
       // Ajouter l'écouteur de clic au bouton
       const toggleBtn = document.getElementById('theme-toggle');
-      if (toggleBtn && !toggleBtn.hasListener) {
+      if (toggleBtn && !toggleBtn._themeListenerAttached) {
         toggleBtn.addEventListener('click', function(e) {
           e.preventDefault();
+          console.log('[Theme Toggle] Button clicked');
+          
           const currentTheme = localStorage.getItem('theme') || 'dark';
           const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+          console.log('[Theme Toggle] Switching from', currentTheme, 'to', newTheme);
           
           // Sauvegarder et appliquer le nouveau thème
           localStorage.setItem('theme', newTheme);
           
-          // Ajouter la classe au documentElement
+          // Utiliser le color_scheme de JTD plutôt que des classes custom
+          document.documentElement.setAttribute('data-color-scheme', newTheme);
+          
+          // Aussi mettre à jour les classes pour cohérence
           if (newTheme === 'dark') {
-            document.documentElement.classList.add('dark-mode');
-            document.documentElement.classList.remove('light-mode');
+            document.documentElement.classList.add('dark');
+            document.documentElement.classList.remove('light');
           } else {
-            document.documentElement.classList.add('light-mode');
-            document.documentElement.classList.remove('dark-mode');
+            document.documentElement.classList.add('light');
+            document.documentElement.classList.remove('dark');
           }
           
-          // Mettre à jour l'attribut data-theme
-          document.documentElement.setAttribute('data-theme', newTheme);
+          console.log('[Theme Toggle] Theme applied:', newTheme);
         });
-        toggleBtn.hasListener = true; // Marquer pour éviter les doublons
+        toggleBtn._themeListenerAttached = true;
       }
     }
     
     // Initialiser au chargement du DOM
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initThemeToggle);
+      document.addEventListener('DOMContentLoaded', function() {
+        console.log('[Theme Toggle] DOMContentLoaded fired');
+        initThemeToggle();
+      });
     } else {
       // Si le DOM est déjà chargé
+      console.log('[Theme Toggle] DOM already loaded, initializing directly');
       initThemeToggle();
     }
+    
+    // Aussi essayer après un délai court au cas où
+    setTimeout(initThemeToggle, 500);
   })();
 </script>
