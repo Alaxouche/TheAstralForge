@@ -10,7 +10,26 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v1.1.0.1 - November 15, 2025</summary>
+  
+**Update Importance:** MINOR  
+**SAVE COMPATIBLE**
+
+___
+
+### Fixes and Tweaks:
+- Vortex Version Online 
+
+### Updates:
+- Updated Crashed Freighter Procedural Containers 
+- Updated Treasure Ruin Procedural Crates
+- Updated Faster Scanning  
+
+</details>
+
+<details markdown="1">
 <summary>v1.1.0.0 - November 11, 2025</summary>
+  
 **Update Importance:** MAJOR  
 **SAVE COMPATIBLE**
 
