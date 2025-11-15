@@ -1,0 +1,58 @@
+{% comment %}
+  Page navigation component that displays a link to the next page
+  based on nav_order within the same parent and collection
+{% endcomment %}
+
+{% if page.parent %}
+  {% comment %} Combine all pages from site.pages and all collection documents {% endcomment %}
+  {% assign all_docs = "" | split: "" %}
+  {% assign all_docs = all_docs | concat: site.pages %}
+  
+  {% for collection in site.collections %}
+    {% if collection.output %}
+      {% assign all_docs = all_docs | concat: collection.docs %}
+    {% endif %}
+  {% endfor %}
+  
+  {% comment %} Get all pages with the same parent and collection {% endcomment %}
+  {% assign siblings = "" | split: "" %}
+  {% for doc in all_docs %}
+    {% if doc.parent == page.parent %}
+      {% comment %} Check if both are in the same collection or both are regular pages {% endcomment %}
+      {% assign doc_collection = doc.collection | default: "" %}
+      {% assign page_collection = page.collection | default: "" %}
+      {% if doc_collection == page_collection %}
+        {% assign siblings = siblings | push: doc %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+  
+  {% comment %} Sort siblings by nav_order {% endcomment %}
+  {% assign siblings = siblings | sort: "nav_order" %}
+  
+  {% comment %} Find the current page index {% endcomment %}
+  {% assign current_index = nil %}
+  {% for sibling in siblings %}
+    {% if sibling.url == page.url %}
+      {% assign current_index = forloop.index0 %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+  
+  {% comment %} Get the next page {% endcomment %}
+  {% if current_index %}
+    {% assign next_index = current_index | plus: 1 %}
+    {% if next_index < siblings.size %}
+      {% assign next_page = siblings[next_index] %}
+      
+      <div class="page-nav">
+        <hr>
+        <div class="page-nav-next">
+          <a href="{{ next_page.url | relative_url }}" class="btn btn-primary">
+            Next: {{ next_page.title }} →
+          </a>
+        </div>
+      </div>
+    {% endif %}
+  {% endif %}
+{% endif %}

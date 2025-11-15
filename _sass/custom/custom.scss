@@ -380,3 +380,32 @@ background: transparent;
   border: 1px solid #ddd; /* Add a grey border */
   margin-bottom: 12px; /* Add some space below the input */
 }
+
+// Page navigation settings
+.page-nav {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  
+  hr {
+    margin-bottom: 1.5rem;
+    border-color: $border-color;
+  }
+  
+  .page-nav-next {
+    text-align: right;
+    
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      font-size: $font-size-5;
+      font-weight: 500;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: all 0.2s ease-in-out;
+      
+      &:hover {
+        transform: translateX(5px);
+      }
+    }
+  }
+}
