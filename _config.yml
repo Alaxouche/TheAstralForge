@@ -38,4 +38,4 @@ just_the_docs:
     wunduniik:        { name: Wunduniik,        nav_fold: true }
     krentoraan:       { name: Krentoraan,       nav_fold: true }
     ghost-of-the-grid: { name: Ghost of the Grid, nav_fold: true }
-    no-mans-sky-explorer: { name: No Mans Sky Explorer, nav_fold: true }
+    no-mans-sky-explorer: { name: No Man's Sky Explorer, nav_fold: true }
