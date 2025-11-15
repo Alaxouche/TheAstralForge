@@ -10,41 +10,6 @@
   </style>
   <script src="https://unpkg.com/pagedjs/dist/paged.polyfill.js"></script>
   <link rel="stylesheet" href="{{ '/assets/css/print.css' | relative_url }}">
-{% else %}
-<script>
-  // Déterminer et appliquer le thème avant le rendu pour éviter le flickering
-  (function() {
-    let themeLocalStorage = localStorage.getItem('theme');
-    if (!themeLocalStorage) {
-      let systemPrefersColorScheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? 'dark' : 'light';
-      localStorage.setItem('theme', systemPrefersColorScheme);
-      themeLocalStorage = systemPrefersColorScheme;
-    }
-    
-    // Appliquer la classe CSS immédiatement
-    if (themeLocalStorage === 'dark') {
-      document.documentElement.className = 'dark-mode';
-    } else {
-      document.documentElement.className = 'light-mode';
-    }
-    
-    // Définir le data-attribute
-    document.documentElement.setAttribute('data-theme', themeLocalStorage);
-  })();
-</script>
-<style>
-  /* Prévenir le flash de couleur au chargement */
-  html {
-    background-color: #1a1b1e;
-    color: #c8c9cc;
-  }
-  
-  html.light-mode {
-    background-color: #ffffff;
-    color: #22292f;
-  }
-</style>
-<link rel="stylesheet" href="{{ '/assets/css/theme-toggle.css' | relative_url }}">
 {% endif %}
 <link rel="stylesheet" href="{{ "/assets/css/custom.css" | prepend: site.baseurl }}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
