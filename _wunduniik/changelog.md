@@ -8,6 +8,118 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v6.6.0.0 - 22/11/2025</summary>
+**Update Importance:** MAJOR  
+**NOT SAVE COMPATIBLE**
+
+---
+
+### Additions:
+- Added Better Carriage Destinations  
+- Added Typing Mode  
+- Added Dwemer Gates Don't Reset  
+- Added SkyPatcher - NARC Remade - No Animals Report Crimes  
+- Added Skeleton Key Rework  
+- Added Vokrii - Scrambled Bugs Compatibility  
+- Added Vokriinator Black - Scrambled Bugs Compatibility  
+- Added Ordinator - Scrambled Bugs Compatibility  
+- Added East Empire Company Open Crate - Base Object Swapper  
+- Added Spaghetti's Mods - NavCut Addon  
+- Added Spaghetti's Cities - Whiterun  
+- Added An Abstract Skyrim - Whiterun  
+- Added HFs - Oil Barrels - Remodel  
+- Added Vampire Feeding Tweaks  
+- Added Simply Snowy Windhelm  
+- Added Fix Toggle Walk Run (SKSE Plugin)  
+
+### Removals:
+- Removed Custom Window  
+- Removed JS Misplaced Septims SE  
+- Removed JS Shout Apart Skeletons SE  
+- Removed JS Emissive Eyes SE - Settings Loader  
+- Removed Better Female Elks  
+- Removed Icy Windhelm  
+- Removed Animals Report No Crime - SkyPatcher  
+- Removed Disk Cache Enabler  
+- Removed JS Emissive Eyes SE  
+- Removed Just Bite - Dynamic Activation Key Patch For Vampire Mods  
+- Removed Diverse Downed Logs - Base Object Swapper  
+- Removed Diverse Mammoth Babies  
+- Removed Vampire Feed Script Fixes  
+- Removed Fallen Champions of Nirn  
+- Removed DPF - Dynamic Persistent Forms  
+- Removed Configurable Notification Messages  
+- Removed Capital Whiterun Expansion and all related patches (Lite, Trellis, Bucket Fix, Cooking Spit Fix, Jorrvaskr Stairs Gap Fix, etc.)  
+- Removed Headshot Kills - CIF  
+- Removed Attack Speed to Damage Conversion for MCO-ADXP  
+- Removed ODA for Vokriinator Black MCO-ADXP  
+- Removed SkyPatcher-Protected Citizens (SPID)  
+- Removed Object Impact Framework (OIF) and all related submodules (Flammable Alcohol, Cooking with Fire, Switch Them On, Break The Lock, etc.)  
+- Removed The Dragonborn's Bestiary - Race Based Identification Addon  
+- Removed Dark Elf Lanterns - Animated  
+- Removed Well Well Well - Diverse Wells of Skyrim  
+- Removed Easy Console Commands  
+
+### Fixes and Tweaks:
+- Fixed double well in Whiterun  
+- Fixed SSEEdit Output missing (preventing app launch)  
+- Fixed DLAA wrong folder structure  
+- Fixed vampire race feeding, death, and CTD issues  
+- Fixed purple textures for some flora  
+- Fixed ground holes in Whiterun  
+- Fixed leveling up issues — you can now level up without waiting  
+- Fixed purple mannequins  
+- Fixed perk mod order issues causing locked perks  
+- Fixed water flickering in first person  
+- Fixed invisible beast transformation  
+- Improved load times by removing unstable mods (Disk Cache Enabler, OIF, etc.)  
+- Replaced Whiterun overhaul with a smaller, more performant alternative  
+- Adjusted/remodeled landscape and waterfall meshes to match ERM visuals  
+- Reorganized SPID/SkyPatcher consistency and activator icons (Oblivion Interaction patcher)  
+- Updated dashboard to correct widescreen zoom  
+
+### Updates:
+- Updated Dynamic Things Alternative - Base Object Swapper  
+- Updated Sneak Vignette  
+- Updated KittyVFX - ENBHands  
+- Updated No Morthal Snow - Redone  
+- Updated Ryn's Riverwood Patch Collection  
+- Updated Ryn's Mehrunes Dagon - Patch Collection  
+- Updated ImGui Icons  
+- Updated Floating Subtitles  
+- Updated Powerofthree's Papyrus Extender  
+- Updated New Armory Series - Ashen Weapons  
+- Updated Snowy Barrel01 - SE by Xtudo  
+- Updated Nordic Stonewall Terraces  
+- Updated Crafting Grants XP  
+- Updated Snazzy Misc Locations  
+- Updated Northern Roads - Patch Collection  
+- Updated Riverwood Trader Is A Mess  
+- Updated SkyPatcher  
+- Updated Dragon Races of Skyrim  
+- Updated C.O.C.K.S.ified  
+- Updated (CS) Lux CS Patch  
+- Updated RaceMenu OverlayFix and Various Mod Fixes  
+- Updated Gore - A Companion Mod  
+- Updated Vanaheimr - Northern Roads - Complex Material  
+- Updated Wheeler - Show in UI  
+- Updated Embers XD  
+- Updated RedBag's Shor's Stone - Some Useful Patches  
+- Updated Modern Lighting Overhaul 2 (MLO2)  
+- Updated RogueUnicorn - City Trees  
+- Updated Fox Replacer - Mihail Monsters and Animals - Fluffy Patch  
+- Updated Save and Load Accelerator for SKSE Cosaves - S.L.A.C.K  
+- Updated Unlocked 1st Person Combat  
+- Updated Cisterns of Skyrim - A Rain Barrel and Blood Barrel Replacer  
+- Updated Rim Lighting Removed  
+- Updated SIGMA - Warhammer Animations - 1st Person  
+- Updated SIGMA - Greatsword Animations - 1st Person  
+- Updated More Realistic Antlers for Female Elk by FrankBlack  
+- Updated Ancient Blood Magic II  
+
+</details>
+
+<details markdown="1">
 <summary>v6.5.0.0 - November 15, 2025</summary>
   
 **Update Importance:** MAJOR  
