@@ -8,7 +8,7 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
-<summary>v6.6.0.0 - 22/11/2025</summary>
+<summary>v6.6.0.0 - November 22, 2025</summary>
 **Update Importance:** MAJOR  
 **NOT SAVE COMPATIBLE**
 
