@@ -10,6 +10,52 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v1.1.1.0 - November 27, 2025</summary>
+  
+**Update Importance:** MINOR  
+**SAVE COMPATIBLE**
+
+___
+
+# Additions:
+- Added Frigate LOD Fix  
+- Added Vile Brood Salvageable Scrap Icon Fix
+- Added Hauler Engine Icon Fix 
+- Added BetterSettlements
+- Added Fighter WingK FIX
+- Added Settlement Fabricator Camera Fix 
+- Added Floating Teleporter Collision
+- Added Waterworld Giants
+- Added Gas Giants Color Fix  
+- Added Simple Colored System Info
+- Added Larger System Holograms (Giant Seeker) 
+
+# Fixes and Tweaks:
+- Fixed warp texture conflict
+- Ensured latest update compatibility  
+
+# Removals:
+- Removed Reduced Launch Cost 4.1
+
+# Updates:
+- Updated Derelict Procedural Additions
+- Updated Hide or Fade Notifications
+- Updated Realistic Market
+- Updated Keep Gifting 
+- Updated No Bloom Effect
+- Updated Crashed Freighter Procedural Containers
+- Updated Treasure Ruin Procedural Crates
+- Updated Faster Scanning 
+- Updated Derelict Procedural Additions 
+- Updated LowFlight v3.1 (FOUNDATION UPDATE COMPATIBLE) by Hytek (PACKED) 
+- Updated Enjoyable Quicksilver (LUA Script Included)  
+- Updated Keep Talking Polo E7  
+- Updated Exosolar's and Babs' Beyond Base Building  
+- Updated Quicksilver Missions  
+
+</details>
+
+<details markdown="1">
 <summary>v1.1.0.1 - November 15, 2025</summary>
   
 **Update Importance:** MINOR  
