@@ -10,6 +10,184 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v1.6.0.0 - December 02, 2025</summary>
+
+**Update Importance:** MAJOR  
+**SAVE COMPATIBLE** 
+
+___
+
+# Additions:
+- Added Preem Mirrors (Reflective Mirror Materials)  
+- Added USMC MARPAT Outfit  
+- Added Night City Traffic Overhaul  
+- Added Night City Flooded  
+- Added Crunch Plaza Restoration  
+- Added ReImagined  
+- Added Time and weather aware River Ward  
+- Added Time and weather aware Panam  
+- Added Time and weather aware Jackie Welles  
+- Added Time and weather aware Goro Takemura  
+- Added Time and weather and place aware Judy  
+- Added Factions Evolved (Night City Traffic Overhaul Addon - Claim Vehicles Mod Cars Support)  
+- Added Threedagi Melee Shop (Virtual Atelier)  
+- Added Porsche 718 Cayman GTS  
+- Added Supron Widebody  
+- Added The RVC00N Dumpster - Stinky Slashed Top (M-F) (GS) (AXL)  
+- Added The RVC00N Dumpster - Stinky Mechanic Pants (M-F) (GS) (AXL)  
+- Added General Performance Improvements (ini Tweaks)  
+- Added XRX Joi Raincoat Outfit Archive XL  
+- Added Assorted Tactical Poses  
+- Added Legion Joey's Hidden Karambit  
+- Added Rin Embellished Katana  
+- Added Casino Updates - Lamps  
+- Added Blighted The Unknown's Axe  
+- Added Game World Boundary Removed  
+- Added Edgerunners Lucy NPC (Spawns in Night City)  
+- Added Canyon Explorer  
+- Added The Unknown's Gently-Used Axe  
+- Added Blight's Mechanical Staff  
+- Added Throwing Weapon Bug Fix  
+- Added Trickster's Gutting Head-Smasher  
+- Added Quadra Type-66 Phantom  
+- Added FF7 Dodge Challenger SRT Shaker  
+- Added Arasaka Tower Opened  
+- Added Weapon Handling Control  
+- Added Casino Updates - Neon  
+- Added Pacifica Enhanced  
+- Added M9 Project  
+- Added Canyon Bridge  
+- Added The Wobbler - Monowheel  
+- Added Immersion Patch - Quest Vehicle Motion Fixes  
+- Added Liberty (Rebuild)  
+- Added Flying Tank - Enhanced Basilisk  
+- Added Canyon Fixes  
+- Added Outdoor V Canyon  
+- Added Here's Brendan  
+- Added Night City Baked  
+- Added Custom Herrera Riptide Terrier  
+- Added 2022 Hyundai N Vision 74  
+- Added Mizutani Hozuki Widebody  
+- Added Johnny Appearances Overhaul  
+- Added Anti-Tank Poses  
+- Added Immersion Patch - Holdin' On (Kerry's Mansion Scene Bug Fixes)  
+- Added 2021 Mercedes AMG SL63  
+- Added Shion Blackbird MK.1 and MK.2 (Weaponized)  
+
+# Removals:
+- Removed Audi RS5 and Audi RS5 - Small Rework  
+- Removed BMW M1000RR  
+- Removed BMW M3 Competition  
+- Removed BMW M4 CSL  
+- Removed BMW S1000RR  
+- Removed Bugatti Chiron SuperSport  
+- Removed Ducati Monster 1200  
+- Removed Ducati Panigale V4R  
+- Removed Ferrari 812 Competizione  
+- Removed Ferrari Purosangue  
+- Removed Koenigsegg Regera (Addon)  
+- Removed Lamborghini Evo 2  
+- Removed Lamborghini Huracan STO  
+- Removed Lamborghini Terzo Millennio (Rayfield Caliburn Replacer)  
+- Removed Lamborghini Temerario  
+- Removed Lamborghini Veneno  
+- Removed Lexus LC500 Liberty Walk  
+- Removed McLaren 765LT  
+- Removed Mitsubishi EVO X  
+- Removed 1993 Nissan 240SX (S13)  
+- Removed Dodge Viper 1999  
+- Removed Porsche 911 GT3 RS  
+- Removed Porsche Turbo S  
+- Removed Ford Hennessey VelociRaptor 6x6 (Weaponized)  
+- Removed Yamaha R1  
+- Removed Nova Traffic (CET - Modded Vehicles in Traffic)  
+- Removed Nova Crowds (CET - Randomized Crowds and Increased Density)  
+- Removed Crowd E3 2018 Restored  
+- Removed Nissan GT-R 'Lone Wanderer' Performance Boost  
+- Removed Kawasaki Ninja H2R  
+- Removed Johnny Silverhand Alternative Appearance Overhaul  
+- Removed Realistic Traffic Density  
+- Removed Aston Martin DB11  
+- Removed Crystal Coat for Makigai MaiMai  
+- Removed Fleece Jacket  
+- Removed Nova Traffic JSON Car List and Collection  
+- Removed Nova Traffic Custom Car List - All Modded Vehicles  
+- Removed Vincent's World Atelier  
+
+# Fixes and Tweaks:
+- Fixed compilation issues  
+- Fixed CTDs related to car distribution  
+- Reworked the desert area  
+- Trimmed many car mods to save space  
+
+# Updates:
+- Updated Clear Skill Checks  
+- Updated Crafting Recipe Owned Labels  
+- Updated Devel Sixteen  
+- Updated Harley-Davidson Thundergod  
+- Updated Rebecca's Apartment DLC  
+- Updated Hyst Hair Collection - CCXL  
+- Updated Weapon Conditioning (Tier System Overhaul)  
+- Updated Inplace Streamingsectors Nulled  
+- Updated Stealthrunner - Stealth Gameplay Expansion  
+- Updated ReLUX Plus (Riders on the Storm)  
+- Updated Night City Visuals Nulled  
+- Updated (FULL) The RVC00N Dumpster (New Releases on Dumpster2)  
+- Updated FlowerShop - Virtual Atelier Store  
+- Updated Night City Enhanced and Expanded - NPCs  
+- Updated ArchiveXL  
+- Updated New Lifepath Intro - Fresh Start  
+- Updated Arasaka Tamayura Compact  
+- Updated New Quest - Californication  
+- Updated New Quest - Hot Fuzz  
+- Updated New Quest - One More Light  
+- Updated Santiago's Jacket - Fem/Masc V (ArchiveXL)  
+- Updated Shift (Customizable Dynamic Vehicle Camera)  
+- Updated Rita Wheeler Romanced  
+- Updated Pariah  
+- Updated The RVC00N Dumpster 2 - PinkyDude's Virtual Shop  
+- Updated Deceptious Quest Core Utilities and Settings  
+- Updated Vehicle Resources  
+- Updated Arasaka JSH-X12 Nobunaga  
+- Updated Codeware  
+- Updated Pay-To-Go  
+- Updated Immersive Night City Fixes  
+- Updated Photomode NPCs Extended  
+- Updated Better Leveling Addon - Graven's Attribute Expansion  
+- Updated Immersive Odometer and Fuel System  
+- Updated Night City Things Nulled  
+- Updated Health Percent Display  
+- Updated Improved Aldecaldos Camp  
+- Updated Nokota H.A.W.K.S. Smart Rocket Launcher  
+- Updated Shard Audio Pack - Official - English  
+- Updated Virtual Atelier  
+- Updated Say Something Damn It  
+- Updated ReLUX (Lighting Redux - Accurate Lighting)  
+- Updated VEEGEE SHOP 3  
+- Updated NC Autoshop's Repair  
+- Updated Sheng Noods Ramenshop  
+- Updated NC Fashion Virtual Atelier  
+- Updated Depeche Mods - Unified Weapon Modification  
+- Updated Autoloot  
+- Updated Toyota Mark 2 Tourer V  
+- Updated Alfa Romeo Giulia Sprint GTA  
+- Updated VegaCPMods Resources  
+- Updated Chevrolet Camaro SS  
+- Updated Mitsubishi Lancer Evo 9 MR  
+- Updated Filter Saves by Lifepath and Type  
+- Updated Sabbath7991 Weapon and Attachment Shops - Virtual Atelier  
+- Updated They Will Remember  
+- Updated Mazda RX7 Initial D Stage5  
+- Updated Mazda RX7 Fortune (Fast and Furious Edition)  
+- Updated Mazda RX-7 FD  
+- Updated Casino Reforged (Access - Fixes and Misc)  
+- Updated Mazda RX7 WBK  
+- Updated Rent a Motel  
+- Updated Chevrolet Ringbrothers Camaro Valkyrja  
+
+</details>
+
+<details markdown="1">
 
 <summary>v1.5.0 - October 20, 2025</summary>
 
