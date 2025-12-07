@@ -8,6 +8,195 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v6.7.0.0 - December 7, 2025</summary>
+  
+**Update Importance:** MAJOR  
+**NOT SAVE COMPATIBLE** 
+
+---
+
+### Additions:
+- Added Quick Item Transfer  
+- Added Norden UI  
+- Added Apocryphal Library  
+- Added Nocturnal Revoiced  
+- Added Missives - Voice and Quest Expansion  
+- Added Hovels of Hagravens - A Forsworn Tent and Clutter Replacer  
+- Added Giant Rats - Mihail Monsters and Animals - Fluffy  
+- Added Quest Journal Overhaul - More Mod Support  
+- Added Quest Journal Overhaul - Unofficial Mods Support  
+- Added Quest Journal Overhaul  
+- Added Arctic - Frost Effects Redux  
+- Added Better Dragon Breath - AOE Ground Walls and FX  
+- Added Grumbledook Ivy - Additions (Seasons - Optimization - Patches - Fixes)  
+- Added GetActorValuePercentage - Fix  
+- Added Player Panting Loop Fix  
+- Added Saint Jiub's Bookmarks  
+- Added Immersive Laundry Improvement ILIM by Pfuscher  
+- Added Whiterun City Walls - Collision Redone  
+- Added Mania Mushroom Retextured (Saints and Seducers CC)  
+- Added Ruins Across Skyrim - AIO  
+- Added Lock Bashing  
+- Added Forgotten Plants - Gleambossom and Glowing Plants Retextured  
+- Added Deep Slumber - A Dwemer Bed Replacer (Less Poly)  
+- Added Horse Jump Fix - OAR  
+- Added Armory Extended - Saints and Seducers  
+- Added No More Blinding Fog  
+- Added Vanilla And Morning Fogs SSE - Easy Seam Fixer  
+- Added Dynamic Dialogue Replacer - DDR  
+- Added XP32 Maximum Skeleton Special Extended - Fixed Scripts  
+- Added Mysterium Xarxes - A SimonRim Addon for The Cause  
+- Added Skyrim Autocorrect - Dialogue Grammar Fixes  
+- Added Vanilla Intro Fix  
+- Added SKSE Menu Framework  
+- Added Windows for High Hrothgar  
+- Added Usable Campfires (Unlit Campfires) - Embers XD Patch  
+- Added Prisoner Cart Opening Fix  
+
+### Removals:
+- Removed Auto Parallax  
+- Removed Smooth Magic Casting Animation  
+- Removed Bow Rapid Combo V3 - Settings Loader  
+- Removed Sons of Nirn - Whiterun  
+- Removed Bow Rapid Combo V3 - Archer Combat Overhaul  
+- Removed Halffaces - Cask Large Closed  
+- Removed Simply Smart Training  
+- Removed Simple Dual Sheath Tweaks  
+- Removed Creation Club Integration - Armours  
+- Removed Crossbow Integration (Including Creation Club)  
+- Removed Creation Club - Misc Patches  
+- Removed Modern Combat AI  
+- Removed Glacial Nordic Ruins - A Modders Resource  
+- Removed The Cause - Mysticism Rebalance  
+- Removed Instantly Skip Dialogue NG  
+- Removed Interior Floating Fog Remover  
+- Removed Overlooked Dungeon Objects Retextures  
+- Removed Know Your Enemy 2 - Rapid Bow Combo V3 - Compatibility Patch  
+- Removed Bow Charge Plus  
+- Removed Bloodskal Tweaks and Enhancements - Horizontal Strike for MCO and SkySA  
+- Removed Bow Rapid Combo V3 - Micro Script Optimization  
+- Removed Compass Navigation Overhaul  
+- Removed FSMPM - The FSMP MCM  
+- Removed Complex Parallax Texture for Northern Roads (8K - 4K - 2K)  
+- Removed Improved Camera SE and all associated patches  
+- Removed Ingredient Priority Fix NG  
+- Removed Partial Form Patcher  
+- Removed Actor Value Generator  
+- Removed Fire Hurts NG Updated  
+- Removed Fires Hurt RE  
+- Removed Fire Hurts NG - Patches  
+- Removed Lexicon SKSE  
+- Removed Siga NG - Casting and Aiming Slow Down Actors Movement  
+- Removed Medieval Markets - Riften Fixes  
+- Removed Ruins Over Riverwood - Lightweight Overhaul  
+- Removed Grand Solitude - High Quality Ivy Consistency  
+
+### Fixes and Tweaks:
+- Fixed road seams  
+- Fixed major CTDs caused by Death Drop Overhaul and fire damage mechanics  
+- Fixed waterfall, mist, and fog particles brightness at night  
+- Fixed snowy logs appearing in non-snowy areas  
+- Fixed main quest intro event trigger  
+- Removed outdated SKSE frameworks  
+- Fixed water reflection and color in interiors  
+- Fixed dashboard widescreen detection issue  
+- Replaced Improved Camera with first-person interaction animations  
+- Tweaked guard armor visuals for consistency  
+- Made LoTD compatible with OWL  
+- Optimized numerous meshes and NR plugins  
+- Fixed floating lanterns in Riften Market  
+- Reworked many NPCs for realistic, consistent faces  
+- Fixed broken log meshes and removed redundant road meshes  
+- Fixed snowy houses in Morthal using wrong variants  
+- Fixed flickering barrels in Whiterun Meadery  
+- Fixed inaccurate food collision  
+- Fixed Norse God preset black face  
+- Replaced all ivies with optimized Grumbledook versions (50% vertex reduction)  
+- Optimized scripts to reduce average calls by half  
+- Optimized Whiterun wall meshes for performance  
+
+### Updates:
+- Updated Precision - Different Weapon Trails  
+- Updated Cooking in Kettles on Campfires  
+- Updated Reclusive Respite - A High Hrothgar Bed, Chair and Bench Replacer  
+- Updated Immersive Illusion Spells  
+- Updated Ancient Nord Armors and Weapons Retexture  
+- Updated CC Farming - Tweaks, Enhancements and Quest Expansion  
+- Updated New Armory Series - Lunar Weapons  
+- Updated Eastern Brassplate Set - SPID and CID  
+- Updated FYX - 3D Stockades - Compatibility Tweaks  
+- Updated Immersive Fishing  
+- Updated Unofficial Skyrim Creation Club Content Patches  
+- Updated Saints and Seducers Retexture  
+- Updated Unofficial Skyrim Modder's Patch - USMP  
+- Updated Precision Creatures  
+- Updated Animation Ledge Block NG  
+- Updated Wish Magic  
+- Updated Mihail Chicken Variant (ColorWeightHanging) - SPID-BOS  
+- Updated Savior's Hide Replacer 2  
+- Updated Aetherium Weaponry - SPID and CID  
+- Updated Dawnguard Arsenal - SPID and CID  
+- Updated JellyFishFP - Dagger  
+- Updated Slightly Better Garlic Braids - Multi Harvest  
+- Updated Siege at Icemoth  
+- Updated 360 Ward  
+- Updated Skeletons - Expanded  
+- Updated Katana Crafting - SPID  
+- Updated Outlaws Refuges Misc Patches  
+- Updated KreatE  
+- Updated Underwater Solstheim - Minor Patches  
+- Updated Locked Chests Have Keys - Patch Collection  
+- Updated Dragons Use Thu'um  
+- Updated (ENB) AMON ENB  
+- Updated (RES) Children of the Hist  
+- Updated Men of Skyrim Refined  
+- Updated Dragon Races of Skyrim  
+- Updated Death Drop Overhaul  
+- Updated SIGMA - Mace Animations - 1st Person  
+- Updated Spell Perk Item Distributor  
+- Updated Oathvein UI  
+- Updated Andrealphus' Renaming Project (ARP)  
+- Updated Open World Loot - Encounter Zone and Loot Overhaul  
+- Updated SkyPatcher  
+- Updated Powerofthree's Papyrus Extender  
+- Updated Roleplaying in Skyrim - Evolving Economy  
+- Updated Flat World Map Framework  
+- Updated Occlusion for Quest Mods  
+- Updated Modular Pauldrons  
+- Updated Unlocked 1st Person Combat  
+- Updated NPC Spell Variance - Spell Variety AI  
+- Updated Object Categorization Framework - Some KID Patches  
+- Updated Save and Load Accelerator for SKSE Cosaves - S.L.A.C.K  
+- Updated Northern Roads - Patches Compendium  
+- Updated Fortified Morthal - Patch Collection  
+- Updated Orc Strongholds - AIO - Patches Collection  
+- Updated Medieval Markets - Patches Collection  
+- Updated Quest Fixes  
+- Updated The Pigeon's Nest - Assortment of Small Mods and Fixes  
+- Updated Helmet Toggle 2  
+- Updated Torch Mechanics Fixed  
+- Updated Animated Ice Floes  
+- Updated Ancient Death Magic  
+- Updated Narrative Gameplay Consistent Dialogue Tweaks  
+- Updated Stress and Fear  
+- Updated Shout Progression  
+- Updated Gore - A Companion Mod  
+- Updated RaceMenu OverlayFix and Various Mod Fixes  
+- Updated Floating Subtitles  
+- Updated Better Carriage Destinations  
+- Updated Northern Scenery - Addons, Patches and Fixes  
+- Updated RogueUnicorn - City Trees  
+- Updated Cisterns of Skyrim - A Rain Barrel and Blood Barrel Replacer  
+- Updated Women of Skyrim Refined  
+- Updated True Sons of Skyrim Refined  
+- Updated Smart Talk (Dialogue Menu Enhancer)  
+- Updated Bow Charge Plus - Pandora Patch and Fixes  
+- Updated Vanaheimr - Landscapes - AIO  
+- Updated Bow Charge Plus - Settings Loader  
+
+</details>
+
+<details markdown="1">
 <summary>v6.6.0.0 - November 22, 2025</summary>
   
 **Update Importance:** MAJOR  
