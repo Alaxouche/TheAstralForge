@@ -8,6 +8,212 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v6.8.0.0 - January 06, 2026</summary>
+  
+**Update Importance:** MAJOR  
+**NOT SAVE COMPATIBLE** 
+
+---
+
+### Additions:
+- Added Oui Oui Baguette - A Bread Expansion - Base Object Swapper
+- Added Animated Objects Overhauled 
+- Added ElSopa - Ysgramor Armory Redone
+- Added SIGMA - Magic animations - 1st person
+- Added JellyFishFP Movement Remake
+- Added Repeater Crossbows
+- Added Animated Main Menu - Edge UI
+- Added Why I Came to Skyrim - Origin Stories 
+- Added Green Thumb Fix 
+- Added Read It Now
+- Added High-Poly ELFX Shadows Dunmer Lanterns and TCZ Caged Bugs - SE by Xtudo - JK's Raven Rock JK's Tel Mithryn Gate To Sovngarde
+- Added House Guard Set
+- Added House Guard - My Patches
+- Added Grand Solitude - The Walls of High King Erling - Fixed and Optimized 
+- Added LeanWolf's Better-Shaped Flying Books
+- Added Buddha's Bellows - Misc 
+- Added Rally's Farming Tools (Higher Poly)
+- Added Rally's Hooks and Saws
+- Added Blacksmith Workbench Variants - Model Swapper
+- Added Alternate Perspective - TrueHUD Compatibility Fix
+- Added Cathedral - 3D Maple Sapling
+- Added High Poly Project (Less poly)
+- Added Modern Lighting Overhaul (MLO) - Official Patch Hub
+- Added Modern Lighting Overhaul (MLO) - MISC
+- Added Dynamic Pricing Framework
+- Added JellyFishFP TORCH (1st person animations series)
+- Added A collection of mesh patches by Andrias Bartlett
+- Added Mesh Patch for Various Mods
+- Added Here are some Patches and Fixes
+- Added Critical Hit Tweaks
+- Added Ingredient Magnitudes
+- Added Ruins of Rkund - Overhaul
+- Added Better Combat Escape - SSE
+- Added Sconces of Solitude - Embers XD Patch
+- Added Man's Best Friend - A Meeko's Shack Overhaul - Fixes and Patches
+- Added Nature's Respite - Hunters Rest Overhaul - Fixes and Patches
+- Added Kyne's Breath - A Froki's Shack Overhaul - NavMesh Fix and Patches
+- Added Double Life - Anises Cabin Overhaul - Fixes and Patches
+- Added Hovels of Hagravens - A Forsworn Tent and Clutter Replacer (LessPoly)
+- Added Recharge Framework - Repeater Crossbows
+- Added Conditional Sneak
+- Added HD Minewood and Impwood - Retexture and SMIM
+
+### Removals:
+- Removed Better Dynamic Ash SE 
+- Removed 4K Hagraven House  
+- Removed Renthal's workbench  
+- Removed NPC Infinite Block Fix
+- Removed Sentinel Zweihander World Integration Patch 
+- Removed Sentinel Zweihander
+- Removed Happy Little Trees - Better Dynamic Ash Patch
+- Removed Dawnguard Arsenal - Immersive Sounds Compendium - Audio Overhaul - Combo Patch
+- Removed Fluffy Beds and Bedrolls - 3D Furniture Patch
+- Removed Fix For Invisible Hud After Helgen Intro with TrueHUD and Alternate Perspective 
+- Removed Bedroll Alternative
+- Removed Sprint Swim Redux 
+- Removed Dwemer Deepwalkers - Titans and Divers
+- Removed Comprehensive Critical Damage Fix
+- Removed Ruins Over Riverwood - Lightweight Overhaul
+- Removed Armory Extended - Saints and Seducers
+
+### Fixes and Tweaks:
+- Fixed road seams  
+- Fixed major CTDs 
+- Fixed food broken distribution
+- Fixed parallax issues on performance profile
+- Fixed incompatible ash mods
+- Fixed ultra nerfed critical damages 
+- Fixed purple grummit weapons
+- Fixed better combat escape missing a config file
+- Enhanced performances with optimized meshes for many mods
+- Enhanced performances by removing terrain underside as it is no more needed with latest ENB update
+- Provided conditional sneak: sneak is relaxed in bright areas, sneaky in bit darker areas and crawling in the darkness 
+- Removed a few plugin by replacing some BOS frameworks mods with Model Swapper Variant 
+- Fixed float swimming animations 
+- Fixed issues related to dwemer deepwalkers  
+- Fixed replaced some skypatcher mods with their non skypatcher equivalent for better loading
+
+### Updates:
+- Updated KS Hairdos - HDT-SMP
+- Updated Splashes of Skyrim 
+- Updated Fancy Morthal Swamp Overhaul 
+- Updated Real Water in Buckets Barrels Pots and Pans
+- Updated Redoran Reverie - A Dunmer Furniture Replacer
+- Updated New Armory Series - Dragon Cult Weapons
+- Updated Burn'em High-res Banners
+- Updated Skyrim Food Expansion
+- Updated HDT-SMP Female Amulets and Necklaces Vanilla Replacer
+- Updated RogueUnicorn - Better Animals
+- Updated Sepolcri Expanded - Tweaks and Additions
+- Updated Dynamic String Distributor
+- Updated Peasant Dreams - A Common Bed Replacer
+- Updated (RES) Jesper the Guard - Another Replacer 
+- Updated Ring of Namira Rework
+- Updated Sleipnir Beds - An Upper Class Bed Replacer
+- Updated Alternate Perspective - Voiced Addon
+- Updated Pelts 'o' Plenty - Fur Pelt Cloaks
+- Updated Dova Jump
+- Updated (DT) Asset Doctor
+- Updated Lux Orbis - Patch Hub
+- Updated Oghma Infinium Rework
+- Updated Legacy of the Dragonborn - Alternate Perspective Patch
+- Updated DynDOLOD Resources
+- Updated Know Your Enemy 2
+- Updated Know Your Enemy 2 - Armors
+- Updated Know Your Enemy 2 - Integration
+- Updated (ENB) Cabbage ENB
+- Updated Widescreen Scale Removed
+- Updated Better Optimized and Fixed Riften Meshes
+- Updated Lux - Patch Hub
+- Updated Blood and Grit - Quest Mod
+- Updated JK's Raven Rock
+- Updated Lightened Skyrim
+- Updated The Whispering Door - Quest Expansion
+- Updated Snozz's Sunderstone - Patch Collection
+- Updated Softly Obscuring Snowfall - No Dirty Ruins Snow
+- Updated Name Those Ash Piles
+- Updated Pandora Behaviour Engine 
+- Updated Northern Roads - Collision and Placement Fix 
+- Updated Simple Snow Improvements - Skyrim Fixes
+- Updated SkyPatcher  
+- Updated Hit The Hay - A Hay Pile Replacer
+- Updated Azura's Star Rework
+- Updated Inns Can Be Closed
+- Updated Alchemy Station Variants - Base Objects Swapper
+- Updated Simple Hunting Overhaul
+- Updated JellyFishFP - DAGGER (1st person animations series)
+- Updated JellyFishFP - CROSSBOW (1st person animations series)
+- Updated Sonders Keyword Distribution Resources
+- Updated Fort Greymoor
+- Updated Legacy of the Dragonborn Patches (Official)
+- Updated AutoExec Console Commands
+- Updated CC Hendraheim - Tweaks and Enhancements 
+- Updated NPC Infinite Block Fix - SkyPatcher
+- Updated SkyPrompt
+- Updated Andrealletius' Jobs Overhaul (AJO)
+- Updated Snozz's Resources
+- Updated Shouting Provokes Dragons
+- Updated Main Menu Video
+- Updated Lilebonymace's Patches
+- Updated No Grass In Objects 
+- Updated (CS) Light Placer
+- Updated (CS) CS Light 
+- Updated LoreBox - Item and Spell Tooltips
+- Updated Yggdrasil - Floating Tree Redux 
+- Updated H.O.A. - Hyperspecific Occlusion Addon
+- Updated Rotols More Icons 
+- Updated Edge UI - Explorer Addon
+- Updated Assorted Mesh Fixes
+- Updated Enhanced Rocks and Mountains - Addon 
+- Updated First Person Interactions
+- Updated Burn'em Banners
+- Updated (Lore Accurate) Dagoth Ur Follower
+- Updated Follower Stats
+- Updated SKSE Menu Framework
+- Updated Lux - Patch Hub
+- Updated Diverse Chicken Coops - Base Object Swapper
+- Updated Helmet Toggle 2 - SMP Hair Fix
+- Updated PaulMix's dTry Key Utils extend
+- Updated Embers XD
+- Updated Dragons Use Thu'um
+- Updated C.O.C.K.S.ified
+- Updated Floating Subtitles
+- Updated Siege at Icemoth
+- Updated Lock Bashing
+- Updated Dragon Races of Skyrim
+- Updated Gore - A Companion Mod
+- Updated Animation Ledge Block NG
+- Updated Medieval Markets - Patches Collection
+- Updated RogueUnicorn - City Trees
+- Updated Smart Talk (Dialogue Menu Enhancer)
+- Updated New Armory Series - Lunar Weapons
+- Updated Grumbledook Ivy - Additions (Seasons - Optimization - Patches - Fixes)
+- Updated Orc Strongholds - AIO - Patches Collection
+- Updated Object Categorization Framework - Some KID Patches
+- Updated Narrative Gameplay Consistent Dialogue Tweaks
+- Updated Engaging Combat - Keep Combat Dynamic at Higher Levels
+- Updated Dwemer Gates Don't Reset - Base Object Swapper
+- Updated Windows for High Hrothgar
+- Updated Torch Mechanics Fixed
+- Updated Helmet Toggle 2
+- Updated Norden UI 
+- Updated Oathvein UI
+- Updated Quick Item Transfer
+- Updated Ancient Death Magic
+- Updated Vanaheimr AIO - Enhanced Rocks and Mountains Patch And Other Fixes
+- Updated Hovels of Hagravens - A Forsworn Tent and Clutter Replacer
+- Updated Locked Chests Have Keys - Patch Collection
+- Updated Powerofthree's Papyrus Extender
+- Updated Northern Roads - Patches Compendium
+- Updated State Behavior Framework
+- Updated Nocturnal Revoiced
+- Updated WIDeadBodyCleanupScript Crash Fix
+- Updated Quest Journal Overhaul - More Mod Support
+
+</details>
+
+<details markdown="1">
 <summary>v6.7.0.0 - December 7, 2025</summary>
   
 **Update Importance:** MAJOR  
