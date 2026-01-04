@@ -10,6 +10,39 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v1.1.2.0 - January 06, 2026</summary>
+
+**Update Importance:** MINOR  
+**SAVE COMPATIBLE**
+
+___
+
+# Additions:
+- Added Astroport - Better Trading Posts
+- Added Corvette Ramp Control Switches
+- Added Ship and Multitool Upgrade Terminals
+- Added Honest HUD Speed
+
+# Updates:
+- Updated Fast Refiners
+- Updated Technology Icons
+- Updated Product Icons
+- Updated Snappy Industry
+- Updated Exosolar's and Babs' Lumen
+- Updated UIO - User Interface Overhaul (BETA)
+- Updated More Words
+- Updated Keep Talking Polo E7
+- Updated Keep Mapping
+- Updated Keep Talking Chef
+- Updated EEnjoyable Quicksilver - (LUA Script Included)
+- Updated Exosolar's and Babs' Beyond Base Building 
+- Updated Keep Gifting
+- Updated Hide or Fade Notifications
+- Updated Settlement Fabricator Camera Fix 
+
+</details>
+
+<details markdown="1">
 <summary>v1.1.1.0 - November 27, 2025</summary>
   
 **Update Importance:** MINOR  
