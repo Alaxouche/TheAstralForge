@@ -12,10 +12,32 @@ plugins:
   - jekyll-include-cache
   - jekyll-seo-tag
 
+search:
+  heading_level: 4
+  previews: 3
+  preview_words_before: 5
+  preview_words_after: 10
+  tokenizer_separator: /[\s/]+/
+  rel_url: true
+  button: true
+  
 heading_anchors: true
 back_to_top: true
 back_to_top_text: "Back to top"
 footer_content: "Copyright © 2025 The Astral Forge"
+
+# Footer last edited timestamp
+last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
+last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https://ruby-doc.org/stdlib-2.7.0/libdoc/time/rdoc/Time.html
+
+aux_links:
+  "Discord":
+    - "https://discord.gg/vKuB7nazBk"
+  "Nexus":
+    - "https://www.nexusmods.com/skyrimspecialedition/mods/89632"
+  "Wabbajack":
+    - "https://www.wabbajack.org"
+
 
 callouts_level: loud
 callouts:
