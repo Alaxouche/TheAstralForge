@@ -10,6 +10,310 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v2.1.0.0 - January 11, 2026</summary>
+
+**Update Importance:** SMALL  
+**SAVE COMPATIBLE** 
+
+___
+
+# Additions:
+- Added Player Body Cyberware Injector
+- Added Free Lean - Manual Leaning Anywhere
+- Added Running Man - New Sprinting Perks
+- Added Midnight Arms Gravemaker
+- Added Apartment Toys
+- Added Custom Perk Framework
+- Added Merc Protocol - Perk Gameplay Expansion
+- Added FZR 3000 Street Racer
+- Added Bikes of the Dark Future --- Arch V4
+- Added Named Saves
+- Added Go on a Date (Panam) - Side romance activity
+- Added Teeth Pack - CCXL
+- Added Cyber Neck for V -CCXL-
+- Added Vehicle Speed Limit
+- Added Perk Addition Framework
+- Added Journal Filter - Revamped
+
+# Fixes and Tweaks:
+- Fixed some performance leaks
+- Provided a new perk system 
+
+# Updates:
+- Updated They Will Remember
+- Updated Immersive Night City Fixes
+- Updated Better Quality Sort
+- Updated Stealthrunner - Stealth Gameplay Expansion
+- Updated Third-Person (TPP) Vehicle Camera Tool
+- Updated Casino Reforged (Access - fixes and miscs)
+- Updated Casino Reforged - Phase 2 - Access road and entrance
+- Updated Sabbath7991 Weapon and Attachment Shops - Virtual Atelier
+- Updated Modular Military Bodysuit - Zenitex Stealthsuit - ArchiveXL
+- Updated Law Enforcement Overhaul Reset (Spawn Compatibility and MaxTac Rebalanced)
+- Updated Factions Evolved (Night City Traffic Overhaul Addon - Claim Vehicles Mod Cars Support)
+- Updated 2F2F Livery for Nissan Skyline GTR R34 HYCADE by ctxrlsec
+- Updated Skippy-chan - Weapon Skin
+- Updated Need More Smoke FX
+- Updated Militech Legatus SPD-10
+- Updated Militech Regional Headquarters (Militech Tower)
+- Updated Mitsubishi Eclipse GSX (1999)
+- Updated Mark To Sell
+- Updated Zenitex Atelier
+- Updated Night City Flooded
+- Updated Auto Drive Enhanced
+- Updated RedData
+- Updated TweakXL
+- Updated VendorsXL
+- Updated Trophy Tanishi
+- Updated Outdoor V Canyon
+- Updated Honda S2000
+- Updated Rita Wheeler Romanced
+- Updated KiasuBurger Cyberware Core
+- Updated M9 Project
+- Updated Ducati Supersport
+- Updated Limited HUD
+- Updated VEEGEE SHOP 3
+- Updated Toyota GT86
+- Updated Audi R8 V10+
+- Updated Militech Ajax Classic
+- Updated Porsche 718 Cayman GT4
+- Updated Porsche 718 Cayman GTS
+- Updated Porsche 911 Targa 4 GTS 2025
+- Updated Aurore Romanced (Lady Marmalade)
+- Updated Nissan Skyline R33
+- Updated Discard Ammo On Reload
+- Updated Time and weather and place aware Judy
+- Updated New Lifepath Intro - Fresh Start
+- Updated Deceptious Quest Core
+- Updated Deceptious Quest Core Utilities and Settings
+- Updated Immersion Patch - Quest Vehicle Motion Fixesa
+- Updated Zenitex Covert Leggings - ArchiveXL
+- Updated Lamborghini Murcielago SV
+- Updated ReImagined
+- Updated RedFileSystem
+- Updated Vehicle Resources
+- Updated EconomyPunk
+- Updated NC Fashion Virtual Atelier
+- Updated Pariah
+- Updated 911 Turbo Trike
+- Updated Weapon Sound Remake
+- Updated Hide Read Shards
+- Updated The Wobbler - Monowheel
+- Updated Lotus Esprit Turbo
+- Updated Say Something Damn It
+- Updated V Mannequin Holographic Projector
+- Updated Audioware
+- Updated Striker SMG
+- Updated Mazda MX-5 Miata
+- Updated Better Armor Tooltip
+- Updated Mitsubishi Lancer Evo 9 MR
+- Updated Galena GT Widebody
+- Updated Kriostech Virtual Atelier
+- Updated Nissan Skyline R32
+- Updated Always First Equip
+- Updated Night City Fleet Expansion
+- Updated Enhanced Craft
+- Updated Baronz Chair
+- Updated Weapon Magazine Reload
+- Updated Immersive Road Crossing Simulator
+- Updated Surface Type Expansion
+- Updated Immersive Healing
+- Updated Zenitex Combat T-Shirt - ArchiveXL
+- Updated Damage Scaling and Balance - Extended
+- Updated Not So Good Draw Distance Mod
+- Updated Native Interactions Framework
+- Updated Game World Boundary Removed
+- Updated Quickhack Fixes
+- Updated Immersive Grenades
+- Updated Top Secret V12 Supra
+- Updated Aprilia RS660
+- Updated Muted Markers
+- Updated Custom Map Markers
+- Updated Nissan Skyline 2000GT-R
+- Updated Hand of Midas - Mod slot unlocked
+- Updated Rent a Motel
+- Updated The Tumbler
+- Updated Improved Aldecaldos Camp
+- Updated SPLAT Physics Realistic Ragdoll Overhaul
+- Updated Shift (Customizable Dynamic Vehicle Camera)
+- Updated Modular Military Combat Helmet - ArchiveXL
+- Updated Immersive Food Vendors
+- Updated Military Palette Texture Library
+- Updated Modular Military Combat Helmet - ArchiveXL
+
+</details>
+
+<details markdown="1">
+<summary>v2.0.0.0 - December 07, 2025</summary>
+
+**Update Importance:** MAJOR  
+**SAVE COMPATIBLE** 
+
+___
+
+# Additions:
+- Added Aerix LUT - Photorealism
+- Added SPLAT Physics Realistic Ragdoll Overhaul
+- Added V's Edgerunners Mansion Reloaded
+- Added Aprilia RS660
+- Added NISSAN Silvia S14 'Marked One'
+- Added Veegee Hackclaw Hair - CCXL - MCH
+- Added V Mannequin Holographic Projector
+- Added Zenitex Modular Assault Vest - ArchiveXL
+- Added Ziva Jewelry Navel Piercing
+- Added Ziva Jewelry Navel Piercing Reworked Archive XL
+- Added Tactical Style Outfit Pt3
+- Added Hackclaw MaiXiaowen
+- Added Veegee InkCloud Hair - CCXL
+- Added Veegee Bobo Hair - CCXL
+- Added Veegee Polar Night Hair - CCXL
+- Added Veegee Polaris Hair - CCXL
+- Added Veegee Alicia Hair - CCXL
+- Added Veegee Heartbeat Hair - CCXL
+- Added Urban Techwear Outfit - BOTH V 
+- Added Preem Rain
+- Added Low Quality Crowd No More
+- Added Judy's Cone Lights No More
+- Added Improved Vegetation LODs
+- Added Improved Environment LODs
+- Added Not So Good Draw Distance Mod
+- Added Disable Fake Lights with Path Tracing
+- Added Improved Distant Shadows and Reflections
+- Added Better Rain Ripples
+- Added Improved Bottles and Tableware
+- Added HQ Fruits
+- Added Forbidden Vehicle Movement No More
+- Added Horizon Sandstorm Flickering Fix
+- Added Alternative Hair Material
+- Added Clear Windows - Cars Edition
+- Added Militech Ajax Raptor
+- Added Armatech MK.1 Rifle
+- Added Better Buildings - Preview (2.31)
+- Added CP for CNC-Lite and Polyglot V OR Change V's native Language
+- Added Polyglot V
+- Added NIGHT CITY ALIVE (REDmod)
+- Added Crystal Coat Fix v2.12
+- Added NCPD Duty Expansion
+- Added NCPD and MaxTac Spawn Tweak (District specific police behavior)
+- Added Fast Travel from anywhere to everywhere - Redscript
+- Added Law Enforcement Overhaul Reset (Spawn Compatibility and MaxTac Rebalanced)
+- Added Alexander Anderson's Holy Bayonet
+- Added Faster Rainmap and Distant Shadows
+- Added RenoDX - HDR Fix - Bloom - Vignette - Color Grade - Film Grain
+- Added No More Milky Glass Plus Eyes AO
+- Added CPU Optimization Plus 
+- Added Expanded Citizens
+
+# Removals:
+- Removed Bandana Face-Covers - Archive XL
+- Removed Techpacks - Archive XL 
+- Removed Techwitch Gear - Archive XL
+- Removed Asha's Accessories - Virtual Atelier
+- Removed Badlands Hood - Archive XL
+- Removed Body Suit with Gun Harness Female V
+- Removed Calf Knife Holster - Archive XL - Both V's
+- Removed Dogtown Hoods - Archive XL
+- Removed Dogtown Scarf - Archive XL
+- Removed EB's Atelier Store - Virtual Atelier
+- Removed Fronky's Fashions Virtual Atelier Store
+- Removed Kiroshi Optics Night Vision Mod
+- Removed MCU-2P Gas Mask
+- Removed NCPD V Wardrobe
+- Removed NetwatchV Wardrobe
+- Removed No Camera Auto Centering
+- Removed Ragdoll Physics Overhaul
+- Removed Sasha Edgerunners Suit - Archive XL
+- Removed TraumaV Wardrobe
+- Removed Wraith Hood - Archive XL
+- Removed Utilities 2077
+- Removed Dynamic NPC Items
+- Removed Altyn Helmet and Gas Masks - ArchiveXL
+- Removed Mechanix Military Gloves - ArchiveXL
+- Removed ValerieOSD - Military Gear Virtual Atelier
+- Removed VV0LFDEN - Alex's Shirts - Fem Masc
+- Removed Cassidy's Holster Shirt - Archive XL
+- Removed Kurt Hansen's Wardrobe - Archive XL
+- Removed Bug Fix - Base Fists and Arm Cyberware Attack Speed Fix
+- Removed BLOOD FX - EGGHANCED
+- Removed Immersive V Dialogue Expanded
+- Removed More E3 (H10 Apartment E3 Advertisements Extended)
+- Removed CC_HalfUp_Hair - CCXL
+- Removed Simple FPS Counter
+- Removed SLEEVELESS MOCK MINI
+- Removed Drive an Aerial Vehicle - Flight Mod Using AV and Helicopter
+- Removed Authentic Shift (QoL Gear Ratios Shifts Audio Sound ASMR and OPTIONAL Tuning System)
+- Removed Nova City - Addons (Traffic and Population Density - Night Vision)
+- Removed Manavortex Material Library
+- Removed Taxi Work Locations Expanded
+- Removed OPLI - Overhauled PL Integration
+- Removed Manavortex Atelier Store
+- Removed AVI sound (Drive an Aerial Vehicle)
+- Removed VINTAGE FUR COAT
+- Removed Named Saves
+- Removed Plate Carrier Vest and Tactical Belt - for both Vs
+- Removed Night City Enhanced and Expanded - NPCs
+- Removed Weapon Brands Virtual Ateliers
+- Removed AVS PLATE CARRIER - 707 TACTICAL-TARIQY COLLAB
+- Removed Arasaka Ninja Mask - ArchiveXL - Customizable
+- Removed Acessable megabuilding AW12
+- Removed Arasaka Ninja Archive XL
+- Removed Filter Saves by Lifepath and Type
+- Removed 2021 Mercedes AMG SL63
+- Removed E3 Menu Background
+- Removed E3 Menu Background - FIX
+- Removed Unlock Night City 2
+- Removed Porsche 911 Targa 4 GTS 2025
+- Removed VTK - Story Tattoo (F and M)
+- Removed No More Duplicate Vehicles
+- Removed Drone Companions (Revamp)
+- Removed Ridiculous Muzzle Flash (for path tracing)
+- Removed (entering new area) be gone
+- Removed ENV Tuner (Weather - Lighting - Vignette Adjustments without Conflict)
+- Removed Immersive Timeskip
+- Removed Night City Enhanced and Expanded - Enemies
+- Removed Visual Holsters (Automatic Clothes Swap)
+- Removed Tactical Belt - for both body genders
+- Removed Nova Rain (and Improved Ripples)
+
+# Fixes and Tweaks:
+- Fixed compilation issues  
+- Fixed many CTDS
+- Fixed stuttering, instability 
+- Major visual overhaul: more balanced lighting, better color, glass reflexion...
+- Implemented FSR 3.1: a lot more efficient and stable than current one
+- Profiles are now automatically set depending on your computer's specs
+- Way better performance for even better visuals: trimmed FPS heavy mods, broken, outdated and useless ones
+- Many new additions, updates and mods removed
+
+# Updates:
+- Updated Archive Conflict Checker Tool
+- Updated A New Dawn Beyond Night City - WIP
+- Updated Muted Markers
+- Updated Limited HUD
+- Updated GoreRunner (Blood and Carnage Overhaul)
+- Updated Zenitex Atelier
+- Updated Dedra's Truck Simulator (Convoy Delivery Mod)
+- Updated Military Palette Texture Library
+- Updated Third-Person (TPP) Vehicle Camera Tool
+- Updated Nissan Skyline R32
+- Updated Ultra Plus Best Performance and Visuals for Everyone
+- Updated Autoloot
+- Updated Outdoor V Canyon 
+- Updated The RVC00N Dumpster
+- Updated Sabbath7991 Weapon and Attachment Shops - Virtual Atelier
+- Updated They Will Remember
+- Updated ReImagined
+- Updated Time and weather aware River Ward
+- Updated Crafting Recipe Owned Labels
+- Updated Shift (Customizable Dynamic Vehicle Camera)
+- Updated Time and weather aware Goro Takemura
+- Updated Time and weather and place aware Judy
+- Updated Factions Evolved (Night City Traffic Overhaul Addon - Claim Vehicles Mod Cars Support)
+- Updated Crunch Plaza Restoration
+
+</details>
+
+<details markdown="1">
 <summary>v1.6.0.0 - December 02, 2025</summary>
 
 **Update Importance:** MAJOR  
