@@ -10,6 +10,23 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v1.1.3.0 - January 11, 2026</summary>
+
+**Update Importance:** MINOR  
+**SAVE COMPATIBLE**
+
+___
+
+# Additions:
+- Added Loot Pirates Loot
+- Added Expensive Charts
+- Added Solar Ship Bug Fix
+
+# Updates:
+- Updated Freighter Defense Reward
+
+</details>
+<details markdown="1">
 <summary>v1.1.2.0 - January 06, 2026</summary>
 
 **Update Importance:** MINOR  
