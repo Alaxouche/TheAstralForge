@@ -6,9 +6,9 @@ has_children: true
 ---
 
 # Preamble
-This mod list is for Cyberpunk 2077 v2.2.
+This mod list is for Cyberpunk 2077 v2.3.
 You must use this list with Phantom Liberty DLC and the current updates of Cyberpunk 2077. 
-This list will not work with Cyberpunk 2077 versions lower than 2.2.
+This list will not work with Cyberpunk 2077 versions lower than 2.3.
  
 This list will only work with a legitimate Steam install of this game. It will also work with any other platform (like GOG).
 This modlist is focused mostly on graphics and lighting.
