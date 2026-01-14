@@ -8,6 +8,112 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v6.8.1.0 - January 14, 2026</summary>
+  
+**Update Importance:** Medium  
+**NOT SAVE COMPATIBLE** 
+
+---
+
+### Additions:
+- Added Loading Screen Locker
+- Added Parry for all
+- Added Obi's Warpaints
+- Added Dtry Key Util Stuck Keys fix
+- Added Medieval Markets - Snowy Rugs Fix
+- Added Window Emittance Consistency (WEC)
+- Added Boutique - Outfit Creation and Distribution Suite
+- Added Light Greatswords - SPID NG
+- Added Nicos Twinblades SE - SPID NG
+- Added Katana Crafting - SE - SPID NG
+- Added A-Pose Bug Fix - Universal Behavior Runtime
+- Added The Keeper - Carcette Expanded
+- Added Enemy Friendly Fire
+- Added Dynamic Sprint Stop - Separate Volume Slider
+- Added Whiterun Railings SMIMed
+- Added XEMI Utility
+
+### Removals:
+- Removed Light Greatswords - SPID
+- Removed Katana Crafting - SPID
+
+### Fixes and Tweaks:
+- Fixed missing windhelm grounds
+- Fixed some weapon bad distribution due to shitty made SPID files
+- Fixed floating ferns in solitude
+- Fixed blackface for norse god for real finally
+- Fixed broken salmon roe model and given it a proper 3D model
+- Fixed floating ferns in solitude
+- Removed worldspace edits made by grumbledook ferns
+- Applied all major changes done by latest ENB updates aka terrain underside and lighting fixes
+
+### Updates:
+- Updated Brewer - An Alcohol Brewing Mod
+- Updated Stagger Effect Fix 
+- Updated Auto Read Notes
+- Updated Afterlife - Resurrected
+- Updated Sconces of Solitude - Unique Solitude Braziers
+- Updated Paulicus Poison Block (PPB) - Patches Collection
+- Updated Sandbox When Idle
+- Updated Fabled Forests - Floating Trees fix BOS version
+- Updated Icy Cave Remaster - Ice Material Patch
+- Updated Optimised Scripts for SPERG
+- Updated Contextual Crosshair
+- Updated Alternate Perspective - Assorted Fixes and Patches
+- Updated JK's Raven Rock Patch Collection
+- Updated Favorite Misc Items
+- Updated Diverse Grindstones - Model Swapper
+- Updated S.T.A.R. (So This Aint Right)
+- Updated Water for ENB
+- Updated Icy Mesh Remaster
+- Updated Unique Armors and Weapons Retexture
+- Updated Hamvir Dustman - FuzzBeed's Dungeons
+- Updated The Great Town of Ivarstead Patch Collection
+- Updated Katana Crafting
+- Updated Missing Follower Dialogue Edit
+- Updated Item Equip Restrictor
+- Updated New Armory Series - Imperial Silver
+- Updated Cities of the North - Falkreath Patch Collection
+- Updated Survival Mode Improved - SKSE
+- Updated Psychopatchist Purgatory
+- Updated Handcarts - Model Swapper
+- Updated JK's Interiors Patch Collection
+- Updated Serana Dialogue Expansion
+- Updated Northern Roads - Patch Collection
+- Updated No Morthal Snow - Redone
+- Updated Dynamic Things Alternative - Base Object Swapper
+- Updated Animated Ice Floes
+- Updated The Pigeon's Nest - Assortment of small mods and fixes
+- Updated Orc Strongholds - AIO - Patches Collection
+- Updated Cisterns of Skyrim - A Rain Barrel and Blood Barrel Replacer
+- Updated Medieval Markets - Patches Collection
+- Updated (RES) Children of the Hist
+- Updated Object Categorization Framework - Some KID Patches
+- Updated Lock Bashing
+- Updated Oui Oui Baguette - A Bread Expansion
+- Updated Norden UI
+- Updated Alchemy Station Variants - Base Objects Swapper
+- Updated Dragon Races of Skyrim
+- Updated Assorted Mesh Fixes
+- Updated Torch Mechanics Fixed
+- Updated H.O.A. - Hyperspecific Occlusion Addon
+- Updated Andrealletius' Jobs Overhaul (AJO)
+- Updated Locked Chests Have Keys - Patch Collection
+- Updated Quest Journal Overhaul - More Mod Support
+- Updated RogueUnicorn - City Trees
+- Updated CC Hendraheim - Tweaks and Enhancements
+- Updated C.O.C.K.S.ified
+- Updated SKSE Menu Framework
+- Updated Lilebonymace's Patches
+- Updated Save and Load Accelerator for SKSE Cosaves - S.L.A.C.K
+- Updated WIDeadBodyCleanupScript Crash Fix
+- Updated Read It Now
+- Updated HDT-SMP Female Amulets and Necklaces Vanilla Replacer
+- Updated SkyPatcher
+
+</details>
+
+<details markdown="1">
 <summary>v6.8.0.0 - January 06, 2026</summary>
   
 **Update Importance:** MAJOR  
