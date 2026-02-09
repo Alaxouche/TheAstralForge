@@ -10,6 +10,35 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v1.1.4.0 - February 09, 2026</summary>
+
+**Update Importance:** MEDIUM  
+**SAVE COMPATIBLE**
+
+___
+
+# Additions:
+- Added Corvette Overhaul v1.2 Ultimate Edition with Camera and Auto-pilot fixes
+- Added gBase Sleepy-Time Bed
+- Added gShip Corvette Supercomputer
+- Added gShip Corvette Medbay Bacta Tank
+- Added Fluid Flight 1.3 Jetpack Overhaul
+
+# Removals:
+- Removed Increase Space Encounter Chance
+
+# Fixes and Tweaks:
+- Fixed the too large ship fights especially for cargo rescue missions
+
+# Updates:
+- Updated gShip Corvette Super Bunk
+- Updated Technology Icons
+- Updated Panelled Window fix
+- Updated Product Icons
+
+</details>
+
+<details markdown="1">
 <summary>v1.1.3.0 - January 11, 2026</summary>
 
 **Update Importance:** MINOR  
