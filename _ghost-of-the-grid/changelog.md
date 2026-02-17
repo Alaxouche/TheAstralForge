@@ -10,6 +10,146 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v2.2.0.0 - February 17, 2026</summary>
+
+**Update Importance:** MAJOR  
+**SAVE COMPATIBLE** 
+
+___
+
+# Additions:
+- Added All RX Pharma - Virtual Atelier
+- Added All-Rx Pharma
+- Added Corpse Loot Fix
+- Weapon Muzzles Improved
+- Added Armor Improved
+- Added Clothing Improved
+- Added Weapon Suppressors Improved
+- Added Weapons Improved
+- Added Cyberware Improved
+- Added Weapon Mods Improved
+- Added Competition Swimsuit - Archive XL
+- Added Honda CRX Mugen
+- Added APEX - Sonora Canyon and Safehouse
+- Added Renaissance Punk - Perk Scaling
+- Added Fighting Gangs Allowed - Reasonable Police
+- Added Idle Anywhere
+- Added TV Anywhere
+- Added Computer Anywhere
+- Added Kolac Expanded
+- Added Silent Bodies
+- Added Honda NSX Type R NA1
+- Added XRX Leotard 2024 Archive XL
+- Added Gripped Up (global driving traction mod)
+- Added Ranger Combat Boomerang
+- Added Dogtown Hideout - ArchiveXL
+- Added Japantown Greenery
+- Added TV Volume Control
+- Added Radio Volume Control
+- Added Romance Hangouts Enhanced
+- Added Holy Focking Vending Machines - No More Infinite Junk Food
+- Added Longer Timed Choices (and NPC Dialogue Reminders)
+- Added Biblically Accurate Takemura - Goro's 2079 hair
+- Added Tears in Rain - Cyberpunk Secret Immersion Extended
+- Added Radial Menu Upgrade for Idle-Computer-TV Anywhere mods
+- Added A Moment of Contemplation - Cinematic Stillness HUD
+
+# Removals:
+- Removed Responsive V
+- Removed Immersive Road Crossing
+- Removed Immersive Odometer and Fuel System
+- Removed heavy outfits mods and duplicate cars
+
+# Fixes and Tweaks:
+- Fixed some stuttering due to NPC influenced mods
+- Fixed some CTDS
+- Adjusted difficulty setting for the game to be more balanced end game
+- Showed Note column in mo2 so you can see fomod mods
+- Removed the annoying function of easy death in cars and the fueling system
+- Many new additions, updates and mods removed
+
+# Updates:
+- Updated General Shadows Fixes
+- Updated Cop Killer
+- Updated Quickhack Fixes
+- Updated Military Palette Texture Library
+- Updated Yaiba Fullmaru Nomad Monster
+- Updated Teeth and Braces CCXL
+- Updated Know What You Say
+- Updated FlowerShop - Virtual Atelier Store
+- Updated EconomyPunk
+- Updated SPLAT Physics Realistic Ragdoll Overhaul
+- Updated Adshield Atelier Store - Virtual Atelier
+- Updated ReLUX (Lighting Redux - Accurate Lighting)
+- Updated ReImagined
+- Updated Audi R8 V10+
+- Updated Aprilia RS660
+- Updated Nissan Silvia S15
+- Updated Chevrolet Camaro SS JL4
+- Updated Virtual Car Dealer
+- Updated Ducati 916
+- Updated Audi RSQ
+- Updated Repeatable NCPD Gigs - WIP
+- Updated KiasuBurger Cyberware Core
+- Updated Inorganic Materials
+- Updated Third-Person (TPP) Vehicle Camera Tool
+- Updated Johnny Appearances Overhaul
+- Updated MK.8 Heavy Assault Shotgun
+- Updated Dogtown Airship ( with Apartment and NPC Party Below )
+- Updated Immersive Night City Fixes
+- Updated Immersive Night City Fixes - CORE
+- Updated Not So Good Draw Distance Mod
+- Updated Night City Things Nulled
+- Updated Night City Visuals Nulled
+- Updated Shift (Customizable Dynamic Vehicle Camera)
+- Updated Pet Your Cat
+- Updated I Really Want To Stay At Your House - Judy
+- Updated I Really Want To Stay At Your House - Kerry
+- Updated I Really Want To Stay At Your House - Panam
+- Updated I Really Want To Stay At Your House - River
+- Updated Apartment Cats - Japantown
+- Updated Apartment Cats - The Glen
+- Updated Apartment Cats - Corpo Plaza
+- Updated Auto Drive Enhanced
+- Updated Sabbath7991 Weapon and Attachment Shops - Virtual Atelier
+- Updated Kitsch Cyber Legs for Masc and Fem V
+- Updated Ultra Plus Best Performance and Visuals for Everyone
+- Updated Aerix LUT - Photorealism
+- Updated Immersive Grenades
+- Updated Night City Flooded
+- Updated Rent a Motel
+- Updated VEEGEE SHOP 3
+- Updated Apollo Scout - A Militech x Brennan Collaboration
+- Updated Improved Aldecaldos Camp
+- Updated Tyger Cache - New Iconic Weapons
+- Updated Immersion Patch - Minor Activities Quest Fixes
+- Updated Thorton Merrimac Necromancer
+- Updated Outdoor V Canyon
+- Updated Merc Protocol - Perk Gameplay Expansion
+- Updated Custom Perk Framework
+- Updated Ducati Supersport
+- Updated NCPD and MaxTac Spawn Tweak (District specific police behavior)
+- Updated They Will Remember
+- Updated Immersive Delamain
+- Updated Dedra's Truck Simulator (Convoy Delivery Mod)
+- Updated Night City Traffic Overhaul
+- Updated Go on a Date (Panam) - Side romance activity
+- Updated D-101 Longbow DMR
+- Updated Rita Wheeler Romanced
+- Updated Here's Brendan
+- Updated 3D World Map Fixed
+- Updated Cyber Neck for V -CCXL-
+- Updated Codeware
+- Updated Aurore Romanced (Lady Marmalade)
+- Updated MK.78 SAW
+- Updated Canyon Fixes
+- Updated Better Quality Sort
+- Updated Driver Combat 2.0
+- Updated ArchiveXL
+
+</details>
+
+<details markdown="1">
 <summary>v2.1.0.0 - January 11, 2026</summary>
 
 **Update Importance:** SMALL  
