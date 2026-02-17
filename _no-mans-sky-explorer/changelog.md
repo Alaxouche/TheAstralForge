@@ -10,6 +10,89 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v1.2.0.0 - February 17, 2026</summary>
+
+**Update Importance:** MAJOR  
+**SAVE COMPATIBLE**
+
+___
+
+# Additions:
+- Added zFlatbed Friction v6.21
+- Added zColossus Headlights
+- Added gVehicles Colossus Flatbed High Walls
+- Added gShip Corvette Medbay Bacta Tank
+- Added fnb_PurpleOutlawFilterColor
+- Added Realistic colossus headlights
+- Added gShip Corvette Supercomputer
+- Added Scientific Restoration
+- Added Fix Hauler Custom Part
+- Added Add Ship Custom Parts To Space Station Shop
+- Added Embossed Ships More Fabricator Options
+- Added zCorvette Nexus Lighting
+- Added zCorvette Station Lighting
+- Added zBest Weapon Rack
+- Added gShip Corvette Medbay Bacta Tank
+
+# Removals:
+- Removed Space Combat Reworked - and Larger Space Battles
+
+# Fixes and Tweaks:
+- Upgraded the list to work on latest version of the game
+- Disabled some not yet updated mod, they cause CTDs
+
+# Updates:
+- Updated Construction Research Unit
+- Updated More Words
+- Updated Enjoyable Quicksilver - (LUA Script Included)
+- Updated Exosolar's and Babs' Beyond Base Building
+- Updated Exosolar's and Babs' Clear Visor Scanner and Surveyor and Custom Color Binoc Panels
+- Updated Exosolar's and Babs' Lumen
+- Updated Settlement Fabricator Camera Fix
+- Updated Mech Customizing
+- Updated Fast Refiners
+- Updated Astroport - Better Trading Posts
+- Updated Panelled Window fix
+- Updated Instant Text Display - ITD
+- Updated Better Sentinel Destruction
+- Updated Better Station LOD
+- Updated Better Crystals
+- Updated Better Broken and Overloaded Slots
+- Updated Better Torch Light
+- Updated Sailship Procedural Decals
+- Updated Sentinel Tool Procedural Color
+- Updated Ship Procedural Lights
+- Updated Freighter Hangar Interior Changes
+- Updated Ship Interior Procedural Color
+- Updated Sailship Re-alignments
+- Updated Floating Teleporter Collision
+- Updated Multitool Procedural Update
+- Updated Atlas Orb Word-o-Rama
+- Updated Fighter WingK FIX
+- Updated Darkless Icons
+- Updated Bigger Wallet
+- Updated Better Rewards
+- Updated No Bloom Effect
+- Updated Treasure Ruin Procedural Crates
+- Updated Better Abandoned Station
+- Updated Derelict Procedural Additions
+- Updated Borderless Icons
+- Updated Frigate LOD Fix
+- Updated Black Carbon
+- Updated Realistic Market
+- Updated Fix Hauler Custom Part
+- Updated Better Freighter Entry and Exit
+- Updated Freighter Room Teleporter Fix
+- Updated Convenient Corvette Teleporters
+- Updated Crashed Freighter Procedural Containers
+- Updated Procedurally Coloured Rare Crystals
+- Updated Exosolar's and Babs' Industrial FPS Booster
+- Updated Exosolar's and Babs' Stealth Wires
+- Updated Crescent Worlds
+
+</details>
+
+<details markdown="1">
 <summary>v1.1.4.0 - February 09, 2026</summary>
 
 **Update Importance:** MEDIUM  
