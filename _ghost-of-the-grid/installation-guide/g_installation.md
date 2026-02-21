@@ -9,6 +9,10 @@ nav_order: 2
 
 ## Pre-Installation
 
+### RedMod
+
+As the list uses mods made for RedMod, you need to ensure that you have it installed and working, else it might result in crashes. For steam users, you can download it [here](https://store.steampowered.com/app/2060310/Cyberpunk_2077_REDmod/).
+
 ### Necessary Tweaks
 
 Before installing the modlist, here are some things you must do:  
