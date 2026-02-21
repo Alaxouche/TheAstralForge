@@ -8,6 +8,273 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v7.0.0.0-Beta01 - February 20, 2026</summary>
+  
+**Update Importance:** Major  
+**NOT SAVE COMPATIBLE** 
+
+---
+
+### Additions:
+- Added MCO-DXP and BFCO Attack Speed Fix
+- Added Dynamic Pricing Framework
+- Added Why I Came to Skyrim - Origin Stories
+- Added Unslaad
+- Added Unslaad Voiced - English Addon
+- Added Unslaad - Settings Loader
+- Added The Frozen Heart - Quest Mod
+- Added Alduins Wall - Descriptions (AWD)
+- Added Lund's Hamlet - CORE
+- Added Boons of the Beacon
+- Added KS Hairdos - HDT-SMP for Khajiit
+- Added No Load Door NPC Fade
+- Added Faction Ranks
+- Added Through the Woods - Alternate Perspective Addon
+- Added HorsePower - Modernized Horse Riding (Total Riding Overhaul)
+- Added ValArt Hanging Moss
+- Added Alternative Riften - Revived and Optimized
+- Added Augur of Dunlain Revoiced
+- Added Press E to Heal Followers SKSE
+- Added Light Greatswords of the West - SPID
+- Added Creation Club Content - Properly Environment Mapped
+- Added OnMagicEffectApply Replacer
+- Added Zzjay Skyrim Attire - SPID
+- Added GCBugFix
+- Added Frost Atronach
+- Added Iron Battlemage Armor
+- Added Mage Clothing Expansion
+- Added Mage Clothing Expansion - CBBE 3BA
+- Added Vampire Clothing Expansion
+- Added Vampire Armor Expansion - My Patches
+- Added Vampire Armor Expansion - CBBE 3BA
+- Added Vampire Armor Expansion
+- Added Kojaks Whiterun Navmesh
+- Added Unstack Stolen Items
+- Added Interesting Roads - Navmesh Free
+- Added Dynamic Two-Handed
+- Added Tight Harness for SC Horses
+- Added SC Horses - Glowing Horse Fix
+- Added Fortify Attribute Refill Fix
+- Added Light Greatswords of the West
+- Added Andrealletius' Summoning Tweaks (ASUT)
+- Added DogDogGo - Dogs Track Down NPCs
+- Added Falls of Ivarstead
+- Added Song of the Green (Auri Follower)
+- Added True To Your Roots - An Auri's Pod Overhaul
+- Added Fluffy Thistlefoot
+- Added Snazzy Items for Auri (Song of the Green)
+- Added Song of the Green - Cities of the North
+- Added Lucien - Immersive Fully Voiced Male Follower
+- Added The City of Crossed Daggers - Riften Expansion
+- Added Lod Texture fix for Lux Via
+- Added 4thUnknown's Daedric Armor - CBBE 3BA
+- Added Unblockable Hits
+- Added Modern First-Person Animation Overhaul
+- Added Dominion Armor
+- Added Dominion Armor - SPID
+- Added I'm Glad You're Here - a follower and spouse appreciation
+- Added The Thalmor's Shadow - Taliesin (Custom Voiced Follower)
+- Added NARC Remade - No Animals Report Crimes
+- Added Barrelchest Anchor
+- Added Daggerkiin
+- Added Thunderfury and The Bulwark of Azzinoth
+- Added Blinding Light
+- Added Iban's Staff
+- Added Radzig Longsword
+- Added Ebonblade War Axe
+- Added Granite Maul
+- Added Templar Assassin Armor - Complex Material
+- Added Templar Assassin Armor - CBBE 3BA - HDT-SMP
+- Added Templar Assassin Armor
+- Added Aela Doesn't Approach If You Don't Help - The Companions Giant Fight Scene Tweak
+- Added Safer Spikes
+- Added Stuck in Saarthal - Use Any Spell to Escape
+- Added Farm Hat 01 Clipping Fix
+- Added Neutral Whiterun Guards
+- Added Rock Traps Trigger Fixes
+- Added More Sensible Quartermasters
+- Added NPCs Ain't Hachikos
+- Added Imperial Thalmor Stormcloak Patrols Fixes - Soldiers and Prisoners World Encounters
+- Added Destructible Display Cases
+- Added Destructible Display Cases - Settings Loader
+- Added Yuril's Textures Repository
+- Added The Infinity Blade
+- Added Horse Save Load Fix SKSE
+- Added Glow Be Gone Redone - NG
+- Added Knockback SKSE
+- Added Eating Animations and Sounds
+- Added Eating Animations - Fishing Patch
+- Added Eating Animations - Patch Collection
+- Added Eating Animations and Sounds - First Person Patch
+- Added Potion Toxicity
+- Added Potion Toxicity Redux
+- Added The Chantry - An Overhaul
+- Added Firmament and Constellations MCO And SSL Alternatives
+- Added Keyword Compatibility Framework
+- Added Guaranteed Death Animations
+- Added Animation Motion Fix
+- Added ADXP I MCO I Eskyrim's Sprint Attacks
+- Added True Directional Movement Mounted Archery Fix
+- Added Better Telekinesis - NG
+- Added Guardian Circle Fix
+- Added For Honor in Skyrim Reforged and Expanded
+- Added CINEMA - Dynamic Combat Letterboxes
+- Added The Wonderful Walrus - a replacer for horrible horkers
+- Added SEC Saints and Seducers - Phoenix's Tweaks and Fixes
+- Added Water Debris
+- Added Universal Arrow Spin - SKSE Plugin
+- Added The Cursed Tribe - Quest Expansion
+
+### Removals:
+- Removed Detailmap Seamfix - Skyrim SE
+- Removed 4thUnknown's Daedric Armor - CBBE Bodyslide Fixed
+- Removed SkyUI 3D Item Offset Fix (Centered Item Card - Script Fix - Improvement)
+- Removed Patches for Water for ENB - Acoustic Space Improvement Fixes - Lighting Overhauls
+- Removed Riften Temple Sconce Fix - Base Object Swapper or Sconce Nif Replacement
+- Removed Water for ENB USSEP and Location Patches - All versions of Water for ENB Included
+- Removed Common Clothing Expansion - Common Clothes and Armors Integration - SkyPatched
+- Removed Pfuscher UV fixes
+- Removed Animated Icy Atronach
+- Removed Divine Wardrobe - Patches
+- Removed Common Clothes and Armors
+- Removed Common Clothes and Armors -3BA- Bodyslide
+- Removed Divine Wardrobe
+- Removed Maid Outfits by zzjay and GraceDarkling
+- Removed Maid Outfits - SSE CBBE BodySlide (with Physics)
+- Removed BURP - Book Unity and Revamp Project
+- Removed Maiden Dresses of Norway
+- Removed Ophelia Accessories
+- Removed Obi's Jewelry Pack 2K SMP
+- Removed Apachii Divine Elegance Store
+- Removed Apachii Divine Elegance 3BA Bodyslides
+- Removed Weapons Armor Clothing and Clutter Fixes
+- Removed Weapons Armor Clothing and Clutter Fixes - SkyPatcher
+- Removed Simple Edge Glow Remover NG
+- Removed RMB SPIDified - Common Clothes and Armors
+- Removed Bjorn - Fully Voiced Follower HIMBO and CBBE 3BA Patch
+- Removed Ryn's Sarethi Farm - Water for ENB Patch
+- Removed Immersive Armors - Asdasfa Tweaks and Fixes
+- Removed Watchtowers of the Rift - BOS
+- Removed Divine Wardrobe Integration fix
+- Removed Horse Save Load Fix
+- Removed Reforging - To The Masses Weapon Fixes
+- Removed Taller Posts for Farmhouse Walkways
+- Removed Dawnguard Weapons Are Silver (KID or SkyPatcher)
+- Removed Katana - Journey in the Shadows
+- Removed ALT - Riften Well
+- Removed Spaghetti's Cities - Riften
+- Removed OSD Font for SSE Display Tweaks
+- Removed Divine Elegance No Store
+- Removed Light Greatswords
+- Removed Eivor - ADXP I MCO Sprint Attacks
+- Removed ADXP MCO 1.6.0.6 Bug Fixes
+- Removed MCO - Underwater Combat
+- Removed HFs - Chests - My Snowy Patch
+- Removed STB No save and load in combat
+- Removed Horse Jump Fix
+- Removed Hawks Go to Sleep- Mihail's Shards of Immersion (SE-AE)
+- Removed Barn Owls- Mihail Monsters and Animals (SE-AE)
+- Removed Birds of Prey and Felsaad Terns - Hawks Go To Sleep Patch
+- Removed Divine Wardrobe Integration - Wrist Seam Fix For 3BA Refits
+- Removed Warbeast I Unarmed Moveset for Lycanthropes (MCO I SCAR I BFCO)
+- Removed Alternate Perspective Reborn
+- Removed Missives - Voice and Quest Expansion
+- Removed Smooth Moveset
+- Removed Smooth Moveset (CPR)
+
+### Fixes and Tweaks:
+- Fixed all NPCs neck seams, likely due to incompatibility with dirty overlay of BnP skins
+- Fixed many road seams due to compatibility issues with Northern Roads
+- Fixed misplaced riften plaza mesh
+- Fixed MCO jankiness by swapping back over to Maxsu MCO 
+- Fixed many script bloats
+- Reworked the whole animation system to be less of a mess and a lot more responsive
+- Removed redundant Water for ENB Patches
+- Fixed some meshes UVs
+- Significant performance and stability improvement
+- Changed the death animations that humanoid NPCs play
+- Removed a lot of SPID/Skypatcher distributions
+- BSAed a few mods to free up space and speed up game boot
+- Changed the common outfit distribution system for a less conflicting one
+- Fixed missing textures on some tree logs
+- Reworked Riverwood and Riften
+
+### Updates:
+- Updated Caught Red Handed - Quest Expansion
+- Updated Faarok The Norse God Follower
+- Updated ALT - Barrels 
+- Updated Sharpen Other Swords II - AnimObject Swapper
+- Updated ALT - Crates
+- Updated Diverse Catches - Base Object Swapper
+- Updated Orcish Armors and Weapons Retexture
+- Updated Granite Hill
+- Updated Exit Sneak On Sprint
+- Updated Belethor's Sister - Quest
+- Updated RogueUnicorn - City Trees
+- Updated Security Overhaul SKSE - Some More Locks
+- Updated Dark Souls Undressed - NeverNude - Underwear
+- Updated Extended Encounters
+- Updated Weapon Sheathed Firstperson Dodge Animations
+- Updated Daedric Armors and Weapons Retexture
+- Updated More Scarves - HDT-SMP Physics
+- Updated Pleasing Polygon Increase - Whiterun Farm Fences
+- Updated OBody Next Generation - Settings Loader
+- Updated Fluffworks - Tweaks and Expansion
+- Updated Nordic Farmfield Stonewalls
+- Updated After the Civil War - Siege Damage Repairs
+- Updated Windcaller - Greybeard Inspired Robes and Staff
+- Updated Boutique - Outfit Creation and Distribution Suite
+- Updated First Person Interactions
+- Updated SPAM - Potion Penalties
+- Updated B612 - my little asteroid of useful UI components
+- Updated Photo Mode
+- Updated RYFTEN DOWN - A little addition to the Riften canal
+- Updated Double Life - Anises Cabin Overhaul
+- Updated Comprehensive Attack Rate Patch - SKSE
+- Updated ChickenMike's Random Assortment of Patches (C.R.A.P.)
+- Updated CrashLogger
+- Updated Kyne's Breath - A Froki's Shack Overhaul
+- Updated Mostly Treeless Tundra - Patches Collection
+- Updated Witcherun - A Verdant Whiterun Overhaul
+- Updated Skyrim on Skooma
+- Updated Oathvein UI
+- Updated Modern Lighting Overhaul 2 (MLO2)
+- Updated Some Open World Loot - SkyPatcher Edition Patches
+- Updated Crafting Grants XP
+- Updated Stress and Fear
+- Updated Shout Progression
+- Updated RogueUnicorn - Better Animals
+- Updated Northern Roads - Patches Compendium
+- Updated Snozz's Sunderstone - Patch Collection
+- Updated No Morthal Snow - Redone
+- Updated Object Categorization Framework - Some KID Patches
+- Updated Northern Roads - Patch Collection
+- Updated Serana Dialogue Expansion
+- Updated S.T.A.R. (So This Aint Right)
+- Updated Quest Journal Overhaul - More Mod Support
+- Updated Cisterns of Skyrim - A Rain Barrel and Blood Barrel Replacer
+- Updated Water for ENB - Particle Waterfalls
+- Updated (RES) Children of the Hist
+- Updated Orc Strongholds - AIO - Patches Collection
+- Updated Locked Chests Have Keys - Patch Collection
+- Updated (CS) Lux CS Patch
+- Updated JS Badges of Office
+- Updated Survival Mode Improved - SKSE
+- Updated SkyParkour - A SkyClimb Addon - 360 and Hold to Climb
+- Updated Animated Ice Bergs
+- Updated CC Gallows Hall - Tweaks and Enhancements (GHTE)
+- Updated Carriage Drivers Are Alive
+- Updated Imperial Castles of Skyrim - Patches by Gardion
+- Updated BnP - Female Skin
+- Updated BnP - Male Skin 
+- Updated Dragons Use Thu'um
+- Updated Fortified Morthal - Patch Collection
+- Updated Animated Reading Books - DAF
+- Updated Temple of Talos Redone
+- Updated Skyrim Food Expansion
+
+</details>
+<details markdown="1">
 <summary>v6.8.1.0 - January 14, 2026</summary>
   
 **Update Importance:** Medium  
