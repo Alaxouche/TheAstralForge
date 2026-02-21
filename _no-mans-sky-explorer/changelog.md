@@ -10,6 +10,36 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v1.2.1.0 - February 21, 2026</summary>
+
+**Update Importance:** MEDIUM  
+**SAVE COMPATIBLE**
+
+___
+
+# Fixes and Tweaks:
+- Fixed broken UI
+- Fixed visual issues
+
+# Updates:
+- Updated True Blood
+- Updated Better Deposit Colors
+- Updated ReLight
+- Updated Tiny Inventory Changes
+- Updated Galactic Positioning System
+- Updated Small Panels
+- Updated Faster Scanning
+- Updated Fast Refiners
+- Updated Exosolar's and Babs' Beyond Base Building
+- Updated gVehicles Colossus Flatbed High Walls
+- Updated zColossus Headlights
+- Updated zFlatbed Friction v6.21
+- Updated No Bird's Eye Scans 2.7
+- Updated New Warps 1.3
+
+</details>
+
+<details markdown="1">
 <summary>v1.2.0.0 - February 17, 2026</summary>
 
 **Update Importance:** MAJOR  
