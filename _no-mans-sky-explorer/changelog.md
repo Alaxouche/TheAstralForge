@@ -10,6 +10,45 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v1.2.2.0 - February 26, 2026</summary>
+
+**Update Importance:** MEDIUM  
+**SAVE COMPATIBLE**
+
+___
+
+# Additions:
+- Added zCrazy Colossus
+- Added Unpredictable Deposits
+- Added gVehicles Colossus Flatbed High Walls
+- Added gShip Corvette Medbay Bacta Tank
+- Added fnb_PurpleOutlawFilterColor
+- Added Realistic colossus headlights
+- Added gShip Corvette Supercomputer
+- Added Scientific Restoration
+- Added Fix Hauler Custom Part
+- Added Add Ship Custom Parts To Space Station Shop
+- Added Embossed Ships More Fabricator Options
+- Added zCorvette Nexus Lighting
+- Added zCorvette Station Lighting
+- Added zBest Weapon Rack
+- Added gShip Corvette Medbay Bacta Tank
+
+# Fixes and Tweaks:
+- Potential fix for the broken UI
+
+# Updates:
+- Updated UIO - User Interface Overhaul (BETA)
+- Updated Corvette Technology Fix
+- Updated Ultimate Arms Dealer
+- Updated ReLight
+- Updated Faster Scanning
+- Updated Better Deposit Colors
+- Updated gVehicles Colossus Flatbed High Walls
+
+</details>
+
+<details markdown="1">
 <summary>v1.2.1.0 - February 21, 2026</summary>
 
 **Update Importance:** MEDIUM  
