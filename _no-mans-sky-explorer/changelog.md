@@ -20,19 +20,6 @@ ___
 # Additions:
 - Added zCrazy Colossus
 - Added Unpredictable Deposits
-- Added gVehicles Colossus Flatbed High Walls
-- Added gShip Corvette Medbay Bacta Tank
-- Added fnb_PurpleOutlawFilterColor
-- Added Realistic colossus headlights
-- Added gShip Corvette Supercomputer
-- Added Scientific Restoration
-- Added Fix Hauler Custom Part
-- Added Add Ship Custom Parts To Space Station Shop
-- Added Embossed Ships More Fabricator Options
-- Added zCorvette Nexus Lighting
-- Added zCorvette Station Lighting
-- Added zBest Weapon Rack
-- Added gShip Corvette Medbay Bacta Tank
 
 # Fixes and Tweaks:
 - Potential fix for the broken UI
