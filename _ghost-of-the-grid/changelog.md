@@ -10,6 +10,104 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v2.3.0.0 - March 01, 2026</summary>
+
+**Update Importance:** MAJOR  
+**SAVE COMPATIBLE** 
+
+___
+
+# Additions:
+- Added Night City Allies - Immersive Companion System
+- Added Carnage Grenade Launcher
+- Added Immersive Shower
+- Added (Poser) Neon Drift Solo Car Poses - Archer Edition
+- Added Fluff Vendor Fixes
+- Added Engine Oil 
+- Added Filthy Access Points
+- Added Use Your Fridge
+- Added Weather Probability Rebalance
+- Added More Inventory Filters (with Food Filter) - Update 2.2
+- Added Arch Dirt bike
+- Added Watch Your Back
+- Added Developer_Toggles - Easy Access to Hidden FPS and Visuals
+- Added HDD Performance Booster
+- Added Immersive First Person Camera - Extended
+- Added SOR-22C and Sabertooth Iconic
+- Added Manavortex Material Library
+- Added Totentanz Club Enhanced
+- Added Night City Badges
+- Added VEEGEE SHOP
+- Added Dave X Veegee Mustang Jacket outfit
+- Added Casual Style Outfit Pt4 - Archive XL
+- Added Cap with Customisable Logos - ArchiveXL (fem V)
+- Added Japantown Greenery
+- Added The Moth Bar Lair
+- Added Crunch Plaza Expanded ( Cut Content )
+
+# Removals:
+- Removed Custom Character - Edgerunners Lucy
+- Removed extra loot
+- Removed Legacy - Enhanced Police Lights System
+- Removed blackwall
+- Removed The Division Hunter Outfit
+- Removed CPU Optimization Plus.
+- Removed BMW R NineT
+- Removed Kurt Hansen's Cyber Arms for Masc and Fem V
+- Removed Dynamic Panam
+- Removed Dynamic Ward
+- Removed Dynamic Jackie
+- Removed dynamic Takemura
+- Removed Time weather and location aware Judy
+- Removed Weapon Magazine Reload
+- Removed Ultra Plus Best Performance and Visuals for Everyone
+- Removed Cyberware Improved
+- Removed Clothing Improved
+- Removed Weapon Muzzles Improved
+- Removed Weapons Improved
+- Removed Weapon Suppressors Improved
+- Removed Armor Improved
+- Removed Weapon Mods Improved
+
+# Fixes and Tweaks:
+- Fixed many stutters
+- Fixed some CTDS
+- Rebalanced loot
+- Reworked the performance optimization mods with more accurate and stable ones
+
+# Updates:
+- Updated NPC CCXL Hair - Masc
+- Updated NIGHT CITY ALIVE
+- Updated Virtual Atelier
+- Updated Deceptious Bug Fixes
+- Updated Striker SMG
+- Updated Immersive Healing
+- Updated Virtual Car Dealer - Sorting
+- Updated Lotus Esprit Turbo
+- Updated Shaitan Black Market Vendor (The Mercs' Alley - Kabuki)
+- Updated NC Autoshop's Repair
+- Updated Rent a Motel
+- Updated Immersive Grenades
+- Updated Shift (Customizable Dynamic Vehicle Camera)
+- Updated Honda CRX Mugen
+- Updated Audi RSQ
+- Updated Ducati 916
+- Updated Chevrolet Camaro SS JL4
+- Updated Nissan Silvia S15
+- Updated Aprilia RS660
+- Updated Audi R8 V10+
+- Updated Corpse Loot Fix
+- Updated VEEGEE SHOP 3
+- Updated CyberVision Reshade
+- Updated CyberVision ENV
+- Updated Immersion Patch - Minor Activities Quest Fixes
+- Updated Sabbath7991 Weapon and Attachment Shops - Virtual Atelier
+- Updated Lotus Esprit Turbo
+- Updated Deceptious Bug Fixes
+
+</details>
+
+<details markdown="1">
 <summary>v2.2.0.0 - February 17, 2026</summary>
 
 **Update Importance:** MAJOR  
