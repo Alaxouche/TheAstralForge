@@ -8,6 +8,138 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v7.0.0.0-Beta02 (Open Beta) - March 02, 2026</summary>
+  
+**Update Importance:** Major  
+**NOT SAVE COMPATIBLE** 
+
+---
+
+### Additions:
+- Added Dynamic Pricing Framework
+- Added Unstack Stolen Items
+- Added Steal off Scoundrels - Pickpocketing Criminals is Not Stealing
+- Added First Person FOV and Tween Menu Fix SKSE
+- Added For Honor Reforged
+- Added Thalmor Investigator HDT-SMP Armor
+- Added Seamless Saving - Skyrim Save Accelerator
+- Added Lingering Subtitles Fix
+- Added Thalmor Investigator - My patches
+- Added ShowRaceMenu - NG
+- Added First Person Jumping Attack Fix - SKSE
+- Added Animal Motion Engine
+- Added Racemenu(SKEE) cosave Load Crash Fix
+- Added Unstack Quest Items
+- Added Aura's Inventory Tweaks (More SkyUI Icons Sorting Options and Columns)
+- Added NordwarUA's Legion - Complex Material
+- Added RMB SPIDified - Heavy Legion
+- Added Heavy Legion
+- Added RMB SPIDified - New Legion
+- Added New Legion
+- Added Gold Market Sync
+
+### Removals:
+- Removed Axarien's Animations - The Companions - Vilkas Farkas Aela
+- Removed SkyUI 5.2 SE Plugin with Master Added
+- Removed The Witcher Signs - I4 and Wheeler patch
+- Removed Desecration - Custom I4 Icons
+- Removed Bloodmoon - Custom I4 Icons
+- Removed Flames of Coldharbour - Custom I4 Icons
+- Removed Arcane - Custom I4 Icons
+- Removed Arclight - Custom I4 Icons
+- Removed Necrom - Custom I4 Icons
+- Removed Abyssal Tides Magic - I4 Icons
+- Removed Vulcano - Custom I4 Icons
+- Removed Lunaris - Custom I4 Icons
+- Removed Stellaris - Custom I4 Icons
+- Removed Necrotic - Custom I4 Icons
+- Removed Inquisition - Custom I4 Icons
+- Removed Natura - Custom I4 Icons
+- Removed Abyss - Custom I4 Icons
+- Removed Storm Calling Magic 2 Icon - I4 Add-On
+- Removed Kome's Inventory Tweaks (KIT)
+- Removed Fluffworks Patches
+- Removed Stuck on Screen Load Door Prompt Fix
+- Removed NPC Spell Variance - Kittytail's Magic
+- Removed NPC Spell Variance - Spell Variety AI
+- Removed NPC Spell Variance - Mysticism
+- Removed NPC Spell Variance - Darenii' s Spell Mods AIO
+- Removed Feline Movement Animations for Khajiits Only (FMAK) SSE
+- Removed JellyFish one handed Sprint
+- Removed DynDOLOD Mesh Fixes
+- Removed No UI On Screenshots
+- Removed Contextual Crosshair
+- Removed Tight harness for SC Horses
+- Removed Through the Woods - Alternate Perspective Addon
+
+### Fixes and Tweaks:
+- Fixed unmatching whiterun LODs
+- Fixed CTDs when spawning in the starting cell
+- Fixed flickering crosshair
+- Fixed some more potential CTDs
+- Fixed stability leaks induced by the amount of MCMs
+- Fixed many script bloats
+- Fixed screen resolution detection in the dashboard
+- Reduced loading time by half! went from 197s to 100s
+- Intruduction of a new experimental profile: it removes the 43 000 added trees by fabled forests while keeping the flora mix of ultra profile. Major FPS boost and not necessarily visual loss.
+
+### Updates:
+- Updated Open Animation Replacer - Math Plugin
+- Updated Sound Record Distributor
+- Updated Gesture Animation Remix (OAR)
+- Updated Windhelm Bridge Revived - Patches and Addons
+- Updated Whiterun Has Walls Redone
+- Updated Vanaheimr - Mines and Caves
+- Updated STB Widgets
+- Updated STB Active Effects
+- Updated MfgFix NG
+- Updated Windhelm Objects SMIMed
+- Updated Steel Plate Armors - Complex Material
+- Updated Spell Knight Armor - Complex Material
+- Updated Legacy of Ysgramor - Complex Material
+- Updated Sons of Skyrim - Complex Material 
+- Updated Children of the North Wind - Nordic Ruin Diversity
+- Updated Unofficial Skyrim Special Edition Patch - USSEP
+- Updated (DT) Debug Menu - In-Game Navmesh Viewer and More
+- Updated (ENB) ENB Extender for Skyrim
+- Updated M.O.I.S.T. - Massive Outstandingly Insane Swamp Tree
+- Updated Witcherun - Patch Collection
+- Updated Cities of the North - Dawnstar - Patch Collection
+- Updated FuzzBeed's Fabulous Resource Repository
+- Updated SIGMA - Sword Animations - 1st Person
+- Updated SIGMA - Greatsword Animations - 1st Person
+- Updated CC Farming - Tweaks Enhancements and Quest Expansion
+- Updated KreatE
+- Updated Hamvir Dustman - FuzzBeed's Dungeons
+- Updated Alaxouche's MO2 Plugins Repository
+- Updated The Great Town of Ivarstead Patch Collection
+- Updated Katana Crafting
+- Updated Ivy - Ivarstead Well Addon
+- Updated First Person Interactions
+- Updated I'm Glad You're Here - a follower and spouse appreciation
+- Updated True To Your Roots - An Auri's Pod Overhaul
+- Updated B612 - my little asteroid of useful UI components
+- Updated (RES) Women of Skyrim Refined
+- Updated Northern Roads - Patch Collection
+- Updated More Scarves - HDT-SMP Physics
+- Updated Some Open World Loot - SkyPatcher Edition Patches
+- Updated Northern Roads - Patches Compendium
+- Updated Security Overhaul SKSE - Some More Locks
+- Updated Dragons Use Thu'um
+- Updated Quest Journal Overhaul - More Mod Support
+- Updated Better Telekinesis - NG
+- Updated The Pigeon's Nest - Assortment of small mods and fixes
+- Updated Snazzy Misc Locations
+- Updated Heretical Haemars Shame - Patch Collection
+- Updated H.O.A. - Hyperspecific Occlusion Addon
+- Updated Animated Chains Rehost
+- Updated CritterSpawn - Script Call Reduction
+- Updated State Behavior Framework
+- Updated Open Animation Replacer
+
+</details>
+
+<details markdown="1">
 <summary>v7.0.0.0-Beta01 - February 20, 2026</summary>
   
 **Update Importance:** Major  
