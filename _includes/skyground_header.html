@@ -1,0 +1,82 @@
+{% assign active_alert = site.data.alerts | where: "enabled", true | first %}
+{% if active_alert %}
+  <div class="site-alert site-alert--{{ active_alert.type | default: 'info' }}">
+    <div class="site-alert__inner">
+      <span class="site-alert__label">{{ active_alert.label | default: 'Alert' }}</span>
+      <span class="site-alert__message">{{ active_alert.message }}</span>
+      {% if active_alert.link_url and active_alert.link_text %}
+        <a class="site-alert__link" href="{{ active_alert.link_url | relative_url }}">{{ active_alert.link_text }}</a>
+      {% endif %}
+    </div>
+  </div>
+{% endif %}
+<header{% if active_alert %} class="has-alert"{% endif %}>
+  <div class="headerlogo">
+    <a href="{{ '/' | relative_url }}">
+      <h1>{{ site.title }}</h1>
+    </a>
+  </div>
+  <nav>
+    <a href="{{ '/' | relative_url }}">Home</a>
+    <a href="{{ '/hub/' | relative_url }}">Hub</a>
+    <div class="nav-dropdown">
+      <a href="{{ '/hub/' | relative_url }}" class="nav-link">Modlists</a>
+      <div class="nav-dropdown-menu">
+        <div class="nav-dropdown-item">
+          <span class="nav-dropdown-label">Wunduniik</span>
+          <div class="nav-submenu">
+            <a href="{{ '/wunduniik/index/' | relative_url }}">Overview</a>
+            <a href="{{ '/wunduniik/installation-guide/' | relative_url }}">Installation Guide</a>
+            <a href="{{ '/wunduniik/changelog/' | relative_url }}">Changelog</a>
+            <a href="{{ '/wunduniik/known-issues/' | relative_url }}">Known Issues</a>
+            <a href="{{ '/wunduniik/loadorder/' | relative_url }}">Load Order</a>
+          </div>
+        </div>
+        <div class="nav-dropdown-item">
+          <span class="nav-dropdown-label">Krentoraan</span>
+          <div class="nav-submenu">
+            <a href="{{ '/krentoraan/index/' | relative_url }}">Overview</a>
+            <a href="{{ '/krentoraan/k_installation-guide/' | relative_url }}">Installation Guide</a>
+            <a href="{{ '/krentoraan/loadorder/' | relative_url }}">Load Order</a>
+          </div>
+        </div>
+        <div class="nav-dropdown-item">
+          <span class="nav-dropdown-label">Ghost of the Grid</span>
+          <div class="nav-submenu">
+            <a href="{{ '/ghost-of-the-grid/index/' | relative_url }}">Overview</a>
+            <a href="{{ '/ghost-of-the-grid/installation-guide/' | relative_url }}">Installation Guide</a>
+            <a href="{{ '/ghost-of-the-grid/changelog/' | relative_url }}">Changelog</a>
+            <a href="{{ '/ghost-of-the-grid/known-issues/' | relative_url }}">Known Issues</a>
+            <a href="{{ '/ghost-of-the-grid/loadorder/' | relative_url }}">Load Order</a>
+          </div>
+        </div>
+        <div class="nav-dropdown-item">
+          <span class="nav-dropdown-label">No Man's Sky Explorer</span>
+          <div class="nav-submenu">
+            <a href="{{ '/no-mans-sky-explorer/index/' | relative_url }}">Overview</a>
+            <a href="{{ '/no-mans-sky-explorer/installation-guide/' | relative_url }}">Installation Guide</a>
+            <a href="{{ '/no-mans-sky-explorer/changelog/' | relative_url }}">Changelog</a>
+            <a href="{{ '/no-mans-sky-explorer/loadorder/' | relative_url }}">Load Order</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="{{ '/contributors/' | relative_url }}">Contributors</a>
+    <a href="{{ '/faq/' | relative_url }}">FAQ</a>
+    <a href="https://discord.gg/vKuB7nazBk" target="_blank" rel="noopener noreferrer">Discord</a>
+    <div class="search-container">
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"></circle>
+        <path d="m21 21-4.35-4.35"></path>
+      </svg>
+      <input type="text" id="global-search-input" class="search-input" placeholder="Search...">
+      <div id="search-results" class="search-results"></div>
+    </div>
+    <button class="theme-toggle" type="button" aria-pressed="false">
+      <span class="theme-toggle-track" aria-hidden="true">
+        <span class="theme-toggle-thumb"></span>
+      </span>
+      <span class="theme-toggle-label">Dark</span>
+    </button>
+  </nav>
+</header>

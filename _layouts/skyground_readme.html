@@ -1,0 +1,21 @@
+---
+layout: skyground_base
+---
+
+<main class="readme-layout readme-layout--spaced" data-reading-default="{{ page.reading_mode_default | default: false }}">
+  {% include skyground_nav.html %}
+  <div class="readme-content">
+    {% include breadcrumb.html %}
+    <div class="readme-tools">
+      <button class="readme-toggle" type="button" aria-pressed="false" data-reading-toggle>Reading mode</button>
+    </div>
+    <nav class="floating-toc" aria-label="Table of contents" data-floating-toc hidden>
+      <p class="floating-toc__title">On this page</p>
+      <div class="floating-toc__content" data-floating-toc-content></div>
+    </nav>
+    {{ content }}
+    {% if page.url contains '/installation-guide/' %}
+      {% include vote_section.html %}
+    {% endif %}
+  </div>
+</main>

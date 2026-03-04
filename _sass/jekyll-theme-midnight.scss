@@ -8,9 +8,30 @@ body {
   font:14px/1.5 "OpenSansRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#f0e7d5;
   font-weight: normal;
-  background: #252525;
+  background: #000;
   background-attachment: fixed !important;
   #background: linear-gradient(#2a2a29, #1c1c1c);
+  position: relative;
+  isolation: isolate;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("../assets/Images/AstralForge_Background_Dark.png") center center / cover no-repeat;
+  filter: blur(12px);
+  z-index: -2;
+  transform: scale(1.03) translateZ(0);
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: -1;
+  transform: translateZ(0);
 }
 
 h1, h2, h3, h4, h5, h6 {

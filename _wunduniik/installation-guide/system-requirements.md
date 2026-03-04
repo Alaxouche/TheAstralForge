@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: skyground_readme
 title: System Requirement
 parent: Installation Guide
 nav_order: 1
@@ -9,16 +9,28 @@ nav_order: 1
 
 ## System Requirements
 
-Only, Windows 10 and 11 work with Wabbajack fully. LTSC, special variants, lightened editions or any other modified variant **WILL NOT WORK**. Your windows version **must be 21H2 or newer** to run both Wabbajack and Wunduniik.
+Only Windows 10 and 11 fully support Wabbajack. LTSC, special variants, lightened editions or any other modified variant **WILL NOT WORK**. Your Windows version **must be 21H2 or newer** to run both Wabbajack and Wunduniik.
 
 Running the list from Hard Disk Drives or external drives is **STRONGLY ADVISED AGAINST**. A lot of content is swapped at game run time and, as a result, fast storage and RAM are needed.
 
-As Wunduniik is a modlist modlist based on graphics, you must have a good graphic card.  
-**YOU NEED 500GB free to download the modlist**: ~300GB for the installation size and ~180GB for the download size 
+As Wunduniik is a modlist based on graphics, you must have a good graphics card.
 
-{: .note } If the space requirement is uncomfortable, remember that you can delete downloads once the list is successfully installed. You can also set your download location to a different drive than the installation location; more on that later.
+<div class="modlist-size" data-modlist-size data-modlist-source="https://raw.githubusercontent.com/Alaxouche/Wunduniik/main/modlist.json" data-modlist-title="Wunduniik">
+  <strong>Space required:</strong>
+  <span data-modlist-total>Loading...</span> total,
+  including <span data-modlist-install>Loading...</span> for install
+  and <span data-modlist-download>Loading...</span> for downloads.
+  <span data-modlist-version hidden>Version</span>
+</div>
 
-| Configuration         | CPU        | GPU                | RAM          | Stockage               | Écran            | FPS |
+<noscript>
+  <p><strong>Space required:</strong> 500 GB total (approx. 300 GB install + 180 GB downloads).</p>
+</noscript>
+
+> If the space requirement is uncomfortable, remember that you can delete downloads once the list is successfully installed. You can also set your download location to a different drive than the installation location; more on that later.
+{: .note }
+
+| Configuration         | CPU        | GPU                | RAM          | Storage                | Display          | FPS |
 |-----------------------|------------|--------------------|--------------|------------------------|------------------|-----|
 | **Minimum Specs**     | i5-7600k   | Nvidia GTX 2080    | 16 GB DDR4   | 500 GB SATA II SSD     | FHD 60 Hz        | 45  |
 | **Recommended Specs** | i7-9700k   | Nvidia RTX 3060 Ti | 32 GB DDR4   | 1 TB SATA III/M.2 SSD  | FHD 60 Hz        | 60  |
@@ -33,7 +45,7 @@ For the modlist to work you must have some apps: Please ensure you have the late
      <img src="https://raw.githubusercontent.com/Lost-Outpost/lost-legacy/main/images/microsoft-net-5-0-installation.png" >
 </p>
 
-To help you with the INIs configuration, I highly recommand to have installed [Sublime Text](https://www.sublimetext.com/)
+To help you with the INIs configuration, I highly recommend installing [Sublime Text](https://www.sublimetext.com/)
 
 ## PageFile Configuration
 
@@ -79,3 +91,6 @@ To fix this, you’ll want to have a bigger pagefile. A pagefile is a file on yo
   7. Scroll down to **Control flow guard (CFG)**  
   8. Click **Override**  
   9. Switch to **Off**
+
+---
+

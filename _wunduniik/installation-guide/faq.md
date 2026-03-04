@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: skyground_readme
 title: FAQ
 parent: Installation Guide
 nav_order: 6
@@ -7,44 +7,11 @@ nav_order: 6
 
 # Questions & Answers
 
-<dl>
-  <dt><strong>Q:</strong> My compass doesn't show undiscovered locations!</dt>  
-  <dd><strong>A:</strong> Go to Compass Navigation Overhaul and find bShowUndiscoveredLocationMarkers=0. Change the 0 to 1.</dd>
-
-  <dt><strong>Q:</strong> How do I start main quest in this list?</dt>  
-  <dd><strong>A:</strong> Quoting the Alternate Perspective modpage: To  begin the Main Quest, you want to head to Helgen's Inn and talk to the Innkeeper. Upon doing so, you will find the normal Innkeeper Dialogue and one extra Option, reading "I'd like to rent a room. (Start Intro (10 gold))", using this option will first seem like a normal bed renting - and is in fact a normal bed renting - however, the next time you sleep in Helgen's Inn, something special is going to happen...</dd>
-
-  <dt><strong>Q:</strong> When I exit game, a pop up asking me if I want to keep load order changes appears, what do I do?</dt>  
-  <dd><strong>A:</strong> Even though it is not dramatic if you click yes, you should always click no. The game should not get to automatically sort the plugins at the risk to break Load Order.</dd>
-
-
-  <dt><strong>Q:</strong> How do I dismount my horse?</dt>  
-  <dd><strong>A:</strong> Hold down E.</dd>
-
-  <dt><strong>Q:</strong> How do I use target lock?</dt>  
-  <dd><strong>A:</strong> Target lock is a feature of True Directional Movement. You can change the hotkey in the TDM MCM.</dd>
-
-  <dt><strong>Q:</strong> My map is all purple!</dt>  
-  <dd><strong>A:</strong> You have mods loaded under your map plug-ins. Make sure you move all additional esps you installed to be above your map esps.</dd>
-
-  <dt><strong>Q:</strong> How do i update my Wunduniik modlist?</dt>  
-  <dd><strong>A:</strong> Updating Wunduniik looks almost the same, as your first time installing it.
-If you did not clear previous download location, mods that did not change from last update, will use already downloaded files, which is making updating a lot faster than fresh install.
-Keep in mind, that after update, all mods added by you, will be deleted. If you want to keep mods, added by yourself, add [NoDelete] at the beginning of mod name.
-Download our file from Nexus site or from Wabbajack Application and extract it.
-Open Wabbajack installer and point it to your "Wunduniik.wabbajack" file location.
-Remember to mark "Overwrite location".
-Click "Start" button.</dd>
-
-  <dt><strong>Q:</strong> How do I activate the NSFW options ?</dt>  
-  <dd><strong>A:</strong> Wunduniik does not make use of NSFW anymore. Yet, we provide as an optional mod an additional bodyslide folder containing nude bodies. You can find and enable it in the optional mods separator.</dd>
-
-  <dt><strong>Q:</strong> How do I add Widescreen support?</dt>
-  <dd><strong>A:</strong> Those are automatically activated as the mod manager auto detects your screen ratio. No need to worry about it anymore.</dd>
-  
-  <dt><strong>Q:</strong> I don't like the current character preset and I can't find how to change it, help!</dt>
-  <dd><strong>A:</strong> Do not panic. Wunduniik is making use of Obody, which allows you to use a ton of different body presets from a list. To change your bodymorph, press "o" and the menu will appear. You only have to click on one of the preset and poof! Your body is now swapped.</dd>
-</dl>
+{% include components/faq.html
+  title="Questions & Answers"
+  description="Quick answers about Wunduniik installs, gameplay, and updates."
+  data=site.data.wunduniik_faq
+%}
 
 ## Reporting an Issue
 

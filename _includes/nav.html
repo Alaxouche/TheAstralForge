@@ -1,45 +1,5 @@
-<!-- Custom nav bar code taken from Lizzy's Wildlander Wiki: https://github.com/Wildlander-mod/wildlander-mod.github.io/blob/main/_includes/nav.html -->
-
-{%- comment -%}
-  The `nav_order` values of pages affect the order in which they are shown in
-  the navigation panel and in the automatically generated tables of contents.
-  Sibling pages with the same `nav_order` value may be shown in any order.
-  Sibling pages with no `nav_order` value are shown after all pages that have
-  explicit `nav_order` values, ordered by their `title` values.
-  
-  The `nav_order` and `title` values can be numbers or strings. To avoid build
-  failures, we sort numbers and strings separately. We sort numbers by their
-  values, and strings lexicographically. The case-sensitivity of string sorting
-  is determined by the configuration setting of `nav_sort`. Pages with no `title`
-  value are excluded from the navigation.
-
-  Note: Numbers used as `title` or `nav_order` values should not be in quotes,
-  unless you intend them to be lexicographically ordered. Numbers are written
-  without spaces or thousands-separators. Negative numbers are preceded by `-`.
-  Floats are written with the integral and fractional parts separated by `.`.
-  (Bounds on the magnitude and precision are presumably the same as in Liquid.)
-{%- endcomment -%}
-
 {%- assign title_pages = include.pages
       | where_exp: "item", "item.title != nil" -%}
-
-{%- comment -%}
-  A page with `nav_exclude: true` does not appear in the main navigation.
-  If it has a `parent`, it may appear in the parent's table of contents.
-  If it specifies `has_children: true`, it should appear in the breadcrumbs
-  of the child pages, but its order in relation to other pages is irrelevant.
-  Pages that never appear can be removed from the pages that need to be sorted.
-  This optimisation can be significant on a site with many pages.
-  
-  In Jekyll 4, the pages to be sorted can be filtered by:
-  
-  {%- assign title_pages = title_pages
-        | where_exp: "item", "item.nav_exclude != true or item.parent != nil" -%}
-  
-  That filter is not allowed in Jekyll 3. The following iterative code gives the
-  same effect, but it is activated only when it will filter more than 50% of the
-  pages.
-{%- endcomment -%}
 
 {%- unless title_pages == empty -%}
   {%- assign unsorted_pages = title_pages
@@ -63,14 +23,6 @@
       | where_exp: "item", "item.nav_order != nil"  -%}
 {%- assign title_order_pages = title_pages
       | where_exp: "item", "item.nav_order == nil" -%}
-
-{%- comment -%}
-  Divide the arrays of `nav_order_pages` and `title_order_pages` according to
-  the type of value.
-  
-  The first character of the result of `jsonify` is `"` only for strings.
-  Grouping by a single character also ensures the number of groups is small.
-{%- endcomment -%}
 
 {%- assign nav_number_pages = "" | split: "" -%}
 {%- assign nav_string_pages = "" | split: "" -%}
@@ -130,35 +82,6 @@
       | where_exp: "item", "item.grand_parent == nil" -%}
 {%- assign third_level_pages = pages_list
       | where_exp: "item", "item.grand_parent != nil" -%}
-
-{%- comment -%}
-  The order of sibling pages in `pages_list` determines the order of display of
-  links to them in lists of navigation links and in auto-generated TOCs.
-  
-  Note that Liquid evaluates conditions from right to left (and it does not allow
-  the use of parentheses). Some conditions are not so easy to express clearly...
-  
-  For example, consider the following condition:
-  
-    C: page.collection = = include.key and 
-       page.url = = node.url or 
-       page.grand_parent = = node.title or 
-       page.parent = = node.title and 
-       page.grand_parent = = nil
- 
-  Here, `node` is a first-level page. The last part of the condition
-  -- namely: `page.parent = = node.title and page.grand_parent = = nil` --
-  is evaluated first; it holds if and only if `page` is a child of `node`.
-  
-  The condition `page.grand_parent = = node.title or ...` holds when 
-  `page` is a grandchild of node, OR `...` holds.
-  
-  The condition `page.url = = node.url or ...` holds when 
-  `page` is `node`, OR `...` holds.
-  
-  The condition C: `page.collection = = include.key and ...` holds when we are 
-  generating the nav links for a collection that includes `page`, AND `...` holds.
-{%- endcomment -%}
 
 <ul class="nav-list">
 {%- for node in first_level_pages -%}

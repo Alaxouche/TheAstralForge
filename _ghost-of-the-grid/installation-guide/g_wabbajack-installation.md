@@ -1,8 +1,9 @@
 ---
-layout: default
+layout: skyground_readme
 title: Wabbajack Installation
 parent: Installation Guide
 nav_order: 3
+reading_mode_default: true
 ---
 
 # Wabbajack Installation
@@ -33,6 +34,21 @@ Now you can follow the next steps in order to download and install Wunduniik Mod
 **Installation Video:**
 
 To help you more if you're not much helped with textual guides, you can watch the following video that covers generic informations to correctly install any wabbajack modlist:
+
+<div class="video-tutorials-wrapper" style="margin: 2rem 0;">
+  <div class="video-player-wrapper">
+    <div id="wabbajack-video-player" class="video-player">
+      <iframe 
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen
+        class="video-iframe"
+        style="width: 100%; height: 100%;">
+      </iframe>
+    </div>
+  </div>
+</div>
 
 ## Problems With Installation
 

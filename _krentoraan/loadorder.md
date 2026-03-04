@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: skyground_readme
 title: Load Order
 nav_order: 2
 ---

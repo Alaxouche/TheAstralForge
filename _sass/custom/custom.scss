@@ -1,7 +1,4 @@
 
-// CSS Style Sheet base taken from Lizzy's Wildlander Wiki
-// https://github.com/Wildlander-mod/wildlander-mod.github.io/
-
 $blue-100: #dbeafe;
 $blue-200: #bfdbfe; 
 $blue-300: #93c5fd;
@@ -23,13 +20,13 @@ $violet-700: #6d28d9;
 
 $font-size-1: 9px !default;
 $font-size-1-sm: 10px !default;
-$font-size-2: 11px !default; // h4 - uppercased!, h6 not uppercased, text-small
-$font-size-3: 12px !default; // h5
+$font-size-2: 11px !default;
+$font-size-3: 12px !default;
 $font-size-4: 14px !default;
-$font-size-5: 18px !default; // h3
-$font-size-6: 22px !default; // h2
+$font-size-5: 18px !default;
+$font-size-6: 22px !default;
 $font-size-7: 26px !default;
-$font-size-8: 32px !default; // h1
+$font-size-8: 32px !default;
 $font-size-9: 36px !default;
 $font-size-10: 42px !default;
 $font-size-10-sm: 48px !default;
@@ -58,12 +55,10 @@ $table-background-color: #121212;
   }
 }
 
-// Stop main content overlapping with sidebar when main content is too wide and produces a horizonal scroll bar
 .side-bar{
 	z-index:8;
 }
 
-// floating header
 @media screen and (min-width: 800px) {
 	.main-header {
 		position:Fixed;
@@ -74,18 +69,15 @@ $table-background-color: #121212;
 	}
 }
 
-// To stop overlap with the floating header
 .main-content-wrap {
   padding-top: 5.5rem;
 }
 
-// to make scrolling links position 100px from top of screen
 html{
     scroll-padding-top:100px;
 }
 
  
-// External content
 iframe {
   min-width: 100%;
   height: 700px;
@@ -109,6 +101,55 @@ iframe {
     font-size: 16px;
 }
 
+.site-alert {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  margin-bottom: 10px;
+  background: rgba(34, 197, 94, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+}
+
+.site-alert__inner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.site-alert__label {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.site-alert__link {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.site-alert--maintenance {
+  background: rgba(245, 158, 11, 0.2);
+}
+
+.site-alert--hotfix {
+  background: rgba(34, 197, 94, 0.2);
+}
+
+.site-alert--info {
+  background: rgba(59, 130, 246, 0.2);
+}
+
 p, ul, ol, table, pre, dl {
   margin:0 0 10px;
 }
@@ -119,12 +160,11 @@ table {
   table-layout:fixed;
   margin-bottom: 15px;
   font-family: 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border: $border rgba($border-color, 0.5);
 }
 
 th {
   text-align:left;
-  padding:5px 10px;
-  border-bottom:1px solid #434343;
   color: #b6b6b6;
   font-family: 'OpenSansSemibold', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-weight: normal;
@@ -132,41 +172,172 @@ th {
 
 td {
   text-align:left;
-  padding:5px 10px;
-  border-bottom:1px solid #434343;
-}
-
-td:nth-child(1) {
-  width:100px;
-}
-
-
-td:nth-child(2) {
-  width:105px;
-  white-space: nowrap;
-}
-
-td:nth-child(3) {
-  width:195px;
-}
-
-td:nth-child(4) {
-  text-align:right;
-  width:150px;
 }
 
 th,
 td {
   min-width: 7.5rem;
+  padding: 8px 12px;
   background-color: $table-background-color;
-  border-bottom: $border rgba($border-color, 0.5);
-  border-left: $border $table-background-color;
+  border: $border rgba($border-color, 0.5);
+  vertical-align: top;
 
   @include fs-3;
 
-  &:first-of-type {
-    border-left: 0;
+}
+
+.faq-section {
+  margin: 20px 0 30px;
+}
+
+.faq-header {
+  margin-bottom: 16px;
+
+  h2 {
+    margin-bottom: 6px;
   }
+
+  p {
+    color: #b6b6b6;
+    max-width: 720px;
+  }
+}
+
+.faq-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0 20px;
+}
+
+.faq-filter {
+  border: $border rgba($border-color, 0.55);
+  background: #111111;
+  color: #e8e8e8;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+
+.faq-filter:hover,
+.faq-filter.is-active {
+  background: rgba(14, 42, 26, 0.9);
+  border-color: #1f5f3a;
+  color: #dff6e6;
+}
+
+.faq-items {
+  display: grid;
+  gap: 12px;
+}
+
+.faq-item {
+  border: $border rgba($border-color, 0.5);
+  background: #141414;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  background: transparent;
+  border: 0;
+  color: #f0e7d5;
+  font-family: 'OpenSansSemibold', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: left;
+  cursor: pointer;
+}
+
+.faq-question:hover {
+  background: rgba(96, 165, 250, 0.08);
+}
+
+.faq-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  border: $border rgba($border-color, 0.6);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.faq-question[aria-expanded="true"] .faq-toggle {
+  transform: rotate(45deg);
+  background: rgba(96, 165, 250, 0.18);
+}
+
+.faq-answer {
+  padding: 0 16px 14px;
+  color: #d6d6d6;
+
+  p {
+    margin: 0 0 8px;
+  }
+
+  ul,
+  ol {
+    margin: 0 0 8px 18px;
+  }
+}
+
+.faq-feedback {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px 14px;
+  border-top: $border rgba($border-color, 0.4);
+  color: #b6b6b6;
+  font-size: 12px;
+}
+
+.faq-vote {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 999px;
+  border: $border rgba($border-color, 0.55);
+  background: #0f0f0f;
+  color: #e8e8e8;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+.faq-vote:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.faq-empty {
+  padding: 16px;
+  border: $border rgba($border-color, 0.5);
+  background: #111111;
+  border-radius: 8px;
+  color: #b6b6b6;
+}
+
+.modlist-size {
+  margin: 10px 0 14px;
+  padding: 10px 14px;
+  border: $border rgba($border-color, 0.5);
+  background: #111111;
+  border-radius: 6px;
+  color: #e8e8e8;
+  font-size: 14px;
+}
+
+.modlist-size span {
+  color: #dff6e6;
+  font-weight: 600;
 }
 
 hr {
@@ -184,7 +355,6 @@ dt {
 }
 
 
-// Code block settings
 blockquote {
   border-left:3px solid #ffcc00;
   margin:0;
@@ -229,7 +399,6 @@ pre.highlight {
 }
 
 
-// Top right shortcut settings
 .aux-nav-list-item {
 display: inline-block;
 height: 100%;
@@ -253,7 +422,6 @@ background: transparent;
 }
 
 
-// Sidebar Link settings
 .nav-category {
   padding-right: $gutter-spacing-sm;
   padding-left: $gutter-spacing-sm;
@@ -275,7 +443,6 @@ background: transparent;
   }
 }
 
-// Sidebar Link settings
 .nav-category-Expanded {
   padding-right: $gutter-spacing-sm;
   padding-left: $gutter-spacing-sm;
@@ -318,7 +485,6 @@ background: transparent;
     }
 }
 
-// Main body settings 
 .main-content {
 	h1,
 	h2,
@@ -382,9 +548,6 @@ ul{
 }
 
 
-// Phin was here
-// Stylings for the recommended/minimum specs
-// on the /DlAndInstall/ page
 .minimum-specs {
 	display: flex;
 	justify-content: space-between;
@@ -415,7 +578,6 @@ ul{
 	}
 }
 
-//Slideshow CSS for use on player homes
  
 .slideshow-container {
   max-width: 1000px;
@@ -505,15 +667,14 @@ ul{
     100% { left: 0; }
 }
 
-// Search box settings
 .myInputBox {
-  background-position: 10px 12px; /* Position the search icon */
-  background-repeat: no-repeat; /* Do not repeat the icon image */
-  width: 100%; /* Full-width */
-  font-size: 16px; /* Increase font-size */
-  padding: 12px 20px 12px 40px; /* Add some padding */
-  border: 1px solid #ddd; /* Add a grey border */
-  margin-bottom: 12px; /* Add some space below the input */
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
 }
 
 .divider{

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: skyground_readme
 title: Using The List
 parent: Installation Guide
 nav_order: 4

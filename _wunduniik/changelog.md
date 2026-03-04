@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: skyground_readme
 title: Changelog
 nav_order: 2
 ---

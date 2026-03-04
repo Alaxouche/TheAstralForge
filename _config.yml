@@ -55,6 +55,28 @@ collections:
   ghost-of-the-grid: { permalink: "/:collection/:path/", output: true }
   no-mans-sky-explorer: { permalink: "/:collection/:path/", output: true }
 
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: skyground_readme
+  - scope:
+      type: "wunduniik"
+    values:
+      layout: skyground_readme
+  - scope:
+      type: "krentoraan"
+    values:
+      layout: skyground_readme
+  - scope:
+      type: "ghost-of-the-grid"
+    values:
+      layout: skyground_readme
+  - scope:
+      type: "no-mans-sky-explorer"
+    values:
+      layout: skyground_readme
+
 just_the_docs:
   collections:
     wunduniik:        { name: Wunduniik,        nav_fold: true }

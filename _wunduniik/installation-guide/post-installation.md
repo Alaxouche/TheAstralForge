@@ -1,8 +1,9 @@
 ---
-layout: default
+layout: skyground_readme
 title: Post Installation
 parent: Installation Guide
 nav_order: 4
+reading_mode_default: true
 ---
 
 # Post Installation

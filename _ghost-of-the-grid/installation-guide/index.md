@@ -1,8 +1,10 @@
 ---
-layout: default
+layout: skyground_readme
 title: Installation Guide
+permalink: /ghost-of-the-grid/installation-guide/
 nav_order: 1
 has_children: true
+reading_mode_default: true
 ---
 
 # Preamble

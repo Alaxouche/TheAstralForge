@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: skyground_readme
 title: Known Issues
 nav_order: 3
 ---
@@ -10,8 +10,32 @@ While you play the list, you might run into a few issues that can vary from a si
 
 ## Vanilla Game Issues
 
-- Biker's might not load from distance when driving, leading to bikes without NPCs on them.
+<div class="issue-grid">
+	<article class="issue-card">
+		<header class="issue-card__header">
+			<h3>Bikers fail to load at distance</h3>
+			<span class="issue-status issue-status--in-progress">In progress</span>
+		</header>
+		<p class="issue-card__summary">NPC bikes can appear empty when streaming in at high speed.</p>
+		<details class="issue-workaround">
+			<summary>Workaround</summary>
+			<p>Slow down or reload the area (fast travel or save/reload) to force NPCs to stream in.</p>
+		</details>
+	</article>
+</div>
 
 ## Modlist Issues
 
-- The list may CTD during the first act (Sandra Dorset recue). These crashes will disappear after the intro.
+<div class="issue-grid">
+	<article class="issue-card">
+		<header class="issue-card__header">
+			<h3>CTD during the first act</h3>
+			<span class="issue-status issue-status--in-progress">In progress</span>
+		</header>
+		<p class="issue-card__summary">Crashes can happen during the scripted intro sequence.</p>
+		<details class="issue-workaround">
+			<summary>Workaround</summary>
+			<p>Retry the intro. Once the opening sequence ends, stability improves.</p>
+		</details>
+	</article>
+</div>
