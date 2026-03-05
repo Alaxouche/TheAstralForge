@@ -45,7 +45,7 @@
 }
 
 .faq-results-header strong {
-  color: var(--primary-color);
+  color: var(--primary-text);
 }
 
 .btn-clear {
@@ -72,7 +72,7 @@
 .category-title {
   margin: 0 0 1rem 0;
   font-size: 1.5rem;
-  color: var(--primary-color);
+  color: var(--primary-text);
   padding-bottom: 0.5rem;
   border-bottom: 2px solid rgba(34, 197, 94, 0.3);
 }
@@ -140,7 +140,7 @@
 
 .faq-question mark {
   background: rgba(34, 197, 94, 0.3);
-  color: var(--primary-color);
+  color: var(--primary-text);
   padding: 0.125rem 0.25rem;
   border-radius: 3px;
 }
@@ -178,7 +178,7 @@
 
 .vote-score.positive {
   background: rgba(34, 197, 94, 0.2);
-  color: var(--primary-color);
+  color: var(--primary-text);
   border: 1px solid rgba(34, 197, 94, 0.3);
 }
 
@@ -212,7 +212,7 @@
 }
 
 .faq-answer a {
-  color: var(--primary-color);
+  color: var(--primary-text);
   text-decoration: underline;
 }
 
@@ -249,7 +249,7 @@
 
 .btn-vote.vote-up.active {
   background: rgba(34, 197, 94, 0.2);
-  color: var(--primary-color);
+  color: var(--primary-text);
   border-color: rgba(34, 197, 94, 0.4);
 }
 
@@ -332,8 +332,8 @@ html[data-theme="light"] #faq-search::placeholder {
 }
 
 html[data-theme="light"] .faq-results-header {
-  background: rgba(34, 197, 94, 0.1);
-  border-color: rgba(34, 197, 94, 0.3);
+  background: rgba(234, 88, 12, 0.1);
+  border-color: rgba(234, 88, 12, 0.3);
 }
 
 html[data-theme="light"] .faq-results-header p {

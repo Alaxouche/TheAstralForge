@@ -58,77 +58,6 @@ class ParallaxEffect {
   }
 }
 
-// Theme Auto-Detection and Smooth Transitions
-class ThemeManager {
-  constructor() {
-    this.html = document.documentElement;
-    this.currentTheme = null;
-    this.init();
-  }
-
-  init() {
-    // Get stored preference or detect system preference
-    const storedTheme = localStorage.getItem('selectedTheme');
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    // Priority: stored preference > system preference > default (dark)
-    const initialTheme = storedTheme || (systemPrefersDark ? 'dark' : 'light');
-    
-    // Apply theme without transition on load
-    this.setTheme(initialTheme, false);
-    
-    // Listen to system theme changes
-    this.mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    this.mediaQuery.addEventListener('change', (e) => {
-      // Only auto-update if user hasn't set a manual preference
-      if (!localStorage.getItem('selectedTheme')) {
-        this.setTheme(e.matches ? 'dark' : 'light', true);
-      }
-    });
-    
-    // Update existing theme toggle buttons
-    this.updateToggleButtons();
-    
-    // Listen for manual theme changes
-    document.addEventListener('themeChanged', (e) => {
-      this.currentTheme = e.detail.theme;
-    });
-  }
-
-  setTheme(theme, withTransition = true) {
-    if (this.currentTheme === theme) return;
-    
-    if (withTransition) {
-      // Add transition class
-      this.html.classList.add('theme-transitioning');
-      
-      // Remove after transition completes
-      setTimeout(() => {
-        this.html.classList.remove('theme-transitioning');
-      }, 300);
-    }
-    
-    this.html.setAttribute('data-theme', theme);
-    this.currentTheme = theme;
-    
-    // Dispatch event for other components
-    document.dispatchEvent(new CustomEvent('themeChanged', {
-      detail: { theme }
-    }));
-  }
-
-  updateToggleButtons() {
-    const toggleButtons = document.querySelectorAll('[data-theme-toggle]');
-    toggleButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        const newTheme = this.currentTheme === 'dark' ? 'light' : 'dark';
-        this.setTheme(newTheme, true);
-        localStorage.setItem('selectedTheme', newTheme);
-      });
-    });
-  }
-}
-
 // Smooth Scroll Enhancement with offset for fixed header
 class SmoothScroller {
   constructor() {
@@ -219,9 +148,6 @@ function initPerformanceFeatures() {
   if (document.querySelector('.hero')) {
     window.ParallaxEffect = new ParallaxEffect();
   }
-  
-  // Initialize Theme Manager
-  window.ThemeManager = new ThemeManager();
   
   // Initialize Smooth Scroller
   window.SmoothScroller = new SmoothScroller();

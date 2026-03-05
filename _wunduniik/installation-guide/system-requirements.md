@@ -1,11 +1,11 @@
 ---
 layout: skyground_readme
-title: System Requirement
+title: System Requirements
 parent: Installation Guide
 nav_order: 1
 ---
 
-# System Requirements Necessary Tools
+# System Requirements
 
 ## System Requirements
 
@@ -38,8 +38,8 @@ As Wunduniik is a modlist based on graphics, you must have a good graphics card.
 
 ## Necessary And Useful Applications
 
-For the modlist to work you must have some apps: Please ensure you have the latest .NET version installed. Download the desktop app installer and console app x64 from Microsoft here  
-[https://dotnet.microsoft.com/download/dotnet/5.0/runtime](https://dotnet.microsoft.com/download/dotnet/5.0/runtime), and also [Visual C++ x64](https://aka.ms/vs/16/release/vc_redist.x64.exe).
+For the modlist to work you must have some apps: Please ensure you have the latest .NET Runtime installed. Download the desktop app installer and console app x64 from Microsoft here:
+[https://dotnet.microsoft.com/en-us/download/dotnet/9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0), and also [Visual C++ x64](https://aka.ms/vs/16/release/vc_redist.x64.exe).
 
 <p align="center">
      <img src="https://raw.githubusercontent.com/Lost-Outpost/lost-legacy/main/images/microsoft-net-5-0-installation.png" >

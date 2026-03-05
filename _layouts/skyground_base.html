@@ -5,6 +5,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Anti-FOUC: apply stored or system theme before first paint -->
+  <script>
+    (function () {
+      var t = localStorage.getItem('sg-theme');
+      if (t !== 'light' && t !== 'dark') {
+        t = (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches)
+          ? 'light' : 'dark';
+      }
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
   {% seo %}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -64,6 +75,12 @@
 </head>
 {% assign active_alert = site.data.alerts | where: "enabled", true | first %}
 <body{% if active_alert %} class="has-alert"{% endif %}>
+<!-- SVG sprite -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <polyline points="9 18 15 12 9 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+</svg>
   <div id="lightbox" aria-hidden="true">
     <img id="lightbox-img" alt="">
   </div>
@@ -82,13 +99,21 @@
   <script src="{{ '/assets/skyground/features.js' | relative_url }}" defer></script>
   <script src="{{ '/assets/skyground/enhancements.js' | relative_url }}" defer></script>
   <script src="{{ '/assets/skyground/rating-system.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/skyground/vote-system.js' | relative_url }}" defer></script>
   <script src="{{ '/assets/skyground/search-system.js' | relative_url }}" defer></script>
   <script src="{{ '/assets/skyground/notification-system.js' | relative_url }}" defer></script>
   <script src="{{ '/assets/skyground/faq-accordion.js' | relative_url }}" defer></script>
+  {% if page.layout == 'skyground_readme' %}
+  <script src="{{ '/assets/skyground/nav-fold.js' | relative_url }}" defer></script>
+  {% endif %}
+  {% if page.layout == 'skyground_readme' or page.layout == 'skyground_changelog' %}
   <script src="{{ '/assets/skyground/stats-system.js' | relative_url }}" defer></script>
-  <script src="{{ '/assets/skyground/user-gallery.js' | relative_url }}" defer></script>
   <script src="{{ '/assets/skyground/video-tutorials.js' | relative_url }}" defer></script>
   <script src="{{ '/assets/skyground/social-share.js' | relative_url }}" defer></script>
+  {% endif %}
+  {% if page.layout == 'skyground_home' %}
+  <script src="{{ '/assets/skyground/user-gallery.js' | relative_url }}" defer></script>
   <script src="{{ '/assets/skyground/discord-widget.js' | relative_url }}" defer></script>
+  {% endif %}
 </body>
 </html>

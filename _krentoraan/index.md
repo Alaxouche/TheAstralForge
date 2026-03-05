@@ -6,7 +6,7 @@ nav_exclude: true
 layout: skyground_readme
 modlist_id: krentoraan
 project_banner:
-  image: /assets/Images/Skyrim/enb_2026-2-22_01-19-29_028.png
+  image: /assets/Images/Skyrim/enb_2026-2-22_01-19-29_028.webp
   subtitle: "A curated Skyrim SE list focused on clean visuals and balanced gameplay."
   stats:
     - label: Mods
@@ -25,7 +25,7 @@ Krentoraan is a carefully crafted modlist for The Elder Scrolls V: Skyrim Specia
 
 ## Quick Links
 
-- [Installation Guide]({{ '/krentoraan/k_installation-guide/' | relative_url }})
+- [Installation Guide]({{ '/krentoraan/installation-guide/' | relative_url }})
 - [Load Order]({{ '/krentoraan/loadorder/' | relative_url }})
 
 ## About This Modlist

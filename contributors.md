@@ -36,7 +36,7 @@ Your contributions fund:
 <div class="contributors-grid">
   {% for tier in site.data.contributors.tiers %}
     <div class="contributors-card">
-      <img class="contributors-tier-image" src="{{ '/assets/Images/generic_background.jpg' | relative_url }}" alt="Tier art placeholder">
+      <img class="contributors-tier-image" src="{{ '/assets/Images/generic_background.webp' | relative_url }}" alt="Tier art placeholder">
       <h3>{{ tier.name }}</h3>
       <p class="contributors-amount">{{ tier.amount }}</p>
       <ul>

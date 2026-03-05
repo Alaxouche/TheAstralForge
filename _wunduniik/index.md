@@ -6,7 +6,7 @@ nav_exclude: true
 layout: skyground_readme
 modlist_id: wunduniik
 project_banner:
-  image: /assets/Images/Skyrim/enb_2026-2-28_18-36-11_274.png
+  image: /assets/Images/Skyrim/enb_2026-2-28_18-36-11_274.webp
   subtitle: "Flagship Skyrim SE list with visuals, gameplay overhauls, and deep content."
   stats:
     - label: Mods

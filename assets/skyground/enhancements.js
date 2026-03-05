@@ -10,6 +10,7 @@ class EnhancedFeatures {
     this.initKeyboardShortcuts();
     this.initToastSystem();
     this.enhanceHeadings();
+    this.initChangelogAnchors();
   }
 
   // Reading Progress Bar
@@ -149,6 +150,45 @@ class EnhancedFeatures {
     }, duration);
   }
 
+  // Changelog Version Anchors
+  initChangelogAnchors() {
+    const content = document.querySelector('.readme-content');
+    if (!content) return;
+
+    content.querySelectorAll('details').forEach(details => {
+      const summary = details.querySelector('summary');
+      if (!summary) return;
+      const text = summary.textContent || '';
+      const match = text.match(/v[\d]+\.[\d]+[\w.-]*/i);
+      if (!match) return;
+
+      const id = match[0].toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-+$/, '');
+      details.id = id;
+
+      const anchor = document.createElement('a');
+      anchor.href = `#${id}`;
+      anchor.className = 'changelog-anchor';
+      anchor.setAttribute('aria-label', `Link to ${match[0]}`);
+      anchor.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>`;
+
+      anchor.addEventListener('click', (e) => {
+        e.stopPropagation();
+        e.preventDefault();
+        history.pushState(null, null, `#${id}`);
+        this.showToast(`Link to ${match[0]} copied!`, 'success');
+        navigator.clipboard?.writeText(window.location.href);
+      });
+
+      summary.appendChild(anchor);
+    });
+
+    // Open details if URL hash matches
+    if (window.location.hash) {
+      const target = document.querySelector(window.location.hash);
+      if (target?.tagName === 'DETAILS') target.open = true;
+    }
+  }
+
   // Enhance Headings with Smooth Scroll
   enhanceHeadings() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -195,13 +235,5 @@ if (typeof window !== 'undefined') {
   document.addEventListener('DOMContentLoaded', () => {
     window.EnhancedFeatures = new EnhancedFeatures();
     window.LoadingOverlay = new LoadingOverlay();
-    
-    // Show keyboard shortcut hint
-    const searchInput = document.getElementById('global-search-input');
-    if (searchInput && !searchInput.placeholder.includes('Cmd+K')) {
-      const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
-      const shortcut = isMac ? '⌘K' : 'Ctrl+K';
-      searchInput.placeholder = `Search... (${shortcut})`;
-    }
   });
 }

@@ -4,6 +4,7 @@ theme: just-the-docs
 color_scheme: dark
 logo: "/assets/logos/theastralforge.png"
 favicon_ico: "/assets/logos/theastralforge.ico"
+image: "/assets/logos/theastralforge.png"
 
 url: "https://theastralforge.com"
 baseurl: ""
@@ -24,7 +25,7 @@ search:
 heading_anchors: true
 back_to_top: true
 back_to_top_text: "Back to top"
-footer_content: "Copyright © 2025 The Astral Forge"
+footer_content: "Copyright © 2026 The Astral Forge"
 
 # Footer last edited timestamp
 last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
@@ -54,6 +55,7 @@ collections:
   krentoraan:       { permalink: "/:collection/:path/", output: true }
   ghost-of-the-grid: { permalink: "/:collection/:path/", output: true }
   no-mans-sky-explorer: { permalink: "/:collection/:path/", output: true }
+  extrasolar-containment-protocol: { permalink: "/:collection/:path/", output: true }
 
 defaults:
   - scope:
@@ -76,6 +78,10 @@ defaults:
       type: "no-mans-sky-explorer"
     values:
       layout: skyground_readme
+  - scope:
+      type: "extrasolar-containment-protocol"
+    values:
+      layout: skyground_readme
 
 just_the_docs:
   collections:
@@ -83,3 +89,4 @@ just_the_docs:
     krentoraan:       { name: Krentoraan,       nav_fold: true }
     ghost-of-the-grid: { name: Ghost of the Grid, nav_fold: true }
     no-mans-sky-explorer: { name: No Mans Sky Explorer, nav_fold: true }
+    extrasolar-containment-protocol: { name: Extrasolar Containment Protocol, nav_fold: true }

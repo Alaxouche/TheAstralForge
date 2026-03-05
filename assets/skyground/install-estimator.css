@@ -17,7 +17,7 @@
 }
 
 .estimator-icon {
-  color: var(--primary-color);
+  color: var(--primary-text);
   flex-shrink: 0;
 }
 
@@ -54,7 +54,7 @@
 .stat-value {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--primary-color);
+  color: var(--primary-text);
 }
 
 .speed-selector {
@@ -166,7 +166,7 @@
 .total-value {
   font-size: 1.75rem;
   font-weight: 700;
-  color: var(--primary-color);
+  color: var(--primary-text);
 }
 
 .estimator-note {

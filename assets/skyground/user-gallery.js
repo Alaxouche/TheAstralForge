@@ -28,14 +28,14 @@ class UserGallery {
 
     // Default gallery items
     return [
-      { id: 1, title: 'Dragon Hunt',          author: 'Alaxouche',  modlist: 'wunduniik',            image: '/assets/Images/Skyrim/enb_2026-2-28_18-36-11_274.png',    likes: 68, date: '2026-02-28' },
-      { id: 2, title: 'Northern Lights',       author: 'SkySeer',    modlist: 'wunduniik',            image: '/assets/Images/Skyrim/enb_2026-1-30_10-36-32_139.png',    likes: 54, date: '2026-01-30' },
-      { id: 3, title: 'Tundra Dawn',           author: 'NordWalker', modlist: 'krentoraan',           image: '/assets/Images/Skyrim/enb_2026-2-28_18-36-25_572.png',    likes: 47, date: '2026-02-28' },
-      { id: 4, title: 'Ancient Ruins',         author: 'Explorer99', modlist: 'krentoraan',           image: '/assets/Images/Skyrim/enb2025_12_6_14_19_46.png',          likes: 41, date: '2025-12-06' },
-      { id: 5, title: 'Night City Rain',       author: 'GridRunner', modlist: 'ghost-of-the-grid',   image: '/assets/Images/Cyberpunk/photomode_22022026_172726.png',   likes: 73, date: '2026-02-22' },
-      { id: 6, title: 'Neon Streets',          author: 'NetRunner',  modlist: 'ghost-of-the-grid',   image: '/assets/Images/Cyberpunk/photomode_06122025_154631.png',   likes: 59, date: '2025-12-06' },
-      { id: 7, title: 'Blade Runner Vibes',    author: 'V_Corpo',    modlist: 'ghost-of-the-grid',   image: '/assets/Images/Cyberpunk/photomode_28112025_154634.png',   likes: 45, date: '2025-11-28' },
-      { id: 8, title: 'Space Station View',    author: 'Wanderer',   modlist: 'no-mans-sky-explorer', image: '/assets/Images/generic_background.jpg',                   likes: 31, date: '2026-02-05' },
+      { id: 1, title: 'Dragon Hunt',          author: 'Alaxouche',  modlist: 'wunduniik',            image: '/assets/Images/Skyrim/enb_2026-2-28_18-36-11_274.webp',    likes: 68, date: '2026-02-28' },
+      { id: 2, title: 'Northern Lights',       author: 'SkySeer',    modlist: 'wunduniik',            image: '/assets/Images/Skyrim/enb_2026-1-30_10-36-32_139.webp',    likes: 54, date: '2026-01-30' },
+      { id: 3, title: 'Tundra Dawn',           author: 'NordWalker', modlist: 'krentoraan',           image: '/assets/Images/Skyrim/enb_2026-2-28_18-36-25_572.webp',    likes: 47, date: '2026-02-28' },
+      { id: 4, title: 'Ancient Ruins',         author: 'Explorer99', modlist: 'krentoraan',           image: '/assets/Images/Skyrim/enb2025_12_6_14_19_46.webp',          likes: 41, date: '2025-12-06' },
+      { id: 5, title: 'Night City Rain',       author: 'GridRunner', modlist: 'ghost-of-the-grid',   image: '/assets/Images/Cyberpunk/photomode_22022026_172726.webp',   likes: 73, date: '2026-02-22' },
+      { id: 6, title: 'Neon Streets',          author: 'NetRunner',  modlist: 'ghost-of-the-grid',   image: '/assets/Images/Cyberpunk/photomode_06122025_154631.webp',   likes: 59, date: '2025-12-06' },
+      { id: 7, title: 'Blade Runner Vibes',    author: 'V_Corpo',    modlist: 'ghost-of-the-grid',   image: '/assets/Images/Cyberpunk/photomode_28112025_154634.webp',   likes: 45, date: '2025-11-28' },
+      { id: 8, title: 'Space Station View',    author: 'Wanderer',   modlist: 'no-mans-sky-explorer', image: '/assets/Images/generic_background.webp',                   likes: 31, date: '2026-02-05' },
     ];
   }
 

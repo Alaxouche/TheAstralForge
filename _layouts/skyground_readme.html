@@ -13,9 +13,11 @@ layout: skyground_base
       <p class="floating-toc__title">On this page</p>
       <div class="floating-toc__content" data-floating-toc-content></div>
     </nav>
+    {% include install_stepper.html %}
     {{ content }}
     {% if page.url contains '/installation-guide/' %}
       {% include vote_section.html %}
     {% endif %}
+    {% include install_prevnext.html %}
   </div>
 </main>

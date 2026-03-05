@@ -34,7 +34,7 @@
 }
 
 .breadcrumb-item a:hover {
-  color: var(--primary-color);
+  color: var(--primary-text);
   background: rgba(255, 255, 255, 0.05);
 }
 
@@ -107,7 +107,7 @@ header.has-alert + .reading-progress {
 .copy-link-btn:hover {
   background: rgba(34, 197, 94, 0.15);
   border-color: var(--primary-color);
-  color: var(--primary-color);
+  color: var(--primary-text);
   transform: translateY(-50%) scale(1.1);
 }
 
@@ -168,7 +168,7 @@ header.has-alert + .reading-progress {
 }
 
 .toast.toast--success .toast-icon {
-  color: var(--primary-color);
+  color: var(--primary-text);
 }
 
 .toast.toast--error .toast-icon {
@@ -374,3 +374,286 @@ html[data-theme="light"] .toast {
     min-width: auto;
   }
 }
+
+/* ===== INSTALL PROGRESS (STEPPER + PREV/NEXT) ===== */
+.install-progress {
+  margin: 0 0 2rem;
+  padding: 1rem 1.25rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+}
+
+.install-progress__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  font-size: 0.8rem;
+}
+
+.install-progress__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--primary-text);
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.install-progress__back:hover { opacity: 1; }
+
+.install-progress__count {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.78rem;
+}
+
+.install-progress__bar-wrap {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.install-progress__bar {
+  height: 100%;
+  background: var(--primary-color);
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.install-progress__steps {
+  display: flex;
+  gap: 0.35rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.install-progress__steps::-webkit-scrollbar { display: none; }
+
+.install-progress__step a {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.6rem 0.3rem 0.35rem;
+  border-radius: 20px;
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: color 0.2s, background 0.2s;
+}
+
+.install-progress__step a:hover {
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.install-progress__dot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  font-size: 0.7rem;
+  font-weight: 600;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* Done step */
+.install-progress__step--done a {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.install-progress__step--done .install-progress__dot {
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 0;
+}
+
+.install-progress__step--done .install-progress__dot::after {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 10px;
+  border: 2px solid #fff;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg) translateY(-1px);
+}
+
+/* Current step */
+.install-progress__step--current a {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.09);
+  border-color: var(--primary-color);
+  font-weight: 600;
+}
+
+.install-progress__step--current .install-progress__dot {
+  background: var(--primary-color);
+  color: #fff;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary-color) 25%, transparent);
+}
+
+/* hide labels on small screens, keep dots */
+@media (max-width: 600px) {
+  .install-progress__label { display: none; }
+  .install-progress__step a { padding: 0.3rem; }
+}
+
+/* Light theme overrides */
+html[data-theme="light"] .install-progress {
+  background: rgba(0, 0, 0, 0.04);
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+html[data-theme="light"] .install-progress__back { color: var(--primary-text); }
+html[data-theme="light"] .install-progress__count { color: rgba(0, 0, 0, 0.45); }
+html[data-theme="light"] .install-progress__bar-wrap { background: rgba(0, 0, 0, 0.08); }
+
+html[data-theme="light"] .install-progress__step a {
+  color: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.03);
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+html[data-theme="light"] .install-progress__step a:hover {
+  color: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.07);
+}
+
+html[data-theme="light"] .install-progress__dot {
+  background: rgba(0, 0, 0, 0.06);
+  color: rgba(0, 0, 0, 0.4);
+}
+
+html[data-theme="light"] .install-progress__step--current a {
+  color: #1a1a1a;
+}
+
+/* ===== PREV / NEXT NAV ===== */
+.install-nav {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme="light"] .install-nav {
+  border-top-color: rgba(0, 0, 0, 0.1);
+}
+
+.install-nav__prev,
+.install-nav__next {
+  flex: 1;
+}
+
+.install-nav__next { text-align: right; }
+
+.install-nav__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.75);
+  transition: border-color 0.2s, background 0.2s, color 0.2s;
+  max-width: 260px;
+}
+
+.install-nav__btn:hover {
+  border-color: var(--primary-color);
+  background: rgba(255, 255, 255, 0.07);
+  color: #fff;
+}
+
+.install-nav__btn--next { margin-left: auto; }
+
+.install-nav__arrow {
+  flex-shrink: 0;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+
+.install-nav__btn:hover .install-nav__arrow { opacity: 1; }
+
+.install-nav__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.install-nav__text small {
+  display: block;
+  font-size: 0.7rem;
+  opacity: 0.45;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  line-height: 1;
+}
+
+.install-nav__text > span {
+  font-size: 0.875rem;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+html[data-theme="light"] .install-nav__btn {
+  border-color: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.03);
+  color: rgba(0, 0, 0, 0.7);
+}
+
+html[data-theme="light"] .install-nav__btn:hover {
+  border-color: var(--primary-color);
+  background: rgba(0, 0, 0, 0.06);
+  color: #1a1a1a;
+}
+
+html[data-theme="light"] .install-nav__text small { opacity: 0.35; }
+
+/* ===== CHANGELOG ANCHOR BUTTON ===== */
+.changelog-anchor {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 0.5rem;
+  padding: 0.15rem 0.3rem;
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.35);
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity 0.2s, color 0.2s;
+  vertical-align: middle;
+}
+
+details:hover .changelog-anchor,
+summary:focus-visible .changelog-anchor {
+  opacity: 1;
+}
+
+.changelog-anchor:hover {
+  color: var(--primary-text);
+  opacity: 1;
+}
+
+html[data-theme="light"] .changelog-anchor { color: rgba(0, 0, 0, 0.3); }
+html[data-theme="light"] .changelog-anchor:hover { color: var(--primary-text); }

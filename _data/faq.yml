@@ -4,34 +4,25 @@
   tags:
     - Installation
     - Wabbajack
-  helpful: 12
-  unhelpful: 1
 - id: crashes-intro
   question: "I crash during the intro, is it normal?"
   answer: "Some lists can be unstable during the scripted intro. Try again after the intro sequence or restart the game once."
   tags:
     - Stability
     - Troubleshooting
-  helpful: 7
-  unhelpful: 0
 - id: loadorder
   question: "Where can I find the load order?"
   answer: "Each project has a Load Order page in its quick links. You can also use the search bar to find it quickly."
   tags:
     - Documentation
-  helpful: 5
-  unhelpful: 0
 - id: reporting-bugs
   question: "How should I report a bug?"
   answer: "Use the Discord support channel and include logs, steps to reproduce, and your system specs."
   tags:
     - Support
-  helpful: 9
-  unhelpful: 2
 - id: update-frequency
   question: "How often are modlists updated?"
   answer: "Updates are posted in each changelog. Frequency depends on game patches and mod updates."
   tags:
     - Changelog
-  helpful: 4
-  unhelpful: 0
+

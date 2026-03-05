@@ -55,7 +55,7 @@ body {
 .nav-logo {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--primary-color);
+  color: var(--primary-text);
   text-decoration: none;
 }
 
@@ -73,7 +73,7 @@ body {
 }
 
 .nav-link:hover {
-  color: var(--primary-color);
+  color: var(--primary-text);
 }
 
 /* Hero Section - Critical */
@@ -173,7 +173,7 @@ p {
 }
 
 a {
-  color: var(--primary-color);
+  color: var(--primary-text);
   text-decoration: none;
 }
 

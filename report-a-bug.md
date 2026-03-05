@@ -25,7 +25,14 @@ Use this form to draft a clear bug report. Copy the preview and post it in the s
     </div>
     <div class="contribution-field">
       <label for="contrib-project">Project</label>
-      <input id="contrib-project" name="contrib-project" type="text" placeholder="Wunduniik, Ghost of the Grid, NMS Explorer...">
+      <select id="contrib-project" name="contrib-project">
+        <option value="">Select a project…</option>
+        <option value="Wunduniik">Wunduniik</option>
+        <option value="Krentoraan">Krentoraan</option>
+        <option value="Ghost of the Grid">Ghost of the Grid</option>
+        <option value="No Man's Sky Explorer">No Man's Sky Explorer</option>
+        <option value="Extrasolar Containment Protocol">Extrasolar Containment Protocol</option>
+      </select>
     </div>
     <div class="contribution-field">
       <label for="contrib-details">Details</label>

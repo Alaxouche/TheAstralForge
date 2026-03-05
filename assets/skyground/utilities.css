@@ -63,7 +63,7 @@
 .font-semibold { font-weight: 600; }
 .font-bold { font-weight: 700; }
 
-.text-primary { color: var(--primary-color); }
+.text-primary { color: var(--primary-text); }
 .text-white { color: #fff; }
 .text-muted { color: rgba(255, 255, 255, 0.6); }
 
@@ -162,7 +162,7 @@
 }
 
 .hover\:text-primary:hover {
-  color: var(--primary-color);
+  color: var(--primary-text);
 }
 
 .hover\:scale-105:hover {
@@ -225,9 +225,9 @@ html[data-theme="light"] .border {
   border-width: 0;
 }
 
-.focus\:outline-primary:focus {
-  outline: 2px solid var(--primary-color);
-  outline-offset: 2px;
+.focus\:outline-primary:focus-visible {
+  outline: 3px solid var(--primary-text);
+  outline-offset: 3px;
 }
 
 /* Print utilities */

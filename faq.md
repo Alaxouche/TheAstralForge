@@ -5,7 +5,7 @@ title: Frequently Asked Questions
 
 <div class="content-wrapper" style="max-width: 1200px; margin: 0 auto; padding: 3rem 2rem;">
   <section class="faq-header" style="text-align: center; margin-bottom: 3rem;">
-    <h1 style="color: var(--primary-color, #22c55e); font-size: 2.5rem; margin-bottom: 1rem;">Frequently Asked Questions</h1>
+    <h1 style="color: var(--primary-text, #15803d); font-size: 2.5rem; margin-bottom: 1rem;">Frequently Asked Questions</h1>
     <p style="color: rgba(255,255,255,0.7); font-size: 1.1rem; text-align: center; max-width: 800px; margin: 0 auto;">Find answers to common questions about our modlists, installation, and troubleshooting.</p>
   </section>
 
@@ -31,7 +31,7 @@ title: Frequently Asked Questions
           {% if faq.tags %}
           <div style="margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
             {% for tag in faq.tags %}
-            <span style="padding: 0.25rem 0.75rem; background: rgba(34, 197, 94, 0.2); border-radius: 12px; color: var(--primary-color, #22c55e); font-size: 0.75rem;">{{ tag }}</span>
+            <span style="padding: 0.25rem 0.75rem; background: rgba(34, 197, 94, 0.2); border-radius: 12px; color: var(--primary-text, #15803d); font-size: 0.75rem;">{{ tag }}</span>
             {% endfor %}
           </div>
           {% endif %}
@@ -42,7 +42,7 @@ title: Frequently Asked Questions
   </div>
 
   <section style="text-align: center; margin-top: 4rem; padding: 2rem; background: rgba(255,255,255,0.05); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
-    <h2 style="color: var(--primary-color, #22c55e); margin-bottom: 1rem;">Still Have Questions?</h2>
+    <h2 style="color: var(--primary-text, #15803d); margin-bottom: 1rem;">Still Have Questions?</h2>
     <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem;">Join our Discord community for direct support from our team and community members.</p>
     <a href="https://discord.gg/vKuB7nazBk" target="_blank" rel="noopener noreferrer" class="btn-primary" style="display: inline-block; padding: 0.75rem 2rem; text-decoration: none;">
       Join Discord Server
@@ -86,7 +86,7 @@ title: Frequently Asked Questions
 }
 
 .faq-icon {
-  color: var(--primary-color, #22c55e);
+  color: var(--primary-text, #15803d);
   transition: transform 0.3s ease;
   flex-shrink: 0;
 }

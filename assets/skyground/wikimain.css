@@ -52,12 +52,22 @@
 /* LEFT MENU */
 .readme-nav {
   position: sticky;
-  top: 140px;
+  top: 120px;
+  align-self: start;
+  max-height: calc(100vh - 140px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.1) transparent;
   display: flex;
   flex-direction: column;
+  align-items: stretch;
   gap: 14px;
   padding: 30px 10px;
   border-right: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.readme-nav > * {
+  width: 100%;
 }
 
 .readme-nav a {
@@ -68,7 +78,7 @@
 }
 
 .readme-nav a:hover {
-  color: var(--primary-color);
+  color: var(--primary-text);
 }
 
 /* RIGHT CONTENT */
@@ -104,7 +114,7 @@
 }
 
 .readme-content a {
-  color: var(--primary-color);
+  color: var(--primary-text);
   text-decoration: none;
 }
 
@@ -236,7 +246,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  color: var(--primary-color);
+  color: var(--primary-text);
   font-size: 1.4rem;
   line-height: 1;
 }
@@ -277,10 +287,6 @@ html {
   margin: 0;
 }
 
-.readme-nav .nav-list-item {
-  margin-bottom: 8px;
-}
-
 .readme-nav .nav-list-link,
 .readme-nav .nav-category,
 .readme-nav .nav-category-Expanded {
@@ -304,21 +310,76 @@ html {
 
 .readme-nav .nav-category-link:hover,
 .readme-nav .nav-collection-link:hover {
-  color: var(--primary-color);
+  color: var(--primary-text);
 }
 
 .readme-nav .nav-list-link.active {
-  color: var(--primary-color);
+  color: var(--primary-text);
+}
+
+/* Expander button layout — nav items are flex rows, child ul wraps below */
+.readme-nav .nav-list-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.readme-nav .nav-list-item > a.nav-list-link,
+.readme-nav .nav-list-item > a.nav-category-link,
+.readme-nav .nav-list-item > a.nav-category,
+.readme-nav .nav-list-item > a.nav-collection-link {
+  flex: 1;
+  min-width: 0;
+  order: 1;
 }
 
 .readme-nav .nav-list-expander {
-  display: none;
+  order: 2;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.4);
+  background: transparent;
+  transition: background 0.15s, color 0.15s;
+  cursor: pointer;
 }
 
-.readme-nav .nav-list .nav-list {
-  margin-left: 16px;
+.readme-nav .nav-list-expander:hover {
+  background: rgba(255, 255, 255, 0.07);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.readme-nav .nav-list-expander svg {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.2s ease;
+  display: block;
+}
+
+.readme-nav .nav-list-item.active > .nav-list-expander svg,
+.readme-nav .nav-list-item.nav-open > .nav-list-expander svg {
+  transform: rotate(90deg);
+}
+
+/* Nested list — full width, below the link row, hidden by default */
+.readme-nav .nav-list-item > .nav-list {
+  order: 3;
+  flex-basis: 100%;
+  display: none !important;
+  margin-left: 8px;
   border-left: 1px solid rgba(255, 255, 255, 0.08);
   padding-left: 12px;
+  margin-top: 4px;
+}
+
+.readme-nav .nav-list-item.active > .nav-list,
+.readme-nav .nav-list-item.nav-open > .nav-list {
+  display: block !important;
 }
 
 /* MOBILE */
@@ -420,7 +481,7 @@ body.reading-mode .floating-toc {
 }
 
 .floating-toc__list a:hover {
-  color: var(--primary-color);
+  color: var(--primary-text);
 }
 
 .toc-h3 {
@@ -461,7 +522,7 @@ html[data-theme="light"] .readme-nav a {
 }
 
 html[data-theme="light"] .readme-nav a:hover {
-  color: #15803d;
+  color: #c2410c;
 }
 
 html[data-theme="light"] .readme-nav .nav-list-link,
@@ -478,11 +539,24 @@ html[data-theme="light"] .readme-nav .nav-collection-link {
 
 html[data-theme="light"] .readme-nav .nav-category-link:hover,
 html[data-theme="light"] .readme-nav .nav-collection-link:hover {
-  color: #15803d;
+  color: #c2410c;
 }
 
 html[data-theme="light"] .readme-nav .nav-list-link.active {
-  color: #15803d;
+  color: #c2410c;
+}
+
+html[data-theme="light"] .readme-nav .nav-list-expander {
+  color: rgba(0, 0, 0, 0.35);
+}
+
+html[data-theme="light"] .readme-nav .nav-list-expander:hover {
+  background: rgba(0, 0, 0, 0.06);
+  color: rgba(0, 0, 0, 0.7);
+}
+
+html[data-theme="light"] .readme-nav .nav-list-item > .nav-list {
+  border-left-color: rgba(0, 0, 0, 0.1);
 }
 
 html[data-theme="light"] .readme-content p {

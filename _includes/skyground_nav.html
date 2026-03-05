@@ -1,4 +1,5 @@
 <nav class="readme-nav" aria-label="Navigation">
+<style>.readme-nav .nav-list-item > .nav-list{display:none!important}.readme-nav .nav-list-item.active > .nav-list{display:block!important}</style>
   {% assign pages_top_size = site.html_pages
         | where_exp:"item", "item.title != nil"
         | where_exp:"item", "item.parent == nil"

@@ -6,7 +6,7 @@ nav_exclude: true
 layout: skyground_readme
 modlist_id: ghost-of-the-grid
 project_banner:
-  image: /assets/Images/Cyberpunk/photomode_22022026_172726.png
+  image: /assets/Images/Cyberpunk/photomode_22022026_172726.webp
   subtitle: "Neon-heavy Cyberpunk 2077 list built for atmosphere and gameplay polish."
   stats:
     - label: Mods
