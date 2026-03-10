@@ -93,6 +93,7 @@ ___
 # Fixes and Tweaks:
 - Fixed many stutters
 - Fixed some CTDS
+- Fixed the neck seam for female V
 - Reworked the driving and vehicle simulation system
 - Reworked the modded vehicles and weapons integration
 
