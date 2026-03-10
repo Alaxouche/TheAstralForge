@@ -10,6 +10,138 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v2.4.0.0 - March 09, 2026</summary>
+
+**Update Importance:** MAJOR  
+**SAVE COMPATIBLE** 
+
+___
+
+# Additions:
+- Added Draw Distance ReImagined
+- Added 404NotFound Traffic Lights Resolved (simply 404TLR)
+- Added Endurance System
+- Added ENV Tuner (Weather - Lighting - Vignette Adjustments without Conflict)
+- Added Anti-Theft Measures - Vehicle Security
+- Added Phone Extension
+- Added Drug Dealer - Become a Kingpin
+- Added random LOD fixes
+- Added Hardcore Netrunning
+- Added Cyberarms Stutter Fix
+- Added Impact Kill Looting Fix
+- Added Realistic Traffic Density
+- Added Arch Byakko
+- Added Quadra Type-66 Classic
+- Added Mustang GTD
+- Added Tanishi T420 Creature
+- Added Tanishi T420 Yolo
+- Added Corpo SUV 2.0 (Ragnar With NCPD Styled Running Text)
+- Added Arch Nazare Racer standalone
+- Added Barghest Hellhound
+- Added Vehicle Selector Frontend
+- Added Arasaka Nowaki Mk.3
+- Added Immersion Patch - Waiting for Dodger quest fixes
+- Added Vehicle Handling Settings
+- Added Cyber Drift 2.0
+- Added Immersive Bike Camera
+- Added True Grip - Slope Traction and Handbrake Handling Fix
+- Added Dynamic Gravity Modifier
+- Added Slope Traction Factor
+- Added Dynamic Downforce
+- Added Semi-automatic Transmission
+- Added Limited Slip Differential
+- Added Cyber Grip
+- Added Better Flashlight
+- Added Better Lanterns
+- Added Give 'Em Guns
+
+# Removals:
+- Removed DiscordRPC2
+- Removed Ford GT40 Mk1
+- Removed BMW M4 CS 2018
+- Removed Cyber Vehicle Overhaul
+- Removed Honda NSX Type R NA1 hycade
+- Removed Mazda RX7 Initial D Stage5
+- Removed Weapon Conditioning
+- Removed Genesis X Gran Berlinetta
+- Removed Lamborghini Countach LP5000 QV
+- Removed Visible Bullets 2.31
+- Removed Volkswagen Super Beetle 1971
+- Removed Lamborghini Miura P400 SV
+- Removed SDH0 Car Dealer Previews
+- Removed Lamborghini Countach Custom WideBody
+- Removed Mazda RX7 WBK
+- Removed Low Quality Crowd No More
+- Removed First Person Camera Mod 1.0
+- Removed Ferrari F40 LB-WORKS
+- Removed Ferrari 458 Spider
+- Removed Mazda RX7 Fortune (Fast and Furious Edition)
+- Removed Lamborghini Diablo VT 6.0
+- Removed Ferrari F40 ZEPHYR Custom
+- Removed Porsche 996 GT3 Mk.1 2000
+- Removed Quadra Phantom
+- Removed Vehicle Lights
+- Removed Vehicle Resources
+- Removed Porsche 911 Targa 4 GTS 2025
+- Removed Porsche Singer 911 Armed
+- Removed Time-based Crowd Density
+- Removed Not So Good Draw Distance Mod
+- Removed Third-Person (TPP) Vehicle Camera Tool
+- Removed Immersive First Person Camera - Extended
+- Removed Mazda RX7 FD
+
+# Fixes and Tweaks:
+- Fixed many stutters
+- Fixed some CTDS
+- Reworked the driving and vehicle simulation system
+- Reworked the modded vehicles and weapons integration
+
+# Updates:
+- Updated Improved Northside Motel
+- Updated Subleader Hair Pack - CCXL
+- Updated M50 Military Gas Mask - ArchiveXL
+- Updated Weapon Sound Remake
+- Updated Limited HUD
+- Updated Skippy-chan
+- Updated Use Your Fridge
+- Updated Lotus Esprit Turbo
+- Updated Zenitex Atelier
+- Updated Immersion Patch - Minor Activities Quest Fixes
+- Updated Immersion Patch - Quest Vehicle Motion Fixes
+- Updated Military Accessories - Balaclava Pack - ArchiveXL
+- Updated Go on a Date (Panam) - Side romance activity
+- Updated Night City Traffic Overhaul
+- Updated Outdoor V Canyon
+- Updated Aerix LUT - Photorealism
+- Updated APEX - Sonora Canyon and Safehouse
+- Updated Repeatable NCPD Gigs - WIP
+- Updated EconomyPunk
+- Updated Military Palette Texture Library
+- Updated Sheriff's Lasso
+- Updated Dogtown Airship ( with Apartment and NPC Party Below )
+- Updated NC Fashion Virtual Atelier
+- Updated Red Queens Club Enhanced
+- Updated Corpse Loot Fix
+- Updated Lizzie's Bar Enhanced ( with Apartment )
+- Updated Regina's NCPD Headquarters
+- Updated The Moth Bar Lair
+- Updated Crunch Plaza Expanded ( Cut Content )
+- Updated Viktor Vektors Garage ( Fully Enterable )
+- Updated VEEGEE SHOP 3
+- Updated Totentanz Club Enhanced
+- Updated Factions Evolved
+- Updated Deceptious Bug Fixes
+- Updated CyberVision Reshade
+- Updated CyberVision ENV
+- Updated Manavortex Material Library
+- Updated Night City Allies - Immersive Companion System
+- Updated Immersive Healing
+- Updated Sabbath7991 Weapon and Attachment Shops - Virtual Atelier
+- Updated NIGHT CITY ALIVE
+
+</details>
+
+<details markdown="1">
 <summary>v2.3.0.0 - March 01, 2026</summary>
 
 **Update Importance:** MAJOR  
