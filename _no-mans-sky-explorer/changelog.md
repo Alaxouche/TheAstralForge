@@ -10,6 +10,68 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v1.2.3.0 - March 10, 2026</summary>
+
+**Update Importance:** MEDIUM  
+**SAVE COMPATIBLE**
+
+___
+
+# Additions:
+- Added Fix Farmer Daily Reward
+- Added DUD'S - AI Ship Plus More Damage
+- Added DUD'S - Nexus FX
+- Added DUD'S - Better Fishing
+
+# Fixes and Tweaks:
+- Potential fix for the broken UI
+- Updated the remaining outdated mods since the last game update
+
+# Updates:
+- Updated DUD'S - Barren Colors
+- Updated DUD'S - Dynamic Standing
+- Updated DUD'S - Dead Colors
+- Updated DUD'S - Helios Glow FX
+- Updated DUD'S - Graphic FX
+- Updated DUD'S - GasBag Colors
+- Updated DUD'S - Frozen Colors
+- Updated DUD'S - Firefly FX
+- Updated DUD'S - Experience Behavior
+- Updated DUD'S - Lava Colors
+- Updated DUD'S - Night Sky Colors
+- Updated DUD'S - Planet Filters
+- Updated DUD'S - Lush Colors
+- Updated DUD'S - Radioactive Colors
+- Updated DUD'S - Swamp Colors
+- Updated DUD'S - Toxic Colors
+- Updated DUD'S - Tractor Beam
+- Updated DUD'S - Display Glare Reducer
+- Updated DUD'S - UI Hazard FX
+- Updated DUD'S - Main Colors
+- Updated DUD'S - Rain FX
+- Updated DUD'S - Asteroid
+- Updated DUD'S - Weird Colors
+- Updated DUD'S - Exocraft Mechanics
+- Updated DUD'S - Natural Spawn
+- Updated DUD'S - Terra Firma 3
+- Updated DUD'S - Skies
+- Updated DUD'S - Scorched Colors
+- Updated DUD'S - Stand Light Bright
+- Updated DUD'S - Sunset Sunrise Colors
+- Updated DUD'S - Spaceship Flight
+- Updated DUD'S - Sea Plant Fix
+- Updated DUD'S - Robot Lights
+- Updated DUD'S - Weather Hazards
+- Updated DUD'S - Terra Colors
+- Updated DUD'S - Underwater Colors
+- Updated DUD'S - Storm Filters
+- Updated DUD'S - Space Colors
+- Updated Colossal Corvette build area
+- Updated Balanced MT Cabinet Lighting
+
+</details>
+
+<details markdown="1">
 <summary>v1.2.2.0 - February 26, 2026</summary>
 
 **Update Importance:** MEDIUM  
