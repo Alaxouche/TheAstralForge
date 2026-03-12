@@ -10,6 +10,24 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v1.2.4.0 - March 12, 2026</summary>
+
+**Update Importance:** MEDIUM  
+**SAVE COMPATIBLE**
+
+___
+
+# Additions:
+- Added E3 Like Scanner Remnant
+
+# Updates:
+- Updated DUD'S - Exocraft Mechanics
+- Updated DUD'S - Robot Lights
+- Updated Immersive Teleport (Teleport Costs - Hardcore)
+
+</details>
+
+<details markdown="1">
 <summary>v1.2.3.0 - March 10, 2026</summary>
 
 **Update Importance:** MEDIUM  
