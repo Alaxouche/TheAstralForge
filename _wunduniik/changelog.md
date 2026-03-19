@@ -8,7 +8,7 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
-<summary>7.0.0.0-Beta03 (Open Beta) - March 19, 2026</summary>
+<summary>v7.0.0.0-Beta03 (Open Beta) - March 19, 2026</summary>
   
 **Update Importance:** Major  
 **NOT SAVE COMPATIBLE** 
