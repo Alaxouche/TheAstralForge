@@ -10,6 +10,38 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v1.3.0.0 - March 24, 2026</summary>
+
+**Update Importance:** MAJOR  
+**SAVE COMPATIBLE**
+
+___
+
+# Additions:
+- Added Fix Settlement Production
+- Added Lasagna Biome Highlights
+- Added LSGN4 Arcane Oddities - Rare Extra Biomes
+- Added LSGN4 Lasagna Highlights with Random Details on Weird Biomes
+- Added LSGN4 Lasagna's Biomes
+- Added LSGN4 Underwater Biomes
+- Added LSGN4 Cave Biomes
+- Added LSGN4 Large Crystals
+- Added LSGN4 Large Creatures
+- Added LSGN4 Custom Models and Pre-release Model Fixes
+- Added LSGN4 Lasagna Highlights on Gas Giants
+
+# Fixes and Tweaks:
+- Added 100+ new structures, world types
+- Creatures are now immense and scale bigger with deeps
+
+# Updates:
+- Updated Enjoyable Quicksilver - (LUA Script Included)
+- Updated DUD'S - Exocraft Mechanics
+- Updated Better Station LOD
+
+</details>
+
+<details markdown="1">
 <summary>v1.2.4.0 - March 12, 2026</summary>
 
 **Update Importance:** MEDIUM  
