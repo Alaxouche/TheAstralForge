@@ -10,6 +10,73 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v2.4.2.0 - March 31, 2026</summary>
+
+**Update Importance:** MAJOR  
+**SAVE COMPATIBLE** 
+
+___
+
+# Additions:
+- Added Realistic Transport Dispatch
+- Added Requiem Revolver from RE9
+- Added Alligator Snapper from RE9
+- Added Nomad Golf
+- Added Improved Vehicle Lights Draw Distance
+- Added Edgerunner Time Skip Emperor
+- Added NDI Osprey TSR-50
+
+# Fixes and Tweaks:
+- Fixed many stutters
+- Fixed some CTDS
+
+# Updates:
+- Updated Military Accessories - Modular Armor Pads Pack - ArchiveXL
+- Updated Smarter Scrapper
+- Updated New Quest - Encore
+- Updated Immersion Patch - Quest Vehicle Motion Fixes
+- Updated Immersion Patch - Minor Activities Quest Fixes
+- Updated Immersion Patch - Waiting for Dodger quest fixes
+- Updated Untrack Quest Ultimate - No Main Quest re-tracking - No leftovers
+- Updated Chevrolet Camaro SS
+- Updated Airdrops
+- Updated Equipment-EX
+- Updated Deceptious Bug Fixes
+- Updated Watch Your Back
+- Updated Exploded Vehicles Smoke Overhaul VFX
+- Updated Military Accessories - Balaclava Pack - ArchiveXL (2.0)
+- Updated Military Accessories - Modular Armor Pads Pack - ArchiveXL
+- Updated Sabbath7991 Weapon and Attachment Shops - Virtual Atelier
+- Updated FPP Speedometer - See your speed in first person perspective
+- updated Use Your Fridge - Food and Drinks Filter
+- Updated Zenitex Atelier
+- Updated Game World Boundary Removed
+- Updated Mitsubishi Eclipse GSX (1999)
+- Updated Player Body Cyberware Injector
+- Updated Disable Fake Lights with Path Tracing
+- Updated ArchiveXL
+- Updated random LOD fixes
+- Updated Deceptious Bug Fixes
+- Updated VEEGEE SHOP 3
+- Updated Factions Evolved
+- Updated Drug Dealer - Become a Kingpin
+- Updated 3D World Map Fixed
+- Updated Draw Distance ReImagined
+- Updated Night City Traffic Overhaul
+- Updated Custom Perk Framework
+- Updated Draw Distance ReImagined
+- Updated Know What You Say
+- Updated Quickhack Fixes
+- Updated Filthy Access Points
+- Updated Night City Badges
+- Updated Vehicle Navigation System (VNS)
+- Updated Night City Visuals Nulled
+- Updated Night City Allies - Immersive Companion System
+- Updated Rent a Motel
+
+</details>
+
+<details markdown="1">
 <summary>v2.4.0.0 - March 09, 2026</summary>
 
 **Update Importance:** MAJOR  
