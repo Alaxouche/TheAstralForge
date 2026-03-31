@@ -10,6 +10,36 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v1.3.1.0 - March 31, 2026</summary>
+
+**Update Importance:** MEDIUM  
+**SAVE COMPATIBLE**
+
+___
+
+# Additions:
+- Added Lasagna Obscura - Colors and Fog Overhaul (now with fog options)
+- Added Cockpit Beam Down Buttons
+- Added Increase Player Transfer Range
+- Added Corvette Exterior Ramp Switches
+
+# Fixes and Tweaks:
+- Potential fix for CTD on launch
+
+# Removals:
+- Removed Blackhole thats At least A bit more Accurate - BAAA
+
+# Updates:
+- Updated More Upgradeable Slots
+- Updated DUD'S - Skies
+- Updated DUD'S - Exocraft Mechanics
+- Updated DUD'S - AI Ship Plus More Damage
+- Updated LSGN4 Lasagna's Biomes
+- Updated LSGN4 Arcane Oddities - Rare Extra Biomes
+
+</details>
+
+<details markdown="1">
 <summary>v1.3.0.0 - March 24, 2026</summary>
 
 **Update Importance:** MAJOR  
