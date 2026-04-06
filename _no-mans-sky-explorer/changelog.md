@@ -10,6 +10,39 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v1.3.2.0 - April 07, 2026</summary>
+
+**Update Importance:** MEDIUM  
+**SAVE COMPATIBLE**
+
+___
+
+# Additions:
+- Added DUD'S - Ship Headlights Plus
+
+# Fixes and Tweaks:
+- Potential fix for CTD on launch
+
+# Removals:
+- Removed LSGN4 Large Crystals
+- Removed LSGN4 Custom Models and Pre-release Model Fixes
+- Removed LSGN4 Large Creatures
+- Removed LSGN4 Underwater Biomes
+- Removed LSGN4 Cave Biomes
+- Removed LSGN4 Lasagna Highlights on Gas Giants
+- Removed LSGN4 Arcane Oddities - Rare Extra Biomes
+- Removed LSGN4 Lasagna Highlights with Random Details on Weird Biomes
+- Removed Lasagna Biome Highlights
+- Removed LSGN4 Lasagna's Biomes
+
+# Updates:
+- Updated DUD'S - Swamp Colors
+- Updated DUD'S - AI Ship Plus More Damage
+- Updated DUD'S - Corvette Headlights
+
+</details>
+
+<details markdown="1">
 <summary>v1.3.1.0 - March 31, 2026</summary>
 
 **Update Importance:** MEDIUM  
