@@ -8,6 +8,113 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v2.1.0.0 - April 18, 2026</summary>
+
+**Update Importance:** MAJOR  
+**NOT SAVE COMPATIBLE**
+
+___
+
+# Additions:
+- Added Old World 50 Cal Barrett M82 M95 (Standalone and Replacer)
+- Added M4A1 - Assault Rifle
+- Added G36C Redux
+- Added Elysium 2154 - AKM
+- Added All Vehicles Have Storage
+- Added Weapon Sound Fixes
+- Added Weapons Sound Replacer
+- Added Royal Leveled Enemies - Shattered Space
+- Added Red Mile Expanded
+- Added Positively New Atlantis
+- Added Milkdrinker's New Atlantis Mesa Trees Reborn
+- Added Legendary Module Recycler
+- Added Skill ReSpec Terminal
+- Added Unarmed sneak animation replacer
+- Added POIs Hostiles Diversity
+- Added Skurkbro's Retexture Project - 2K And Optimized
+- Added TN's Power Tools - Cutter - Arc Welder - Auto-Rivet
+- Added Odyssey - A True RPG (Collection)
+- Added Richer Vendors - 10x merchant gold and 1 day restock
+- Added Project Warfare - Balance Patch
+
+# Fixes and Tweaks:
+- Fixed major instability due to some not compatible mods
+- Fixed Walter's missing legs
+- Fixed invisible clutter and furniture
+- Fixed missing weapon sounds
+- Improved performance greatly 
+- Provided a performance profile (ulta is on by default)
+- improved cities for both performance and look (akila, atlantis, cydonia...)
+- Rebalanced weapons and removed too OP ones
+
+# Removals:
+- Removed Undelayed Menus
+- Removed Show Star Names
+- Removed Less Spongy Enemies
+- Removed Baka Quit Game Fix
+- Removed Simple Offence Suppression SFSE
+- Removed ADS FOV Removed (SFSE)
+- Removed Realistic Stellar Nomenclature
+- Removed Terrifying Terrormorphs
+- Removed Always Play Landing Animations (APLA)
+- Removed Suppressor Sound Overhaul
+- Removed Clear anti-glare glass for outpost windows
+- Removed Patches - More Terrormorph Robot Typo
+- Removed NASA Items
+- Removed Starfield Powerful Rifle Sounds Replacer
+- Removed Slightly Better Map Icons
+- Removed POI - Abandoned UC Radar Station
+- Removed No hit confirmation sound
+- Removed Immersive Cargo Halls
+- Removed Immersive Renames
+- Removed HBI Breakable Beer Crate
+- Removed HBI Breakable Wine Glass Bottle
+- Removed HBI Breakable Mug
+- Removed HBI Breakable Foam Container
+- Removed HBI Breakable Other Cups
+- Removed HBI Breakable Vase
+- Removed HBI Breakable Bowl And Plate
+- Removed HBI Breakable Window in RLs Collection Loose File ver
+- Remvoed First Person Messages - RTFP
+- Removed Skurkbro's Retexture Project - Starfield - WIP
+- Removed Auto Spacesuit Hider - Custom Conditionalizer - Vanilla Bug Fixes - SFSE
+- Removed Increased Weapon and Combat Audio Bass with Enhanced Fidelity (Starfield)
+- Removed Upscaling Fix 2 - FSR - DLSS - XeSS
+- Removed more starborn Terrormorph Robot
+- Removed New Atlantis Awaits
+- Removed Save Game Thumbnails - SFSE
+- Removed Scrap Metal Weapons AIO
+- Removed Rabbit's Real Lights New Atlantis Awaits
+
+# Updates:
+- Updated Dodge Framework SFSE
+- Updated Console Command Runner Updated
+- Updated Integrated Ship Optimization Terminal
+- Updated Roverhaul - Simple Vehicle Fuel and Management
+- Updated StarPatcher
+- Updated Real Venus Atmosphere
+- Updated NPCs Use Items
+- Updated Real Titan Atmosphere
+- Updated Mantle of the Mantis
+- Updated Astrogate
+- Updated Starborn Space Suit Visor FX Plus
+- Updated Show Power Names
+- Updated Sit To Add Ship to Fleet
+- Updated Ship Power Allocation Fix - Revert Unwanted Power Changes
+- Updated Seeking out Stores - Navigate Using City Info Kiosks
+- Updated Human Activity on Earth - Man-made Points of Interest
+- Updated Scared of Shootings - NPCs react to shootings
+- Updated Variable Contraband Prices - Contraband More Valuable in Locations with Scans
+- Updated Summoning of Ship - Ship Remote Control - Land - Take off - Set gravity
+- Updated Swiftly Order Squad - Multiple Followers - Group Commands
+- Updated POI Variations - No More Duplicates
+- Updated Following Asteroids Fix - Stalking Objects Solution
+- Updated Security Checkpoints Dialog Fixes
+- Updated Improved Ship Pathing
+
+</details>
+
+<details markdown="1">
 <summary>v2.0.0.0 - April 16, 2026</summary>
 
 **Update Importance:** MAJOR  
