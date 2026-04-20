@@ -29,6 +29,10 @@ ___
 - Added Milkdrinker's New Atlantis Mesa Trees Reborn
 - Added Legendary Module Recycler
 - Added Skill ReSpec Terminal
+- Added HUD Info Widget
+- Added HideHUD
+- Added Lunokhod-1 Landmark
+- Added Trackers Alliance Space Bounties Fix
 - Added Unarmed sneak animation replacer
 - Added POIs Hostiles Diversity
 - Added Skurkbro's Retexture Project - 2K And Optimized
@@ -64,8 +68,13 @@ ___
 - Removed Starfield Powerful Rifle Sounds Replacer
 - Removed Slightly Better Map Icons
 - Removed POI - Abandoned UC Radar Station
+- Removed Richer Merchants
+- Removed Gemini Rifle
+- Removed MIAO 06D by SealCT
 - Removed No hit confirmation sound
+- Removed More Dramatic Grav Jumps
 - Removed Immersive Cargo Halls
+- Removed Auto Hide HUD and Widgets - SFSE
 - Removed Immersive Renames
 - Removed HBI Breakable Beer Crate
 - Removed HBI Breakable Wine Glass Bottle
@@ -91,14 +100,19 @@ ___
 - Updated Console Command Runner Updated
 - Updated Integrated Ship Optimization Terminal
 - Updated Roverhaul - Simple Vehicle Fuel and Management
+- Updated More Dramatic Grav Jumps
 - Updated StarPatcher
+- Updated NPCs Use Items
+- Updated True Space
 - Updated Real Venus Atmosphere
 - Updated NPCs Use Items
 - Updated Real Titan Atmosphere
 - Updated Mantle of the Mantis
+- Updated The Lodge Awakened
 - Updated Astrogate
 - Updated Starborn Space Suit Visor FX Plus
 - Updated Show Power Names
+- Updated Where Did the Lights Go
 - Updated Sit To Add Ship to Fleet
 - Updated Ship Power Allocation Fix - Revert Unwanted Power Changes
 - Updated Seeking out Stores - Navigate Using City Info Kiosks
