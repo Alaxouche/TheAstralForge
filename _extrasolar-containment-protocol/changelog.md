@@ -8,6 +8,41 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v2.1.1.0 - April 20, 2026</summary>
+
+**Update Importance:** Medium  
+**NOT SAVE COMPATIBLE**
+
+___
+
+# Additions:
+- Added HUD Info Widget
+- Added HideHUD
+- Added Lunokhod-1 Landmark
+- Added Trackers Alliance Space Bounties Fix
+
+# Fixes and Tweaks:
+- Fixed crafting menu issues
+- Fixed some HUD issues and implemented useful HUD informations
+- Removed too OP weapons
+
+# Removals:
+- Removed Richer Merchants
+- Removed Gemini Rifle
+- Removed MIAO 06D by SealCT
+- Removed More Dramatic Grav Jumps
+- Removed Auto Hide HUD and Widgets - SFSE
+
+# Updates:
+- Updated More Dramatic Grav Jumps
+- Updated NPCs Use Items
+- Updated True Space
+- Updated The Lodge Awakened
+- Updated Where Did the Lights Go
+
+</details>
+
+<details markdown="1">
 <summary>v2.1.0.0 - April 18, 2026</summary>
 
 **Update Importance:** MAJOR  
