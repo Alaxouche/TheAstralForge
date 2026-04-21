@@ -10,6 +10,65 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v1.4.0.0 - April 20, 2026</summary>
+
+**Update Importance:** MAJOR  
+**SAVE COMPATIBLE**
+
+___
+
+# Additions:
+- Added More Materials
+
+# Fixes and Tweaks:
+- Potential fix for CTD on launch
+
+# Removals:
+- Removed DUD'S - Planet Filters
+- Removed DUD'S - Experience Behavior
+- Removed DUD'S - Dynamic Standing
+- Removed DUD'S - Exocraft Mechanics
+
+# Updates:
+- Updated Exosolar's and Babs' Stratos
+- Updated Exosolar's and Babs' Expanse
+- Updated Exosolar's and Babs' Quick Scan with Range Boost
+- Updated Exosolar's and Babs' Clear Visor Scanner and Surveyor and Custom Color Binoc Panels
+- Updated Exosolar's and Babs' Beyond Base Building
+- Updated Fast Refiners
+- Updated Faster Scanning
+- Updated ReLight
+- Updated New Milestones
+- Updated Freighter Hangar Interior Changes
+- Updated Crashed Freighter Procedural Containers
+- Updated Bigger Wallet
+- Updated Borderless Icons
+- Updated Start Screen
+- Updated Realistic Market
+- Updated Enjoyable Quicksilver - (LUA Script Included)
+- Updated Custom Panels
+- Updated Better Freighter Entry and Exit
+- Updated Better Crystals
+- Updated Better Station LOD
+- Updated Better Broken and Overloaded Slots
+- Updated Better Deposit Colors
+- Updated Ultimate Arms Dealer
+- Updated Renewed Riddles
+- Updated Short Shop Dialogs 
+- Updated Small Panels
+- Updated Black Carbon
+- Updated gShip Corvette Supercomputer
+- Updated Treasure Ruin Procedural Crates
+- Updated Hide or Fade Notifications
+- Updated Convenient Corvette Teleporters
+- Updated Darkless Icons
+- Updated Astroport - Better Trading Posts
+- Updated zBest Weapon Rack
+- Updated Crescent Worlds
+
+</details>
+
+<details markdown="1">
 <summary>v1.3.2.0 - April 07, 2026</summary>
 
 **Update Importance:** MEDIUM  
