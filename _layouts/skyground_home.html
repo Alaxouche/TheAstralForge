@@ -3,34 +3,43 @@ layout: skyground_base
 ---
 
 <section class="hero">
-  <h2>WELCOME TO</h2>
-  <h1>THE ASTRAL FORGE</h1>
-  <p>The Astral Forge is a collective repository of curated modlists and their authors, primarily for <strong>The Elder Scrolls V: Skyrim Special Edition</strong> and <strong>Cyberpunk 2077</strong>.</p>
-  <a href="https://discord.gg/alaxouche-s-modding-hub-750268919201398805" class="btn-primary" target="_blank" rel="noopener noreferrer">Join the Discord</a>
+  <h2 data-i18n-key="home.hero_kicker">WELCOME TO</h2>
+  <h1 data-i18n-key="home.hero_title">THE ASTRAL FORGE</h1>
+  <p data-i18n-html="home.hero_description">The Astral Forge is a collective repository of curated modlists and their authors, primarily for <strong>The Elder Scrolls V: Skyrim Special Edition</strong> and <strong>Cyberpunk 2077</strong>.</p>
+  <a href="https://discord.gg/alaxouche-s-modding-hub-750268919201398805" class="btn-primary" target="_blank" rel="noopener noreferrer" data-i18n-key="home.hero_cta_discord">Join the Discord</a>
 </section>
 
 <section class="about" data-no-lightbox>
   <img src="{{ '/assets/logos/theastralforge.png' | relative_url }}" alt="The Astral Forge logo">
-  <h2>About Us</h2>
-  <p>The Astral Forge was established by Alaxouche in September 2020 as the official repository for the Wunduniik modlist. Since then, it has expanded and rebranded, first to Alaxouche's Modding Hub and now to The Astral Forge, hosting four main modlists: <strong>Wunduniik</strong>, <strong>Krentoraan</strong>, <strong>Ghost of the Grid</strong>, and <strong>No Man's Sky Explorer</strong>. We welcome submissions for additional modlists to increase visibility for authors and strengthen our collective credibility.</p>
-  <p>This site replaces the former WunduniikWiki.com, offering a modern, responsive design with theme switching, a streamlined interface, and up-to-date, clearly organized information.</p>
+  <h2 data-i18n-key="home.about_title">About Us</h2>
+  <p data-i18n-html="home.about_p1">The Astral Forge was established by Alaxouche in September 2020 as the official repository for the Wunduniik modlist. Since then, it has expanded and rebranded, first to Alaxouche's Modding Hub and now to The Astral Forge, hosting four main modlists: <strong>Wunduniik</strong>, <strong>Krentoraan</strong>, <strong>Ghost of the Grid</strong>, and <strong>No Man's Sky Explorer</strong>. We welcome submissions for additional modlists to increase visibility for authors and strengthen our collective credibility.</p>
+  <p data-i18n-key="home.about_p2">This site replaces the former WunduniikWiki.com, offering a modern, responsive design with theme switching, a streamlined interface, and up-to-date, clearly organized information.</p>
 </section>
 
 <section class="creator-spotlight fade-in">
-  <h2 class="section-title">About Modlist Creator</h2>
+  <h2 class="section-title" data-i18n-key="home.creator_title">About Modlist Creator</h2>
   
   <div class="creator-card slide-up">
-    <div class="creator-image-wrapper">
-      <img src="{{ '/assets/Images/creator-avatar.webp' | relative_url }}" alt="Alaxouche" class="creator-avatar">
+    <div class="creator-image-wrapper" style="--creator-avatar-url: url('{{ '/assets/Images/Creator-Avatar.webp' | relative_url }}');">
+      <img
+        src="{{ '/assets/Images/Creator-Avatar.webp' | relative_url }}"
+        alt="Alaxouche"
+        class="creator-avatar"
+        width="512"
+        height="512"
+        loading="eager"
+        decoding="async"
+        fetchpriority="high"
+      >
     </div>
     
     <div class="creator-info">
       <h3 class="creator-name">Alaxouche</h3>
-      <p class="creator-tagline">"There are never enough mods."</p>
+      <p class="creator-tagline" data-i18n-key="home.creator_tagline">"There are never enough mods."</p>
       
       <div class="creator-bio">
-        <p>Alaxouche is a modder, content creator and community manager primarily focused on Skyrim and Cyberpunk 2077 content. Best known for creating comprehensive modlists that transform the gaming experience.</p>
-        <p>Founded The Astral Forge in 2020, starting with the Wunduniik modlist and expanding to host multiple curated lists, each crafted to provide unique and immersive gameplay experiences.</p>
+        <p data-i18n-key="home.creator_bio_1">Alaxouche is a modder, content creator and community manager primarily focused on Skyrim and Cyberpunk 2077 content. Best known for creating comprehensive modlists that transform the gaming experience.</p>
+        <p data-i18n-key="home.creator_bio_2">Founded The Astral Forge in 2020, starting with the Wunduniik modlist and expanding to host multiple curated lists, each crafted to provide unique and immersive gameplay experiences.</p>
       </div>
       
       <div class="creator-links">
@@ -57,8 +66,8 @@ layout: skyground_base
 <section class="features fade-in">
   <div class="feature-row slide-up">
     <div class="feature-text">
-      <h3>Join Our Discord Community</h3>
-      <p>Engage with our community on Alaxouche's Modding Hub to receive personalized modding assistance, share screenshots, discuss creative lore, and stay informed on project developments. We host dedicated channels for the <strong>Wunduniik</strong> modlist, including support, bug reporting, and announcements, and conduct regular polls and planning discussions. Join us to collaborate directly with the Wunduniik Team and our broader community.</p>
+      <h3 data-i18n-key="home.feature_discord_title">Join Our Discord Community</h3>
+      <p data-i18n-html="home.feature_discord_body">Engage with our community on Alaxouche's Modding Hub to receive personalized modding assistance, share screenshots, discuss creative lore, and stay informed on project developments. We host dedicated channels for the <strong>Wunduniik</strong> modlist, including support, bug reporting, and announcements, and conduct regular polls and planning discussions. Join us to collaborate directly with the Wunduniik Team and our broader community.</p>
     </div>
     <div class="feature-image">
       <div id="discord-widget" data-server-id="750268919201398805"></div>
@@ -67,8 +76,8 @@ layout: skyground_base
 
   <div class="feature-row reverse slide-up">
     <div class="feature-text">
-      <h3>Getting Started</h3>
-      <p>Our documentation provides comprehensive installation guides, changelogs, load orders, and known-issue reports essential for a seamless mod installation experience. All five modlists — <strong>Wunduniik</strong>, <strong>Krentoraan</strong>, <strong>Ghost of the Grid</strong>, <strong>No Man's Sky Explorer</strong>, and <strong>Extrasolar Containment Protocol</strong> — now have full installation guides available.</p>
+      <h3 data-i18n-key="home.feature_docs_title">Getting Started</h3>
+      <p data-i18n-html="home.feature_docs_body">Our documentation provides comprehensive installation guides, changelogs, load orders, and known-issue reports essential for a seamless mod installation experience. All five modlists - <strong>Wunduniik</strong>, <strong>Krentoraan</strong>, <strong>Ghost of the Grid</strong>, <strong>No Man's Sky Explorer</strong>, and <strong>Extrasolar Containment Protocol</strong> - now have full installation guides available.</p>
     </div>
     <div class="feature-image">
       <img src="{{ '/assets/Images/Skyrim/enb_2026-2-13_00-50-07_307.webp' | relative_url }}" alt="Documentation preview">
@@ -77,9 +86,9 @@ layout: skyground_base
 
   <div class="feature-row slide-up">
     <div class="feature-text">
-      <h3>Community Guidelines</h3>
-      <p>The Astral Forge is committed to fostering an inclusive and respectful environment. All community members are expected to treat each other with courtesy, provide constructive feedback, and respect the work of modders and list authors.</p>
-      <p><a href="https://discord.gg/alaxouche-s-modding-hub-750268919201398805" target="_blank" rel="noopener noreferrer">Join our Discord to read the server rules</a></p>
+      <h3 data-i18n-key="home.feature_guidelines_title">Community Guidelines</h3>
+      <p data-i18n-key="home.feature_guidelines_body">The Astral Forge is committed to fostering an inclusive and respectful environment. All community members are expected to treat each other with courtesy, provide constructive feedback, and respect the work of modders and list authors.</p>
+      <p><a href="https://discord.gg/alaxouche-s-modding-hub-750268919201398805" target="_blank" rel="noopener noreferrer" data-i18n-key="home.feature_guidelines_link">Join our Discord to read the server rules</a></p>
     </div>
     <div class="feature-image">
       <img src="{{ '/assets/Images/Cyberpunk/photomode_03122025_143534.webp' | relative_url }}" alt="Community standards">
@@ -87,8 +96,47 @@ layout: skyground_base
   </div>
 </section>
 
+<section class="community-pulse fade-in">
+  <div class="community-pulse__header">
+    <h2>Community Pulse</h2>
+    <p>Stay connected with support, events, and contributor activity in one place.</p>
+  </div>
+
+  <div class="community-pulse__grid">
+    <article class="community-pulse__card">
+      <h3>Discord Live Support</h3>
+      <p>Get quick troubleshooting help, installation advice, and modlist guidance directly from the community.</p>
+      <a href="https://discord.gg/alaxouche-s-modding-hub-750268919201398805" target="_blank" rel="noopener noreferrer">Join the support server</a>
+    </article>
+
+    <article class="community-pulse__card">
+      <h3>Community Contributions</h3>
+      <p>Share screenshots, report issues, and suggest improvements to shape future list updates.</p>
+      <a href="{{ '/report-a-bug/' | relative_url }}">Submit feedback</a>
+    </article>
+
+    <article class="community-pulse__card">
+      <h3>Supporter Highlights</h3>
+      <p>Thank you to everyone helping keep documentation, testing, and maintenance moving forward.</p>
+      <a href="{{ '/contributors/' | relative_url }}">See supporters</a>
+    </article>
+  </div>
+
+  <div class="community-pulse__supporters">
+    <h3>Recent Supporters</h3>
+    <ul class="community-supporter-list">
+      {% for supporter in site.data.contributors.recent limit: 6 %}
+        <li class="community-supporter-item">
+          <span class="community-supporter-name">{{ supporter.name }}</span>
+          <span class="community-supporter-meta">{{ supporter.platform }} • {{ supporter.amount }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
 <section class="gallery-section slide-up">
-  <h2 style="text-align: center; margin-bottom: 60px; font-size: 2.5rem;">Gallery Highlights</h2>
+  <h2 style="text-align: center; margin-bottom: 60px; font-size: 2.5rem;" data-i18n-key="home.gallery_highlights_title">Gallery Highlights</h2>
   
   <div class="gallery-carousel">
     <button class="carousel-btn prev">‹</button>
@@ -113,10 +161,10 @@ layout: skyground_base
     </div>
   </div>
 
-  <h2 style="text-align: center; margin-bottom: 40px; font-size: 2.5rem;">Community Gallery</h2>
-  <p class="gallery-subtitle">Explore screenshots and creations from our community members</p>
+  <h2 style="text-align: center; margin-bottom: 40px; font-size: 2.5rem;" data-i18n-key="home.community_gallery_title">Community Gallery</h2>
+  <p class="gallery-subtitle" data-i18n-key="home.community_gallery_subtitle">Explore screenshots and creations from our community members</p>
   <div class="gallery-filters">
-    <button class="gallery-filter-btn active" data-filter="all">All</button>
+    <button class="gallery-filter-btn active" data-filter="all" data-i18n-key="home.gallery_filter_all">All</button>
     <button class="gallery-filter-btn" data-filter="wunduniik">Wunduniik</button>
     <button class="gallery-filter-btn" data-filter="ghost-of-the-grid">Ghost of the Grid</button>
     <button class="gallery-filter-btn" data-filter="krentoraan">Krentoraan</button>

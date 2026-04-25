@@ -8,6 +8,134 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v7.0.0.0 - April 20, 2026</summary>
+  
+**Update Importance:** Major  
+**NOT SAVE COMPATIBLE** 
+
+---
+
+### Additions:
+- Added Auto Skeleton Patch - Universal Behaviour Runtime
+- Added Staff Enchanter - Praedys's Meshes
+- Added Dynamic Wind Framework - SKSE Plugin
+- Added SIGMA - Dagger animations - 1st person
+- Added First Person FOV and Tween Menu Fix SKSE
+- Added Dynamic Wind - Skyrim
+- Added Modlist Startup Helper Utility
+- Added Mystical Canticle Tree
+- Added Unpoisoned Blocking
+- Added No Auto-Equip Behaviour
+- Added Project Bro He's There - Fix followers not starting combat
+- Added StepUpOnto SKSE
+- Added Screen Blood Enhanced
+- Added Dynamic Interior Fog
+- Added Vel'dun UI
+- Added Vel'dun UI Overhauls
+- Added Vel'dun UI Patches
+- Added Smooth Arrow Trails and Fixes
+- Added No Auto-Equip Behaviour
+- Added Disable Particle Wind for magic
+- Added Bow Animation Fix - no more string on the wrong side
+- Added Pig Iron Set - CBBE 3BA
+- Added Snowy Altar for Shrine of Mehrunes Dagon
+- Added RaySense - Edge Lookdown - 1st
+- Added Unslaad - Delayed Start
+- Added Ivy's Stendarr's Beacon Overhaul
+- Added Obi's Armor Mods - SPID Addons
+- Added Obi's HeadHunter Armor
+- Added Solitude - Square of Akatosh
+- Added Custom ISC Armor Patches - SRD
+- Added Armory Extended - Saints and Seducers
+- Added Kabu's Argonian Fins
+- Added Notify Events
+- Added Character Menu
+- Added Moonblade
+- Added RaySense - Cover Animation
+- Added High Priests of Skyrim (HDT-SMP) -- New Outfit for The Priests and Monks of Nine Divines
+- Added RaySense - Jumping over obstacles
+- Added Beam Walking Assist
+- Added RaySense - Edge Lookdown
+- Added Beam Walking Assist - 1st
+- Added Underwater Bubbles - SKSE Plugin
+
+### Removals:
+- Removed Parallax Earth Floor Whiterun
+- Removed NPCs Relight Torches
+- Removed Falmer Ear
+- Removed Faster Transform - To Werewolf and VampireLord
+- Removed HDT-SMP Slot 32 Fix
+- Removed JellyFishFP DAGGER (1st person animations series)
+- Removed ImmersiveHUD SKSE
+- Removed Snowy Ships for Snowy Regions - Realistic Nord Ships Patch
+- Removed Wheeler - Show in UI
+- Removed Nicos Twinblades SE - SPID NG
+- Removed Smoke No Longer Emits Light by Kris
+- Removed Fabled Forests - Floating Trees fix BOS version
+- Removed SkyUI 5.2 SE Plugin with Master Added
+
+### Fixes and Tweaks:
+- Fixed some CTDs induced by HDT
+- Fixed many FPS issues due to uncompressed textures
+- Fixed some incorrect trees in snowy regions
+- Fixed windcaller robe normals
+- Changed fall fern in Ivarstead for normal fern
+
+### Updates:
+- Updated Auto Input Switch
+- Updated RMB SPIDified - Sons of Skyrim
+- Updated Whiterun Maingate Collision Fix
+- Updated Selectively Unvarying Firewood
+- Updated Meshes Optimization Project
+- Updated Better Argonian Horns
+- Updated JK's Tel Mithryn Patch Collection
+- Updated FSMP - Faster HDT-SMP
+- Updated GetActorValuePercentage - Fix
+- Updated Why I Came to Skyrim - Origin Stories
+- Updated JK's Raven Rock Patch Collection
+- Updated Missing Follower Dialogue Edit
+- Updated Wildwood Echoes
+- Updated Flat World Map Framework
+- Updated Unslaad Paper Maps for FWMF
+- Updated Norden UI
+- Updated CC Gallows Hall - Tweaks and Enhancements
+- Updated Easy Console Commands
+- Updated Log Watcher - Real-time Analysis of SKSE Logs
+- Updated Ivy - Ivarstead Well Addon
+- Updated No Grass In Objects
+- Updated Quest Fixes
+- Updated BFCO NG
+- Updated BFCO - Attack Behavior Framework (SSE AE VR)
+- Updated ShowRaceMenu - NG
+- Updated Directional Movement Keys - DMK
+- Updated Buy Displayed Items NG
+- Updated CritterSpawn - Script Call Reduction
+- Updated Skyrim's Submerged Audio Fixed
+- Updated Beam Walking Assist
+- Updated The Frozen Heart - Quest Mod
+- Updated Carriage Drivers Are Alive
+- Updated Open World Loot - Encounter Zone and Loot Overhaul
+- Updated PaulMix's dTry Key Utils extend
+- Updated HorsePower - Modernized Horse Riding (Total Riding Overhaul)
+- Updated Unblockable Hits
+- Updated H.O.A. - Hyperspecific Occlusion Addon
+- Updated Parry for all
+- Updated Disabled Reference Integrity Fix (SKSE)
+- Updated Particle Wind - SKSE Plugin
+- Updated Solitude - Square of Akatosh
+- Updated Valkyr HDT-SMP Hairstyles - For Khajiit
+- Updated Dynamic Interior Fog
+- Updated Smooth Arrow Trails and Fixes - Latest Version
+- Updated Modding My Business (M.M.B) - Ivy Random Patch Collection
+- Updated What Remains - Quest Mod
+- Updated Dragons Use Thu'um
+- Updated SkyUI
+- Updated Disable Particle Wind for magic
+- Updated ReLight
+
+</details>
+
+<details markdown="1">
 <summary>v7.0.0.0-Beta03 (Open Beta) - March 19, 2026</summary>
   
 **Update Importance:** Major  

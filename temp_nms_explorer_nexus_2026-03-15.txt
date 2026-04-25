@@ -1,0 +1,72 @@
+# No Man’s Sky Explorer
+
+[Website](https://theastralforge.com) | [Installation Guide](https://theastralforge.com/no-mans-sky-explorer/installation-guide/) | [Load Order](https://loadorderlibrary.com/lists/no-man-s-sky-explorer) | [Changelog](https://theastralforge.com/no-mans-sky-explorer/changelog/) | [Discord Support](https://discord.gg/vKuB7nazBk) | [Ko-fi](https://ko-fi.com/alaxouche) | [Patreon](https://patreon.com/Alaxouche)
+
+No Man’s Sky Explorer is an exploration-first collection focused on visual immersion, quality of life, and stability.
+Goal: improve discovery, readability, and overall flow without breaking core progression.
+
+---
+
+## Main Features
+
+- Full visual refresh: better lighting, effects, atmosphere, and clarity.
+- Quality of life improvements: cleaner UI and less day-to-day friction.
+- Gameplay tuning: balanced tweaks that support long exploration sessions.
+- Curated compatibility: selected mods tested together for a smoother experience.
+- Active maintenance: frequent updates and quick post-patch fixes.
+
+---
+
+## Before You Start
+
+- Legit game copy required.
+- Windows 10/11 recommended, fully updated.
+- SSD installation strongly recommended.
+- Do not install in protected Windows folders.
+- Nexus Mods account required (Premium recommended for faster downloads).
+- Add game and modlist folders to antivirus exclusions.
+
+---
+
+## Quick Install
+
+1. Install required runtimes (.NET Runtime and Visual C++ x64).
+2. Install Wabbajack in a dedicated folder.
+3. Search for No Man’s Sky Explorer in Wabbajack.
+4. Choose a clean install folder separate from Wabbajack.
+5. Run installation and let Wabbajack finish all downloads.
+6. Open Mod Organizer and launch through the list launcher.
+7. Do not launch directly from Steam/GOG when using this setup.
+
+---
+
+## How To Use The List
+
+- Always start through Mod Organizer.
+- Do not press Unlock while the game/executables are running.
+- Back up saves before major updates.
+- Check the changelog before every update.
+
+---
+
+## Quick Troubleshooting
+
+- Stuck download: restart Wabbajack, it usually resumes automatically.
+- Failed file download: retry several times, then manual download if needed.
+- Mods not applying after install: delete GCMODSETTINGS.MXML from the game SETTINGS folder, then relaunch.
+- Crashes after game patch: wait for list compatibility updates if required mods are not updated yet.
+
+---
+
+## Recent Update Highlights
+
+- v1.2.2.0: targeted additions, UI stability improvements, key mod updates.
+- v1.2.1.0: UI/visual fixes and quality-of-life update pass.
+- v1.2.0.0: major compatibility update for newer game version plus large tuning pass.
+
+---
+
+## Support
+
+For bug reports, install help, and suggestions, join Discord.
+Include version, logs, and clear repro steps for faster support.

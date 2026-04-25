@@ -403,6 +403,8 @@ function showToast(message, duration = 3000) {
 (() => {
   const blocks = Array.from(document.querySelectorAll('[data-modlist-size]'));
   if (!blocks.length) return;
+  const defaultSource = 'https://raw.githubusercontent.com/Alaxouche/Wunduniik/main/modlist.json';
+  const snapshotSource = '/assets/data/modlist-snapshot.json';
 
   const toGb = (bytes) => {
     if (!Number.isFinite(bytes)) return null;
@@ -410,9 +412,13 @@ function showToast(message, duration = 3000) {
   };
 
   const pickEntry = (data, title, machineUrl) => {
-    if (!Array.isArray(data)) return data;
+    if (!Array.isArray(data)) {
+      return data;
+    }
+
+    const normalizedTitle = String(title || '').toLowerCase().trim();
     const byTitle = title
-      ? data.find(item => String(item.title || '').toLowerCase() === title.toLowerCase())
+      ? data.find(item => String(item.title || '').toLowerCase().trim() === normalizedTitle)
       : null;
     if (byTitle) return byTitle;
 
@@ -423,21 +429,66 @@ function showToast(message, duration = 3000) {
         return direct === machineUrl.toLowerCase() || linked === machineUrl.toLowerCase();
       })
       : null;
-    return byMachine || data[0];
+    return byMachine || null;
   };
+
+  const fetchJson = async (source) => {
+    const response = await fetch(source, { cache: 'no-store' });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    return response.json();
+  };
+
+  const fetchWithFallback = async (source) => {
+    const candidates = [source, defaultSource, snapshotSource]
+      .filter((value, index, arr) => value && arr.indexOf(value) === index);
+
+    for (const candidate of candidates) {
+      try {
+        return await fetchJson(candidate);
+      } catch (error) {
+        console.warn('[ModlistSize] Source failed:', candidate, error);
+      }
+    }
+
+    return null;
+  };
+
+  const setUnavailable = (block) => {
+    block.dataset.modlistState = 'error';
+    const totalEl = block.querySelector('[data-modlist-total]');
+    const installEl = block.querySelector('[data-modlist-install]');
+    const downloadEl = block.querySelector('[data-modlist-download]');
+    const versionEl = block.querySelector('[data-modlist-version]');
+
+    if (totalEl) totalEl.textContent = 'Unavailable';
+    if (installEl) installEl.textContent = 'Unavailable';
+    if (downloadEl) downloadEl.textContent = 'Unavailable';
+    if (versionEl) {
+      versionEl.textContent = 'Version unavailable';
+      versionEl.hidden = false;
+    }
+  };
+
   blocks.forEach(block => {
-    const source = block.dataset.modlistSource;
-    if (!source) return;
+    const source = block.dataset.modlistSource || defaultSource;
+    block.dataset.modlistState = 'loading';
 
     const title = block.dataset.modlistTitle;
     const machineUrl = block.dataset.modlistMachine;
 
-    fetch(source)
-      .then(response => response.json())
+    fetchWithFallback(source)
       .then(data => {
+        if (!data) {
+          setUnavailable(block);
+          return;
+        }
+
         const entry = pickEntry(data, title, machineUrl);
         const meta = entry && entry.download_metadata;
-        if (!meta) return;
+        if (!meta) {
+          setUnavailable(block);
+          return;
+        }
 
         const install = toGb(meta.SizeOfInstalledFiles);
         const download = toGb(meta.SizeOfArchives);
@@ -456,7 +507,11 @@ function showToast(message, duration = 3000) {
           versionEl.textContent = `Version ${entry.version}`;
           versionEl.hidden = false;
         }
+
+        block.dataset.modlistState = 'success';
       })
-      .catch(() => {});
+      .catch(() => {
+        setUnavailable(block);
+      });
   });
 })();

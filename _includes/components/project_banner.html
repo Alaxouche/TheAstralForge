@@ -8,7 +8,12 @@
           <p class="project-banner__subtitle">{{ page.project_banner.subtitle }}</p>
         {% endif %}
         {% if page.modlist_id %}
-          <div class="project-banner__stats" data-stats-modlist="{{ page.modlist_id }}">
+          <div
+            class="project-banner__stats"
+            data-stats-modlist="{{ page.modlist_id }}"
+            {% if page.modlist_source %}data-stats-source="{{ page.modlist_source }}"{% endif %}
+            {% if page.modlist_title %}data-stats-title="{{ page.modlist_title }}"{% endif %}
+          >
             {% if page.project_banner.stats %}
               {% for stat in page.project_banner.stats %}
                 <div class="project-stat">

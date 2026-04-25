@@ -10,6 +10,96 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v2.5.0.0 - April 20, 2026</summary>
+
+**Update Importance:** MAJOR  
+**SAVE COMPATIBLE** 
+
+___
+
+# Additions:
+- Added Refill Containers
+- Added 0-Engine
+- Added NCPD Night Hunter
+- Added Panam's Warmonster
+- Added Weather Condition - Dress for the Forecast
+- Added Leaky Interiors Fixed
+- Added Urban Garden Grocery Store
+- Added NightlyNow Core
+- Added Immersive E3 NC Fixes and Improvements
+- Added Vehicle Gear Display
+- Added Iconic Weapon Loadouts - Morgan Blackhand
+- Added Reference Path Tracing
+- Added Minimap Widgets
+- Added 0-Engine
+- Added Elite Screens (Ads - Holo)
+- Added Brick Columbarium Fix
+
+# Fixes and Tweaks:
+- Fixed many stutters
+- Fixed some CTDS
+- Fixed some broken scripts 
+- Added many optimization
+- Removed conflicting houses in desert
+- Removed corrupted enemy rarity system
+
+# Removals:
+- Removed AK-77
+- Removed Countach (with Neon)
+- Removed Modern Screens and Ads
+- Removed truly invisible optical camo
+- Removed NonIntrusiveMinimap
+- Removed V's Sierra Sonora Villa with Landing Pad
+- Removed Headhunter Iconic Weapon Pack
+- Removed Enemy Rarity Fixes
+- Removed Mercedes G63 AMG
+- Removed 911 Turbo Trike
+- Removed The Condom Cannon
+- Removed TV Volume Control
+- Removed Fighting Gangs Allowed - Reasonable Police
+- Removed All-Rx Pharma
+- Removed Mustang GTD
+- Removed Immersive Grenades
+- Removed 404NotFound Traffic Lights Resolved (simply 404TLR)
+- Removed Atlantis Club Expanded
+- Removed Give 'Em Guns
+
+# Updates:
+- Updated Inventory Adjustments Hub
+- Updated Now Playing Display
+- Updated Mazda MX-5 Miata
+- Updated Codeware
+- Updated Better Quality Sort
+- Updated They Will Remember
+- Updated Night City Flooded
+- Updated Immersive Night City Fixes - CORE
+- Updated Immersive Night City Fixes
+- Updated KiasuBurger Cyberware Core
+- Updated SPLAT Physics Realistic Ragdoll Overhaul
+- Updated ReImagined
+- Updated General Shadows Fixes
+- Updated ENV Tuner (Weather - Lighting - Vignette Adjustments without Conflict)
+- Updated CyberVision Reshade
+- Updated Anti-Theft Measures - Vehicle Security
+- Updated Butchers Of Night City
+- Updated 3D World Map Fixed
+- updated Vehicle Navigation System (VNS)
+- Updated Untrack Quest Ultimate - No Main Quest re-tracking - No leftovers
+- Updated Use Your Fridge - Food and Drinks Filter
+- Updated Sabbath7991 Weapon and Attachment Shops - Virtual Atelier
+- Updated Draw Distance ReImagined
+- Updated VOIDWEAR Virtual Atelier
+- Updated Immersive Grenades
+- Updated Repeatable NCPD Gigs - WIP
+- Updated Immersion Patch - Minor Activities Quest Fixes
+- Updated Night City Allies - MISSIONS - ADDON
+- Updated Breach Protocol - Personal Link Animations Patch
+- Updated Immersive Healing
+- Updated VEEGEE SHOP 3
+
+</details>
+
+<details markdown="1">
 <summary>v2.4.2.0 - March 31, 2026</summary>
 
 **Update Importance:** MAJOR  

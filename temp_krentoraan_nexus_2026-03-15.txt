@@ -1,0 +1,63 @@
+# Krentoraan
+
+[Website](https://theastralforge.com) | [Installation Guide](https://theastralforge.com/krentoraan/installation-guide/) | [Load Order](https://theastralforge.com/krentoraan/loadorder/) | [Discord Support](https://discord.gg/vKuB7nazBk) | [Ko-fi](https://ko-fi.com/alaxouche) | [Patreon](https://patreon.com/Alaxouche)
+
+Krentoraan is a curated Skyrim Special Edition collection focused on clean visuals and balanced gameplay.
+Goal: modernize the base experience while keeping the core identity of Skyrim intact.
+
+---
+
+## Main Features
+
+- Visual improvements: cleaner world presentation, atmosphere, and readability.
+- Balanced gameplay: refined systems and encounter flow without extreme overhaul.
+- Vanilla-plus direction: familiar Skyrim feel with meaningful polish.
+- Performance-aware curation: quality and smoothness balanced for long playthroughs.
+
+---
+
+## Before You Start
+
+- Skyrim Special Edition 1.6.1170 required.
+- Anniversary Edition required.
+- Legit Steam copy required.
+- SSD install strongly recommended.
+- Nexus Mods account required (Premium recommended for faster setup).
+- Add game and modlist folders to antivirus exclusions.
+
+---
+
+## Quick Install
+
+1. Install required runtimes (.NET Runtime and Visual C++ x64).
+2. Install Wabbajack in a dedicated folder.
+3. Search for Krentoraan in Wabbajack.
+4. Use clean install/download folders outside protected Windows paths.
+5. Let Wabbajack complete the full install.
+6. Launch through Mod Organizer only.
+7. Follow the full installation guide before first launch.
+
+---
+
+## How To Use The List
+
+- Launch via Mod Organizer profile/launcher.
+- Keep game version exactly aligned with list requirements.
+- Back up saves before major updates or custom changes.
+- Avoid adding large mod bundles on top unless you can patch conflicts.
+
+---
+
+## Quick Troubleshooting
+
+- Failed download: rerun Wabbajack; resume usually works.
+- Startup issues: verify game version and install path setup.
+- Instability after updates: check guide requirements and clean overwritten files if needed.
+- Support requests: include logs and exact reproduction steps.
+
+---
+
+## Support
+
+For bug reports, install help, and suggestions, join Discord.
+Include list version, logs, and clear repro steps for faster support.

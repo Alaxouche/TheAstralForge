@@ -1,14 +1,17 @@
 <link rel="stylesheet" href="{{ '/assets/skyground/consent.css' | relative_url }}">
-<script async src="//www.ezojs.com/ezoic/sa.min.js"></script>
+<script async src="https://www.ezojs.com/ezoic/sa.min.js"></script>
 <script>
     window.ezstandalone = window.ezstandalone || {};
     ezstandalone.cmd = ezstandalone.cmd || [];
 </script>
-<link href="_blank" rel="shortcut icon" type="image/x-icon"/><link href="_blank" rel="apple-touch-icon"/>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const links = document.querySelectorAll('a');
     links.forEach(link => {
+      if (!['http:', 'https:'].includes(link.protocol)) {
+        return;
+      }
+
       if (link.hostname !== window.location.hostname) {
         link.setAttribute('target', '_blank');
         link.setAttribute('rel', 'noopener noreferrer');

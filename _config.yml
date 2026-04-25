@@ -8,6 +8,16 @@ image: "/assets/logos/theastralforge.png"
 
 url: "https://theastralforge.com"
 baseurl: ""
+assets_version: "20260425-1"
+
+exclude:
+  - .venv/
+  - .github/
+  - _site/
+  - temp_*.txt
+
+sass:
+  style: compressed
 
 plugins:
   - jekyll-include-cache

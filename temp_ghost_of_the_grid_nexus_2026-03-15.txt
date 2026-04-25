@@ -1,0 +1,71 @@
+# Ghost of the Grid
+
+[Website](https://theastralforge.com) | [Installation Guide](https://theastralforge.com/ghost-of-the-grid/installation-guide/) | [Load Order](https://theastralforge.com/ghost-of-the-grid/loadorder/) | [Changelog](https://theastralforge.com/ghost-of-the-grid/changelog/) | [Known Issues](https://theastralforge.com/ghost-of-the-grid/known-issues/) | [Discord Support](https://discord.gg/vKuB7nazBk) | [Ko-fi](https://ko-fi.com/alaxouche) | [Patreon](https://patreon.com/Alaxouche)
+
+Ghost of the Grid is a Cyberpunk 2077 collection built to push atmosphere, visuals, and gameplay polish in Night City.
+Goal: deliver a denser cyberpunk vibe with better immersion and more refined systems.
+
+---
+
+## Main Features
+
+- Visual atmosphere overhaul: improved lighting, weather mood, and city presentation.
+- Gameplay refinements: combat, AI behavior, and progression feel improvements.
+- Added content and style: extra items, activities, and customization options.
+- Performance balancing: tuned for smoother gameplay in a heavily modded setup.
+- Active maintenance: frequent balancing passes and compatibility updates.
+
+---
+
+## Before You Start
+
+- Cyberpunk 2077 v2.3 required.
+- Phantom Liberty DLC required.
+- Legit game copy required (Steam and GOG supported by the guide context).
+- SSD install strongly recommended.
+- Nexus Mods account required (Premium recommended for speed).
+- Add game and modlist folders to antivirus exclusions.
+
+---
+
+## Quick Install
+
+1. Install required runtimes (.NET Runtime and Visual C++ x64).
+2. Install Wabbajack in a dedicated folder.
+3. Search for Ghost of the Grid in Wabbajack.
+4. Choose clean install/download folders outside protected Windows paths.
+5. Let Wabbajack finish all downloads and installation.
+6. Launch only through Mod Organizer/profile launcher.
+7. Read the full guide before first play session.
+
+---
+
+## How To Use The List
+
+- Start from Mod Organizer, not directly from game launchers.
+- Back up saves before major version jumps.
+- Review changelog notes for removals and save-compat warnings.
+- Keep your setup aligned with required game version.
+
+---
+
+## Quick Troubleshooting
+
+- Download errors: rerun Wabbajack first.
+- Stutters or instability after update: check changelog for removed/replaced performance mods.
+- Crash after game update: wait for list-side compatibility pass.
+- Random conflicts: avoid stacking untested external mods.
+
+---
+
+## Recent Update Highlights
+
+- v2.3.0.0: major content and immersion expansion, major optimization rework, stutter and CTD fixes.
+- v2.2.0.0: major gameplay and world additions, difficulty and performance rebalance, broad update sweep.
+
+---
+
+## Support
+
+For bug reports, install help, and suggestions, join Discord.
+Include list version, logs, and clear repro steps for faster support.

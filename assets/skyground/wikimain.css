@@ -122,6 +122,62 @@
   color: #ffcf7a;
 }
 
+/* Keep Community Pulse card visuals intact on readme pages. */
+.readme-content .community-pulse:not(:last-child) {
+  border-bottom: none;
+  padding-bottom: 20px;
+}
+
+.readme-content .community-pulse__header p {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.readme-content .community-pulse__card {
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.42);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3);
+}
+
+.readme-content .community-pulse__card p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.readme-content .community-pulse__card a {
+  color: var(--primary-color, #22c55e);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.readme-content .community-pulse__card a:hover {
+  color: #34d370;
+  text-decoration: underline;
+}
+
+.readme-content .community-pulse__supporters {
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 18px 20px;
+}
+
+.readme-content .community-supporter-item {
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.readme-content .community-supporter-name {
+  color: #fff;
+}
+
+.readme-content .community-supporter-meta {
+  color: rgba(255, 255, 255, 0.7);
+}
+
 /* ================= TABLES ================= */
 
 .readme-content table {
@@ -561,6 +617,31 @@ html[data-theme="light"] .readme-nav .nav-list-item > .nav-list {
 
 html[data-theme="light"] .readme-content p {
   color: #444;
+}
+
+html[data-theme="light"] .readme-content .community-pulse__header p,
+html[data-theme="light"] .readme-content .community-pulse__card p,
+html[data-theme="light"] .readme-content .community-supporter-meta {
+  color: rgba(0, 0, 0, 0.72);
+}
+
+html[data-theme="light"] .readme-content .community-pulse__card,
+html[data-theme="light"] .readme-content .community-pulse__supporters,
+html[data-theme="light"] .readme-content .community-supporter-item {
+  background: rgba(255, 255, 255, 0.86);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+html[data-theme="light"] .readme-content .community-pulse__card a {
+  color: #15803d;
+}
+
+html[data-theme="light"] .readme-content .community-pulse__card a:hover {
+  color: #166534;
+}
+
+html[data-theme="light"] .readme-content .community-supporter-name {
+  color: #1b1b1b;
 }
 
 html[data-theme="light"] .readme-content section:not(:last-child) {

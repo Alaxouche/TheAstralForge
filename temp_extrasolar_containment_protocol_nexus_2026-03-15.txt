@@ -1,0 +1,70 @@
+# Extrasolar Containment Protocol
+
+[Website](https://theastralforge.com) | [Installation Guide](https://theastralforge.com/extrasolar-containment-protocol/installation-guide/) | [Load Order](https://theastralforge.com/extrasolar-containment-protocol/loadorder/) | [Changelog](https://theastralforge.com/extrasolar-containment-protocol/changelog/) | [Known Issues](https://theastralforge.com/extrasolar-containment-protocol/known-issues/) | [Discord Support](https://discord.gg/vKuB7nazBk) | [Ko-fi](https://ko-fi.com/alaxouche) | [Patreon](https://patreon.com/Alaxouche)
+
+Extrasolar Containment Protocol is a curated Starfield collection focused on immersion, visuals, and expanded exploration across the Settled Systems.
+Goal: deliver a cleaner, deeper, and more cinematic Starfield experience while keeping performance and stability in check.
+
+---
+
+## Main Features
+
+- Enhanced visuals: upgraded lighting, textures, and environmental atmosphere.
+- Gameplay improvements: tuned combat flow, ship systems, and progression feel.
+- Expanded exploration: more points of interest, activities, and world variety.
+- Quality of life pass: UI and usability improvements for smoother sessions.
+- Curated setup: tested mod stack designed to work as a complete package.
+
+---
+
+## Before You Start
+
+- Legit Steam copy of Starfield required.
+- Latest game version required.
+- SSD install strongly recommended.
+- Avoid protected Windows folders for install paths.
+- Nexus Mods account required (Premium recommended for faster downloads).
+- Add game and modlist folders to antivirus exclusions.
+
+---
+
+## Quick Install
+
+1. Install required runtimes (.NET Runtime and Visual C++ x64).
+2. Install Wabbajack in a dedicated folder.
+3. Search for Extrasolar Containment Protocol in Wabbajack.
+4. Set separate install and download folders.
+5. Run installation and let Wabbajack complete all downloads.
+6. Launch through the provided Mod Organizer profile/launcher.
+7. Read the full installation guide before first launch.
+
+---
+
+## How To Use The List
+
+- Always launch through Mod Organizer.
+- Check Known Issues and Changelog before updating.
+- Back up saves before major list updates.
+- Avoid adding random mods on top unless you know conflict resolution.
+
+---
+
+## Quick Troubleshooting
+
+- Failed download: rerun Wabbajack; it usually resumes where it stopped.
+- Repeated archive failure: retry multiple times, then use manual download if needed.
+- Startup or plugin issues: verify game version and clean install paths.
+- After game patch: wait for list compatibility confirmation before updating.
+
+---
+
+## Recent Update Highlights
+
+- v1.0.0: initial release of Extrasolar Containment Protocol.
+
+---
+
+## Support
+
+For bug reports, install help, and suggestions, join Discord.
+Include list version, logs, and clear repro steps for faster support.
