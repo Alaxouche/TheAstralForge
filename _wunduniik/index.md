@@ -21,7 +21,7 @@ project_banner:
 
 {% include components/project_banner.html %}
 
-Wunduniik is a comprehensive modlist for The Elder Scrolls V: Skyrim Special Edition, focusing on enhanced graphics, immersive gameplay, and extensive content additions.
+Wunduniik is a comprehensive modlist for The Elder Scrolls V: Skyrim Anniversary Edition, focusing on enhanced graphics, immersive gameplay, and extensive content additions.
 
 ## Quick Links
 
