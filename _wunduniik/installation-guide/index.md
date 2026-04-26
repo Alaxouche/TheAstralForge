@@ -8,8 +8,8 @@ reading_mode_default: true
 ---
 
 # Preamble
-This mod list is for Skyrim Special Edition 1.6.1170
-You must use this list with Anniversary Edition and the current updates of Skyrim. 
+This mod list is for Skyrim Anniversary Edition 1.6.1170
+You must use this list with Anniversary DLC and the current updates of Skyrim. 
 This list will not work with Skyrim Legendary Edition nor with Skyrim Special Edition version 1.5.97 and versions lower than 1.6.1170.
  
 This list will only work with a legitimate Steam install of this game. It will not work with any other platform (like GOG).
