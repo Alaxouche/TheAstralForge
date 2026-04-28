@@ -8,6 +8,64 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v2.2.0.0 - April 28, 2026</summary>
+
+**Update Importance:** Medium  
+**NOT SAVE COMPATIBLE**
+
+___
+
+# Additions:
+- Added Mercenaries and Mayhem - a GRiNDTerra Outpost Expansion
+- Added Into the Void Bug Fix
+- Added Declared Contraband
+- Added BetterConsole - Free lanes compatibility
+- Added Real Volii Atmosphere
+- Added AA-105B Rifle
+- Added AA-105B Free Lanes Patch
+- Added StarGym - One More Rep
+
+# Fixes and Tweaks:
+- Fixed some remaining issues introduced by out of date mods
+- Fixed shadows visuals
+- Fixed some performance issues
+- Rebalanced some weapons
+
+# Updates:
+- Updated Rabbit's Real Lights New Atlantis
+- Updated Produce (Fruits and Vegetables) and Beer Crates
+- Updated More Visualized Docking
+- Updated TN's Power Tools - Cutter - Arc Welder - Auto-Rivet
+- Updated POIs Hostiles Diversity
+- Updated Legendary Module Recycler
+- Updated Starfield Engine Fixes - SFSE
+- Updated Seeking out Stores - Navigate Using City Info Kiosks
+- Updated Immersive Wait and Sleep Menu - Enhanced and Fully Configurable
+- Updated Less Intrusive Notifications
+- Updated HUD Info Widget
+- Updated NPCs Use Items
+- Updated Astrogate
+- Updated True Space
+- Updated Atmospheric Audio
+- Updated Dark Universe - Takeover
+- Updated Deadly Effective - Minimal Skills Overhaul
+- Updated Resupply - Functional Supplies and Decorations
+- Updated Red Mile Terror
+- Updated Lunokhod-1 Landmark
+- Updated Starvival - Immersive Survival Addon
+- Updated Dark Future Texture Pack
+- Updated Suit Up - Realistic Armor
+- Updated Starshake - Vizualized Recoil
+- Updated Astral UI
+- Updated Astral UI - Quicklist + Usearch plugin
+- Updated POI Faction Diversity
+- Updated Starborn Space Suit Visor FX Plus
+- Updated Skurkbro's Retexture Project - Landscape
+- Updated Allied Arms weapon pack
+
+</details>
+
+<details markdown="1">
 <summary>v2.1.1.0 - April 20, 2026</summary>
 
 **Update Importance:** Medium  
