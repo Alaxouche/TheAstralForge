@@ -8,6 +8,134 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v7.1.0.0 - May 02, 2026</summary>
+  
+**Update Importance:** MAJOR  
+**NOT SAVE COMPATIBLE** 
+
+---
+
+### Additions:
+- Added NPC Fixer - Invisible and Naked NPC Fixer
+- Added Serana No Hood After Cure
+- Added HDT-SMP DCR - King Crusader Armor Patch
+- Added Copy Paste In Menus
+- Added SaveGameFix - Cencal Editations
+- Added Angi's Camp Archery Targets
+- Added Angi Uses Unique Practice Arrows
+- Added Combat Equipment State Fix (CESF)
+- Added Aggro Management in Skyrim
+- Added New Creature Animation - Spider
+- Added Dynamic Spell Cards - SKSE
+- Added Break Stagger
+- Added Status Indicator Framework - Floating Icons
+- Added Unsearched Corpse Indicator
+- Added Show Player In Inventory SKSE
+- Added Mute On Focus Loss
+- Added Skill Decay
+- Added Sorcerer Staff (Unique Staff or Staff of Magnus Replacer)
+- Added Hey You. You're Finally Awake - A Permadeath Mod
+- Added Knotwork
+- Added DCR - King Crusader Heavy War Regalia
+- Added DCR - King Crusader Mega Pack
+- Added First-Person Torchlight Animation
+- Added Dynamic Footprints SKSE 
+- Added Sleep of the Dead - An Ancient Leather Hide Replacer
+- Added Contextual Crosshair
+
+### Removals:
+- Removed Ebony Elven Armor
+- Removed Footprints
+- Removed Footprints - Alternative Design
+- Removed Footprints - Alternative Design - Complex Parallax Addon
+- Removed Show Player In Menus
+- Removed Show Player In Menus - Persistent Zoom Fix
+- Removed Dark Brotherhood Armor SE - HD Textures
+- Removed Studded Elven Armor
+- Removed Bonemold Armors and Weapons Retexture SE
+- Removed Falmer Armors and Weapons Retexture SE
+- Removed Elven Enforcer Armor
+- Removed Kojaks Ambient Flying Dragons
+- Removed Scallions of Skyrim - High Polygon Leeks
+- Removed Wearable Creation Club Goblins Gear - 3BA - SoS - Vanilla Male - SMP
+- Removed Simple Frostbite Spider animation
+- Removed Trails - Unofficial
+
+### Fixes and Tweaks:
+- Fixed some CTDs when waiting caused by NPC IA process fix and AP
+- Fixed dragons not appearing due to missing models dependency
+- Fixed NPC explosions resulting in CTDs
+- Fixed all the NPC texture issues
+- Fixed some sound issues and inconsistencies
+- Fixed most if not all of the naked NPCs issues
+- Changed the NPC merge tool from EASYNPC to NPC Plugin Tool 2, resulting in less issues and more precision
+- Added a system of skill decay: skills will decay over time if you dont use them
+- Added an optional setting in the dashboard: permadeath mode
+- Added the missing power attack condition
+- Added working footprints system
+
+### Updates:
+- Updated Farmhouse Chimneys
+- Updated Remove Hanging Moss From Trees
+- Updated Staff Enchanting Plus
+- Updated Ebony Armors and Weapons Retexture
+- Updated RMB SPIDified - Core
+- Updated RMB SPIDified - Guards Armor Replacer
+- Updated Khajiit Has Tents
+- Updated JK's Guild HQ Interiors Patch Collection
+- Updated Zero Bounty Hostility Fix
+- Updated ERM - Enhanced Rocks and Mountains
+- Updated Claymores of the North
+- Updated Difficulty Global Variable
+- Updated Unlocked 1st Person Combat
+- Updated Norden UI
+- Updated New Armory Series - Dragon Cult Weapons
+- Updated SIGMA - Magic animations - 1st person
+- Updated SIGMA - Greatsword Animations - 1st Person
+- Updated SIGMA - Battleaxe Animations - 1st Person
+- Updated SIGMA - Waraxe Animations - 1st Person
+- Updated SIGMA - Mace Animations - 1st Person
+- Updated SIGMA - Warhammer Animations - 1st Person
+- Updated Assorted Behavior Fixes
+- Updated Siege at Icemoth
+- Updated DynDOLOD Resources
+- Updated XEMI Utility
+- Updated Dynamic Things Alternative - Base Object Swapper
+- Updated SkyParkour - A SkyClimb Addon - 360 and Hold to Climb
+- Updated Alternative Riften - PATCH COLLECTION
+- Updated S.T.A.R. (So This Aint Right)
+- Updated CrashLogger
+- Updated Better Carriage Destinations
+- Updated Racemenu(SKEE) cosave Load Crash Fix
+- Updated For Honor Reforged
+- Updated Robber's Gorge Fixes
+- Updated State Behavior Framework
+- Updated Project Porthole - Custom Doors For Modded Cities
+- Updated KS Hairdos - HDT-SMP for Khajiit
+- Updated Water for ENB
+- Updated SkyPatcher
+- Updated A Dark Warrior's Tale
+- Updated Dragon Races of Skyrim
+- Updated MCM Helper
+- Updated Modding My Business (M.M.B) - Ivy Random Patch Collection
+- Updated Auto Skeleton Patch - Universal Behaviour Runtime
+- Updated Valkyr HDT-SMP Hairstyles - For Khajiit
+- Updated Staff Enchanter - Praedys's Meshes
+- Updated Vel'dun UI
+- Updated CritterSpawn - Script Call Reduction
+- Updated Solitude - Square of Akatosh
+- Updated FSMP - Faster HDT-SMP
+- Updated Children of Dawn's Beauty - A Resource for Certain Mods
+- Updated Flat World Map Framework
+- Updated Meshes Optimization Project
+- Updated Animation Motion Fix
+- Updated Local Map Icons
+- Updated Dynamic Wind - Nature of the Wild Lands Patch
+- Updated Precision - Attack Collision Fixes
+
+</details>
+
+<details markdown="1">
 <summary>v7.0.0.0 - April 20, 2026</summary>
   
 **Update Importance:** Major  
