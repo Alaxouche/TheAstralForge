@@ -21,6 +21,8 @@ project_banner:
 
 {% include components/project_banner.html %}
 
+<div lang="en" markdown="1">
+
 Krentoraan is a carefully crafted modlist for The Elder Scrolls V: Skyrim Special Edition.
 
 ## Quick Links
@@ -30,7 +32,7 @@ Krentoraan is a carefully crafted modlist for The Elder Scrolls V: Skyrim Specia
 
 ## About This Modlist
 
-Krentoraan offers a refined Skyrim experience with selected mods to enhance your adventure.
+Krentoraan offers a refined Skyrim experience with selected mods to enhance your adventure, focused on clean visuals and balanced gameplay.
 
 ### Key Features
 
@@ -41,3 +43,29 @@ Krentoraan offers a refined Skyrim experience with selected mods to enhance your
 ## Support
 
 For help and support, join our [Discord server](https://discord.gg/vKuB7nazBk).
+
+</div>
+<div lang="fr" markdown="1">
+
+Krentoraan est une modlist soigneusement élaborée pour The Elder Scrolls V: Skyrim Special Edition.
+
+## Liens Rapides
+
+- [Guide d'Installation]({{ '/krentoraan/installation-guide/' | relative_url }})
+- [Ordre de Chargement]({{ '/krentoraan/loadorder/' | relative_url }})
+
+## À Propos de Cette Modlist
+
+Krentoraan offre une expérience Skyrim raffinée avec des mods sélectionnés pour améliorer votre aventure, axée sur des visuels propres et un gameplay équilibré.
+
+### Fonctionnalités Clés
+
+- **Améliorations Visuelles** : Graphismes et atmosphère améliorés
+- **Améliorations du Gameplay** : Mécaniques et systèmes améliorés
+- **Optimisée** : Équilibrée pour la performance et la qualité
+
+## Support
+
+Pour obtenir de l'aide, rejoignez notre [serveur Discord](https://discord.gg/vKuB7nazBk).
+
+</div>

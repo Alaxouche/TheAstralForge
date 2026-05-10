@@ -1,7 +1,6 @@
 {% comment %}
   install_stepper.html
   Progress bar + step pills for installation guide pages.
-  Requires: page.collection, page.parent == "Installation Guide", page.nav_order
 {% endcomment %}
 
 {% if page.parent == "Installation Guide" %}
@@ -23,12 +22,17 @@
   <div class="install-progress" aria-label="Installation progress">
     <div class="install-progress__header">
       <a href="{{ guide_index.url | default: '../' | relative_url }}" class="install-progress__back">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
           <polyline points="15 18 9 12 15 6"/>
         </svg>
-        Installation Guide
+        <span data-i18n-key="nav.install">Installation Guide</span>
       </a>
-      <span class="install-progress__count">Step {{ current_step }} of {{ total_steps }}</span>
+      <span class="install-progress__count">
+        <span data-i18n-key="readme.step">Step</span>
+        {{ current_step }}
+        <span data-i18n-key="readme.of">of</span>
+        {{ total_steps }}
+      </span>
     </div>
 
     <div class="install-progress__bar-wrap" role="progressbar" aria-valuenow="{{ current_step }}" aria-valuemin="1" aria-valuemax="{{ total_steps }}">

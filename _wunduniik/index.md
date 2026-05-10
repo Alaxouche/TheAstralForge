@@ -21,7 +21,9 @@ project_banner:
 
 {% include components/project_banner.html %}
 
-Wunduniik is a comprehensive modlist for The Elder Scrolls V: Skyrim Special Edition, focusing on enhanced graphics, immersive gameplay, and extensive content additions.
+<div lang="en" markdown="1">
+
+Wunduniik is a comprehensive modlist for The Elder Scrolls V: Skyrim Anniversary Edition, focusing on enhanced graphics, immersive gameplay, and extensive content additions.
 
 ## Quick Links
 
@@ -44,3 +46,32 @@ This modlist transforms Skyrim into a visually stunning and deeply immersive exp
 ## Support
 
 For help and support, join our [Discord server](https://discord.gg/vKuB7nazBk).
+
+</div>
+<div lang="fr" markdown="1">
+
+Wunduniik est une modlist complète pour The Elder Scrolls V: Skyrim Anniversary Edition, axée sur des graphismes améliorés, un gameplay immersif et d'importants ajouts de contenu.
+
+## Liens Rapides
+
+- [Guide d'Installation]({{ '/wunduniik/installation-guide/' | relative_url }})
+- [Journal des Modifications]({{ '/wunduniik/changelog/' | relative_url }})
+- [Problèmes Connus]({{ '/wunduniik/known-issues/' | relative_url }})
+- [Ordre de Chargement]({{ '/wunduniik/loadorder/' | relative_url }})
+
+## À Propos de Cette Modlist
+
+Cette modlist transforme Skyrim en une expérience visuellement époustouflante et profondément immersive. Elle inclut des centaines de mods soigneusement sélectionnés et configurés qui fonctionnent ensemble de manière harmonieuse.
+
+### Fonctionnalités Clés
+
+- **Graphismes Améliorés** : Textures haute qualité, éclairage amélioré et effets visuels saisissants
+- **Refonte du Gameplay** : Combat amélioré, systèmes de magie et progression du personnage
+- **Contenu Étendu** : Nouvelles quêtes, lieux, PNJ et équipements
+- **Qualité de Vie** : Améliorations de l'interface, corrections de bugs et fonctionnalités pratiques
+
+## Support
+
+Pour obtenir de l'aide, rejoignez notre [serveur Discord](https://discord.gg/vKuB7nazBk).
+
+</div>

@@ -22,9 +22,9 @@
     <div class="install-nav__prev">
       {% if prev_page %}
         <a href="{{ prev_page.url | relative_url }}" class="install-nav__btn install-nav__btn--prev">
-          <svg class="install-nav__arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          <svg class="install-nav__arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
           <span class="install-nav__text">
-            <small>Previous</small>
+            <small data-i18n-key="readme.prev">Previous</small>
             <span>{{ prev_page.title }}</span>
           </span>
         </a>
@@ -34,10 +34,10 @@
       {% if next_page %}
         <a href="{{ next_page.url | relative_url }}" class="install-nav__btn install-nav__btn--next">
           <span class="install-nav__text">
-            <small>Next</small>
+            <small data-i18n-key="readme.next">Next</small>
             <span>{{ next_page.title }}</span>
           </span>
-          <svg class="install-nav__arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          <svg class="install-nav__arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
         </a>
       {% endif %}
     </div>

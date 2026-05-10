@@ -21,6 +21,8 @@ project_banner:
 
 {% include components/project_banner.html %}
 
+<div lang="en" markdown="1">
+
 Ghost of the Grid is a Cyberpunk 2077 modlist designed to enhance the cyberpunk atmosphere and gameplay experience of Night City.
 
 ## Quick Links
@@ -44,3 +46,32 @@ This modlist pushes the cyberpunk aesthetic to the maximum while improving gamep
 ## Support
 
 For help and support, join our [Discord server](https://discord.gg/vKuB7nazBk).
+
+</div>
+<div lang="fr" markdown="1">
+
+Ghost of the Grid est une modlist pour Cyberpunk 2077 conçue pour améliorer l'atmosphère cyberpunk et l'expérience de gameplay de Night City.
+
+## Liens Rapides
+
+- [Guide d'Installation]({{ '/ghost-of-the-grid/installation-guide/' | relative_url }})
+- [Journal des Modifications]({{ '/ghost-of-the-grid/changelog/' | relative_url }})
+- [Problèmes Connus]({{ '/ghost-of-the-grid/known-issues/' | relative_url }})
+- [Ordre de Chargement]({{ '/ghost-of-the-grid/loadorder/' | relative_url }})
+
+## À Propos de Cette Modlist
+
+Cette modlist pousse l'esthétique cyberpunk au maximum tout en améliorant les mécaniques de gameplay et en ajoutant du nouveau contenu à explorer dans Night City.
+
+### Fonctionnalités Clés
+
+- **Visuels Améliorés** : Éclairage amélioré, effets météorologiques et atmosphère cyberpunk
+- **Améliorations du Gameplay** : Meilleures mécaniques de combat et comportement de l'IA
+- **Nouveau Contenu** : Quêtes, objets et options de personnalisation supplémentaires
+- **Optimisations des Performances** : Équilibrée pour un gameplay fluide
+
+## Support
+
+Pour obtenir de l'aide, rejoignez notre [serveur Discord](https://discord.gg/vKuB7nazBk).
+
+</div>

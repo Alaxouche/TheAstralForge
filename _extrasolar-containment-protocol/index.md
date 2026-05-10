@@ -23,6 +23,8 @@ project_banner:
 
 {% include components/project_banner.html %}
 
+<div lang="en" markdown="1">
+
 Extrasolar Containment Protocol is a comprehensive modlist for Starfield, focusing on enhanced graphics, immersive gameplay, and expanded exploration across the settled systems.
 
 ## Quick Links
@@ -48,11 +50,11 @@ Extrasolar Containment Protocol is a comprehensive modlist for Starfield, focusi
 
 ## About This Modlist
 
-This modlist transforms Starfield into a visually stunning and deeply immersive experience. It includes carefully selected and configured mods that work together seamlessly to enhance every aspect of the game.
+This modlist transforms Starfield into a visually stunning and deeply immersive experience.
 
 ### Key Features
 
-- **Enhanced Graphics**: High-quality textures, improved lighting, and stunning visual effects across all biomes and space environments
+- **Enhanced Graphics**: High-quality textures, improved lighting, and stunning visual effects
 - **Gameplay Overhauls**: Improved combat, ship systems, and character progression
 - **Expanded Content**: New quests, locations, outposts, and equipment
 - **Quality of Life**: UI improvements, bug fixes, and convenience features
@@ -60,3 +62,32 @@ This modlist transforms Starfield into a visually stunning and deeply immersive 
 ## Support
 
 For help and support, join our [Discord server](https://discord.gg/vKuB7nazBk).
+
+</div>
+<div lang="fr" markdown="1">
+
+Extrasolar Containment Protocol est une modlist complète pour Starfield, axée sur des graphismes améliorés, un gameplay immersif et une exploration étendue à travers les systèmes colonisés.
+
+## Liens Rapides
+
+- [Guide d'Installation]({{ '/extrasolar-containment-protocol/installation-guide/' | relative_url }})
+- [Journal des Modifications]({{ '/extrasolar-containment-protocol/changelog/' | relative_url }})
+- [Problèmes Connus]({{ '/extrasolar-containment-protocol/known-issues/' | relative_url }})
+- [Ordre de Chargement]({{ '/extrasolar-containment-protocol/loadorder/' | relative_url }})
+
+## À Propos de Cette Modlist
+
+Cette modlist transforme Starfield en une expérience visuellement époustouflante et profondément immersive.
+
+### Fonctionnalités Clés
+
+- **Graphismes Améliorés** : Textures haute qualité, éclairage amélioré et effets visuels saisissants
+- **Refonte du Gameplay** : Combat amélioré, systèmes de vaisseaux et progression du personnage
+- **Contenu Étendu** : Nouvelles quêtes, lieux, avant-postes et équipements
+- **Qualité de Vie** : Améliorations de l'interface, corrections de bugs et fonctionnalités pratiques
+
+## Support
+
+Pour obtenir de l'aide, rejoignez notre [serveur Discord](https://discord.gg/vKuB7nazBk).
+
+</div>

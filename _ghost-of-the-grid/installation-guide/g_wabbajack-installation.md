@@ -6,42 +6,72 @@ nav_order: 3
 reading_mode_default: true
 ---
 
+<div lang="en" markdown="1">
+
 # Wabbajack Installation
 
 ## Installation
 
-Once you have completed pre-installation, download the latest version of Wabbajack and place it in a folder such as C:\Games\Wabbajack. Do not place it in program files, on your desktop or in your downloads folder. I recommend placing it on an SSD as it will work quicker on there.
+Once you have completed pre-installation, download the latest version of Wabbajack and place it in a folder such as `C:\Games\Wabbajack`.
 
-Downloading and installing Ghost of the Grid can take a while depending on your internet connection and computer. To install the list, complete the following.
+Downloading and installing Ghost of the Grid can take a while. Follow the next steps:
 
-Now you can follow the next steps in order to download and install Wunduniik Modlist properly:
-1. Open Wabbajack and click on Browse Modlists.
-2. Go to the Search field and type Ghost of the Grid.
-3. Make sure Show NSFW is not checked and non-featured is checked.
-5. Press the download button on Wunduniik and wait for it to download.
-6. Set the installation folder to be somewhere like `C:\Games\Ghost of the Grid`. Do not install it to your desktop or downloads folder.
-7. The download location does not need to be on an SSD but it makes installing a bit faster.
-8. Press the play button to begin.
-9. Go and pet your nearest fluffy animal whilst Wabbajack does its thing. Alternatively read through this readme again.
-10. The installation is now complete. You can move on to the next section. If you have issues with installation, you can refer to Wabbajack Installation Issues.
+1. Open Wabbajack and click on **Browse Modlists**.
+2. Search for **Ghost of the Grid**.
+3. Make sure **Show NSFW** is not checked and **non-featured** is checked.
+4. Press the download button and wait.
+5. Set the installation folder to somewhere like `C:\Games\Ghost of the Grid`.
+6. The download location doesn't need to be on an SSD but it helps.
+7. Press the play button to begin.
+8. Go and pet your nearest fluffy animal whilst Wabbajack does its thing.
+9. The installation is now complete. Move on to the next section.
 
 <p align="center">
  <img src="https://i.redd.it/gi77zsrj0faf1.png">
 </p>
- 
-**Even if Wabbajack say installation complete, this doesn't mean you have finished. You Must follow the rest of the installation guide in order to have the list working properly. Otherwise you will have big issues.**
+
+**Even if Wabbajack says installation complete, this doesn't mean you have finished. You must follow the rest of the installation guide.**
 
 **Installation Video:**
 
-To help you more if you're not much helped with textual guides, you can watch the following video that covers generic informations to correctly install any wabbajack modlist:
+</div>
+<div lang="fr" markdown="1">
+
+# Installation Wabbajack
+
+## Installation
+
+Une fois la pré-installation terminée, téléchargez la dernière version de Wabbajack et placez-le dans `C:\Games\Wabbajack`.
+
+Le téléchargement et l'installation de Ghost of the Grid peuvent prendre un certain temps. Suivez les étapes suivantes :
+
+1. Ouvrez Wabbajack et cliquez sur **Parcourir les Modlists**.
+2. Recherchez **Ghost of the Grid**.
+3. Assurez-vous que **Afficher NSFW** n'est pas coché et que **non-featured** est coché.
+4. Appuyez sur le bouton de téléchargement et attendez.
+5. Définissez le dossier d'installation quelque part comme `C:\Games\Ghost of the Grid`.
+6. L'emplacement de téléchargement n'a pas besoin d'être sur un SSD mais cela aide.
+7. Appuyez sur le bouton lecture pour commencer.
+8. Allez caresser l'animal le plus proche pendant que Wabbajack travaille.
+9. L'installation est terminée. Passez à la section suivante.
+
+<p align="center">
+ <img src="https://i.redd.it/gi77zsrj0faf1.png">
+</p>
+
+**Même si Wabbajack dit que l'installation est terminée, vous n'avez pas fini. Vous devez suivre le reste du guide d'installation.**
+
+**Vidéo d'installation :**
+
+</div>
 
 <div class="video-tutorials-wrapper" style="margin: 2rem 0;">
   <div class="video-player-wrapper">
     <div id="wabbajack-video-player" class="video-player">
-      <iframe 
-        src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      <iframe
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
         class="video-iframe"
         style="width: 100%; height: 100%;">
@@ -50,22 +80,41 @@ To help you more if you're not much helped with textual guides, you can watch th
   </div>
 </div>
 
+<div lang="en" markdown="1">
+
 ## Problems With Installation
 
-It is possible that you may encounter an error with Wabbajack when installing. Some common issues are listed below:
-- If you feel like wabbajack is stuck, just restart it - it will pick up where you left off
-- Rerun wabbajack at least twice before posting about failed downloads
+- If Wabbajack seems stuck, restart it — it will pick up where it left off
+- Rerun Wabbajack at least twice before reporting failed downloads
 - If a mod updated and old files were deleted, wait for a list update
 
-__Could not download x:__
-- Big files can fail to download due to connection issues. You can either run wabbajack again or download the file manually. If you decide to manually download it, make sure to place it in the same place as the other downloads.
+**Could not download x:**
+Big files can fail due to connection issues. Run Wabbajack again or manually download the file to the same location.
 
-__A French translation mod is failing to download:__
-- Some files are using sometimes special characters such as "ç" and "ä" that can fail to download if your PC can't handle those. In order to fix this issue, you need to do the following: 
-- - Set you PC to English (United States)​
-- - Disable "Use Unicode UTF-8"
-- - Start back the download. Once done you can revert those settings.
-    
+**A French translation mod is failing to download:**
+Set your PC to English (United States), disable "Use Unicode UTF-8", restart the download, then revert.
+
 <p align="center">
  <img src="https://static.wixstatic.com/media/579922_f5f5162f09f44b7dbcdf7719ae3699df~mv2.png/v1/fill/w_578,h_542,al_c,q_85,enc_avif,quality_auto/579922_f5f5162f09f44b7dbcdf7719ae3699df~mv2.png">
 </p>
+
+</div>
+<div lang="fr" markdown="1">
+
+## Problèmes d'Installation
+
+- Si Wabbajack semble bloqué, redémarrez-le — il reprendra là où il s'est arrêté
+- Relancez Wabbajack au moins deux fois avant de signaler des échecs de téléchargement
+- Si un mod a été mis à jour et que les anciens fichiers ont été supprimés, attendez une mise à jour de la liste
+
+**Impossible de télécharger x :**
+Les gros fichiers peuvent échouer à cause de problèmes de connexion. Relancez Wabbajack ou téléchargez manuellement le fichier au même emplacement.
+
+**Un mod de traduction française échoue au téléchargement :**
+Définissez votre PC sur Anglais (États-Unis), désactivez « Utiliser Unicode UTF-8 », relancez le téléchargement, puis rétablissez les paramètres.
+
+<p align="center">
+ <img src="https://static.wixstatic.com/media/579922_f5f5162f09f44b7dbcdf7719ae3699df~mv2.png/v1/fill/w_578,h_542,al_c,q_85,enc_avif,quality_auto/579922_f5f5162f09f44b7dbcdf7719ae3699df~mv2.png">
+</p>
+
+</div>

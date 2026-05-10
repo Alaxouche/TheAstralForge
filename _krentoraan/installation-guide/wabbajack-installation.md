@@ -6,30 +6,56 @@ nav_order: 3
 reading_mode_default: true
 ---
 
+<div lang="en" markdown="1">
+
 # Wabbajack Installation
 
 ## Installation
 
-Once you have completed pre-installation, download the latest version of Wabbajack and place it in a folder such as C:\Games\Wabbajack. Do not place it in program files, on your desktop or in your downloads folder. I recommend placing it on an SSD as it will work quicker on there.
+Once you have completed pre-installation, download the latest version of Wabbajack and place it in a folder such as `C:\Games\Wabbajack`. Do not place it in program files, on your desktop or in your downloads folder.
 
-Downloading and installing Krentoraan can take a while depending on your internet connection and computer. To install the list, complete the following.
+Downloading and installing Krentoraan can take a while depending on your internet connection and computer. Follow the next steps:
 
-Now you can follow the next steps in order to download and install Krentoraan Modlist properly:
-1. Open Wabbajack and click on Browse Modlists.
-2. Go to the Search field and type Krentoraan.
-3. Make sure Show NSFW is not checked.
-5. Press the download button on Krentoraan and wait for it to download.
-6. Set the installation folder to be somewhere like C:\Games\Krentoraan. Do not install it to your desktop or downloads folder.
-7. The download location does not need to be on an SSD but it makes installing a bit faster.
-8. Press the play button to begin.
-9. Go and pet your nearest fluffy animal whilst Wabbajack does its thing. Alternatively read through this readme again.
-10. The installation is now complete. You can move on to the next section. If you have issues with installation, you can refer to Wabbajack Installation Issues.
+1. Open Wabbajack and click on **Browse Modlists**.
+2. Go to the Search field and type **Krentoraan**.
+3. Make sure **Show NSFW** is not checked.
+4. Press the download button on Krentoraan and wait for it to download.
+5. Set the installation folder to somewhere like `C:\Games\Krentoraan`.
+6. The download location does not need to be on an SSD but it makes installing a bit faster.
+7. Press the play button to begin.
+8. Go and pet your nearest fluffy animal whilst Wabbajack does its thing.
+9. The installation is now complete. You can move on to the next section.
 
-**Even if Wabbajack say installation complete, this doesn't mean you have finished. You Must follow the rest of the installation guide in order to have the list working properly. Otherwise you will have big issues.**
+**Even if Wabbajack says installation complete, this doesn't mean you have finished. You must follow the rest of the installation guide.**
 
 **Installation Video:**
 
-To help you more if you're not much helped with textual guides, you can watch the following video that covers generic informations to correctly install any wabbajack modlist:
+</div>
+<div lang="fr" markdown="1">
+
+# Installation Wabbajack
+
+## Installation
+
+Une fois la pré-installation terminée, téléchargez la dernière version de Wabbajack et placez-le dans un dossier comme `C:\Games\Wabbajack`. Ne le placez pas dans les fichiers programmes, sur votre bureau ou dans votre dossier de téléchargements.
+
+Le téléchargement et l'installation de Krentoraan peuvent prendre un certain temps. Suivez les étapes suivantes :
+
+1. Ouvrez Wabbajack et cliquez sur **Parcourir les Modlists**.
+2. Dans le champ de recherche, tapez **Krentoraan**.
+3. Assurez-vous que **Afficher NSFW** n'est pas coché.
+4. Appuyez sur le bouton de téléchargement et attendez.
+5. Définissez le dossier d'installation quelque part comme `C:\Games\Krentoraan`.
+6. L'emplacement de téléchargement n'a pas besoin d'être sur un SSD mais cela accélère un peu l'installation.
+7. Appuyez sur le bouton lecture pour commencer.
+8. Allez caresser l'animal le plus proche pendant que Wabbajack travaille.
+9. L'installation est terminée. Passez à la section suivante.
+
+**Même si Wabbajack dit que l'installation est terminée, vous n'avez pas fini. Vous devez suivre le reste du guide d'installation.**
+
+**Vidéo d'installation :**
+
+</div>
 
 <div style="margin: 2rem auto; max-width: 800px; display: flex; justify-content: center;">
   <div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0;">
@@ -43,19 +69,37 @@ To help you more if you're not much helped with textual guides, you can watch th
   </div>
 </div>
 
+<div lang="en" markdown="1">
+
 ## Problems With Installation
 
-It is possible that you may encounter an error with Wabbajack when installing. Some common issues are listed below.
+**Could not download x:**
+Big files can fail to download due to connection issues. You can either run Wabbajack again or download the file manually and place it in the same folder as the other downloads.
 
-__Could not download x:__
-- Big files can fail to download due to connection issues. You can either run wabbajack again or download the file manually. If you decide to manually download it, make sure to place it in the same place as the other downloads.
+**A French translation mod is failing to download:**
+Some files use special characters ("ç", "ä") that can fail on some systems. To fix:
+- Set your PC to English (United States) and disable "Use Unicode UTF-8"
+- Restart the download, then revert the settings.
 
-__A French translation mod is failing to download:__
-- Some files are using sometimes special characters such as "ç" and "ä" that can fail to download if your PC can't handle those. In order to fix this issue, you need to do the following: 
-- - Set you PC to English (United States)​
-- - Disable "Use Unicode UTF-8"
-- - Start back the download. Once done you can revert those settings.
-    
 <p align="center">
  <img src="https://static.wixstatic.com/media/579922_f5f5162f09f44b7dbcdf7719ae3699df~mv2.png/v1/fill/w_578,h_542,al_c,q_85,enc_avif,quality_auto/579922_f5f5162f09f44b7dbcdf7719ae3699df~mv2.png">
 </p>
+
+</div>
+<div lang="fr" markdown="1">
+
+## Problèmes d'Installation
+
+**Impossible de télécharger x :**
+Les gros fichiers peuvent échouer à télécharger. Relancez Wabbajack ou téléchargez le fichier manuellement en le plaçant dans le même dossier que les autres téléchargements.
+
+**Un mod de traduction française échoue au téléchargement :**
+Certains fichiers utilisent des caractères spéciaux (« ç », « ä ») qui peuvent poser problème. Pour corriger :
+- Définissez votre PC sur Anglais (États-Unis) et désactivez « Utiliser Unicode UTF-8 »
+- Relancez le téléchargement, puis revenez aux paramètres d'origine.
+
+<p align="center">
+ <img src="https://static.wixstatic.com/media/579922_f5f5162f09f44b7dbcdf7719ae3699df~mv2.png/v1/fill/w_578,h_542,al_c,q_85,enc_avif,quality_auto/579922_f5f5162f09f44b7dbcdf7719ae3699df~mv2.png">
+</p>
+
+</div>

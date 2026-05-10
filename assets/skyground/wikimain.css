@@ -653,3 +653,153 @@ html[data-theme="light"] .readme-content section:not(:last-child) {
     display: none;
   }
 }
+
+/* ================================================================
+   CHANGELOG — <details> / <summary> card styling
+   Applies to any <details markdown="1"> entry in readme content.
+   ================================================================ */
+
+.readme-content details {
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  margin: 6px 0;
+  overflow: hidden;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.readme-content details[open] {
+  border-color: rgba(34, 197, 94, 0.22);
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.28);
+}
+
+.readme-content details > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 0.93rem;
+  color: #d0d0d0;
+  background: rgba(255, 255, 255, 0.04);
+  user-select: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.readme-content details > summary::-webkit-details-marker { display: none; }
+.readme-content details > summary::marker { content: none; }
+
+.readme-content details > summary::before {
+  content: '›';
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  width: 14px;
+  text-align: center;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+  line-height: 1;
+}
+
+.readme-content details[open] > summary {
+  color: #fff;
+  background: rgba(34, 197, 94, 0.07);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.readme-content details[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.readme-content details > summary:hover {
+  background: rgba(34, 197, 94, 0.07);
+  color: #fff;
+}
+
+/* Section headings inside entries (Additions, Removals, Fixes, Updates) */
+.readme-content details h1,
+.readme-content details h2,
+.readme-content details h3 {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--primary-color);
+  opacity: 0.9;
+  margin: 16px 18px 6px;
+  padding: 0 0 5px;
+  border-bottom: 1px solid rgba(34, 197, 94, 0.15);
+}
+
+/* Body content padding */
+.readme-content details p,
+.readme-content details ul,
+.readme-content details ol {
+  padding-left: 18px;
+  padding-right: 18px;
+  margin-left: 0;
+}
+
+.readme-content details p:first-of-type { margin-top: 12px; }
+.readme-content details ul, .readme-content details ol { padding-bottom: 2px; }
+.readme-content details > :last-child:not(summary) { padding-bottom: 16px; }
+
+/* HR divider */
+.readme-content details hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  margin: 8px 18px;
+}
+
+/* List items */
+.readme-content details li {
+  font-size: 0.87rem;
+  color: #aaa;
+  line-height: 1.65;
+  padding: 1px 0;
+}
+
+.readme-content details strong { color: #ddd; }
+
+/* ── Light theme ── */
+html[data-theme="light"] .readme-content details {
+  background: rgba(0, 0, 0, 0.02);
+  border-color: rgba(0, 0, 0, 0.09);
+}
+
+html[data-theme="light"] .readme-content details[open] {
+  border-color: rgba(194, 65, 12, 0.2);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+
+html[data-theme="light"] .readme-content details > summary {
+  color: #444;
+  background: rgba(0, 0, 0, 0.03);
+}
+
+html[data-theme="light"] .readme-content details[open] > summary {
+  color: #1b1b1b;
+  background: rgba(194, 65, 12, 0.05);
+  border-bottom-color: rgba(0, 0, 0, 0.07);
+}
+
+html[data-theme="light"] .readme-content details > summary:hover {
+  background: rgba(194, 65, 12, 0.06);
+  color: #1b1b1b;
+}
+
+html[data-theme="light"] .readme-content details h1,
+html[data-theme="light"] .readme-content details h2,
+html[data-theme="light"] .readme-content details h3 {
+  color: var(--primary-color);
+  border-bottom-color: rgba(194, 65, 12, 0.15);
+}
+
+html[data-theme="light"] .readme-content details hr {
+  border-top-color: rgba(0, 0, 0, 0.07);
+}
+
+html[data-theme="light"] .readme-content details li { color: #555; }
+html[data-theme="light"] .readme-content details strong { color: #333; }
