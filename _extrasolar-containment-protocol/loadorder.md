@@ -19,4 +19,5 @@ Cette section vous montre le contenu exact et l'ordre de placement des mods d'Ex
 
 </div>
 
-<p><em><span lang="en">Load order library link coming soon.</span><span lang="fr">Lien vers la bibliothèque d'ordre de chargement bientôt disponible.</span></em></p>
+<iframe src="https://loadorderlibrary.com/lists/extrasolar-containment-protocol" title="Extrasolar Containment Protocol" width="100%" height="800px" frameborder="0" style="border: 1px solid #333; border-radius: 8px; background: #000;">Your browser does not support iframes. View the mod list directly</iframe>
+
