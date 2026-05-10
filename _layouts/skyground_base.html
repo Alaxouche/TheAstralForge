@@ -1,0 +1,121 @@
+---
+---
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Anti-FOUC: apply stored or system theme before first paint -->
+  <script>
+    (function () {
+      var t = localStorage.getItem('sg-theme');
+      if (t !== 'light' && t !== 'dark') {
+        t = (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches)
+          ? 'light' : 'dark';
+      }
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  {% seo %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/skyground/main.css' | relative_url }}?v={{ site.assets_version }}">
+  <link rel="stylesheet" href="{{ '/assets/skyground/lightbox.css' | relative_url }}?v={{ site.assets_version }}">
+  <link rel="stylesheet" href="{{ '/assets/skyground/features.css' | relative_url }}?v={{ site.assets_version }}">
+  <link rel="stylesheet" href="{{ '/assets/skyground/features-extended.css' | relative_url }}?v={{ site.assets_version }}">
+  <link rel="stylesheet" href="{{ '/assets/skyground/enhancements.css' | relative_url }}?v={{ site.assets_version }}">
+  <link rel="stylesheet" href="{{ '/assets/skyground/utilities.css' | relative_url }}?v={{ site.assets_version }}">
+  <link rel="stylesheet" href="{{ '/assets/skyground/visual-enhancements.css' | relative_url }}?v={{ site.assets_version }}">
+  <style>
+    /* Theme transition */
+    html.theme-transitioning,
+    html.theme-transitioning *,
+    html.theme-transitioning *::before,
+    html.theme-transitioning *::after {
+      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+    }
+    
+    /* Hero parallax layers */
+    .hero {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-bg-layer {
+      position: absolute;
+      inset: 0;
+      will-change: transform;
+      z-index: -1;
+    }
+    
+    .hero-content-wrapper {
+      position: relative;
+      z-index: 1;
+      will-change: opacity;
+    }
+    
+    /* Lazy load fade in */
+    img[data-src] {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    img.loaded {
+      opacity: 1;
+    }
+  </style>
+  {% if page.layout == 'skyground_hub' %}
+    <link rel="stylesheet" href="{{ '/assets/skyground/hub.css' | relative_url }}?v={{ site.assets_version }}">
+  {% endif %}
+  {% if page.layout == 'skyground_readme' %}
+    <link rel="stylesheet" href="{{ '/assets/skyground/wikimain.css' | relative_url }}?v={{ site.assets_version }}">
+  {% endif %}
+  <link rel="icon" type="image/x-icon" href="{{ site.favicon_ico | relative_url }}">
+  {% include head_custom.html %}
+</head>
+{% assign active_alert = site.data.alerts | where: "enabled", true | first %}
+<body{% if active_alert %} class="has-alert"{% endif %}>
+<!-- SVG sprite -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <polyline points="9 18 15 12 9 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+</svg>
+  <div id="lightbox" aria-hidden="true">
+    <img id="lightbox-img" alt="">
+  </div>
+  {% include skyground_header.html %}
+  {{ content }}
+  {% include nav_footer_custom.html %}
+  
+  <button id="back-to-top" aria-label="Back to top">
+    ↑
+  </button>
+  <script src="{{ '/assets/skyground/lightbox.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
+  <script src="{{ '/assets/skyground/carousel.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
+  <script src="{{ '/assets/skyground/header.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
+  <script src="{{ '/assets/skyground/theme-toggle.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
+  <script src="{{ '/assets/skyground/i18n.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
+  <script src="{{ '/assets/skyground/performance.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
+  <script src="{{ '/assets/skyground/features.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
+  <script src="{{ '/assets/skyground/enhancements.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
+  <script src="{{ '/assets/skyground/rating-system.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
+  <script src="{{ '/assets/skyground/vote-system.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
+  <script src="{{ '/assets/skyground/search-system.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
+  <script src="{{ '/assets/skyground/notification-system.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
+  <script src="{{ '/assets/skyground/faq-accordion.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
+  {% if page.layout == 'skyground_readme' %}
+  <script src="{{ '/assets/skyground/nav-fold.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
+  {% endif %}
+  {% if page.layout == 'skyground_readme' or page.layout == 'skyground_changelog' %}
+  <script src="{{ '/assets/skyground/stats-system.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
+  <script src="{{ '/assets/skyground/video-tutorials.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
+  <script src="{{ '/assets/skyground/social-share.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
+  {% endif %}
+  {% if page.layout == 'skyground_home' %}
+  <script src="{{ '/assets/skyground/user-gallery.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
+  <script src="{{ '/assets/skyground/discord-widget.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
+  {% endif %}
+</body>
+</html>

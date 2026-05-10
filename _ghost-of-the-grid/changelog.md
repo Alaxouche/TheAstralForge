@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: skyground_readme
 title: Changelog
 nav_order: 2
 ---
@@ -8,6 +8,534 @@ nav_order: 2
 
 In this section you will find changelogs for the modlist since its release. You can track down precisely everything that gets added, removed, fixed, tweaked and updated.
 <div style="margin-bottom: 1rem;"></div>
+
+<details markdown="1">
+<summary>v2.5.0.0 - April 20, 2026</summary>
+
+**Update Importance:** MAJOR  
+**SAVE COMPATIBLE** 
+
+___
+
+# Additions:
+- Added Refill Containers
+- Added 0-Engine
+- Added NCPD Night Hunter
+- Added Panam's Warmonster
+- Added Weather Condition - Dress for the Forecast
+- Added Leaky Interiors Fixed
+- Added Urban Garden Grocery Store
+- Added NightlyNow Core
+- Added Immersive E3 NC Fixes and Improvements
+- Added Vehicle Gear Display
+- Added Iconic Weapon Loadouts - Morgan Blackhand
+- Added Reference Path Tracing
+- Added Minimap Widgets
+- Added 0-Engine
+- Added Elite Screens (Ads - Holo)
+- Added Brick Columbarium Fix
+
+# Fixes and Tweaks:
+- Fixed many stutters
+- Fixed some CTDS
+- Fixed some broken scripts 
+- Added many optimization
+- Removed conflicting houses in desert
+- Removed corrupted enemy rarity system
+
+# Removals:
+- Removed AK-77
+- Removed Countach (with Neon)
+- Removed Modern Screens and Ads
+- Removed truly invisible optical camo
+- Removed NonIntrusiveMinimap
+- Removed V's Sierra Sonora Villa with Landing Pad
+- Removed Headhunter Iconic Weapon Pack
+- Removed Enemy Rarity Fixes
+- Removed Mercedes G63 AMG
+- Removed 911 Turbo Trike
+- Removed The Condom Cannon
+- Removed TV Volume Control
+- Removed Fighting Gangs Allowed - Reasonable Police
+- Removed All-Rx Pharma
+- Removed Mustang GTD
+- Removed Immersive Grenades
+- Removed 404NotFound Traffic Lights Resolved (simply 404TLR)
+- Removed Atlantis Club Expanded
+- Removed Give 'Em Guns
+
+# Updates:
+- Updated Inventory Adjustments Hub
+- Updated Now Playing Display
+- Updated Mazda MX-5 Miata
+- Updated Codeware
+- Updated Better Quality Sort
+- Updated They Will Remember
+- Updated Night City Flooded
+- Updated Immersive Night City Fixes - CORE
+- Updated Immersive Night City Fixes
+- Updated KiasuBurger Cyberware Core
+- Updated SPLAT Physics Realistic Ragdoll Overhaul
+- Updated ReImagined
+- Updated General Shadows Fixes
+- Updated ENV Tuner (Weather - Lighting - Vignette Adjustments without Conflict)
+- Updated CyberVision Reshade
+- Updated Anti-Theft Measures - Vehicle Security
+- Updated Butchers Of Night City
+- Updated 3D World Map Fixed
+- updated Vehicle Navigation System (VNS)
+- Updated Untrack Quest Ultimate - No Main Quest re-tracking - No leftovers
+- Updated Use Your Fridge - Food and Drinks Filter
+- Updated Sabbath7991 Weapon and Attachment Shops - Virtual Atelier
+- Updated Draw Distance ReImagined
+- Updated VOIDWEAR Virtual Atelier
+- Updated Immersive Grenades
+- Updated Repeatable NCPD Gigs - WIP
+- Updated Immersion Patch - Minor Activities Quest Fixes
+- Updated Night City Allies - MISSIONS - ADDON
+- Updated Breach Protocol - Personal Link Animations Patch
+- Updated Immersive Healing
+- Updated VEEGEE SHOP 3
+
+</details>
+
+<details markdown="1">
+<summary>v2.4.2.0 - March 31, 2026</summary>
+
+**Update Importance:** MAJOR  
+**SAVE COMPATIBLE** 
+
+___
+
+# Additions:
+- Added Realistic Transport Dispatch
+- Added Requiem Revolver from RE9
+- Added Alligator Snapper from RE9
+- Added Nomad Golf
+- Added Improved Vehicle Lights Draw Distance
+- Added Edgerunner Time Skip Emperor
+- Added NDI Osprey TSR-50
+
+# Fixes and Tweaks:
+- Fixed many stutters
+- Fixed some CTDS
+
+# Updates:
+- Updated Military Accessories - Modular Armor Pads Pack - ArchiveXL
+- Updated Smarter Scrapper
+- Updated New Quest - Encore
+- Updated Immersion Patch - Quest Vehicle Motion Fixes
+- Updated Immersion Patch - Minor Activities Quest Fixes
+- Updated Immersion Patch - Waiting for Dodger quest fixes
+- Updated Untrack Quest Ultimate - No Main Quest re-tracking - No leftovers
+- Updated Chevrolet Camaro SS
+- Updated Airdrops
+- Updated Equipment-EX
+- Updated Deceptious Bug Fixes
+- Updated Watch Your Back
+- Updated Exploded Vehicles Smoke Overhaul VFX
+- Updated Military Accessories - Balaclava Pack - ArchiveXL (2.0)
+- Updated Military Accessories - Modular Armor Pads Pack - ArchiveXL
+- Updated Sabbath7991 Weapon and Attachment Shops - Virtual Atelier
+- Updated FPP Speedometer - See your speed in first person perspective
+- updated Use Your Fridge - Food and Drinks Filter
+- Updated Zenitex Atelier
+- Updated Game World Boundary Removed
+- Updated Mitsubishi Eclipse GSX (1999)
+- Updated Player Body Cyberware Injector
+- Updated Disable Fake Lights with Path Tracing
+- Updated ArchiveXL
+- Updated random LOD fixes
+- Updated Deceptious Bug Fixes
+- Updated VEEGEE SHOP 3
+- Updated Factions Evolved
+- Updated Drug Dealer - Become a Kingpin
+- Updated 3D World Map Fixed
+- Updated Draw Distance ReImagined
+- Updated Night City Traffic Overhaul
+- Updated Custom Perk Framework
+- Updated Draw Distance ReImagined
+- Updated Know What You Say
+- Updated Quickhack Fixes
+- Updated Filthy Access Points
+- Updated Night City Badges
+- Updated Vehicle Navigation System (VNS)
+- Updated Night City Visuals Nulled
+- Updated Night City Allies - Immersive Companion System
+- Updated Rent a Motel
+
+</details>
+
+<details markdown="1">
+<summary>v2.4.0.0 - March 09, 2026</summary>
+
+**Update Importance:** MAJOR  
+**SAVE COMPATIBLE** 
+
+___
+
+# Additions:
+- Added Draw Distance ReImagined
+- Added 404NotFound Traffic Lights Resolved (simply 404TLR)
+- Added Endurance System
+- Added ENV Tuner (Weather - Lighting - Vignette Adjustments without Conflict)
+- Added Anti-Theft Measures - Vehicle Security
+- Added Phone Extension
+- Added Drug Dealer - Become a Kingpin
+- Added random LOD fixes
+- Added Hardcore Netrunning
+- Added Cyberarms Stutter Fix
+- Added Impact Kill Looting Fix
+- Added Realistic Traffic Density
+- Added Arch Byakko
+- Added Quadra Type-66 Classic
+- Added Mustang GTD
+- Added Tanishi T420 Creature
+- Added Tanishi T420 Yolo
+- Added Corpo SUV 2.0 (Ragnar With NCPD Styled Running Text)
+- Added Arch Nazare Racer standalone
+- Added Barghest Hellhound
+- Added Vehicle Selector Frontend
+- Added Arasaka Nowaki Mk.3
+- Added Immersion Patch - Waiting for Dodger quest fixes
+- Added Vehicle Handling Settings
+- Added Cyber Drift 2.0
+- Added Immersive Bike Camera
+- Added True Grip - Slope Traction and Handbrake Handling Fix
+- Added Dynamic Gravity Modifier
+- Added Slope Traction Factor
+- Added Dynamic Downforce
+- Added Semi-automatic Transmission
+- Added Limited Slip Differential
+- Added Cyber Grip
+- Added Better Flashlight
+- Added Better Lanterns
+- Added Give 'Em Guns
+
+# Removals:
+- Removed DiscordRPC2
+- Removed Ford GT40 Mk1
+- Removed BMW M4 CS 2018
+- Removed Cyber Vehicle Overhaul
+- Removed Honda NSX Type R NA1 hycade
+- Removed Mazda RX7 Initial D Stage5
+- Removed Weapon Conditioning
+- Removed Genesis X Gran Berlinetta
+- Removed Lamborghini Countach LP5000 QV
+- Removed Visible Bullets 2.31
+- Removed Volkswagen Super Beetle 1971
+- Removed Lamborghini Miura P400 SV
+- Removed SDH0 Car Dealer Previews
+- Removed Lamborghini Countach Custom WideBody
+- Removed Mazda RX7 WBK
+- Removed Low Quality Crowd No More
+- Removed First Person Camera Mod 1.0
+- Removed Ferrari F40 LB-WORKS
+- Removed Ferrari 458 Spider
+- Removed Mazda RX7 Fortune (Fast and Furious Edition)
+- Removed Lamborghini Diablo VT 6.0
+- Removed Ferrari F40 ZEPHYR Custom
+- Removed Porsche 996 GT3 Mk.1 2000
+- Removed Quadra Phantom
+- Removed Vehicle Lights
+- Removed Vehicle Resources
+- Removed Porsche 911 Targa 4 GTS 2025
+- Removed Porsche Singer 911 Armed
+- Removed Time-based Crowd Density
+- Removed Not So Good Draw Distance Mod
+- Removed Third-Person (TPP) Vehicle Camera Tool
+- Removed Immersive First Person Camera - Extended
+- Removed Mazda RX7 FD
+
+# Fixes and Tweaks:
+- Fixed many stutters
+- Fixed some CTDS
+- Fixed the neck seam for female V
+- Reworked the driving and vehicle simulation system
+- Reworked the modded vehicles and weapons integration
+
+# Updates:
+- Updated Improved Northside Motel
+- Updated Subleader Hair Pack - CCXL
+- Updated M50 Military Gas Mask - ArchiveXL
+- Updated Weapon Sound Remake
+- Updated Limited HUD
+- Updated Skippy-chan
+- Updated Use Your Fridge
+- Updated Lotus Esprit Turbo
+- Updated Zenitex Atelier
+- Updated Immersion Patch - Minor Activities Quest Fixes
+- Updated Immersion Patch - Quest Vehicle Motion Fixes
+- Updated Military Accessories - Balaclava Pack - ArchiveXL
+- Updated Go on a Date (Panam) - Side romance activity
+- Updated Night City Traffic Overhaul
+- Updated Outdoor V Canyon
+- Updated Aerix LUT - Photorealism
+- Updated APEX - Sonora Canyon and Safehouse
+- Updated Repeatable NCPD Gigs - WIP
+- Updated EconomyPunk
+- Updated Military Palette Texture Library
+- Updated Sheriff's Lasso
+- Updated Dogtown Airship ( with Apartment and NPC Party Below )
+- Updated NC Fashion Virtual Atelier
+- Updated Red Queens Club Enhanced
+- Updated Corpse Loot Fix
+- Updated Lizzie's Bar Enhanced ( with Apartment )
+- Updated Regina's NCPD Headquarters
+- Updated The Moth Bar Lair
+- Updated Crunch Plaza Expanded ( Cut Content )
+- Updated Viktor Vektors Garage ( Fully Enterable )
+- Updated VEEGEE SHOP 3
+- Updated Totentanz Club Enhanced
+- Updated Factions Evolved
+- Updated Deceptious Bug Fixes
+- Updated CyberVision Reshade
+- Updated CyberVision ENV
+- Updated Manavortex Material Library
+- Updated Night City Allies - Immersive Companion System
+- Updated Immersive Healing
+- Updated Sabbath7991 Weapon and Attachment Shops - Virtual Atelier
+- Updated NIGHT CITY ALIVE
+
+</details>
+
+<details markdown="1">
+<summary>v2.3.0.0 - March 01, 2026</summary>
+
+**Update Importance:** MAJOR  
+**SAVE COMPATIBLE** 
+
+___
+
+# Additions:
+- Added Night City Allies - Immersive Companion System
+- Added Carnage Grenade Launcher
+- Added Immersive Shower
+- Added (Poser) Neon Drift Solo Car Poses - Archer Edition
+- Added Fluff Vendor Fixes
+- Added Engine Oil 
+- Added Filthy Access Points
+- Added Use Your Fridge
+- Added Weather Probability Rebalance
+- Added More Inventory Filters (with Food Filter) - Update 2.2
+- Added Arch Dirt bike
+- Added Watch Your Back
+- Added Developer_Toggles - Easy Access to Hidden FPS and Visuals
+- Added HDD Performance Booster
+- Added Immersive First Person Camera - Extended
+- Added SOR-22C and Sabertooth Iconic
+- Added Manavortex Material Library
+- Added Totentanz Club Enhanced
+- Added Night City Badges
+- Added VEEGEE SHOP
+- Added Dave X Veegee Mustang Jacket outfit
+- Added Casual Style Outfit Pt4 - Archive XL
+- Added Cap with Customisable Logos - ArchiveXL (fem V)
+- Added Japantown Greenery
+- Added The Moth Bar Lair
+- Added Crunch Plaza Expanded ( Cut Content )
+
+# Removals:
+- Removed Custom Character - Edgerunners Lucy
+- Removed extra loot
+- Removed Legacy - Enhanced Police Lights System
+- Removed blackwall
+- Removed The Division Hunter Outfit
+- Removed CPU Optimization Plus.
+- Removed BMW R NineT
+- Removed Kurt Hansen's Cyber Arms for Masc and Fem V
+- Removed Dynamic Panam
+- Removed Dynamic Ward
+- Removed Dynamic Jackie
+- Removed dynamic Takemura
+- Removed Time weather and location aware Judy
+- Removed Weapon Magazine Reload
+- Removed Ultra Plus Best Performance and Visuals for Everyone
+- Removed Cyberware Improved
+- Removed Clothing Improved
+- Removed Weapon Muzzles Improved
+- Removed Weapons Improved
+- Removed Weapon Suppressors Improved
+- Removed Armor Improved
+- Removed Weapon Mods Improved
+
+# Fixes and Tweaks:
+- Fixed many stutters
+- Fixed some CTDS
+- Rebalanced loot
+- Reworked the performance optimization mods with more accurate and stable ones
+
+# Updates:
+- Updated NPC CCXL Hair - Masc
+- Updated NIGHT CITY ALIVE
+- Updated Virtual Atelier
+- Updated Deceptious Bug Fixes
+- Updated Striker SMG
+- Updated Immersive Healing
+- Updated Virtual Car Dealer - Sorting
+- Updated Lotus Esprit Turbo
+- Updated Shaitan Black Market Vendor (The Mercs' Alley - Kabuki)
+- Updated NC Autoshop's Repair
+- Updated Rent a Motel
+- Updated Immersive Grenades
+- Updated Shift (Customizable Dynamic Vehicle Camera)
+- Updated Honda CRX Mugen
+- Updated Audi RSQ
+- Updated Ducati 916
+- Updated Chevrolet Camaro SS JL4
+- Updated Nissan Silvia S15
+- Updated Aprilia RS660
+- Updated Audi R8 V10+
+- Updated Corpse Loot Fix
+- Updated VEEGEE SHOP 3
+- Updated CyberVision Reshade
+- Updated CyberVision ENV
+- Updated Immersion Patch - Minor Activities Quest Fixes
+- Updated Sabbath7991 Weapon and Attachment Shops - Virtual Atelier
+- Updated Lotus Esprit Turbo
+- Updated Deceptious Bug Fixes
+
+</details>
+
+<details markdown="1">
+<summary>v2.2.0.0 - February 17, 2026</summary>
+
+**Update Importance:** MAJOR  
+**SAVE COMPATIBLE** 
+
+___
+
+# Additions:
+- Added All RX Pharma - Virtual Atelier
+- Added All-Rx Pharma
+- Added Corpse Loot Fix
+- Weapon Muzzles Improved
+- Added Armor Improved
+- Added Clothing Improved
+- Added Weapon Suppressors Improved
+- Added Weapons Improved
+- Added Cyberware Improved
+- Added Weapon Mods Improved
+- Added Competition Swimsuit - Archive XL
+- Added Honda CRX Mugen
+- Added APEX - Sonora Canyon and Safehouse
+- Added Renaissance Punk - Perk Scaling
+- Added Fighting Gangs Allowed - Reasonable Police
+- Added Idle Anywhere
+- Added TV Anywhere
+- Added Computer Anywhere
+- Added Kolac Expanded
+- Added Silent Bodies
+- Added Honda NSX Type R NA1
+- Added XRX Leotard 2024 Archive XL
+- Added Gripped Up (global driving traction mod)
+- Added Ranger Combat Boomerang
+- Added Dogtown Hideout - ArchiveXL
+- Added Japantown Greenery
+- Added TV Volume Control
+- Added Radio Volume Control
+- Added Romance Hangouts Enhanced
+- Added Holy Focking Vending Machines - No More Infinite Junk Food
+- Added Longer Timed Choices (and NPC Dialogue Reminders)
+- Added Biblically Accurate Takemura - Goro's 2079 hair
+- Added Tears in Rain - Cyberpunk Secret Immersion Extended
+- Added Radial Menu Upgrade for Idle-Computer-TV Anywhere mods
+- Added A Moment of Contemplation - Cinematic Stillness HUD
+
+# Removals:
+- Removed Responsive V
+- Removed Immersive Road Crossing
+- Removed Immersive Odometer and Fuel System
+- Removed heavy outfits mods and duplicate cars
+
+# Fixes and Tweaks:
+- Fixed some stuttering due to NPC influenced mods
+- Fixed some CTDS
+- Adjusted difficulty setting for the game to be more balanced end game
+- Showed Note column in mo2 so you can see fomod mods
+- Removed the annoying function of easy death in cars and the fueling system
+- Many new additions, updates and mods removed
+
+# Updates:
+- Updated General Shadows Fixes
+- Updated Cop Killer
+- Updated Quickhack Fixes
+- Updated Military Palette Texture Library
+- Updated Yaiba Fullmaru Nomad Monster
+- Updated Teeth and Braces CCXL
+- Updated Know What You Say
+- Updated FlowerShop - Virtual Atelier Store
+- Updated EconomyPunk
+- Updated SPLAT Physics Realistic Ragdoll Overhaul
+- Updated Adshield Atelier Store - Virtual Atelier
+- Updated ReLUX (Lighting Redux - Accurate Lighting)
+- Updated ReImagined
+- Updated Audi R8 V10+
+- Updated Aprilia RS660
+- Updated Nissan Silvia S15
+- Updated Chevrolet Camaro SS JL4
+- Updated Virtual Car Dealer
+- Updated Ducati 916
+- Updated Audi RSQ
+- Updated Repeatable NCPD Gigs - WIP
+- Updated KiasuBurger Cyberware Core
+- Updated Inorganic Materials
+- Updated Third-Person (TPP) Vehicle Camera Tool
+- Updated Johnny Appearances Overhaul
+- Updated MK.8 Heavy Assault Shotgun
+- Updated Dogtown Airship ( with Apartment and NPC Party Below )
+- Updated Immersive Night City Fixes
+- Updated Immersive Night City Fixes - CORE
+- Updated Not So Good Draw Distance Mod
+- Updated Night City Things Nulled
+- Updated Night City Visuals Nulled
+- Updated Shift (Customizable Dynamic Vehicle Camera)
+- Updated Pet Your Cat
+- Updated I Really Want To Stay At Your House - Judy
+- Updated I Really Want To Stay At Your House - Kerry
+- Updated I Really Want To Stay At Your House - Panam
+- Updated I Really Want To Stay At Your House - River
+- Updated Apartment Cats - Japantown
+- Updated Apartment Cats - The Glen
+- Updated Apartment Cats - Corpo Plaza
+- Updated Auto Drive Enhanced
+- Updated Sabbath7991 Weapon and Attachment Shops - Virtual Atelier
+- Updated Kitsch Cyber Legs for Masc and Fem V
+- Updated Ultra Plus Best Performance and Visuals for Everyone
+- Updated Aerix LUT - Photorealism
+- Updated Immersive Grenades
+- Updated Night City Flooded
+- Updated Rent a Motel
+- Updated VEEGEE SHOP 3
+- Updated Apollo Scout - A Militech x Brennan Collaboration
+- Updated Improved Aldecaldos Camp
+- Updated Tyger Cache - New Iconic Weapons
+- Updated Immersion Patch - Minor Activities Quest Fixes
+- Updated Thorton Merrimac Necromancer
+- Updated Outdoor V Canyon
+- Updated Merc Protocol - Perk Gameplay Expansion
+- Updated Custom Perk Framework
+- Updated Ducati Supersport
+- Updated NCPD and MaxTac Spawn Tweak (District specific police behavior)
+- Updated They Will Remember
+- Updated Immersive Delamain
+- Updated Dedra's Truck Simulator (Convoy Delivery Mod)
+- Updated Night City Traffic Overhaul
+- Updated Go on a Date (Panam) - Side romance activity
+- Updated D-101 Longbow DMR
+- Updated Rita Wheeler Romanced
+- Updated Here's Brendan
+- Updated 3D World Map Fixed
+- Updated Cyber Neck for V -CCXL-
+- Updated Codeware
+- Updated Aurore Romanced (Lady Marmalade)
+- Updated MK.78 SAW
+- Updated Canyon Fixes
+- Updated Better Quality Sort
+- Updated Driver Combat 2.0
+- Updated ArchiveXL
+
+</details>
 
 <details markdown="1">
 <summary>v2.1.0.0 - January 11, 2026</summary>

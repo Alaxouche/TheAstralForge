@@ -1,8 +1,9 @@
 ---
-layout: default
+layout: skyground_readme
 title: Linux Installation Guide
 parent: Installation Guide
 nav_order: 7
+reading_mode_default: true
 ---
 
 # Wunduniik on Linux: A User's Guide 🐧

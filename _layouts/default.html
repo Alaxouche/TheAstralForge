@@ -13,6 +13,18 @@ layout: table_wrappers
   {% include icons/icons.html %}
   {% include components/sidebar.html %}
   <div class="main" id="top">
+    {% assign active_alert = site.data.alerts | where: "enabled", true | first %}
+    {% if active_alert %}
+      <div class="site-alert site-alert--{{ active_alert.type | default: 'info' }}">
+        <div class="site-alert__inner">
+          <span class="site-alert__label">{{ active_alert.label | default: 'Alert' }}</span>
+          <span class="site-alert__message">{{ active_alert.message }}</span>
+          {% if active_alert.link_url and active_alert.link_text %}
+            <a class="site-alert__link" href="{{ active_alert.link_url | relative_url }}">{{ active_alert.link_text }}</a>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
     {% include components/header.html %}
     <div id="main-content-wrap" class="main-content-wrap">
       {% include components/breadcrumbs.html %}

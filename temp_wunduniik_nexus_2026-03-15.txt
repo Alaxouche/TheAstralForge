@@ -1,0 +1,71 @@
+# Wunduniik
+
+[Website](https://theastralforge.com) | [Installation Guide](https://theastralforge.com/wunduniik/installation-guide/) | [Load Order](https://theastralforge.com/wunduniik/loadorder/) | [Changelog](https://theastralforge.com/wunduniik/changelog/) | [Known Issues](https://theastralforge.com/wunduniik/known-issues/) | [Discord Support](https://discord.gg/vKuB7nazBk) | [Ko-fi](https://ko-fi.com/alaxouche) | [Patreon](https://patreon.com/Alaxouche)
+
+Wunduniik is a flagship Skyrim Special Edition collection focused on high-end visuals, immersive gameplay, and broad content depth.
+Goal: transform Skyrim into a modern, large-scale experience while keeping a coherent world and progression loop.
+
+---
+
+## Main Features
+
+- Large visual overhaul: upgraded textures, lighting, weather, and scene fidelity.
+- Gameplay overhauls: combat, progression, and systems tuned for long campaigns.
+- Expanded content: new encounters, equipment, and world activity density.
+- Quality of life layer: better interface flow, fixes, and smoother day-to-day play.
+- Curated mega-list design: extensive but maintained as a cohesive package.
+
+---
+
+## Before You Start
+
+- Skyrim Special Edition 1.6.1170 required.
+- Anniversary Edition required.
+- Legit Steam copy required.
+- SSD installation strongly recommended.
+- Nexus Mods account required (Premium recommended for speed).
+- Add game and modlist folders to antivirus exclusions.
+
+---
+
+## Quick Install
+
+1. Install required runtimes (.NET Runtime and Visual C++ x64).
+2. Install Wabbajack in a dedicated folder.
+3. Search for Wunduniik in Wabbajack.
+4. Select clean install/download paths outside protected Windows folders.
+5. Run full installation and wait for completion.
+6. Launch only through Mod Organizer profile/launcher.
+7. Follow the complete guide before first gameplay session.
+
+---
+
+## How To Use The List
+
+- Always launch through Mod Organizer.
+- Keep exact required game version and AE setup.
+- Read changelog notes before every update.
+- Back up saves before major beta or non-save-compatible updates.
+
+---
+
+## Quick Troubleshooting
+
+- Download failures: rerun Wabbajack and retry.
+- CTD after major update: verify save compatibility and update notes.
+- Heavy-script setup issues: allow first load/setup to fully finish before testing changes.
+- Performance mismatch: use the recommended profile where applicable.
+
+---
+
+## Recent Update Highlights
+
+- v7.0.0.0-Beta02: major non-save-compatible beta update, broad stability fixes, script bloat reduction, and loading-time improvements.
+- v7.0.0.0-Beta01: major non-save-compatible content and systems expansion with broad mod stack refresh.
+
+---
+
+## Support
+
+For bug reports, install help, and suggestions, join Discord.
+Include list version, logs, and clear repro steps for faster support.
