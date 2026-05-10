@@ -10,6 +10,114 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v2.6.0.0 - May 10, 2026</summary>
+
+**Update Importance:** MAJOR  
+**SAVE COMPATIBLE** 
+
+___
+
+# Additions:
+- Added Minimap Widgets
+- Added ACU - Character Preset Manager
+- Added Nova Optics (Vehicle Exposure Fix and Visuals Customization)
+- Added Law Enforcement Overhaul Improved
+- Added Street Sense
+- Added Combat Evolved
+- Added It Wasn't Me
+- Added Discord RPC 2
+- Added Material EYEBROWS - Material Instance Edit - BOTH V and NPC
+- Added Beautiful MAKEUP - CCXL - Realistic Eyeshadows and Eyeliners - BOTH V
+- Added MAKEUP ENHANCER - Realistic Eyeshadows and Eyeliners - Noise Decal Fix - Both V - NPCs
+- Added Immersion Patch - Cyberpunk Story Quest Fixes
+- Added Overclocked Lynx Paws - Wall Run Climb Jump Roll
+- Added Diana Headgear Collection Modular Archive XL
+- Added Ultra Plus Best Performance and Visuals for Everyone
+- Added Reinforcements System - Infinite combat loop fix
+- Added Faster Rainmap and Distant Shadows
+- Added Happier Tower Ending (Judy)
+- Added The Thin Blue Line
+- Added Sticky Grenades
+- Added Upgradable Sticky Grenades
+- Added Better Baton Beatdown
+- Added True Sunglasses
+- Added True Night Vision
+- Added True First Person Camera
+- Added Midnight Acquisition
+- Added Immersive Throwables
+- Added Better Traffic Lights
+- Added Multiple Use Consumables
+
+# Fixes and Tweaks:
+- Fixed CTD entering vehicle
+- Fixed Jackie's face
+- Even less stutters
+- Re-added Ultra Plus for more performance and same visuals
+
+# Removals:
+- Removed FreeRunner
+- Removed FreeRunner - WallRunner Extension
+- Removed Immersive Glasses 
+- Removed Marlboro Livery (for Top Secret V12 Supra)
+- Removed UltimateKillCounter-1.17
+- Removed Free Lean - Manual Leaning Anywhere
+- Removed All RX Pharma - Virtual Atelier
+- Removed HDD Performance Booster
+- Removed Developer_Toggles - Easy Access to Hidden FPS and Visuals
+- Removed Watch Your Back
+- Removed They Will Remember
+- Removed ENV Tuner (Weather - Lighting - Vignette Adjustments without Conflict)
+- Removed Cosmopolitan Night city - Lite edition
+- Removed CP for CNC-Lite and Polyglot V OR Change V's native Language
+- Removed Polyglot V
+
+# Updates:
+- Updated Cyberware-EX
+- Updated Undermine Quest Series
+- Updated E3 Open Police Station
+- Updated Weather Switcher (Change Weather - Control Time - Customize Clouds)
+- Updated Decals Flickering Fix
+- Updated Compact Abilities
+- Updated Trace Position Overhaul
+- Updated Draw Distance ReImagined
+- Updated ReImagined
+- Updated RedData
+- Updated Always First Equip
+- Updated Headlamp - ArchiveXL (fem V)
+- Updated Stealthrunner - Stealth Gameplay Expansion
+- Updated Driver Combat Fixes
+- Updated SPLAT Physics Realistic Ragdoll Overhaul
+- Updated The RVC00N Dumpster - Collarless CrystalJock Bomber (M-F) (GS) (AXL)
+- Updated Manavortex Material Library
+- Updated Limited HUD
+- Updated VegaCPMods Resources
+- Updated New Lifepath Intro - Fresh Start
+- Updated Better Flashlight
+- updated Misc NC Fixes
+- Updated ArchiveXL
+- Updated Night City Allies - Immersive Companion System
+- Updated Night City Traffic Overhaul
+- Updated Aurore Romanced (Lady Marmalade)
+- Updated NC Fashion Virtual Atelier
+- Updated Big Gun Pack
+- Updated Sneakers 01 (fem V) - ArchiveXL
+- Updated Breach Protocol - Personal Link Animations Patch
+- Updated Leaky Interiors Fixed
+- Updated Butchers Of Night City
+- Updated Codeware
+- Updated Panam's Warmonster
+- Updated Drug Dealer - Become a Kingpin
+- Updated VEEGEE SHOP 3
+- Updated Weather Condition - Dress for the Forecast
+- Updated Sabbath7991 Weapon and Attachment Shops - Virtual Atelier
+- Updated Vans Old Skool v2 (fem V) - ArchiveXL
+- Updated Immersion Patch - Minor Activities Quest Fixes
+- Updated Iconic Weapon Loadouts - Morgan Blackhand
+- Updated Untrack Quest Ultimate - No Main Quest re-tracking - No leftovers
+
+</details>
+
+<details markdown="1">
 <summary>v2.5.0.0 - April 20, 2026</summary>
 
 **Update Importance:** MAJOR  
