@@ -10,6 +10,40 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v1.4.1.0 - May 11, 2026</summary>
+
+**Update Importance:** MEDIUM  
+**SAVE COMPATIBLE**
+
+___
+
+# Additions:
+- Added Reticles Color(Ship and MultiTool Weapon) updated
+- Added Mining Multiplier
+
+# Fixes and Tweaks:
+- Potential fix for CTD on launch
+- Fixed invisible reticle
+
+# Removals:
+- Removed DUD'S - Terra Firma 3
+- Removed DUD'S - Spaceship Flight
+- Removed Reticles Color(Ship and MultiTool Weapon)
+
+# Updates:
+- Updated Exosolar's and Babs' Clear Visor Scanner and Surveyor and Custom Color Binoc Panels
+- Updated Simple Colored System Info
+- Updated Balanced MT Cabinet Lighting
+- Updated Colossal Corvette build area
+- Updated Exosolar's and Babs' Quick Scan with Range Boost
+- Updated Exosolar's and Babs' Beyond Base Building
+- Updated Astroport - Better Trading Posts
+- Updated Faster Scanning
+- Updated More Materials
+
+</details>
+
+<details markdown="1">
 <summary>v1.4.0.0 - April 20, 2026</summary>
 
 **Update Importance:** MAJOR  
