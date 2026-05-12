@@ -8,6 +8,113 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v7.2.0.0 - May 11, 2026</summary>
+  
+**Update Importance:** MAJOR  
+**NOT SAVE COMPATIBLE** 
+
+---
+
+### Additions:
+- Added A Legacy Of Stone - Nordic Ruin Remesh
+- Added New Creature Animation - Spider
+- Added Faster Cell Lookup
+- Added Faster File Copy
+- Added New Armory Series - Argonian Weapons
+- Added Reactive Arsenal SKSE
+- Added SigmaJelly - Katana animations - 1st person
+- Added The Mists of Blackreach - New Mist and Fog VFX
+- Added Mesh patches for Lux and Lux Orbis
+- Added Arrows Drift From Wind
+- Added Grassreach - A Blackreach Grass Mod
+- Added JK's Optimised Exteriors - Drunken Huntsman
+- Added Mammoth Expansion - Mihail Monsters and Animals - Fluffy
+- Added More Realistic Fur and Antlers for Elk Trophies
+- Added Glowing Mesh Fix SKSE
+
+### Removals:
+- Removed 3D Khajiit Brows SE
+- Removed HDT-SMP Traveler's Backpack - My Version
+- Removed Kellan HDT-SMP Armor - My Version
+- Removed High Poly Mammoth Expansion - Mihail Animals Fluffy
+- Removed More realistic fur and antlers for wall Mounted Male Elks
+- Removed More realistic fur and antlers for Hearthfire Elks
+- Removed SkyTactics - Dynamic Combat Styles
+- Removed Dreadful Dead Men's Respite - FuzzBeed's Dungeons
+- Removed Venerable Volunruud - FuzzBeed's Dungeons
+- Removed Volatile Valthume - FuzzBeed's Dungeons
+- Removed Subzero Skytemple Ruins II - FuzzBeed's Dungeons
+- Removed Supernatural Sovngarde Portal - Glowing Portal Effects
+- Removed Fur Shader Textures for Xavbio Retextures
+- Removed SkyParkour v2 - Invisible Markers
+- Removed JellyFishInLoop SkyParkour animations
+- Removed Animated Ice Floes - LOD textures Patch
+- Removed Horse Save Load Fix SKSE
+- Removed BFCO Universal Support
+- Removed Stuck Expression Fix for Modular SMP Hairstyles (Patch)
+- Removed Seamless Saving - Skyrim Save Accelerator
+- Removed Stuck on Screen Load Door Prompt Fix SKSE
+
+### Fixes and Tweaks:
+- Fixed some CTDs when waiting caused by NPC IA process fix and AP
+- Fixed Riften ground seam
+- Fixed dragons not appearing due to missing models dependency
+- Fixed NPC explosions resulting in CTDs
+- Fixed all the NPC texture issues
+- Fixed some sound issues and inconsistencies
+- Fixed most if not all of the naked NPCs issues
+- Changed the NPC merge tool from EASYNPC to NPC Plugin Tool 2, resulting in less issues and more precision
+- Added a system of skill decay: skills will decay over time if you dont use them
+- Added an optional setting in the dashboard: permadeath mode
+- Added the missing power attack condition
+- Drastically reduced again booting time 
+- Drastically reduced loading screen time
+- Added working footprints system
+
+### Updates:
+- Updated RMB SPIDified - Legacy of Ysgramor
+- Updated Disable Turn Animation NG
+- Updated Remiel - Dwemer Specialist
+- Updated DynDOLOD DLL NG and Scripts
+- Updated Icy Cave Remaster
+- Updated Embers XD(Less Poly)
+- Updated Dawnguard Arsenal - SPID and CID
+- Updated Icy Mesh Remaster
+- Updated Light Placer
+- Updated Snozz's Sunderstone - Patch Collection
+- Updated Windcaller - Greybeard Inspired Robes and Staff
+- Updated Open Animation Replacer
+- Updated Open Animation Replacer - Math Plugin
+- Updated MfgFix NG
+- Updated RMB SPIDified - New Legion
+- Updated RMB SPIDified - Heavy Legion
+- Updated Northern Roads - Patches Compendium
+- Updated Cisterns of Skyrim - A Rain Barrel and Blood Barrel Replacer
+- Updated Occlusion for Quest Mods
+- Updated Cold Breath NG
+- Updated Armory Extended - Saints and Seducers
+- Updated Spell Perk Item Distributor
+- Updated Project Bro He's There - Fix followers not starting combat
+- Updated RMB SPIDified - Sons of Skyrim
+- Updated SkyUI
+- Updated BFCO - Attack Behavior Framework (SSE AE VR)
+- Updated First Person FOV and Tween Menu Fix SKSE
+- Updated Solitude - Square of Akatosh
+- Updated Modding My Business (M.M.B) - Ivy Random Patch Collection
+- Updated KS Hairdos - HDT-SMP for Khajiit
+- Updated Dynamic Footprints SKSE
+- Updated Staff Enchanter - Praedys's Meshes
+- Updated JK's Volkihar - Sorcerer - Patch
+- Updated Copy Paste In Menus
+- Updated SkyParkour - A SkyClimb Addon - 360 and Hold to Climb
+- Updated RMB SPIDified - Core
+- Updated State Behavior Framework
+- Updated SIGMA - Fisting animations - 1st person
+- Updated Stuck on Screen Auto Load Door Fix SKSE
+
+</details>
+
+<details markdown="1">
 <summary>v7.1.0.0 - May 02, 2026</summary>
   
 **Update Importance:** MAJOR  
