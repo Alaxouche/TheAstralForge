@@ -8,7 +8,7 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
-<summary>v7.2.0.0 - May 11, 2026</summary>
+<summary>v7.2.0.0 - May 13, 2026</summary>
   
 **Update Importance:** MAJOR  
 **NOT SAVE COMPATIBLE** 
@@ -56,20 +56,14 @@ In this section you will find changelogs for the modlist since its release. You 
 - Removed Stuck on Screen Load Door Prompt Fix SKSE
 
 ### Fixes and Tweaks:
+- Added RPG HUD elements (unlooted corpse marker, quest giver NPC marker,...)
+- Added the Nexus Collection Page
 - Fixed some CTDs when waiting caused by NPC IA process fix and AP
 - Fixed Riften ground seam
-- Fixed dragons not appearing due to missing models dependency
-- Fixed NPC explosions resulting in CTDs
-- Fixed all the NPC texture issues
-- Fixed some sound issues and inconsistencies
-- Fixed most if not all of the naked NPCs issues
-- Changed the NPC merge tool from EASYNPC to NPC Plugin Tool 2, resulting in less issues and more precision
-- Added a system of skill decay: skills will decay over time if you dont use them
-- Added an optional setting in the dashboard: permadeath mode
-- Added the missing power attack condition
+- Fixed many instability/Ctd/freezes cases
 - Drastically reduced again booting time 
 - Drastically reduced loading screen time
-- Added working footprints system
+- Removed unavailable/outdated mods
 
 ### Updates:
 - Updated RMB SPIDified - Legacy of Ysgramor
