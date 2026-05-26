@@ -10,6 +10,360 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v3.0.0.0 - May 25, 2026</summary>
+
+**Update Importance:** MAJOR  
+**SAVE COMPATIBLE** 
+
+___
+
+# Additions:
+- Added The Nullifier
+- Added Immersive Odometer and Fuel System
+- Added Dying Night Counts
+- Added Environmental Weapon Handling
+- Added Holo Memories
+- Added Zenitex Swimsuit - ArchiveXL
+- Added LUT Switcher 2 (Custom Pack Support - LUT Adjustments - Hotkeys)
+- Added Informative Healthbar
+- Added Ray Traced Lighting Fixes
+- Added Epistrophy Delamain Despawn Fix
+- Added Dog Town Upscaled Lasers
+- Added CyberShell
+- Added Pachinko Button - Gambling System
+- Added Playable Blackjack - Gambling System
+- Added Ah shit. Here we go again
+- Added Ads - You look lonely
+- Added Quadra Type-66 Phantom
+- Added Chevillon Thrax Invictus
+- Added Ford Hennessey VelociRaptor 6x6 (weaponized)
+- Added LNCLN KONTINENTAL
+- Added Porsche Turbo S Police
+- Added Ford Crown Victoria Interceptor
+- Added World Advert Configurator
+- Added VEHICLE LIGHTS (REDmod)
+- Added Normal Umbrellas
+- Added Metro System
+- Added Metro rE3worked
+- Added Enhanced Police Lights System
+- Added Joi from Blade Runner in Dogtown
+- Added Cloudy NC - Big and Fluffy - Weather State Swaps
+- Added Blade Runner Radio
+- Added Blade runner and blade runner 2049 songs replace 95.2 SAMIZDAT RADIO
+- Added Blade Runner 2077 kd6-3.7's Licence plate scratched Bump map Metallic
+- Added Nitrous SFX replacers
+- Added Quadra Turbo-Z
+- Added Loot Quantity Text (2.31 Supported)
+- Added Finished Quests Sorted (2.31 Supported)
+- Added Proxima's Apartment Emporium
+- Added Map LUT Begone
+- Added Auto Weather Scheduler - with Nova City Compatibility (Fix persistent sunny weather)
+- Added Romance Replays
+- Added Arcade Anywhere
+- Added Stock Market and News System
+- Added CYBERPUNK 2077 UNOFFICIAL DLC 2
+- Added Platform Creepers (fem V) - ArchiveXL
+- Added E3 Smart Windows
+- Added Pre-2.0 NCPD Scanner Map Icons
+- Added Retrothrusters QoL
+- Added Hammers are not bats (tooltip fix)
+- Added No Spillover out of combat
+- Added Dynamic Wanted Stars
+- Added Delete -A Few Weeks Tops- Vik Voiceline
+- Added DLC Liberation Protocol
+- Added Bug Fix - Full-Auto Tech Weapons Bolt Duration
+- Added supressor replacer for XC-10 Strix
+- Added Visual Holsters (Automatic Clothes Swap)
+- Added Unequip unremovable scopes
+- Added Stats Bar UI Fix
+- Added Smart Gun Lock Speed Fixes
+- Added Replace Weapon Mods
+- Added Quest Widget - Right Aligned
+- Added Passenger Targeting Fix
+- Added No Default Equipped Weapon In Inventory
+- Added No uncrouching when melee attacking from stealth
+- Added Metel Ironsight Adjustment
+- Added No Camera Auto Centering
+- Added Inside The Metro - Walk In Train Carriage
+- Added Gamepad Button Hold Indicator Fix
+- Added First Equip Fix
+- Added Disappearing Enemy Health Bar Fix
+- Added Crosshair simple redone
+- Added Contacts Redux - Live Online Status Indicators - Improved Contact List UI - Visible Avatars - Smart Sorting - Phone UI Overhaul
+- Added Computer Scrolling
+- Added Compact Weapon Mod Slots - Better UI for Extra Attachments
+- Added Bug Fix - Recon Grenade Bouce Fix
+- Added Buzzsaw VFX Fix
+- Added Barbed Wire Knockout Effect Disabled
+- Added 2nd Amendment Sign - Unpixelated
+- Added A Gift For Jack - Columbarium
+- Added In Cold Blood - NPC Execution Fix
+- Added Impact Kill Looting Fix
+- Added HQ Sushi
+- Added Praedy's 77 Retexture
+- Added Better Surfaces Textures
+- Added Preem Menu (Background Blur - Pause Menu - Animated Snow)
+- Added Night City Immersive Debris
+- Added AI Trigger Overhaul - More Perceptive NPCs
+- Added The RVC00N Dumpster - Stinky Croptop (M-F) (GS) (AXL)
+- Added The RVC00N Dumpster - Stinky Leather Jeans (M-F) (GS) (AXL)
+- Added The Fifth Element Collection (M-F) (GS) (AXL)
+- Added The D4D Store - Dad Shirts (M-F) (GS) (AXL)
+- Added NISSAN GT-R 'Lone Wanderer'
+- Added Vehicle Speed Unlimiter
+- Added HUD Painter
+- Added Non-Intrusive Minimap (WIP)
+- Added GHOST UI (HUD Painter)
+- Added Allow Highest AI LOD
+- Added Not So Good Draw Distance Mod
+- Added Bloat Begone (Remove Unwanted Menu Elements and Ads)
+- Added Obital Air E3 Restored
+- Added Night City Skyscraper Rooftop Collision
+- Added Greaser E3 Restored
+- Added North Oak Impala Automatics Climbable Tower
+- Added Photomode Tweaks
+- Added CET Window Manager
+- Added Immersive First Person
+- Added Immersive Stamina FX
+- Added AntiFreeze - Micro Stutter Begone
+- Added PT reflections fix
+- Added Authentic Shift (QoL Gear Ratios Shifts Audio Sound ASMR and OPTIONAL Tuning System)
+- Added Glen Apartment - Pool Table (8-Ball Fix)
+- Added RDNA 3 Optimization Mod for PathTracing - RayTracing
+- Added Item Records Fixes
+- Added Game Time Tweaks
+- Added High Quality Vinyl Records
+- Added Beatable Brats
+- Added Beatable Brats Phantom Liberty
+- Added Auto Drive Cinematic Camera Extended
+- Added CrossWALK Audio Restoration
+- Added Children Sound More Like Children
+- Added Immersive Meditations - Unmarked Locations
+- Added Night City - Towers of Light (a.k.a. Holographic Beams)
+- Added Dance Off
+- Added Better Access Point Hacking Netrunner Rewards
+- Added Automatic Tech Weapon Handling (Like the Raiju)
+- Added HQ Holo Girl
+- Added FrameGen Ghosting 'Fix' for FSR 3.1 FG
+- Added Ghosts of Night City - Small Immersive Encounters
+- Added Ghosts of Night City Pt 2 - Small Immersive Encounters
+- Added I Really Want to Stay at Your.. Dwelling
+- Added Throttled Activity Log
+- Added Stand After Sliding
+- Added Rasetsu screens bug fix
+- Added Flatlined Exit
+- Added Clean Computer Wallpaper
+- Added Vectors of Joi
+- Added Big Hologram Ads
+- Added Immersive Road Crossing
+- Added Atari Canyon - Blade Runner
+- Added Darker Asphalt Textures
+- Added The Nullifier
+- Added Nova City 2 (Custom Weather and Lighting - Exposure Overhaul)
+- Added Enhanced Air Traffic
+- Added Blade Runner Spinner
+- Added Let There Be Flight
+- Added Suppressor Pack
+- Added Suppressor Pack 2
+- Added Blade Runner 2077 Proxima Edition V7900.0 Final Cut
+- Added Blade Runner 2049 Blaster PK-D FKM890
+- Added Blade Runner Blaster
+- Added Shaky Cam - Adjustable camera shake for that extra immersion
+- Added Immersive Breathing
+- Added Contextual Motion Blur
+- Added Locking Down Watson
+- Added Cyberpunk Bikes - Edge
+- Added Raven Suit Archive XL
+- Added Raven - Flowy Long Hair - CCXL Hair
+- Added Disable Quest Weather
+- Added HCAR
+- Added Drive an Aerial Vehicle - Flight Mod Using AV and Helicopter
+
+# Fixes and Tweaks:
+- Fixed most of the stutters issues
+- Fixed major performance leaks
+- Fixed issues with overhauled locations
+- Fixed broken advertisements
+- Removed broken/outdated/deleted mods
+- List is now grim/rainy most of the time, as it's blade runner inspired
+
+# Removals:
+- Removed Lucy Last Line Original Hyst Body
+- Removed e3 2018 bradbury district
+- Removed Better Buildings
+- Removed KillsCounterDisplay
+- Removed Stinky Crop Top - Vanilla Body (M) (GS)
+- Removed MascV - Kylin's Fluffy Wolfcut
+- Removed Shiny Tight Pants - Vanilla Body (M)
+- Removed V's Modest Netrunner Apartment - Garage
+- Removed SPC Open 2.3
+- Removed Flying Tank
+- Removed Veegee Casual Suit - Both V_vanilla
+- Removed Konpeki Plaza Restored 2.31.1
+- Removed 2017 Mercedes AMG GT R
+- Removed Rolls-Royce Dawn (Azure)
+- Removed Threedagi melee shop
+- Removed Trickster's Gutting Head-Smasher Bat
+- Removed Gold-Plated Interface - Normal Cost
+- Removed Lucy Sky Ad
+- Removed RedHttpClient
+- Removed Effective Pistols and Shotguns
+- Removed ModCompat - GPI Kestrel 3
+- Removed Lawman (AMM)
+- Removed Dad Shirt - Vanilla Body (M) (GS)
+- Removed No Intro Videos - redscript
+- Removed Dog Town Visuals Nulled
+- Removed Tactical Style Outfit
+- Removed Arasaka Tower Opened
+- Removed Blighted Axe
+- Removed Black Chrome
+- Removed Beach Houses Open 2.3
+- Removed A New Dawn Beyond Night City
+- Removed Netrunner Suit Pt5 - DA
+- Removed Dismemberment Settings
+- Removed type 2067 edit
+- Removed Depeche Mods
+- Removed lore_friendly_neon_signs
+- Removed StatTrack Malorian (Red) 
+- Removed No Panic Driving - Enhanced
+- Removed Fast Travel To Spaceport
+- Removed Casino Updates - Neon
+- Removed Chevillon Thrax Invictus
+- Removed VFaceplate
+- Removed Blights's Mecha staff
+- Removed Short Windbreaker Jacket - Vanilla Body (M)
+- Removed GMC Vandura Ash hauler
+- Removed The Unknown Axe
+- Removed Stinky Leather Jeans
+- Removed S14 Nomad Main files and Livery 1
+- Removed Kurogami Reaper
+- Removed Konpeki Plaza Unlocked 2.3.1
+- Removed CPR - Lighting Addon (Raster and RT)
+- Removed Casino Updates - Lamps
+- Removed Hidden Karambit
+- Removed Slow Firing Rate on Longer Saves Bug Fix
+- Removed Preem Menu (Background Blur - Pause Menu - Animated Snow)
+- Removed MascV - Kylin's Messy Long Hair
+- Removed expanded citizens AIO
+- Removed MascV - Kylin's Nomad Half Bun
+- Removed The Afterlife Overhaul
+- Removed OpenBack Tank Top - Vanilla Body (M)
+- Removed Rin Yamaoka Embellished Blade
+- Removed E3 Crosshair
+- Removed Yucca Restored
+- Removed V Mannequin Holographic Projector
+- Removed Ugly Building Removed
+- Removed 2F2F Livery for Nissan Skyline GTR R34 HYCADE by ctxrlsec
+- Removed NFSU Eddie's Livery for Nissan Skyline GTR R34 HYCADE by ctxrlsec
+- Removed Revised Backpack
+- Removed Time Is Running Out
+- Removed The Honk Courtesy - Automatic Educative Horn
+- Removed Improved Aldecaldos Camp
+- Removed Night City Things Nulled
+- Removed Ranger Combat Boomerang
+- Removed Silent Bodies
+- Removed Roller Coaster Expanded
+- Removed Underground Casino ( Working Roulette )
+- Removed Dark Matter Club ( with Apartment )
+- Removed Drive-In Theater ( Working Movie Screen )
+- Removed Black Sapphire Club ( with Apartment )
+- Removed Dogtown Car Meet ( with Apartment )
+- Removed Downtown Yacht
+- Removed Dicky Twisters Enhanced
+- Removed Gaston Slaytons Apartment Enhanced
+- Removed Petrel Street Apartment Enhanced
+- Removed Empathy Bar Enhanced
+- Removed Biotechnica Hotel Enhanced ( with Apartment )
+- Removed 7th Hell Bar Enhanced
+- Removed Megabuilding 8 Expanded ( with Apartments )
+- Removed Dandelion Cocktail Bar Enhanced
+- Removed Pew Pew Plaza Enhanced
+- Removed Afterlife Expanded ( with Apartment )
+- Removed Japantown Greenery
+- Removed Weather Probability Rebalance
+- Removed Totentanz Club Enhanced
+- Removed Crunch Plaza Expanded
+- Removed The Moth Bar Lair
+- Removed Regina's NCPD Headquarters
+- Removed Lizzies Bar Enhanced ( with Apartment )
+- Removed Dogtown Airship ( with Apartment and NPC Party Below )
+- Removed Immersive Third-Person Vehicle Camera - TPP Cam Toolkit
+- Removed Red Queens Club Enhanced
+- Removed Better Lanterns
+- Removed Aerix LUT - Photorealism
+- Removed Vehicle Selector Frontend
+- Removed Viktor Vektors Garage ( Working Car Repair )
+- Removed Deceptious Bug Fixes
+- Removed Behavioral Health Center Terrace
+- Removed Night City Visuals Nulled
+- Removed Merc Protocol - Perk Gameplay Expansion
+- Removed Depth Begone (3D Screen and Display UI Layers Removed)
+- Removed Merc Protocol - UI Cleaning and Localization Improvements
+- Removed E3 Open Police Station
+- Removed Night City Allies - MISSIONS - ADDON
+- Removed True First Person Camera
+- Removed True Night Vision
+- Removed Better Traffic Lights
+- Removed Give 'Em Guns
+- Removed Minimap Widgets
+- Removed Draw Distance ReImagined
+- Removed Night City Allies - Immersive Companion System
+
+# Updates:
+- Updated Atone - Reset Your Street Cred
+- Updated Kerry Romanced Enhanced
+- Updated Shinobi's Black Market
+- Updated Quest Trigger Fixes (2.3 Supported)
+- Updated Modular Military Bodysuit - Zenitex Stealthsuit - ArchiveXL
+- Updated Zenitex Modular Assault Vest - ArchiveXL
+- Updated Modular Military Combat Helmet - ArchiveXL
+- Updated Zenitex Covert Leggings - ArchiveXL
+- Updated Zenitex Combat T-Shirt - ArchiveXL
+- Updated Apartment Cats - Corpo Plaza
+- Updated Apartment Cats - The Glen
+- Updated Apartment Cats - Japantown
+- Updated Romance Hangouts Enhanced
+- Updated FlowerShop - Virtual Atelier Store
+- Updated Corpse Loot Fix
+- Updated Skippy-chan
+- Updated Endurance System
+- Updated Military Palette Texture Library
+- Updated Disable Fake Lights with Path Tracing
+- Updated Native Settings UI Side Menu Add-on
+- Updated Factions Evolved
+- updated Zenitex Atelier
+- Updated M50 Military Gas Mask - ArchiveXL (2.0)
+- Updated Damage Scaling and Balance - Extended
+- Updated Zenitex FM12 Respirator Mask - ArchiveXL
+- Updated Immersion Patch - Quest Vehicle Motion Fixes
+- Updated Immersive Grenades
+- Updated Immersive Healing
+- Updated Immersive Night City Fixes
+- Updated Anti-Theft Measures - Vehicle Security
+- Updated Reference Path Tracing
+- Updated Shattered Chrome
+- Updated Chrome Plating
+- Updated DigitalVixen Core
+- Updated Manavortex Material Library
+- Updated Ultra Plus Best Performance and Visuals for Everyone
+- Updated Multiple Use Consumables
+- Updated Night City Remembers
+- Updated Breach Protocol - Personal Link Animations Patch
+- Updated SPLAT Physics Realistic Ragdoll Overhaul
+- Updated ArchiveXL
+- Updated Drug Dealer - Become a Kingpin
+- Updated Nova Optics (Vehicle Exposure Fix and Visuals Customization)
+- Updated Combat Evolved
+- Updated NC Fashion Virtual Atelier
+- Updated Misc NC Fixes
+- Updated Sabbath7991 Weapon and Attachment Shops - Virtual Atelier
+- Updated Non-Canon Romances Enhanced
+- Updated VOIDWEAR Virtual Atelier
+- Updated Immersion Patch - Cyberpunk Story Quest Fixes
+- Updated Watch Your Back
+</details>
+
+<details markdown="1">
 <summary>v2.6.0.0 - May 10, 2026</summary>
 
 **Update Importance:** MAJOR  
