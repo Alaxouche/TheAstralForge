@@ -8,6 +8,145 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v7.3.0.0 - June 01, 2026</summary>
+  
+**Update Importance:** MAJOR  
+**NOT SAVE COMPATIBLE** 
+
+---
+
+### Additions:
+- Added Arrows Drift From Wind
+- Added Mage Towers of Skyrim
+- Added MCM Unlocked
+- Added Item Preview Auto Spinning 
+- Added Undodgeable Hits
+- Added First-person Immersive Interactions
+- Added 1st Person Vertical Aim Fix
+- Added 1st Person Motion Sickness Remover
+- Added Ultimate First Person Rotation Grounder 9000
+- Added First Person (FP) Inertia - SKSE - High Framerate Fix
+- Added NPC Senses
+- Added Trigger Combat Behaviour - TCB
+- Added Left Hand Rings SKSE
+- Added Diverse Hunter Camps - Base Object Swapper
+- Added Unslaad SE - TrueHUD Boss Bar
+
+### Removals:
+- Removed Man's Best Friend - A Meeko's Shack Overhaul
+- Removed Man's Best Friend - A Meeko's Shack Overhaul - Fixes and Patches
+- Removed Salmon 4K-8K by iimlenny
+- Removed Store Entrance Doorbells
+- Removed Skyrim is Cold
+- Removed Orc Exiles - Bilegulch Fixes
+- Removed Echatere SE
+- Removed Dynamic Sprint Stop
+- Removed Dynamic Sprint
+- Removed Dynamic Sprint Stop - Separate Volume Slider
+- Removed Boons of the Beacon
+- Removed Boons of Barenziah
+- Removed Skill Decay
+- Removed Combat Equipment State Fix (CESF)
+
+### Fixes and Tweaks:
+- Fixed compilation issues
+- Fixed issues with serana quest
+- Fixed purple plants
+- Potential fix for silver blood inn issues
+- Fixed meridia beacon annoying glow
+- Fixed odd movements (sprinting, vaulting)
+- Improved stability by removing broken/outdated/bad mods
+
+### Updates:
+- Updated Dynamic String Distributor
+- Updated Distinguished Drapery 
+- Updated JK's Guild HQ Interiors Patch Collection
+- Updated Skyking Signs
+- Updated HAG - Occult Orphan Rock
+- Updated Real Water for Volcanic Mineral Pools - Base Object Swapper
+- Updated Icy Cave Remaster - Ice Material Patch
+- Updated Silver Armor - My Version
+- Updated Paarthurnax - Quest Expansion
+- Updated Sacrilege - Minimalistic Vampires of Skyrim
+- Updated Immersive Persuasion
+- Updated High Poly Solstheim Mushroom Trees
+- Updated Pilgrim and Daedric Shrines Consistency and Tweaks
+- Updated NPCs Take Cover
+- Updated Saints and Seducers - Mysticism Rebalance
+- Updated Companions Dialogue Bundle
+- Updated Orc Exiles - Bilegulch Stronghold
+- Updated Armory Extended - Bonemold Weapon Pack
+- Updated The Handy Icon Collection Collective
+- Updated Freak's Floral Fields - A Cathedral Grass Overhaul
+- Updated HDT-SMP Vanilla Armors
+- Updated Attack Animation Fling Fix NG
+- Updated CoMAP - Common Marker Addon Project
+- Updated The Notorious North - Ruins of the Sea of Ghosts 
+- Updated Horse Animation Overhaul (WIP - OAR)
+- Updated Werewolf Footstep FX Improved
+- Updated 4thUnknown's Dwemer Armor - CBBE 3BA
+- Updated Hotkey Reminder
+- Updated Katana Crafting
+- Updated Project Combat Event Fixes - Fix NPCs Stuck in Combat
+- Updated PlayerPayCrimeGold Tweak (aka No Crime Teleport NG)
+- Updated Project Gap Close - NPC Sprint Attacks and Dynamic Combat Pathing Revolution
+- Updated Ryn's Mehrunes Dagon - Patch Collection
+- Updated Andrealphus' Renaming Project (ARP)
+- Updated Fancy Morthal Swamp Overhaul
+- Updated Enhanced Rocks and Mountains - Addon
+- Updated Better Optimized and Fixed Riften Meshes
+- Updated Better Optimized Skyrim Meshes - Markarth
+- Updated KS Hairdos - HDT-SMP
+- Updated Animation Ledge Block NG
+- Updated Alternate Perspective - Assorted Fixes and Patches
+- Updated Cities of the North - Falkreath Patch Collection
+- Updated Some Argonian HDT Feathers
+- Updated Psychopatchist Purgatory
+- Updated Sanguine Sundries - A Vampire Clutter Replacer
+- Updated CBBE 3BA Vanilla Outfits Redone
+- Updated No Alchemical Ingredients in Vanilla Player Homes
+- Updated Oathvein UI
+- Updated Fluffworks - Tweaks and Expansion
+- Updated Medieval Markets - Patches Collection
+- Updated Northern Roads - Patch Collection
+- Updated SKSE Menu Framework
+- Updated Shrubbery Symphony - Enhanced Greenery
+- Updated Fully Harvest Hanging Carcasses and Coin Purses
+- Updated Locked Chests Have Keys - Patch Collection
+- Updated Quest - Baba Yaga and the Labyrinth
+- Updated CC Myrwatch - Tweaks and Enhancements
+- Updated Custom ISC Armor Patches - SRD
+- Updated Missives - Voice and Quest Expansion
+- Updated Directional Movement Keys - DMK
+- Updated Particle Wind - SKSE Plugin
+- Updated Unblockable Hits
+- Updated Parry for all
+- Updated PaulMix's dTry Key Utils extend
+- Updated Dynamic Wind Framework - SKSE Plugin
+- Updated No Grass In Objects
+- Updated Missing Follower Dialogue Edit
+- Updated H.O.A. - Hyperspecific Occlusion Addon - Lite Patch
+- Updated BFCO NG
+- Updated Input Manager
+- Updated Vel'dun UI
+- Updated Vanilla Riften Meshes Optimized
+- Updated FSMP - Faster HDT-SMP
+- Updated Dragons Use Thu'um
+- Updated Dragon Races of Skyrim
+- Updated Khajiit Has Tents
+- Updated KS Hairdos - HDT-SMP for Khajiit
+- Updated Occlusion for Quest Mods
+- Updated SIGMA - Fisting animations - 1st person
+- Updated RMB SPIDified - Guards Armor Replacer
+- Updated RMB SPIDified - Core
+- Updated Meeko's Shack Reborn - Shack Overhaul
+- Updated Modding My Business (M.M.B) - Ivy Random Patch Collection
+- Updated Oblivion Interaction Icons - Phoenix's Patches
+- Updated SigmaJelly - Katana animations - 1st person
+
+</details>
+
+<details markdown="1">
 <summary>v7.2.0.0 - May 13, 2026</summary>
   
 **Update Importance:** MAJOR  
