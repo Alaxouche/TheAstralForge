@@ -10,6 +10,87 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v1.5.0.0 - June 04, 2026</summary>
+
+**Update Importance:** MAJOR  
+**SAVE COMPATIBLE**
+
+___
+
+# Additions:
+- Added zBest Freighter
+- Added Always Show Distance II
+- Added Quicksilver Daily Mission Reward Multiplier
+- Added Natural Expedition Ships
+- Added Gourmet Flavors
+- Added reQuick
+
+# Fixes and Tweaks:
+- Potential fix for CTD on launch
+- Updated the list for The Swarm update
+
+# Removals:
+- Removed DUD'S - Terra Firma 3
+- Removed DUD'S - Spaceship Flight
+- Removed DUD'S - Planet Filters
+- Removed DUD'S - Experience Behavior
+- Removed DUD'S - Exocraft Mechanics
+- Removed DUD'S - Dynamic Standing
+- Removed DUD'S - AI Ship Plus More Damage
+
+# Updates:
+- Updated Exosolar's and Babs' Super Ship Teleporter
+- Updated Exosolar's and Babs' Grass Fix
+- Updated Exosolar's and Babs' Painless Rain
+- Updated Exosolar's and Babs' Deadzone III - Revenge of the Deadzone
+- Updated Exosolar's and Babs' Clear Visor Scanner and Surveyor and Custom Color Binoc Panels
+- Updated Exosolar's and Babs' Dead Wreckoning
+- Updated Exosolar's and Babs' Flora Colors
+- Updated Exosolar's and Babs' Stratos
+- Updated Exosolar's and Babs' Beyond Base Building
+- Updated Exosolar's and Babs' Quick Scan with Range Boost
+- Updated Exosolar's and Babs' Savage Sentinels
+- Updated Exosolar's and Babs' Space Battle Frequency Controller
+- Updated Exosolar's and Babs' Asteroid Ribbons
+- Updated Exosolar's and Babs' Industrial FPS Booster
+- Updated Exosolar's and Babs' Stealth Wires
+- Updated Exosolar's and Babs' Lumen
+- Updated Exosolar's and Babs' Expanse
+- Updated Nada's Starmap Upgrade
+- Updated Colorized Diamond Non-Building Icons
+- Updated Colorized Derelict Icons
+- Updated Colorized Hexagonal Building Icons
+- Updated Reduce Pulse Speed Lines
+- Updated Quicksilver Missions
+- Updated Vile Brood Salvageable Scrap Icon Fix
+- Updated Keep Talking Polo E7
+- Updated Keep Talking Polo E7
+- Updated Keep Gifting
+- Updated Keep Talking Chef
+- Updated Better Sentinel Destruction
+- Updated Atlas Orb Word-o-Rama
+- Updated Snappy Industry
+- Updated Fix Hauler Custom Part
+- Updated Exocraft Scanner Upgrade
+- Updated zBest Weapon Rack
+- Updated Ultimate Arms Dealer
+- Updated Colossal Corvette build area
+- Updated Reticules color(Ship Weapon and MultiTool Weapon)
+- Updated More Words
+- Updated Short Shop Dialogs
+- Updated Renewed Riddles
+- Updated Astroport - Better Trading Posts
+- Updated Enjoyable Quicksilver - (LUA Script Included)
+- Updated Fast Refiners
+- Updated Start Screen
+- Updated Realistic Market
+- Updated zBridge Terminal
+- Updated More Upgradeable Slots
+- Updated Add Ship Custom Parts To Space Station Shop
+
+</details>
+
+<details markdown="1">
 <summary>v1.4.1.0 - May 11, 2026</summary>
 
 **Update Importance:** MEDIUM  
