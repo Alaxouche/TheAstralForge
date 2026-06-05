@@ -8,6 +8,141 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v2.3.0.0 - April 28, 2026</summary>
+
+**Update Importance:** MAJOR  
+**NOT SAVE COMPATIBLE**
+
+___
+
+# Additions:
+- Added Rebalanced KBAR-32 (jkninethree)
+- Added Real Frozen Mountains
+- Added True Seamless Grav Jumps SFSE
+- Added ENHANCED Elevated Cabins
+- Added Rabbit's Real Lights Anchorpoint
+- Added KBAR-32 (AA BAR-32)
+- Added Project Rework - Pluto
+- Added Save Game Thumbnails - SFSE
+- Added Favorites Menu Extended - SFSE
+- Added Take All to Ship - Quick Item Transfer - SFSE
+- Added Souls of Cities - SFSE
+- Added Volcanic Glacial Plateau
+- Added Modern Colors
+- Added Castle Rocks Mountain Biome
+- Added Crevasse Field - Biome Visual Transformation
+- Added Ship Crew Assignments
+- Added Starfield Little Bits - Lasers Sights Only When Aiming
+- Added Rebalanced MIAO 06D (8strd)
+- Added HONKCORE - Dynamic Custom HUD Overhaul
+- Added Rebalanced AA-15 (Outrora) Nexus and Creations Versions
+- Added Rebalanced SN6 (510deshawn)
+- Added Rebalanced RAMPART-17 (jkninethree)
+
+# Removals:
+- Removed Faster Favorites Menu
+- Removed Better Smart Aiming SFSE - Third Person Scope and Aim Fixes
+
+# Fixes and Tweaks:
+- Reworked the list for latest game update
+- Fixed some performance issues introduced by camera noise
+- Improved visuals of many biomes
+- Improved HUD visuals
+
+# Updates:
+- Updated Improved Combat AI
+- Updated Stealth Overhaul
+- Updated Immersive Planet Density
+- Updated Furnished Starborn Ship
+- Updated Better Blocking
+- Updated Neon - Sky Suite Expanded and Furnished
+- Updated Akila - The Core Expanded and Furnished
+- Updated The Stingray Standalone
+- Updated Upgraded Companions
+- Updated Rabbit's Real Lights Akila City
+- Updated Immersive Enemy Names
+- Updated Alternate Vasco
+- Updated Echoes of Cydonia
+- Updated Wicked Workshop Outpost Projeckt- Strucktured
+- Updated Wicked Workshop- Outpost Projeckt Fielded
+- Updated Wicked Workshop- Outpost Projeckt 2
+- Updated KBAR-32 (AA BAR-32)
+- Updated Immersive Star Colours
+- Updated Parked Vehicles
+- Updated Real Frozen Mountains
+- Updated ENHANCE Dark Outpost Habs
+- Updated Easy Digipick (Lockpick)
+- Updated Easy Speech
+- Updated Enemies Boarding My Ship
+- Updated States of Matter - Environment-depending States for Resources
+- Updated IW - Warfighter
+- Updated PoI Faction Diversity - New Hostile Factions
+- Updated HUD Show Power Name
+- Updated Starfield Memory Fixes
+- Updated Tell Me Your Name - SFSE
+- Updated Address Library for SFSE Plugins
+- Updated Encounters- a GRiNDTerra Mod
+- Updated Starfield High Priority Launcher
+- Updated No Reactor Limit
+- Updated No Shield Limit
+- Updated No Grav Drive Weight Limit
+- Updated No Weapon Power or Count Limits
+- Updated No Landing Bay or Docker Limits
+- Updated No Cockpit Limit
+- Updated No Reactor Class Requirement
+- Updated No Minimum Landing Gear
+- Updated No Build Below Bay or Invalid Docker Position or Misaligned Landing Gear Errors
+- Updated No Engine Power Limits
+- Updated No Unattached Module Error
+- Updated No Vehicle Auto Handbrake - SFSE
+- Updated Starware Search Engine - SFSE
+- Updated No Vehicle Weapon Aim Oxygen Penalty - SFSE
+- Updated Dynamic Inventory Models - SFSE
+- Updated Immersive Driving - SFSE
+- Updated No Vehicle Mouse Steering - SFSE
+- Updated Player Eyes Stuck at the Dialogue Target Bug Fix - SFSE
+- Updated Less Creepy Crowd NPCs - Reduced Staring and Headtracking
+- Updated GRiNDTerra Planetary POI Generation
+- Updated Buildings and or People- A GRiNDTerra Mod
+- Updated Unofficial Starfield Patch - USFP
+- Updated No Forced Vehicle Aim Assist - SFSE
+- Updated Take All to Ship - Quick Item Transfer - SFSE
+- Updated Scopes Without Overlays
+- Updated Cargo Reconsidered
+- Updated CharGenMenu
+- Updated Starfield Script Extender (SFSE)
+- Updated Astrogate
+- Updated Useful Brigs
+- Updated Detailed Reference Info - SFSE
+- Updated Scanner Closest Path Highlight Improvements
+- Updated Transfer Spaceships Across Universes - SFSE
+- Updated Fantastical Frontiers- a GRiNDTerra Fantasy Biome Overhaul
+- Updated Vanilla Biomes Enhanced- A GRiNDTerra Mod
+- Updated Lodecs Custom Armory (LCA)
+- Updated Trackers Alliance - Fight Or Flight
+- Updated Ship Vendor Framework (SVF)
+- Updated Quick Lowered Weapons
+- Updated Keelo's Sleek Ship HUD
+- Updated Cassiopeia Papyrus Extender
+- Updated Davefield - Loot Container UI
+- Updated Dodge Framework SFSE
+- Updated Red Mile Terror
+- Updated HUD Info Widget
+- Updated Starfield Engine Fixes - SFSE
+- Updated Astral UI - Quicklist + Usearch plugin
+- Updated POIs Hostiles Diversity
+- Updated POI Faction Diversity
+- Updated Declared Contraband
+- Updated Mercenaries and Mayhem - a GRiNDTerra Outpost Expansion
+- Updated Into the Void Bug Fix
+- Updated Astral UI
+- Updated Starborn Space Suit Visor FX Plus
+- Updated Starvival - Immersive Survival Addon
+- Updated Atmospheric Audio
+
+</details>
+
+<details markdown="1">
 <summary>v2.2.0.0 - April 28, 2026</summary>
 
 **Update Importance:** Medium  
