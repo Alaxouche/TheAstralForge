@@ -837,6 +837,242 @@ html[data-theme="light"] .lang-toggle:hover {
   font-weight: 700;
 }
 
+/* Load Order Library embed */
+.lo-embed {
+  margin: 1.5rem 0;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #000;
+}
+
+.lo-embed__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.lo-embed__title { font-weight: 700; font-size: 0.9rem; }
+
+.lo-embed__actions { display: flex; gap: 8px; }
+
+.lo-embed__btn {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 7px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.05);
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.lo-embed__btn:hover { background: rgba(255, 255, 255, 0.12); }
+
+.lo-embed__frame { display: block; width: 100%; border: 0; }
+
+/* CSS fallback when the Fullscreen API is unavailable */
+.lo-embed--maximized {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  margin: 0;
+  border-radius: 0;
+}
+
+.lo-embed--maximized .lo-embed__frame { height: calc(100vh - 41px); }
+
+/* Install step "mark complete" control */
+.install-checklist {
+  margin: 2.5rem 0 0.5rem;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.install-checklist__toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.install-checklist__checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: #22c55e;
+  cursor: pointer;
+}
+
+.install-checklist--done {
+  border-color: rgba(34, 197, 94, 0.5);
+  background: rgba(34, 197, 94, 0.08);
+}
+
+/* "New version available" banner */
+.version-banner {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0 0 1.5rem;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(34, 197, 94, 0.4);
+  background: rgba(34, 197, 94, 0.1);
+  font-weight: 600;
+}
+
+.version-banner__text { flex: 1; }
+
+.version-banner__cta {
+  font-weight: 700;
+  text-decoration: underline;
+  white-space: nowrap;
+}
+
+.version-banner__close {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 4px;
+  opacity: 0.7;
+}
+
+.version-banner__close:hover { opacity: 1; }
+
+/* Per-modlist screenshot gallery */
+.modlist-gallery {
+  margin: 3rem 0 1rem;
+}
+
+.modlist-gallery__title {
+  margin: 0 0 0.25rem;
+}
+
+.modlist-gallery__subtitle {
+  margin: 0 0 1.25rem;
+  opacity: 0.7;
+  font-size: 0.95rem;
+}
+
+.modlist-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.modlist-gallery__item {
+  margin: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.modlist-gallery__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+
+.modlist-gallery__item img:hover {
+  transform: scale(1.04);
+}
+
+/* "Live data" badge — revealed once stats-system.js loads real snapshot data */
+.project-banner__live {
+  display: none;
+  align-items: center;
+  gap: 7px;
+  margin: 12px 0 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--banner-accent, #22c55e);
+}
+
+.project-banner__live::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--banner-accent, #22c55e);
+  animation: taf-live-pulse 2s ease-in-out infinite;
+}
+
+.project-banner__stats[data-stats-state="success"] ~ .project-banner__live {
+  display: inline-flex;
+}
+
+@keyframes taf-live-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%      { opacity: 0.4; transform: scale(0.8); }
+}
+
+/* Language dropdown */
+.lang-switch {
+  position: relative;
+  display: inline-flex;
+}
+
+.lang-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  margin: 0;
+  padding: 4px;
+  list-style: none;
+  min-width: 140px;
+  border-radius: 10px;
+  background: var(--sg-surface, #14161c);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+  z-index: 1000;
+}
+
+.lang-menu[hidden] { display: none; }
+
+.lang-menu__item {
+  padding: 8px 12px;
+  border-radius: 7px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  white-space: nowrap;
+  color: inherit;
+}
+
+.lang-menu__item:hover,
+.lang-menu__item:focus {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.lang-menu__item[aria-selected="true"] {
+  background: var(--banner-accent, #22c55e);
+  color: #0a0a0a;
+  font-weight: 700;
+}
+
+html[data-theme="light"] .lang-menu {
+  background: #fff;
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
 /* ================================================================
    BILINGUAL CONTENT SWITCHING
    Hide FR content by default; show when html[lang="fr"] is set.
@@ -844,3 +1080,28 @@ html[data-theme="light"] .lang-toggle:hover {
 
 html:not([lang="fr"]) [lang="fr"] { display: none !important; }
 html[lang="fr"] [lang="en"] { display: none !important; }
+
+/* ================================================================
+   REDUCED MOTION
+   Honour prefers-reduced-motion: neutralise parallax, fades and
+   long transitions for users who opt out of animation.
+   ================================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .hero-bg-layer {
+    transform: none !important;
+  }
+
+  .hero-content-wrapper {
+    opacity: 1 !important;
+  }
+}

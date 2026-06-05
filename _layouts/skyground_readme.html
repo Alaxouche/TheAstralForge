@@ -12,6 +12,8 @@ layout: skyground_base
     </nav>
     {% include install_stepper.html %}
     {{ content }}
+    {% include install_checklist.html %}
+    {% include components/gallery.html %}
     {% if page.url contains '/installation-guide/' %}
       {% include vote_section.html %}
     {% endif %}

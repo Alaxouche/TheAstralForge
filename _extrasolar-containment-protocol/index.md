@@ -7,8 +7,11 @@ layout: skyground_readme
 modlist_id: extrasolar-containment-protocol
 modlist_source: https://raw.githubusercontent.com/Alaxouche/Wunduniik/main/modlist.json
 modlist_title: Extrasolar Containment Protocol
+image: /assets/Images/Starfield/Starfield%202026-01-09%2022-00-39_009.webp
+gallery_path: "/assets/Images/Starfield/"
 project_banner:
   image: /assets/Images/Starfield/Starfield%202026-01-09%2022-00-39_009.webp
+  accent: "#3b82f6"
   subtitle: "A curated Starfield modlist focused on immersion, visuals, and expanded exploration."
   stats:
     - label: Mods

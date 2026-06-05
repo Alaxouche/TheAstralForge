@@ -72,6 +72,16 @@
     <link rel="stylesheet" href="{{ '/assets/skyground/wikimain.css' | relative_url }}?v={{ site.assets_version }}">
   {% endif %}
   <link rel="icon" type="image/x-icon" href="{{ site.favicon_ico | relative_url }}">
+  <link rel="manifest" href="{{ '/manifest.webmanifest' | relative_url }}">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="alternate" type="application/atom+xml" title="The Astral Forge — Releases" href="{{ '/releases.xml' | relative_url }}">
+  {% if page.modlist_id %}
+    <link rel="alternate" type="application/atom+xml" title="{{ page.title }} — Releases" href="{{ '/feeds/' | append: page.modlist_id | append: '.xml' | relative_url }}">
+  {% endif %}
+  {% if page.project_banner.image %}
+    <!-- Preload the project banner background (likely LCP element) -->
+    <link rel="preload" as="image" href="{{ page.project_banner.image | relative_url }}" fetchpriority="high">
+  {% endif %}
   {% include head_custom.html %}
 </head>
 {% assign active_alert = site.data.alerts | where: "enabled", true | first %}
@@ -92,6 +102,16 @@
   <button id="back-to-top" aria-label="Back to top">
     ↑
   </button>
+  <!-- Register the service worker for offline docs + asset caching (sw.js) -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker
+          .register('{{ "/sw.js" | relative_url }}')
+          .catch(function (err) { console.warn('SW registration failed:', err); });
+      });
+    }
+  </script>
   <script src="{{ '/assets/skyground/lightbox.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
   <script src="{{ '/assets/skyground/carousel.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
   <script src="{{ '/assets/skyground/header.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
@@ -112,6 +132,9 @@
   <script src="{{ '/assets/skyground/stats-system.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
   <script src="{{ '/assets/skyground/video-tutorials.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
   <script src="{{ '/assets/skyground/social-share.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
+  <script src="{{ '/assets/skyground/install-checklist.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
+  <script src="{{ '/assets/skyground/version-banner.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
+  <script src="{{ '/assets/skyground/loadorder.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
   {% endif %}
   {% if page.layout == 'skyground_home' %}
   <script src="{{ '/assets/skyground/user-gallery.js' | relative_url }}?v={{ site.assets_version }}" defer></script>

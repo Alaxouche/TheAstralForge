@@ -82,10 +82,19 @@
       <input type="text" id="global-search-input" class="search-input" placeholder="Search..." aria-label="Search site" data-i18n-placeholder="nav.search_placeholder">
       <div id="search-results" class="search-results" role="listbox" aria-label="Search results"></div>
     </div>
-    <button class="lang-toggle" type="button" id="lang-toggle-btn" aria-label="Switch language" title="Changer de langue / Switch language">
-      <span class="lang-toggle__flag" aria-hidden="true">🌐</span>
-      <span class="lang-toggle__code" id="lang-toggle-label">FR</span>
-    </button>
+    <div class="lang-switch">
+      <button class="lang-toggle" type="button" id="lang-toggle-btn" aria-haspopup="listbox" aria-expanded="false" aria-label="Switch language" title="Switch language / Changer de langue">
+        <span class="lang-toggle__flag" aria-hidden="true">🌐</span>
+        <span class="lang-toggle__code" id="lang-toggle-label">EN</span>
+      </button>
+      <ul class="lang-menu" id="lang-menu" role="listbox" aria-label="Language" hidden>
+        <li class="lang-menu__item" role="option" data-lang="en" aria-selected="true">English</li>
+        <li class="lang-menu__item" role="option" data-lang="fr" aria-selected="false">Français</li>
+        <li class="lang-menu__item" role="option" data-lang="de" aria-selected="false">Deutsch</li>
+        <li class="lang-menu__item" role="option" data-lang="es" aria-selected="false">Español</li>
+        <li class="lang-menu__item" role="option" data-lang="ru" aria-selected="false">Русский</li>
+      </ul>
+    </div>
     <button class="theme-toggle" type="button" aria-pressed="false">
       <span class="theme-toggle-track" aria-hidden="true">
         <span class="theme-toggle-thumb"></span>

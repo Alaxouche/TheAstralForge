@@ -1,5 +1,5 @@
 {% if page.project_banner %}
-  <section class="project-banner" style="--banner-image: url('{{ page.project_banner.image | relative_url }}'); --banner-accent: {{ page.project_banner.accent | default: '#22c55e' }};">
+  <section class="project-banner" aria-label="{{ page.project_banner.title | default: page.title }} — {{ page.project_banner.eyebrow | default: 'Project overview' }}" style="--banner-image: url('{{ page.project_banner.image | relative_url }}'); --banner-accent: {{ page.project_banner.accent | default: '#22c55e' }};">
     <div class="project-banner__inner">
       <div class="project-banner__text">
         <p class="project-banner__eyebrow">{{ page.project_banner.eyebrow | default: "Project overview" }}</p>
@@ -32,6 +32,9 @@
               </div>
             {% endfor %}
           </div>
+        {% endif %}
+        {% if page.modlist_id %}
+          <p class="project-banner__live" data-i18n-key="banner.live">Live data</p>
         {% endif %}
       </div>
     </div>

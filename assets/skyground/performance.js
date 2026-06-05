@@ -3,7 +3,12 @@ class ParallaxEffect {
   constructor() {
     this.hero = document.querySelector('.hero');
     if (!this.hero) return;
-    
+
+    // Respect users who prefer reduced motion: skip the parallax entirely.
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return;
+    }
+
     this.init();
   }
 

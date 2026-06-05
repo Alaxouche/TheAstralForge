@@ -113,6 +113,14 @@
       'home.community_gallery_title':   'Community Gallery',
       'home.community_gallery_subtitle':'Explore screenshots and creations from our community members',
       'home.gallery_filter_all':        'All',
+
+      /* ── Modlist gallery / checklist / banners ── */
+      'gallery.title':        'Gallery',
+      'gallery.subtitle':     'Screenshots from this modlist.',
+      'checklist.title':      'Your progress',
+      'checklist.mark_done':  'Mark this step as complete',
+      'checklist.done':       'Completed',
+      'banner.live':          'Live data',
     },
 
     fr: {
@@ -215,7 +223,131 @@
       'home.community_gallery_title':   'Galerie Communautaire',
       'home.community_gallery_subtitle':'Explorez les captures d\'écran et créations de nos membres',
       'home.gallery_filter_all':        'Tout',
+
+      /* ── Galerie / checklist / bannières ── */
+      'gallery.title':        'Galerie',
+      'gallery.subtitle':     'Captures d\'écran de cette modliste.',
+      'checklist.title':      'Votre progression',
+      'checklist.mark_done':  'Marquer cette étape comme terminée',
+      'checklist.done':       'Terminé',
+      'banner.live':          'Données en direct',
+    },
+
+    /* DE/ES/RU translate the site chrome; long marketing copy and page
+       content fall back to English (see applyLang fallback below). */
+    de: {
+      'nav.home':               'Startseite',
+      'nav.hub':                'Hub',
+      'nav.modlists':           'Modlisten',
+      'nav.overview':           'Übersicht',
+      'nav.install':            'Installationsanleitung',
+      'nav.changelog':          'Änderungsprotokoll',
+      'nav.known_issues':       'Bekannte Probleme',
+      'nav.load_order':         'Ladereihenfolge',
+      'nav.contributors':       'Mitwirkende',
+      'nav.faq':                'FAQ',
+      'nav.discord':            'Discord',
+      'nav.search_placeholder': 'Suchen…',
+      'nav.theme_label':        'Dunkel',
+      'nav.theme_label_light':  'Hell',
+      'footer.made_by':         'Website von',
+      'readme.reading_mode':    'Lesemodus',
+      'readme.prev':            'Zurück',
+      'readme.next':            'Weiter',
+      'readme.step':            'Schritt',
+      'readme.of':              'von',
+      'readme.vote_question':   'War diese Seite hilfreich?',
+      'readme.vote_yes':        'Ja',
+      'readme.vote_no':         'Nein',
+      'faq.title':              'Häufig gestellte Fragen',
+      'faq.search_placeholder': 'FAQ durchsuchen…',
+      'contrib.title':          'Mitwirkende',
+      'gallery.title':          'Galerie',
+      'gallery.subtitle':       'Screenshots dieser Modliste.',
+      'checklist.title':        'Dein Fortschritt',
+      'checklist.mark_done':    'Diesen Schritt als erledigt markieren',
+      'checklist.done':         'Erledigt',
+      'banner.live':            'Live-Daten',
+    },
+
+    es: {
+      'nav.home':               'Inicio',
+      'nav.hub':                'Hub',
+      'nav.modlists':           'Modlists',
+      'nav.overview':           'Resumen',
+      'nav.install':            'Guía de instalación',
+      'nav.changelog':          'Registro de cambios',
+      'nav.known_issues':       'Problemas conocidos',
+      'nav.load_order':         'Orden de carga',
+      'nav.contributors':       'Colaboradores',
+      'nav.faq':                'Preguntas frecuentes',
+      'nav.discord':            'Discord',
+      'nav.search_placeholder': 'Buscar…',
+      'nav.theme_label':        'Oscuro',
+      'nav.theme_label_light':  'Claro',
+      'footer.made_by':         'Sitio por',
+      'readme.reading_mode':    'Modo lectura',
+      'readme.prev':            'Anterior',
+      'readme.next':            'Siguiente',
+      'readme.step':            'Paso',
+      'readme.of':              'de',
+      'readme.vote_question':   '¿Te resultó útil esta página?',
+      'readme.vote_yes':        'Sí',
+      'readme.vote_no':         'No',
+      'faq.title':              'Preguntas frecuentes',
+      'faq.search_placeholder': 'Buscar en las FAQ…',
+      'contrib.title':          'Colaboradores',
+      'gallery.title':          'Galería',
+      'gallery.subtitle':       'Capturas de esta modlist.',
+      'checklist.title':        'Tu progreso',
+      'checklist.mark_done':    'Marcar este paso como completado',
+      'checklist.done':         'Completado',
+      'banner.live':            'Datos en vivo',
+    },
+
+    ru: {
+      'nav.home':               'Главная',
+      'nav.hub':                'Хаб',
+      'nav.modlists':           'Сборки',
+      'nav.overview':           'Обзор',
+      'nav.install':            'Руководство по установке',
+      'nav.changelog':          'Список изменений',
+      'nav.known_issues':       'Известные проблемы',
+      'nav.load_order':         'Порядок загрузки',
+      'nav.contributors':       'Участники',
+      'nav.faq':                'ЧаВо',
+      'nav.discord':            'Discord',
+      'nav.search_placeholder': 'Поиск…',
+      'nav.theme_label':        'Тёмная',
+      'nav.theme_label_light':  'Светлая',
+      'footer.made_by':         'Сайт от',
+      'readme.reading_mode':    'Режим чтения',
+      'readme.prev':            'Назад',
+      'readme.next':            'Далее',
+      'readme.step':            'Шаг',
+      'readme.of':              'из',
+      'readme.vote_question':   'Эта страница была полезна?',
+      'readme.vote_yes':        'Да',
+      'readme.vote_no':         'Нет',
+      'faq.title':              'Часто задаваемые вопросы',
+      'faq.search_placeholder': 'Поиск по ЧаВо…',
+      'contrib.title':          'Участники',
+      'gallery.title':          'Галерея',
+      'gallery.subtitle':       'Скриншоты этой сборки.',
+      'checklist.title':        'Ваш прогресс',
+      'checklist.mark_done':    'Отметить шаг как выполненный',
+      'checklist.done':         'Выполнено',
+      'banner.live':            'Данные в реальном времени',
     }
+  };
+
+  /* Language metadata for the switcher dropdown. */
+  const LANG_LABELS = {
+    en: 'English',
+    fr: 'Français',
+    de: 'Deutsch',
+    es: 'Español',
+    ru: 'Русский',
   };
 
   /* ------------------------------------------------------------------ */
@@ -223,7 +355,7 @@
   /* ------------------------------------------------------------------ */
 
   const STORAGE_KEY = 'sg-lang';
-  const SUPPORTED   = ['en', 'fr'];
+  const SUPPORTED   = ['en', 'fr', 'de', 'es', 'ru'];
 
   /* ------------------------------------------------------------------ */
   /* SIDEBAR NAV TRANSLATIONS                                            */
@@ -303,24 +435,30 @@
   /* ------------------------------------------------------------------ */
 
   function applyLang(lang) {
-    const dict = translations[lang] || translations['en'];
+    const base = translations['en'];
+    const dict = translations[lang] || base;
+    // Fall back to English for any key a language hasn't translated yet,
+    // so switching languages never leaves stale text from a previous one.
+    const t = function (key) {
+      return dict[key] !== undefined ? dict[key] : base[key];
+    };
 
     /* textContent elements */
     document.querySelectorAll('[data-i18n-key]').forEach(function (el) {
-      const key = el.getAttribute('data-i18n-key');
-      if (dict[key] !== undefined) el.textContent = dict[key];
+      const val = t(el.getAttribute('data-i18n-key'));
+      if (val !== undefined) el.textContent = val;
     });
 
     /* innerHTML elements */
     document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
-      const key = el.getAttribute('data-i18n-html');
-      if (dict[key] !== undefined) el.innerHTML = dict[key];
+      const val = t(el.getAttribute('data-i18n-html'));
+      if (val !== undefined) el.innerHTML = val;
     });
 
     /* placeholder attributes */
     document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
-      const key = el.getAttribute('data-i18n-placeholder');
-      if (dict[key] !== undefined) el.setAttribute('placeholder', dict[key]);
+      const val = t(el.getAttribute('data-i18n-placeholder'));
+      if (val !== undefined) el.setAttribute('placeholder', val);
     });
 
     /* Theme toggle label — depends on current theme */
@@ -328,7 +466,7 @@
     if (themeLabel) {
       const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
       const labelKey = isDark ? 'nav.theme_label' : 'nav.theme_label_light';
-      if (dict[labelKey]) themeLabel.textContent = dict[labelKey];
+      if (t(labelKey)) themeLabel.textContent = t(labelKey);
     }
 
     /* Sidebar nav */
@@ -340,28 +478,24 @@
     /* <html lang=""> for screen readers */
     document.documentElement.setAttribute('lang', lang);
 
-    /* Update button label (shows the OTHER language — what clicking will switch TO) */
+    /* Update switcher button to show the CURRENT language code */
     const btnLabel = document.getElementById('lang-toggle-label');
-    if (btnLabel) btnLabel.textContent = lang === 'fr' ? 'EN' : 'FR';
+    if (btnLabel) btnLabel.textContent = lang.toUpperCase();
 
-    /* Update button aria-label */
-    const toggleBtn = document.getElementById('lang-toggle-btn');
-    if (toggleBtn) {
-      toggleBtn.setAttribute(
-        'aria-label',
-        lang === 'fr' ? 'Switch to English' : 'Passer en français'
-      );
-    }
+    /* Mark the active option in the dropdown */
+    document.querySelectorAll('#lang-menu [data-lang]').forEach(function (opt) {
+      opt.setAttribute('aria-selected', opt.dataset.lang === lang ? 'true' : 'false');
+    });
   }
 
   /* ------------------------------------------------------------------ */
-  /* TOGGLE                                                               */
+  /* SELECT                                                               */
   /* ------------------------------------------------------------------ */
 
-  function toggleLang() {
-    const next = getStoredLang() === 'fr' ? 'en' : 'fr';
-    setStoredLang(next);
-    applyLang(next);
+  function selectLang(lang) {
+    if (!SUPPORTED.includes(lang)) return;
+    setStoredLang(lang);
+    applyLang(lang);
   }
 
   /* ------------------------------------------------------------------ */
@@ -371,9 +505,45 @@
   function init() {
     applyLang(getStoredLang());
 
-    /* Toggle button */
-    const btn = document.getElementById('lang-toggle-btn');
-    if (btn) btn.addEventListener('click', toggleLang);
+    /* Language dropdown */
+    const btn  = document.getElementById('lang-toggle-btn');
+    const menu = document.getElementById('lang-menu');
+
+    function closeMenu() {
+      if (!menu) return;
+      menu.hidden = true;
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+    }
+    function openMenu() {
+      if (!menu) return;
+      menu.hidden = false;
+      if (btn) btn.setAttribute('aria-expanded', 'true');
+    }
+
+    if (btn && menu) {
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        menu.hidden ? openMenu() : closeMenu();
+      });
+      menu.querySelectorAll('[data-lang]').forEach(function (opt) {
+        opt.addEventListener('click', function () {
+          selectLang(opt.dataset.lang);
+          closeMenu();
+        });
+      });
+      document.addEventListener('click', function (e) {
+        if (!menu.hidden && !menu.contains(e.target) && e.target !== btn) closeMenu();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeMenu();
+      });
+    } else if (btn) {
+      // Fallback: no menu in DOM — cycle through supported languages.
+      btn.addEventListener('click', function () {
+        const i = SUPPORTED.indexOf(getStoredLang());
+        selectLang(SUPPORTED[(i + 1) % SUPPORTED.length]);
+      });
+    }
 
     /* Re-translate theme label whenever the theme attribute changes */
     new MutationObserver(function () {

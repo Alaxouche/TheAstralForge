@@ -8,7 +8,7 @@ image: "/assets/logos/theastralforge.png"
 
 url: "https://theastralforge.com"
 baseurl: ""
-assets_version: "20260425-1"
+assets_version: "20260604-1"
 
 exclude:
   - .venv/
@@ -22,6 +22,8 @@ sass:
 plugins:
   - jekyll-include-cache
   - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
 
 search:
   heading_level: 4

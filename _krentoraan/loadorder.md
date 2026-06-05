@@ -19,6 +19,4 @@ Cette section vous montre le contenu exact et l'ordre de placement des mods de K
 
 </div>
 
-<iframe src="https://loadorderlibrary.com/lists/krentoraan-2" title="Krentoraan" width="100%" height="800px" frameborder="0" style="border: 1px solid #333; border-radius: 8px; background: #000;">
-Your browser does not support iframes. View the mod list directly
-</iframe>
+{% include components/loadorder_embed.html src="https://loadorderlibrary.com/lists/krentoraan-2" title="Krentoraan" %}

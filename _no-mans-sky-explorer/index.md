@@ -5,8 +5,10 @@ search_exclude: true
 nav_exclude: true
 layout: skyground_readme
 modlist_id: no-mans-sky-explorer
+image: /assets/Images/no-mans-sky/background.webp
 project_banner:
-  image: /assets/Images/generic_background.webp
+  image: /assets/Images/no-mans-sky/background.webp
+  accent: "#ff7b29"
   subtitle: "Exploration-first list with visuals, QoL, and stability tweaks."
   stats:
     - label: Mods

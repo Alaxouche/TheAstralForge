@@ -5,8 +5,11 @@ search_exclude: true
 nav_exclude: true
 layout: skyground_readme
 modlist_id: krentoraan
+image: /assets/Images/Skyrim/enb_2026-2-22_01-19-29_028.webp
+gallery_path: "/assets/Images/Skyrim/"
 project_banner:
   image: /assets/Images/Skyrim/enb_2026-2-22_01-19-29_028.webp
+  accent: "#5eb0d6"
   subtitle: "A curated Skyrim SE list focused on clean visuals and balanced gameplay."
   stats:
     - label: Mods
