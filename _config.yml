@@ -8,7 +8,7 @@ image: "/assets/logos/theastralforge.png"
 
 url: "https://theastralforge.com"
 baseurl: ""
-assets_version: "20260604-1"
+assets_version: "20260606-1"
 
 exclude:
   - .venv/
