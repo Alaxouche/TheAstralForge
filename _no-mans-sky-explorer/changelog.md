@@ -10,6 +10,71 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v1.5.2.0 - July 11, 2026</summary>
+
+**Update Importance:** MINOR  
+**SAVE COMPATIBLE**
+
+___
+
+# Additions:
+- Added zBio-Dome
+- Added Atlas Orb Word-o-Rama
+- Added Companion Pet Unlocker
+
+# Fixes and Tweaks:
+- Fixed remaining outdated mods
+
+# Updates:
+- Updated Reduced Ship Launch Fuel Costs (Or Increased)
+- Updated Exoskiff HUD Icon
+- Updated BG Dark UI and Fonts
+- Updated Better Station LOD
+- Updated Faster Scanning
+- Updated More Materials
+- Updated Mining Multiplier
+- Updated More Words
+- Updated Realistic Market
+- Updated Quick Crates
+- Updated Exocraft Scanner Upgrade
+- Updated Colorized Derelict Icons
+- Updated Exosolar's and Babs' Quick Scan with Range Boost
+
+</details>
+
+<details markdown="1">
+<summary>v1.5.1.0 - June 08, 2026</summary>
+
+**Update Importance:** MINOR  
+**SAVE COMPATIBLE**
+
+___
+
+# Additions:
+- Added Companion Pet Unlocker
+- Added Quick Crates
+- Added Quick Damaged Machineries
+
+# Fixes and Tweaks:
+- Potential fix for CTD or issues while playing
+
+# Removals:
+- Removed Lasagna Obscura - Colors and Fog Overhaul (now with fog options)
+
+# Updates:
+- Updated Natural Expedition Ships
+- Updated Settlement Fabricator Camera Fix
+- Updated gShip Add Missing Ship Trails UPDATED
+- Updated Better Freighter Entry and Exit
+- Updated Exocraft Scanner Upgrade
+- Updated Atlas Orb Word-o-Rama
+- Updated Exosolar's and Babs' Space Battle Frequency Controller
+- Updated Realistic Market
+- Updated Better Sentinel Destruction
+
+</details>
+
+<details markdown="1">
 <summary>v1.5.0.0 - June 04, 2026</summary>
 
 **Update Importance:** MAJOR  
