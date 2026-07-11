@@ -8,6 +8,129 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v2.4.0.0 - July 11, 2026</summary>
+
+**Update Importance:** MAJOR  
+**NOT SAVE COMPATIBLE**
+
+___
+
+# Additions:
+- Added Aquafield - a GRiNDTerra Mod
+- Added Shattered Platinum Starborn
+- Added MJOLNIR Armory (Ultimate Edition)
+- Added Antares Armiger - Autonomous Systems Arsenal -
+- Added New Atlantis Perimeter Gate
+- Added Gallion - Immersive Finance
+- Added GRiNDTerra Gameplay Overhaul - a GRiNDTerra AiO Mod
+- Added Harbor - Streamlined Dues
+- Added Atmo - Streamlined Oxygen
+- Added Additional POIs - Mars
+- Added New Better Glass
+
+# Removals:
+- Removed The Vault
+- Removed Death Quotes
+- Removed Manual Weapon Stance
+- Removed Functional Reflex Sights
+- Removed Customizable Player Spacesuit Nameplate
+- Removed Chunks Noir
+- Removed HideHUD
+- Removed xtcrefugee's miscellaneous small mods
+- Removed Random Creature and Robot Sizes- A GRiNDTerra Mod
+- Removed Crimson Gang Van (Standalone)
+- Removed REV-9 Rover - Standalone
+- Removed M12B FAV (Warthog) (Standalone)
+- Removed HopeTech Hammer V Land Vehicle
+- Removed Odyssey - A True RPG (Collection)
+- Removed Simple Immersive Music Players
+- Removed Nem's Functional Coffee and Tea Brewers
+- Removed Concept Art Akila
+
+# Fixes and Tweaks:
+- Reworked the list for latest game update
+- Fixed some performance issues 
+- Improved visuals of many biomes
+- Removed problematic mods
+
+# Updates:
+- Updated KZ Mantis 2.0
+- Updated Auto Unlock SFSE
+- Updated Various Crew
+- Updated ImmerSleep - See Yourself Sleeping
+- Updated Icy Moon - Porrima IV-d
+- Updated Vibrant Volcanic Biome
+- Updated Lightweight Spacesuit - Flightsuit Nova
+- Updated KZ Aggregation of Scraps
+- Updated KZ Tachyonic Core Arsenal
+- Updated KZ Techno-Corporate Repository
+- Updated KZ Meridian Transit Regalia
+- Updated Eyewitness Startup Fix
+- Updated Pytheas System
+- Updated Seizure Of Ships - Take Over Restricted Ships
+- Updated KZ Venatorial Frontiers Armory
+- Updated Cost Of Spacing
+- Updated Peak Performance - Minimalist Needs
+- Updated Main and Pause Menu Tweaks
+- Updated Real O2
+- Updated Galactic Mesh Fixes
+- Updated Console Command Runner Updated
+- Updated StarPatcher
+- Updated Legendary Module Recycler
+- Updated Frontier Cantinas
+- Updated Useful Brigs
+- Updated Tactical Security Spacesuit
+- Updated Starvival - Immersive Survival Addon
+- Updated Starfield Script Extender (SFSE)
+- Updated Into the Void Bug Fix
+- Updated Detailed Reference Info - SFSE
+- Updated Starfield Console Extender - SFSE
+- Updated Player Eyes Stuck at the Dialogue Target Bug Fix - SFSE
+- Updated Less Creepy Crowd NPCs - Reduced Staring and Headtracking
+- Updated Quick Lowered Weapons
+- Updated Starfield Memory Fixes
+- Updated Mercenaries and Mayhem - a GRiNDTerra Outpost Expansion
+- Updated Address Library for SFSE Plugins
+- Updated No Reactor Limit
+- Updated No Cockpit Limit
+- Updated No Reactor Class Requirement
+- Updated No Minimum Landing Gear
+- Updated No Build Below Bay or Invalid Docker Position or Misaligned Landing Gear Errors
+- Updated No Engine Power Limits
+- Updated No Unattached Module Error
+- Updated No Vehicle Auto Handbrake - SFSE
+- Updated Starfield High Priority Launcher
+- Updated GRiNDTerra Planetary POI Generation
+- Updated Unofficial Starfield Patch - USFP
+- Updated Astral UI
+- Updated Astral UI - Quicklist + Usearch plugin
+- Updated Souls of Cities - SFSE
+- Updated No Vehicle Auto Handbrake - SFSE
+- Updated Starware Search Engine - SFSE
+- Updated Scanner Closest Path Highlight Improvements
+- Updated Transfer Spaceships Across Universes - SFSE
+- Updated No Vehicle Weapon Aim Oxygen Penalty - SFSE
+- Updated No Vehicle Mouse Steering - SFSE
+- Updated Dynamic Inventory Models - SFSE
+- Updated Tell Me Your Name - SFSE
+- Updated CharGenMenu
+- Updated No Forced Vehicle Aim Assist - SFSE
+- Updated Take All to Ship - Quick Item Transfer - SFSE
+- Updated Favorites Menu Extended - SFSE
+- Updated Save Game Thumbnails - SFSE
+- Updated Dodge Framework SFSE
+- Updated KBAR-32 (AA BAR-32)
+- Updated Furnished Starborn Ship
+- Updated Cassiopeia Papyrus Extender
+- Updated SFSE ASI Loader Updated
+- Updated Starfield Engine Fixes - SFSE
+- Updated True Seamless Grav Jumps SFSE
+- Updated Red Mile Terror
+- Updated Project Rework - Akila
+
+</details>
+
+<details markdown="1">
 <summary>v2.3.0.0 - June 06, 2026</summary>
 
 **Update Importance:** MAJOR  
