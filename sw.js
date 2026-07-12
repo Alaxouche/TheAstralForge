@@ -2,7 +2,7 @@
 // Strategy: stale-while-revalidate for same-origin static assets only.
 // HTML navigations, cross-origin requests (ads, fonts CDN, APIs) always go to
 // the network so content stays fresh. Bump CACHE_VERSION to invalidate.
-const CACHE_VERSION = 'taf-static-v1';
+const CACHE_VERSION = 'taf-static-v2';
 const ASSET_PATTERN = /\.(?:css|js|woff2?|ttf|otf|png|jpe?g|webp|gif|svg|ico)$/i;
 
 self.addEventListener('install', (event) => {

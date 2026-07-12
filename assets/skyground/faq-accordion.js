@@ -10,7 +10,9 @@ class FAQAccordion {
   }
 
   attachEventListeners() {
+    // Skip FAQ blocks inside [data-faq] — those are wired up by features.js
     document.querySelectorAll('.faq-question').forEach(question => {
+      if (question.closest('[data-faq]')) return;
       question.addEventListener('click', (e) => {
         const item = e.target.closest('.faq-item');
         this.toggle(item);

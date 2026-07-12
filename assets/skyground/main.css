@@ -33,6 +33,52 @@ textarea:focus-visible,
   outline-offset: 2px;
 }
 
+/* Keyboard users: first tab stop jumps straight to the page content */
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 16px;
+  z-index: 2000;
+  padding: 10px 16px;
+  background: var(--primary-color);
+  color: #000;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+
+#main-content:focus {
+  outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  /* Scroll-reveal sections must stay visible without their animation */
+  .fade-in,
+  .slide-up,
+  .slide-left,
+  .slide-right {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
 html,
 body {
   height: 100%;
@@ -1345,6 +1391,8 @@ html[data-theme="light"] .creator-link.youtube:hover {
 .carousel-dots .dot {
   width: 10px;
   height: 10px;
+  border: none;
+  padding: 0;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.4);
   cursor: pointer;

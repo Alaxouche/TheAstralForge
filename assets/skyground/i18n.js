@@ -15,6 +15,7 @@
   const translations = {
     en: {
       /* ── Navigation ── */
+      'nav.skip':               'Skip to content',
       'nav.home':               'Home',
       'nav.hub':                'Hub',
       'nav.modlists':           'Modlists',
@@ -77,42 +78,33 @@
       /* ── Homepage — about ── */
       'home.about_title': 'About Us',
       'home.about_p1':    'The Astral Forge was established by Alaxouche in September 2020 as the official repository for the Wunduniik modlist. Since then, it has expanded and rebranded, first to Alaxouche\'s Modding Hub and now to The Astral Forge, hosting four main modlists: <strong>Wunduniik</strong>, <strong>Krentoraan</strong>, <strong>Ghost of the Grid</strong>, and <strong>No Man\'s Sky Explorer</strong>. We welcome submissions for additional modlists to increase visibility for authors and strengthen our collective credibility.',
-      'home.about_p2':    'This site replaces the former WunduniikWiki.com, offering a modern, responsive design with theme switching, a streamlined interface, and up-to-date, clearly organised information.',
+      'home.about_p2':    'This site replaces the old WunduniikWiki.com. Each list keeps its installation guide, changelog, load order and known issues in one place, in English and French.',
 
       /* ── Homepage — creator ── */
-      'home.creator_title':   'About Modlist Creator',
+      'home.creator_title':   'About the creator',
       'home.creator_tagline': '"There are never enough mods."',
-      'home.creator_bio_1':   'Alaxouche is a modder, content creator and community manager primarily focused on Skyrim and Cyberpunk 2077 content. Best known for creating comprehensive modlists that transform the gaming experience.',
-      'home.creator_bio_2':   'Founded The Astral Forge in 2020, starting with the Wunduniik modlist and expanding to host multiple curated lists, each crafted to provide unique and immersive gameplay experiences.',
+      'home.creator_bio_1':   'Alaxouche has been modding Skyrim and Cyberpunk 2077 since 2020, and maintains the modlists hosted here along with the Discord community around them.',
+      'home.creator_bio_2':   'It all started with Wunduniik in 2020. The Astral Forge grew out of that first list and now hosts several others, each with its own documentation.',
 
       /* ── Homepage — features ── */
-      'home.feature_discord_title':    'Join Our Discord Community',
-      'home.feature_discord_body':     'Engage with our community on Alaxouche\'s Modding Hub to receive personalised modding assistance, share screenshots, discuss creative lore, and stay informed on project developments. We host dedicated channels for the <strong>Wunduniik</strong> modlist, including support, bug reporting, and announcements, and conduct regular polls and planning discussions. Join us to collaborate directly with the Wunduniik Team and our broader community.',
+      'home.feature_discord_title':    'The Discord server',
+      'home.feature_discord_body':     'The Discord is where everything happens: installation help, bug reports, announcements, and plenty of screenshots. Each modlist has its own channels — <strong>Wunduniik</strong> gets dedicated support and announcement channels — and big changes are usually put to a poll before they land in a list.',
       'home.feature_docs_title':       'Getting Started',
-      'home.feature_docs_body':        'Our documentation provides comprehensive installation guides, changelogs, load orders, and known-issue reports essential for a seamless mod installation experience. All five modlists — <strong>Wunduniik</strong>, <strong>Krentoraan</strong>, <strong>Ghost of the Grid</strong>, <strong>No Man\'s Sky Explorer</strong>, and <strong>Extrasolar Containment Protocol</strong> — now have full installation guides available.',
-      'home.feature_guidelines_title': 'Community Guidelines',
-      'home.feature_guidelines_body':  'The Astral Forge is committed to fostering an inclusive and respectful environment. All community members are expected to treat each other with courtesy, provide constructive feedback, and respect the work of modders and list authors.',
+      'home.feature_docs_body':        'Every list has a step-by-step installation guide, plus its changelog, load order and known issues. That covers all five: <strong>Wunduniik</strong>, <strong>Krentoraan</strong>, <strong>Ghost of the Grid</strong>, <strong>No Man\'s Sky Explorer</strong> and <strong>Extrasolar Containment Protocol</strong>. If a guide doesn\'t answer your question, ask on Discord.',
+      'home.feature_guidelines_title': 'House rules',
+      'home.feature_guidelines_body':  'Short version: be decent to each other, keep feedback constructive, and respect the mod authors whose work these lists are built on. The full rules are on the Discord server.',
       'home.feature_guidelines_link':  'Join our Discord to read the server rules',
 
-      /* ── Homepage — community pulse ── */
-      'home.pulse_title':           'Community Pulse',
-      'home.pulse_subtitle':        'Stay connected with support, events, and contributor activity in one place.',
-      'home.pulse_support_title':   'Discord Live Support',
-      'home.pulse_support_body':    'Get quick troubleshooting help, installation advice, and modlist guidance directly from the community.',
-      'home.pulse_support_link':    'Join the support server',
-      'home.pulse_contrib_title':   'Community Contributions',
-      'home.pulse_contrib_body':    'Share screenshots, report issues, and suggest improvements to shape future list updates.',
-      'home.pulse_contrib_link':    'Submit feedback',
-      'home.pulse_supporters_title':'Supporter Highlights',
-      'home.pulse_supporters_body': 'Thank you to everyone helping keep documentation, testing, and maintenance moving forward.',
-      'home.pulse_supporters_link': 'See supporters',
+      /* ── Homepage — supporters ── */
+      'home.pulse_supporters_link': 'See all supporters',
       'home.pulse_recent':          'Recent Supporters',
 
       /* ── Homepage — gallery ── */
-      'home.gallery_highlights_title':  'Gallery Highlights',
+      'home.gallery_highlights_title':  'Gallery',
       'home.community_gallery_title':   'Community Gallery',
-      'home.community_gallery_subtitle':'Explore screenshots and creations from our community members',
+      'home.community_gallery_subtitle':'Screenshots shared by the community on Discord',
       'home.gallery_filter_all':        'All',
+      'home.gallery_view_all':          'View the full gallery',
 
       /* ── Modlist gallery / checklist / banners ── */
       'gallery.title':        'Gallery',
@@ -125,6 +117,7 @@
 
     fr: {
       /* ── Navigation ── */
+      'nav.skip':               'Aller au contenu',
       'nav.home':               'Accueil',
       'nav.hub':                'Hub',
       'nav.modlists':           'Modlistes',
@@ -187,42 +180,33 @@
       /* ── Homepage — about ── */
       'home.about_title': 'À Propos',
       'home.about_p1':    'The Astral Forge a été fondée par Alaxouche en septembre 2020 en tant que dépôt officiel de la modliste Wunduniik. Depuis, elle s\'est agrandie et a changé de nom — d\'abord en Alaxouche\'s Modding Hub, puis en The Astral Forge — et héberge désormais quatre modlistes principales : <strong>Wunduniik</strong>, <strong>Krentoraan</strong>, <strong>Ghost of the Grid</strong> et <strong>No Man\'s Sky Explorer</strong>. Nous acceptons les soumissions de nouvelles modlistes pour accroître la visibilité des auteurs et renforcer notre crédibilité collective.',
-      'home.about_p2':    'Ce site remplace l\'ancien WunduniikWiki.com, offrant un design moderne et adaptatif avec basculement de thème, une interface épurée et des informations à jour clairement organisées.',
+      'home.about_p2':    'Ce site remplace l\'ancien WunduniikWiki.com. Chaque liste y regroupe son guide d\'installation, son changelog, son ordre de chargement et ses problèmes connus, en anglais comme en français.',
 
       /* ── Homepage — creator ── */
-      'home.creator_title':   'À Propos du Créateur',
+      'home.creator_title':   'À propos du créateur',
       'home.creator_tagline': '« Il n\'y aura jamais assez de mods. »',
-      'home.creator_bio_1':   'Alaxouche est un moddeur, créateur de contenu et gestionnaire de communauté principalement axé sur le contenu Skyrim et Cyberpunk 2077. Il est surtout connu pour ses modlistes complètes qui transforment l\'expérience de jeu.',
-      'home.creator_bio_2':   'Il a fondé The Astral Forge en 2020 en commençant par la modliste Wunduniik, puis en développant l\'hébergement de multiples listes sélectionnées, chacune conçue pour offrir une expérience de jeu unique et immersive.',
+      'home.creator_bio_1':   'Alaxouche modde Skyrim et Cyberpunk 2077 depuis 2020. Il maintient les modlistes hébergées ici, ainsi que la communauté Discord qui s\'est construite autour.',
+      'home.creator_bio_2':   'Tout a commencé avec Wunduniik en 2020. The Astral Forge est né de cette première liste et en héberge aujourd\'hui plusieurs autres, chacune avec sa propre documentation.',
 
       /* ── Homepage — features ── */
-      'home.feature_discord_title':    'Rejoignez Notre Communauté Discord',
-      'home.feature_discord_body':     'Échangez avec notre communauté sur l\'Alaxouche\'s Modding Hub pour recevoir une aide personnalisée au modding, partager des captures d\'écran, discuter du lore créatif et rester informé des développements des projets. Nous proposons des canaux dédiés à la modliste <strong>Wunduniik</strong>, notamment pour le support, le signalement de bugs et les annonces, ainsi que des sondages et discussions réguliers. Rejoignez-nous pour collaborer directement avec l\'équipe Wunduniik et notre communauté au sens large.',
-      'home.feature_docs_title':       'Bien Débuter',
-      'home.feature_docs_body':        'Notre documentation fournit des guides d\'installation complets, des journaux de mises à jour, des ordres de chargement et des rapports de problèmes connus, essentiels pour une installation fluide. Les cinq modlistes — <strong>Wunduniik</strong>, <strong>Krentoraan</strong>, <strong>Ghost of the Grid</strong>, <strong>No Man\'s Sky Explorer</strong> et <strong>Extrasolar Containment Protocol</strong> — disposent désormais de guides d\'installation complets.',
-      'home.feature_guidelines_title': 'Règles de la Communauté',
-      'home.feature_guidelines_body':  'The Astral Forge s\'engage à favoriser un environnement inclusif et respectueux. Tous les membres de la communauté sont invités à se traiter avec courtoisie, à fournir des retours constructifs et à respecter le travail des moddeurs et auteurs de listes.',
+      'home.feature_discord_title':    'Le serveur Discord',
+      'home.feature_discord_body':     'C\'est sur le Discord que tout se passe : aide à l\'installation, signalement de bugs, annonces, et beaucoup de captures d\'écran. Chaque modliste a ses propres canaux — <strong>Wunduniik</strong> a ses canaux de support et d\'annonces dédiés — et les gros changements passent généralement par un sondage avant d\'arriver dans une liste.',
+      'home.feature_docs_title':       'Bien débuter',
+      'home.feature_docs_body':        'Chaque liste a son guide d\'installation pas à pas, son changelog, son ordre de chargement et ses problèmes connus. C\'est le cas des cinq listes : <strong>Wunduniik</strong>, <strong>Krentoraan</strong>, <strong>Ghost of the Grid</strong>, <strong>No Man\'s Sky Explorer</strong> et <strong>Extrasolar Containment Protocol</strong>. Si un guide ne répond pas à votre question, demandez sur le Discord.',
+      'home.feature_guidelines_title': 'Règles de la maison',
+      'home.feature_guidelines_body':  'En résumé : restez corrects entre vous, gardez des retours constructifs et respectez les auteurs de mods sans qui ces listes n\'existeraient pas. Les règles complètes sont sur le serveur Discord.',
       'home.feature_guidelines_link':  'Rejoignez notre Discord pour lire les règles du serveur',
 
-      /* ── Homepage — community pulse ── */
-      'home.pulse_title':           'Pouls de la Communauté',
-      'home.pulse_subtitle':        'Restez connecté avec le support, les événements et l\'activité des contributeurs, en un seul endroit.',
-      'home.pulse_support_title':   'Support Discord en Direct',
-      'home.pulse_support_body':    'Obtenez rapidement de l\'aide pour le dépannage, des conseils d\'installation et des orientations directement depuis la communauté.',
-      'home.pulse_support_link':    'Rejoindre le serveur de support',
-      'home.pulse_contrib_title':   'Contributions Communautaires',
-      'home.pulse_contrib_body':    'Partagez des captures d\'écran, signalez des problèmes et proposez des améliorations pour façonner les futures mises à jour.',
-      'home.pulse_contrib_link':    'Soumettre un retour',
-      'home.pulse_supporters_title':'Mise en Avant des Soutiens',
-      'home.pulse_supporters_body': 'Merci à tous ceux qui maintiennent la documentation, les tests et la maintenance en mouvement.',
-      'home.pulse_supporters_link': 'Voir les soutiens',
-      'home.pulse_recent':          'Soutiens Récents',
+      /* ── Homepage — supporters ── */
+      'home.pulse_supporters_link': 'Voir tous les soutiens',
+      'home.pulse_recent':          'Soutiens récents',
 
       /* ── Homepage — gallery ── */
-      'home.gallery_highlights_title':  'Points Forts de la Galerie',
-      'home.community_gallery_title':   'Galerie Communautaire',
-      'home.community_gallery_subtitle':'Explorez les captures d\'écran et créations de nos membres',
+      'home.gallery_highlights_title':  'Galerie',
+      'home.community_gallery_title':   'Galerie communautaire',
+      'home.community_gallery_subtitle':'Captures d\'écran partagées par la communauté sur Discord',
       'home.gallery_filter_all':        'Tout',
+      'home.gallery_view_all':          'Voir toute la galerie',
 
       /* ── Galerie / checklist / bannières ── */
       'gallery.title':        'Galerie',

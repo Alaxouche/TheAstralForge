@@ -20,13 +20,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ '/assets/skyground/main.css' | relative_url }}?v={{ site.assets_version }}">
-  <link rel="stylesheet" href="{{ '/assets/skyground/lightbox.css' | relative_url }}?v={{ site.assets_version }}">
-  <link rel="stylesheet" href="{{ '/assets/skyground/features.css' | relative_url }}?v={{ site.assets_version }}">
-  <link rel="stylesheet" href="{{ '/assets/skyground/features-extended.css' | relative_url }}?v={{ site.assets_version }}">
-  <link rel="stylesheet" href="{{ '/assets/skyground/enhancements.css' | relative_url }}?v={{ site.assets_version }}">
-  <link rel="stylesheet" href="{{ '/assets/skyground/utilities.css' | relative_url }}?v={{ site.assets_version }}">
-  <link rel="stylesheet" href="{{ '/assets/skyground/visual-enhancements.css' | relative_url }}?v={{ site.assets_version }}">
+  <link rel="stylesheet" href="{{ '/assets/skyground/site.css' | relative_url }}?v={{ site.assets_version }}">
   <style>
     /* Theme transition */
     html.theme-transitioning,
@@ -95,8 +89,11 @@
   <div id="lightbox" aria-hidden="true">
     <img id="lightbox-img" alt="">
   </div>
+  <a class="skip-link" href="#main-content" data-i18n-key="nav.skip">Skip to content</a>
   {% include skyground_header.html %}
+  <div id="main-content" tabindex="-1">
   {{ content }}
+  </div>
   {% include nav_footer_custom.html %}
   
   <button id="back-to-top" aria-label="Back to top">
@@ -112,19 +109,7 @@
       });
     }
   </script>
-  <script src="{{ '/assets/skyground/lightbox.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
-  <script src="{{ '/assets/skyground/carousel.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
-  <script src="{{ '/assets/skyground/header.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
-  <script src="{{ '/assets/skyground/theme-toggle.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
-  <script src="{{ '/assets/skyground/i18n.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
-  <script src="{{ '/assets/skyground/performance.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
-  <script src="{{ '/assets/skyground/features.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
-  <script src="{{ '/assets/skyground/enhancements.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
-  <script src="{{ '/assets/skyground/rating-system.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
-  <script src="{{ '/assets/skyground/vote-system.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
-  <script src="{{ '/assets/skyground/search-system.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
-  <script src="{{ '/assets/skyground/notification-system.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
-  <script src="{{ '/assets/skyground/faq-accordion.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
+  <script src="{{ '/assets/skyground/site.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
   {% if page.layout == 'skyground_readme' %}
   <script src="{{ '/assets/skyground/nav-fold.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
   {% endif %}
@@ -136,8 +121,10 @@
   <script src="{{ '/assets/skyground/version-banner.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
   <script src="{{ '/assets/skyground/loadorder.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
   {% endif %}
+  {% if page.layout == 'skyground_home' or page.community_gallery %}
+  <script src="{{ '/assets/skyground/community-gallery.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
+  {% endif %}
   {% if page.layout == 'skyground_home' %}
-  <script src="{{ '/assets/skyground/user-gallery.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
   <script src="{{ '/assets/skyground/discord-widget.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
   {% endif %}
 </body>

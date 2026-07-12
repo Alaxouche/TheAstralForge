@@ -1,16 +1,20 @@
 /**
  * vote-system.js
- * Persistent "Was this helpful?" counters — stored in localStorage.
- * Supports both page-level votes (.vote-btn) and FAQ item votes (.faq-vote).
+ * "Was this helpful?" feedback — the single handler for page votes
+ * (.vote-btn) and FAQ item votes (.faq-vote).
  *
- * Data shape in localStorage (key: "af_votes"):
- * {
- *   "page:/wunduniik/": { helpful: 3, "not-helpful": 1, userVote: "helpful" },
- *   "faq:install-q1":   { helpful: 2, unhelpful: 0, userVote: null }
- * }
+ * The user's own vote is kept in localStorage (key "af_votes") so the UI
+ * remembers it. Each newly cast vote is ALSO counted globally through the
+ * free Abacus counter API, so the site owner gets real numbers.
+ * Notes on the remote counts:
+ *   - fire-and-forget: if the API is down, the UI still works;
+ *   - counters only increment, so un-voting or switching a vote cannot
+ *     decrement — treat the numbers as a trend, not an exact tally.
+ * Read the counts with: node scripts/vote-stats.mjs
  */
 (() => {
   const STORAGE_KEY = 'af_votes';
+  const REMOTE_API  = 'https://abacus.jasoncameron.dev/hit/theastralforge';
 
   /* ── Storage helpers ─────────────────────────────────────── */
 
@@ -22,6 +26,26 @@
   function save(data) {
     try { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); }
     catch {}
+  }
+
+  /* ── Remote counter (Abacus) ─────────────────────────────── */
+
+  // Abacus keys: [A-Za-z0-9._-], max 64 chars. Same logic lives in
+  // scripts/vote-stats.mjs — keep the two in sync.
+  function remoteKey(kind, id, type) {
+    const slug = String(kind + '-' + id)
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '')
+      .slice(0, 58);
+    return slug + (type === 'helpful' ? '-yes' : '-no');
+  }
+
+  function recordRemote(kind, id, type) {
+    try {
+      fetch(`${REMOTE_API}/${remoteKey(kind, id, type)}`, { keepalive: true })
+        .catch(() => {});
+    } catch {}
   }
 
   /* ── Page-level vote section (".vote-btn") ───────────────── */
@@ -63,6 +87,7 @@
           // Cast new vote
           entry[type] = (entry[type] || 0) + 1;
           entry.userVote = type;
+          recordRemote('page', window.location.pathname, type);
         }
 
         data[pageId] = entry;
@@ -116,6 +141,7 @@
           } else {
             entry[type] = (entry[type] || 0) + 1;
             entry.userVote = type;
+            recordRemote('faq', faqId, type);
           }
 
           data[key] = entry;

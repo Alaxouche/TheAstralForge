@@ -9,15 +9,21 @@
 
   if (!scrollContainer || !prevBtn || !nextBtn) return;
 
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   let autoScrollInterval;
+  let paused = false;
   let currentIndex = 0;
   const itemWidth = 300 + 16;
   const itemsCount = scrollContainer.children.length;
+  const dots = dotsContainer ? dotsContainer.querySelectorAll('.dot') : [];
 
   const updateDots = () => {
-    if (!dotsContainer) return;
-    document.querySelectorAll('.carousel-dots .dot').forEach((dot, idx) => {
-      dot.classList.toggle('active', idx === currentIndex);
+    dots.forEach((dot, idx) => {
+      const active = idx === currentIndex;
+      dot.classList.toggle('active', active);
+      dot.setAttribute('aria-selected', String(active));
+      dot.setAttribute('tabindex', active ? '0' : '-1');
     });
   };
 
@@ -37,38 +43,62 @@
     scrollToIndex(currentIndex);
   };
 
-  nextBtn.addEventListener('click', () => {
+  // No auto-advance for users who asked for reduced motion,
+  // and pause while the carousel is hovered or holds keyboard focus.
+  const startAutoScroll = () => {
+    if (reducedMotion || paused) return;
     clearInterval(autoScrollInterval);
+    autoScrollInterval = setInterval(nextSlide, 5000);
+  };
+
+  const stopAutoScroll = () => clearInterval(autoScrollInterval);
+
+  nextBtn.addEventListener('click', () => {
+    stopAutoScroll();
     nextSlide();
     startAutoScroll();
   });
 
   prevBtn.addEventListener('click', () => {
-    clearInterval(autoScrollInterval);
+    stopAutoScroll();
     prevSlide();
     startAutoScroll();
   });
 
+  dots.forEach((dot, idx) => {
+    dot.addEventListener('click', () => {
+      stopAutoScroll();
+      scrollToIndex(idx);
+      startAutoScroll();
+    });
+  });
+
+  // Arrow keys move between dots (standard tablist behaviour)
   if (dotsContainer) {
-    document.querySelectorAll('.carousel-dots .dot').forEach((dot, idx) => {
-      dot.addEventListener('click', () => {
-        clearInterval(autoScrollInterval);
-        scrollToIndex(idx);
-        startAutoScroll();
-      });
+    dotsContainer.addEventListener('keydown', (e) => {
+      if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+      e.preventDefault();
+      stopAutoScroll();
+      if (e.key === 'ArrowRight') nextSlide(); else prevSlide();
+      dots[currentIndex].focus();
+      startAutoScroll();
     });
   }
 
-  const startAutoScroll = () => {
-    autoScrollInterval = setInterval(() => {
-      nextSlide();
-    }, 5000);
-  };
+  carousel.addEventListener('mouseenter', () => { paused = true; stopAutoScroll(); });
+  carousel.addEventListener('mouseleave', () => { paused = false; startAutoScroll(); });
+  carousel.addEventListener('focusin', () => { paused = true; stopAutoScroll(); });
+  carousel.addEventListener('focusout', (e) => {
+    if (!carousel.contains(e.relatedTarget)) {
+      paused = false;
+      startAutoScroll();
+    }
+  });
 
   let scrollTimeout;
   scrollContainer.addEventListener('scroll', () => {
     clearTimeout(scrollTimeout);
-    clearInterval(autoScrollInterval);
+    stopAutoScroll();
     scrollTimeout = setTimeout(startAutoScroll, 2000);
   });
 

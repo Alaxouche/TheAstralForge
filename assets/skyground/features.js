@@ -116,83 +116,7 @@ function showToast(message, duration = 3000) {
   }, duration);
 }
 
-(() => {
-  const voteButtons = document.querySelectorAll('.vote-btn');
-  
-  voteButtons.forEach(button => {
-    button.addEventListener('click', function() {
-      const voteType = this.dataset.vote;
-      const pageId = this.dataset.pageId || window.location.pathname;
-      const storageKey = `vote_${pageId}`;
-      
-      const existingVote = localStorage.getItem(storageKey);
-      if (existingVote) {
-        showToast('You have already voted for this page!');
-        return;
-      }
-      
-      localStorage.setItem(storageKey, voteType);
-      
-      const voteSection = this.closest('.vote-section');
-      voteSection.classList.add('voted');
-      
-      const counter = this.querySelector('.vote-count');
-      if (counter) {
-        const currentCount = parseInt(counter.textContent) || 0;
-        counter.textContent = currentCount + 1;
-      }
-      
-      showToast(voteType === 'helpful' ? 'Thank you for your feedback!' : 'Thank you, we will improve this page.');
-    });
-  });
-})();
-
-(() => {
-  const testimonialCarousels = document.querySelectorAll('.testimonials-carousel');
-  
-  testimonialCarousels.forEach(carousel => {
-    const container = carousel.querySelector('.testimonials-container');
-    const prevBtn = carousel.querySelector('.testimonial-prev');
-    const nextBtn = carousel.querySelector('.testimonial-next');
-    const dots = carousel.querySelectorAll('.testimonial-dot');
-    
-    if (!container || !prevBtn || !nextBtn) return;
-    
-    let currentIndex = 0;
-    const items = container.querySelectorAll('.testimonial-item');
-    const totalItems = items.length;
-    
-    const updateCarousel = () => {
-      container.style.transform = `translateX(-${currentIndex * 100}%)`;
-      
-      dots.forEach((dot, idx) => {
-        dot.classList.toggle('active', idx === currentIndex);
-      });
-    };
-    
-    nextBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) % totalItems;
-      updateCarousel();
-    });
-    
-    prevBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex - 1 + totalItems) % totalItems;
-      updateCarousel();
-    });
-    
-    dots.forEach((dot, idx) => {
-      dot.addEventListener('click', () => {
-        currentIndex = idx;
-        updateCarousel();
-      });
-    });
-    
-    setInterval(() => {
-      currentIndex = (currentIndex + 1) % totalItems;
-      updateCarousel();
-    }, 7000);
-  });
-})();
+/* Page votes and FAQ votes are handled by vote-system.js (single source of truth). */
 
 (() => {
   const images = document.querySelectorAll('img[data-src]');
@@ -318,35 +242,6 @@ function showToast(message, duration = 3000) {
         answer.hidden = expanded;
       });
     }
-
-    const id = item.dataset.faqId;
-    const voteKey = `faq_vote_${id}`;
-    const existingVote = localStorage.getItem(voteKey);
-    if (existingVote) {
-      item.classList.add('faq-voted');
-      item.querySelectorAll('.faq-vote').forEach(btn => btn.disabled = true);
-    }
-
-    item.querySelectorAll('.faq-vote').forEach(btn => {
-      btn.addEventListener('click', () => {
-        if (localStorage.getItem(voteKey)) {
-          showToast('You already voted on this FAQ item.');
-          return;
-        }
-
-        localStorage.setItem(voteKey, btn.dataset.faqVote);
-        item.classList.add('faq-voted');
-        item.querySelectorAll('.faq-vote').forEach(button => button.disabled = true);
-
-        const count = btn.querySelector('[data-count]');
-        if (count) {
-          const current = parseInt(count.textContent, 10) || 0;
-          count.textContent = current + 1;
-        }
-
-        showToast('Thanks for the feedback!');
-      });
-    });
   });
 
   setFilter('all');
