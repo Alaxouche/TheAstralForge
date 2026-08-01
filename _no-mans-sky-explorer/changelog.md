@@ -10,6 +10,30 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v1.5.3.0 - August 01, 2026</summary>
+
+**Update Importance:** MINOR  
+**SAVE COMPATIBLE**
+
+___
+
+# Fixes and Tweaks:
+- Fixed invisible trunks on trees
+- Fixed industrial building issues
+- Fixed broken fuel cost
+
+# Removals:
+- Removed DUD'S - Skies
+- Removed Exosolar's and Babs' Industrial FPS Booster
+- Removed Reduced Ship Launch Fuel Costs (Or Increased)
+
+# Updates:
+- Updated New Milestones
+- Updated More Words
+
+</details>
+
+<details markdown="1">
 <summary>v1.5.2.0 - July 11, 2026</summary>
 
 **Update Importance:** MINOR  
