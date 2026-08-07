@@ -10,6 +10,180 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v3.1.0.0 - August 07, 2026</summary>
+
+**Update Importance:** MAJOR  
+**SAVE COMPATIBLE** 
+
+___
+
+# Additions:
+- Added Go on a Date (Judy) - Side romance activity
+- Added Lost Content (Quest Content Fixes)
+- Added Downtown Street Light Base Swap - QoL
+- Added NPC Actions Stutter Fix
+- Added Cyberarms Patch
+- Added Apartment Birds
+- Added Cinematic Immunity
+- Added M16 Hammerhead
+- Added Choom Memory Booster
+- Added Beautiful MAKEUP III - CCXL - unRealistic Eyeshadows and Eyeliners - Cyberware Edition - BOTH V
+- Added Air Traffic Dupe Fix
+- Added Scannable Stash
+
+# Fixes and Tweaks:
+- Fixed most of the stutters issues
+- Fixed major performance leaks
+- Fixed issues with overhauled locations
+- Improved global performances
+- Removed broken/outdated/deleted mods
+
+# Removals:
+- Removed Redux UI - Health Stamina Bars
+- Removed ReduxUI_WantedUIWhite
+- Removed True Sunglasses
+- Removed Reinforcements System - Infinite combat loop fix
+- Removed Better Flashlight
+- Removed The Thin Blue Line
+- Removed It Wasn't Me
+- Removed Night City Remembers
+- Removed Vehicle Speed Unlimiter
+- Removed Chrome Plating
+- Removed Shattered Chrome
+- Removed DigitalVixen Core
+
+# Updates:
+- Updated Map Exit Nuclear Explosion Fix
+- Updated Possibilities
+- Updated Military Combat Jacket - ArchiveXL
+- Updated Particles Flickering Fix (Watson)
+- Updated DR-10 Wormhole Smart Revolver
+- Updated Smoke Texture Overhaul
+- Updated Reinforcements System
+- Updated Better Eye Shadow Mask
+- Updated Improved Distant Shadows and Reflections
+- Updated Midnight Arms MA70 BSG Smart LMG
+- Updated Combat Vest Archive XL
+- Updated Rostovic Koplje Smart Precision Rifle
+- Updated Reset Attributes always available - Redscript
+- Updated Bladerunner Joi Top Archive XL
+- Updated Looting QoL
+- Updated Realistic Bullet Hole Textures
+- Updated Panam Romanced Enhanced
+- Updated Heterochromia Eyes - CCXL
+- Updated Takemura Hand Cyberware - Equippable with ArchiveXL for Masc and Fem V
+- Updated Immersion Patch - NCART Train Motion Fixes
+- Updated Judy Romanced Enhanced
+- updated Welcome back my dear Skippy
+- Updated Pariah
+- Updated Deceptious Quest Core
+- Updated TweakXL
+- Updated Toyota GT86
+- Updated Mitsubishi Lancer Evo 9 MR
+- Updated Deceptious Quest Core Utilities and Settings
+- Updated Set Bonuses
+- Updated Enhanced Craft
+- Updated Top Secret V12 Supra
+- Updated Thorton Merrimac Necromancer
+- Updated Auto Drive Enhanced
+- Updated I Really Want To Stay At Your House - River
+- Updated I Really Want To Stay At Your House - Panam
+- Updated I Really Want To Stay At Your House - Kerry
+- Updated I Really Want To Stay At Your House - Judy
+- Updated Pet Your Cat
+- Updated Computer Anywhere
+- Updated Virtual Car Dealer
+- Updated Cop Killer
+- Updated Improved Vegetation LODs
+- Updated Virtual Atelier
+- Updated Virtual Car Dealer - Sorting
+- Updated NPC CCXL Hair - Masc
+- Updated Weapon Sound Remake
+- Updated Dynamic Downforce
+- Updated Dynamic Gravity Modifier
+- Updated Cyber Drift
+- Updated Modular Military Ballistic Mask - ArchiveXL
+- Updated NDI Osprey TSR-50
+- Updated Custom Perk Framework
+- Updated Player Body Cyberware Injector
+- Updated Military Accessories - Balaclava Pack - ArchiveXL
+- Updated Military Accessories - Modular Armor Pads Pack - ArchiveXL
+- Updated Filthy Access Points
+- Updated Repeatable NCPD Gigs
+- Updated Running Man - New Sprinting Perks
+- Updated Vehicle Navigation System (VNS)
+- Updated Know What You Say
+- Updated Immersive Night City Fixes - CORE
+- Updated 3D World Map Explorer
+- Updated General Shadows Fixes
+- Updated Mazda MX-5 Miata
+- Updated 0-Engine
+- Updated NightlyNow Core
+- Updated Fire and Explosions Texture Overhaul
+- Updated KiasuBurger Cyberware Core
+- Updated VegaCPMods Leg Cyberware
+- Updated Stealthrunner - Stealth Gameplay Expansion
+- Updated The RVC00N Dumpster 3 - PinkyDude's Virtual Atelier
+- Updated Undermine Quest Series
+- Updated ReImagined
+- Updated Weather Condition - Dress for the Forecast
+- Updated Immersion Patch - Minor Activities Quest Fixes
+- Updated Night City Traffic Overhaul
+- Updated Limited HUD
+- Updated VEEGEE SHOP 3
+- Updated VegaCPMods Resources
+- Updated Rita Wheeler Romanced
+- Updated Iconic Weapon Loadouts - Morgan Blackhand
+- Updated Overclocked Lynx Paws - Wall Run Climb Jump Roll
+- Updated Untrack Quest Ultimate - No Main Quest re-tracking - No leftovers
+- Updated Idle Anywhere
+- Updated TV Anywhere
+- Updated FlowerShop - Virtual Atelier Store
+- Updated Drive an Aerial Vehicle - Flight Mod Using AV and Helicopter
+- Updated Immersive Odometer and Fuel System
+- Updated VOIDWEAR Virtual Atelier
+- Updated HCAR
+- Updated Sabbath7991 Weapon and Attachment Shops - Virtual Atelier
+- Updated NC Fashion Virtual Atelier
+- Updated Disable Fake Lights with Path Tracing
+- Updated Nova City 2 (Custom Weather and Lighting - Exposure Overhaul)
+- Updated Non-Canon Romances Enhanced
+- Updated The Nullifier
+- Updated Romance Hangouts Enhanced
+- Updated Immersive Road Crossing
+- Updated Ultra Plus Best Performance and Visuals for Everyone
+- Updated Authentic Shift (QoL Gear Ratios Shifts Audio Sound ASMR and OPTIONAL Tuning System)
+- Updated CET Window Manager
+- Updated Not So Good Draw Distance Mod
+- Updated Military Palette Texture Library
+- Updated Night City Immersive Debris
+- Updated Manavortex Material Library
+- Updated ArchiveXL
+- Updated Factions Evolved
+- Updated Nova Optics (Vehicle Exposure Fix and Visuals Customization)
+- Updated SPLAT Physics Realistic Ragdoll Overhaul
+- Updated Immersive Night City Fixes
+- Updated Zenitex Atelier
+- Updated Drug Dealer - Become a Kingpin
+- Updated Immersion Patch - Cyberpunk Story Quest Fixes
+- Updated Native Settings UI Side Menu Add-on
+- Updated Immersion Patch - Quest Vehicle Motion Fixes
+- Updated Ray Traced Lighting Fixes
+- Updated Damage Scaling and Balance - Extended
+- Updated Informative Healthbar
+- Updated Environmental Weapon Handling
+- Updated Window Switcher
+- Updated Custom Map Markers
+- Updated VEEGEE SHOP 4
+- Updated Immersive Relic malfunctions
+- Updated Ugly bridge building fixed
+- Updated Ying Long Counts
+- Updated NIGHT CITY SKIES
+- Updated Dogtown Natural History Museum Enhanced
+
+</details>
+
+<details markdown="1">
 <summary>v3.0.0.0 - May 25, 2026</summary>
 
 **Update Importance:** MAJOR  
