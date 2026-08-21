@@ -1,0 +1,100 @@
+# Français (fr) UI strings for The Astral Forge.
+#
+# Single source of truth for interface text. site.js inlines these into the JS
+# bundle at build time as window.SG_I18N, and Liquid can read the same values
+# through site.data.i18n — so a string is written once, not once per system.
+#
+# English is the reference. A key missing from another language falls back to
+# en.yml, so a partial translation is fine and never leaves a blank on the page.
+#
+# Keys are grouped by prefix: nav.*, home.*, readme.*, faq.*, contrib.*, ...
+
+"banner.live": "Données en direct"
+
+"contrib.btn_kofi": "Soutenir sur Ko-fi"
+"contrib.btn_patreon": "Rejoindre sur Patreon"
+"contrib.col_amount": "Montant"
+"contrib.col_date": "Date"
+"contrib.col_name": "Nom"
+"contrib.col_platform": "Plateforme"
+"contrib.how_body": "Vos contributions financent :"
+"contrib.how_title": "Comment votre soutien aide le développement"
+"contrib.intro": "Merci à tous ceux qui soutiennent The Astral Forge. Votre soutien permet de maintenir les modlistes à jour, testées et documentées."
+"contrib.note": "Les données des contributeurs sont gérées dans _data/contributors.yml. Mettez à jour ce fichier pour actualiser les listes."
+"contrib.recent_title": "Soutiens récents"
+"contrib.tiers_title": "Niveaux Patreon"
+"contrib.title": "Contributeurs"
+"contrib.top_title": "Top 10 soutiens (depuis toujours)"
+"contrib.why_title": "Pourquoi contribuer ?"
+
+"faq.cta_body": "Rejoignez notre communauté Discord pour un support direct de notre équipe et des membres de la communauté."
+"faq.cta_btn": "Rejoindre le serveur Discord"
+"faq.cta_title": "Encore des questions ?"
+"faq.search_placeholder": "Rechercher dans la FAQ…"
+"faq.subtitle": "Trouvez des réponses aux questions fréquentes sur nos modlistes, l'installation et le dépannage."
+"faq.title": "Foire Aux Questions"
+
+"footer.made_by": "Site par"
+
+"gallery.subtitle": "Captures d'écran de cette modliste."
+"gallery.title": "Galerie"
+
+"home.about_p1": "The Astral Forge a été fondée par Alaxouche en septembre 2020 en tant que dépôt officiel de la modliste Wunduniik. Depuis, elle s'est agrandie et a changé de nom — d'abord en Alaxouche's Modding Hub, puis en The Astral Forge — et héberge désormais quatre modlistes principales : <strong>Wunduniik</strong>, <strong>Krentoraan</strong>, <strong>Ghost of the Grid</strong> et <strong>No Man's Sky Explorer</strong>. Nous acceptons les soumissions de nouvelles modlistes pour accroître la visibilité des auteurs et renforcer notre crédibilité collective."
+"home.about_p2": "Ce site remplace l'ancien WunduniikWiki.com. Chaque liste y regroupe son guide d'installation, son changelog, son ordre de chargement et ses problèmes connus, en anglais comme en français."
+"home.about_title": "À Propos"
+"home.community_gallery_subtitle": "Captures d'écran partagées par la communauté sur Discord"
+"home.community_gallery_title": "Galerie communautaire"
+"home.creator_bio_1": "Alaxouche modde Skyrim et Cyberpunk 2077 depuis 2020. Il maintient les modlistes hébergées ici, ainsi que la communauté Discord qui s'est construite autour."
+"home.creator_bio_2": "Tout a commencé avec Wunduniik en 2020. The Astral Forge est né de cette première liste et en héberge aujourd'hui plusieurs autres, chacune avec sa propre documentation."
+"home.creator_tagline": "« Il n'y aura jamais assez de mods. »"
+"home.creator_title": "À propos du créateur"
+"home.feature_discord_body": "C'est sur le Discord que tout se passe : aide à l'installation, signalement de bugs, annonces, et beaucoup de captures d'écran. Chaque modliste a ses propres canaux — <strong>Wunduniik</strong> a ses canaux de support et d'annonces dédiés — et les gros changements passent généralement par un sondage avant d'arriver dans une liste."
+"home.feature_discord_title": "Le serveur Discord"
+"home.feature_docs_body": "Chaque liste a son guide d'installation pas à pas, son changelog, son ordre de chargement et ses problèmes connus. C'est le cas des cinq listes : <strong>Wunduniik</strong>, <strong>Krentoraan</strong>, <strong>Ghost of the Grid</strong>, <strong>No Man's Sky Explorer</strong> et <strong>Extrasolar Containment Protocol</strong>. Si un guide ne répond pas à votre question, demandez sur le Discord."
+"home.feature_docs_title": "Bien débuter"
+"home.feature_guidelines_body": "En résumé : restez corrects entre vous, gardez des retours constructifs et respectez les auteurs de mods sans qui ces listes n'existeraient pas. Les règles complètes sont sur le serveur Discord."
+"home.feature_guidelines_link": "Rejoignez notre Discord pour lire les règles du serveur"
+"home.feature_guidelines_title": "Règles de la maison"
+"home.gallery_filter_all": "Tout"
+"home.gallery_highlights_title": "Galerie"
+"home.gallery_view_all": "Voir toute la galerie"
+"home.hero_cta_discord": "Rejoindre le Discord"
+"home.hero_description": "The Astral Forge est un dépôt collectif de modlistes et de leurs auteurs, principalement pour <strong>The Elder Scrolls V: Skyrim Special Edition</strong> et <strong>Cyberpunk 2077</strong>."
+"home.hero_kicker": "BIENVENUE SUR"
+"home.hero_title": "THE ASTRAL FORGE"
+"home.pulse_recent": "Soutiens récents"
+"home.pulse_supporters_link": "Voir tous les soutiens"
+
+"nav.changelog": "Journal des mises à jour"
+"nav.contributors": "Contributeurs"
+"nav.discord": "Discord"
+"nav.faq": "FAQ"
+"nav.home": "Accueil"
+"nav.hub": "Hub"
+"nav.install": "Guide d'installation"
+"nav.known_issues": "Problèmes connus"
+"nav.load_order": "Ordre de chargement"
+"nav.menu": "Menu"
+"nav.modlists": "Modlistes"
+"nav.overview": "Présentation"
+"nav.search_placeholder": "Rechercher…"
+"nav.skip": "Aller au contenu"
+"nav.theme_label": "Sombre"
+"nav.theme_label_light": "Clair"
+
+"readme.next": "Suivant"
+"readme.of": "sur"
+"readme.prev": "Précédent"
+"readme.reading_mode": "Mode lecture"
+"readme.step": "Étape"
+
+"nav.lang_partial": "interface uniquement"
+
+"hub.updated": "Mis à jour"
+
+"changelog.filter": "Filtrer par version ou nom de mod…"
+"changelog.filter_label": "Filtrer le journal"
+"changelog.expand": "Tout déplier"
+"changelog.collapse": "Tout replier"
+"changelog.count_one": "1 entrée"
+"changelog.count_many": "{n} entrées"

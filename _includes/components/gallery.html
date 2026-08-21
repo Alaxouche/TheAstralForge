@@ -3,30 +3,39 @@
   Renders a screenshot grid for a modlist when `page.gallery_path` is set in
   front matter (e.g. gallery_path: "/assets/Images/Skyrim/"). Images are pulled
   straight from site.static_files, so dropping new screenshots in the folder is
-  enough — no list to maintain. Clicking an image opens the existing lightbox.
+  enough — no list to maintain.
+
+  What the browser downloads: the grid tiles are ~220px CSS, so the srcset only
+  offers the 400w and 800w derivatives from assets/thumbs (built by
+  scripts/optimize-images.sh). Clicking opens the lightbox on the 1600w
+  derivative via data-full — the 2560px master is never sent to a visitor.
+
+  Alt text: real captions live in _data/gallery_captions.yml, keyed by the bare
+  filename. Anything unlisted falls back to a numbered label so the images are
+  at least distinguishable to a screen reader.
 {% endcomment %}
 {% if page.gallery_path %}
-  {% assign gallery_files = site.static_files | where_exp: "f", "f.path contains page.gallery_path" | sort: "path" %}
-  {% assign gallery_count = 0 %}
-  {% for f in gallery_files %}
-    {% if f.extname == ".webp" or f.extname == ".jpg" or f.extname == ".jpeg" or f.extname == ".png" %}
-      {% assign gallery_count = gallery_count | plus: 1 %}
-    {% endif %}
-  {% endfor %}
-  {% if gallery_count > 0 %}
+  {% assign gallery_files = site.static_files | where_exp: "f", "f.path contains page.gallery_path" %}
+  {% assign gallery_images = gallery_files | where_exp: "f", "f.extname == '.webp' or f.extname == '.jpg' or f.extname == '.jpeg' or f.extname == '.png'" | sort: "path" %}
+
+  {% if gallery_images.size > 0 %}
+    {% assign captions = site.data.gallery_captions.captions %}
     <section class="modlist-gallery" aria-label="Screenshots">
       <h2 class="modlist-gallery__title" data-i18n-key="gallery.title">Gallery</h2>
       <p class="modlist-gallery__subtitle" data-i18n-key="gallery.subtitle">Screenshots from this modlist.</p>
       <div class="modlist-gallery__grid">
-        {% for f in gallery_files %}
-          {% if f.extname == ".webp" or f.extname == ".jpg" or f.extname == ".jpeg" or f.extname == ".png" %}
-            <figure class="modlist-gallery__item">
-              <img src="{{ f.path | relative_url }}"
-                   alt="{{ page.title }} screenshot"
-                   loading="lazy"
-                   decoding="async">
-            </figure>
-          {% endif %}
+        {% for f in gallery_images %}
+          {%- comment -%}
+            Spaces separate candidates inside a srcset, so any space in a
+            filename has to be percent-encoded or the whole list is misparsed.
+          {%- endcomment -%}
+          {% assign stem = f.path | replace: "/assets/Images/", "/assets/thumbs/" | replace: f.name, f.basename | replace: " ", "%20" %}
+          {% assign src400 = stem | append: '-400.webp' | relative_url %}
+          {% assign src800 = stem | append: '-800.webp' | relative_url %}
+          {% assign caption = captions[f.basename] %}
+          <figure class="modlist-gallery__item">
+            <img src="{{ src400 }}" srcset="{{ src400 }} 400w, {{ src800 }} 800w" sizes="(max-width: 700px) 46vw, 220px" data-full="{{ stem | append: '-1600.webp' | relative_url }}" alt="{% if caption %}{{ caption | escape }}{% else %}{{ page.title | escape }} — screenshot {{ forloop.index }} of {{ gallery_images.size }}{% endif %}" width="400" height="225" loading="lazy" decoding="async">
+          </figure>
         {% endfor %}
       </div>
     </section>

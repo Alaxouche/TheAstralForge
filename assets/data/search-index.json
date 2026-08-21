@@ -6,7 +6,7 @@ layout: null
 {%- assign sep = false -%}
 [
 {%- for doc in site.documents -%}
-  {%- if doc.title -%}
+  {%- if doc.title and doc.search_exclude != true -%}
     {%- if sep %},{% endif -%}{%- assign sep = true -%}
     {"title": {{ doc.title | jsonify }},
      "url": {{ doc.url | relative_url | jsonify }},
@@ -35,7 +35,7 @@ layout: null
   {%- endif -%}
 {%- endfor -%}
 {%- for p in site.pages -%}
-  {%- if p.title and p.url != "/404.html" -%}
+  {%- if p.title and p.search_exclude != true -%}
     {%- assign is_page = true -%}
     {%- if p.url contains "/assets/" or p.url contains ".xml" or p.url contains ".json" or p.url contains ".txt" -%}
       {%- assign is_page = false -%}

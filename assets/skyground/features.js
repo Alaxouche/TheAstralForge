@@ -20,27 +20,7 @@
   });
 })();
 
-(() => {
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      const href = this.getAttribute('href');
-      if (href === '#') return;
-      
-      e.preventDefault();
-      const target = document.querySelector(href);
-      if (target) {
-        const headerOffset = 100;
-        const elementPosition = target.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
-      }
-    });
-  });
-})();
+/* In-page anchor scrolling lives in performance.js (SmoothScroller). */
 
 (() => {
   const backToTop = document.getElementById('back-to-top');
@@ -116,7 +96,6 @@ function showToast(message, duration = 3000) {
   }, duration);
 }
 
-/* Page votes and FAQ votes are handled by vote-system.js (single source of truth). */
 
 (() => {
   const images = document.querySelectorAll('img[data-src]');

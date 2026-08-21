@@ -1,0 +1,55 @@
+# Русский (ru) UI strings for The Astral Forge.
+#
+# Single source of truth for interface text. site.js inlines these into the JS
+# bundle at build time as window.SG_I18N, and Liquid can read the same values
+# through site.data.i18n — so a string is written once, not once per system.
+#
+# English is the reference. A key missing from another language falls back to
+# en.yml, so a partial translation is fine and never leaves a blank on the page.
+#
+# Keys are grouped by prefix: nav.*, home.*, readme.*, faq.*, contrib.*, ...
+
+"banner.live": "Данные в реальном времени"
+
+"contrib.title": "Участники"
+
+"faq.search_placeholder": "Поиск по ЧаВо…"
+"faq.title": "Часто задаваемые вопросы"
+
+"footer.made_by": "Сайт от"
+
+"gallery.subtitle": "Скриншоты этой сборки."
+"gallery.title": "Галерея"
+
+"nav.changelog": "Список изменений"
+"nav.contributors": "Участники"
+"nav.discord": "Discord"
+"nav.faq": "ЧаВо"
+"nav.home": "Главная"
+"nav.hub": "Хаб"
+"nav.install": "Руководство по установке"
+"nav.known_issues": "Известные проблемы"
+"nav.load_order": "Порядок загрузки"
+"nav.menu": "Меню"
+"nav.modlists": "Сборки"
+"nav.overview": "Обзор"
+"nav.search_placeholder": "Поиск…"
+"nav.theme_label": "Тёмная"
+"nav.theme_label_light": "Светлая"
+
+"readme.next": "Далее"
+"readme.of": "из"
+"readme.prev": "Назад"
+"readme.reading_mode": "Режим чтения"
+"readme.step": "Шаг"
+
+"nav.lang_partial": "только интерфейс"
+
+"hub.updated": "Обновлено"
+
+"changelog.filter": "Фильтр по версии или названию мода…"
+"changelog.filter_label": "Фильтр списка изменений"
+"changelog.expand": "Развернуть все"
+"changelog.collapse": "Свернуть все"
+"changelog.count_one": "1 запись"
+"changelog.count_many": "записей: {n}"

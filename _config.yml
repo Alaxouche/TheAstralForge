@@ -8,13 +8,22 @@ image: "/assets/logos/theastralforge.png"
 
 url: "https://theastralforge.com"
 baseurl: ""
-assets_version: "20260711-2"
+# Fallback cache-buster only. On a real build, scripts/hash-assets.mjs replaces
+# every ?v= in the HTML with a hash of the file itself, so the URL changes
+# exactly when the asset does. This value is what `jekyll serve` uses locally,
+# where that step has not run — no need to bump it by hand any more.
+assets_version: "dev"
 
 exclude:
   - .venv/
   - .github/
   - _site/
   - temp_*.txt
+  # Build tooling — never part of the published site.
+  - scripts/
+  - package.json
+  - package-lock.json
+  - lighthouserc.json
 
 sass:
   style: compressed

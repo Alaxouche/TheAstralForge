@@ -21,6 +21,19 @@ jobs:
       - name: Build Jekyll
         run: JEKYLL_ENV=production bundle exec jekyll build --trace
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install build tooling
+        run: npm ci
+
+      # Runs here too so a breakage that only surfaces after indexing or
+      # minification is caught on the PR rather than at deploy time.
+      - name: Build search index and minify assets
+        run: npm run post-build
+
       - name: Link Check
         uses: lycheeverse/lychee-action@v1
         with:

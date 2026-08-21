@@ -63,11 +63,31 @@ class ParallaxEffect {
   }
 }
 
-// Smooth Scroll Enhancement with offset for fixed header
+// Smooth Scroll Enhancement with offset for fixed header.
+// This is the ONLY in-page anchor handler on the site — features.js and
+// enhancements.js used to bind their own, which fought over the scroll
+// position and pushed a history entry each.
 class SmoothScroller {
   constructor() {
     this.headerHeight = 120; // Adjust based on your header height
     this.init();
+  }
+
+  // A hash is not necessarily a valid CSS selector ("#2k-textures" and any
+  // percent-encoded id throw in querySelector), so resolve by id first.
+  resolveTarget(href) {
+    const raw = href.slice(1);
+    let id = raw;
+    try { id = decodeURIComponent(raw); } catch (_) { /* malformed escape */ }
+
+    const byId = document.getElementById(id) || document.getElementById(raw);
+    if (byId) return byId;
+
+    try {
+      return document.querySelector(href);
+    } catch (_) {
+      return null;
+    }
   }
 
   init() {
@@ -76,7 +96,7 @@ class SmoothScroller {
         const href = anchor.getAttribute('href');
         if (href === '#' || href === '#!') return;
 
-        const target = document.querySelector(href);
+        const target = this.resolveTarget(href);
         if (target) {
           e.preventDefault();
           

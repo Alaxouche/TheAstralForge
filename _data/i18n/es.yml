@@ -1,0 +1,55 @@
+# Español (es) UI strings for The Astral Forge.
+#
+# Single source of truth for interface text. site.js inlines these into the JS
+# bundle at build time as window.SG_I18N, and Liquid can read the same values
+# through site.data.i18n — so a string is written once, not once per system.
+#
+# English is the reference. A key missing from another language falls back to
+# en.yml, so a partial translation is fine and never leaves a blank on the page.
+#
+# Keys are grouped by prefix: nav.*, home.*, readme.*, faq.*, contrib.*, ...
+
+"banner.live": "Datos en vivo"
+
+"contrib.title": "Colaboradores"
+
+"faq.search_placeholder": "Buscar en las FAQ…"
+"faq.title": "Preguntas frecuentes"
+
+"footer.made_by": "Sitio por"
+
+"gallery.subtitle": "Capturas de esta modlist."
+"gallery.title": "Galería"
+
+"nav.changelog": "Registro de cambios"
+"nav.contributors": "Colaboradores"
+"nav.discord": "Discord"
+"nav.faq": "Preguntas frecuentes"
+"nav.home": "Inicio"
+"nav.hub": "Hub"
+"nav.install": "Guía de instalación"
+"nav.known_issues": "Problemas conocidos"
+"nav.load_order": "Orden de carga"
+"nav.menu": "Menú"
+"nav.modlists": "Modlists"
+"nav.overview": "Resumen"
+"nav.search_placeholder": "Buscar…"
+"nav.theme_label": "Oscuro"
+"nav.theme_label_light": "Claro"
+
+"readme.next": "Siguiente"
+"readme.of": "de"
+"readme.prev": "Anterior"
+"readme.reading_mode": "Modo lectura"
+"readme.step": "Paso"
+
+"nav.lang_partial": "solo la interfaz"
+
+"hub.updated": "Actualizado"
+
+"changelog.filter": "Filtrar por versión o nombre de mod…"
+"changelog.filter_label": "Filtrar el registro"
+"changelog.expand": "Expandir todo"
+"changelog.collapse": "Contraer todo"
+"changelog.count_one": "1 entrada"
+"changelog.count_many": "{n} entradas"

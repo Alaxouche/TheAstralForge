@@ -1,0 +1,12 @@
+# Languages offered by the header switcher.
+#
+# Order here is the order shown. Whether a language is flagged "interface only"
+# is not written here — the header compares its key count against en.yml at
+# build time, so the label tracks reality instead of drifting from it.
+
+languages:
+  - { code: en, name: English }
+  - { code: fr, name: Français }
+  - { code: de, name: Deutsch }
+  - { code: es, name: Español }
+  - { code: ru, name: Русский }

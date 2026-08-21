@@ -1,6 +1,9 @@
 ---
 layout: skyground_base
 title: Frequently Asked Questions
+# Every page's navigation links to /faq/, but without this the page was only
+# published at /faq.html — so the FAQ link in the header was dead site-wide.
+permalink: /faq/
 ---
 
 <div class="content-wrapper" style="max-width: 1200px; margin: 0 auto; padding: 3rem 2rem;">

@@ -21,6 +21,17 @@ jobs:
           bundler-cache: true
       - name: Build Jekyll
         run: JEKYLL_ENV=production bundle exec jekyll build --trace
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+      - name: Install build tooling
+        run: npm ci
+      # Builds the Pagefind search index over the generated HTML, then
+      # minifies the bundles (Jekyll's sass: compressed only covers .scss, so
+      # the Liquid-concatenated site.css / site.js escape it entirely).
+      - name: Build search index and minify assets
+        run: npm run post-build
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site

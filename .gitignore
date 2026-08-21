@@ -16,3 +16,6 @@ vendor/
 
 # Scratch / scratchpad files
 temp_*.txt
+
+# Node tooling (esbuild for asset minification)
+node_modules/

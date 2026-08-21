@@ -65,6 +65,14 @@
   {% if page.layout == 'skyground_readme' %}
     <link rel="stylesheet" href="{{ '/assets/skyground/wikimain.css' | relative_url }}?v={{ site.assets_version }}">
   {% endif %}
+  {%- comment -%}
+    GitHub Pages serves no custom headers, so the _headers file at the repo
+    root does nothing today. Of the policies it declares, only the referrer one
+    has a working <meta> equivalent — X-Content-Type-Options and
+    X-Frame-Options are header-only by spec and are simply ignored as tags, so
+    adding them here would look like protection without being any.
+  {%- endcomment -%}
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <link rel="icon" type="image/x-icon" href="{{ site.favicon_ico | relative_url }}">
   <link rel="manifest" href="{{ '/manifest.webmanifest' | relative_url }}">
   <meta name="theme-color" content="#0a0a0a">
@@ -91,7 +99,12 @@
   </div>
   <a class="skip-link" href="#main-content" data-i18n-key="nav.skip">Skip to content</a>
   {% include skyground_header.html %}
-  <div id="main-content" tabindex="-1">
+  {%- comment -%}
+    data-pagefind-body scopes the search index to the page's own content.
+    Without it Pagefind indexes the whole <body>, so the header, the five
+    modlist menus and the footer would match on every single page.
+  {%- endcomment -%}
+  <div id="main-content" tabindex="-1"{% unless page.search_exclude %} data-pagefind-body{% endunless %}>
   {{ content }}
   </div>
   {% include nav_footer_custom.html %}
@@ -117,9 +130,9 @@
   <script src="{{ '/assets/skyground/stats-system.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
   <script src="{{ '/assets/skyground/video-tutorials.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
   <script src="{{ '/assets/skyground/social-share.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
-  <script src="{{ '/assets/skyground/install-checklist.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
   <script src="{{ '/assets/skyground/version-banner.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
   <script src="{{ '/assets/skyground/loadorder.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
+  <script src="{{ '/assets/skyground/changelog.js' | relative_url }}?v={{ site.assets_version }}" defer></script>
   {% endif %}
   {% if page.layout == 'skyground_home' or page.community_gallery %}
   <script src="{{ '/assets/skyground/community-gallery.js' | relative_url }}?v={{ site.assets_version }}" defer></script>

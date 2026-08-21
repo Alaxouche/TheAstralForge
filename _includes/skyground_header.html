@@ -10,70 +10,59 @@
     </div>
   </div>
 {% endif %}
+{% comment %}
+  Site header.
+
+  The Modlists menu and each per-modlist submenu are <button aria-expanded>
+  disclosures driven by nav.js, not CSS :hover. Hover alone made all five
+  modlists unreachable by keyboard and effectively unusable on touch, where
+  there is no hover to give. Pointer users keep the hover shortcut through a
+  media query; everyone else gets click and Enter.
+{% endcomment %}
 <header{% if active_alert %} class="has-alert"{% endif %}>
   <div class="headerlogo">
     <a href="{{ '/' | relative_url }}">
       <h1>{{ site.title }}</h1>
     </a>
   </div>
-  <nav>
+
+  <button class="nav-burger" type="button" id="nav-burger"
+          aria-expanded="false" aria-controls="site-nav"
+          aria-label="Menu" data-i18n-aria-label="nav.menu">
+    <span class="nav-burger__bars" aria-hidden="true"></span>
+  </button>
+
+  <nav id="site-nav">
     <a href="{{ '/' | relative_url }}" data-i18n-key="nav.home">Home</a>
     <a href="{{ '/hub/' | relative_url }}" data-i18n-key="nav.hub">Hub</a>
-    <div class="nav-dropdown">
-      <a href="{{ '/hub/' | relative_url }}" class="nav-link" data-i18n-key="nav.modlists">Modlists</a>
-      <div class="nav-dropdown-menu">
-        <div class="nav-dropdown-item">
-          <span class="nav-dropdown-label">Wunduniik</span>
-          <div class="nav-submenu">
-            <a href="{{ '/wunduniik/' | relative_url }}" data-i18n-key="nav.overview">Overview</a>
-            <a href="{{ '/wunduniik/installation-guide/' | relative_url }}" data-i18n-key="nav.install">Installation Guide</a>
-            <a href="{{ '/wunduniik/changelog/' | relative_url }}" data-i18n-key="nav.changelog">Changelog</a>
-            <a href="{{ '/wunduniik/known-issues/' | relative_url }}" data-i18n-key="nav.known_issues">Known Issues</a>
-            <a href="{{ '/wunduniik/loadorder/' | relative_url }}" data-i18n-key="nav.load_order">Load Order</a>
+
+    <div class="nav-dropdown" data-nav-dropdown>
+      <button type="button" class="nav-link nav-dropdown__toggle"
+              aria-expanded="false" aria-controls="nav-modlists" data-nav-toggle>
+        <span data-i18n-key="nav.modlists">Modlists</span>
+      </button>
+      <div class="nav-dropdown-menu" id="nav-modlists">
+        {% assign modlists = site.data.nav_modlists.modlists %}
+        {% for ml in modlists %}
+          <div class="nav-dropdown-item" data-nav-subitem>
+            <button type="button" class="nav-dropdown-label"
+                    aria-expanded="false" aria-controls="nav-sub-{{ ml.id }}" data-nav-subtoggle>
+              <span>{{ ml.name }}</span>
+            </button>
+            <div class="nav-submenu" id="nav-sub-{{ ml.id }}">
+              {% for link in ml.links %}
+                <a href="{{ ml.base | append: link.path | relative_url }}" data-i18n-key="{{ link.i18n }}">{{ link.label }}</a>
+              {% endfor %}
+            </div>
           </div>
-        </div>
-        <div class="nav-dropdown-item">
-          <span class="nav-dropdown-label">Krentoraan</span>
-          <div class="nav-submenu">
-            <a href="{{ '/krentoraan/' | relative_url }}" data-i18n-key="nav.overview">Overview</a>
-            <a href="{{ '/krentoraan/installation-guide/' | relative_url }}" data-i18n-key="nav.install">Installation Guide</a>
-            <a href="{{ '/krentoraan/loadorder/' | relative_url }}" data-i18n-key="nav.load_order">Load Order</a>
-          </div>
-        </div>
-        <div class="nav-dropdown-item">
-          <span class="nav-dropdown-label">Ghost of the Grid</span>
-          <div class="nav-submenu">
-            <a href="{{ '/ghost-of-the-grid/' | relative_url }}" data-i18n-key="nav.overview">Overview</a>
-            <a href="{{ '/ghost-of-the-grid/installation-guide/' | relative_url }}" data-i18n-key="nav.install">Installation Guide</a>
-            <a href="{{ '/ghost-of-the-grid/changelog/' | relative_url }}" data-i18n-key="nav.changelog">Changelog</a>
-            <a href="{{ '/ghost-of-the-grid/known-issues/' | relative_url }}" data-i18n-key="nav.known_issues">Known Issues</a>
-            <a href="{{ '/ghost-of-the-grid/loadorder/' | relative_url }}" data-i18n-key="nav.load_order">Load Order</a>
-          </div>
-        </div>
-        <div class="nav-dropdown-item">
-          <span class="nav-dropdown-label">No Man's Sky Explorer</span>
-          <div class="nav-submenu">
-            <a href="{{ '/no-mans-sky-explorer/' | relative_url }}" data-i18n-key="nav.overview">Overview</a>
-            <a href="{{ '/no-mans-sky-explorer/installation-guide/' | relative_url }}" data-i18n-key="nav.install">Installation Guide</a>
-            <a href="{{ '/no-mans-sky-explorer/changelog/' | relative_url }}" data-i18n-key="nav.changelog">Changelog</a>
-            <a href="{{ '/no-mans-sky-explorer/loadorder/' | relative_url }}" data-i18n-key="nav.load_order">Load Order</a>
-          </div>
-        </div>
-        <div class="nav-dropdown-item">
-          <span class="nav-dropdown-label">Extrasolar Containment Protocol</span>
-          <div class="nav-submenu">
-            <a href="{{ '/extrasolar-containment-protocol/' | relative_url }}" data-i18n-key="nav.overview">Overview</a>
-            <a href="{{ '/extrasolar-containment-protocol/installation-guide/' | relative_url }}" data-i18n-key="nav.install">Installation Guide</a>
-            <a href="{{ '/extrasolar-containment-protocol/changelog/' | relative_url }}" data-i18n-key="nav.changelog">Changelog</a>
-            <a href="{{ '/extrasolar-containment-protocol/known-issues/' | relative_url }}" data-i18n-key="nav.known_issues">Known Issues</a>
-            <a href="{{ '/extrasolar-containment-protocol/loadorder/' | relative_url }}" data-i18n-key="nav.load_order">Load Order</a>
-          </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
+
     <a href="{{ '/contributors/' | relative_url }}" data-i18n-key="nav.contributors">Contributors</a>
     <a href="{{ '/faq/' | relative_url }}" data-i18n-key="nav.faq">FAQ</a>
     <a href="https://discord.gg/vKuB7nazBk" target="_blank" rel="noopener noreferrer" data-i18n-key="nav.discord">Discord</a>
+
     <div class="search-container">
       <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
         <circle cx="11" cy="11" r="8"></circle>
@@ -82,19 +71,34 @@
       <input type="text" id="global-search-input" class="search-input" placeholder="Search..." aria-label="Search site" data-i18n-placeholder="nav.search_placeholder">
       <div id="search-results" class="search-results" role="listbox" aria-label="Search results"></div>
     </div>
+
     <div class="lang-switch">
       <button class="lang-toggle" type="button" id="lang-toggle-btn" aria-haspopup="listbox" aria-expanded="false" aria-label="Switch language" title="Switch language / Changer de langue">
         <span class="lang-toggle__flag" aria-hidden="true">🌐</span>
         <span class="lang-toggle__code" id="lang-toggle-label">EN</span>
       </button>
+      {%- comment -%}
+        Coverage is measured against en.yml at build time rather than written
+        down, so the "interface only" hint disappears by itself as a language
+        gets completed — and never lies in the meantime. Today German, Spanish
+        and Russian translate the chrome while the guides stay in English;
+        saying so up front beats letting a reader discover it mid-install.
+      {%- endcomment -%}
+      {% assign en_keys = site.data.i18n.en | size %}
       <ul class="lang-menu" id="lang-menu" role="listbox" aria-label="Language" hidden>
-        <li class="lang-menu__item" role="option" data-lang="en" aria-selected="true">English</li>
-        <li class="lang-menu__item" role="option" data-lang="fr" aria-selected="false">Français</li>
-        <li class="lang-menu__item" role="option" data-lang="de" aria-selected="false">Deutsch</li>
-        <li class="lang-menu__item" role="option" data-lang="es" aria-selected="false">Español</li>
-        <li class="lang-menu__item" role="option" data-lang="ru" aria-selected="false">Русский</li>
+        {% for lang in site.data.languages.languages %}
+          {% assign dict = site.data.i18n[lang.code] %}
+          {% assign coverage = dict | size %}
+          <li class="lang-menu__item" role="option" data-lang="{{ lang.code }}" aria-selected="{% if lang.code == 'en' %}true{% else %}false{% endif %}">
+            <span class="lang-menu__name">{{ lang.name }}</span>
+            {% if coverage < en_keys %}
+              <span class="lang-menu__partial" data-i18n-key="nav.lang_partial">interface only</span>
+            {% endif %}
+          </li>
+        {% endfor %}
       </ul>
     </div>
+
     <button class="theme-toggle" type="button" aria-pressed="false">
       <span class="theme-toggle-track" aria-hidden="true">
         <span class="theme-toggle-thumb"></span>

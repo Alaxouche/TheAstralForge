@@ -290,45 +290,6 @@ td {
   }
 }
 
-.faq-feedback {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 16px 14px;
-  border-top: $border rgba($border-color, 0.4);
-  color: #b6b6b6;
-  font-size: 12px;
-}
-
-.faq-vote {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  border-radius: 999px;
-  border: $border rgba($border-color, 0.55);
-  background: #0f0f0f;
-  color: #e8e8e8;
-  padding: 4px 10px;
-  cursor: pointer;
-}
-
-.faq-vote:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.faq-vote--active[data-faq-vote="helpful"] {
-  border-color: #4ade80;
-  background: rgba(74, 222, 128, 0.2);
-  color: #4ade80;
-}
-
-.faq-vote--active[data-faq-vote="unhelpful"] {
-  border-color: #f87171;
-  background: rgba(248, 113, 113, 0.2);
-  color: #f87171;
-}
-
 .faq-empty {
   padding: 16px;
   border: $border rgba($border-color, 0.5);

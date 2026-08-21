@@ -1,0 +1,100 @@
+# English (en) UI strings for The Astral Forge.
+#
+# Single source of truth for interface text. site.js inlines these into the JS
+# bundle at build time as window.SG_I18N, and Liquid can read the same values
+# through site.data.i18n — so a string is written once, not once per system.
+#
+# English is the reference. A key missing from another language falls back to
+# en.yml, so a partial translation is fine and never leaves a blank on the page.
+#
+# Keys are grouped by prefix: nav.*, home.*, readme.*, faq.*, contrib.*, ...
+
+"banner.live": "Live data"
+
+"contrib.btn_kofi": "Support on Ko-fi"
+"contrib.btn_patreon": "Join on Patreon"
+"contrib.col_amount": "Amount"
+"contrib.col_date": "Date"
+"contrib.col_name": "Name"
+"contrib.col_platform": "Platform"
+"contrib.how_body": "Your contributions fund:"
+"contrib.how_title": "How your support helps development"
+"contrib.intro": "Thank you to everyone who supports The Astral Forge. Your support keeps the modlists updated, tested, and documented."
+"contrib.note": "Contributor data is currently managed in _data/contributors.yml. Update that file whenever you want to refresh the lists."
+"contrib.recent_title": "Recent supporters"
+"contrib.tiers_title": "Patreon tiers"
+"contrib.title": "Contributors"
+"contrib.top_title": "Top 10 supporters (all time)"
+"contrib.why_title": "Why contribute?"
+
+"faq.cta_body": "Join our Discord community for direct support from our team and community members."
+"faq.cta_btn": "Join Discord Server"
+"faq.cta_title": "Still Have Questions?"
+"faq.search_placeholder": "Search FAQs…"
+"faq.subtitle": "Find answers to common questions about our modlists, installation, and troubleshooting."
+"faq.title": "Frequently Asked Questions"
+
+"footer.made_by": "Website By"
+
+"gallery.subtitle": "Screenshots from this modlist."
+"gallery.title": "Gallery"
+
+"home.about_p1": "The Astral Forge was established by Alaxouche in September 2020 as the official repository for the Wunduniik modlist. Since then, it has expanded and rebranded, first to Alaxouche's Modding Hub and now to The Astral Forge, hosting four main modlists: <strong>Wunduniik</strong>, <strong>Krentoraan</strong>, <strong>Ghost of the Grid</strong>, and <strong>No Man's Sky Explorer</strong>. We welcome submissions for additional modlists to increase visibility for authors and strengthen our collective credibility."
+"home.about_p2": "This site replaces the old WunduniikWiki.com. Each list keeps its installation guide, changelog, load order and known issues in one place, in English and French."
+"home.about_title": "About Us"
+"home.community_gallery_subtitle": "Screenshots shared by the community on Discord"
+"home.community_gallery_title": "Community Gallery"
+"home.creator_bio_1": "Alaxouche has been modding Skyrim and Cyberpunk 2077 since 2020, and maintains the modlists hosted here along with the Discord community around them."
+"home.creator_bio_2": "It all started with Wunduniik in 2020. The Astral Forge grew out of that first list and now hosts several others, each with its own documentation."
+"home.creator_tagline": "\"There are never enough mods.\""
+"home.creator_title": "About the creator"
+"home.feature_discord_body": "The Discord is where everything happens: installation help, bug reports, announcements, and plenty of screenshots. Each modlist has its own channels — <strong>Wunduniik</strong> gets dedicated support and announcement channels — and big changes are usually put to a poll before they land in a list."
+"home.feature_discord_title": "The Discord server"
+"home.feature_docs_body": "Every list has a step-by-step installation guide, plus its changelog, load order and known issues. That covers all five: <strong>Wunduniik</strong>, <strong>Krentoraan</strong>, <strong>Ghost of the Grid</strong>, <strong>No Man's Sky Explorer</strong> and <strong>Extrasolar Containment Protocol</strong>. If a guide doesn't answer your question, ask on Discord."
+"home.feature_docs_title": "Getting Started"
+"home.feature_guidelines_body": "Short version: be decent to each other, keep feedback constructive, and respect the mod authors whose work these lists are built on. The full rules are on the Discord server."
+"home.feature_guidelines_link": "Join our Discord to read the server rules"
+"home.feature_guidelines_title": "House rules"
+"home.gallery_filter_all": "All"
+"home.gallery_highlights_title": "Gallery"
+"home.gallery_view_all": "View the full gallery"
+"home.hero_cta_discord": "Join the Discord"
+"home.hero_description": "The Astral Forge is a collective repository of curated modlists and their authors, primarily for <strong>The Elder Scrolls V: Skyrim Special Edition</strong> and <strong>Cyberpunk 2077</strong>."
+"home.hero_kicker": "WELCOME TO"
+"home.hero_title": "THE ASTRAL FORGE"
+"home.pulse_recent": "Recent Supporters"
+"home.pulse_supporters_link": "See all supporters"
+
+"nav.changelog": "Changelog"
+"nav.contributors": "Contributors"
+"nav.discord": "Discord"
+"nav.faq": "FAQ"
+"nav.home": "Home"
+"nav.hub": "Hub"
+"nav.install": "Installation Guide"
+"nav.known_issues": "Known Issues"
+"nav.load_order": "Load Order"
+"nav.menu": "Menu"
+"nav.modlists": "Modlists"
+"nav.overview": "Overview"
+"nav.search_placeholder": "Search…"
+"nav.skip": "Skip to content"
+"nav.theme_label": "Dark"
+"nav.theme_label_light": "Light"
+
+"readme.next": "Next"
+"readme.of": "of"
+"readme.prev": "Previous"
+"readme.reading_mode": "Reading mode"
+"readme.step": "Step"
+
+"nav.lang_partial": "interface only"
+
+"hub.updated": "Updated"
+
+"changelog.filter": "Filter by version or mod name…"
+"changelog.filter_label": "Filter changelog"
+"changelog.expand": "Expand all"
+"changelog.collapse": "Collapse all"
+"changelog.count_one": "1 entry"
+"changelog.count_many": "{n} entries"

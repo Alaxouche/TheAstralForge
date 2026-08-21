@@ -34,15 +34,6 @@
         <div class="faq-answer" hidden>
           {{ item.answer | markdownify }}
         </div>
-        <div class="faq-feedback">
-          <span class="faq-feedback-label">Helpful?</span>
-          <button class="faq-vote" type="button" data-faq-vote="helpful">
-            <span class="faq-vote-label">Yes</span>
-          </button>
-          <button class="faq-vote" type="button" data-faq-vote="unhelpful">
-            <span class="faq-vote-label">No</span>
-          </button>
-        </div>
       </article>
     {% endfor %}
   </div>

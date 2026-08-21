@@ -2,39 +2,36 @@
 layout: skyground_base
 ---
 
+{% comment %}
+  Hub. The cards come from _data/nav_modlists.yml — the same file that builds
+  the header menu — so a new modlist appears in both places at once instead of
+  being pasted into each.
+
+  Each card carries when its list was last updated, read from the modlist
+  snapshot. The relative wording ("3 weeks ago") is rendered by relative-time.js
+  in the reader's language; the absolute date sits in the markup as the
+  fallback, so it stays true with JavaScript off and never goes stale.
+{% endcomment %}
+{% assign snapshot = site.data.modlist_snapshot %}
+
 <main class="hub-page">
   <section class="hub-center">
     <div class="hub-cards">
-      <a href="{{ '/wunduniik/' | relative_url }}" class="hub-card">
-        <img src="{{ '/assets/Images/Skyrim/enb_2026-2-28_18-36-11_274.webp' | relative_url }}"
-           alt="Wunduniik" width="420" height="280" loading="lazy" decoding="async">
-        <span>Wunduniik</span>
-        <span class="hub-card-game">Skyrim SE</span>
-      </a>
-      <a href="{{ '/krentoraan/' | relative_url }}" class="hub-card">
-        <img src="{{ '/assets/Images/Skyrim/enb_2026-2-22_01-19-29_028.webp' | relative_url }}"
-           alt="Krentoraan" width="420" height="280" loading="lazy" decoding="async">
-        <span>Krentoraan</span>
-        <span class="hub-card-game">Skyrim SE</span>
-      </a>
-      <a href="{{ '/ghost-of-the-grid/' | relative_url }}" class="hub-card">
-        <img src="{{ '/assets/Images/Cyberpunk/photomode_22022026_172726.webp' | relative_url }}"
-           alt="Ghost of the Grid" width="420" height="280" loading="lazy" decoding="async">
-        <span>Ghost of the Grid</span>
-        <span class="hub-card-game">Cyberpunk 2077</span>
-      </a>
-      <a href="{{ '/no-mans-sky-explorer/' | relative_url }}" class="hub-card">
-        <img src="{{ '/assets/Images/generic_background.webp' | relative_url }}"
-           alt="No Mans Sky Explorer" width="420" height="280" loading="lazy" decoding="async">
-        <span>No Mans Sky Explorer</span>
-        <span class="hub-card-game">No Man's Sky</span>
-      </a>
-      <a href="{{ '/extrasolar-containment-protocol/' | relative_url }}" class="hub-card">
-        <img src="{{ '/assets/Images/Starfield/Starfield%202026-01-09%2022-00-39_009.webp' | relative_url }}"
-           alt="Extrasolar Containment Protocol" width="420" height="280" loading="lazy" decoding="async">
-        <span>Extrasolar Containment Protocol</span>
-        <span class="hub-card-game">Starfield</span>
-      </a>
+      {% for ml in site.data.nav_modlists.modlists %}
+        {% assign entry = snapshot | where: "id", ml.id | first %}
+        <a href="{{ ml.base | relative_url }}" class="hub-card">
+          <img src="{{ ml.card | relative_url }}" alt="{{ ml.name }}" width="420" height="280" loading="lazy" decoding="async">
+          <span>{{ ml.name }}</span>
+          <span class="hub-card-game">{{ ml.game }}</span>
+          {% if entry and entry.dateUpdated %}
+            <span class="hub-card-updated">
+              <span data-i18n-key="hub.updated">Updated</span>
+              <time datetime="{{ entry.dateUpdated }}" data-relative-time>{{ entry.dateUpdated | date: "%b %e, %Y" }}</time>
+              {% if entry.version %}<span class="hub-card-version">v{{ entry.version }}</span>{% endif %}
+            </span>
+          {% endif %}
+        </a>
+      {% endfor %}
     </div>
   </section>
   {{ content }}

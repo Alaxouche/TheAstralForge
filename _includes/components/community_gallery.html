@@ -19,13 +19,18 @@
   <div id="user-gallery-container">
     {% assign cg_limit = include.limit | default: cg_items.size %}
     {% for item in cg_items limit: cg_limit %}
+    {%- comment -%}
+      Tiles are 200px tall, so they load the 400w derivative from assets/thumbs
+      rather than the full-size upload sitting in assets/Images.
+    {%- endcomment -%}
+    {% assign cg_thumb = item.image | replace: "/assets/Images/", "/assets/thumbs/" | replace: ".webp", "-400.webp" %}
     <div class="gallery-item" data-modlist="{{ item.modlist }}">
       {% if item.source and item.source != "" %}
       <a class="gallery-image-link" href="{{ item.source }}" target="_blank" rel="noopener noreferrer" aria-label="{{ item.title }} — by {{ item.author }} (opens the Discord post)">
-        <div class="gallery-image" style="background-image: url('{{ item.image | relative_url }}')"></div>
+        <div class="gallery-image" style="background-image: url('{{ cg_thumb | relative_url }}')"></div>
       </a>
       {% else %}
-      <div class="gallery-image" style="background-image: url('{{ item.image | relative_url }}')" role="img" aria-label="{{ item.title }} — by {{ item.author }}"></div>
+      <div class="gallery-image" style="background-image: url('{{ cg_thumb | relative_url }}')" role="img" aria-label="{{ item.title }} — by {{ item.author }}"></div>
       {% endif %}
     </div>
     {% endfor %}

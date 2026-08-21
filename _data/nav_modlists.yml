@@ -1,0 +1,70 @@
+# Modlists menu in the site header.
+#
+# This used to be five near-identical blocks of hand-written HTML in
+# _includes/skyground_header.html — adding a list meant copying twenty lines and
+# hoping nothing was missed. Add a modlist here instead and the menu follows.
+#
+#   id     used to build the submenu's element id, so keep it URL-safe
+#   name   shown in the menu (a proper noun, so it is not translated)
+#   game   platform shown on the hub card
+#   card   hub card image (an 800w derivative — the card renders at 420px)
+#   base   URL prefix, with trailing slash
+#   links  path is appended to base; i18n is the key used by i18n.js
+
+modlists:
+  - id: wunduniik
+    name: Wunduniik
+    game: "Skyrim SE"
+    card: "/assets/thumbs/Skyrim/enb_2026-2-28_18-36-11_274-800.webp"
+    base: /wunduniik/
+    links:
+      - { label: Overview,           path: "",                   i18n: nav.overview }
+      - { label: Installation Guide, path: "installation-guide/", i18n: nav.install }
+      - { label: Changelog,          path: "changelog/",          i18n: nav.changelog }
+      - { label: Known Issues,       path: "known-issues/",       i18n: nav.known_issues }
+      - { label: Load Order,         path: "loadorder/",          i18n: nav.load_order }
+
+  - id: krentoraan
+    name: Krentoraan
+    game: "Skyrim SE"
+    card: "/assets/thumbs/Skyrim/enb_2026-2-22_01-19-29_028-800.webp"
+    base: /krentoraan/
+    links:
+      - { label: Overview,           path: "",                   i18n: nav.overview }
+      - { label: Installation Guide, path: "installation-guide/", i18n: nav.install }
+      - { label: Load Order,         path: "loadorder/",          i18n: nav.load_order }
+
+  - id: ghost-of-the-grid
+    name: Ghost of the Grid
+    game: "Cyberpunk 2077"
+    card: "/assets/thumbs/Cyberpunk/photomode_22022026_172726-800.webp"
+    base: /ghost-of-the-grid/
+    links:
+      - { label: Overview,           path: "",                   i18n: nav.overview }
+      - { label: Installation Guide, path: "installation-guide/", i18n: nav.install }
+      - { label: Changelog,          path: "changelog/",          i18n: nav.changelog }
+      - { label: Known Issues,       path: "known-issues/",       i18n: nav.known_issues }
+      - { label: Load Order,         path: "loadorder/",          i18n: nav.load_order }
+
+  - id: no-mans-sky-explorer
+    name: No Man's Sky Explorer
+    game: "No Man's Sky"
+    card: "/assets/thumbs/generic_background-800.webp"
+    base: /no-mans-sky-explorer/
+    links:
+      - { label: Overview,           path: "",                   i18n: nav.overview }
+      - { label: Installation Guide, path: "installation-guide/", i18n: nav.install }
+      - { label: Changelog,          path: "changelog/",          i18n: nav.changelog }
+      - { label: Load Order,         path: "loadorder/",          i18n: nav.load_order }
+
+  - id: extrasolar-containment-protocol
+    name: Extrasolar Containment Protocol
+    game: "Starfield"
+    card: "/assets/thumbs/Starfield/Starfield%202026-01-09%2022-00-39_009-800.webp"
+    base: /extrasolar-containment-protocol/
+    links:
+      - { label: Overview,           path: "",                   i18n: nav.overview }
+      - { label: Installation Guide, path: "installation-guide/", i18n: nav.install }
+      - { label: Changelog,          path: "changelog/",          i18n: nav.changelog }
+      - { label: Known Issues,       path: "known-issues/",       i18n: nav.known_issues }
+      - { label: Load Order,         path: "loadorder/",          i18n: nav.load_order }

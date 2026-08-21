@@ -1,0 +1,14 @@
+# Alt text for the modlist gallery screenshots.
+#
+# Key   = the bare filename under assets/Images/**, without folder or extension.
+# Value = what the image actually shows, written for someone who cannot see it.
+#
+# Anything left out falls back to "<Modlist> — screenshot N of M", which is
+# distinguishable but says nothing. Filling a line in here is the only way to
+# make the gallery mean something to a screen reader (and it helps image search
+# at the same time). No need to do them all at once — add them as you go.
+#
+# Example:
+#   enb_2026-2-28_18-36-11_274: "Dawn over Whiterun plains, ENB volumetric fog"
+
+captions: {}

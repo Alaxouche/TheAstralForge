@@ -1,5 +1,17 @@
-# Cache Headers for Netlify
+# Cache and security headers, Netlify format.
 # https://docs.netlify.com/routing/headers/
+#
+# ⚠ INERT ON THE CURRENT DEPLOY. The site ships through GitHub Pages
+# (.github/workflows/pages.yml), which serves no custom headers and ignores
+# this file entirely — so none of the Cache-Control or security policies below
+# are actually applied to visitors today.
+#
+# It is kept because it is correct and costs nothing: put a host that reads it
+# in front (Netlify, Cloudflare Pages, a CDN) and everything here takes effect
+# as written. In the meantime the one policy with a working HTML equivalent,
+# the referrer policy, is set as a <meta> tag in _layouts/skyground_base.html.
+# X-Content-Type-Options and X-Frame-Options have no <meta> equivalent by
+# spec — there is no way to honour them from a static page on Pages.
 
 # Static assets - cache for 1 year
 /assets/Images/*

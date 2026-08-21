@@ -9,7 +9,6 @@ class EnhancedFeatures {
     this.initCopyLinks();
     this.initKeyboardShortcuts();
     this.initToastSystem();
-    this.enhanceHeadings();
     this.initChangelogAnchors();
   }
 
@@ -98,13 +97,9 @@ class EnhancedFeatures {
         }
       }
 
-      // ESC to close search/modals
-      if (e.key === 'Escape') {
-        const searchResults = document.getElementById('search-results');
-        if (searchResults) {
-          searchResults.style.display = 'none';
-        }
-      }
+      // ESC closing the search panel is handled by search-system.js — it
+      // drops the .active class. Setting an inline display here would win
+      // over the stylesheet and keep the panel hidden for good.
 
       // / for quick search
       if (e.key === '/' && !['INPUT', 'TEXTAREA'].includes(e.target.tagName)) {
@@ -189,22 +184,7 @@ class EnhancedFeatures {
     }
   }
 
-  // Enhance Headings with Smooth Scroll
-  enhanceHeadings() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', (e) => {
-        const href = anchor.getAttribute('href');
-        if (href === '#') return;
-
-        const target = document.querySelector(href);
-        if (target) {
-          e.preventDefault();
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          history.pushState(null, null, href);
-        }
-      });
-    });
-  }
+  // In-page anchor scrolling lives in performance.js (SmoothScroller).
 }
 
 // Loading Overlay Utility

@@ -118,3 +118,24 @@
     max-width: 420px;
   }
 }
+
+/* When each list was last updated — a vitality signal on the hub card.
+   relative-time.js turns the date into "3 weeks ago" in the reader's language. */
+.hub-card-updated {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 6px;
+  font-size: 0.72rem;
+  opacity: 0.72;
+}
+
+.hub-card-version {
+  padding: 1px 7px;
+  border-radius: 999px;
+  border: 1px solid currentColor;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.85;
+}

@@ -1,0 +1,23 @@
+{
+  "name": "theastralforge",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Build tooling for the The Astral Forge site (asset minification, Discord gallery sync).",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alaxouche/TheAstralForge.git"
+  },
+  "scripts": {
+    "search-index": "pagefind --site _site --output-subdir pagefind",
+    "minify": "node scripts/minify-assets.mjs",
+    "hash-assets": "node scripts/hash-assets.mjs",
+    "post-build": "npm run search-index && npm run minify && npm run hash-assets",
+    "gallery-sync": "node scripts/sync-discord-gallery.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "jsdom": "^30.0.1",
+    "pagefind": "^1.5.2"
+  }
+}

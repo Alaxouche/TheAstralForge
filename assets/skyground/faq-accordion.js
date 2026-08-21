@@ -15,7 +15,7 @@ class FAQAccordion {
       if (question.closest('[data-faq]')) return;
       question.addEventListener('click', (e) => {
         const item = e.target.closest('.faq-item');
-        this.toggle(item);
+        if (item) this.toggle(item);
       });
     });
 
@@ -39,22 +39,28 @@ class FAQAccordion {
     });
 
     item.classList.toggle('active', !isOpen);
-    
-    // Update URL hash
+
+    // Keep the URL shareable, but with replaceState: assigning
+    // window.location.hash would yank the page to the anchor and add a
+    // history entry for every open/close.
     if (!isOpen) {
-      const id = item.id || item.querySelector('.faq-question').textContent.toLowerCase().replace(/\s+/g, '-');
-      window.location.hash = id;
+      const question = item.querySelector('.faq-question');
+      const id = item.id ||
+        (question ? question.textContent.trim().toLowerCase().replace(/\s+/g, '-') : '');
+      if (id) history.replaceState(null, '', '#' + id);
     } else {
-      history.replaceState(null, null, ' ');
+      history.replaceState(null, '', window.location.pathname + window.location.search);
     }
   }
 
   filterFAQ(query) {
     const lowerQuery = query.toLowerCase();
     document.querySelectorAll('.faq-item').forEach(item => {
-      const question = item.querySelector('.faq-question').textContent.toLowerCase();
-      const answer = item.querySelector('.faq-answer').textContent.toLowerCase();
-      
+      const questionEl = item.querySelector('.faq-question');
+      const answerEl = item.querySelector('.faq-answer');
+      const question = questionEl ? questionEl.textContent.toLowerCase() : '';
+      const answer = answerEl ? answerEl.textContent.toLowerCase() : '';
+
       if (question.includes(lowerQuery) || answer.includes(lowerQuery)) {
         item.style.display = '';
         if (query.length >= 3) {
@@ -69,10 +75,11 @@ class FAQAccordion {
   initializeFromHash() {
     if (window.location.hash) {
       const id = window.location.hash.substring(1);
-      const item = document.getElementById(id) || 
-                   Array.from(document.querySelectorAll('.faq-item')).find(el => 
-                     el.querySelector('.faq-question').textContent.toLowerCase().replace(/\s+/g, '-') === id
-                   );
+      const item = document.getElementById(id) ||
+                   Array.from(document.querySelectorAll('.faq-item')).find(el => {
+                     const q = el.querySelector('.faq-question');
+                     return q && q.textContent.trim().toLowerCase().replace(/\s+/g, '-') === id;
+                   });
       if (item) {
         item.classList.add('active');
         setTimeout(() => item.scrollIntoView({ behavior: 'smooth', block: 'center' }), 100);
