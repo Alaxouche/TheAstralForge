@@ -104,7 +104,19 @@
     Without it Pagefind indexes the whole <body>, so the header, the five
     modlist menus and the footer would match on every single page.
   {%- endcomment -%}
-  <div id="main-content" tabindex="-1"{% unless page.search_exclude %} data-pagefind-body{% endunless %}>
+  {%- comment -%}
+    data-pagefind-meta names the search result from the front matter title
+    rather than letting Pagefind guess from the markup — markdown pages carry
+    several <h1>s, so guessing produced the wrong name. The modlist is appended
+    because five lists share page titles: four bare "Wabbajack Installation"
+    results tell a reader nothing about which one they are opening.
+  {%- endcomment -%}
+  {%- assign pf_title = page.title | default: site.title -%}
+  {%- if page.collection -%}
+    {%- assign pf_ml = site.data.nav_modlists.modlists | where: "id", page.collection | first -%}
+    {%- if pf_ml -%}{%- assign pf_title = pf_title | append: " · " | append: pf_ml.name -%}{%- endif -%}
+  {%- endif -%}
+  <div id="main-content" tabindex="-1"{% unless page.search_exclude %} data-pagefind-body data-pagefind-meta="title:{{ pf_title | escape }}"{% endunless %}>
   {{ content }}
   </div>
   {% include nav_footer_custom.html %}

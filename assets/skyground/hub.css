@@ -82,12 +82,17 @@
   background: rgba(0, 0, 0, 0);
 }
 
-.hub-card span:not(.hub-card-game) {
+/* Targets the title span by name rather than by "every span except the game
+   badge" — that older selector swallowed any span added to a card and stacked
+   it, centred, on top of the title. */
+.hub-card-name {
   position: absolute;
   inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 18px;
+  text-align: center;
   font-size: 1.5rem;
   font-weight: bold;
   z-index: 2;
@@ -122,14 +127,20 @@
 /* When each list was last updated — a vitality signal on the hub card.
    relative-time.js turns the date into "3 weeks ago" in the reader's language. */
 .hub-card-updated {
+  position: absolute;
+  bottom: 14px;
+  left: 16px;
   display: flex;
   align-items: center;
   gap: 6px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 6px;
-  font-size: 0.72rem;
-  opacity: 0.72;
+  font-size: 0.68rem;
+  z-index: 3;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(4px);
+  text-shadow: none;
 }
 
 .hub-card-version {

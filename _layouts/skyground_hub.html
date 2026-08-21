@@ -21,7 +21,7 @@ layout: skyground_base
         {% assign entry = snapshot | where: "id", ml.id | first %}
         <a href="{{ ml.base | relative_url }}" class="hub-card">
           <img src="{{ ml.card | relative_url }}" alt="{{ ml.name }}" width="420" height="280" loading="lazy" decoding="async">
-          <span>{{ ml.name }}</span>
+          <span class="hub-card-name">{{ ml.name }}</span>
           <span class="hub-card-game">{{ ml.game }}</span>
           {% if entry and entry.dateUpdated %}
             <span class="hub-card-updated">

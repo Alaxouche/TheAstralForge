@@ -20,9 +20,15 @@
   media query; everyone else gets click and Enter.
 {% endcomment %}
 <header{% if active_alert %} class="has-alert"{% endif %}>
+  {%- comment -%}
+    The site name is a link, not a heading. It used to be an <h1>, which made
+    it the first h1 of every page — so each page announced "The Astral Forge"
+    before its own title, and Pagefind picked that up as the search result
+    name for all 50 pages.
+  {%- endcomment -%}
   <div class="headerlogo">
     <a href="{{ '/' | relative_url }}">
-      <h1>{{ site.title }}</h1>
+      <span class="headerlogo__text">{{ site.title }}</span>
     </a>
   </div>
 
