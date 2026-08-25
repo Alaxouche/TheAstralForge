@@ -10,6 +10,33 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v1.5.4.0 - August 25, 2026</summary>
+
+**Update Importance:** MEDIUM  
+**SAVE COMPATIBLE**
+
+___
+
+# Added:
+- Added Lightbox fix
+- Added Light floor fix
+- Added zCorvette Cockpit Thunderbird v6.45
+- Added zCamera Corvette
+- Added zCockpit Titan v6.45
+- Added zCockpit Ambassador v6.45
+- Added zNo Half Open Ramp v6.24
+
+# Fixes and Tweaks:
+- Fixed Compilation issues
+
+# Updates:
+- Updated Increase Player Transfer Range
+- Updated Balanced MT Cabinet Lighting
+- Updated Exosolar's and Babs' Clear Visor Scanner and Surveyor and Custom Color Binoc Panels
+
+</details>
+
+<details markdown="1">
 <summary>v1.5.3.0 - August 01, 2026</summary>
 
 **Update Importance:** MINOR  
