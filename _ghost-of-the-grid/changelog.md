@@ -10,6 +10,192 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v3.2.0.0 - September 02, 2026</summary>
+
+**Update Importance:** MAJOR  
+**NOT SAVE COMPATIBLE** 
+
+___
+
+# Additions:
+- Added Blade Runner 2049 Spinner (Weaponized)
+- Added K's H10 Apartment Plus - Blade Runner 2049
+- Added Megabuilding H10 Ultimate Experience
+- Added Winter in Night City
+- Added Night City Optics Pack
+- Added Zenitex Panoptes GPNV Goggles - ArchiveXL
+- Added De Tomaso Pantera GTS - ArchiveXL
+- Added The Bike In Me
+- Added Extended and Improved Headlights
+- Added General Vehicles Fixes
+- Added Carjacking Bug Fix
+- Added Road Name Sign Fixes and Additions
+- Added Low Quality Crowd No More
+- Added More Occluders (Performance Improvement)
+- Added NPC Phones Randomized
+- Added Spawned NPC Post Combat Fix
+- Added Enemies Melee Attacks Fixes
+- Added Enemy Rarity Fixes Improved
+- Added Explosion Knockback and Ragdoll Overhaul
+- Added Reduced Ragdoll Force (no flying backwards when shot with a pistol)
+- Added Immersive Explosions
+- Added Immersive Hit Sounds
+- Added Punish Cruelty
+- Added Dum Dum Drops Doom Doom
+- Added Climb Anywhere
+- Added Vault Anywhere
+- Added Step Up Anywhere
+- Added Examine Anything
+- Added Ragequit - Exit Game from Death Screen
+- Added Pay Rent
+- Added Negative Balance - Full Story Gig
+- Added RippersXL
+- Added Mod Configuration Menu
+- Added RedFunctions
+- Added RedWindows
+- Added Street Location System (API)
+- Added The Newtonian Project
+- Added re INPUT Mod Loader - v2.31
+- Added Reinforcements System Delayed (Addon)
+- Added Tracking Projectile Launcher System
+- Added More Weapon Filters
+- Added Unlocked Attachments - CET
+- Added Unlocked Attachments - Suppressor Fix
+- Added Chopper - New Custom Weapon
+- Added MalorianArms 3516 Custom
+- Added Inazuma - Iconic Tsunami Nue
+- Added HK SMG Pack
+- Added Pump Action Shotgun Pack
+- Added NDI Osprey Smart Version
+- Added SOR-22 Smart Version
+- Added Kenshin - Compact Edition
+- Added Lexington - Compact Edition V2
+- Added Liberty - Compact Edition
+- Added Unity - Compact Edition V2
+- Added Omaha - Compact Edition
+- Added Nue and Tamayura - Compact Edition
+- Added Common Screw Fix
+- Added Film Grain Fix
+- Added Vanilla Rain Effect Fix
+
+# Fixes and Tweaks:
+- Reworked the whole weapon lineup with the Compact Edition rebuilds
+- Reworked the H10 apartment stack for a full Blade Runner 2049 experience
+- Reworked combat physics, explosions and ragdolls for more impactful fights
+- Added a full traversal package (climb, vault and step up anywhere)
+- Improved global performances with new occluders and crowd optimizations
+- Fixed broken male v ears
+- Removed all Redmod based mods: Redmod is no more a requirement and shall not be kept
+- Replaced Input Loader with re INPUT Mod Loader for 2.31 compatibility
+- Fixed several vanilla bugs (carjacking, screws, film grain, rain effects, NPC post combat)
+- Removed broken/outdated/deleted mods
+
+# Removals:
+- Removed NIGHT CITY ALIVE (REDmod)
+- Removed VEHICLE LIGHTS (REDmod)
+- Removed Pariah
+- Removed Custom Perk Framework
+- Removed Deceptious Bug Fixes
+- Removed Input Loader
+- Removed Weapon Sound Remake
+- Removed VAXIS's ULTRA Physics Overhaul Mod
+- Removed Realistic Car Crashes
+- Removed Immersive Odometer and Fuel System
+- Removed Blade Runner Spinner
+- Removed Nova LUT (AgX Colorspace - Pure 2.2 - HDR Test)
+- Removed E3 Smart Windows
+- Removed Time and weather aware Panam and Judy
+- Removed Proxima's Apartment Emporium
+- Removed Weeee (New H10 Exit)
+- Removed H10 Interactive Stash Door Restored (2.3 Supported)
+- Removed Liberty (Rebuild)
+- Removed Unity (Rebuild)
+- Removed Desert Eagle Pack
+- Removed Alexander Anderson's Holy Bayonet
+- Removed Iconic Weapon Loadouts - Morgan Blackhand
+- Removed Iconic Weapon Loadouts - David Martinez - The Kids Aren't Alright
+- Removed Stretched Ears and Tunnel Piercings - Masc V (PRC)
+
+# Updates:
+- Updated Immersive Night City Fixes
+- Updated Immersion Patch - Cyberpunk Story Quest Fixes
+- Updated Immersion Patch - Minor Activities Quest Fixes
+- Updated Night City Traffic Overhaul (and Addons)
+- Updated Factions Evolved (and Addons)
+- Updated Reinforcements System
+- Updated Reinforcements - Gang Vs Gang
+- Updated SPLAT Physics Realistic Ragdoll Overhaul
+- Updated Damage Scaling and Balance - Extended
+- Updated Time Dilation Overhaul
+- Updated Butchers Of Night City
+- Updated Drug Dealer - Become a Kingpin
+- Updated Undermine Quest Series
+- Updated Deceptious Quest Core
+- Updated Deceptious Quest Core Utilities and Settings
+- Updated Go on a Date (Judy) - Side romance activity
+- Updated River Romanced Enhanced
+- Updated Dogtown Natural History Museum Enhanced
+- Updated Pacifica Enhanced
+- Updated Game World Boundary Removed
+- Updated NIGHT CITY SKIES
+- Updated Nova City 2 (Custom Weather and Lighting - Exposure Overhaul)
+- Updated Nova Optics (Vehicle Exposure Fix and Visuals Customization)
+- Updated NightlyNow Core
+- Updated Ray Traced Lighting Fixes
+- Updated Faster Rainmap and Distant Shadows
+- Updated LUT Switcher 2 (Custom Pack Support - LUT Adjustments - Hotkeys) (and LUTs)
+- Updated Inorganic Materials
+- Updated Preem Mirrors (Reflective Mirror Materials)
+- Updated Knife and bullet wounds (blood)
+- Updated Metro Cams
+- Updated Adaptive Traffic Headlights
+- Updated Anti-Theft Measures - Vehicle Security
+- Updated Auto Weather Scheduler - with Nova City Compatibility
+- Updated Vehicle Navigation System (VNS)
+- Updated Shift (Customizable Dynamic Vehicle Camera)
+- Updated Audi R8 V10+
+- Updated Audi RSQ
+- Updated Enzo Ferrari - ArchiveXL
+- Updated Lamborghini Murcielago SV
+- Updated Nissan 350Z v2 - ArchiveXL
+- Updated Nissan Silvia S15
+- Updated LNCLN KONTINENTAL
+- Updated Overclocked Lynx Paws - Wall Run Climb Jump Roll
+- Updated True Flashlight - Immersive Tactical Lighting Gadget
+- Updated The Nullifier
+- Updated Unequip unremovable scopes
+- Updated Militech Sight Pack
+- Updated Set Bonuses
+- Updated VendorsXL
+- Updated Virtual Atelier
+- Updated NC Fashion Virtual Atelier
+- Updated Zenitex Atelier
+- Updated Sabbath7991 Weapon and Attachment Shops - Virtual Atelier
+- Updated VEEGEE SHOP 4
+- Updated The RVC00N Dumpster
+- Updated The RVC00N Dumpster 3 - PinkyDude's Virtual Atelier
+- Updated The RVC00N Dumpster - Collarless CrystalJock Bomber (M-F) (GS) (AXL)
+- Updated The RVC00N Dumpster - Denim Edgerunner Set (M) (GS) (AXL)
+- Updated The Fifth Element Collection (M-F) (GS) (AXL)
+- Updated Military Palette Texture Library
+- Updated Military Panam Pants - ArchiveXL
+- Updated Military Tactical Vest - ArchiveXL
+- Updated Pulse Pilot Suit Archive XL
+- Updated Zenitex Assault Helmet - ArchiveXL
+- Updated Barghest Cyber Arms for Masc and Fem V
+- Updated Takemura Hand Cyberware - Equippable with ArchiveXL for Masc and Fem V
+- Updated Player Body Cyberware Injector
+- Updated KiasuBurger Cyberware Core
+- Updated Native Interactions Framework
+- Updated Redscript Configuration Framework
+- Updated Window Switcher
+- Updated Window Utils
+- Updated Now Playing Display
+- Updated Immersive Road Crossing
+
+</details>
+
+<details markdown="1">
 <summary>v3.1.0.0 - August 07, 2026</summary>
 
 **Update Importance:** MAJOR  
