@@ -1,0 +1,128 @@
+/* ===== Consent gate for advertising (consent.js) =====
+   Sits at the bottom of the viewport rather than covering the page: this is a
+   documentation site, and blocking a guide behind a modal to ask about ads
+   would be worse than the ads. */
+
+.consent-banner {
+  position: fixed;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  width: min(760px, calc(100vw - 32px));
+  z-index: 9998;
+  background: rgba(16, 16, 18, 0.96);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 14px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.consent-banner[hidden] { display: none; }
+
+.consent-banner__inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 20px;
+  flex-wrap: wrap;
+}
+
+.consent-banner__text { flex: 1 1 340px; min-width: 0; }
+
+.consent-banner__title {
+  margin: 0 0 4px;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.consent-banner__body {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.consent-banner__link {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 0.78rem;
+  color: var(--primary-text, #22c55e);
+}
+
+.consent-banner__actions {
+  display: flex;
+  gap: 10px;
+  flex: 0 0 auto;
+}
+
+.consent-btn {
+  padding: 9px 18px;
+  border-radius: 9px;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+/* Refusing must be exactly as easy to click as accepting — same size, same
+   prominence. A greyed-out "refuse" is a dark pattern, and under the GDPR
+   it is also not valid consent. */
+.consent-btn--ghost {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.28);
+  color: #fff;
+}
+
+.consent-btn--ghost:hover { background: rgba(255, 255, 255, 0.16); }
+
+.consent-btn--primary {
+  background: var(--primary-color, #22c55e);
+  color: #08130c;
+}
+
+.consent-btn--primary:hover { filter: brightness(1.08); }
+
+.consent-btn:focus-visible,
+.consent-banner__link:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+html[data-theme="light"] .consent-banner {
+  background: rgba(255, 255, 255, 0.97);
+  color: #16181d;
+  border-color: rgba(0, 0, 0, 0.14);
+}
+
+html[data-theme="light"] .consent-banner__body { color: rgba(0, 0, 0, 0.68); }
+
+html[data-theme="light"] .consent-btn--ghost {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.22);
+  color: #16181d;
+}
+
+html[data-theme="light"] .consent-btn:focus-visible { outline-color: #16181d; }
+
+@media (max-width: 620px) {
+  .consent-banner { bottom: 10px; }
+  .consent-banner__inner { padding: 14px 16px; }
+  .consent-banner__actions { width: 100%; }
+  .consent-btn { flex: 1; text-align: center; }
+}
+
+/* Footer entry point, revealed by consent.js only when a banner exists. */
+.consent-reopen {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  font-size: inherit;
+  color: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+}

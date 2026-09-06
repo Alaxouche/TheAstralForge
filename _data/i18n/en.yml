@@ -98,3 +98,10 @@
 "changelog.collapse": "Collapse all"
 "changelog.count_one": "1 entry"
 "changelog.count_many": "{n} entries"
+
+"consent.title": "Advertising on this site"
+"consent.body": "The Astral Forge is free to use. With your agreement, we show ads to help cover hosting. This lets our partner store and read information on your device."
+"consent.allow": "Accept"
+"consent.deny": "Refuse"
+"consent.learn_more": "What is collected"
+"consent.manage": "Ad preferences"

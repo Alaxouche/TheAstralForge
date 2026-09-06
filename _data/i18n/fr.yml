@@ -98,3 +98,10 @@
 "changelog.collapse": "Tout replier"
 "changelog.count_one": "1 entrée"
 "changelog.count_many": "{n} entrées"
+
+"consent.title": "Publicité sur ce site"
+"consent.body": "The Astral Forge est gratuit. Avec votre accord, nous affichons des publicités pour aider à financer l'hébergement. Cela permet à notre partenaire de stocker et lire des informations sur votre appareil."
+"consent.allow": "Accepter"
+"consent.deny": "Refuser"
+"consent.learn_more": "Ce qui est collecté"
+"consent.manage": "Préférences publicitaires"

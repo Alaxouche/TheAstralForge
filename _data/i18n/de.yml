@@ -53,3 +53,10 @@
 "changelog.collapse": "Alle einklappen"
 "changelog.count_one": "1 Eintrag"
 "changelog.count_many": "{n} Einträge"
+
+"consent.title": "Werbung auf dieser Seite"
+"consent.body": "The Astral Forge ist kostenlos. Mit Ihrer Zustimmung zeigen wir Werbung, um die Hosting-Kosten zu decken. Unser Partner kann dabei Informationen auf Ihrem Gerät speichern und lesen."
+"consent.allow": "Akzeptieren"
+"consent.deny": "Ablehnen"
+"consent.learn_more": "Was erfasst wird"
+"consent.manage": "Werbeeinstellungen"

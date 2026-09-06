@@ -3,6 +3,12 @@
     <div class="footer-text">
       <span data-i18n-key="footer.made_by">Website By</span>
       <a href="https://next.nexusmods.com/profile/AlaxoucheModding" target="_blank" rel="noopener noreferrer">Alaxouche</a>
+      {%- comment -%}
+        Consent has to be withdrawable as easily as it was given. consent.js
+        unhides this only when a banner exists, so a site with ads switched off
+        never shows a control that would do nothing.
+      {%- endcomment -%}
+      <button type="button" class="consent-reopen" data-consent-reopen hidden data-i18n-key="consent.manage">Ad preferences</button>
     </div>
     {% include footer_social_links.html %}
   </div>

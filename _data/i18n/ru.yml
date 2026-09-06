@@ -53,3 +53,10 @@
 "changelog.collapse": "Свернуть все"
 "changelog.count_one": "1 запись"
 "changelog.count_many": "записей: {n}"
+
+"consent.title": "Реклама на этом сайте"
+"consent.body": "The Astral Forge бесплатен. С вашего согласия мы показываем рекламу, чтобы покрыть расходы на хостинг. Это позволяет нашему партнёру хранить и считывать данные на вашем устройстве."
+"consent.allow": "Принять"
+"consent.deny": "Отклонить"
+"consent.learn_more": "Какие данные собираются"
+"consent.manage": "Настройки рекламы"
