@@ -31,7 +31,21 @@ monetag:
   script_src: "https://nap5k.com/tag.min.js"
   zone: "10594421"
 
-# Consent banner. Shown only when an ad provider above is enabled.
+# Consent.
+#
+# require_consent: false  → ads load for everyone, no banner. This is the
+#                           current setting: the tag fires on page load.
+# require_consent: true   → nothing loads until the visitor accepts, and the
+#                           banner plus the footer "Ad preferences" control
+#                           come back. The whole gate is still in the codebase,
+#                           tested, one word away.
+#
+# Worth knowing what the false setting means: the site serves a third-party ad
+# tag that stores and reads data on the visitor's device before they have been
+# asked. On EU traffic that is what the GDPR and the ePrivacy directive care
+# about, and the exposure sits with the publisher, not the ad network. Flip it
+# back to true if you ever get a complaint, or when you plug in a real CMP.
 consent:
+  require_consent: false
   # Where the visitor can read what is collected. Leave blank to hide the link.
   policy_url: ""

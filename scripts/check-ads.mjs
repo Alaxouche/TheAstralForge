@@ -52,6 +52,7 @@ function readConfig(text) {
   };
   return {
     enabled: /^\s{2}enabled:\s*true\s*$/m.test(text),
+    requireConsent: /^\s{2}require_consent:\s*true\s*$/m.test(text),
     script_src: grab('script_src'),
     zone: grab('zone'),
   };
@@ -83,6 +84,12 @@ if (!cfg.enabled) {
     try {
       adHost = new URL(cfg.script_src).host;
       ok(`ads activés — zone ${cfg.zone} sur ${adHost}`);
+      if (cfg.requireConsent) {
+        ok('consentement requis — rien ne charge avant acceptation');
+      } else {
+        meh('consentement NON requis — le tag charge pour tout le monde',
+            'Choix assumé. Sur du trafic UE, c\'est le point d\'exposition RGPD.');
+      }
     } catch {
       bad('script_src n\'est pas une URL valide', cfg.script_src);
     }
@@ -128,25 +135,36 @@ for (const p of pages) {
   checked++;
 
   const hasBanner = html.includes('id="consent-banner"');
+  const hasConfig = html.includes('id="ad-config"');
 
   if (cfg.enabled && adHost) {
-    if (!hasBanner) { bad(`${p} : bannière de consentement absente`); continue; }
+    if (!hasConfig) { bad(`${p} : bloc #ad-config absent — aucune pub ne chargera`); continue; }
+    if (!html.includes(`data-ad-zone="${cfg.zone}"`)) {
+      bad(`${p} : data-ad-zone ne correspond pas à la config`);
+      continue;
+    }
 
-    // The gate: the tag must NOT be a <script> in the source. It may only
-    // appear as a data attribute that consent.js reads after acceptance.
+    // In both modes the tag is injected by JS, never written into the HTML:
+    // an inline <script> would be rewritten by Cloudflare Rocket Loader, which
+    // Monetag documents as breaking their tags.
     const scriptTag = new RegExp('<script[^>]*src="[^"]*' + adHost.replace(/\./g, '\\.'), 'i');
     if (scriptTag.test(html)) {
-      bad(`${p} : le tag publicitaire est en dur dans le HTML`,
-          'Il partirait AVANT le consentement. La porte est contournée.');
-    } else if (!html.includes(`data-ad-zone="${cfg.zone}"`)) {
-      bad(`${p} : data-ad-zone ne correspond pas à la config`);
-    } else {
-      ok(`${p} : bannière présente, tag non chargé avant consentement`);
+      bad(`${p} : le tag est en dur dans le HTML`,
+          'Rocket Loader le réécrira. Il doit rester injecté par consent.js.');
+      continue;
     }
-  } else if (hasBanner) {
-    bad(`${p} : bannière présente alors que les ads sont désactivés`);
+
+    if (cfg.requireConsent) {
+      if (!hasBanner) bad(`${p} : consentement requis mais bannière absente`);
+      else ok(`${p} : bannière présente, tag non chargé avant consentement`);
+    } else {
+      if (hasBanner) bad(`${p} : bannière rendue alors que le consentement n'est pas requis`);
+      else ok(`${p} : config présente, tag injecté au chargement`);
+    }
+  } else if (hasBanner || hasConfig) {
+    bad(`${p} : markup publicitaire présent alors que les ads sont désactivés`);
   } else {
-    ok(`${p} : aucune bannière, aucun tag (ads off)`);
+    ok(`${p} : aucun markup publicitaire (ads off)`);
   }
 }
 
@@ -169,11 +187,8 @@ Le plombage est bon. Ce qui ne peut PAS être vérifié ici :
      127.0.0.1, le tag part mais ne renverra probablement aucune pub.
      C'est normal : relance ce script avec --url https://theastralforge.com
      une fois déployé.
-  3. Le test qui compte, dans l'onglet Réseau des devtools :
-       a. fenêtre privée → ouvre le site → filtre sur "${adHost || 'ton-domaine-pub'}"
-       b. AVANT de cliquer : zéro requête. Si tu en vois une, la porte fuit.
-       c. clique Accepter → la requête part.
-       d. pour rejouer : localStorage.removeItem('taf-ad-consent') puis recharge.`);
+  3. Dans l'onglet Réseau des devtools, fenêtre privée, filtre sur
+     "${adHost || 'ton-domaine-pub'}" : la requête doit partir au chargement.`);
 }
 
 process.exit(fail ? 1 : 0);

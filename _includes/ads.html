@@ -1,0 +1,44 @@
+{% comment %}
+  ads.html
+  Emits the advertising configuration, and the consent banner when one is
+  required. Renders nothing at all when ads are switched off in _data/ads.yml,
+  so a disabled site ships no ad markup of any kind.
+
+  The ad tag itself is never written into the page. consent.js reads the
+  parameters off #ad-config and builds the <script> at runtime — immediately
+  when consent is not required, or after the visitor accepts when it is.
+  Injecting rather than inlining also keeps the tag out of Cloudflare Rocket
+  Loader's reach, which is switched on for this domain.
+{% endcomment %}
+{% assign ads = site.data.ads %}
+{% if ads.monetag.enabled and ads.monetag.script_src != "" and ads.monetag.zone != "" %}
+  <div id="ad-config"
+       data-ad-src="{{ ads.monetag.script_src }}"
+       data-ad-zone="{{ ads.monetag.zone }}"
+       {% if ads.consent.require_consent %}data-require-consent{% endif %}
+       hidden></div>
+
+  {% if ads.consent.require_consent %}
+    <div id="consent-banner"
+         class="consent-banner"
+         role="dialog"
+         aria-modal="false"
+         aria-labelledby="consent-title"
+         tabindex="-1"
+         hidden>
+      <div class="consent-banner__inner">
+        <div class="consent-banner__text">
+          <p class="consent-banner__title" id="consent-title" data-i18n-key="consent.title">Advertising on this site</p>
+          <p class="consent-banner__body" data-i18n-key="consent.body">The Astral Forge is free to use. With your agreement, we show ads to help cover hosting. This lets our partner store and read information on your device.</p>
+          {% if ads.consent.policy_url != "" %}
+            <a class="consent-banner__link" href="{{ ads.consent.policy_url | relative_url }}" data-i18n-key="consent.learn_more">What is collected</a>
+          {% endif %}
+        </div>
+        <div class="consent-banner__actions">
+          <button type="button" class="consent-btn consent-btn--ghost" data-consent="deny" data-i18n-key="consent.deny">Refuse</button>
+          <button type="button" class="consent-btn consent-btn--primary" data-consent="allow" data-i18n-key="consent.allow">Accept</button>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+{% endif %}

@@ -1,17 +1,21 @@
 /**
  * consent.js
- * Consent gate for advertising.
+ * Loads the advertising tag, and gates it behind consent when configured to.
  *
- * The rule this enforces: no third-party ad request leaves the browser until
- * the visitor has actively accepted. The tag is not in the HTML — its
- * parameters sit on data attributes and the <script> is built here, after
- * consent. Refusing means the request is never made at all, which is the only
- * version of "refuse" that means anything.
+ * Two modes, set by `consent.require_consent` in _data/ads.yml:
  *
- * The stored answer is a plain local value, not a TCF consent string. A
- * certified CMP (Axeptio, Sirdata, Google Funding Choices…) can drive this
- * same gate later by calling window.TAFConsent.allow() / .deny() from its own
- * callback — the loading logic below does not need to change.
+ *   false (current) — the tag is injected on page load, for everyone.
+ *   true            — nothing leaves the browser until the visitor accepts;
+ *                     refusing means the request is never made at all, which
+ *                     is the only version of "refuse" that means anything.
+ *
+ * The tag is never in the HTML in either mode. Its parameters ride on
+ * #ad-config and the <script> is built here, which also keeps it away from
+ * Cloudflare Rocket Loader (switched on for this domain, and documented by
+ * Monetag as something that breaks their tags).
+ *
+ * A certified CMP can drive the gated mode by calling
+ * window.TAFConsent.allow() / .deny() from its own callback.
  */
 (() => {
   const KEY = 'taf-ad-consent';
@@ -28,10 +32,10 @@
 
   let loaded = false;
 
-  function loadAds(banner) {
+  function loadAds(config) {
     if (loaded) return;
-    const src = banner.dataset.adSrc;
-    const zone = banner.dataset.adZone;
+    const src = config.dataset.adSrc;
+    const zone = config.dataset.adZone;
     if (!src || !zone) return;
 
     const tag = document.createElement('script');
@@ -40,9 +44,7 @@
     // Nothing fetches until the element is appended, so this is safe either
     // way — it just matches their documented shape.
     tag.dataset.zone = zone;
-    // theastralforge.com sits behind Cloudflare with Rocket Loader switched
-    // on, and Rocket Loader defers scripts in ways that break ad tags.
-    // data-cfasync="false" is Monetag's documented opt-out.
+    // data-cfasync="false" is Monetag's documented Rocket Loader opt-out.
     tag.setAttribute('data-cfasync', 'false');
     tag.async = true;
     tag.src = src;
@@ -51,9 +53,18 @@
   }
 
   function init() {
+    const config = document.getElementById('ad-config');
+    // No config element means ads are switched off in _data/ads.yml.
+    if (!config) return;
+
+    // Ads on, no gate: load straight away and skip the rest.
+    if (!config.hasAttribute('data-require-consent')) {
+      loadAds(config);
+      return;
+    }
+
     const banner = document.getElementById('consent-banner');
-    // No banner in the DOM means ads are switched off in _data/ads.yml.
-    if (!banner) return;
+    if (!banner) { loadAds(config); return; }
 
     let lastFocused = null;
 
@@ -74,7 +85,7 @@
 
     const decide = (value) => {
       write(value);
-      if (value === ALLOW) loadAds(banner);
+      if (value === ALLOW) loadAds(config);
       hide();
     };
 
@@ -90,12 +101,11 @@
 
     const stored = read();
     if (stored === ALLOW) {
-      loadAds(banner);
+      loadAds(config);
     } else if (stored !== DENY) {
       show();
     }
 
-    // Lets the footer link reopen the choice, and gives a future CMP a handle.
     window.TAFConsent = {
       state: () => read(),
       allow: () => decide(ALLOW),
