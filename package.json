@@ -13,8 +13,7 @@
     "minify": "node scripts/minify-assets.mjs",
     "hash-assets": "node scripts/hash-assets.mjs",
     "post-build": "npm run search-index && npm run minify && npm run hash-assets",
-    "gallery-sync": "node scripts/sync-discord-gallery.mjs",
-    "check-ads": "node scripts/check-ads.mjs"
+    "gallery-sync": "node scripts/sync-discord-gallery.mjs"
   },
   "devDependencies": {
     "esbuild": "0.28.2",

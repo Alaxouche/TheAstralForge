@@ -14,4 +14,3 @@ layout: null
 {% include_relative enhancements.css %}
 {% include_relative utilities.css %}
 {% include_relative visual-enhancements.css %}
-{% include_relative consent.css %}

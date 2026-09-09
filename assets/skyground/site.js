@@ -37,5 +37,3 @@ window.SG_I18N = {{ site.data.i18n | jsonify }};
 {% include_relative faq-accordion.js %}
 ;
 {% include_relative relative-time.js %}
-;
-{% include_relative consent.js %}
