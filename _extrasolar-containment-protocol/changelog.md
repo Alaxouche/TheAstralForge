@@ -8,6 +8,91 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v2.4.1.0 - September 12, 2026</summary>
+
+**Update Importance:** MEDIUM  
+**NOT SAVE COMPATIBLE**
+
+___
+
+# Additions:
+- Added Vacuum Silence
+- Added Hide Quest Items In Menus
+- Added SFSE Menu Framework
+- Added SFSE Performance Overlay
+- Added AA-43 Stalwart Machine Gun
+- Added Favorites Menu Grid - SFSE
+- Added Outland - Frontier Ready
+- Added Hopetown - New Dawn
+- Added The Den - Last Stop Before The Dark
+- Added Graf's Habs - Nova Galactic 1x1s
+- Added Ship Builder Retexture - Graf's Habs Nova 1x1s - Dark Interiors
+
+# Removals:
+- Removed Avontech Shipyards
+- Removed Gtech Ship Habs useful brigs patch
+- Removed Gtech Ship Habs
+- Removed High-Resolution Planet Textures
+- Removed SKK Fast Start New Game (Starfield)
+- Removed Favorites Menu Extended - SFSE
+- Removed Community Spaceship Expansion
+- Removed xtcrefugee's miscellaneous small mods
+- Removed Random Creature and Robot Sizes- A GRiNDTerra Mod
+- Removed Crimson Gang Van (Standalone)
+- Removed REV-9 Rover - Standalone
+- Removed M12B FAV (Warthog) (Standalone)
+- Removed HopeTech Hammer V Land Vehicle
+- Removed Odyssey - A True RPG (Collection)
+- Removed Simple Immersive Music Players
+- Removed Nem's Functional Coffee and Tea Brewers
+- Removed Concept Art Akila
+
+# Fixes and Tweaks:
+- Reworked the list for latest game update
+- Fixed some performance issues 
+- Fixed invisible meshes
+- Changed the starting mod
+
+# Updates:
+- Updated Winds of Akila
+- Updated Extremophile - Environmental Gameplay
+- Updated Remove Auto Aim
+- Updated Mass Matters
+- Updated Spacefaring Economy
+- Updated See day length when landing
+- Updated Balanced Ballistics (And Lasers)
+- Updated LOC - Life of Crime (Player Bounty Overhaul and Criminal Missions)
+- Updated POI Variations - No More Duplicates
+- Updated Resupply - Functional Supplies and Decorations
+- Updated True Space
+- Updated Dark Future Texture Pack
+- Updated Fantastical Frontiers- a GRiNDTerra Fantasy Biome Overhaul
+- Updated States of Matter - Environment-depending States for Resources
+- Updated Trackers Alliance - Fight Or Flight
+- Updated CharGenMenu
+- Updated HONKCORE HUD - The Minimalist solution
+- Updated Starvival - Immersive Survival Addon
+- Updated KBAR-32 (AA BAR-32)
+- Updated Dodge Framework SFSE
+- Updated Console Command Runner Updated
+- Updated True Seamless Grav Jumps SFSE
+- Updated Cassiopeia Papyrus Extender
+- Updated Atmo - Streamlined Oxygen
+- Updated Starfield Engine Fixes - SFSE
+- Updated Useful Brigs
+- Updated Mantis Lair Player Home
+- Updated Red Mile Terror
+- Updated Harbor - Streamlined Dues
+- Updated GRiNDTerra Gameplay Overhaul - a GRiNDTerra AiO Mod
+- Updated Gallion - Immersive Finance
+- Updated MJOLNIR Armory (Ultimate Edition)
+- Updated Aquafield - a GRiNDTerra Mod
+- Updated Encounters- a GRiNDTerra Mod
+- Updated ADS FOV Removed (SFSE)
+
+</details>
+
+<details markdown="1">
 <summary>v2.4.0.0 - July 11, 2026</summary>
 
 **Update Importance:** MAJOR  
