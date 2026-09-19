@@ -10,6 +10,223 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v2.0.0.0 - September 19, 2026</summary>
+
+**Update Importance:** MAJOR  
+**SAVE COMPATIBLE**
+
+___
+
+# Added:
+- Added Flat Landing
+- Added Realistic Atmospheric Flight
+- Added Realistic Space Station Docking
+- Added Refiner Min-Max Buttons
+- Added MT Shop Everywhere
+- Added Unobstruct Distance in Cockpit
+- Added Less Annoying Photomode
+- Added No Notification Icons
+- Added Ship Hunting Quick Actions
+- Added New Corrupted Recipes
+- Added Transparent Space Encounters
+- Added zHeadlights Vintage Interceptor
+- Added Integrated Planets
+- Added Draw Distance Ground Objects (LOD)
+- Added Extended Grass Draw Distance
+
+# Fixes and Tweaks:
+- Fixed Compilation issues
+
+# Removals:
+- Removed Enhanced Third Person Camera
+- Removed Multitool Hud Revamped
+- Removed Better Binocular Scan Colors
+- Removed Fine LOD
+- Removed Colorful Substance Labels 2.9
+- Removed Rotating Atmosphere 3.5
+- Removed Crashed Freighter Loot
+- Removed ANALOGUE - Exosuit Voice Overhaul
+- Removed Elite Dangerous Supercruise Pulse Drive
+- Removed Ketaros Icons Fix
+- Removed HD Clouds (the other one)
+- Removed Larger System Holograms (Giant Seeker)
+- Removed Station Colour Fix
+- Removed Gas Giants Color Fix
+- Removed BetterSettlements
+- Removed Solar Ship Bug Fix
+- Removed Loot Pirates Loot
+- Removed gBase Sleepy-Time Bed
+- Removed Corvette Overhaul v1.2 Ultimate Edition with Camera and Auto-pilot fixes
+- Removed Fluid Flight 1.3 Jetpack Overhaul
+- Removed gShip Corvette Medbay Bacta Tank
+- Removed gBase Sleepy-Time Corvette Bunk
+- Removed Embossed Ships More Fabricator Options
+- Removed Corvette Ramp Control Switches
+- Removed Sentinel Tool Procedural Color
+- Removed Scientific Restoration
+- Removed Multitool Procedural Update
+- Removed Realistic colossus headlights
+- Removed Scrapyard Technology
+- Removed Corvette Panelled Window fix (Titan class)
+- Removed fnb_PurpleOutlawFilterColor
+- Removed Mech Customizing
+- Removed Let It Snow
+- Removed gVehicle Colossus Flatbed Better Higher Walls
+- Removed Fix Farmer Daily Reward
+- Removed DUD'S - Weird Colors
+- Removed DUD'S - Weather Hazards
+- Removed DUD'S - Underwater Colors
+- Removed DUD'S - UI Hazard FX
+- Removed DUD'S - Tractor Beam
+- Removed DUD'S - Toxic Colors
+- Removed DUD'S - Storm Filters
+- Removed DUD'S - Sunset Sunrise Colors
+- Removed DUD'S - Stand Light Bright
+- Removed DUD'S - Terra Colors
+- Removed DUD'S - Sea Plant Fix
+- Removed DUD'S - Space Colors
+- Removed DUD'S - Scorched Colors
+- Removed DUD'S - Radioactive Colors
+- Removed DUD'S - Natural Spawn
+- Removed DUD'S - Night Sky Colors
+- Removed DUD'S - Nexus FX
+- Removed DUD'S - Main Colors
+- Removed DUD'S - Helios Glow FX
+- Removed DUD'S - Lava Colors
+- Removed DUD'S - GasBag Colors
+- Removed DUD'S - Graphic FX
+- Removed DUD'S - Lush Colors
+- Removed DUD'S - Display Glare Reducer
+- Removed DUD'S - Firefly FX
+- Removed DUD'S - Frozen Colors
+- Removed DUD'S - Corvette Headlights
+- Removed DUD'S - Ship Headlights Plus
+- Removed DUD'S - Dead Colors
+- Removed DUD'S - Asteroid
+- Removed DUD'S - Swamp Colors
+- Removed DUD'S - Better Fishing
+- Removed DUD'S - Barren Colors
+- Removed DUD'S - Robot Lights
+- Removed DUD'S - Rain FX
+- Removed Immersive Teleport (Teleport Costs - Hardcore)
+- Removed E3 Like Scanner Remnant
+- Removed Swamp Sulphurine Fix
+- Removed Fix Settlement Production
+- Removed Crescent Worlds
+- Removed Better Discovery Banners
+- Removed zNo Half Open Ramp v6.24
+- Removed gShip Add Missing Ship Trails UPDATED
+
+# Updates:
+- Updated Unpredictable Roaming Ships
+- Updated Multi Pass
+- Updated No Glowing Plants
+- Updated No Space Dust and Plasma
+- Updated Expensive Charts
+- Updated Smokeless Stations
+- Updated Procedurally Coloured Rare Crystals
+- Updated zLights
+- Updated zCorvette Station Lighting
+- Updated zCorvette Nexus Lighting
+- Updated Derelict Procedural Additions
+- Updated Floating Teleporter Collision
+- Updated Freighter Room Teleporter Fix
+- Updated Instant Text Display - ITD
+- Updated Fighter WingK FIX
+- Updated Better Abandoned Station
+- Updated Ship Procedural Lights
+- Updated Ship and Multitool Upgrade Terminals
+- Updated Sailship Re-alignments
+- Updated Frigate LOD Fix
+- Updated Better Rewards
+- Updated True Blood
+- Updated zColossus Headlights
+- Updated Galactic Positioning System
+- Updated Cockpit Beam Down Buttons
+- Updated Corvette Exterior Ramp Switches
+- Updated ReLight
+- Updated Convenient Corvette Teleporters
+- Updated Crashed Freighter Procedural Containers
+- Updated Freighter Hangar Interior Changes²
+- Updated Treasure Ruin Procedural Crates
+- Updated Borderless Icons
+- Updated Better Crystals
+- Updated Better Deposit Colors
+- Updated Bigger Wallet
+- Updated Black Carbon
+- Updated Custom Panels
+- Updated gShip Corvette Supercomputer
+- Updated Darkless Icons
+- Updated Small Panels
+- Updated Reticules color(Ship Weapon and MultiTool Weapon)
+- Updated Exosolar's and Babs' Beyond Base Building
+- Updated Fast Refiners
+- Updated Start Screen
+- Updated Add Ship Custom Parts To Space Station Shop
+- Updated Fix Hauler Custom Part
+- Updated Reduce Pulse Speed Lines
+- Updated Exosolar's and Babs' Grass Fix
+- Updated Colorized Hexagonal Building Icons
+- Updated Colorized Diamond Non-Building Icons
+- Updated Exosolar's and Babs' Savage Sentinels
+- Updated Exosolar's and Babs' Flora Colors
+- Updated Exosolar's and Babs' Expanse
+- Updated Exosolar's and Babs' Super Ship Teleporter
+- Updated Exosolar's and Babs' Dead Wreckoning
+- Updated Exosolar's and Babs' Deadzone III - Revenge of the Deadzone
+- Updated Exosolar's and Babs' Lumen
+- Updated Exosolar's and Babs' Asteroid Ribbons
+- Updated Exosolar's and Babs' Stealth Wires
+- Updated Increase Space Encounter Chance
+- Updated Enjoyable Quicksilver - (LUA Script Included)
+- Updated Gourmet Flavors
+- Updated Astroport - Better Trading Posts
+- Updated zBest Weapon Rack
+- Updated Keep Gifting
+- Updated zBridge Terminal
+- Updated Nada's Starmap Upgrade
+- Updated Snappy Industry
+- Updated Keep Talking Polo E7
+- Updated Keep Talking Chef
+- Updated Keep Mapping
+- Updated Renewed Riddles
+- Updated Short Shop Dialogs
+- Updated Colossal Corvette build area
+- Updated Ultimate Arms Dealer
+- Updated Exosolar's and Babs' Painless Rain
+- Updated Exosolar's and Babs' Stratos
+- Updated Quicksilver Daily Mission Reward Multiplier
+- Updated Quicksilver Missions
+- Updated Always Show Distance II
+- Updated More Upgradeable Slots
+- Updated zBest Freighter
+- Updated Exosolar's and Babs' Space Battle Frequency Controller
+- Updated Settlement Fabricator Camera Fix
+- Updated Companion Pet Unlocker
+- Updated Atlas Orb Word-o-Rama
+- Updated Natural Expedition Ships
+- Updated Exocraft Scanner Upgrade
+- Updated Quick Crates
+- Updated Colorized Derelict Icons
+- Updated zBio-Dome
+- Updated Better Station LOD
+- Updated Realistic Market
+- Updated BG Dark UI and Fonts
+- Updated Exosolar's and Babs' Quick Scan with Range Boost
+- Updated Better Sentinel Destruction
+- Updated Mining Multiplier
+- Updated More Materials
+- Updated Faster Scanning
+- Updated More Words
+- Updated Balanced MT Cabinet Lighting
+- Updated zCockpit Ambassador
+- Updated zCockpit Titan
+- Updated zCorvette Cockpit Thunderbird
+- Updated Increase Player Transfer Range
+
+</details>
+
+<details markdown="1">
 <summary>v1.5.4.0 - August 25, 2026</summary>
 
 **Update Importance:** MEDIUM  
