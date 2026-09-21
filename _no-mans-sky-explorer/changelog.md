@@ -10,6 +10,29 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v2.0.1.0 - September 21, 2026</summary>
+  
+**Update Importance:** MAJOR  
+**NOT SAVE COMPATIBLE**  
+
+---
+
+### Removals:
+- Removed Colossal Corvette build area
+- Removed Extended Grass Draw Distance
+- Removed Faster Scanning
+- Removed Flat Landing
+- Removed Hide or Fade Notifications
+- Removed ReLight
+
+### Updates:
+- Updated Cloud Tweaks
+- Updated Construction Research Unit Updated
+- Updated zHeadlights Vintage Interceptor
+
+</details>
+
+<details markdown="1">
 <summary>v2.0.0.0 - September 19, 2026</summary>
 
 **Update Importance:** MAJOR  
