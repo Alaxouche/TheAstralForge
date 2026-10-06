@@ -10,6 +10,66 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v3.0.0.0 - October 06, 2026</summary>
+  
+**Update Importance:** MAJOR  
+**NOT SAVE COMPATIBLE**  
+
+---
+
+### Additions:
+- Added Actually Extreme Gas Giants
+- Added All Refiner and Cooking Recipes in the Wiki
+- Added Alternative Falling animation
+- Added ANALOGUE - Exosuit Voice Overhaul
+- Added BLACKHOLE
+- Added Clean Paint for Starships
+- Added Colossal Corvette build area
+- Added Exosolar's and Babs' Asteroid Ribbons
+- Added Fancy Discovery Message
+- Added Fine LOD
+- Added Huge Props Activated
+- Added Lunatus (distant worlds)
+- Added Lush Always Have Water
+- Added Nebulant Nebulae
+- Added NMS BootSkip
+- Added No Atmosphere No Dust (and No Fog) II
+- Added No Man's Sound - An Experimental Audio Overhaul
+- Added Nubilus (cloud overhaul)
+- Added Parallel Universe - Cosmos
+- Added Pre-release Crystals
+- Added Star Wars style warp
+- Added Stellarum
+- Added Waterless Hot n Dry Planets
+- Added zDim Containers
+
+# Fixes and Tweaks:
+- Fixed the last broken mods
+- Reworked the whole visual system
+  
+### Removals:
+- Removed Cloud Tweaks
+- Removed Instant Text Display - ITD
+- Removed Less Annoying Photomode
+- Removed New Warps
+- Removed Snow Color Match
+
+### Updates:
+- Updated Better Rewards
+- Updated Better Station LOD
+- Updated BG Dark UI and Fonts
+- Updated Draw Distance Ground Objects (LOD)
+- Updated Exosolar's and Babs' Beyond Base Building
+- Updated Mining Multiplier
+- Updated Unpredictable Shelters
+- Updated Vile Brood Salvageable Scrap Icon Fix
+- Updated zCamera Corvette
+- Updated zCrazy Colossus
+- Updated zFlatbed Friction
+
+</details>
+
+<details markdown="1">
 <summary>v2.0.1.0 - September 21, 2026</summary>
   
 **Update Importance:** MAJOR  
