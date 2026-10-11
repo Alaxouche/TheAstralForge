@@ -10,6 +10,156 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v3.4.0.0 - October 12, 2026</summary>
+
+**Update Importance:** MAJOR  
+**NOT SAVE COMPATIBLE** 
+
+___
+
+# Additions:
+- Added Actually Iconic Weapons - Bundle
+- Added Advanced Crash Reporter
+- Added Arasaka Weapons Pack
+- Added Character Creator UI Improvements
+- Added Cinematic Look
+- Added CINO EBLC-CRAB 2042 (Garage)
+- Added Crowd Overlap - Duplication Fix
+- Added Crowd Variety Restored
+- Added Crowd Walks Restored
+- Added Cynosure Experimental Weapons
+- Added Ducati 916
+- Added Dynamic CrashCam
+- Added Enterable Interiors
+- Added FindMyRide - Vehicle Search and Filter
+- Added Immersion Extension - Reed's Train Ambush Reminiscence
+- Added Inventory Free View
+- Added Inventory Scroll Fix
+- Added Japantown North Verticality Expanded
+- Added Lightning Breaks Sky Ads Fix
+- Added Mechs of Night City
+- Added Melee Attack Speed Cap Fix
+- Added Melee Attack Variety
+- Added NIGHT CITY ALIVE - Low Density
+- Added Nissan Skyline R31 GTS-R - Addons
+- Added Nitrous Addon (Garage)
+- Added Open Night City
+- Added Photomode UI Improvements
+- Added Ping (Menu Search - Mod Support)
+- Added QuestGuide - Quest Overview with Native UI
+- Added re INPUT Mod Loader
+- Added Real Dual Wielding
+- Added Realistic NPC FOV
+- Added RedProfiler
+- Added ReFRACT (Interior Vehicle Reflections - Material Refractions)
+- Added Shotgun Shell Eject Fix
+- Added Solvind EMKV90-TOR 2042 (Garage)
+- Added Stamina Regen Fixes
+- Added The Grid (Custom Street Light Hours - Weather Effects - Blackouts)
+- Added Traffic Radio Fix
+- Added Ultrawide UI Overhaul (21x9 32x9 and more)
+- Added Vehicle Turret Core
+- Added Weapon and Scope Skin Changer Plus
+
+# Fixes and Tweaks:
+- Fixed crashes on new game
+- Fixed many issues caused by real problematic mods
+- Fixed stutters and latency
+- Fixed annoying auto climb near obstacles
+
+# Removals:
+- Removed ACU - Character Preset Manager
+- Removed Adaptive Traffic Headlights
+- Removed Ah shit. Here we go again
+- Removed Authentic Shift (QoL Gear Ratios Shifts Audio Sound ASMR and OPTIONAL Tuning System)
+- Removed Badlands Train
+- Removed Butchers Of Night City
+- Removed Climb Anywhere
+- Removed Cop Killer
+- Removed Custom Map Markers
+- Removed Drive an Aerial Vehicle - Flight Mod Using AV and Helicopter
+- Removed Factions Evolved - Addons
+- Removed GHOST UI (HUD Painter)
+- Removed Hair Profiles CCXL
+- Removed HUD Painter
+- Removed Hyst Hair Collection - CCXL
+- Removed Immersive First Person
+- Removed Immersive Launcher
+- Removed Input Loader
+- Removed Misc NC Fixes - Minor Patches
+- Removed NCARTS lower and upper rail
+- Removed Night City harbor trains
+- Removed NIGHT CITY SKIES
+- Removed Night City Traffic Overhaul - Addons
+- Removed No-Tell Motel Upper Floors Unlocked
+- Removed Overclocked Lynx Paws - Wall Run Climb Jump Roll
+- Removed Step Up Anywhere
+- Removed Tasha Cyber Arms CCXL
+- Removed Vault Anywhere
+- Removed Wolfcut Hair Collection - CCXL
+
+# Updates:
+- Updated Always First Equip
+- Updated Anti-Theft Measures - Vehicle Security
+- Updated Appearance Menu Mod
+- Updated ArchiveXL
+- Updated Blur Begone (Clear Materials with Refraction)
+- Updated Chevrolet Camaro SS JL4
+- Updated Chopper - New Custom Weapon
+- Updated CyberMetrics - Ingame Performance Display
+- Updated Drug Dealer - Become a Kingpin
+- Updated Explosion Knockback and Ragdoll Overhaul
+- Updated Fluff Vendor Fixes
+- Updated FX Begone (Full Vignette Removal and Modular Effects Options)
+- Updated Garage (Customize - Claim - Sell - Repair - Swap)
+- Updated General Vehicles Fixes
+- Updated Glen Apartment Expanded - Redux
+- Updated Honda CRX Mugen
+- Updated Immersion Patch - Cyberpunk Story Quest Fixes
+- Updated Immersive Explosions
+- Updated Immersive Hit Sounds
+- Updated Immersive Night City Fixes
+- Updated Immersive Road Crossing
+- Updated Immersive Scanner
+- Updated ImmersiveHUD
+- Updated Jarngreipr (Lightning Projectile Launcher)
+- Updated Lamborghini Murcielago SV
+- Updated Life Coach (Immersive Boost)
+- Updated Mazda MX-5 Miata
+- Updated Mitsubishi Lancer Evo 9 MR
+- Updated NC Fashion Virtual Atelier
+- Updated NightlyNow Core
+- Updated Nissan 350Z v2 - Addons
+- Updated Nissan Silvia S15
+- Updated Nissan Skyline R32
+- Updated Nissan Skyline R33
+- Updated Nissan Skyline R34 V-Spec II - ArchiveXL
+- Updated Punish Cruelty
+- Updated Quickhack Fixes
+- Updated Radial Menu Upgrade for Idle-Computer-TV Anywhere mods
+- Updated RedFunctions
+- Updated Redscript Configuration Framework
+- Updated RedWindows
+- Updated Sabbath7991 Weapon and Attachment Shops - Virtual Atelier
+- Updated SPLAT Physics Realistic Ragdoll Overhaul
+- Updated Street Location System (API)
+- Updated The Nullifier
+- Updated The RVC00N Dumpster 3 - PinkyDude's Virtual Atelier
+- Updated Top Secret V12 Supra
+- Updated Toyota Celica Supra A60 - Addons
+- Updated Toyota GT86
+- Updated True Flashlight - Immersive Tactical Lighting Gadget
+- Updated Unequip unremovable scopes
+- Updated Unlocked Attachments - CET
+- Updated VEEGEE SHOP 4
+- Updated VegaCPMods Resources
+- Updated Vehicle Navigation System (VNS)
+- Updated Window Switcher
+- Updated Window Utils
+
+</details>
+
+<details markdown="1">
 <summary>v3.3.0.0 - September 24, 2026</summary>
 
 **Update Importance:** MAJOR  
