@@ -10,6 +10,36 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v3.0.1.0 - October 06, 2026</summary>
+  
+**Update Importance:** MAJOR  
+**NOT SAVE COMPATIBLE**  
+
+---
+
+### Additions:
+- Added Distant Asteroid Box Fix
+
+### Fixes and Tweaks:
+- Fixed overbright cabinet lighting
+- Fixed slow movement
+- Fixed some gameplay annoyment caused by Parallel Universe
+- FIxed ugly astroid boxes
+
+### Removals:
+- Removed Parallel Universe
+- Removed Balanced MT Cabinet Lighting
+
+### Updates:
+- Updated Lush Always Have Water
+- Updated Nubilus (cloud overhaul)
+- Updated Parallel Universe - Cosmos
+- Updated Snappy Industry
+- Updated Stellarum
+
+</details>
+
+<details markdown="1">
 <summary>v3.0.0.0 - October 06, 2026</summary>
   
 **Update Importance:** MAJOR  
