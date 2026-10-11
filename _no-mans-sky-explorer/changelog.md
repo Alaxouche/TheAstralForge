@@ -10,7 +10,7 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
-<summary>v3.0.1.0 - October 06, 2026</summary>
+<summary>v3.0.1.0 - October 11, 2026</summary>
   
 **Update Importance:** MAJOR  
 **NOT SAVE COMPATIBLE**  
