@@ -10,6 +10,91 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v3.5.0.0 - October 18, 2026</summary>
+
+**Update Importance:** MAJOR  
+**NOT SAVE COMPATIBLE** 
+
+___
+
+# Additions:
+- Added AK-27
+- Added Alex Romanced
+- Added AudioXL
+- Added AudioXL - Equalizers - Volume - Mute
+- Added Authentic Shift (QoL Gear Ratios Shifts Audio Sound ASMR and OPTIONAL Tuning System)
+- Added Crowd Props Restored
+- Added Crowd Umbrellas Restored
+- Added DigitalVixen Core
+- Added Ghost In the Mesh - Performance Meshes
+- Added Immersive MaxTac
+- Added Night City Thunderstorms (WIP)
+- Added RT(Ray Tracing) PT(Path Tracing) Contact Shadow FIX
+- Added Vehicle Destruction Mesh Fix
+- Added Virtual Atelier - Gender Filter and Crash Guard
+- Added Vroom - Performance Meshes
+- Added Weapon Sound Remake - AudioXL
+
+# Removals:
+- Removed Actually Iconic Weapons - Bundle
+- Removed APEX - Sonora Canyon and Safehouse
+- Removed Blur Begone (Clear Materials with Refraction)
+- Removed Contacts Redux - Live Online Status Indicators - Improved Contact List UI - Visible Avatars - Smart Sorting - Phone UI Overhaul
+- Removed Environment Cast Raytraced Shadows From Original Geometry
+- Removed Garage (Customize - Claim - Sell - Repair - Swap)
+- Removed Garage Manager
+- Removed Immersion Patch - Cyberpunk Story Quest Fixes
+- Removed K's H10 Apartment Plus - Blade Runner 2049
+- Removed Law Enforcement Overhaul
+- Removed Law Enforcement Overhaul Improved
+- Removed Law Enforcement Overhaul Reset (Spawn Compatibility and MaxTac Rebalanced)
+- Removed Midnight Acquisition
+- Removed Nitrous Addon (Garage)
+- Removed Photomode UI Improvements
+- Removed Real Dual Wielding
+- Removed Requiem Revolver from RE9
+- Removed Ultrawide UI Overhaul (21x9 32x9 and more)
+
+# Updates:
+- Updated Advanced Crash Reporter
+- Updated Always First Equip
+- Updated Anti-Theft Measures - Vehicle Security
+- Updated Appearance Menu Mod
+- Updated Crowd Overlap - Duplication Fix
+- Updated Crowd Variety Restored
+- Updated Crowd Walks Restored
+- Updated Cyberpunk Bikes - Edge
+- Updated Cynosure Experimental Weapons
+- Updated Damage Scaling and Balance - Extended
+- Updated Drug Dealer - Become a Kingpin
+- Updated FX Begone (Full Vignette Removal and Modular Effects Options)
+- Updated Immersive Explosions
+- Updated Immersive Hit Sounds
+- Updated Improved Distant Shadows and Reflections
+- Updated Loot Icons Extension
+- Updated Manavortex Material Library
+- Updated Map Waypoint Bug Fixes
+- Updated Mechs of Night City
+- Updated NC Fashion Virtual Atelier
+- Updated NightlyNow Core
+- Updated Not So Good Draw Distance Mod
+- Updated Ping (Menu Search - Mod Support)
+- Updated Redscript Configuration Framework
+- Updated ReFRACT (Interior Vehicle Reflections - Material Refractions)
+- Updated Rent a Motel
+- Updated Sabbath7991 Weapon and Attachment Shops - Virtual Atelier
+- Updated SPLAT Physics Realistic Ragdoll Overhaul
+- Updated The Fifth Element Collection (M-F) (GS) (AXL)
+- Updated The RVC00N Dumpster - Stinky Croptop (M-F) (GS) (AXL)
+- Updated The RVC00N Dumpster - Stinky Slashed Top (M-F) (GS) (AXL)
+- Updated Vehicle Turret Core
+- Updated Virtual Car Dealer - Sorting
+- Updated Weapon and Scope Skin Changer Plus
+- Updated Weather Condition - Dress for the Forecast
+
+</details>
+
+<details markdown="1">
 <summary>v3.4.0.0 - October 12, 2026</summary>
 
 **Update Importance:** MAJOR  
