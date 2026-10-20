@@ -10,10 +10,32 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v3.0.2.0 - October 20, 2026</summary>
+  
+**Update Importance:** MINOR  
+**SAVE COMPATIBLE**  
+
+---
+
+### Additions:
+- Added gBase Sleepy-Time Bed
+- Added gBase Sleepy-Time Corvette Bunk
+- Added gShip Corvette Medbay Bacta Tank
+
+### Updates:
+- Updated Actually Extreme Gas Giants
+- Updated Lunatus (distant worlds)
+- Updated Nubilus (cloud overhaul)
+- Updated Stellarum
+- Updated Waterless Hot n Dry Planets
+
+</details>
+
+<details markdown="1">
 <summary>v3.0.1.0 - October 11, 2026</summary>
   
-**Update Importance:** MAJOR  
-**NOT SAVE COMPATIBLE**  
+**Update Importance:** MINOR  
+**SAVE COMPATIBLE**  
 
 ---
 
