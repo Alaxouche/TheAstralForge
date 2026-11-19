@@ -24,7 +24,7 @@ npm run thumbs       # python scripts/make-thumbs.py: thumbnails + manifest (nee
 
 ## Architecture
 
-| Path | Role |
+| Path | Roles |
 |---|---|
 | `scripts/build.mjs` | The generator: front matter, Liquid (`liquidjs`, Jekyll-style includes), Markdown (`marked`), sidebar navigation, prev/next, guide steps, `search.json`, `sitemap.xml`, copies assets. Includes the dev server. |
 | `theme/layouts/` | `base.liquid` (head, nav, drawer, footer, search, lightbox), `home.liquid` (panels), `doc.liquid` (modlist docs), `page.liquid` (pass-through for hand-written HTML pages) |
