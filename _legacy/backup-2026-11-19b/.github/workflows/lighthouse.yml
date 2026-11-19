@@ -1,0 +1,44 @@
+name: Lighthouse
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Build site
+        run: npm run build
+
+      - name: Serve site
+        run: npx --yes http-server _site -p 8080 -s &
+
+      - name: Wait for server
+        run: npx --yes wait-on http://localhost:8080
+
+      # Home, a modlist overview, a guide page with a checklist, a changelog and the FAQ
+      - name: Run Lighthouse CI
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          urls: |
+            http://localhost:8080/index.html
+            http://localhost:8080/wunduniik/index.html
+            http://localhost:8080/wunduniik/installation-guide/wabbajack-installation/index.html
+            http://localhost:8080/wunduniik/changelog/index.html
+            http://localhost:8080/faq/index.html
+          configPath: ./lighthouserc.json
+          uploadArtifacts: true
+          temporaryPublicStorage: true

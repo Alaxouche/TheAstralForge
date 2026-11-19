@@ -3294,3 +3294,5 @@ NOT SAVE COMPATIBLE
 - Updated Diverse Campfires - Base Object Swapper
 - Updated Sons of Skyrim - My Patches
 - Updated Dynamic Female Table Leaning
+
+</details>

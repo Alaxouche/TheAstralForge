@@ -28,7 +28,7 @@ In the Windows API (with some exceptions), the maximum length for a file path is
 The list cannot be installed in the same folders that Wabbajack is in. They must be completely separated.
 
 Here is an example of a well-configured modlist installation folder:
-![Image](https://static.wixstatic.com/media/579922_f339dfc9a93540a68ca394155f3349b7~mv2.png/v1/fill/w_829,h_127,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/image_2023-08-21_191044255.png)
+<img src="/assets/Images/guides/f339dfc9a93540a68ca394155f3349b7-b3d7a0.webp" alt="File Explorer: install folder Games (F:) > Games > Wunduniik - Skyrim SE" width="927" height="142">
 
 **YOU SHALL NOT DOWNGRADE THE GAME. DOING SO WILL CAUSE INSTALLATION ISSUES.**
 
@@ -60,7 +60,7 @@ Dans l'API Windows (avec quelques exceptions), la longueur maximale d'un chemin 
 La liste ne peut pas être installée dans les mêmes dossiers que Wabbajack. Ils doivent être complètement séparés.
 
 Voici un exemple de dossier d'installation bien configuré :
-![Image](https://static.wixstatic.com/media/579922_f339dfc9a93540a68ca394155f3349b7~mv2.png/v1/fill/w_829,h_127,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/image_2023-08-21_191044255.png)
+<img src="/assets/Images/guides/f339dfc9a93540a68ca394155f3349b7-b3d7a0.webp" alt="Explorateur de fichiers : dossier d'installation Games (F:) > Games > Wunduniik - Skyrim SE" width="927" height="142">
 
 **VOUS NE DEVEZ PAS RÉTROGRADER LE JEU. CELA CAUSERA DES PROBLÈMES D'INSTALLATION.**
 

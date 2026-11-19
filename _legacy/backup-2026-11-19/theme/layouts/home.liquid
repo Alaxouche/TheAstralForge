@@ -1,0 +1,71 @@
+{%- assign numerals = "I,II,III,IV,V,VI,VII,VIII" | split: "," -%}
+<h1 class="skip">The Astral Forge, modlists Wabbajack</h1>
+<section class="hero" data-hero>
+
+  <article class="panel panel--forge" style="--i: 0" data-href="{{ '/hub/' | relative_url }}" tabindex="0" aria-label="The Astral Forge">
+    <img class="panel__bg" src="{{ '/assets/Images/AstralForge_Background_Dark.webp' | relative_url }}" alt="" fetchpriority="high" decoding="async">
+    <div class="panel__shade"></div>
+    <div class="panel__scrim"></div>
+    <span class="panel__num">{{ numerals[0] }}</span>
+    <img class="panel__mark" src="{{ '/assets/logos/emblem.webp' | relative_url }}" alt="" width="640" height="640">
+    <div class="panel__idle">
+      <span class="panel__kicker"><span lang="en">Since 2020</span><span lang="fr">Depuis 2020</span></span>
+      <span class="panel__name">The Forge</span>
+      <span class="panel__meta"><span class="rule"></span><span data-discord-online hidden><span class="pulse"></span><span data-discord-count></span> <span lang="en">online</span><span lang="fr">en ligne</span></span><span data-discord-fallback>Discord · Patreon</span></span>
+    </div>
+    <div class="panel__vert" aria-hidden="true"><span class="star"></span><span>The Forge</span></div>
+    <div class="panel__full">
+      <img class="panel__logo" src="{{ '/assets/logos/emblem.webp' | relative_url }}" alt="" width="640" height="640">
+      <h2 class="panel__title panel__title--metal" data-scramble>The Astral Forge</h2>
+      <p class="panel__desc">
+        <span lang="en">Wabbajack modlists for Skyrim, Cyberpunk 2077, Starfield and No Man's Sky. It started in 2020 with Wunduniik. Today there are five lists, and a Discord where players help each other get them running.</span>
+        <span lang="fr">Des modlists Wabbajack pour Skyrim, Cyberpunk 2077, Starfield et No Man's Sky. Tout a commencé en 2020 avec Wunduniik. Aujourd'hui, cinq listes et un Discord où les joueurs s'entraident pour les faire tourner.</span>
+      </p>
+      <p class="live-line" data-discord-online hidden><span class="pulse"></span><span data-discord-count></span>&nbsp;<span lang="en">members online on Discord right now</span><span lang="fr">membres en ligne sur le Discord en ce moment</span></p>
+      <div class="actions">
+        <a class="btn btn--solid" href="https://discord.gg/alaxouche-s-modding-hub-750268919201398805" target="_blank" rel="noopener noreferrer"><span lang="en">Join the Discord</span><span lang="fr">Rejoindre le Discord</span></a>
+        <a class="btn" href="{{ '/gallery/' | relative_url }}"><span lang="en">Gallery</span><span lang="fr">Galerie</span></a>
+        <a class="btn" href="{{ '/contributors/' | relative_url }}"><span lang="en">Support</span><span lang="fr">Soutenir</span></a>
+      </div>
+    </div>
+    <span class="panel__bar"></span>
+  </article>
+
+  {%- for m in site.modlists %}
+  <article class="panel" style="--i: {{ forloop.index }}; --accent: {{ m.accent }}" data-href="{{ m.url | relative_url }}" tabindex="0" aria-label="{{ m.title }}">
+    <img class="panel__bg" src="{{ m.image | relative_url }}" alt="" decoding="async">
+    <div class="panel__shade"></div>
+    <div class="panel__scrim"></div>
+    <span class="panel__num">{{ numerals[forloop.index] }}</span>
+    <span class="fresh" data-fresh="{{ m.title }}" hidden><span class="pulse"></span><span lang="en">Updated</span><span lang="fr">Mis à jour</span></span>
+    <div class="panel__idle">
+      <span class="panel__kicker">{{ m.game }}</span>
+      <span class="panel__name">{{ m.title }}</span>
+      <span class="panel__meta"><span class="rule"></span>Version <span data-live="{{ m.title }}" data-field="version">{{ m.live.version }}</span></span>
+    </div>
+    <div class="panel__vert" aria-hidden="true"><span class="star"></span><span>{{ m.title }}</span></div>
+    <div class="panel__full">
+      <div class="eyebrow-row"><span class="eyebrow" style="color: var(--accent)">Modlist {{ numerals[forloop.index] }}</span><span class="badge">{{ m.game }}</span></div>
+      <h2 class="panel__title panel__title--metal" data-scramble data-vt="t-{{ m.id }}">{{ m.title }}</h2>
+      {%- if m.subtitle %}
+      <p class="panel__desc">{% if m.subtitle_fr %}<span lang="en">{{ m.subtitle }}</span><span lang="fr">{{ m.subtitle_fr }}</span>{% else %}{{ m.subtitle }}{% endif %}</p>
+      {%- endif %}
+      <dl class="panel__stats">
+        {%- if m.stats.size > 0 %}<div><dt>Mods</dt><dd data-count>{{ m.stats[0].value }}</dd></div>{% endif %}
+        <div><dt>{{ 'Size' | bi }}</dt><dd data-live="{{ m.title }}" data-field="size" data-count>{{ m.live.size }}</dd></div>
+        <div><dt>Version</dt><dd data-live="{{ m.title }}" data-field="version">{{ m.live.version }}</dd></div>
+        <div><dt>{{ 'Updated' | bi }}</dt><dd><time data-live="{{ m.title }}" data-field="updated" datetime="{{ m.live.updated }}">{{ m.live.updated | date: "%d/%m/%Y" }}</time></dd></div>
+      </dl>
+      <div class="actions">
+        <a class="btn btn--solid" href="{{ m.url | relative_url }}"><span lang="en">Open the docs</span><span lang="fr">Voir la doc</span></a>
+        {%- for item in m.nav limit: 2 %}
+        <a class="btn" href="{{ item.url | relative_url }}">{{ item.title | bi }}</a>
+        {%- endfor %}
+      </div>
+    </div>
+    <span class="panel__bar"></span>
+  </article>
+  {%- endfor %}
+
+  <p class="hero__hint" aria-hidden="true"><span class="star"></span><span lang="en">Pick a list</span><span lang="fr">Choisissez une liste</span></p>
+</section>

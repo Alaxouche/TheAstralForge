@@ -1,0 +1,160 @@
+# Keyboard maps drawn on the game guide Controls pages (filter `keymap`, scripts/visuals.mjs).
+# Same content as the tables of each page: update both together.
+# keys: Id: [category, English label, French label], or a list of those when a key does several things.
+# Key ids: letters, digits, F1..F12, Esc, "`", Backspace, Tab, Caps, Enter, LShift, RShift, LCtrl, RCtrl, LAlt, RAlt,
+# Space, PrtSc, ScrLk, Pause, Ins, Home, PgUp, Del, End, PgDn, Up, Down, Left, Right, and the punctuation keys.
+# mouse: Left, Right, Middle, Side.
+# A long word on a 1-unit key can carry a soft hyphen (U+00AD) where it may break.
+
+wunduniik:
+  caption:
+    en: "Keyboard binds from the list's F8 keymap, on a QWERTY layout. Hover a key for its full action; pick a category above to show only its keys."
+    fr: "Les touches de la carte F8 de la liste, sur un clavier QWERTY. Survolez une touche pour lire son action ; choisissez une catégorie au-dessus pour n'afficher qu'elle."
+  cats:
+    - {id: move, en: Movement, fr: Déplacement}
+    - {id: fight, en: Fighting, fr: Combat}
+    - {id: menu, en: Menus and tools, fr: Menus et outils}
+    - {id: mods, en: Settings menus, fr: Menus de réglages}
+  keys:
+    W: [move, Forward, Avancer]
+    A: [move, Left, Gauche]
+    S: [move, Back, Reculer]
+    D: [move, Right, Droite]
+    Space: [move, Jump, Sauter]
+    LAlt: [move, Sprint, Sprint]
+    Caps: [move, Walk / run, Marche / course]
+    C: [move, Automove, Auto]
+    LCtrl: [move, Sneak, Discrétion]
+    H: [move, Horse, Cheval]
+    LShift: [fight, "Modifier: block, power attack, alt. use", "Modificateur : bloquer, attaque puissante, interaction alt."]
+    V: [fight, Dual block, Blocage double]
+    F: [fight, Special attack, Attaque spéciale]
+    Y: [fight, Execution, Exécution]
+    G: [fight, Taunt, Provo­cation]
+    R: [fight, Ready weapon, Dégainer]
+    Z: [fight, Power / Shout, Pouvoir / Cri]
+    E: [menu, "Shift + E: alt. use", "Maj + E : autre action"]
+    Tab: [menu, Character, Personnage]
+    I: [menu, Inventory, Inven­taire]
+    P: [menu, Magic, Magie]
+    M: [menu, Map, Carte]
+    J: [menu, Journal, Journal]
+    Q: [menu, Favorites, Favoris]
+    1: [menu, Fav. 1, Fav. 1]
+    2: [menu, Fav. 2, Fav. 2]
+    3: [menu, Fav. 3, Fav. 3]
+    4: [menu, Fav. 4, Fav. 4]
+    5: [menu, Fav. 5, Fav. 5]
+    6: [menu, Fav. 6, Fav. 6]
+    7: [menu, Fav. 7, Fav. 7]
+    8: [menu, Fav. 8, Fav. 8]
+    9: [menu, Compass, Boussole]
+    0: [menu, Inventory stats, Stats d'inven­taire]
+    T: [menu, Wait, Attendre]
+    X: [menu, Wheeler, Wheeler]
+    U: [menu, Stats, Stats]
+    "/": [menu, Skill tree, Arbre de compé­tences]
+    K: [menu, Bestiary, Bestiaire]
+    B: [menu, Helmet, Casque]
+    F5: [menu, Quick save, Sauv. rapide]
+    F9: [menu, Quick load, Charg. rapide]
+    F8: [menu, Keymap, Carte des touches]
+    F10: [menu, Collision reset, Réinit. colli­sions]
+    F11: [menu, STB widgets, Widgets STB]
+    F12: [menu, Steam screen­shot, Capture Steam]
+    PrtSc: [menu, Screen­shot, Capture]
+    "`": [menu, Console, Console]
+    F1: [mods, SKSE Menu Framework, SKSE Menu Framework]
+    Home: [mods, dMenu, dMenu]
+    Del: [mods, Modex, Modex]
+    Backspace: [mods, IED, IED]
+    End: [mods, KreatE, KreatE]
+  mouse:
+    Left: [fight, Attack, Attaque]
+    Right: [[fight, Power attack, Attaque puissante], [fight, "Shift: block", "Maj : bloquer"]]
+    Side: [fight, "Dodge, target lock, bow combo (see F8)", "Esquive, verrouillage, combo à l'arc (voir F8)"]
+
+ghost-of-the-grid:
+  caption:
+    en: "Keys added or changed by the list, on a QWERTY layout. Many keys only act in one context: pick a category above to see what each key does there."
+    fr: "Les touches ajoutées ou modifiées par la liste, sur un clavier QWERTY. Beaucoup ne servent que dans un contexte : choisissez une catégorie au-dessus pour voir ce que fait chaque touche dans ce contexte."
+  cats:
+    - {id: menu, en: Menus and interface, fr: Menus et interface}
+    - {id: fight, en: On foot and combat, fr: À pied et en combat}
+    - {id: drive, en: Driving, fr: Conduite}
+    - {id: drone, en: Drones, fr: Drones}
+  keys:
+    End: [menu, CET overlay, Overlay CET]
+    F8: [[menu, RCF settings hub, Hub RCF], [menu, Show / hide HUD, Afficher / masquer le HUD]]
+    F6: [[menu, Minimap, Mini-carte], [drone, Spoof, Leurre]]
+    Q: [[menu, Dialogue ↑, Dialogue ↑], [fight, "Pick­pocket: use", "Pick­pocket : utiliser"]]
+    E: [menu, Dialogue ↓, Dialogue ↓]
+    S: [menu, Junk, Camelote]
+    A: [menu, Junk all, Tout en camelote]
+    Z: [menu, Prev. variant, Variante préc.]
+    C: [menu, Next variant, Variante suiv.]
+    4: [[fight, Hack 4, Hack 4], [drive, Turret 4, Tourelle 4], [menu, Metro route, Itiné­raire métro]]
+    1: [[fight, Hack 1, Hack 1], [drive, Turret 1, Tourelle 1]]
+    2: [[fight, Hack 2, Hack 2], [drive, Turret 2, Tourelle 2]]
+    3: [[fight, Hack 3, Hack 3], [drive, Turret 3, Tourelle 3]]
+    5: [[fight, Hack 5, Hack 5], [drive, Turret 5, Tourelle 5], [drone, Mark, Marquer]]
+    6: [[fight, Hack 6, Hack 6], [drive, Turret 6, Tourelle 6]]
+    7: [fight, Hack 7, Hack 7]
+    8: [fight, Hack 8, Hack 8]
+    9: [fight, Hack 9, Hack 9]
+    0: [fight, Hack 10, Hack 10]
+    V: [[fight, Hack 11, Hack 11], [drive, "Auto drive: seat", "Conduite auto : siège"], [drone, View, Vue]]
+    B: [fight, Hack 12, Hack 12]
+    R: [[fight, Hack 13, Hack 13], [fight, "Pick­pocket: loot", "Pick­pocket : voler"], [fight, "Drug Dealer: secondary", "Drug Dealer : secon­daire"]]
+    T: [[fight, Hack 14, Hack 14], [fight, Fire mode, Mode de tir]]
+    Y: [[fight, Hack 15, Hack 15], [drive, "Auto drive: AI", "Conduite auto : IA"]]
+    U: [[fight, Hack 16, Hack 16], [fight, Throw mode, Mode de lancer]]
+    F2: [[fight, Equip anim., Anim. de prise], [drone, Repair, Réparer]]
+    F3: [fight, Lower weapon, Baisser l'arme]
+    F: [[fight, Flash­light, Lampe], [fight, "Drug Dealer: main", "Drug Dealer : princi­pale"]]
+    P: [fight, Repair link, Réparer liaison]
+    LShift: [[drive, Nitrous (cars), Nitro (voitures)], [drive, Strongest throttle, Accélération max]]
+    LCtrl: [[drive, Nitrous (bikes), Nitro (motos)], [drone, Cloak, Camouflage]]
+    O: [drone, Drive, Piloter]
+    G: [drone, Jack, Pirater]
+    X: [drone, Lure, Attirer]
+    F4: [drone, Handling, Mania­bilité]
+  mouse:
+    Left: [[fight, Accept finisher, Accepter l'exécution], [drive, "Turret: fire", "Tourelle : tirer"], [drone, Select, Sélectionner]]
+    Right: [[fight, "Hold: Savage Sling", "Maintenu : Savage Sling"], [drive, "Turret: zoom", "Tourelle : zoom"], [drone, Move, Déplacer]]
+    Middle: [[drive, Reverse camera, Caméra inversée], [drive, "Turret: next weapon", "Tourelle : arme suivante"]]
+    Side: [drive, Light throttle, Accélération légère]
+
+extrasolar-containment-protocol:
+  caption:
+    en: "Keys added or changed by the list, on a QWERTY layout. Hover a key for its full action; pick a category above to show only its keys."
+    fr: "Les touches ajoutées ou modifiées par la liste, sur un clavier QWERTY. Survolez une touche pour lire son action ; choisissez une catégorie au-dessus pour n'afficher qu'elle."
+  cats:
+    - {id: foot, en: On foot, fr: À pied}
+    - {id: drive, en: Vehicle, fr: Véhicule}
+    - {id: menu, en: Menus and favorites, fr: Menus et favoris}
+    - {id: mods, en: Mod panel, fr: Panneau des mods}
+  keys:
+    F1: [mods, SFSE Menu Framework, SFSE Menu Framework]
+    LAlt: [foot, "Dodge (40 O2)", "Esquive (40 d'O2)"]
+    LShift: [[foot, "Hold: steady aim", "Maintenue : stabiliser la visée"], [drive, Talk to companion, Parler au compagnon]]
+    Space: [[foot, "Hold: boost pack", "Maintenue : boost pack"], [drive, "Hold: slow time", "Maintenue : ralentir le temps"]]
+    R: [foot, Take­down (acti­vate), Neutra­lisation (activer)]
+    Q: [[menu, "Star map: search", "Carte : recherche"], [drive, "Hold: rear view", "Maintenue : vue arrière"]]
+    1: [menu, Fav. 1, Fav. 1]
+    2: [menu, Fav. 2, Fav. 2]
+    3: [menu, Fav. 3, Fav. 3]
+    4: [menu, Fav. 4, Fav. 4]
+    5: [menu, Fav. 5, Fav. 5]
+    6: [menu, Fav. 6, Fav. 6]
+    7: [menu, Fav. 7, Fav. 7]
+    8: [menu, Fav. 8, Fav. 8]
+    9: [menu, Fav. 9, Fav. 9]
+    0: [menu, Fav. 10, Fav. 10]
+    "[": [menu, Fav. 11, Fav. 11]
+    "]": [menu, Fav. 12, Fav. 12]
+    Up: [menu, "Favo­rites: row up", "Favoris : rangée haut"]
+    Down: [menu, "Favo­rites: row down", "Favoris : rangée bas"]
+    Left: [menu, "Favo­rites: slot left", "Favoris : case gauche"]
+    Right: [menu, "Favo­rites: slot right", "Favoris : case droite"]
+    Del: [menu, "Favo­rites: clear slot", "Favoris : vider la case"]

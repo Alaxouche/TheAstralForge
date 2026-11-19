@@ -1,0 +1,8 @@
+{%- if modlist %}
+<dl class="stats">
+  {%- for s in page.project_banner.stats %}{% if s.label == 'Mods' %}<div><dt>Mods</dt><dd data-count>{{ s.value }}</dd></div>{% endif %}{% endfor %}
+  <div><dt>{{ 'Size' | bi }}</dt><dd data-live="{{ modlist.title }}" data-field="size" data-count>{{ modlist.live.size }}</dd></div>
+  <div><dt>Archives</dt><dd data-live="{{ modlist.title }}" data-field="archives" data-count>{{ modlist.live.archives }}</dd></div>
+  <div><dt>Version</dt><dd data-live="{{ modlist.title }}" data-field="version">{{ modlist.live.version }}</dd></div>
+</dl>
+{%- endif %}

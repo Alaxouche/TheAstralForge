@@ -3,5 +3,7 @@
   type: maintenance  # Types: maintenance, alert, info
   label: Maintenance
   message: "Maintenance in progress - some pages may be unstable."
+  message_fr: "Maintenance en cours : certaines pages peuvent être instables."
   link_text: "Details"
+  link_text_fr: "Détails"
   link_url: "/changelog-timeline-example/"

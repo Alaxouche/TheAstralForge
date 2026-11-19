@@ -61,14 +61,14 @@ For the modlist to work you must have some apps: Please ensure you have the late
 [https://dotnet.microsoft.com/en-us/download/dotnet/9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0), and also [Visual C++ x64](https://aka.ms/vs/16/release/vc_redist.x64.exe).
 
 <p align="center">
-     <img src="https://raw.githubusercontent.com/Lost-Outpost/lost-legacy/main/images/microsoft-net-5-0-installation.png" >
+     <img src="/assets/Images/guides/microsoft-net-5-0-installation-10f760.webp" alt=".NET download page: the Download x64 buttons for console and desktop apps are highlighted" width="500" height="312">
 </p>
 
 To help you with the INIs configuration, I highly recommend installing [Sublime Text](https://www.sublimetext.com/)
 
 ## PageFile Configuration
 
-<img align="right" src="https://static.wixstatic.com/media/579922_da459dcbe3be46ad934f5ed3d962eca8~mv2.png/v1/fill/w_384,h_587,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e692b4cc9e2a94f37eec075d05c81bdd2d2a925dbf55944e1d2abfb660ab6d0f.png" alt="image" />
+<img src="/assets/Images/guides/da459dcbe3be46ad934f5ed3d962eca8-e9c33a.webp" alt="Windows Virtual Memory window: custom size, initial 20480 MB and maximum 40960 MB on drive C" width="891" height="1360">
 
 **Bigger Skyrim modlists** need a lot of memory, and when there is not enough available it may fail allocating more.
 
@@ -97,7 +97,7 @@ To fix this, you'll want to have a bigger pagefile. A pagefile is a file on your
 
 ## Exclusions and AntiVirus
 
-<img align="right" src="https://static.wixstatic.com/media/579922_1d3150dfc46844dfaf1d657e56c723d3~mv2.jpg/v1/fill/w_396,h_478,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/579922_1d3150dfc46844dfaf1d657e56c723d3~mv2.jpg" alt="image" />
+<img src="/assets/Images/guides/1d3150dfc46844dfaf1d657e56c723d3-39fd15.webp" alt="Windows Exploit protection, program settings for GoaT.exe: Code integrity guard and Control flow guard overrides" width="527" height="634">
 
 - Exclude **1)** `gamename.exe`, **2)** the game folder, and **3)** the shader cache folder from Windows Defender (or other) antivirus
 - Also exclude the game from Control Flow Guard:
@@ -126,14 +126,14 @@ Pour que la modlist fonctionne, vous devez disposer de certaines applications. V
 [https://dotnet.microsoft.com/en-us/download/dotnet/9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0), ainsi que [Visual C++ x64](https://aka.ms/vs/16/release/vc_redist.x64.exe).
 
 <p align="center">
-     <img src="https://raw.githubusercontent.com/Lost-Outpost/lost-legacy/main/images/microsoft-net-5-0-installation.png" >
+     <img src="/assets/Images/guides/microsoft-net-5-0-installation-10f760.webp" alt="Page de téléchargement de .NET : les boutons Download x64 des applications console et bureau sont mis en avant" width="500" height="312">
 </p>
 
 Pour la configuration des INIs, je recommande vivement d'installer [Sublime Text](https://www.sublimetext.com/)
 
 ## Configuration du Fichier d'Échange (PageFile)
 
-<img align="right" src="https://static.wixstatic.com/media/579922_da459dcbe3be46ad934f5ed3d962eca8~mv2.png/v1/fill/w_384,h_587,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e692b4cc9e2a94f37eec075d05c81bdd2d2a925dbf55944e1d2abfb660ab6d0f.png" alt="image" />
+<img src="/assets/Images/guides/da459dcbe3be46ad934f5ed3d962eca8-e9c33a.webp" alt="Fenêtre Mémoire virtuelle de Windows : taille personnalisée, initiale 20480 Mo et maximale 40960 Mo sur le lecteur C" width="891" height="1360">
 
 **Les grandes modlists Skyrim** ont besoin de beaucoup de mémoire. Un fichier d'échange plus grand est nécessaire. **Ne désactivez jamais le fichier d'échange.** Si vous ne l'avez jamais modifié, suivez ces étapes :
 
@@ -149,7 +149,7 @@ Pour la configuration des INIs, je recommande vivement d'installer [Sublime Text
 
 ## Exclusions et Antivirus
 
-<img align="right" src="https://static.wixstatic.com/media/579922_1d3150dfc46844dfaf1d657e56c723d3~mv2.jpg/v1/fill/w_396,h_478,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/579922_1d3150dfc46844dfaf1d657e56c723d3~mv2.jpg" alt="image" />
+<img src="/assets/Images/guides/1d3150dfc46844dfaf1d657e56c723d3-39fd15.webp" alt="Protection contre les exploits de Windows, paramètres du programme GoaT.exe : options Code integrity guard et Control flow guard" width="527" height="634">
 
 - Excluez **1)** `gamename.exe`, **2)** le dossier du jeu, et **3)** le dossier du cache de shaders de votre antivirus
 - Excluez également le jeu du Control Flow Guard :

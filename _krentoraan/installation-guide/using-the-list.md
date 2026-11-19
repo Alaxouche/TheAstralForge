@@ -27,7 +27,7 @@ You can create a desktop shortcut in the shortcuts dropdown.
 Mod Organizer locks your mods and load order while an executable is running. Clicking unlock may corrupt your game experience.
 
 <p align="center">
-  <img src="https://static.wixstatic.com/media/579922_759ba8cb37d24e70a7c3d152be495966~mv2.png/v1/fill/w_600,h_145,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/592328821afaaf40c7506837f3347acc33a350e7a67ce8a06a2dbccca943e4e6.png">
+  <img src="/assets/Images/guides/759ba8cb37d24e70a7c3d152be495966-32b2d2.webp" alt="Mod Organizer 2 lock window shown while the game runs, with the Unlock button" width="818" height="198">
 </p>
 
 ## Configuring MCM
@@ -40,7 +40,7 @@ All MCMs have been pre-configured via Settings Loader mods. Note the default val
 ## Keymapping
 
 <p align="center">
-  <img src="https://static.wixstatic.com/media/579922_c4ff17623e75454fb3686b5ab9b850a9~mv2.png/v1/fill/w_906,h_354,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/keyboard-layout.png">
+  <img src="/assets/Images/guides/c4ff17623e75454fb3686b5ab9b850a9-dfe38d.webp" alt="Keyboard map of the list's key bindings, colour-coded by function" width="1262" height="493">
 </p>
 
 The keymap is also available in-game using the **F8** key. Press Tab to close it.
@@ -68,7 +68,7 @@ Vous pouvez créer un raccourci bureau dans le menu déroulant des raccourcis.
 Mod Organizer verrouille vos mods et l'ordre de chargement pendant l'exécution. Cliquer sur déverrouiller peut corrompre votre expérience de jeu.
 
 <p align="center">
-  <img src="https://static.wixstatic.com/media/579922_759ba8cb37d24e70a7c3d152be495966~mv2.png/v1/fill/w_600,h_145,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/592328821afaaf40c7506837f3347acc33a350e7a67ce8a06a2dbccca943e4e6.png">
+  <img src="/assets/Images/guides/759ba8cb37d24e70a7c3d152be495966-32b2d2.webp" alt="Fenêtre de verrouillage de Mod Organizer 2 pendant que le jeu tourne, avec le bouton Unlock" width="818" height="198">
 </p>
 
 ## Configuration des MCM
@@ -81,7 +81,7 @@ Tous les MCM ont été préconfigurés via des mods Settings Loader. Notez les v
 ## Raccourcis Clavier
 
 <p align="center">
-  <img src="https://static.wixstatic.com/media/579922_c4ff17623e75454fb3686b5ab9b850a9~mv2.png/v1/fill/w_906,h_354,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/keyboard-layout.png">
+  <img src="/assets/Images/guides/c4ff17623e75454fb3686b5ab9b850a9-dfe38d.webp" alt="Plan du clavier avec les raccourcis de la liste, colorés par fonction" width="1262" height="493">
 </p>
 
 La carte des touches est également disponible en jeu avec la touche **F8**. Appuyez sur Tab pour fermer.

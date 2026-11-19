@@ -1,11 +1,13 @@
 ---
-layout: skyground_readme
-title: "404"
+title: Page not found
+layout: page
 permalink: /404
-nav_exclude: true
-search_exclude: true
 ---
+{% include page_hero.html eyebrow="404" title_en="Page not found" title_fr="Page introuvable" lead_en="The link is probably from the old wiki. Try the search, the guides are all still here." lead_fr="Le lien vient sûrement de l'ancien wiki. Essayez la recherche, tous les guides sont toujours là." image="/assets/Images/Starfield/Starfield%202026-01-09%2022-00-39_009.webp" %}
 
-<h1>Page not found</h1>
-
-<p>The page you requested could not be found. Try using the navigation {% if site.search_enabled != false %}or search {% endif %}to find what you're looking for or go to this <a href="{{ '/' | relative_url }}">site's home page</a>.</p>
+<section class="wrap section">
+  <div class="actions">
+    <a class="btn btn--solid" href="{{ '/' | relative_url }}"><span lang="en">Back home</span><span lang="fr">Retour à l'accueil</span></a>
+    <button class="btn" type="button" data-search-open><span lang="en">Search</span><span lang="fr">Rechercher</span></button>
+  </div>
+</section>

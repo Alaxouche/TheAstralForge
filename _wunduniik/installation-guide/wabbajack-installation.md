@@ -27,7 +27,7 @@ Downloading and installing Wunduniik can take a while depending on your internet
 9. The installation is now complete. You can move on to the next section.
 
 <p align="center">
- <img src="https://static.wixstatic.com/media/579922_21d8bf52feba448a8f93b5f734f3f2eb~mv2.png/v1/fill/w_600,h_313,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Wunduniik_Wabbajack.png">
+ <img src="/assets/Images/guides/21d8bf52feba448a8f93b5f734f3f2eb-b59d60.webp" alt="Wabbajack Browse Modlists screen: search field, Show NSFW and Show Unofficial Lists boxes and the download button, numbered 1 to 4" width="1600" height="836">
 </p>
 
 **Even if Wabbajack says installation complete, this doesn't mean you have finished. You must follow the rest of the installation guide in order to have the list working properly. Otherwise you will have big issues.**
@@ -58,7 +58,7 @@ Le téléchargement et l'installation de Wunduniik peuvent prendre un certain te
 9. L'installation est maintenant terminée. Vous pouvez passer à la section suivante.
 
 <p align="center">
- <img src="https://static.wixstatic.com/media/579922_21d8bf52feba448a8f93b5f734f3f2eb~mv2.png/v1/fill/w_600,h_313,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Wunduniik_Wabbajack.png">
+ <img src="/assets/Images/guides/21d8bf52feba448a8f93b5f734f3f2eb-b59d60.webp" alt="Écran Browse Modlists de Wabbajack : champ de recherche, cases Show NSFW et Show Unofficial Lists et bouton de téléchargement, numérotés de 1 à 4" width="1600" height="836">
 </p>
 
 **Même si Wabbajack dit que l'installation est terminée, cela ne signifie pas que vous avez fini. Vous devez suivre le reste du guide d'installation pour que la liste fonctionne correctement. Sinon vous aurez de gros problèmes.**
@@ -97,7 +97,7 @@ Some files use special characters such as "ç" and "ä" that can fail to downloa
 - Restart the download. Once done you can revert those settings.
 
 <p align="center">
- <img src="https://static.wixstatic.com/media/579922_f5f5162f09f44b7dbcdf7719ae3699df~mv2.png/v1/fill/w_578,h_542,al_c,q_85,enc_avif,quality_auto/579922_f5f5162f09f44b7dbcdf7719ae3699df~mv2.png">
+ <img src="/assets/Images/guides/f5f5162f09f44b7dbcdf7719ae3699df-fa56c3.webp" alt="Windows Region settings: system locale English (United States), Beta: Use Unicode UTF-8 unticked" width="578" height="542">
 </p>
 
 </div>
@@ -117,7 +117,7 @@ Certains fichiers utilisent des caractères spéciaux comme « ç » et « ä »
 - Relancez le téléchargement. Une fois terminé, vous pouvez rétablir ces paramètres.
 
 <p align="center">
- <img src="https://static.wixstatic.com/media/579922_f5f5162f09f44b7dbcdf7719ae3699df~mv2.png/v1/fill/w_578,h_542,al_c,q_85,enc_avif,quality_auto/579922_f5f5162f09f44b7dbcdf7719ae3699df~mv2.png">
+ <img src="/assets/Images/guides/f5f5162f09f44b7dbcdf7719ae3699df-fa56c3.webp" alt="Paramètres régionaux de Windows : langue système English (United States), case Beta: Use Unicode UTF-8 décochée" width="578" height="542">
 </p>
 
 </div>

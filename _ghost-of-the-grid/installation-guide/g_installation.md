@@ -31,7 +31,7 @@ In the Windows API, the maximum length for a file path is 260 characters.
 The list cannot be installed in the same folders that Wabbajack is in. They must be completely separated.
 
 Here is an example of a well-configured game folder:
-![Image](https://i.redd.it/i5ob7gn20faf1.png)
+<img src="/assets/Images/guides/i5ob7gn20faf1-c00f2c.webp" alt="File Explorer: Ghost of the Grid installed in D: > Games" width="927" height="259">
 
 **YOU SHALL NOT DOWNGRADE THE GAME! DOING SO WILL CAUSE INSTALLATION ISSUES.**
 
@@ -67,7 +67,7 @@ Dans l'API Windows, la longueur maximale d'un chemin de fichier est de 260 carac
 La liste ne peut pas être installée dans les mêmes dossiers que Wabbajack. Ils doivent être complètement séparés.
 
 Voici un exemple de dossier de jeu bien configuré :
-![Image](https://i.redd.it/i5ob7gn20faf1.png)
+<img src="/assets/Images/guides/i5ob7gn20faf1-c00f2c.webp" alt="Explorateur de fichiers : Ghost of the Grid installé dans D: > Games" width="927" height="259">
 
 **VOUS NE DEVEZ PAS RÉTROGRADER LE JEU ! CELA CAUSERA DES PROBLÈMES D'INSTALLATION.**
 

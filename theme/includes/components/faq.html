@@ -1,0 +1,23 @@
+{%- assign faq_en = include.data | default: site.data.faq -%}
+<section class="faq" data-faq>
+  {%- if include.title %}<h2>{{ include.title }}</h2>{% endif %}
+  <div lang="en">
+    {%- for item in faq_en %}
+    <details class="faq__item">
+      <summary>{{ item.question }}</summary>
+      <div class="faq__answer">{{ item.answer | markdownify }}{% if item.tags %}<p class="tags">{% for t in item.tags %}<span>{{ t }}</span>{% endfor %}</p>{% endif %}</div>
+    </details>
+    {%- endfor %}
+  </div>
+  {%- unless include.data %}
+  <div lang="fr">
+    {%- for item in site.data.faq_fr %}
+    <details class="faq__item">
+      <summary>{{ item.question }}</summary>
+      <div class="faq__answer">{{ item.answer | markdownify }}{% if item.tags %}<p class="tags">{% for t in item.tags %}<span>{{ t }}</span>{% endfor %}</p>{% endif %}</div>
+    </details>
+    {%- endfor %}
+  </div>
+  {%- endunless %}
+  <p class="faq__empty muted" data-faq-empty hidden><span lang="en">No matching question.</span><span lang="fr">Aucune question correspondante.</span></p>
+</section>

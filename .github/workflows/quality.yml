@@ -13,29 +13,24 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.3'
-          bundler-cache: true
-
-      - name: Build Jekyll
-        run: JEKYLL_ENV=production bundle exec jekyll build --trace
-
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: 22
           cache: npm
 
-      - name: Install build tooling
-        run: npm ci
+      - run: npm ci
 
-      # Runs here too so a breakage that only surfaces after indexing or
-      # minification is caught on the PR rather than at deploy time.
-      - name: Build search index and minify assets
-        run: npm run post-build
+      - name: Build site
+        run: npm run build
 
-      - name: Link Check
+      # Blocking: broken internal links / images, images without alt, images hotlinked from other sites
+      - name: Check internal links and images
+        run: npm run check
+
+      # External links (Nexus, Discord, Patreon...) often refuse bots: reported, not blocking
+      - name: External link check
         uses: lycheeverse/lychee-action@v1
+        continue-on-error: true
         with:
           args: >-
             --verbose

@@ -1,78 +1,62 @@
 ---
-layout: skyground_readme
 title: Contributors
+layout: page
 permalink: /contributors/
+description: "The people who keep The Astral Forge alive."
 ---
+{% include page_hero.html eyebrow="Support" eyebrow_fr="Soutenir" title_en="Supporters" title_fr="Soutiens" lead_en="Patreon and Ko-fi pay for test hardware, licences and the hours spent fixing things after every game update. Thanks to everyone listed here." lead_fr="Patreon et Ko-fi financent le matériel de test, les licences et les heures passées à tout réparer après chaque mise à jour du jeu. Merci à tous ceux qui sont listés ici." image="/assets/Images/Skyrim/enb_2026-2-7_22-12-03_248.webp" %}
 
-<h1 data-i18n-key="contrib.title">Contributors</h1>
-
-<p data-i18n-key="contrib.intro">Thank you to everyone who supports The Astral Forge. Your support keeps the modlists updated, tested, and documented.</p>
-
-<div class="contributors-actions">
-  <a class="contributors-btn contributors-btn--patreon" href="https://patreon.com/Alaxouche" target="_blank" rel="noopener noreferrer" data-i18n-key="contrib.btn_patreon">Join on Patreon</a>
-  <a class="contributors-btn contributors-btn--kofi" href="https://ko-fi.com/alaxouche" target="_blank" rel="noopener noreferrer" data-i18n-key="contrib.btn_kofi">Support on Ko-fi</a>
-</div>
-
-<h2 data-i18n-key="contrib.why_title">Why contribute?</h2>
-
-<ul class="contributors-list">
-  {% for benefit in site.data.contributors.benefits %}
-    <li>{{ benefit }}</li>
-  {% endfor %}
-</ul>
-
-<h2 data-i18n-key="contrib.how_title">How your support helps development</h2>
-
-<p data-i18n-key="contrib.how_body">Your contributions fund:</p>
-
-<ul class="contributors-list">
-  {% for impact in site.data.contributors.impact %}
-    <li>{{ impact }}</li>
-  {% endfor %}
-</ul>
-
-<h2 data-i18n-key="contrib.tiers_title">Patreon tiers</h2>
-
-<div class="contributors-grid">
-  {% for tier in site.data.contributors.tiers %}
-    <div class="contributors-card">
-      <img class="contributors-tier-image" src="{{ '/assets/Images/generic_background.webp' | relative_url }}" alt="Tier art placeholder">
-      <h3>{{ tier.name }}</h3>
-      <p class="contributors-amount">{{ tier.amount }}</p>
-      <ul>
-        {% for perk in tier.perks %}
-          <li>{{ perk }}</li>
-        {% endfor %}
-      </ul>
-    </div>
-  {% endfor %}
-</div>
-
-<h2 data-i18n-key="contrib.recent_title">Recent supporters</h2>
-
-<div class="contributors-table">
-  <div class="contributors-row contributors-row--header">
-    <span data-i18n-key="contrib.col_name">Name</span>
-    <span data-i18n-key="contrib.col_platform">Platform</span>
-    <span data-i18n-key="contrib.col_amount">Amount</span>
-    <span data-i18n-key="contrib.col_date">Date</span>
+<section class="wrap section">
+  <div class="actions" style="margin-bottom:72px">
+    <a class="btn btn--solid" href="https://patreon.com/Alaxouche" target="_blank" rel="noopener noreferrer"><span lang="en">Join on Patreon</span><span lang="fr">Rejoindre sur Patreon</span></a>
+    <a class="btn" href="https://ko-fi.com/alaxouche" target="_blank" rel="noopener noreferrer"><span lang="en">Support on Ko-fi</span><span lang="fr">Soutenir sur Ko-fi</span></a>
   </div>
-  {% for supporter in site.data.contributors.recent %}
-    <div class="contributors-row">
-      <span>{{ supporter.name }}</span>
-      <span>{{ supporter.platform }}</span>
-      <span>{{ supporter.amount }}</span>
-      <span>{{ supporter.date }}</span>
+
+  <h2 class="section-title"><span class="diamond"></span><span lang="en">Patreon tiers</span><span lang="fr">Niveaux Patreon</span></h2>
+  <div class="tiers">
+    {%- for tier in site.data.contributors.tiers %}
+    <div class="tier">
+      <h3>{{ tier.name }}</h3>
+      <p class="tier__price">{% if tier.amount_fr %}<span lang="en">{{ tier.amount }}</span><span lang="fr">{{ tier.amount_fr }}</span>{% else %}{{ tier.amount }}{% endif %}</p>
+      <ul>{% for perk in tier.perks %}{% assign fr = tier.perks_fr[forloop.index0] %}<li>{% if fr %}<span lang="en">{{ perk }}</span><span lang="fr">{{ fr }}</span>{% else %}{{ perk }}{% endif %}</li>{% endfor %}</ul>
     </div>
-  {% endfor %}
-</div>
+    {%- endfor %}
+  </div>
 
-<h2 data-i18n-key="contrib.top_title">Top 10 supporters (all time)</h2>
+  <div class="two-col" style="margin-top:100px">
+    <div>
+      <h2 class="section-title"><span class="diamond"></span><span lang="en">Why contribute</span><span lang="fr">Pourquoi contribuer</span></h2>
+      <ul class="list list--diamond">{% for b in site.data.contributors.benefits %}{% assign fr = site.data.contributors.benefits_fr[forloop.index0] %}<li>{% if fr %}<span lang="en">{{ b }}</span><span lang="fr">{{ fr }}</span>{% else %}{{ b }}{% endif %}</li>{% endfor %}</ul>
+    </div>
+    <div>
+      <h2 class="section-title"><span class="diamond"></span><span lang="en">What it funds</span><span lang="fr">Ce que ça finance</span></h2>
+      <ul class="list list--diamond">{% for i in site.data.contributors.impact %}{% assign fr = site.data.contributors.impact_fr[forloop.index0] %}<li>{% if fr %}<span lang="en">{{ i }}</span><span lang="fr">{{ fr }}</span>{% else %}{{ i }}{% endif %}</li>{% endfor %}</ul>
+    </div>
+  </div>
 
-<ol class="contributors-top">
-  {% for supporter in site.data.contributors.top %}
-    <li>{{ supporter.name }} — {{ supporter.platform }} — {{ supporter.total }}</li>
-  {% endfor %}
-</ol>
-
-<p class="contributors-note" data-i18n-key="contrib.note">Contributor data is currently managed in <code>_data/contributors.yml</code>. Update that file whenever you want to refresh the lists.</p>
+  <div class="two-col" style="margin-top:100px">
+    <div>
+      <h2 class="section-title"><span class="diamond"></span><span lang="en">Recent supporters</span><span lang="fr">Soutiens récents</span></h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th><span lang="en">Name</span><span lang="fr">Nom</span></th><th><span lang="en">Platform</span><span lang="fr">Plateforme</span></th><th><span lang="en">Amount</span><span lang="fr">Montant</span></th><th>Date</th></tr></thead>
+          <tbody>
+            {%- for s in site.data.contributors.recent %}
+            <tr><td>{{ s.name }}</td><td class="muted">{{ s.platform }}</td><td>{{ s.amount }}</td><td class="muted">{{ s.date }}</td></tr>
+            {%- endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    {%- if site.data.contributors.top %}
+    <div>
+      <h2 class="section-title"><span class="diamond"></span>Top 10</h2>
+      <ol class="list">
+        {%- for s in site.data.contributors.top %}
+        <li><span>{{ s.name }}</span><span class="muted">{{ s.platform }} · {{ s.total }}</span></li>
+        {%- endfor %}
+      </ol>
+    </div>
+    {%- endif %}
+  </div>
+</section>

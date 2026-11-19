@@ -5,12 +5,14 @@ search_exclude: true
 nav_exclude: true
 layout: skyground_readme
 modlist_id: ghost-of-the-grid
+game: "Cyberpunk 2077"
 image: /assets/Images/Cyberpunk/photomode_22022026_172726.webp
 gallery_path: "/assets/Images/Cyberpunk/"
 project_banner:
   image: /assets/Images/Cyberpunk/photomode_22022026_172726.webp
   accent: "#fcee0a"
   subtitle: "Neon-heavy Cyberpunk 2077 list built for atmosphere and gameplay polish."
+  subtitle_fr: "Une liste Cyberpunk 2077 baignée de néons, pensée pour l'ambiance et un gameplay peaufiné."
   stats:
     - label: Mods
       value: "1600+"

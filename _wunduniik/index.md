@@ -5,12 +5,14 @@ search_exclude: true
 nav_exclude: true
 layout: skyground_readme
 modlist_id: wunduniik
+game: "Skyrim SE"
 image: /assets/Images/Skyrim/enb_2026-2-28_18-36-11_274.webp
 gallery_path: "/assets/Images/Skyrim/"
 project_banner:
   image: /assets/Images/Skyrim/enb_2026-2-28_18-36-11_274.webp
   accent: "#a855f7"
   subtitle: "Flagship Skyrim SE list with visuals, gameplay overhauls, and deep content."
+  subtitle_fr: "Modlist phare pour Skyrim SE : visuels, refontes du gameplay et contenu riche."
   stats:
     - label: Mods
       value: "2900+"

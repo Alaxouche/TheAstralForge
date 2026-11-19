@@ -1,0 +1,20 @@
+{%- comment -%}
+  Cinematic page header. Params: eyebrow, title / title_en + title_fr, lead_en, lead_fr, image.
+{%- endcomment -%}
+{%- assign ph_img = include.image | default: '/assets/Images/AstralForge_Background_Dark.webp' -%}
+<header class="phero">
+  <img class="phero__bg" src="{{ ph_img | relative_url }}" alt="" fetchpriority="high" decoding="async" data-parallax>
+  <div class="wrap phero__inner">
+    {%- if include.eyebrow %}
+    <span class="eyebrow"><span class="diamond is-full"></span>{{ include.eyebrow }}</span>
+    {%- endif %}
+    {%- if include.title_en %}
+    <h1 class="phero__title"><span lang="en">{{ include.title_en }}</span><span lang="fr">{{ include.title_fr | default: include.title_en }}</span></h1>
+    {%- else %}
+    <h1 class="phero__title">{{ include.title | bi }}</h1>
+    {%- endif %}
+    {%- if include.lead_en %}
+    <p class="phero__lead"><span lang="en">{{ include.lead_en }}</span><span lang="fr">{{ include.lead_fr | default: include.lead_en }}</span></p>
+    {%- endif %}
+  </div>
+</header>

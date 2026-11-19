@@ -25,7 +25,7 @@ Downloading and installing No Man's Sky - Explorer can take a while. Follow the 
 7. The installation is now complete.
 
 <p align="center">
- <img src="https://i.redd.it/gi77zsrj0faf1.png">
+ <img src="/assets/Images/guides/gi77zsrj0faf1-c63742.webp" alt="Wabbajack modlist gallery filtered on Cyberpunk 2077, NSFW unticked" width="880" height="576">
 </p>
 
 **Even if Wabbajack says installation complete, this doesn't mean you have finished. You must follow the rest of the installation guide.**
@@ -52,7 +52,7 @@ Le téléchargement et l'installation de No Man's Sky - Explorer peuvent prendre
 7. L'installation est terminée.
 
 <p align="center">
- <img src="https://i.redd.it/gi77zsrj0faf1.png">
+ <img src="/assets/Images/guides/gi77zsrj0faf1-c63742.webp" alt="Galerie de modlists de Wabbajack filtrée sur Cyberpunk 2077, NSFW décoché" width="880" height="576">
 </p>
 
 **Même si Wabbajack dit que l'installation est terminée, vous n'avez pas fini. Vous devez suivre le reste du guide d'installation.**
@@ -90,7 +90,7 @@ Big files can fail due to connection issues. Run Wabbajack again or manually dow
 Set your PC to English (United States), disable "Use Unicode UTF-8", restart the download, then revert.
 
 <p align="center">
- <img src="https://static.wixstatic.com/media/579922_f5f5162f09f44b7dbcdf7719ae3699df~mv2.png/v1/fill/w_578,h_542,al_c,q_85,enc_avif,quality_auto/579922_f5f5162f09f44b7dbcdf7719ae3699df~mv2.png">
+ <img src="/assets/Images/guides/f5f5162f09f44b7dbcdf7719ae3699df-fa56c3.webp" alt="Windows Region settings: system locale English (United States), Beta: Use Unicode UTF-8 unticked" width="578" height="542">
 </p>
 
 </div>
@@ -108,7 +108,7 @@ Les gros fichiers peuvent échouer à cause de problèmes de connexion. Relancez
 Définissez votre PC sur Anglais (États-Unis), désactivez « Utiliser Unicode UTF-8 », relancez le téléchargement, puis rétablissez les paramètres.
 
 <p align="center">
- <img src="https://static.wixstatic.com/media/579922_f5f5162f09f44b7dbcdf7719ae3699df~mv2.png/v1/fill/w_578,h_542,al_c,q_85,enc_avif,quality_auto/579922_f5f5162f09f44b7dbcdf7719ae3699df~mv2.png">
+ <img src="/assets/Images/guides/f5f5162f09f44b7dbcdf7719ae3699df-fa56c3.webp" alt="Paramètres régionaux de Windows : langue système English (United States), case Beta: Use Unicode UTF-8 décochée" width="578" height="542">
 </p>
 
 </div>

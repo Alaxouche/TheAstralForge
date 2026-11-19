@@ -1,0 +1,5236 @@
+{
+ "skills": [
+  {
+   "id": "2CFCB0:Starfield.esm",
+   "edid": "Skill_Dueling",
+   "category": "combat",
+   "tier": 1,
+   "name": {
+    "en": "Evasion",
+    "fr": "Evasion"
+   },
+   "description": {
+    "en": "Evasion is the art of avoiding lethal damage and getting close enough to dish it out.",
+    "fr": "Evasion is the art of avoiding lethal damage and getting close enough to dish it out."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Take 15% less damage while sprinting. Melee weapons do 50% more damage.",
+      "fr": "Take 15% less damage while sprinting. Melee weapons do 50% more damage."
+     },
+     "challenge": {
+      "en": "Sprint 1000 meters in combat.",
+      "fr": "Sprint 1000 meters in combat."
+     }
+    },
+    {
+     "desc": {
+      "en": "Take 10% less damage while crouched. Above bonuses doubled.",
+      "fr": "Take 10% less damage while crouched. Above bonuses doubled."
+     },
+     "challenge": {
+      "en": "Kill 25 enemies with melee weapons.",
+      "fr": "Kill 25 enemies with melee weapons."
+     }
+    },
+    {
+     "desc": {
+      "en": "Heal 15% for Melee kills, and 5% for Pistol kills.",
+      "fr": "Heal 15% for Melee kills, and 5% for Pistol kills."
+     },
+     "challenge": {
+      "en": "Kill 100 enemies with a melee weapon or pistol.",
+      "fr": "Kill 100 enemies with a melee weapon or pistol."
+     }
+    },
+    {
+     "desc": {
+      "en": "Move 20% faster in combat with melee weapons or pistols.",
+      "fr": "Move 20% faster in combat with melee weapons or pistols."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "rbt_DeadlyEffective.esm",
+   "by": "Deadly Effective - Minimal Skills Overhaul",
+   "new": false,
+   "touched_by": [
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+    "Deadly Effective - Minimal Skills Overhaul"
+   ]
+  },
+  {
+   "id": "2C59DD:Starfield.esm",
+   "edid": "Skill_Lasers",
+   "category": "combat",
+   "tier": 1,
+   "name": {
+    "en": "Focus",
+    "fr": "Focus"
+   },
+   "description": {
+    "en": "Laser weapons are highly accurate and convenient, and are used across the Settled System. Harnessing their energy transfer characteristics is key to deadly effectiveness.",
+    "fr": "Laser weapons are highly accurate and convenient, and are used across the Settled System. Harnessing their energy transfer characteristics is key to deadly effectiveness."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Energy weapons do up to 25% more damage upon consecutive hits.",
+      "fr": "Energy weapons do up to 25% more damage upon consecutive hits."
+     },
+     "challenge": {
+      "en": "Kill 80 enemies with energy weapons.",
+      "fr": "Kill 80 enemies with energy weapons."
+     }
+    },
+    {
+     "desc": {
+      "en": "Energy weapon crit chance increases by up to 15% upon consecutive hits.",
+      "fr": "Energy weapon crit chance increases by up to 15% upon consecutive hits."
+     },
+     "challenge": {
+      "en": "Kill 50 enemies with energy weapons.",
+      "fr": "Kill 50 enemies with energy weapons."
+     }
+    },
+    {
+     "desc": {
+      "en": "Energy weapons deal 25% more crit damage and can be reloaded faster.",
+      "fr": "Energy weapons deal 25% more crit damage and can be reloaded faster."
+     },
+     "challenge": {
+      "en": "Kill 25 enemies with Critical hits from energy weapons.",
+      "fr": "Kill 25 enemies with Critical hits from energy weapons."
+     }
+    },
+    {
+     "desc": {
+      "en": "Continuous fire with energy weapons ignores 15% of enemy armor.",
+      "fr": "Continuous fire with energy weapons ignores 15% of enemy armor."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "rbt_DeadlyEffective.esm",
+   "by": "Deadly Effective - Minimal Skills Overhaul",
+   "new": false,
+   "touched_by": [
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+    "Deadly Effective - Minimal Skills Overhaul"
+   ]
+  },
+  {
+   "id": "2CFCAB:Starfield.esm",
+   "edid": "Skill_Ballistics",
+   "category": "combat",
+   "tier": 1,
+   "name": {
+    "en": "Neutralisation",
+    "fr": "Neutralisation"
+   },
+   "description": {
+    "en": "Deliberate shot placement is one of the deadliest threats in the modern battlefield.",
+    "fr": "Deliberate shot placement is one of the deadliest threats in the modern battlefield."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Semi-Automatic weapons can be fired 15% faster and reloaded 5% faster.",
+      "fr": "Semi-Automatic weapons can be fired 15% faster and reloaded 5% faster."
+     },
+     "challenge": {
+      "en": "Kill 80 enemies with semi-auto guns.",
+      "fr": "Kill 80 enemies with semi-auto guns."
+     }
+    },
+    {
+     "desc": {
+      "en": "Semi-Auto weapons are significantly more accurate.",
+      "fr": "Semi-Auto weapons are significantly more accurate."
+     },
+     "challenge": {
+      "en": "Kill 50 enemies with semi-auto guns.",
+      "fr": "Kill 50 enemies with semi-auto guns."
+     }
+    },
+    {
+     "desc": {
+      "en": "Semi-Auto weapons deal 30% more headshot damage and 20% more torso damage.",
+      "fr": "Semi-Auto weapons deal 30% more headshot damage and 20% more torso damage."
+     },
+     "challenge": {
+      "en": "Kill 25 enemies with center mass shots from semi-auto guns.",
+      "fr": "Kill 25 enemies with center mass shots from semi-auto guns."
+     }
+    },
+    {
+     "desc": {
+      "en": "Above bonuses apply to Burst-Fire weapons as well as Semi-Auto. 5% chance to ignore enemy armor.",
+      "fr": "Above bonuses apply to Burst-Fire weapons as well as Semi-Auto. 5% chance to ignore enemy armor."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "rbt_DeadlyEffective.esm",
+   "by": "Deadly Effective - Minimal Skills Overhaul",
+   "new": false,
+   "touched_by": [
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+    "Deadly Effective - Minimal Skills Overhaul"
+   ]
+  },
+  {
+   "id": "2080FF:Starfield.esm",
+   "edid": "Skill_PistolCertification",
+   "category": "combat",
+   "tier": 1,
+   "name": {
+    "en": "Pistol Certification",
+    "fr": "Certification pistolet"
+   },
+   "description": {
+    "en": "Considering the popularity of the personal sidearm in the Settled Systems, familiarity with such weapons is often considered essential.",
+    "fr": "Au vu de la popularité des armes de poing personnelles dans les Systèmes occupés, bien les connaître est souvent considéré comme essentiel."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Pistols do 25% more critical damage to enemies with full health and can be reloaded faster.",
+      "fr": "Pistols do 25% more critical damage to enemies with full health and can be reloaded faster."
+     },
+     "challenge": {
+      "en": "Kill 80 enemies with a pistol.",
+      "fr": "Kill 80 enemies with a pistol."
+     }
+    },
+    {
+     "desc": {
+      "en": "Pistols have a 15% increased chance to critical hit.",
+      "fr": "Pistols have a 15% increased chance to critical hit."
+     },
+     "challenge": {
+      "en": "Kill 50 enemies with pistols.",
+      "fr": "Tuez 50 ennemis avec des pistolets."
+     }
+    },
+    {
+     "desc": {
+      "en": "25% chance to ignore damage for 3 seconds after a pistol kill.",
+      "fr": "25% chance to ignore damage for 3 seconds after a pistol kill."
+     },
+     "challenge": {
+      "en": "Kill 25 enemies with pistol headshots.",
+      "fr": "Kill 25 enemies with pistol headshots."
+     }
+    },
+    {
+     "desc": {
+      "en": "Pistols do 50% more damage to enemies below half health.",
+      "fr": "Pistols do 50% more damage to enemies below half health."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "rbt_DeadlyEffective.esm",
+   "by": "Deadly Effective - Minimal Skills Overhaul",
+   "new": false,
+   "touched_by": [
+    "Unofficial Starfield Patch - USFP",
+    "Deadly Effective - Minimal Skills Overhaul"
+   ]
+  },
+  {
+   "id": "27DF97:Starfield.esm",
+   "edid": "Skill_ShotgunCertification",
+   "category": "combat",
+   "tier": 1,
+   "name": {
+    "en": "Shotgun Certification",
+    "fr": "Certif. fusil à pompe"
+   },
+   "description": {
+    "en": "The cornerstone of close quarters combat, or CQC, the shotgun has proven a simple, deadly weapon for hundreds of years.",
+    "fr": "Pierre angulaire du combat rapproché, le fusil à pompe est une arme simple et redoutable utilisée depuis des centaines d'années."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Shotguns do 15% more damage and can be reloaded faster.",
+      "fr": "Shotguns do 15% more damage and can be reloaded faster."
+     },
+     "challenge": {
+      "en": "Kill 80 enemies with a shotgun.",
+      "fr": "Kill 80 enemies with a shotgun."
+     }
+    },
+    {
+     "desc": {
+      "en": "Torso shots with shotguns have a chance to stun.",
+      "fr": "Torso shots with shotguns have a chance to stun."
+     },
+     "challenge": {
+      "en": "Kill 50 enemies with a shotgun.",
+      "fr": "Tuez 50 ennemis avec un fusil à pompe."
+     }
+    },
+    {
+     "desc": {
+      "en": "Non-standard shotshells like Slugs and Flechettes are 30% more effective.",
+      "fr": "Non-standard shotshells like Slugs and Flechettes are 30% more effective."
+     },
+     "challenge": {
+      "en": "Kill 25 enemies with a shotgun using non-standard shotshell load.",
+      "fr": "Kill 25 enemies with a shotgun using non-standard shotshell load."
+     }
+    },
+    {
+     "desc": {
+      "en": "Shotguns have 15% increased range and deal 40% more critical damage with non-headshots.",
+      "fr": "Shotguns have 15% increased range and deal 40% more critical damage with non-headshots."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "rbt_DeadlyEffective.esm",
+   "by": "Deadly Effective - Minimal Skills Overhaul",
+   "new": false,
+   "touched_by": [
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+    "Deadly Effective - Minimal Skills Overhaul"
+   ]
+  },
+  {
+   "id": "2C59DA:Starfield.esm",
+   "edid": "Skill_Targeting",
+   "category": "combat",
+   "tier": 1,
+   "name": {
+    "en": "Targeting",
+    "fr": "Visée"
+   },
+   "description": {
+    "en": "While aiming is preferred in combat, hip-fire can be a fast, lethal option. Upgrading your helmet’s HUD with focused thermal targeting marks enemies, making them easier to hunt down and eliminate.",
+    "fr": "While aiming is preferred in combat, hip-fire can be a fast, lethal option. Upgrading your helmet’s HUD with focused thermal targeting marks enemies, making them easier to hunt down and eliminate."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Increase hip-fire accuracy and range by 10%. Activate focused thermal vision to mark one hostile target within 25 meters.",
+      "fr": "Increase hip-fire accuracy and range by 10%. Activate focused thermal vision to mark one hostile target within 25 meters."
+     },
+     "challenge": {
+      "en": "Kill 25 enemies without aiming with a ranged weapon.",
+      "fr": "Kill 25 enemies without aiming with a ranged weapon."
+     }
+    },
+    {
+     "desc": {
+      "en": "Increase hip-fire accuracy and range by 20%. Automatically mark up to two hostile targets within 25 meters.",
+      "fr": "Increase hip-fire accuracy and range by 20%. Automatically mark up to two hostile targets within 25 meters."
+     },
+     "challenge": {
+      "en": "Kill 50 enemies without aiming with a ranged weapon.",
+      "fr": "Kill 50 enemies without aiming with a ranged weapon."
+     }
+    },
+    {
+     "desc": {
+      "en": "Increase hip-fire accuracy and range by 30%. Automatically mark up to three hostile targets within 75 meters.",
+      "fr": "Increase hip-fire accuracy and range by 30%. Automatically mark up to three hostile targets within 75 meters."
+     },
+     "challenge": {
+      "en": "Kill 100 enemies without aiming with a ranged weapon.",
+      "fr": "Kill 100 enemies without aiming with a ranged weapon."
+     }
+    },
+    {
+     "desc": {
+      "en": "Hip-fire shots have a 5% chance to disarm enemies. Mark up to four hostiles within 150 meters and auto-target the last enemy standing.",
+      "fr": "Hip-fire shots have a 5% chance to disarm enemies. Mark up to four hostiles within 150 meters and auto-target the last enemy standing."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "RoyalGalaxy.esm",
+   "by": "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+   "new": false,
+   "touched_by": [
+    "Unofficial Starfield Patch - USFP",
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration"
+   ]
+  },
+  {
+   "id": "2C5556:Starfield.esm",
+   "edid": "Skill_Demolitions",
+   "category": "combat",
+   "tier": 2,
+   "name": {
+    "en": "Demolitions",
+    "fr": "Démolition"
+   },
+   "description": {
+    "en": "With the proper adjustment of chemical mixtures, coupled with modifications to the detonation mechanism, explosives can produce an even greater destructive yield.",
+    "fr": "Avec le bon dosage de composants chimiques et quelques modifications au mécanisme de détonation, les explosifs peuvent atteindre une puissance destructrice inégalée."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Throwing grenades now shows a trajectory arc. Explosions have a 25% larger radius.",
+      "fr": "Le lancer de grenade inclut désormais une trajectoire. Le rayon des explosions augmente de 25 %."
+     },
+     "challenge": {
+      "en": "Kill 40 enemies with explosives.",
+      "fr": "Kill 40 enemies with explosives."
+     }
+    },
+    {
+     "desc": {
+      "en": "Explosives do 50% more damage. Resist 25% of explosive damage.",
+      "fr": "Explosives do 50% more damage. Resist 25% of explosive damage."
+     },
+     "challenge": {
+      "en": "Kill 25 enemies with explosives.",
+      "fr": "Kill 25 enemies with explosives."
+     }
+    },
+    {
+     "desc": {
+      "en": "Weapons firing explosive rounds have a 10% chance to knock down the target.",
+      "fr": "Weapons firing explosive rounds have a 10% chance to knock down the target."
+     },
+     "challenge": {
+      "en": "Kill 10 enemies with explosive rounds.",
+      "fr": "Kill 10 enemies with explosive rounds."
+     }
+    },
+    {
+     "desc": {
+      "en": "Explosions have a 50% larger radius. Resist 50% of explosive damage.",
+      "fr": "Explosions have a 50% larger radius. Resist 50% of explosive damage."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "rbt_DeadlyEffective.esm",
+   "by": "Deadly Effective - Minimal Skills Overhaul",
+   "new": false,
+   "touched_by": [
+    "Unofficial Starfield Patch - USFP",
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+    "Deadly Effective - Minimal Skills Overhaul"
+   ]
+  },
+  {
+   "id": "27BAFD:Starfield.esm",
+   "edid": "Skill_ParticleBeams",
+   "category": "combat",
+   "tier": 2,
+   "name": {
+    "en": "Efficiency",
+    "fr": "Efficiency"
+   },
+   "description": {
+    "en": "Energy weapons are mostly constrained by their battery capacity. Careful overclocking and tuning are required to bring out their true potential.",
+    "fr": "Energy weapons are mostly constrained by their battery capacity. Careful overclocking and tuning are required to bring out their true potential."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "All energy weapons deal 15% more damage.",
+      "fr": "All energy weapons deal 15% more damage."
+     },
+     "challenge": {
+      "en": "Kill 80 enemies with a modded energy weapon.",
+      "fr": "Kill 80 enemies with a modded energy weapon."
+     }
+    },
+    {
+     "desc": {
+      "en": "All non-standard energy weapon types ignore 15% of armor.",
+      "fr": "All non-standard energy weapon types ignore 15% of armor."
+     },
+     "challenge": {
+      "en": "Kill 50 enemies with a modded energy weapon.",
+      "fr": "Kill 50 enemies with a modded energy weapon."
+     }
+    },
+    {
+     "desc": {
+      "en": "Semi-Auto or Burst-Fire energy weapons fire two shots per trigger pull, with moderately reduced damage per shot.",
+      "fr": "Semi-Auto or Burst-Fire energy weapons fire two shots per trigger pull, with moderately reduced damage per shot."
+     },
+     "challenge": {
+      "en": "Kill 25 enemies with an unmodded laser weapon.",
+      "fr": "Kill 25 enemies with an unmodded laser weapon."
+     }
+    },
+    {
+     "desc": {
+      "en": "When firing two shots per trigger pull, each shot does full damage.",
+      "fr": "When firing two shots per trigger pull, each shot does full damage."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "rbt_DeadlyEffective.esm",
+   "by": "Deadly Effective - Minimal Skills Overhaul",
+   "new": false,
+   "touched_by": [
+    "Unofficial Starfield Patch - USFP",
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+    "Deadly Effective - Minimal Skills Overhaul"
+   ]
+  },
+  {
+   "id": "147E38:Starfield.esm",
+   "edid": "Skill_HeavyWeaponCertification",
+   "category": "combat",
+   "tier": 2,
+   "name": {
+    "en": "Heavy Weapons Certification",
+    "fr": "Certification en armes lourdes"
+   },
+   "description": {
+    "en": "Oversized weapons may prove cumbersome to wield, but their excessive damage output can't be ignored, especially in the hands of a trained combatant.",
+    "fr": "Les armes lourdes sont difficiles à manier, mais la quantité colossale de dégâts qu'elles sont capables d'infliger compensent largement ce défaut, en particulier entre des mains expertes."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Heavy weapons can be used effectively. Gain some stability and damage resistance with Heavy Weapons while stationary.",
+      "fr": "Heavy weapons can be used effectively. Gain some stability and damage resistance with Heavy Weapons while stationary."
+     },
+     "challenge": {
+      "en": "Kill 20 enemies with a heavy weapon.",
+      "fr": "Tuez 20 ennemis avec une arme lourde."
+     }
+    },
+    {
+     "desc": {
+      "en": "Resist stagger when using Heavy Weapons. Resist more while stationary.",
+      "fr": "Resist stagger when using Heavy Weapons. Resist more while stationary."
+     },
+     "challenge": {
+      "en": "Kill 50 enemies with a heavy weapon.",
+      "fr": "Tuez 50 ennemis avec une arme lourde."
+     }
+    },
+    {
+     "desc": {
+      "en": "Ignore 35% of armor with Utility weapons. Cutters are more effective in combat.",
+      "fr": "Ignore 35% of armor with Utility weapons. Cutters are more effective in combat."
+     },
+     "challenge": {
+      "en": "Kill 100 enemies with a heavy weapon.",
+      "fr": "Tuez 100 ennemis avec une arme lourde."
+     }
+    },
+    {
+     "desc": {
+      "en": "Heavy weapons weigh less. Maneuver faster in combat with heavy weapons.",
+      "fr": "Heavy weapons weigh less. Maneuver faster in combat with heavy weapons."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "rbt_DeadlyEffective.esm",
+   "by": "Deadly Effective - Minimal Skills Overhaul",
+   "new": false,
+   "touched_by": [
+    "Unofficial Starfield Patch - USFP",
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+    "Deadly Effective - Minimal Skills Overhaul"
+   ]
+  },
+  {
+   "id": "27DF96:Starfield.esm",
+   "edid": "Skill_Incapacitation",
+   "category": "combat",
+   "tier": 2,
+   "name": {
+    "en": "Incapacitation",
+    "fr": "Neutralisation"
+   },
+   "description": {
+    "en": "EM weapons are generally employed to damage robots, but can also be used to render human beings unconscious.",
+    "fr": "Les armes EM sont généralement utilisées pour endommager les robots, mais peuvent aussi faire perdre connaissance aux êtres humains."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "EM weapons do 5% more damage.",
+      "fr": "Les armes EM infligent 5 % de dégâts supplémentaires."
+     },
+     "challenge": {
+      "en": "Deal 400 EM damage.",
+      "fr": "Infligez 400 points de dégâts électromagnétiques."
+     }
+    },
+    {
+     "desc": {
+      "en": "EM weapons do 10% more damage.",
+      "fr": "Les armes EM infligent 10 % de dégâts supplémentaires."
+     },
+     "challenge": {
+      "en": "Deal 1000 EM damage.",
+      "fr": "Infligez 1000 points de dégâts électromagnétiques."
+     }
+    },
+    {
+     "desc": {
+      "en": "EM weapons do 15% more damage.",
+      "fr": "Les armes EM infligent 15 % de dégâts supplémentaires."
+     },
+     "challenge": {
+      "en": "Deal 2500 EM damage.",
+      "fr": "Infligez 2500 points de dégâts électromagnétiques."
+     }
+    },
+    {
+     "desc": {
+      "en": "EM weapons have a 15% chance to do 300% EM damage.",
+      "fr": "Les armes EM ont 15 % de chances d'infliger 300 % de dégâts EM."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "Mortal Killable Children.esm",
+   "by": "Mortal Killable Children",
+   "new": false,
+   "touched_by": [
+    "Deadly Effective - Minimal Skills Overhaul",
+    "Mortal Killable Children"
+   ]
+  },
+  {
+   "id": "2CE2E0:Starfield.esm",
+   "edid": "Skill_RifleCertification",
+   "category": "combat",
+   "tier": 2,
+   "name": {
+    "en": "Suppression",
+    "fr": "Suppression"
+   },
+   "description": {
+    "en": "Laying down constant fire on an enemy target is one of the oldest and most reliable methods of victory in ground combat.",
+    "fr": "Laying down constant fire on an enemy target is one of the oldest and most reliable methods of victory in ground combat."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Automatic weapons deal 10% more damage and can be reloaded faster.",
+      "fr": "Automatic weapons deal 10% more damage and can be reloaded faster."
+     },
+     "challenge": {
+      "en": "Kill 80 enemies with automatic weaponry.",
+      "fr": "Kill 80 enemies with automatic weaponry."
+     }
+    },
+    {
+     "desc": {
+      "en": "Automatic weapon spread can be controlled effectively.",
+      "fr": "Automatic weapon spread can be controlled effectively."
+     },
+     "challenge": {
+      "en": "Kill 50 enemies with automatic weaponry.",
+      "fr": "Kill 50 enemies with automatic weaponry."
+     }
+    },
+    {
+     "desc": {
+      "en": "Automatic weapons are up to 40% more effective within 15 meters.",
+      "fr": "Automatic weapons are up to 40% more effective within 15 meters."
+     },
+     "challenge": {
+      "en": "Kill 25 enemies with automatic weaponry at point-blank range.",
+      "fr": "Kill 25 enemies with automatic weaponry at point-blank range."
+     }
+    },
+    {
+     "desc": {
+      "en": "Enemies taking suppressive automatic fire may drop or jam their weapons.",
+      "fr": "Enemies taking suppressive automatic fire may drop or jam their weapons."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "rbt_DeadlyEffective.esm",
+   "by": "Deadly Effective - Minimal Skills Overhaul",
+   "new": false,
+   "touched_by": [
+    "Deadly Effective - Minimal Skills Overhaul"
+   ]
+  },
+  {
+   "id": "2C890B:Starfield.esm",
+   "edid": "Skill_Marksmanship",
+   "category": "combat",
+   "tier": 3,
+   "name": {
+    "en": "Marksmanship",
+    "fr": "Adresse au tir"
+   },
+   "description": {
+    "en": "Perhaps no combat scenario is more frightening, or lethal, as a single-shot weapon wielded by someone skilled in critical shot placement.",
+    "fr": "Aucun combat n'est plus effrayant, ou mortel, qu'une arme à un coup maniée par un expert en coups critiques."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Increase critical hit chance with non-automatic ranged weapons by 5%.",
+      "fr": "Increase critical hit chance with non-automatic ranged weapons by 5%."
+     },
+     "challenge": {
+      "en": "Deal 10 ranged critical hits.",
+      "fr": "Infligez 10 coups critiques à distance."
+     }
+    },
+    {
+     "desc": {
+      "en": "Increase critical hit chance with non-automatic ranged weapons by 10%.",
+      "fr": "Increase critical hit chance with non-automatic ranged weapons by 10%."
+     },
+     "challenge": {
+      "en": "Deal 30 ranged critical hits.",
+      "fr": "Infligez 30 coups critiques à distance."
+     }
+    },
+    {
+     "desc": {
+      "en": "Increase critical hit chance with non-automatic ranged weapons by 20%.",
+      "fr": "Increase critical hit chance with non-automatic ranged weapons by 20%."
+     },
+     "challenge": {
+      "en": "Deal 75 ranged critical hits.",
+      "fr": "Infligez 75 coups critiques à distance."
+     }
+    },
+    {
+     "desc": {
+      "en": "No-scope critical hits with a sniper, pistol, or heavy weapon deal double damage. Scoped sniper shots after a critical hit may knock down enemies.",
+      "fr": "No-scope critical hits with a sniper, pistol, or heavy weapon deal double damage. Scoped sniper shots after a critical hit may knock down enemies."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "RoyalGalaxy.esm",
+   "by": "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+   "new": false,
+   "touched_by": [
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration"
+   ]
+  },
+  {
+   "id": "00136F:Lodecs_WEAP_CustomArmory.esm",
+   "edid": "LCA_Skill_PlasmaWeapons",
+   "category": "combat",
+   "tier": 3,
+   "name": {
+    "en": "Plasma Weaponry",
+    "fr": "Plasma Weaponry"
+   },
+   "description": {
+    "en": "While generally considered exotic and hard to contain in small-sized guns, plasma weapons can be a devastating, but effective combat option. Plasma literally burns through almost all armor as well as flesh and bone within, causing extensive burn, crippling, and bleeding.",
+    "fr": "While generally considered exotic and hard to contain in small-sized guns, plasma weapons can be a devastating, but effective combat option. Plasma literally burns through almost all armor as well as flesh and bone within, causing extensive burn, crippling, and bleeding."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Plasma weapons do 10% more damage.",
+      "fr": "Plasma weapons do 10% more damage."
+     },
+     "challenge": {
+      "en": "Kill 20 enemies with a plasma weapon.",
+      "fr": "Kill 20 enemies with a plasma weapon."
+     }
+    },
+    {
+     "desc": {
+      "en": "Plasma weapons do 20% more damage, and attacks with plasma weapons ignore 10% of a target's armor.",
+      "fr": "Plasma weapons do 20% more damage, and attacks with plasma weapons ignore 10% of a target's armor."
+     },
+     "challenge": {
+      "en": "Kill 50 enemies with a plasma weapon.",
+      "fr": "Kill 50 enemies with a plasma weapon."
+     }
+    },
+    {
+     "desc": {
+      "en": "Plasma weapons do 30% more damage, and attacks with plasma weapons ignore 20% of a target's armor.",
+      "fr": "Plasma weapons do 30% more damage, and attacks with plasma weapons ignore 20% of a target's armor."
+     },
+     "challenge": {
+      "en": "Kill 100 enemies with a plasma weapon.",
+      "fr": "Kill 100 enemies with a plasma weapon."
+     }
+    },
+    {
+     "desc": {
+      "en": "Plasma weapons have +5% crit chance, and attacks with plasma weapons ignore 30% of a target's armor.",
+      "fr": "Plasma weapons have +5% crit chance, and attacks with plasma weapons ignore 30% of a target's armor."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "Lodecs_WEAP_CustomArmory.esm",
+   "by": "Lodecs Custom Armory (LCA)",
+   "new": true,
+   "touched_by": [
+    "Lodecs Custom Armory (LCA)"
+   ]
+  },
+  {
+   "id": "2C53B1:Starfield.esm",
+   "edid": "Skill_SniperCertification",
+   "category": "combat",
+   "tier": 3,
+   "name": {
+    "en": "Sniper Certification",
+    "fr": "Certification en sniper"
+   },
+   "description": {
+    "en": "Only a trained sniper truly understands all the elements necessary to patiently and effectively neutralize a target at excessive range.",
+    "fr": "Seuls les snipers les mieux entraînés comprennent réellement tous les éléments et la patience nécessaires pour neutraliser avec succès une cible à très longue distance."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Scoped weapons are steadier and have less sway.",
+      "fr": "Les armes munies d'une lunette sont plus stables et tanguent moins."
+     },
+     "challenge": {
+      "en": "Kill 50 enemies using a scoped weapon.",
+      "fr": "Tuez 50 ennemis à l'aide d'une arme à lunette de visée."
+     }
+    },
+    {
+     "desc": {
+      "en": "You can hold your breath longer with scoped weapons.",
+      "fr": "Vous pouvez retenir votre respiration plus longtemps en visant avec une lunette."
+     },
+     "challenge": {
+      "en": "Kill 125 enemies using a scoped weapon.",
+      "fr": "Tuez 125 ennemis à l'aide d'une arme à lunette de visée."
+     }
+    },
+    {
+     "desc": {
+      "en": "Headshots while aiming with a scoped weapon have a +25% critical hit chance.",
+      "fr": "Les tirs à la tête lorsque vous visez avec une arme munie d'une lunette ont +25 % de chances de coup critique supplémentaires."
+     },
+     "challenge": {
+      "en": "Kill 250 enemies using a scoped weapon.",
+      "fr": "Tuez 250 ennemis à l'aide d'une arme à lunette de visée."
+     }
+    },
+    {
+     "desc": {
+      "en": "Scoped weapons do 50% more damage while using the scope.",
+      "fr": "Les armes munies d'une lunette infligent 50 % de dégâts supplémentaires lorsque vous visez."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "rbt_RealO2.esm",
+   "by": "Real O2",
+   "new": false,
+   "touched_by": [
+    "Real O2"
+   ]
+  },
+  {
+   "id": "2C555A:Starfield.esm",
+   "edid": "Skill_RapidReloading",
+   "category": "combat",
+   "tier": 3,
+   "name": {
+    "en": "Weapon Handling",
+    "fr": "Weapon Handling"
+   },
+   "description": {
+    "en": "In the chaos of combat, familiarity with your weapons can be the difference between life and death.",
+    "fr": "In the chaos of combat, familiarity with your weapons can be the difference between life and death."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Reload all weapons 5% faster.",
+      "fr": "Reload all weapons 5% faster."
+     },
+     "challenge": {
+      "en": "Reload 30 empty magazines.",
+      "fr": "Rechargez 30 chargeurs vides."
+     }
+    },
+    {
+     "desc": {
+      "en": "Reload all weapons 10% faster. Move 15% faster in combat with long guns.",
+      "fr": "Reload all weapons 10% faster. Move 15% faster in combat with long guns."
+     },
+     "challenge": {
+      "en": "Sprint 750 meters in combat with a long gun.",
+      "fr": "Sprint 750 meters in combat with a long gun."
+     }
+    },
+    {
+     "desc": {
+      "en": "Chance on hitting enemies to increase reload speed for all weapons by 50% for 15 seconds.",
+      "fr": "Chance on hitting enemies to increase reload speed for all weapons by 50% for 15 seconds."
+     },
+     "challenge": {
+      "en": "Reload 150 empty magazines.",
+      "fr": "Rechargez 150 chargeurs vides."
+     }
+    },
+    {
+     "desc": {
+      "en": "Reloading is uninterruptible.",
+      "fr": "Reloading is uninterruptible."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "rbt_DeadlyEffective.esm",
+   "by": "Deadly Effective - Minimal Skills Overhaul",
+   "new": false,
+   "touched_by": [
+    "Deadly Effective - Minimal Skills Overhaul"
+   ]
+  },
+  {
+   "id": "27DF94:Starfield.esm",
+   "edid": "Skill_ArmorPenetration",
+   "category": "combat",
+   "tier": 4,
+   "name": {
+    "en": "Armor Penetration",
+    "fr": "Pénétration d'armure"
+   },
+   "description": {
+    "en": "By identifying gaps or weak points in body armor, an attacker can often gain a tactical advantage in combat.",
+    "fr": "En identifiant les points faibles d'une armure, un assaillant peut souvent obtenir un avantage tactique en combat."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Attacks ignore 5% of a target's armor.",
+      "fr": "Attacks ignore 5% of a target's armor."
+     },
+     "challenge": {
+      "en": "Kill 20 enemies with non-automatic weapons.",
+      "fr": "Kill 20 enemies with non-automatic weapons."
+     }
+    },
+    {
+     "desc": {
+      "en": "Attacks ignore 10% of a target's armor.",
+      "fr": "Attacks ignore 10% of a target's armor."
+     },
+     "challenge": {
+      "en": "Kill 50 enemies with non-automatic weapons.",
+      "fr": "Kill 50 enemies with non-automatic weapons."
+     }
+    },
+    {
+     "desc": {
+      "en": "Attacks ignore 20% of a target's armor.",
+      "fr": "Attacks ignore 20% of a target's armor."
+     },
+     "challenge": {
+      "en": "Kill 100 enemies with non-automatic weapons.",
+      "fr": "Tuez 100 ennemis avec des armes non automatiques."
+     }
+    },
+    {
+     "desc": {
+      "en": "Enemy armor is decreased by 25% for 6 seconds after a critical hit.",
+      "fr": "Après avoir réussi un coup critique, l'armure ennemie est réduite de 25 % pendant 6 secondes."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "rbt_DeadlyEffective.esm",
+   "by": "Deadly Effective - Minimal Skills Overhaul",
+   "new": false,
+   "touched_by": [
+    "Unofficial Starfield Patch - USFP",
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+    "Deadly Effective - Minimal Skills Overhaul"
+   ]
+  },
+  {
+   "id": "27CBBA:Starfield.esm",
+   "edid": "Skill_Crippling",
+   "category": "combat",
+   "tier": 4,
+   "name": {
+    "en": "Crippling",
+    "fr": "Infirmité"
+   },
+   "description": {
+    "en": "Specifically targeting the pressure points and nerves of various limbs can disable an opponent, limiting their combat effectiveness.",
+    "fr": "Viser spécifiquement les points de pression et terminaisons nerveuses de certains membres peut handicaper un adversaire, réduisant son efficacité au combat."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Human enemies have a 30% increased chance to enter a downed state after taking enough damage.",
+      "fr": "30 % de chances de mettre les ennemis humains à terre lorsqu'ils ont subi suffisamment de dégâts."
+     },
+     "challenge": {
+      "en": "Put 40 enemies into the bleedout state with melee weapons.",
+      "fr": "Put 40 enemies into the bleedout state with melee weapons."
+     }
+    },
+    {
+     "desc": {
+      "en": "Humanoid enemies have a 50% increased chance to not naturally recover from a downed state.",
+      "fr": "50 % de chances que les ennemis humanoïdes ne se rétablissent pas naturellement après avoir été mis à terre."
+     },
+     "challenge": {
+      "en": "Put 25 enemies into the bleedout state with ranged weapons.",
+      "fr": "Put 25 enemies into the bleedout state with ranged weapons."
+     }
+    },
+    {
+     "desc": {
+      "en": "Human enemies now can enter a downed state earlier.",
+      "fr": "Les ennemis humains peuvent désormais être mis à terre plus rapidement."
+     },
+     "challenge": {
+      "en": "Put 5 enemies into the bleedout state with Explosive weaponry.",
+      "fr": "Put 5 enemies into the bleedout state with Explosive weaponry."
+     }
+    },
+    {
+     "desc": {
+      "en": "Previous ranks now apply to all enemy types. You now do 100% more damage to downed enemies.",
+      "fr": "Les rangs précédents s'appliquent désormais à tous les types d'ennemis. Vous infligez 100 % de dégâts supplémentaires aux ennemis à terre."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "rbt_DeadlyEffective.esm",
+   "by": "Deadly Effective - Minimal Skills Overhaul",
+   "new": false,
+   "touched_by": [
+    "Deadly Effective - Minimal Skills Overhaul"
+   ]
+  },
+  {
+   "id": "2C53AF:Starfield.esm",
+   "edid": "Skill_Sharpshooting",
+   "category": "combat",
+   "tier": 4,
+   "name": {
+    "en": "Sharpshooting",
+    "fr": "Tir de précision"
+   },
+   "description": {
+    "en": "For those who specialize in precise targeting that maximizes damage, combat is often a quickly efficient affair.",
+    "fr": "Pour ceux qui se spécialisent dans les tirs de précision afin de maximiser les dégâts infligés, les combats sont souvent une affaire rondement menée."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Increase headshot critical damage by 50% with ranged weapons.",
+      "fr": "Augmente de 50 % les dégâts critiques des tirs à la tête avec une arme à distance."
+     },
+     "challenge": {
+      "en": "Deal 50 ranged critical hits.",
+      "fr": "Infligez 50 coups critiques à distance."
+     }
+    },
+    {
+     "desc": {
+      "en": "Increase critical damage to enemy legs by 50% with ranged weapons.",
+      "fr": "Augmente de 50 % les dégâts critiques infligés aux jambes des ennemis avec une arme à distance."
+     },
+     "challenge": {
+      "en": "Deal 125 ranged critical hits.",
+      "fr": "Infligez 125 coups critiques à distance."
+     }
+    },
+    {
+     "desc": {
+      "en": "Increase all critical damage to enemies by 50% with ranged weapons.",
+      "fr": "Augmente de 50 % tous les dégâts critiques infligés aux ennemis avec une arme à distance."
+     },
+     "challenge": {
+      "en": "Deal 250 ranged critical hits.",
+      "fr": "Infligez 250 coups critiques à distance."
+     }
+    },
+    {
+     "desc": {
+      "en": "Ranged critical hit kills increase your critical hit chance with all ranged weapons by 25% for 20 seconds.",
+      "fr": "Améliore vos chances de coup critique avec toutes les armes à distance de 25 % pendant 20 secondes lorsque vous tuez un adversaire avec un coup critique à distance."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "Starfield.esm",
+   "by": null,
+   "new": false,
+   "touched_by": []
+  },
+  {
+   "id": "2C5560:Starfield.esm",
+   "edid": "Skill_Astrodynamics",
+   "category": "science",
+   "tier": 1,
+   "name": {
+    "en": "Astrodynamics",
+    "fr": "Astrodynamique"
+   },
+   "description": {
+    "en": "Advanced technology is one thing, but it takes skill, patience, and a little bit of love to coax even more capability out of a ship's grav drive.",
+    "fr": "Disposer de technologies avancées, c'est un bon début. Mais il faut de l'habileté, de la patience et un minimum d'amour pour tirer le maximum de son astromoteur."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Increase grav jump range of jump drives by 15%.",
+      "fr": "Portée des astroportations améliorée de 15 %."
+     },
+     "challenge": {
+      "en": "Make 5 grav jumps.",
+      "fr": "Réussissez 5 astroportations."
+     }
+    },
+    {
+     "desc": {
+      "en": "Reduced fuel cost of jump drives by 15%.",
+      "fr": "Coût en carburant des astroportations réduit de 15 %."
+     },
+     "challenge": {
+      "en": "Make 20 grav jumps in a Class B vessel.",
+      "fr": "Make 20 grav jumps in a Class B vessel."
+     }
+    },
+    {
+     "desc": {
+      "en": "Increased grav jump range and reduced fuel cost of jump drives by 30%.",
+      "fr": "Portée des astroportations améliorée et coût en carburant réduit de 30 %."
+     },
+     "challenge": {
+      "en": "Make 20 grav jumps in a Class C vessel.",
+      "fr": "Make 20 grav jumps in a Class C vessel."
+     }
+    },
+    {
+     "desc": {
+      "en": "Reduced fuel cost of jump drives by 50%.",
+      "fr": "Coût en carburant des astroportations réduit de 50 %."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "rbt_DeadlyEffective.esm",
+   "by": "Deadly Effective - Minimal Skills Overhaul",
+   "new": false,
+   "touched_by": [
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+    "Astrogate",
+    "Deadly Effective - Minimal Skills Overhaul"
+   ]
+  },
+  {
+   "id": "2CE29F:Starfield.esm",
+   "edid": "Skill_Geology",
+   "category": "science",
+   "tier": 1,
+   "name": {
+    "en": "Geology",
+    "fr": "Géologie"
+   },
+   "description": {
+    "en": "Newly discovered minerals mined from alien planets and moons have directly led to some incredible technological advancements.",
+    "fr": "Les minerais découverts sur les planètes et lunes aliens ont souvent débouché directement sur des avancées technologiques capitales."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Get more common and uncommon inorganic resources from surface objects.",
+      "fr": "Vous récoltez davantage de ressources non organiques communes et peu communes à partir des objets de la surface."
+     },
+     "challenge": {
+      "en": "Harvest inorganic resources from 40 sources.",
+      "fr": "Harvest inorganic resources from 40 sources."
+     }
+    },
+    {
+     "desc": {
+      "en": "Get more rare inorganic resources from surface objects.",
+      "fr": "Vous récoltez davantage de ressources non organiques rares à partir des objets de la surface."
+     },
+     "challenge": {
+      "en": "Harvest Rare inorganic resources from 25 sources.",
+      "fr": "Harvest Rare inorganic resources from 25 sources."
+     }
+    },
+    {
+     "desc": {
+      "en": "Get more exotic inorganic resources from surface objects.",
+      "fr": "Vous récoltez davantage de ressources non organiques exotiques à partir des objets de la surface."
+     },
+     "challenge": {
+      "en": "Harvest Exotic inorganic resources from 15 sources.",
+      "fr": "Harvest Exotic inorganic resources from 15 sources."
+     }
+    },
+    {
+     "desc": {
+      "en": "Occasionally harvest additional rarer resources from surface objects.",
+      "fr": "Vous récoltez parfois des ressources rares supplémentaires sur les objets de la surface."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "rbt_DeadlyEffective.esm",
+   "by": "Deadly Effective - Minimal Skills Overhaul",
+   "new": false,
+   "touched_by": [
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+    "Deadly Effective - Minimal Skills Overhaul"
+   ]
+  },
+  {
+   "id": "2CE2DF:Starfield.esm",
+   "edid": "Skill_Medicine",
+   "category": "science",
+   "tier": 1,
+   "name": {
+    "en": "Medicine",
+    "fr": "Médecine"
+   },
+   "description": {
+    "en": "Only through advancements in medical training and technology has humanity been able to withstand the galaxy's many dangers.",
+    "fr": "Sans les progrès réalisés en médecine et en technologie, l'humanité n'aurait jamais survécu aux nombreux dangers de la galaxie."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Med Packs, Trauma Packs, and Emergency Kits restore 10% additional Health 10% faster.",
+      "fr": "Les kits de soins, kits d'urgence et kits de secours restaurent 10 % de santé supplémentaire 10 % plus vite."
+     },
+     "challenge": {
+      "en": "Use healing items 50 times while wounded.",
+      "fr": "Use healing items 50 times while wounded."
+     }
+    },
+    {
+     "desc": {
+      "en": "Med Packs, Trauma Packs, and Emergency Kits restore 20% additional Health 20% faster.",
+      "fr": "Les kits de soins, kits d'urgence et kits de secours restaurent 20 % de santé supplémentaire 20 % plus vite."
+     },
+     "challenge": {
+      "en": "Use healing items 25 times from 50% health or lower.",
+      "fr": "Use healing items 25 times from 50% health or lower."
+     }
+    },
+    {
+     "desc": {
+      "en": "Med Packs, Trauma Packs, and Emergency Kits restore 30% additional Health 30% faster.",
+      "fr": "Les kits de soins, kits d'urgence et kits de secours restaurent 30 % de santé supplémentaire 30 % plus vite."
+     },
+     "challenge": {
+      "en": "Use healing items 15 times from 25% health or lower.",
+      "fr": "Use healing items 15 times from 25% health or lower."
+     }
+    },
+    {
+     "desc": {
+      "en": "Med Packs, Trauma Packs, and Emergency Kits restore 50% additional Health 50% faster, and have a chance to cure an affliction.",
+      "fr": "Les kits de soins, kits d'urgence et kits de secours restaurent 50 % de santé supplémentaire 50 % plus vite, et ont une chance de soigner une affliction."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "rbt_DeadlyEffective.esm",
+   "by": "Deadly Effective - Minimal Skills Overhaul",
+   "new": false,
+   "touched_by": [
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+    "Deadly Effective - Minimal Skills Overhaul"
+   ]
+  },
+  {
+   "id": "27CBC3:Starfield.esm",
+   "edid": "Skill_SpacesuitDesign",
+   "category": "science",
+   "tier": 1,
+   "name": {
+    "en": "Spacesuit Design",
+    "fr": "Combinaison spatiale"
+   },
+   "description": {
+    "en": "While a basic spacesuit can protect one from the vacuum of space, it takes a specialized design to withstand the rigors of many alien worlds.",
+    "fr": "Si une combinaison basique est suffisante pour survivre dans le vide spatial, seul un équipement hautement spécialisé vous permettra de supporter les rigueurs de nombreux mondes."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "You can craft improved spacesuit, helmet, and pack mods, and research additional mods at a Research Lab.",
+      "fr": "Vous pouvez fabriquer des mods améliorés pour combinaison spatiale, casque et sac, et rechercher de nouveaux mods dans un laboratoire de recherche."
+     },
+     "challenge": {
+      "en": "Craft 1 spacesuit, helmet, or pack mods.",
+      "fr": "Craft 1 spacesuit, helmet, or pack mods."
+     }
+    },
+    {
+     "desc": {
+      "en": "You can research and craft superior spacesuit, helmet, and pack mods.",
+      "fr": "Vous pouvez rechercher et fabriquer des mods supérieurs pour combinaison spatiale, casque et sac."
+     },
+     "challenge": {
+      "en": "Craft 3 spacesuit, helmet, or pack mods.",
+      "fr": "Craft 3 spacesuit, helmet, or pack mods."
+     }
+    },
+    {
+     "desc": {
+      "en": "You can research and craft cutting-edge spacesuit and pack mods.",
+      "fr": "You can research and craft cutting-edge spacesuit and pack mods."
+     },
+     "challenge": {
+      "en": "Craft 5 spacesuit, helmet, or pack mods.",
+      "fr": "Craft 5 spacesuit, helmet, or pack mods."
+     }
+    },
+    {
+     "desc": {
+      "en": "Construction of spacesuit, helmet, and pack mods doesn't cost resources 25% of the time.",
+      "fr": "Construction of spacesuit, helmet, and pack mods doesn't cost resources 25% of the time."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "RoyalGalaxy.esm",
+   "by": "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+   "new": false,
+   "touched_by": [
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration"
+   ]
+  },
+  {
+   "id": "2AC953:Starfield.esm",
+   "edid": "Skill_StarshipEngineering",
+   "category": "science",
+   "tier": 1,
+   "name": {
+    "en": "Starship Engineering",
+    "fr": "Ingénierie aérospatiale"
+   },
+   "description": {
+    "en": "It takes advanced scientific engineering to not only fortify a ship’s systems against damage but to swiftly restore them mid-battle—combining knowledge and precision to ensure the vessel stays operational while engaged in the chaos of combat.",
+    "fr": "It takes advanced scientific engineering to not only fortify a ship’s systems against damage but to swiftly restore them mid-battle—combining knowledge and precision to ensure the vessel stays operational while engaged in the chaos of combat."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "All ship systems auto-repair 30% faster.",
+      "fr": "All ship systems auto-repair 30% faster."
+     },
+     "challenge": {
+      "en": "Use 5 ship repair kits.",
+      "fr": "Utilisez 5 kits de réparation de vaisseau."
+     }
+    },
+    {
+     "desc": {
+      "en": "Ship systems have 50% increased damage mitigation.",
+      "fr": "Ship systems have 50% increased damage mitigation."
+     },
+     "challenge": {
+      "en": "Use 10 ship repair kits.",
+      "fr": "Utilisez 10 kits de réparation de vaisseau."
+     }
+    },
+    {
+     "desc": {
+      "en": "All ship systems repair 60% faster.",
+      "fr": "All ship systems repair 60% faster."
+     },
+     "challenge": {
+      "en": "Use 15 ship repair kits.",
+      "fr": "Utilisez 15 kits de réparation de vaisseau."
+     }
+    },
+    {
+     "desc": {
+      "en": "Repairing one block of a system has a 25% chance repair the entire system.",
+      "fr": "Repairing one block of a system has a 25% chance repair the entire system."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "RoyalGalaxy.esm",
+   "by": "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+   "new": false,
+   "touched_by": [
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration"
+   ]
+  },
+  {
+   "id": "2C5557:Starfield.esm",
+   "edid": "Skill_Botany",
+   "category": "science",
+   "tier": 2,
+   "name": {
+    "en": "Botany",
+    "fr": "Botanique"
+   },
+   "description": {
+    "en": "The scientific study of flora, while important on Earth, became even more essential as humanity began exploring alien worlds.",
+    "fr": "L'étude scientifique de la flore, déjà importante sur Terre, devint quasiment vitale lorsque l'humanité commença à explorer des mondes aliens."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Get more common and uncommon organic resources from plants, learn additional info about them from the scanner, and allows some plants to be cultivated at your outposts.",
+      "fr": "Vous récoltez davantage de ressources organiques communes et peu communes sur les plantes, apprenez davantage d'informations à leur sujet avec le scanner et pouvez cultiver certaines plantes dans vos avant-postes."
+     },
+     "challenge": {
+      "en": "Harvest 50 organic resources from plants.",
+      "fr": "Harvest 50 organic resources from plants."
+     }
+    },
+    {
+     "desc": {
+      "en": "Get more rare organic resources from plants, and learn information about them more quickly using the scanner.",
+      "fr": "Vous récoltez davantage de ressources organiques rares sur les plantes et apprenez des informations à leur sujet plus rapidement avec le scanner."
+     },
+     "challenge": {
+      "en": "Harvest 25 Rare organic resources from plants.",
+      "fr": "Harvest 25 Rare organic resources from plants."
+     }
+    },
+    {
+     "desc": {
+      "en": "Get more exotic organic resources from plants, and learn information about them more quickly using the scanner.",
+      "fr": "Vous récoltez davantage de ressources organiques exotiques sur les plantes et apprenez des informations à leur sujet plus rapidement avec le scanner."
+     },
+     "challenge": {
+      "en": "Harvest 15 Exotic resources from plants.",
+      "fr": "Harvest 15 Exotic resources from plants."
+     }
+    },
+    {
+     "desc": {
+      "en": "Occasionally harvest additional rarer resources from plants, and learn information about them more quickly using the scanner.",
+      "fr": "Vous récoltez parfois des ressources rares supplémentaires sur les plantes et apprenez des informations à leur sujet plus rapidement avec le scanner."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "rbt_DeadlyEffective.esm",
+   "by": "Deadly Effective - Minimal Skills Overhaul",
+   "new": false,
+   "touched_by": [
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+    "Deadly Effective - Minimal Skills Overhaul"
+   ]
+  },
+  {
+   "id": "2CFCB1:Starfield.esm",
+   "edid": "Skill_Scanning",
+   "category": "science",
+   "tier": 2,
+   "name": {
+    "en": "Scanning",
+    "fr": "Scan en cours"
+   },
+   "description": {
+    "en": "While anyone can use a ship's scanner, it takes a specially trained operator to detect hard-to-find planetary resources, or uncover the details of nearby ships.",
+    "fr": "Si utiliser un scanner de vaisseau est à la portée de tous, seuls les meilleurs opérateurs sont capables de détecter certaines ressources planétaires ou des informations sur les vaisseaux à proximité."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "You can detect uncommon inorganic resources on planet and moon surfaces, and more information about ships in space.",
+      "fr": "Vous pouvez détecter des ressources non organiques peu communes à la surface des planètes et des lunes, et obtenir plus d'informations sur les vaisseaux dans l'espace."
+     },
+     "challenge": {
+      "en": "Scan 15 planets or moons in Unsettled systems.",
+      "fr": "Scan 15 planets or moons in Unsettled systems."
+     }
+    },
+    {
+     "desc": {
+      "en": "You can detect rare inorganic resources on planet and moon surfaces, and more specific information about ships in space.",
+      "fr": "Vous pouvez détecter des ressources non organiques rares à la surface des planètes et des lunes, et obtenir des informations plus spécifiques sur les vaisseaux dans l'espace."
+     },
+     "challenge": {
+      "en": "Scan 25 planets or moons in Settled systems.",
+      "fr": "Scan 25 planets or moons in Settled systems."
+     }
+    },
+    {
+     "desc": {
+      "en": "You can detect exotic inorganic resources on planet and moon surfaces, and gain better combat information on ships in space.",
+      "fr": "Vous pouvez détecter des ressources non organiques exotiques à la surface des planètes et des lunes, et obtenir des informations plus précises sur les capacités offensives des vaisseaux dans l'espace."
+     },
+     "challenge": {
+      "en": "Scan 50 planets or moons.",
+      "fr": "Scan 50 planets or moons."
+     }
+    },
+    {
+     "desc": {
+      "en": "You can detect unique inorganic resources on planet and moon surfaces, and gain a complete list of cargo on ships in space.",
+      "fr": "Vous pouvez détecter des ressources non organiques uniques à la surface des planètes et des lunes et obtenir la liste complète de la cargaison des vaisseaux dans l'espace."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "rbt_DeadlyEffective.esm",
+   "by": "Deadly Effective - Minimal Skills Overhaul",
+   "new": false,
+   "touched_by": [
+    "Deadly Effective - Minimal Skills Overhaul"
+   ]
+  },
+  {
+   "id": "04CE2D:Starfield.esm",
+   "edid": "Skill_SpecialProjects",
+   "category": "science",
+   "tier": 2,
+   "name": {
+    "en": "Special Projects",
+    "fr": "Projets spéciaux"
+   },
+   "description": {
+    "en": "With the right research and breakthroughs, you'll unlock new weapons, advanced projects, and gain access to cutting-edge technology—proving that true strength lies in knowledge.",
+    "fr": "With the right research and breakthroughs, you'll unlock new weapons, advanced projects, and gain access to cutting-edge technology—proving that true strength lies in knowledge."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "You can research experimental projects at a Research Lab.",
+      "fr": "Vous pouvez mener des projets expérimentaux dans un laboratoire de recherche."
+     },
+     "challenge": {
+      "en": "Craft 10 common or uncommon manufactured components.",
+      "fr": "Fabriquez 10 composants manufacturés communs ou peu communs."
+     }
+    },
+    {
+     "desc": {
+      "en": "You can craft rare manufactured components at an Industrial Workbench.",
+      "fr": "Vous pouvez fabriquer des composants manufacturés rares à un établi industriel."
+     },
+     "challenge": {
+      "en": "Craft 10 rare manufactured components.",
+      "fr": "Fabriquez 10 composants manufacturés rares."
+     }
+    },
+    {
+     "desc": {
+      "en": "You can craft exotic manufactured components at an Industrial Workbench.",
+      "fr": "Vous pouvez fabriquer des composants manufacturés exotiques à un établi industriel."
+     },
+     "challenge": {
+      "en": "Craft 10 exotic manufactured components.",
+      "fr": "Fabriquez 10 composants manufacturés exotiques."
+     }
+    },
+    {
+     "desc": {
+      "en": "You can craft unique manufactured components at an Industrial Workbench. Outpost extractors have a 20% chance to speed up production by 25%.",
+      "fr": "You can craft unique manufactured components at an Industrial Workbench. Outpost extractors have a 20% chance to speed up production by 25%."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "RoyalGalaxy.esm",
+   "by": "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+   "new": false,
+   "touched_by": [
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration"
+   ]
+  },
+  {
+   "id": "2C890C:Starfield.esm",
+   "edid": "Skill_WeaponEngineering",
+   "category": "science",
+   "tier": 2,
+   "name": {
+    "en": "Weapon Engineering",
+    "fr": "Création d'armes"
+   },
+   "description": {
+    "en": "Life in the 24th century can be exceedingly dangerous, and the ability to maintain and modify personal weapons can be essential to one's survival.",
+    "fr": "La vie au XXIVe siècle peut être excessivement dangereuse et la capacité à entretenir et modifier ses armes personnelles peut être essentielle à la survie."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "You can craft improved weapon mods at a Weapon Workbench, and research additional weapon mods at a Research Lab.",
+      "fr": "Vous pouvez fabriquer des mods d'armes améliorés à un établi d'armes, et mener des recherches sur de nouveaux mods dans un laboratoire de recherche."
+     },
+     "challenge": {
+      "en": "Craft 5 weapon mods.",
+      "fr": "Fabriquez 5 mods d'armes."
+     }
+    },
+    {
+     "desc": {
+      "en": "You can research and craft superior weapon mods.",
+      "fr": "Vous pouvez mener des recherches et fabriquer des mods d'armes supérieurs."
+     },
+     "challenge": {
+      "en": "Craft 15 weapon mods.",
+      "fr": "Fabriquez 15 mods d'armes."
+     }
+    },
+    {
+     "desc": {
+      "en": "You can research and craft cutting-edge weapon mods.",
+      "fr": "Vous pouvez mener des recherches et fabriquer des mods d'armes de pointe."
+     },
+     "challenge": {
+      "en": "Craft 30 weapon mods.",
+      "fr": "Fabriquez 30 mods d'armes."
+     }
+    },
+    {
+     "desc": {
+      "en": "You can research and craft master-level weapon mods.",
+      "fr": "Vous pouvez mener des recherches et fabriquer des mods d'armes de niveau Maître."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "Starfield.esm",
+   "by": null,
+   "new": false,
+   "touched_by": []
+  },
+  {
+   "id": "2C5552:Starfield.esm",
+   "edid": "Skill_Zoology",
+   "category": "science",
+   "tier": 2,
+   "name": {
+    "en": "Zoology",
+    "fr": "Zoologie"
+   },
+   "description": {
+    "en": "No one could have expected the number of new species encountered on alien worlds, or the importance of those skilled in their behavior and domestication.",
+    "fr": "Personne n'aurait pu prévoir la quantité de nouvelles espèces qui seraient découvertes sur les mondes aliens, ni l'importance que prendraient les spécialistes de leur étude et de leur domestication."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Get more common organic resources from creatures and harvest from them without harming them, learn additional info about them from the scanner, and allows you to produce animal resources at your outposts.",
+      "fr": "Vous récoltez plus de ressources organiques communes sur les créatures sans les blesser. Vous apprenez plus d'informations à leur sujet avec le scanner et pouvez produire des ressources animales dans vos avant-postes."
+     },
+     "challenge": {
+      "en": "Harvest organic resources from 20 creatures.",
+      "fr": "Récupérez des ressources organiques sur 20 créatures."
+     }
+    },
+    {
+     "desc": {
+      "en": "Get more uncommon organic resources from creatures, and learn information about them more quickly using the scanner.",
+      "fr": "Vous récoltez davantage de ressources organiques peu communes sur les créatures et apprenez des informations à leur sujet plus rapidement avec le scanner."
+     },
+     "challenge": {
+      "en": "Harvest organic resources from 50 creatures.",
+      "fr": "Récupérez des ressources organiques sur 50 créatures."
+     }
+    },
+    {
+     "desc": {
+      "en": "Get more rare organic resources from creatures, and learn information about them more quickly using the scanner.",
+      "fr": "Vous récoltez davantage de ressources organiques rares sur les créatures et apprenez des informations à leur sujet plus rapidement avec le scanner."
+     },
+     "challenge": {
+      "en": "Harvest organic resources from 100 creatures.",
+      "fr": "Récupérez des ressources organiques sur 100 créatures."
+     }
+    },
+    {
+     "desc": {
+      "en": "Occasionally harvest additional rarer resources from creatures, and learn information about them more quickly using the scanner.",
+      "fr": "Vous récoltez parfois des ressources rares supplémentaires sur les créatures et apprenez des informations à leur sujet plus rapidement avec le scanner."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "Starfield.esm",
+   "by": null,
+   "new": false,
+   "touched_by": []
+  },
+  {
+   "id": "27CBBB:Starfield.esm",
+   "edid": "Skill_Astrophysics",
+   "category": "science",
+   "tier": 3,
+   "name": {
+    "en": "Astrophysics",
+    "fr": "Astrophysique"
+   },
+   "description": {
+    "en": "A ship's scanner receives vast amounts of data, but it takes a trained mind to efficiently analyze it all.",
+    "fr": "Un scanner de vaisseau est capable de relever bien des données, mais les analyser efficacement demande un certain savoir-faire."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "You can scan the moons of your current planet. You have a 25% chance to discover a trait when scanning.",
+      "fr": "You can scan the moons of your current planet. You have a 25% chance to discover a trait when scanning."
+     },
+     "challenge": {
+      "en": "Scan 10 unique planets or moons.",
+      "fr": "Scannez 10 planètes ou lunes différentes."
+     }
+    },
+    {
+     "desc": {
+      "en": "You can scan any planet or moon in this system. You have a 50% chance to discover a trait when scanning.",
+      "fr": "You can scan any planet or moon in this system. You have a 50% chance to discover a trait when scanning."
+     },
+     "challenge": {
+      "en": "Scan 25 unique planets or moons.",
+      "fr": "Scannez 25 planètes ou lunes différentes."
+     }
+    },
+    {
+     "desc": {
+      "en": "You can scan any planet or moon within 16 Light Years. You have a 75% chance to discover a trait when scanning.",
+      "fr": "You can scan any planet or moon within 16 Light Years. You have a 75% chance to discover a trait when scanning."
+     },
+     "challenge": {
+      "en": "Scan 50 unique planets or moons.",
+      "fr": "Scannez 50 planètes ou lunes différentes."
+     }
+    },
+    {
+     "desc": {
+      "en": "You can scan any planet or moon within 30 Light Years. You have a 100% chance to discover a trait when scanning.",
+      "fr": "You can scan any planet or moon within 30 Light Years. You have a 100% chance to discover a trait when scanning."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "RoyalGalaxy.esm",
+   "by": "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+   "new": false,
+   "touched_by": [
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration"
+   ]
+  },
+  {
+   "id": "2CE2C0:Starfield.esm",
+   "edid": "Skill_Chemistry",
+   "category": "science",
+   "tier": 3,
+   "name": {
+    "en": "Chemistry",
+    "fr": "Chimie"
+   },
+   "description": {
+    "en": "When crafted by the skilled and safety conscious, chems can be used to enhance health and performance across the Settled Systems.",
+    "fr": "Si leur développement est l'œuvre de personnes compétentes et leur utilisation est faite à bon escient, les drogues peuvent améliorer la santé et les performances des habitants des Systèmes occupés."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "You can create improved chems, and research additional chems at a Research Lab.",
+      "fr": "Vous pouvez créer des drogues améliorées et effectuer des recherches au laboratoire de recherches."
+     },
+     "challenge": {
+      "en": "Create 40 chems.",
+      "fr": "Create 40 chems."
+     }
+    },
+    {
+     "desc": {
+      "en": "You can research and create superior chems.",
+      "fr": "Vous pouvez rechercher et créer des drogues supérieures."
+     },
+     "challenge": {
+      "en": "Create 15 chems.",
+      "fr": "Create 15 chems."
+     }
+    },
+    {
+     "desc": {
+      "en": "You can research and create cutting-edge chems.",
+      "fr": "Vous pouvez rechercher et créer des drogues de pointe."
+     },
+     "challenge": {
+      "en": "Create 5 unique Experimental chems.",
+      "fr": "Create 5 unique Experimental chems."
+     }
+    },
+    {
+     "desc": {
+      "en": "Crafting chems occasionally triples the amount created.",
+      "fr": "La quantité de drogues que vous créez est parfois triplée."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "rbt_DeadlyEffective.esm",
+   "by": "Deadly Effective - Minimal Skills Overhaul",
+   "new": false,
+   "touched_by": [
+    "Deadly Effective - Minimal Skills Overhaul"
+   ]
+  },
+  {
+   "id": "2C59E0:Starfield.esm",
+   "edid": "Skill_OutpostEngineering",
+   "category": "science",
+   "tier": 3,
+   "name": {
+    "en": "Outpost Engineering",
+    "fr": "Ingénierie avant-poste"
+   },
+   "description": {
+    "en": "Proper construction of habitation modules is essential to one's survival on any alien world.",
+    "fr": "La construction de modules d'habitation est essentielle à la survie sur une planète inhabitée."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "You can construct improved outpost modules, and research additional modules at a Research Lab.",
+      "fr": "Vous pouvez construire des modules améliorés et effectuer des recherches au laboratoire de recherches."
+     },
+     "challenge": {
+      "en": "Build 5 different outpost modules.",
+      "fr": "Créez 5 modules d'avant-postes différents."
+     }
+    },
+    {
+     "desc": {
+      "en": "You can research and construct superior outpost modules.",
+      "fr": "Vous pouvez mener des recherches et construire des modules supérieurs."
+     },
+     "challenge": {
+      "en": "Build 25 different outpost modules.",
+      "fr": "Créez 25 modules d'avant-postes différents."
+     }
+    },
+    {
+     "desc": {
+      "en": "You can research and construct cutting-edge outpost modules.",
+      "fr": "Vous pouvez mener des recherches et construire des modules de pointe."
+     },
+     "challenge": {
+      "en": "Build 50 different outpost modules.",
+      "fr": "Créez 50 modules d'avant-postes différents."
+     }
+    },
+    {
+     "desc": {
+      "en": "Outpost modules now cost 50% fewer resources to build.",
+      "fr": "La construction des modules d'avant-poste demande désormais 50 % de ressources en moins."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "Starfield.esm",
+   "by": null,
+   "new": false,
+   "touched_by": []
+  },
+  {
+   "id": "2C555C:Starfield.esm",
+   "edid": "Skill_ResearchMethods",
+   "category": "science",
+   "tier": 3,
+   "name": {
+    "en": "Research Methods",
+    "fr": "Méthodologie"
+   },
+   "description": {
+    "en": "By skillfully employing both new and time tested methods, a researcher may complete projects faster, and even gain unexpected insights.",
+    "fr": "En ayant recours aussi bien à des méthodes éprouvées qu'innovantes, les chercheurs peuvent mener leurs projets à bien plus rapidement et même avoir de nouvelles idées inattendues."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Resources required to craft items and complete research projects is reduced by 20%.",
+      "fr": "Resources required to craft items and complete research projects is reduced by 20%."
+     },
+     "challenge": {
+      "en": "Craft 5 unique food, drinks, drugs, weapon mods, or equipment mods.",
+      "fr": "Créez 5 aliments, boissons, drogues, mods d'arme ou mods d'équipement uniques."
+     }
+    },
+    {
+     "desc": {
+      "en": "Resources required to craft items and complete research projects is reduced by 20%.",
+      "fr": "Les ressources nécessaires à la fabrication d'objets et aux projets de recherche sont réduites de 20 %."
+     },
+     "challenge": {
+      "en": "Craft 10 unique food, drinks, drugs, weapon mods, or equipment mods.",
+      "fr": "Créez 10 aliments, boissons, drogues, mods d'arme ou mods d'équipement uniques."
+     }
+    },
+    {
+     "desc": {
+      "en": "Resources required to craft items and complete research projects is reduced by 40%.",
+      "fr": "Les ressources nécessaires à la fabrication d'objets et aux projets de recherche sont réduites de 40 %."
+     },
+     "challenge": {
+      "en": "Craft 15 unique food, drinks, drugs, weapon mods, or equipment mods.",
+      "fr": "Créez 15 aliments, boissons, drogues, mods d'arme ou mods d'équipement uniques."
+     }
+    },
+    {
+     "desc": {
+      "en": "Sudden developments during research are twice as common. Resources required to craft items and complete research projects is reduced by 50%.",
+      "fr": "Sudden developments during research are twice as common. Resources required to craft items and complete research projects is reduced by 50%."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "RoyalGalaxy.esm",
+   "by": "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+   "new": false,
+   "touched_by": [
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration"
+   ]
+  },
+  {
+   "id": "2C2C5A:Starfield.esm",
+   "edid": "Skill_AneutronicFusion",
+   "category": "science",
+   "tier": 4,
+   "name": {
+    "en": "Aneutronic Fusion",
+    "fr": "Fusion aneutronique"
+   },
+   "description": {
+    "en": "It is possible to maximize a ship's energy output by specifically directing the unique nuclear processes that occur within its reactor.",
+    "fr": "Il est possible d'optimiser la production d'énergie d'un vaisseau en orientant précisément les réactions nucléaires uniques qui se produisent dans son réacteur."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Ship reactors produce 1 extra unit of power.",
+      "fr": "Les réacteurs du vaisseau produisent 1 unité d'énergie supplémentaire."
+     },
+     "challenge": {
+      "en": "Destroy 5 ships.",
+      "fr": "Détruisez 5 vaisseaux."
+     }
+    },
+    {
+     "desc": {
+      "en": "Ship reactors produce 2 extra units of power.",
+      "fr": "Les réacteurs du vaisseau produisent 2 unités d'énergie supplémentaire."
+     },
+     "challenge": {
+      "en": "Destroy 25 ships.",
+      "fr": "Détruisez 25 vaisseaux."
+     }
+    },
+    {
+     "desc": {
+      "en": "Ship reactors produce 3 extra units of power.",
+      "fr": "Les réacteurs du vaisseau produisent 3 unités d'énergie supplémentaire."
+     },
+     "challenge": {
+      "en": "Destroy 50 ships.",
+      "fr": "Détruisez 50 vaisseaux."
+     }
+    },
+    {
+     "desc": {
+      "en": "Ship reactors produce 5 extra units of power. Class B and above ships gain a small amount of boost capacity.",
+      "fr": "Ship reactors produce 5 extra units of power. Class B and above ships gain a small amount of boost capacity."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "rbt_DeadlyEffective.esm",
+   "by": "Deadly Effective - Minimal Skills Overhaul",
+   "new": false,
+   "touched_by": [
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+    "Deadly Effective - Minimal Skills Overhaul"
+   ]
+  },
+  {
+   "id": "27CBC1:Starfield.esm",
+   "edid": "Skill_Surveying",
+   "category": "science",
+   "tier": 4,
+   "name": {
+    "en": "Magnification",
+    "fr": "Magnification"
+   },
+   "description": {
+    "en": "Precision zoom lenses have been a staple of human technology since before space travel. Enhanced scanner zoom enables faster planetary surveys, but offers no combat advantage.",
+    "fr": "Precision zoom lenses have been a staple of human technology since before space travel. Enhanced scanner zoom enables faster planetary surveys, but offers no combat advantage."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Adds an optional zoom to the hand scanner, and scan distance is increased to 20 meters.",
+      "fr": "Ajoute un niveau de zoom optionnel au scanner portable et augmente la distance de scan de 20 mètres."
+     },
+     "challenge": {
+      "en": "Use the hand scanner to scan 10 unique resources, flora, or fauna.",
+      "fr": "Utilisez le scanner portable pour scanner 10 ressources et spécimens de faune et flore uniques."
+     }
+    },
+    {
+     "desc": {
+      "en": "Adds another level of zoom to the hand scanner, and scan distance is increased to 30 meters.",
+      "fr": "Ajoute un niveau de zoom supplémentaire au scanner portable et augmente la distance de scan à 30 mètres."
+     },
+     "challenge": {
+      "en": "Use the hand scanner to scan 25 unique resources, flora, or fauna.",
+      "fr": "Utilisez le scanner portable pour scanner 25 ressources et spécimens de faune et flore uniques."
+     }
+    },
+    {
+     "desc": {
+      "en": "Adds another level of zoom to the hand scanner, and scan distance is increased to 40 meters.",
+      "fr": "Ajoute un niveau de zoom supplémentaire au scanner portable et augmente la distance de scan à 40 mètres."
+     },
+     "challenge": {
+      "en": "Use the hand scanner to scan 50 unique resources, flora, or fauna.",
+      "fr": "Utilisez le scanner portable pour scanner 50 ressources et spécimens de faune et flore uniques."
+     }
+    },
+    {
+     "desc": {
+      "en": "Adds another level of zoom to the hand scanner, and scan distance is increased to 50 meters.",
+      "fr": "Ajoute un niveau de zoom supplémentaire au scanner portable et augmente la distance de scan à 50 mètres."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "RoyalGalaxy.esm",
+   "by": "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+   "new": false,
+   "touched_by": [
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration"
+   ]
+  },
+  {
+   "id": "27CBC2:Starfield.esm",
+   "edid": "Skill_PlanetaryHabitation",
+   "category": "science",
+   "tier": 4,
+   "name": {
+    "en": "Planetary Habitation",
+    "fr": "Habitat planétaire"
+   },
+   "description": {
+    "en": "While outpost building is always challenging, doing so on a world with a dangerous environment requires specialized training.",
+    "fr": "Si la construction d'avant-postes est toujours difficile, s'installer sur des planètes aux conditions environnementales dangereuses exige des compétences particulièrement spécialisées."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "You can build 4 more outposts. Extreme Temperature conditions no longer prevent habitation.",
+      "fr": "You can build 4 more outposts. Extreme Temperature conditions no longer prevent habitation."
+     },
+     "challenge": {
+      "en": "Build habitable outposts on 6 different planets.",
+      "fr": "Build habitable outposts on 6 different planets."
+     }
+    },
+    {
+     "desc": {
+      "en": "You can build 8 more outposts. Extreme Pressure conditions no longer prevent habitation.",
+      "fr": "You can build 8 more outposts. Extreme Pressure conditions no longer prevent habitation."
+     },
+     "challenge": {
+      "en": "Build an outpost on 3 planets with Extreme Temperature or Pressure conditions.",
+      "fr": "Build an outpost on 3 planets with Extreme Temperature or Pressure conditions."
+     }
+    },
+    {
+     "desc": {
+      "en": "You can build 12 more outposts. Toxic and Corrosive conditions no longer prevent habitation.",
+      "fr": "You can build 12 more outposts. Toxic and Corrosive conditions no longer prevent habitation."
+     },
+     "challenge": {
+      "en": "Build an outpost on 2 planets with Toxic or Corrosive Conditions.",
+      "fr": "Build an outpost on 2 planets with Toxic or Corrosive Conditions."
+     }
+    },
+    {
+     "desc": {
+      "en": "You can build 16 more outposts. Extreme Gravitic conditions no longer prevent habitation.",
+      "fr": "You can build 16 more outposts. Extreme Gravitic conditions no longer prevent habitation."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "rbt_DeadlyEffective.esm",
+   "by": "Deadly Effective - Minimal Skills Overhaul",
+   "new": false,
+   "touched_by": [
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+    "Deadly Effective - Minimal Skills Overhaul"
+   ]
+  },
+  {
+   "id": "146C2C:Starfield.esm",
+   "edid": "Skill_BoostPackTraining",
+   "category": "tech",
+   "tier": 1,
+   "name": {
+    "en": "Boost Pack Training",
+    "fr": "Certification jet-pack"
+   },
+   "description": {
+    "en": "Specialized training and innovations in personal mobility systems have allowed for unfettered exploration on alien worlds.",
+    "fr": "Les innovations en matière de mobilité personnelle ainsi qu'un entraînement poussé ont permis de révolutionner l'exploration des mondes aliens."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "You can now utilize boost packs.",
+      "fr": "Vous pouvez désormais utiliser le jet-pack."
+     },
+     "challenge": {
+      "en": "Boost jump 10 times while in combat.",
+      "fr": "Effectuez 10 sauts en jet-pack en combat."
+     }
+    },
+    {
+     "desc": {
+      "en": "Using a boost pack expends 10% less fuel.",
+      "fr": "Using a boost pack expends 10% less fuel."
+     },
+     "challenge": {
+      "en": "Boost jump 25 times while in combat.",
+      "fr": "Effectuez 25 sauts en jet-pack en combat."
+     }
+    },
+    {
+     "desc": {
+      "en": "Boost packs regenerate an additional 4% fuel per second.",
+      "fr": "Boost packs regenerate an additional 4% fuel per second."
+     },
+     "challenge": {
+      "en": "Boost jump 50 times while in combat.",
+      "fr": "Effectuez 50 sauts en jet-pack en combat."
+     }
+    },
+    {
+     "desc": {
+      "en": "Doubles previous bonuses.",
+      "fr": "Double les bonus précédents."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "RoyalGalaxy.esm",
+   "by": "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+   "new": false,
+   "touched_by": [
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration"
+   ]
+  },
+  {
+   "id": "2C53B4:Starfield.esm",
+   "edid": "Skill_Neurostrikes",
+   "category": "tech",
+   "tier": 1,
+   "name": {
+    "en": "Neurostrikes",
+    "fr": "Frappes névralgiques"
+   },
+   "description": {
+    "en": "Once dismissed as fiction, advanced electrical technology now allows disabling opponents without weapons. Skilled practitioners can incapacitate targets through precise electrostatic manipulation, making it terrifyingly effective.",
+    "fr": "Once dismissed as fiction, advanced electrical technology now allows disabling opponents without weapons. Skilled practitioners can incapacitate targets through precise electrostatic manipulation, making it terrifyingly effective."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "15% chance to stun an NPC with an unarmed attack.",
+      "fr": "15% chance to stun an NPC with an unarmed attack."
+     },
+     "challenge": {
+      "en": "Stun 10 enemies with an unarmed attack.",
+      "fr": "Étourdissez 10 ennemis à mains nues."
+     }
+    },
+    {
+     "desc": {
+      "en": "Unarmed attacks now do additional EM damage.",
+      "fr": "Les attaques à mains nues infligent désormais des dégâts EM supplémentaires."
+     },
+     "challenge": {
+      "en": "Stun 30 enemies with an unarmed attack.",
+      "fr": "Étourdissez 30 ennemis à mains nues."
+     }
+    },
+    {
+     "desc": {
+      "en": "30% chance to stun an NPC with an unarmed attack. Deal 50% more damage with unarmed critical hits.",
+      "fr": "30% chance to stun an NPC with an unarmed attack. Deal 50% more damage with unarmed critical hits."
+     },
+     "challenge": {
+      "en": "Stun 75 enemies with an unarmed attack.",
+      "fr": "Étourdissez 75 ennemis à mains nues."
+     }
+    },
+    {
+     "desc": {
+      "en": "After stunning an enemy, you also knock down any enemies within close range.",
+      "fr": "Après avoir étourdi un ennemi, vous pouvez également renverser les ennemis proches."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "RoyalGalaxy.esm",
+   "by": "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+   "new": false,
+   "touched_by": [
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration"
+   ]
+  },
+  {
+   "id": "2CFCAC:Starfield.esm",
+   "edid": "Skill_Piloting",
+   "category": "tech",
+   "tier": 1,
+   "name": {
+    "en": "Piloting",
+    "fr": "Pilotage"
+   },
+   "description": {
+    "en": "As more people journey into space, the number of those certified to effectively pilot various types of spacecraft has increased dramatically.",
+    "fr": "De plus en plus de monde s'aventure dans les étoiles, et par conséquent le nombre de pilotes capables de manier efficacement divers types de vaisseaux a explosé."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "You can now utilize ship thrusters.",
+      "fr": "Vous pouvez désormais utiliser les propulseurs."
+     },
+     "challenge": {
+      "en": "Destroy 5 ships.",
+      "fr": "Détruisez 5 vaisseaux."
+     }
+    },
+    {
+     "desc": {
+      "en": "Increased ship turning rate and maneuverability.",
+      "fr": "Taux de virage et manœuvrabilité du vaisseau augmentés."
+     },
+     "challenge": {
+      "en": "Destroy 15 ships.",
+      "fr": "Détruisez 15 vaisseaux."
+     }
+    },
+    {
+     "desc": {
+      "en": "Unlock the ability to pilot Class B ships.",
+      "fr": "Débloque la capacité à piloter des vaisseaux de classe B."
+     },
+     "challenge": {
+      "en": "Destroy 30 ships.",
+      "fr": "Détruisez 30 vaisseaux."
+     }
+    },
+    {
+     "desc": {
+      "en": "Unlock the ability to pilot Class C ships.",
+      "fr": "Débloque la capacité à piloter des vaisseaux de classe C."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "rbt_SpacefaringEconomy.esm",
+   "by": "Spacefaring Economy",
+   "new": false,
+   "touched_by": [
+    "Spacefaring Economy"
+   ]
+  },
+  {
+   "id": "2CE2E2:Starfield.esm",
+   "edid": "Skill_Security",
+   "category": "tech",
+   "tier": 1,
+   "name": {
+    "en": "Security",
+    "fr": "Sécurité"
+   },
+   "description": {
+    "en": "While the standardized digital locking mechanism is renowned for its security, any code can be broken with the proper training.",
+    "fr": "Le mécanisme de verrouillage numérique standardisé a beau être réputé pour sa fiabilité, aucun verrou ne peut résister aux virtuoses du crochetage."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "You can attempt to hack Advanced locks, and 2 auto attempts can be banked.",
+      "fr": "Vous pouvez tenter de crocheter les serrures de niveau Avancé, et disposez de 2 tentatives automatiques."
+     },
+     "challenge": {
+      "en": "Pick 2 locks.",
+      "fr": "Pick 2 locks."
+     }
+    },
+    {
+     "desc": {
+      "en": "You can attempt to hack Expert locks, and 3 auto attempts can be banked. Rings now turn blue when the pick can be slotted.",
+      "fr": "Vous pouvez tenter de crocheter les serrures de niveau Expert, et disposez de 3 tentatives automatiques. Les anneaux deviennent bleus quand l'outil peut être inséré."
+     },
+     "challenge": {
+      "en": "Pick 3 locks.",
+      "fr": "Pick 3 locks."
+     }
+    },
+    {
+     "desc": {
+      "en": "You can attempt to hack Master-level locks, and 4 auto attempts can be banked.",
+      "fr": "Vous pouvez tenter de crocheter les serrures de niveau Maître, et disposez de 4 tentatives automatiques."
+     },
+     "challenge": {
+      "en": "Pick 5 locks.",
+      "fr": "Pick 5 locks."
+     }
+    },
+    {
+     "desc": {
+      "en": "Spend a digipick to remove unnecessary keys from the puzzle. You can bank up to 5 auto attempts.",
+      "fr": "Spend a digipick to remove unnecessary keys from the puzzle. You can bank up to 5 auto attempts."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "RoyalGalaxy.esm",
+   "by": "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+   "new": false,
+   "touched_by": [
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration"
+   ]
+  },
+  {
+   "id": "2C5559:Starfield.esm",
+   "edid": "Skill_TargetingControlSystems",
+   "category": "tech",
+   "tier": 1,
+   "name": {
+    "en": "Targeting Control Systems",
+    "fr": "Systèmes de ciblage"
+   },
+   "description": {
+    "en": "Missile weapons are favored because they can lock onto an enemy ship, but an intimate knowledge of tracking systems can make them even more effective.",
+    "fr": "Les armes à missiles sont appréciées pour leur capacité à verrouiller les vaisseaux ennemis, mais une connaissance approfondie des systèmes de ciblage peut les rendre encore plus efficaces."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Ship targeting unlocked. Target-locked enemies fire 25% slower, and you take 25% less damage while in targeting mode.\"",
+      "fr": "Ship targeting unlocked. Target-locked enemies fire 25% slower, and you take 25% less damage while in targeting mode.\""
+     },
+     "challenge": {
+      "en": "Destroy 5 enemy ships while in targeting mode.",
+      "fr": "Détruisez 5 vaisseaux ennemis en mode Ciblage."
+     }
+    },
+    {
+     "desc": {
+      "en": "Lock-on time and targeting efficiency boosted by 25%—giving you the edge in every dogfight",
+      "fr": "Lock-on time and targeting efficiency boosted by 25%—giving you the edge in every dogfight"
+     },
+     "challenge": {
+      "en": "Destroy 15 enemy ships while in targeting mode.",
+      "fr": "Détruisez 15 vaisseaux ennemis en mode Ciblage."
+     }
+    },
+    {
+     "desc": {
+      "en": "Lock onto enemy ships 50% faster and fire at half the cost. Gain a 25% increased chance of landing critical hits on target-locked ships.",
+      "fr": "Lock onto enemy ships 50% faster and fire at half the cost. Gain a 25% increased chance of landing critical hits on target-locked ships."
+     },
+     "challenge": {
+      "en": "Destroy 30 enemy ships while in targeting mode.",
+      "fr": "Détruisez 30 vaisseaux ennemis en mode Ciblage."
+     }
+    },
+    {
+     "desc": {
+      "en": "Lock onto enemy ships 60% faster and deal 20% more system damage while in targeting mode, dominating every battle.",
+      "fr": "Lock onto enemy ships 60% faster and deal 20% more system damage while in targeting mode, dominating every battle."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "RoyalGalaxy.esm",
+   "by": "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+   "new": false,
+   "touched_by": [
+    "Unofficial Starfield Patch - USFP",
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration"
+   ]
+  },
+  {
+   "id": "2CE2C2:Starfield.esm",
+   "edid": "Skill_BallisticWeaponSystems",
+   "category": "tech",
+   "tier": 2,
+   "name": {
+    "en": "Ballistic Weapon Systems",
+    "fr": "Sys. armes balistiques"
+   },
+   "description": {
+    "en": "While there have been significant advancements in ship-borne weaponry, sometimes the simplest tool is the most effective.",
+    "fr": "Si bien des armes sophistiquées ont été développées pour l'arsenal des vaisseaux, parfois l'outil le plus simple demeure le plus efficace."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Ballistic ship weapons have 15% increased damage.",
+      "fr": "Ballistic ship weapons have 15% increased damage."
+     },
+     "challenge": {
+      "en": "Deal 1000 damage to enemy ships with ballistic weapons.",
+      "fr": "Infligez 1000 points de dégâts à des vaisseaux ennemis avec des armes balistiques."
+     }
+    },
+    {
+     "desc": {
+      "en": "Ballistic ship weapons have 30% increased damage and recharge 30% faster.",
+      "fr": "Ballistic ship weapons have 30% increased damage and recharge 30% faster."
+     },
+     "challenge": {
+      "en": "Deal 4000 damage to enemy ships with ballistic weapons.",
+      "fr": "Infligez 4000 points de dégâts à des vaisseaux ennemis avec des armes balistiques."
+     }
+    },
+    {
+     "desc": {
+      "en": "Ballistic ship weapons have 50% increased damage and recharge 50% faster.",
+      "fr": "Ballistic ship weapons have 50% increased damage and recharge 50% faster."
+     },
+     "challenge": {
+      "en": "Deal 10000 damage to enemy ships with ballistic weapons.",
+      "fr": "Infligez 10000 points de dégâts à des vaisseaux ennemis avec des armes balistiques."
+     }
+    },
+    {
+     "desc": {
+      "en": "Ballistic ship weapons do 50% more damage to individual systems.",
+      "fr": "Les armes balistiques des vaisseaux infligent 50 % de dégâts supplémentaires aux systèmes individuels."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "RoyalGalaxy.esm",
+   "by": "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+   "new": false,
+   "touched_by": [
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration"
+   ]
+  },
+  {
+   "id": "2C59DB:Starfield.esm",
+   "edid": "Skill_EnergyWeaponSystems",
+   "category": "tech",
+   "tier": 2,
+   "name": {
+    "en": "Energy Weapon Systems",
+    "fr": "Sys. armes à énergie"
+   },
+   "description": {
+    "en": "In the 24th century, advancements in energy weapons technology have revolutionized combat, as much in space as on the ground.",
+    "fr": "Au 24e siècle, les avancées technologiques des armes à énergie ont révolutionné la manière de faire la guerre, aussi bien dans l'espace qu'au sol."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Energy ship weapons have 10% increased damage and cost 15% less to use in Targeting Mode.",
+      "fr": "Les armes à énergie des vaisseaux infligent 10 % de dégâts supplémentaires et coûtent 15 % en moins en mode Ciblage."
+     },
+     "challenge": {
+      "en": "Deal 1000 damage to enemy ships with Energy weapons.",
+      "fr": "Infligez 1000 points de dégâts à des vaisseaux ennemis avec des armes à énergie."
+     }
+    },
+    {
+     "desc": {
+      "en": "Energy ship weapons have 20% increased damage and cost 30% less to use in Targeting Mode.",
+      "fr": "Les armes à énergie des vaisseaux infligent 20 % de dégâts supplémentaires et coûtent 30 % en moins en mode Ciblage."
+     },
+     "challenge": {
+      "en": "Deal 4000 damage to enemy ships with Energy weapons.",
+      "fr": "Infligez 4000 points de dégâts à des vaisseaux ennemis avec des armes à énergie."
+     }
+    },
+    {
+     "desc": {
+      "en": "Energy ship weapons have 30% increased damage and cost 45% less to use in Targeting Mode.",
+      "fr": "Les armes à énergie des vaisseaux infligent 30 % de dégâts supplémentaires et coûtent 45 % en moins en mode Ciblage."
+     },
+     "challenge": {
+      "en": "Deal 10000 damage to enemy ships with Energy weapons.",
+      "fr": "Infligez 10000 points de dégâts à des vaisseaux ennemis avec des armes à énergie."
+     }
+    },
+    {
+     "desc": {
+      "en": "Energy ship weapons recharge 30% faster.",
+      "fr": "Les armes à énergie des vaisseaux se rechargent 30 % plus vite."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "Starfield.esm",
+   "by": null,
+   "new": false,
+   "touched_by": []
+  },
+  {
+   "id": "2CE2DE:Starfield.esm",
+   "edid": "Skill_EngineSystems",
+   "category": "tech",
+   "tier": 2,
+   "name": {
+    "en": "Engine Systems",
+    "fr": "Moteurs"
+   },
+   "description": {
+    "en": "Space is both vast and dangerous, and the ability to push a ship's engine to increase speed can be done safely and effectively, with the right training.",
+    "fr": "L'espace est vaste et périlleux, mais pour qui possède le savoir-faire nécessaire, il est possible de tirer un maximum de vitesse de son moteur efficacement et en toute sécurité."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Your ship's top speed is increased by 10%.",
+      "fr": "La vitesse maximale de votre vaisseau est augmentée de 10 %."
+     },
+     "challenge": {
+      "en": "Boost 35 times with your spaceship while in combat.",
+      "fr": "Boost 35 times with your spaceship while in combat."
+     }
+    },
+    {
+     "desc": {
+      "en": "Ship boosts last longer and the cooldown is shorter.",
+      "fr": "Les turbos des vaisseaux durent plus longtemps et leur temps de recharge est plus court."
+     },
+     "challenge": {
+      "en": "Boost 15 times with a Class B ship while in combat.",
+      "fr": "Boost 15 times with a Class B ship while in combat."
+     }
+    },
+    {
+     "desc": {
+      "en": "Your ship's top speed is increased by 20%.",
+      "fr": "La vitesse maximale de votre vaisseau est augmentée de 20 %."
+     },
+     "challenge": {
+      "en": "Boost 15 times with a Class C ship while in combat.",
+      "fr": "Boost 15 times with a Class C ship while in combat."
+     }
+    },
+    {
+     "desc": {
+      "en": "While boosting, all enemies disengage the player and can only reacquire them as a target after the player stops boosting.",
+      "fr": "Quand le turbo est activé, tous les ennemis désengagent le joueur et ne peuvent le reprendre pour cible qu'une fois le turbo coupé."
+     },
+     "challenge": {
+      "en": "Destroy or board %repetitions% ships with any boost system installed.",
+      "fr": "Détruisez ou abordez %repetitions% vaisseaux avec n'importe quel système de turbo installé."
+     }
+    }
+   ],
+   "plugin": "rbt_DeadlyEffective.esm",
+   "by": "Deadly Effective - Minimal Skills Overhaul",
+   "new": false,
+   "touched_by": [
+    "Deadly Effective - Minimal Skills Overhaul"
+   ]
+  },
+  {
+   "id": "143B6B:Starfield.esm",
+   "edid": "Skill_Payloads",
+   "category": "tech",
+   "tier": 2,
+   "name": {
+    "en": "Payloads",
+    "fr": "Chargements"
+   },
+   "description": {
+    "en": "Any pilot can haul cargo, but it takes special determination and training to maximize cargo space.",
+    "fr": "N'importe quel pilote peut transporter du fret, mais il faut une détermination et un entraînement sans faille pour optimiser l'espace."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Ship cargo holds have 30% more capacity.",
+      "fr": "Ship cargo holds have 30% more capacity."
+     },
+     "challenge": {
+      "en": "Make 10 grav jumps with 75% or more of maximum cargo capacity.",
+      "fr": "Réussissez 10 astroportations avec un vaisseau rempli à 75 % ou plus de sa capacité de cargaison."
+     }
+    },
+    {
+     "desc": {
+      "en": "Ship cargo holds have 60% more capacity.",
+      "fr": "Ship cargo holds have 60% more capacity."
+     },
+     "challenge": {
+      "en": "Make 25 grav jumps with 75% or more of maximum cargo capacity.",
+      "fr": "Réussissez 25 astroportations avec un vaisseau rempli à 75 % ou plus de sa capacité de cargaison."
+     }
+    },
+    {
+     "desc": {
+      "en": "Ship cargo holds have 90% more capacity.",
+      "fr": "Ship cargo holds have 90% more capacity."
+     },
+     "challenge": {
+      "en": "Make 50 grav jumps with 75% or more of maximum cargo capacity.",
+      "fr": "Réussissez 50 astroportations avec un vaisseau rempli à 75 % ou plus de sa capacité de cargaison."
+     }
+    },
+    {
+     "desc": {
+      "en": "Ship cargo holds have 120% more capacity.",
+      "fr": "Ship cargo holds have 120% more capacity."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "PerkUp_QoLskills.esm",
+   "by": "Perk Up - Quality of Life Skills Improved",
+   "new": false,
+   "touched_by": [
+    "Astrogate",
+    "Deadly Effective - Minimal Skills Overhaul",
+    "Perk Up - Quality of Life Skills Improved"
+   ]
+  },
+  {
+   "id": "2C2C59:Starfield.esm",
+   "edid": "Skill_ShieldSystems",
+   "category": "tech",
+   "tier": 2,
+   "name": {
+    "en": "Shield Systems",
+    "fr": "Sys. boucliers"
+   },
+   "description": {
+    "en": "Regardless of the power allocated by the reactor, a ship's shields can be further bolstered by direct manipulation of the system's harmonics.",
+    "fr": "Quelle que soit la puissance allouée par le réacteur, les boucliers d'un vaisseau peuvent être renforcés par une manipulation directe des harmoniques du système."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Your ship has 10% increased shield capacity.",
+      "fr": "Your ship has 10% increased shield capacity."
+     },
+     "challenge": {
+      "en": "Take 150 shield damage.",
+      "fr": "Subissez 150 dégâts de boucliers."
+     }
+    },
+    {
+     "desc": {
+      "en": "Your ship has 25% increased shield capacity.",
+      "fr": "Your ship has 25% increased shield capacity."
+     },
+     "challenge": {
+      "en": "Take 350 shield damage.",
+      "fr": "Subissez 350 dégâts de boucliers."
+     }
+    },
+    {
+     "desc": {
+      "en": "Further increased shield capacity. With a Crew of 3 or more, occasionally resist all shield damage.",
+      "fr": "Further increased shield capacity. With a Crew of 3 or more, occasionally resist all shield damage."
+     },
+     "challenge": {
+      "en": "Take 750 shield damage.",
+      "fr": "Subissez 750 dégâts de boucliers."
+     }
+    },
+    {
+     "desc": {
+      "en": "Further increased shield capacity. Occasionally resist all shield damage, even when flying alone.",
+      "fr": "Further increased shield capacity. Occasionally resist all shield damage, even when flying alone."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "rbt_DeadlyEffective.esm",
+   "by": "Deadly Effective - Minimal Skills Overhaul",
+   "new": false,
+   "touched_by": [
+    "Deadly Effective - Minimal Skills Overhaul"
+   ]
+  },
+  {
+   "id": "2C5558:Starfield.esm",
+   "edid": "Skill_MissileWeaponSystems",
+   "category": "tech",
+   "tier": 3,
+   "name": {
+    "en": "Missile Weapon Systems",
+    "fr": "Systèmes d'armes à missiles"
+   },
+   "description": {
+    "en": "In space, few weapons can match the range and destructive power of missiles, especially in the hands of a skilled tactician.",
+    "fr": "Dans l'espace, peu d'armes peuvent rivaliser avec la portée et le potentiel de destruction des missiles, en particulier entre les mains des meilleurs tacticiens."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Ship missile weapons do 10% more damage, and their Targeting mode cost is reduced by 20%.",
+      "fr": "Les armes à missiles des vaisseaux infligent 10 % de dégâts supplémentaires et coûtent 20 % en moins en mode ciblage."
+     },
+     "challenge": {
+      "en": "Deal 1000 damage to enemy ships with missile weapons.",
+      "fr": "Infligez 1000 points de dégâts à des vaisseaux ennemis avec des armes à missiles."
+     }
+    },
+    {
+     "desc": {
+      "en": "Ship missile weapons do 20% more damage, and their Targeting mode cost is reduced by 40%.",
+      "fr": "Les armes à missiles des vaisseaux infligent 20 % de dégâts supplémentaires et coûtent 40 % en moins en mode ciblage."
+     },
+     "challenge": {
+      "en": "Deal 4000 damage to enemy ships with missile weapons.",
+      "fr": "Infligez 4000 points de dégâts à des vaisseaux ennemis avec des armes à missiles."
+     }
+    },
+    {
+     "desc": {
+      "en": "Ship missile weapons do 30% more damage, and their Targeting mode cost is reduced by 60%.",
+      "fr": "Les armes à missiles des vaisseaux infligent 30 % de dégâts supplémentaires et coûtent 60 % en moins en mode ciblage."
+     },
+     "challenge": {
+      "en": "Deal 10000 damage to enemy ships with missile weapons.",
+      "fr": "Infligez 10000 points de dégâts à des vaisseaux ennemis avec des armes à missiles."
+     }
+    },
+    {
+     "desc": {
+      "en": "Ship missiles have a 20% increased Range, Travel Speed, and Reload Speed.",
+      "fr": "Augmente de 20 % la portée, la vitesse de déplacement et la vitesse de rechargement des missiles de vaisseau."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "Starfield.esm",
+   "by": null,
+   "new": false,
+   "touched_by": []
+  },
+  {
+   "id": "2C2C5B:Starfield.esm",
+   "edid": "Skill_ParticleBeamWeaponSystems",
+   "category": "tech",
+   "tier": 3,
+   "name": {
+    "en": "Particle Beam Weapon Systems",
+    "fr": "Systèmes d'armes à particules"
+   },
+   "description": {
+    "en": "Ship weapons utilizing particle beam technology are the preferred choice for captains who prefer to damage multiple ship systems at once.",
+    "fr": "Les rayons à particule sont l'armement de choix des capitaines qui cherchent à endommager plusieurs systèmes de vaisseau à la fois."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Ship particle beam weapons do 10% more damage, and Targeting mode cost is reduced by 10%.",
+      "fr": "Les armes à rayon à particules des vaisseaux infligent 10 % de dégâts supplémentaires et coûtent 10 % en moins en mode ciblage."
+     },
+     "challenge": {
+      "en": "Deal 1000 damage to enemy ships with particle beam weapons.",
+      "fr": "Infligez 1000 points de dégâts à des vaisseaux ennemis avec des armes à particules."
+     }
+    },
+    {
+     "desc": {
+      "en": "Ship particle beam weapons do 20% more damage, and Targeting mode cost is reduced by 20%.",
+      "fr": "Les armes à rayon à particules des vaisseaux infligent 20 % de dégâts supplémentaires et coûtent 20 % en moins en mode ciblage."
+     },
+     "challenge": {
+      "en": "Deal 4000 damage to enemy ships with particle beam weapons.",
+      "fr": "Infligez 4000 points de dégâts à des vaisseaux ennemis avec des armes à particules."
+     }
+    },
+    {
+     "desc": {
+      "en": "Ship particle beam weapons do 30% more damage, and Targeting mode cost is reduced by 30%.",
+      "fr": "Les armes à rayon à particules des vaisseaux infligent 30 % de dégâts supplémentaires et coûtent 30 % en moins en mode ciblage."
+     },
+     "challenge": {
+      "en": "Deal 10000 damage to enemy ships with particle beam weapons.",
+      "fr": "Infligez 10000 points de dégâts à des vaisseaux ennemis avec des armes à particules."
+     }
+    },
+    {
+     "desc": {
+      "en": "Increased critical hit chance with ship particle beam weapons.",
+      "fr": "Améliore les chances de coup critique avec les armes à rayon à particules des vaisseaux."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "Starfield.esm",
+   "by": null,
+   "new": false,
+   "touched_by": []
+  },
+  {
+   "id": "2C5553:Starfield.esm",
+   "edid": "Skill_Robotics",
+   "category": "tech",
+   "tier": 3,
+   "name": {
+    "en": "Robotics",
+    "fr": "Robotique"
+   },
+   "description": {
+    "en": "In an age where robots and autonomous turrets are employed in a combat capacity, the study of robotics can be instrumental in gaining a tactical edge.",
+    "fr": "Dans un monde où les robots et les tourelles autonomes sont largement employés à des fins de combat, l'étude de la robotique peut s'avérer essentielle pour gagner un avantage tactique."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "You deal 10% more damage to Robots and Turrets. You can trigger Fire-Stop subroutines in Robots.",
+      "fr": "You deal 10% more damage to Robots and Turrets. You can trigger Fire-Stop subroutines in Robots."
+     },
+     "challenge": {
+      "en": "Destroy 50 robots.",
+      "fr": "Destroy 50 robots."
+     }
+    },
+    {
+     "desc": {
+      "en": "You deal 20% more damage to Robots and Turrets. You can trigger Flee subroutines in Robots.",
+      "fr": "You deal 20% more damage to Robots and Turrets. You can trigger Flee subroutines in Robots."
+     },
+     "challenge": {
+      "en": "Destroy 25 robots.",
+      "fr": "Détruisez 25 robots."
+     }
+    },
+    {
+     "desc": {
+      "en": "You deal 30% more damage to Robots and Turrets. You can trigger IFF Reversal in Robots.",
+      "fr": "You deal 30% more damage to Robots and Turrets. You can trigger IFF Reversal in Robots."
+     },
+     "challenge": {
+      "en": "Destroy 25 robots with EM damage.",
+      "fr": "Destroy 25 robots with EM damage."
+     }
+    },
+    {
+     "desc": {
+      "en": "You can acquire Master-Override permissions for Robots for a limited time.",
+      "fr": "You can acquire Master-Override permissions for Robots for a limited time."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "rbt_DeadlyEffective.esm",
+   "by": "Deadly Effective - Minimal Skills Overhaul",
+   "new": false,
+   "touched_by": [
+    "Deadly Effective - Minimal Skills Overhaul"
+   ]
+  },
+  {
+   "id": "2C59DC:Starfield.esm",
+   "edid": "Skill_StarshipDesign",
+   "category": "tech",
+   "tier": 3,
+   "name": {
+    "en": "Starship Design",
+    "fr": "Conception vaisseau"
+   },
+   "description": {
+    "en": "As with \"car culture\" on Earth centuries ago, there are those who pride themselves on the ability to modify their own spaceships.",
+    "fr": "Comme sur Terre il y a plusieurs siècles avec les “voitures”, certaines personnes ne vivent que pour personnaliser et modifier leur vaisseau."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Allows the installation of improved ship modules.",
+      "fr": "Permet d'installer des modules de vaisseaux améliorés."
+     },
+     "challenge": {
+      "en": "Install 5 unique ship modules.",
+      "fr": "Installez 5 modules de vaisseaux uniques."
+     }
+    },
+    {
+     "desc": {
+      "en": "Allows the installation of superior ship modules.",
+      "fr": "Permet d'installer des modules de vaisseaux supérieurs."
+     },
+     "challenge": {
+      "en": "Install 15 unique ship modules.",
+      "fr": "Installez 15 modules de vaisseaux uniques."
+     }
+    },
+    {
+     "desc": {
+      "en": "Allows the installation of cutting-edge ship modules.",
+      "fr": "Permet d'installer des modules de vaisseaux de pointe."
+     },
+     "challenge": {
+      "en": "Install 30 unique ship modules.",
+      "fr": "Installez 30 modules de vaisseaux uniques."
+     }
+    },
+    {
+     "desc": {
+      "en": "Allows the installation of experimental ship modules.",
+      "fr": "Permet d'installer des modules de vaisseaux expérimentaux."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "Starfield.esm",
+   "by": null,
+   "new": false,
+   "touched_by": []
+  },
+  {
+   "id": "27B9ED:Starfield.esm",
+   "edid": "Skill_AutomatedWeaponSystems",
+   "category": "tech",
+   "tier": 4,
+   "name": {
+    "en": "Automated Weapon Systems",
+    "fr": "Systèmes balistiques automatisés"
+   },
+   "description": {
+    "en": "Turret weapons are known for their easy-to-use, autonomous nature, but they can be made even deadlier with some specific technical adjustments.",
+    "fr": "Les tourelles sont réputées pour leur simplicité d'utilisation et leur autonomie, et peuvent être encore plus mortelles avec certains ajustements techniques."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Automated ship weapons do 10% more damage and reduce all targeting mode costs by 20%.",
+      "fr": "Augmente de 10 % les dégâts des armes de vaisseau automatisées et réduit de 20 % le coût de tous les modes Ciblage."
+     },
+     "challenge": {
+      "en": "Deal 1000 damage to enemy ships with automated turret weapons.",
+      "fr": "Infligez 1000 points de dégâts à des vaisseaux ennemis avec des tourelles automatisées."
+     }
+    },
+    {
+     "desc": {
+      "en": "Automated ship weapons do 20% more damage and reduce all targeting mode costs by 30%. Your ship takes 20% less damage while in targeting mode.",
+      "fr": "Augmente de 20 % les dégâts des armes de vaisseau automatisées et réduit de 30 % le coût du mode Ciblage. Votre vaisseau subit 20 % de dégâts en moins en mode Ciblage."
+     },
+     "challenge": {
+      "en": "Deal 4000 damage to enemy ships with automated turret weapons.",
+      "fr": "Infligez 4000 points de dégâts à des vaisseaux ennemis avec des tourelles automatisées."
+     }
+    },
+    {
+     "desc": {
+      "en": "Automated ship weapons do 30% more damage and reduce all targeting mode costs by 40%. Increases crit chance against targeted sub-systems by 20%.",
+      "fr": "Augmente de 30 % les dégâts des armes de vaisseau automatisées et réduit de 40 % le coût du mode Ciblage. Augmente les chances de coup critique contre les sous-systèmes ciblés de 20 %."
+     },
+     "challenge": {
+      "en": "Deal 10000 damage to enemy ships with automated turret weapons.",
+      "fr": "Infligez 10000 points de dégâts à des vaisseaux ennemis avec des tourelles automatisées."
+     }
+    },
+    {
+     "desc": {
+      "en": "Ship turret weapons recharge 40% faster and do 20% more damage to targeted sub-systems.",
+      "fr": "Les tourelles de vaisseau se rechargent 40 % plus vite et infligent 20 % de dégâts supplémentaires aux sous-systèmes ciblés."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "Starfield.esm",
+   "by": null,
+   "new": false,
+   "touched_by": []
+  },
+  {
+   "id": "08C3EE:Starfield.esm",
+   "edid": "Skill_BoostAssaultTraining",
+   "category": "tech",
+   "tier": 4,
+   "name": {
+    "en": "Boost Assault Training",
+    "fr": "Entraînement offensif au jet-pack"
+   },
+   "description": {
+    "en": "Boost pack upgrades enhance propulsion and control, unleashing shock-and-awe tactics with powerful thrust and intense flames, all safely directed away from the user",
+    "fr": "Boost pack upgrades enhance propulsion and control, unleashing shock-and-awe tactics with powerful thrust and intense flames, all safely directed away from the user"
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Enemies within 5 meters take fire damage from your boost pack's propulsion, with a 15% chance to ignite and burn over time.",
+      "fr": "Enemies within 5 meters take fire damage from your boost pack's propulsion, with a 15% chance to ignite and burn over time."
+     },
+     "challenge": {
+      "en": "Deal 200 damage to enemies using the boost pack.",
+      "fr": "Infligez 200 points de dégâts aux ennemis en utilisant le jet-pack."
+     }
+    },
+    {
+     "desc": {
+      "en": "Boost pack propulsion has a 25% chance to knock down enemies within 5 meters.",
+      "fr": "Boost pack propulsion has a 25% chance to knock down enemies within 5 meters."
+     },
+     "challenge": {
+      "en": "Knockdown 20 enemies with a boost.",
+      "fr": "Renversez 20 ennemis avec le jet-pack."
+     }
+    },
+    {
+     "desc": {
+      "en": "Aiming down sights while boosting will let you hover in place. Fuel is still expended until empty.",
+      "fr": "Lorsque vous visez en utilisant le jet-pack, vous passez en vol stationnaire. Cela consomme également du carburant."
+     },
+     "challenge": {
+      "en": "Deal 500 damage to enemies using the boost pack.",
+      "fr": "Infligez 500 points de dégâts aux ennemis en utilisant le jet-pack."
+     }
+    },
+    {
+     "desc": {
+      "en": "While hovering, time slows down and the world moves 70% slower around you.",
+      "fr": "Le temps est ralenti en vol stationnaire. Le monde autour de vous est ralenti de 70 %."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "RoyalGalaxy.esm",
+   "by": "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+   "new": false,
+   "touched_by": [
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration"
+   ]
+  },
+  {
+   "id": "2C53B2:Starfield.esm",
+   "edid": "Skill_EMWeaponSystems",
+   "category": "tech",
+   "tier": 4,
+   "name": {
+    "en": "EM Weapon Systems",
+    "fr": "Sys. armes EM"
+   },
+   "description": {
+    "en": "In the hands of a capable pilot, no weapons can disable an enemy ship faster than those that deliver electromagnetic damage.",
+    "fr": "Entre les mains d'un bon pilote, aucune arme ne peut neutraliser un vaisseau ennemi plus vite que celles capables d'infliger des dégâts électromagnétiques."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "EM ship weapons have 10% increased damage and cost 15% less to use in Targeting Mode.",
+      "fr": "Les armes électromagnétiques des vaisseaux infligent 10 % de dégâts supplémentaires et coûtent 15 % en moins en mode Ciblage."
+     },
+     "challenge": {
+      "en": "Dock with 5 enemy ships.",
+      "fr": "Amarrez-vous à 5 vaisseaux ennemis."
+     }
+    },
+    {
+     "desc": {
+      "en": "EM ship weapons have 20% increased damage and cost 30% less to use in Targeting Mode.",
+      "fr": "Les armes électromagnétiques des vaisseaux infligent 20 % de dégâts supplémentaires et coûtent 30 % en moins en mode Ciblage."
+     },
+     "challenge": {
+      "en": "Dock with 10 enemy ships.",
+      "fr": "Amarrez-vous à 10 vaisseaux ennemis."
+     }
+    },
+    {
+     "desc": {
+      "en": "EM ship weapons have 30% increased damage and cost 45% less to use in Targeting Mode.",
+      "fr": "Les armes électromagnétiques des vaisseaux infligent 30 % de dégâts supplémentaires et coûtent 45 % en moins en mode Ciblage."
+     },
+     "challenge": {
+      "en": "Dock with 15 enemy ships.",
+      "fr": "Amarrez-vous à 15 vaisseaux ennemis."
+     }
+    },
+    {
+     "desc": {
+      "en": "EM ship weapons have a small chance of instantly disabling enemy engines.",
+      "fr": "Les armes EM de vaisseau ont une légère chance de désactiver instantanément les moteurs ennemis."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "Starfield.esm",
+   "by": null,
+   "new": false,
+   "touched_by": []
+  },
+  {
+   "id": "2C59DF:Starfield.esm",
+   "edid": "Skill_Boxing",
+   "category": "physical",
+   "tier": 1,
+   "name": {
+    "en": "Boxing",
+    "fr": "Boxe"
+   },
+   "description": {
+    "en": "The sport of Fisticuffs is oft considered old-fashioned, but proper fundamentals and footwork have saved many a spacefarer in a scrap.",
+    "fr": "The sport of Fisticuffs is oft considered old-fashioned, but proper fundamentals and footwork have saved many a spacefarer in a scrap."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Small chance to dodge ranged attacks. Moderate chance to dodge melee attacks.",
+      "fr": "Small chance to dodge ranged attacks. Moderate chance to dodge melee attacks."
+     },
+     "challenge": {
+      "en": "Trade 80 blows in melee combat.",
+      "fr": "Trade 80 blows in melee combat."
+     }
+    },
+    {
+     "desc": {
+      "en": "Small chance to trip-up enemies in melee combat.",
+      "fr": "Small chance to trip-up enemies in melee combat."
+     },
+     "challenge": {
+      "en": "Kill 40 enemies with an unarmed attack.",
+      "fr": "Kill 40 enemies with an unarmed attack."
+     }
+    },
+    {
+     "desc": {
+      "en": "Unarmed attacks do 40% more damage. Use less O2 when fighting unarmed.",
+      "fr": "Unarmed attacks do 40% more damage. Use less O2 when fighting unarmed."
+     },
+     "challenge": {
+      "en": "Kill 25 enemies with an unarmed attack.",
+      "fr": "Kill 25 enemies with an unarmed attack."
+     }
+    },
+    {
+     "desc": {
+      "en": "Unarmed attacks do 80% more damage and have a chance to knock down opponents.",
+      "fr": "Unarmed attacks do 80% more damage and have a chance to knock down opponents."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "rbt_DeadlyEffective.esm",
+   "by": "Deadly Effective - Minimal Skills Overhaul",
+   "new": false,
+   "touched_by": [
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+    "Deadly Effective - Minimal Skills Overhaul"
+   ]
+  },
+  {
+   "id": "2CE2DD:Starfield.esm",
+   "edid": "Skill_Fitness",
+   "category": "physical",
+   "tier": 1,
+   "name": {
+    "en": "Fitness",
+    "fr": "Forme"
+   },
+   "description": {
+    "en": "In space, the greatest commodity is oxygen, and the increased lung capacity gained by a regular physical fitness regimen is essential to survival.",
+    "fr": "Dans l'espace, l'oxygène est la ressource la plus précieuse, et l'augmentation de capacité pulmonaire que procure un exercice physique régulier est indispensable à la survie."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "You have 10% more oxygen available.",
+      "fr": "Vous disposez de 10 % d'oxygène supplémentaire."
+     },
+     "challenge": {
+      "en": "Use up all available Oxygen and Carbon Dioxide 20 times.",
+      "fr": "Épuisez tout votre oxygène et votre dioxyde de carbone 20 fois."
+     }
+    },
+    {
+     "desc": {
+      "en": "You have 20% more oxygen available.",
+      "fr": "Vous disposez de 20 % d'oxygène supplémentaire."
+     },
+     "challenge": {
+      "en": "Use up all available Oxygen and Carbon Dioxide 50 times.",
+      "fr": "Épuisez tout votre oxygène et votre dioxyde de carbone 50 fois."
+     }
+    },
+    {
+     "desc": {
+      "en": "You have 30% more oxygen available. Exercising on fitness and push ups mats now give greater benefits.",
+      "fr": "You have 30% more oxygen available. Exercising on fitness and push ups mats now give greater benefits."
+     },
+     "challenge": {
+      "en": "Use up all available Oxygen and Carbon Dioxide 100 times.",
+      "fr": "Épuisez tout votre oxygène et votre dioxyde de carbone 100 fois."
+     }
+    },
+    {
+     "desc": {
+      "en": "Sprinting and power attacks now use significantly less oxygen.",
+      "fr": "Sprinter et porter une attaque puissante consomme considérablement moins d'oxygène."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "Stargym - One More Rep.esm",
+   "by": "StarGym - One More Rep",
+   "new": false,
+   "touched_by": [
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+    "Deadly Effective - Minimal Skills Overhaul",
+    "Perk Up - Quality of Life Skills Improved",
+    "StarGym - One More Rep"
+   ]
+  },
+  {
+   "id": "2CFCB2:Starfield.esm",
+   "edid": "Skill_Stealth",
+   "category": "physical",
+   "tier": 1,
+   "name": {
+    "en": "Stealth",
+    "fr": "Furtivité"
+   },
+   "description": {
+    "en": "For a combatant who values discretion above all else, the ability to approach a target while undetected and kill with a silenced weapon is as terrifying as it is effective.",
+    "fr": "Pour qui compte avant tout sur la discrétion, la capacité d'approcher de sa cible sans se faire détecter et de l'abattre avec une arme équipée d'un silencieux est aussi terrifiante qu'efficace."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Become 25% harder to detect while sneaking. Suppressed weapons deal 5% more sneak attack damage.",
+      "fr": "Become 25% harder to detect while sneaking. Suppressed weapons deal 5% more sneak attack damage."
+     },
+     "challenge": {
+      "en": "Perform 10 sneak attacks.",
+      "fr": "Exécutez 10 attaques furtives."
+     }
+    },
+    {
+     "desc": {
+      "en": "Stealth Meter upgraded. Become 50% harder to detect when sneaking. Suppressed weapons deal 10% more sneak attack damage.",
+      "fr": "Stealth Meter upgraded. Become 50% harder to detect when sneaking. Suppressed weapons deal 10% more sneak attack damage."
+     },
+     "challenge": {
+      "en": "Perform 20 sneak attacks.",
+      "fr": "Exécutez 20 attaques furtives."
+     }
+    },
+    {
+     "desc": {
+      "en": "Become 75% harder to detect when sneaking. Suppressed weapons deal 15% more sneak attack damage.",
+      "fr": "Become 75% harder to detect when sneaking. Suppressed weapons deal 15% more sneak attack damage."
+     },
+     "challenge": {
+      "en": "Perform 30 sneak attacks.",
+      "fr": "Perform 30 sneak attacks."
+     }
+    },
+    {
+     "desc": {
+      "en": "Upgraded stealth, improved pickpocketing, and 20% more sneak attack damage. Even doors remain silent as you move",
+      "fr": "Upgraded stealth, improved pickpocketing, and 20% more sneak attack damage. Even doors remain silent as you move"
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "RoyalGalaxy.esm",
+   "by": "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+   "new": false,
+   "touched_by": [
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration"
+   ]
+  },
+  {
+   "id": "2C59D9:Starfield.esm",
+   "edid": "Skill_WeightLifting",
+   "category": "physical",
+   "tier": 1,
+   "name": {
+    "en": "Weight Lifting",
+    "fr": "Haltérophilie"
+   },
+   "description": {
+    "en": "Weight training can significantly increase one's ability to carry weapons and equipment, both in space and on the ground.",
+    "fr": "La musculation permet d'améliorer de manière significative la quantité d'armes et d'équipement qu'on peut transporter, aussi bien dans l'espace que sur la terre ferme."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Increase total carrying capacity by 10 kilograms.",
+      "fr": "Charge maximale augmentée de 10 kilogrammes."
+     },
+     "challenge": {
+      "en": "Exercise on gym station 5 times.",
+      "fr": "Exercise on gym station 5 times."
+     }
+    },
+    {
+     "desc": {
+      "en": "Increase total carrying capacity by 25 kilograms.",
+      "fr": "Charge maximale augmentée de 25 kilos."
+     },
+     "challenge": {
+      "en": "Exercise on gym station 10 times.",
+      "fr": "Exercise on gym station 10 times."
+     }
+    },
+    {
+     "desc": {
+      "en": "Increase total carrying capacity by 50 kilograms. Pull ups and heavy lifting now give greater benefits.",
+      "fr": "Increase total carrying capacity by 50 kilograms. Pull ups and heavy lifting now give greater benefits."
+     },
+     "challenge": {
+      "en": "Exercise on gym station 25 times.",
+      "fr": "Exercise on gym station 25 times."
+     }
+    },
+    {
+     "desc": {
+      "en": "Increase total carrying capacity by 100 kilograms. Gain 50% resistance to stagger.",
+      "fr": "Charge maximale augmentée de 100 kilos. Améliore la résistance au vacillement de 50 %."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "Stargym - One More Rep.esm",
+   "by": "StarGym - One More Rep",
+   "new": false,
+   "touched_by": [
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+    "Deadly Effective - Minimal Skills Overhaul",
+    "Perk Up - Quality of Life Skills Improved",
+    "StarGym - One More Rep"
+   ]
+  },
+  {
+   "id": "28AE17:Starfield.esm",
+   "edid": "Skill_EnvironmentalConditioning",
+   "category": "physical",
+   "tier": 2,
+   "name": {
+    "en": "Environmental Conditioning",
+    "fr": "Conditionnement environnemental"
+   },
+   "description": {
+    "en": "In the Settled Systems, even oxygen-rich planets and moons may have an atmosphere that is hazardous to human beings.",
+    "fr": "Dans les Systèmes occupés, même les planètes et les lunes riches en oxygène peuvent abriter une atmosphère dangereuse pour les êtres humains."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Gain 10 resistance to Airborne and Thermal environmental damage.",
+      "fr": "Gain 10 resistance to Airborne and Thermal environmental damage."
+     },
+     "challenge": {
+      "en": "Take 100 environmental damage.",
+      "fr": "Subissez 100 dégâts environnementaux."
+     }
+    },
+    {
+     "desc": {
+      "en": "Suit Protection is significantly more effective.",
+      "fr": "Suit Protection is significantly more effective."
+     },
+     "challenge": {
+      "en": "Take 250 environmental damage.",
+      "fr": "Subissez 250 dégâts environnementaux."
+     }
+    },
+    {
+     "desc": {
+      "en": "Gain 10 resistance to Corrosive and Radiation environmental damage.",
+      "fr": "Équipage : augmente de 10 la résistance aux dégâts environnementaux de corrosion et de radiation."
+     },
+     "challenge": {
+      "en": "Take 500 environmental damage.",
+      "fr": "Subissez 500 dégâts environnementaux."
+     }
+    },
+    {
+     "desc": {
+      "en": "Reduced chance to gain afflictions from environmental damage sources.",
+      "fr": "Chances réduites de maladie suite à des dégâts environnementaux."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "rbt_Extremophile.esm",
+   "by": "Extremophile - Environmental Gameplay",
+   "new": false,
+   "touched_by": [
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+    "Deadly Effective - Minimal Skills Overhaul",
+    "Extremophile - Environmental Gameplay"
+   ]
+  },
+  {
+   "id": "28AE29:Starfield.esm",
+   "edid": "Skill_Gymnastics",
+   "category": "physical",
+   "tier": 2,
+   "name": {
+    "en": "Gymnastics",
+    "fr": "Gymnastique"
+   },
+   "description": {
+    "en": "From navigating the elevations of alien landscapes to exploring derelict ships in Zero-G, gymnastic training is invaluable for improving both safety and maneuverability.",
+    "fr": "De l'exploration des reliefs de paysages aliens à celle des vaisseaux à l'abandon en apesanteur, un bon entraînement en gymnastique est inestimable pour améliorer sa sécurité et ses déplacements."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Unlock the ability to combat slide. Take 15% less fall damage.",
+      "fr": "Débloque la capacité d'effectuer une glissade en combat. Dégâts de chute réduits de 15 %."
+     },
+     "challenge": {
+      "en": "Take 100 fall damage.",
+      "fr": "Subissez 100 dégâts de chute."
+     }
+    },
+    {
+     "desc": {
+      "en": "Move faster in Zero-G. Take 20% less fall damage.",
+      "fr": "Vitesse de déplacement en apesanteur augmentée. Dégâts de chute réduits de 20 %."
+     },
+     "challenge": {
+      "en": "Sprint for 2000 meters while at 75% or more of your maximum load capacity.",
+      "fr": "Sprint for 2000 meters while at 75% or more of your maximum load capacity."
+     }
+    },
+    {
+     "desc": {
+      "en": "Become more stable while firing in Zero-G. Take 30% less fall damage. Replenish some O2 after mantling.",
+      "fr": "Stabilité augmentée lorsque vous faites feu en apesanteur. Dégâts de chute réduits de 30 %. Vous récupérez de l'O2 après avoir franchi un obstacle."
+     },
+     "challenge": {
+      "en": "Kill 20 enemies in Zero-G environments.",
+      "fr": "Tuez 20 ennemis dans des environnements en apesanteur."
+     }
+    },
+    {
+     "desc": {
+      "en": "Increased jump height. Run faster after combat sliding or mantling.",
+      "fr": "Vous sautez plus haut et courez plus rapidement après avoir effectué une glissade en combat ou franchi un obstacle."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "Stargym - One More Rep.esm",
+   "by": "StarGym - One More Rep",
+   "new": false,
+   "touched_by": [
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+    "Deadly Effective - Minimal Skills Overhaul",
+    "StarGym - One More Rep"
+   ]
+  },
+  {
+   "id": "2CFCAD:Starfield.esm",
+   "edid": "Skill_Nutrition",
+   "category": "physical",
+   "tier": 2,
+   "name": {
+    "en": "Nutrition",
+    "fr": "Nutrition"
+   },
+   "description": {
+    "en": "Advanced nutritional science is only part of the equation—knowing when and how much to eat can be as critical as the fuel itself, ensuring peak performance in the field.",
+    "fr": "Advanced nutritional science is only part of the equation—knowing when and how much to eat can be as critical as the fuel itself, ensuring peak performance in the field."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Food and drink are 30% more effective.",
+      "fr": "Food and drink are 30% more effective."
+     },
+     "challenge": {
+      "en": "Consume 10 food or drink items.",
+      "fr": "Consommez 10 produits alimentaires."
+     }
+    },
+    {
+     "desc": {
+      "en": "Food and drink are now 60% more effective.",
+      "fr": "Food and drink are now 60% more effective."
+     },
+     "challenge": {
+      "en": "Consume 30 food or drink items.",
+      "fr": "Consommez 30 produits alimentaires."
+     }
+    },
+    {
+     "desc": {
+      "en": "Food and drink are now 100% more effective.",
+      "fr": "Food and drink are now 100% more effective."
+     },
+     "challenge": {
+      "en": "Consume 75 food or drink items.",
+      "fr": "Consommez 75 produits alimentaires."
+     }
+    },
+    {
+     "desc": {
+      "en": "Food and drink are now 200% more effective.",
+      "fr": "Food and drink are now 200% more effective."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "RoyalGalaxy.esm",
+   "by": "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+   "new": false,
+   "touched_by": [
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration"
+   ]
+  },
+  {
+   "id": "000800:Shades_Stealth_Takedowns.esm",
+   "edid": "SST_Skill_Takedown",
+   "category": "physical",
+   "tier": 2,
+   "name": {
+    "en": "Takedowns",
+    "fr": "Takedowns"
+   },
+   "description": {
+    "en": "With the right training, one can sneak up and temporarily incapacitate someone by overloading certain nerve centres or perform deadly melee strikes. They'll never see it coming...",
+    "fr": "With the right training, one can sneak up and temporarily incapacitate someone by overloading certain nerve centres or perform deadly melee strikes. They'll never see it coming..."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Grants the ability to perform non-lethal takedowns, or instant-kill melee power attacks whilst sneaking up on unaware human targets.",
+      "fr": "Grants the ability to perform non-lethal takedowns, or instant-kill melee power attacks whilst sneaking up on unaware human targets."
+     },
+     "challenge": {
+      "en": "Perform 10 non-lethal takedowns.",
+      "fr": "Perform 10 non-lethal takedowns."
+     }
+    },
+    {
+     "desc": {
+      "en": "Performing a non-lethal takedown or melee power-attacking kill replenishes your oxygen.",
+      "fr": "Performing a non-lethal takedown or melee power-attacking kill replenishes your oxygen."
+     },
+     "challenge": {
+      "en": "Perform 15 non-lethal takedowns.",
+      "fr": "Perform 15 non-lethal takedowns."
+     }
+    },
+    {
+     "desc": {
+      "en": "Performing a non-lethal takedown or melee power-attacking kill also heals you for 10% of your total health.",
+      "fr": "Performing a non-lethal takedown or melee power-attacking kill also heals you for 10% of your total health."
+     },
+     "challenge": {
+      "en": "Perform 20 non-lethal takedowns.",
+      "fr": "Perform 20 non-lethal takedowns."
+     }
+    },
+    {
+     "desc": {
+      "en": "Performing a non-lethal takedown or melee power-attacking kill also engages a stealth cloak making you almost invisible (90%) whilst sneaking for 10 sec.",
+      "fr": "Performing a non-lethal takedown or melee power-attacking kill also engages a stealth cloak making you almost invisible (90%) whilst sneaking for 10 sec."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "Shades_Stealth_Takedowns.esm",
+   "by": "Shades Stealth Takedowns (Knock-out or Lethal)",
+   "new": true,
+   "touched_by": [
+    "Shades Stealth Takedowns (Knock-out or Lethal)"
+   ]
+  },
+  {
+   "id": "2CE2E1:Starfield.esm",
+   "edid": "Skill_Wellness",
+   "category": "physical",
+   "tier": 2,
+   "name": {
+    "en": "Wellness",
+    "fr": "Bien-être"
+   },
+   "description": {
+    "en": "Through advanced gene splicing and bio-enhancements, optimizing health can extend life expectancy and enhance overall vitality.",
+    "fr": "Through advanced gene splicing and bio-enhancements, optimizing health can extend life expectancy and enhance overall vitality."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Increase your maximum health by 10%.",
+      "fr": "Augmente votre santé maximum de 10 %."
+     },
+     "challenge": {
+      "en": "Heal 200 damage.",
+      "fr": "Soignez 200 points de vie."
+     }
+    },
+    {
+     "desc": {
+      "en": "Increase your maximum health by 20%.",
+      "fr": "Augmente votre santé maximum de 20 %."
+     },
+     "challenge": {
+      "en": "Heal 500 damage.",
+      "fr": "Soignez 500 points de vie."
+     }
+    },
+    {
+     "desc": {
+      "en": "Increase your maximum health by 30%.",
+      "fr": "Augmente votre santé maximum de 30 %."
+     },
+     "challenge": {
+      "en": "Heal 1000 damage.",
+      "fr": "Soignez 1000 points de vie."
+     }
+    },
+    {
+     "desc": {
+      "en": "Increase your maximum health by 40%.",
+      "fr": "Augmente votre santé maximum de 40 %."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "RoyalGalaxy.esm",
+   "by": "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+   "new": false,
+   "touched_by": [
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration"
+   ]
+  },
+  {
+   "id": "28AE14:Starfield.esm",
+   "edid": "Skill_CellularRegeneration",
+   "category": "physical",
+   "tier": 3,
+   "name": {
+    "en": "Cellular Regeneration",
+    "fr": "Régénération cellulaire"
+   },
+   "description": {
+    "en": "Whether through secret experimentation or just plain healthy living, boosting the body's ability to naturally recover from injuries can mean the difference between life and death.",
+    "fr": "Que ce soit à travers des expériences secrètes ou un mode de vie sain, renforcer la capacité du corps à récupérer naturellement des blessures peut faire la différence entre la vie et la mort."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Slightly increased chance to recover from injuries naturally.",
+      "fr": "Augmentation légère des chances de récupérer naturellement des blessures."
+     },
+     "challenge": {
+      "en": "Recover from 5 injuries.",
+      "fr": "Récupérez à la suite de 5 blessures."
+     }
+    },
+    {
+     "desc": {
+      "en": "Moderately increased chance to recover from injuries naturally.",
+      "fr": "Augmentation modérée des chances de récupérer naturellement des blessures."
+     },
+     "challenge": {
+      "en": "Recover from 10 injuries.",
+      "fr": "Récupérez à la suite de 10 blessures."
+     }
+    },
+    {
+     "desc": {
+      "en": "Noticeably increased chance to recover from injuries naturally.",
+      "fr": "Augmentation notable des chances de récupérer naturellement des blessures."
+     },
+     "challenge": {
+      "en": "Recover from 30 injuries.",
+      "fr": "Récupérez à la suite de 30 blessures."
+     }
+    },
+    {
+     "desc": {
+      "en": "20% chance of not gaining an injury when you otherwise would.",
+      "fr": "20 % de chance de ne pas subir de blessure."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "Starfield.esm",
+   "by": null,
+   "new": false,
+   "touched_by": []
+  },
+  {
+   "id": "2CE2A0:Starfield.esm",
+   "edid": "Skill_Decontamination",
+   "category": "physical",
+   "tier": 3,
+   "name": {
+    "en": "Decontamination",
+    "fr": "Décontamination"
+   },
+   "description": {
+    "en": "Through a deliberate regiment of conditioning and antibody therapy, one may effectively combat even the Settled Systems' unseen threats.",
+    "fr": "En suivant un régime de conditionnement strict et un traitement par anticorps, il est possible de contrer jusqu'aux menaces invisibles des Systèmes occupés."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "10% increased chance to recover from infections naturally.",
+      "fr": "10% increased chance to recover from infections naturally."
+     },
+     "challenge": {
+      "en": "Recover from 2 infections.",
+      "fr": "Recover from 2 infections."
+     }
+    },
+    {
+     "desc": {
+      "en": "20% increased chance to recover from infections naturally.",
+      "fr": "20% increased chance to recover from infections naturally."
+     },
+     "challenge": {
+      "en": "Recover from 15 infections.",
+      "fr": "Récupérez à la suite de 15 infections."
+     }
+    },
+    {
+     "desc": {
+      "en": "30% increased chance to recover from infections naturally.",
+      "fr": "30% increased chance to recover from infections naturally."
+     },
+     "challenge": {
+      "en": "Recover from 30 infections.",
+      "fr": "Récupérez à la suite de 30 infections."
+     }
+    },
+    {
+     "desc": {
+      "en": "Fight off infections 50% faster, with a 25% chance to resist them entirely when exposed.",
+      "fr": "Fight off infections 50% faster, with a 25% chance to resist them entirely when exposed."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "RoyalGalaxy.esm",
+   "by": "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+   "new": false,
+   "touched_by": [
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration"
+   ]
+  },
+  {
+   "id": "2C5554:Starfield.esm",
+   "edid": "Skill_MartialArts",
+   "category": "physical",
+   "tier": 3,
+   "name": {
+    "en": "Martial Arts",
+    "fr": "Arts martiaux"
+   },
+   "description": {
+    "en": "There are currently hundreds of martial arts practiced in the Settled Systems, some originating on ancient Earth, some newly created, almost all effective in combat.",
+    "fr": "Il existe des centaines d'arts martiaux différents dans les Systèmes occupés. Certains datent de la Terre, d'autres ont vu le jour plus récemment ; presque tous sont redoutables en combat."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "15% increased chance to crit with a melee or unarmed attack.",
+      "fr": "15 % de chances supplémentaires de critique avec une attaque au corps à corps ou à mains nues."
+     },
+     "challenge": {
+      "en": "Deal 250 damage with unarmed or melee attacks.",
+      "fr": "Deal 250 damage with unarmed or melee attacks."
+     }
+    },
+    {
+     "desc": {
+      "en": "15% chance to disarm an opponent with a melee or unarmed power attack.",
+      "fr": "15 % de chances de désarmer un adversaire avec une attaque au corps à corps ou à mains nues puissante."
+     },
+     "challenge": {
+      "en": "Disarm 10 enemies using melee or unarmed attacks.",
+      "fr": "Désarmez 10 ennemis avec des attaques au corps à corps ou à mains nues."
+     }
+    },
+    {
+     "desc": {
+      "en": "While unarmed or wielding a melee weapon, take 10% less damage.",
+      "fr": "Vous subissez 10 % de dégâts en moins lorsque vous maniez une arme de corps à corps ou vous battez à mains nues."
+     },
+     "challenge": {
+      "en": "Disarm 30 enemies using melee or unarmed attacks.",
+      "fr": "Désarmez 30 ennemis avec des attaques au corps à corps ou à mains nues."
+     }
+    },
+    {
+     "desc": {
+      "en": "When blocking melee or unarmed attacks, 50% of the damage is reflected back at your enemy. Your own fists strikes 25% harder than ever before.",
+      "fr": "When blocking melee or unarmed attacks, 50% of the damage is reflected back at your enemy. Your own fists strikes 25% harder than ever before."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "RoyalGalaxy.esm",
+   "by": "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+   "new": false,
+   "touched_by": [
+    "Unofficial Starfield Patch - USFP",
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration"
+   ]
+  },
+  {
+   "id": "2C555E:Starfield.esm",
+   "edid": "Skill_Concealment",
+   "category": "physical",
+   "tier": 4,
+   "name": {
+    "en": "Concealment",
+    "fr": "Dissimulation"
+   },
+   "description": {
+    "en": "Few skills capture the imagination like the ability to remain undetected, used by assassins, special forces operatives, and simple thieves alike for centuries.",
+    "fr": "Rares sont les capacités qui excitent autant l'imagination que celle de rester invisible aux yeux des autres, apanage des assassins, agents des forces spéciales et simples voleurs depuis des siècles."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "You no longer set off enemy mines. Ranged sneak attacks do 2.5x normal damage and your melee sneak attacks do 4x normal damage.",
+      "fr": "Vous ne déclenchez plus les mines ennemies. Les attaques furtives à distance infligent 2,5 fois plus de dégâts, et vos attaques furtives au corps à corps, 4 fois plus."
+     },
+     "challenge": {
+      "en": "Perform 40 melee/unarmed sneak attacks.",
+      "fr": "Perform 40 melee/unarmed sneak attacks."
+     }
+    },
+    {
+     "desc": {
+      "en": "Running while sneaking doesn't affect stealth. Ranged sneak attacks do 3x normal damage and your melee sneak attacks do 5x normal damage.",
+      "fr": "La furtivité n'est plus interrompue lorsque vous courez. Les attaques furtives à distance infligent 3 fois plus de dégâts et les attaques furtives au corps à corps, 5 fois plus."
+     },
+     "challenge": {
+      "en": "Perform 25 melee/unarmed sneak attacks.",
+      "fr": "Perform 25 melee/unarmed sneak attacks."
+     }
+    },
+    {
+     "desc": {
+      "en": "You gain a Chameleon-like ability when completely still and sneaking. Ranged sneak attacks do 3.5x normal damage and your melee sneak attacks do 8x normal damage.",
+      "fr": "Vous devenez un véritable caméléon lorsque vous vous tenez complètement immobile en mode furtif. Les attaques furtives à distance infligent 3,5 fois plus de dégâts et les attaques furtives au corps à corps, 8 fois plus."
+     },
+     "challenge": {
+      "en": "Kill 10 enemies while undetected.",
+      "fr": "Kill 10 enemies while undetected."
+     }
+    },
+    {
+     "desc": {
+      "en": "Engaging stealth causes distant enemies to lose you. Ranged sneak attacks do 4x normal damage and your melee sneak attacks do 10x normal damage.",
+      "fr": "Passer en mode furtif vous fait disparaître aux yeux des adversaires lointains. Les attaques furtives à distance infligent 4 fois plus de dégâts et les attaques furtives au corps à corps, 10 fois plus."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "rbt_DeadlyEffective.esm",
+   "by": "Deadly Effective - Minimal Skills Overhaul",
+   "new": false,
+   "touched_by": [
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+    "Deadly Effective - Minimal Skills Overhaul"
+   ]
+  },
+  {
+   "id": "2C59E2:Starfield.esm",
+   "edid": "Skill_EnergyWeaponDissipation",
+   "category": "physical",
+   "tier": 4,
+   "name": {
+    "en": "Energy Dissipation",
+    "fr": "Energy Dissipation"
+   },
+   "description": {
+    "en": "With laser and particle beam weapons reigning across the Settled Systems, specialized training to reduce or even reflect a barrage of energy damage is priceless for survival.",
+    "fr": "With laser and particle beam weapons reigning across the Settled Systems, specialized training to reduce or even reflect a barrage of energy damage is priceless for survival."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Energy damage is reduced by 5%.",
+      "fr": "Les dégâts d'énergie sont réduits de 5 %."
+     },
+     "challenge": {
+      "en": "Take 150 points of energy damage.",
+      "fr": "Encaissez 150 points de dégâts d'énergie."
+     }
+    },
+    {
+     "desc": {
+      "en": "Energy damage is reduced by 10%.",
+      "fr": "Les dégâts d'énergie sont réduits de 10 %."
+     },
+     "challenge": {
+      "en": "Take 350 points of energy damage.",
+      "fr": "Encaissez 350 points de dégâts d'énergie."
+     }
+    },
+    {
+     "desc": {
+      "en": "Energy damage is reduced by 15%.",
+      "fr": "Les dégâts d'énergie sont réduits de 15 %."
+     },
+     "challenge": {
+      "en": "Take 750 points of energy damage.",
+      "fr": "Encaissez 750 points de dégâts d'énergie."
+     }
+    },
+    {
+     "desc": {
+      "en": "When your health falls below half, you gain a 25% chance to reflect energy attacks back at your foe.",
+      "fr": "When your health falls below half, you gain a 25% chance to reflect energy attacks back at your foe."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "RoyalGalaxy.esm",
+   "by": "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+   "new": false,
+   "touched_by": [
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration"
+   ]
+  },
+  {
+   "id": "2CFCAE:Starfield.esm",
+   "edid": "Skill_PainTolerance",
+   "category": "physical",
+   "tier": 4,
+   "name": {
+    "en": "Pain Tolerance",
+    "fr": "Résistance à la douleur"
+   },
+   "description": {
+    "en": "Pain hurts - but only if you're not strong enough to take it.",
+    "fr": "La douleur n'affecte que ceux qui ne sont pas assez solides pour l'encaisser."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "All physical damage is reduced by 5%.",
+      "fr": "All physical damage is reduced by 5%."
+     },
+     "challenge": {
+      "en": "Take 250 points of physical damage.",
+      "fr": "Encaissez 250 points de dégâts physiques."
+     }
+    },
+    {
+     "desc": {
+      "en": "All physical damage is reduced by 10%.",
+      "fr": "All physical damage is reduced by 10%."
+     },
+     "challenge": {
+      "en": "Take 500 points of physical damage.",
+      "fr": "Encaissez 500 points de dégâts physiques."
+     }
+    },
+    {
+     "desc": {
+      "en": "Ranged physical damage is reduced by 15%.",
+      "fr": "Ranged physical damage is reduced by 15%."
+     },
+     "challenge": {
+      "en": "Take 1000 points of physical damage.",
+      "fr": "Encaissez 1000 points de dégâts physiques."
+     }
+    },
+    {
+     "desc": {
+      "en": "Falling below 35% health grants a 10% shrug off all physical damage like a god out of ancient myth.",
+      "fr": "Falling below 35% health grants a 10% shrug off all physical damage like a god out of ancient myth."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "RoyalGalaxy.esm",
+   "by": "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+   "new": false,
+   "touched_by": [
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration"
+   ]
+  },
+  {
+   "id": "28AE13:Starfield.esm",
+   "edid": "Skill_Rejuvenation",
+   "category": "physical",
+   "tier": 4,
+   "name": {
+    "en": "Rejuvenation",
+    "fr": "Régénération"
+   },
+   "description": {
+    "en": "Utilizing both ancient meditation techniques and newly developed breathing exercises, it's possible for one to actually trigger their body's natural healing ability.",
+    "fr": "En utilisant à la fois des techniques de méditation anciennes et des exercices de respiration développés récemment, il est possible d'activer les capacités naturelles de soin de son corps."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Slowly regenerate health outside of combat.",
+      "fr": "Vous régénérez lentement votre santé hors combat."
+     },
+     "challenge": {
+      "en": "Fall below 25% health 3 times and fully heal.",
+      "fr": "Tombez en dessous de 25 % de santé 3 fois et soignez-vous totalement."
+     }
+    },
+    {
+     "desc": {
+      "en": "Regenerate health more quickly outside of combat.",
+      "fr": "Vous régénérez votre santé hors combat plus rapidement."
+     },
+     "challenge": {
+      "en": "Fall below 25% health 8 times and fully heal.",
+      "fr": "Tombez en dessous de 25 % de santé 8 fois et soignez-vous totalement."
+     }
+    },
+    {
+     "desc": {
+      "en": "Regenerate some health in combat. You can now heal from Environmental Damage while resting.",
+      "fr": "Regenerate some health in combat. You can now heal from Environmental Damage while resting."
+     },
+     "challenge": {
+      "en": "Heal at least 25% Environmental Damage 4 times.",
+      "fr": "Heal at least 25% Environmental Damage 4 times."
+     }
+    },
+    {
+     "desc": {
+      "en": "Regenerate health more quickly in and out of combat. Restore more health when suffering from Environmental Damage.",
+      "fr": "Regenerate health more quickly in and out of combat. Restore more health when suffering from Environmental Damage."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "rbt_Extremophile.esm",
+   "by": "Extremophile - Environmental Gameplay",
+   "new": false,
+   "touched_by": [
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+    "Deadly Effective - Minimal Skills Overhaul",
+    "Extremophile - Environmental Gameplay"
+   ]
+  },
+  {
+   "id": "2C5A8E:Starfield.esm",
+   "edid": "Skill_Commerce",
+   "category": "social",
+   "tier": 1,
+   "name": {
+    "en": "Commerce",
+    "fr": "Commerce"
+   },
+   "description": {
+    "en": "In the Settled Systems' free market economy, almost anyone with the right skillset can open and run a successful business.",
+    "fr": "Dans l'économie de marché des Systèmes occupés, toute personne compétente peut ouvrir et gérer une affaire florissante."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Get a 10% discount when buying in major cities.",
+      "fr": "Get a 10% discount when buying in major cities."
+     },
+     "challenge": {
+      "en": "Spend 5000 credits with merchants.",
+      "fr": "Spend 5000 credits with merchants."
+     }
+    },
+    {
+     "desc": {
+      "en": "Get a 20% discount anywhere.",
+      "fr": "Get a 20% discount anywhere."
+     },
+     "challenge": {
+      "en": "Sell 15 unique items.",
+      "fr": "Sell 15 unique items."
+     }
+    },
+    {
+     "desc": {
+      "en": "Sell items for more of their value in major cities. Get a small discount on all ships.",
+      "fr": "Sell items for more of their value in major cities. Get a small discount on all ships."
+     },
+     "challenge": {
+      "en": "Spend or make 3000 credits in trade.",
+      "fr": "Spend or make 3000 credits in trade."
+     }
+    },
+    {
+     "desc": {
+      "en": "Get a 30% discount in populated areas. Sell items for even more of their value anywhere.",
+      "fr": "Get a 30% discount in populated areas. Sell items for even more of their value anywhere."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "rbt_SpacefaringEconomy.esm",
+   "by": "Spacefaring Economy",
+   "new": false,
+   "touched_by": [
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+    "Spacefaring Economy"
+   ]
+  },
+  {
+   "id": "2C5A94:Starfield.esm",
+   "edid": "Skill_Gastronomy",
+   "category": "social",
+   "tier": 1,
+   "name": {
+    "en": "Gastronomy",
+    "fr": "Gastronomie"
+   },
+   "description": {
+    "en": "Access to brand new worlds means access to brand new ingredients, and there is almost no limit to the delicious foods and drinks a talented chef can prepare.",
+    "fr": "Accéder à de nouveaux mondes signifie accéder à de nouveaux ingrédients, et les talents d'un chef bien approvisionné n'ont quasiment aucune limite."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "You can craft specialty food and drinks, and research additional recipes at a Research Lab.",
+      "fr": "Vous pouvez préparer des produits alimentaires spécialisés et mener des recherches sur de nouvelles recettes dans un laboratoire de recherche."
+     },
+     "challenge": {
+      "en": "Create 40 food or drink items.",
+      "fr": "Create 40 food or drink items."
+     }
+    },
+    {
+     "desc": {
+      "en": "You can research and craft gourmet food and drinks.",
+      "fr": "Vous pouvez mener des recherches et préparer des produits alimentaires gourmets."
+     },
+     "challenge": {
+      "en": "Create 25 Gourmet food and drink items.",
+      "fr": "Create 25 Gourmet food and drink items."
+     }
+    },
+    {
+     "desc": {
+      "en": "You can research and craft food and drink delicacies.",
+      "fr": "Vous pouvez mener des recherches et préparer des produits alimentaires délicats."
+     },
+     "challenge": {
+      "en": "Create 5 unique Exotic food or drink items.",
+      "fr": "Create 5 unique Exotic food or drink items."
+     }
+    },
+    {
+     "desc": {
+      "en": "Crafting food and drinks occasionally doesn't use up resources. You can research and craft exotic recipes.",
+      "fr": "Fabriquer de la nourriture ne consomme parfois aucune ressource. Vous pouvez mener des recherches et fabriquer des recettes exotiques."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "rbt_DeadlyEffective.esm",
+   "by": "Deadly Effective - Minimal Skills Overhaul",
+   "new": false,
+   "touched_by": [
+    "Deadly Effective - Minimal Skills Overhaul"
+   ]
+  },
+  {
+   "id": "22EC82:Starfield.esm",
+   "edid": "Skill_Persuasion",
+   "category": "social",
+   "tier": 1,
+   "name": {
+    "en": "Persuasion",
+    "fr": "Persuasion"
+   },
+   "description": {
+    "en": "In the Settled Systems, the nuanced ability to listen and discuss can often accomplish far more than simply shooting first and asking questions later.",
+    "fr": "Dans les Systèmes occupés, ceux qui maîtrisent l'art subtil d'écouter et de parler peuvent souvent aller plus loin que ceux qui préfèrent tirer d'abord et poser les questions ensuite."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "10% increased chance of success when persuading someone.",
+      "fr": "Augmente vos chances de réussir les défis de persuasion de 10 %."
+     },
+     "challenge": {
+      "en": "Succeed in 3 speech challenges.",
+      "fr": "Réussissez 3 défis d'éloquence."
+     }
+    },
+    {
+     "desc": {
+      "en": "20% increased chance of success when persuading someone.",
+      "fr": "Augmente vos chances de réussir les défis de persuasion de 20 %."
+     },
+     "challenge": {
+      "en": "Succeed in 5 speech challenges.",
+      "fr": "Réussissez 5 défis d'éloquence."
+     }
+    },
+    {
+     "desc": {
+      "en": "30% increased chance of success when persuading someone.",
+      "fr": "Augmente vos chances de réussir les défis de persuasion de 30 %."
+     },
+     "challenge": {
+      "en": "Succeed in 10 speech challenges.",
+      "fr": "Réussissez 10 défis d'éloquence."
+     }
+    },
+    {
+     "desc": {
+      "en": "50% increased chance of success when persuading someone.",
+      "fr": "Augmente vos chances de réussir les défis de persuasion de 50 %."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "Starfield.esm",
+   "by": null,
+   "new": false,
+   "touched_by": []
+  },
+  {
+   "id": "28B853:Starfield.esm",
+   "edid": "Skill_Scavenging",
+   "category": "social",
+   "tier": 1,
+   "name": {
+    "en": "Resourcefulness",
+    "fr": "Resourcefulness"
+   },
+   "description": {
+    "en": "Some possess an uncanny talent for uncovering essential supplies, like ammo and health packs, with a sharp eye for hidden resources others might miss.",
+    "fr": "Some possess an uncanny talent for uncovering essential supplies, like ammo and health packs, with a sharp eye for hidden resources others might miss."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Your keen eye uncovers extra ammo stashed in containers, along with rare components perfect for crafting even more.",
+      "fr": "Your keen eye uncovers extra ammo stashed in containers, along with rare components perfect for crafting even more."
+     },
+     "challenge": {
+      "en": "Loot 10 containers.",
+      "fr": "Loot 10 containers."
+     }
+    },
+    {
+     "desc": {
+      "en": "You uncover hidden credits while searching containers, with a rare chance of stumbling upon a jackpot.",
+      "fr": "You uncover hidden credits while searching containers, with a rare chance of stumbling upon a jackpot."
+     },
+     "challenge": {
+      "en": "Loot 25 containers.",
+      "fr": "Loot 25 containers."
+     }
+    },
+    {
+     "desc": {
+      "en": "Find extra aid items like Med Packs or chems in containers, and occasionally uncover valuable goods like Astra",
+      "fr": "Find extra aid items like Med Packs or chems in containers, and occasionally uncover valuable goods like Astra"
+     },
+     "challenge": {
+      "en": "Loot 50 containers.",
+      "fr": "Loot 50 containers."
+     }
+    },
+    {
+     "desc": {
+      "en": "Gain an additional 100 carry weight for stowing vital supplies. Tracked resources now highlight in your hand scanner.",
+      "fr": "Gain an additional 100 carry weight for stowing vital supplies. Tracked resources now highlight in your hand scanner."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "RoyalGalaxy.esm",
+   "by": "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+   "new": false,
+   "touched_by": [
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration"
+   ]
+  },
+  {
+   "id": "2C555B:Starfield.esm",
+   "edid": "Skill_Theft",
+   "category": "social",
+   "tier": 1,
+   "name": {
+    "en": "Theft",
+    "fr": "Vol"
+   },
+   "description": {
+    "en": "While not entirely honorable, and certainly not legal, it is nonetheless occasionally necessary to discreetly remove property from someone's person.",
+    "fr": "Bien que cela ne soit pas très honorable, et tout à fait illégal, il est parfois nécessaire de subtiliser certains biens à certaines personnes."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "20% greater chance to successfully pickpocket.",
+      "fr": "20% greater chance to successfully pickpocket."
+     },
+     "challenge": {
+      "en": "Successfully pickpocket 3 times.",
+      "fr": "Successfully pickpocket 3 times."
+     }
+    },
+    {
+     "desc": {
+      "en": "30% greater chance to successfully pickpocket.",
+      "fr": "30% greater chance to successfully pickpocket."
+     },
+     "challenge": {
+      "en": "Successfully pickpocket 5 times.",
+      "fr": "Successfully pickpocket 5 times."
+     }
+    },
+    {
+     "desc": {
+      "en": "40% greater chance to successfully pickpocket.",
+      "fr": "40% greater chance to successfully pickpocket."
+     },
+     "challenge": {
+      "en": "Successfully pickpocket 10 times.",
+      "fr": "Successfully pickpocket 10 times."
+     }
+    },
+    {
+     "desc": {
+      "en": "50% greater chance to successfully pickpocket. Can now pickpocket holstered weapons.",
+      "fr": "50 % de chances supplémentaires de réussir à faire les poches de votre cible. Vous pouvez désormais voler les armes dans leur étui."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "RoyalGalaxy.esm",
+   "by": "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+   "new": false,
+   "touched_by": [
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration"
+   ]
+  },
+  {
+   "id": "2CFCAF:Starfield.esm",
+   "edid": "Skill_Deception",
+   "category": "social",
+   "tier": 2,
+   "name": {
+    "en": "Deception",
+    "fr": "Tromperie"
+   },
+   "description": {
+    "en": "Smuggling and piracy are both immoral and highly illegal, and considered plagues upon the Settled Systems. Of course, motivated individuals are rarely dissuaded by public opinion.",
+    "fr": "Smuggling and piracy are both immoral and highly illegal, and considered plagues upon the Settled Systems. Of course, motivated individuals are rarely dissuaded by public opinion."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Ships 20% stronger will automatically surrender to piracy demands. Enemy contraband scans are 10% less effective.",
+      "fr": "Ships 20% stronger will automatically surrender to piracy demands. Enemy contraband scans are 10% less effective."
+     },
+     "challenge": {
+      "en": "Convince 5 ships to surrender.",
+      "fr": "Persuadez 5 vaisseaux de se rendre."
+     }
+    },
+    {
+     "desc": {
+      "en": "Ships 40% stronger will automatically surrender to piracy demands. Enemy contraband scans are 20% less effective.",
+      "fr": "Ships 40% stronger will automatically surrender to piracy demands. Enemy contraband scans are 20% less effective."
+     },
+     "challenge": {
+      "en": "Convince 10 ships to surrender.",
+      "fr": "Persuadez 10 vaisseaux de se rendre."
+     }
+    },
+    {
+     "desc": {
+      "en": "Ships 60% stronger will automatically surrender to piracy demands. Enemy contraband scans are 30% less effective.",
+      "fr": "Ships 60% stronger will automatically surrender to piracy demands. Enemy contraband scans are 30% less effective."
+     },
+     "challenge": {
+      "en": "Convince 20 ships to surrender.",
+      "fr": "Persuadez 20 vaisseaux de se rendre."
+     }
+    },
+    {
+     "desc": {
+      "en": "Ships 100% stronger will automatically surrender to piracy demands. Enemy contraband scans are 50% less effective.",
+      "fr": "Ships 100% stronger will automatically surrender to piracy demands. Enemy contraband scans are 50% less effective."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "rbt_DeadlyEffective.esm",
+   "by": "Deadly Effective - Minimal Skills Overhaul",
+   "new": false,
+   "touched_by": [
+    "Deadly Effective - Minimal Skills Overhaul"
+   ]
+  },
+  {
+   "id": "2C59E1:Starfield.esm",
+   "edid": "Skill_Diplomacy",
+   "category": "social",
+   "tier": 2,
+   "name": {
+    "en": "Diplomacy",
+    "fr": "Diplomatie"
+   },
+   "description": {
+    "en": "When a situation calls for words and not weapons, it's best to rely on those trained in statecraft and de-escalation.",
+    "fr": "Lorsqu'une situation requiert des mots plus que des armes, mieux vaut s'en remettre aux personnes formées à la diplomatie et au désamorçage des conflits."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "You can temporarily Pacify human enemies at or below your level.",
+      "fr": "You can temporarily Pacify human enemies at or below your level."
+     },
+     "challenge": {
+      "en": "Successfully use Diplomacy on 5 different people.",
+      "fr": "Réussissez à user de diplomatie sur 5 personnes différentes."
+     }
+    },
+    {
+     "desc": {
+      "en": "You can temporarily Pacify human enemies at or slightly above your level.",
+      "fr": "You can temporarily Pacify human enemies at or slightly above your level."
+     },
+     "challenge": {
+      "en": "Successfully use Diplomacy on 25 different people.",
+      "fr": "Réussissez à user de diplomatie sur 25 personnes différentes."
+     }
+    },
+    {
+     "desc": {
+      "en": "You can temporarily Pacify human enemies at or well above your level.",
+      "fr": "You can temporarily Pacify human enemies at or well above your level."
+     },
+     "challenge": {
+      "en": "Successfully use Diplomacy on 50 different people.",
+      "fr": "Réussissez à user de diplomatie sur 50 personnes différentes."
+     }
+    },
+    {
+     "desc": {
+      "en": "You can permanently Pacify humans.",
+      "fr": "You can permanently Pacify humans."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "rbt_DeadlyEffective.esm",
+   "by": "Deadly Effective - Minimal Skills Overhaul",
+   "new": false,
+   "touched_by": [
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+    "Deadly Effective - Minimal Skills Overhaul"
+   ]
+  },
+  {
+   "id": "2C59DE:Starfield.esm",
+   "edid": "Skill_Intimidation",
+   "category": "social",
+   "tier": 2,
+   "name": {
+    "en": "Intimidation",
+    "fr": "Intimidation"
+   },
+   "description": {
+    "en": "The ability to strike fear into an opponent, causing them to flee so that you can escape or attack first, can prove critical in a battle.",
+    "fr": "La capacité à terroriser l'adversaire, dont la fuite permet de vous échapper ou d'attaquer en premier, peut s'avérer décisive au combat."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "You can force a target NPC at or below your level to flee for a limited time.",
+      "fr": "Vous pouvez forcer un PNJ ciblé de votre niveau ou inférieur à s'enfuir pour une durée limitée."
+     },
+     "challenge": {
+      "en": "Successfully Intimidate 5 different people.",
+      "fr": "Intimidez avec succès 5 personnes différentes."
+     }
+    },
+    {
+     "desc": {
+      "en": "You can force a target NPC up to 10 levels higher than you to flee for a limited time.",
+      "fr": "Vous pouvez forcer un PNJ ciblé de maximum 10 niveaux de plus que vous à s'enfuir pour une durée limitée."
+     },
+     "challenge": {
+      "en": "Successfully Intimidate 10 different people.",
+      "fr": "Successfully Intimidate 10 different people."
+     }
+    },
+    {
+     "desc": {
+      "en": "You can force a target NPC up to 20 levels higher than you to flee for a limited time.",
+      "fr": "Vous pouvez forcer un PNJ ciblé de maximum 20 niveaux de plus que vous à s'enfuir pour une durée limitée."
+     },
+     "challenge": {
+      "en": "Successfully Intimidate 20 different people.",
+      "fr": "Successfully Intimidate 20 different people."
+     }
+    },
+    {
+     "desc": {
+      "en": "Intimidated targets now flee for substantial amount of time.",
+      "fr": "Les cibles intimidées s'enfuient désormais pour une durée prolongée."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "RoyalGalaxy.esm",
+   "by": "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+   "new": false,
+   "touched_by": [
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration"
+   ]
+  },
+  {
+   "id": "2C53AE:Starfield.esm",
+   "edid": "Skill_Isolation",
+   "category": "social",
+   "tier": 2,
+   "name": {
+    "en": "Isolation",
+    "fr": "Isolement"
+   },
+   "description": {
+    "en": "By eschewing team tactics and embracing the the advantages of \"lone wolf\" operations, one can vastly improve their combat effectiveness.",
+    "fr": "Renforcez vos capacités de combat en abandonnant les tactiques de groupe et en embrassant les avantages des opérations en “loup solitaire”."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "All weapons deal more damage when travelling alone.",
+      "fr": "All weapons deal more damage when travelling alone."
+     },
+     "challenge": {
+      "en": "Kill 40 enemies while not in command of a follower.",
+      "fr": "Kill 40 enemies while not in command of a follower."
+     }
+    },
+    {
+     "desc": {
+      "en": "Receive less damage when travelling alone.",
+      "fr": "Receive less damage when travelling alone."
+     },
+     "challenge": {
+      "en": "Kill 60 enemies while not in command of a follower.",
+      "fr": "Kill 60 enemies while not in command of a follower."
+     }
+    },
+    {
+     "desc": {
+      "en": "25% harder to detect when travelling alone.",
+      "fr": "25% harder to detect when travelling alone."
+     },
+     "challenge": {
+      "en": "Kill 80 enemies while not in command of a follower.",
+      "fr": "Kill 80 enemies while not in command of a follower."
+     }
+    },
+    {
+     "desc": {
+      "en": "Small chance to cause enemies to flee when fighting alone.",
+      "fr": "Small chance to cause enemies to flee when fighting alone."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "rbt_DeadlyEffective.esm",
+   "by": "Deadly Effective - Minimal Skills Overhaul",
+   "new": false,
+   "touched_by": [
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+    "Deadly Effective - Minimal Skills Overhaul"
+   ]
+  },
+  {
+   "id": "2C555F:Starfield.esm",
+   "edid": "Skill_Negotiation",
+   "category": "social",
+   "tier": 2,
+   "name": {
+    "en": "Negotiation",
+    "fr": "Négociation"
+   },
+   "description": {
+    "en": "In certain, more challenging communications, skillfully supplementing words with credits may help achieve the desired results.",
+    "fr": "Certaines conversations inextricables peuvent être habilement tournées à votre avantage par la substitution de quelques crédits en lieu et place d'arguments."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "You now have access to Bribery in speech challenges.",
+      "fr": "Vous avez maintenant accès aux pots-de-vin pour les défis d'éloquence."
+     },
+     "challenge": {
+      "en": "Bribe 3 times through persuasion.",
+      "fr": "Soudoyez 3 fois à l'aide de la persuasion."
+     }
+    },
+    {
+     "desc": {
+      "en": "Reduces bribery cost by 25%.",
+      "fr": "Les pots-de-vin coûtent 25 % de moins."
+     },
+     "challenge": {
+      "en": "Bribe 5 times through persuasion.",
+      "fr": "Soudoyez 5 fois à l'aide de la persuasion."
+     }
+    },
+    {
+     "desc": {
+      "en": "Reduces bribery cost by 50%.",
+      "fr": "Les pots-de-vin coûtent 50 % de moins."
+     },
+     "challenge": {
+      "en": "Bribe 10 times through persuasion.",
+      "fr": "Soudoyez 10 fois à l'aide de la persuasion."
+     }
+    },
+    {
+     "desc": {
+      "en": "Occasionally, bribery won't cost any money.",
+      "fr": "Parfois, les pots-de-vin seront gratuits."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "Starfield.esm",
+   "by": null,
+   "new": false,
+   "touched_by": []
+  },
+  {
+   "id": "2C555D:Starfield.esm",
+   "edid": "Skill_Instigation",
+   "category": "social",
+   "tier": 3,
+   "name": {
+    "en": "Instigation",
+    "fr": "Provocation"
+   },
+   "description": {
+    "en": "When combat is required, it can be advantageous to convince others to do the fighting for you.",
+    "fr": "Lorsque le combat devient inévitable, il peut être intéressant de convaincre les autres de faire le sale boulot à votre place."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "You can force a target NPC at or below your level to attack their allies for a limited time.",
+      "fr": "Vous pouvez forcer un PNJ ciblé de votre niveau ou inférieur à attaquer ses alliés pour une durée limitée."
+     },
+     "challenge": {
+      "en": "Successfully Instigate 5 different people.",
+      "fr": "Provoquez avec succès 5 personnes différentes."
+     }
+    },
+    {
+     "desc": {
+      "en": "You can force a target NPC up to 10 levels higher than you to attack their allies for a limited time.",
+      "fr": "Vous pouvez forcer un PNJ ciblé de maximum 10 niveaux de plus que vous à attaquer ses alliés pour une durée limitée."
+     },
+     "challenge": {
+      "en": "Successfully Instigate 10 different people.",
+      "fr": "Successfully Instigate 10 different people."
+     }
+    },
+    {
+     "desc": {
+      "en": "You can force a target NPC up to 20 levels higher than you to attack their allies for a limited time.",
+      "fr": "Vous pouvez forcer un PNJ ciblé de maximum 20 niveaux de plus que vous à attaquer ses alliés pour une durée limitée."
+     },
+     "challenge": {
+      "en": "Successfully Instigate 20 different people.",
+      "fr": "Successfully Instigate 20 different people."
+     }
+    },
+    {
+     "desc": {
+      "en": "Enemies affected by Instigation will attack their allies until they are dead.",
+      "fr": "Les adversaires sous l'effet de Provocation attaqueront leurs alliés jusqu'à la mort."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "RoyalGalaxy.esm",
+   "by": "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+   "new": false,
+   "touched_by": [
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration"
+   ]
+  },
+  {
+   "id": "2C890D:Starfield.esm",
+   "edid": "Skill_Leadership",
+   "category": "social",
+   "tier": 3,
+   "name": {
+    "en": "Leadership",
+    "fr": "Leadership"
+   },
+   "description": {
+    "en": "Teamwork is the cornerstone of galactic survival, and nothing motivates a team more than a trained, decisive leader.",
+    "fr": "La coopération est capitale pour survivre dans l'espace, et rien ne motive autant une équipe qu'un chef compétent et capable de prendre des décisions."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Companions gain affinity faster.",
+      "fr": "Companions gain affinity faster."
+     },
+     "challenge": {
+      "en": "Travel to 60 unique planets with your follower.",
+      "fr": "Travel to 60 unique planets with your follower."
+     }
+    },
+    {
+     "desc": {
+      "en": "Companions have more health and carrying capacity.",
+      "fr": "Companions have more health and carrying capacity."
+     },
+     "challenge": {
+      "en": "Kill 40 enemies with your follower.",
+      "fr": "Kill 40 enemies with your follower."
+     }
+    },
+    {
+     "desc": {
+      "en": "Companions will occasionally heal you from low health.",
+      "fr": "Companions will occasionally heal you from low health."
+     },
+     "challenge": {
+      "en": "Land on 1 unique planets with your follower.",
+      "fr": "Land on 1 unique planets with your follower."
+     }
+    },
+    {
+     "desc": {
+      "en": "Doubles the bonuses of Combat and Physical Crew Skills on Companions. Companions have a chance to pick themselves up from a downed state.",
+      "fr": "Double les bonus des compétences d'équipage de combat et physiques chez les compagnons. Ces derniers ont une chance de se relever seuls lorsqu'ils sont mis à terre."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "rbt_DeadlyEffective.esm",
+   "by": "Deadly Effective - Minimal Skills Overhaul",
+   "new": false,
+   "touched_by": [
+    "Unofficial Starfield Patch - USFP",
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+    "Deadly Effective - Minimal Skills Overhaul"
+   ]
+  },
+  {
+   "id": "23826F:Starfield.esm",
+   "edid": "Skill_OutpostManagement",
+   "category": "social",
+   "tier": 3,
+   "name": {
+    "en": "Outpost Management",
+    "fr": "Gestion d'avant-poste"
+   },
+   "description": {
+    "en": "While constructing an outpost offers its own challenges, properly managing that outpost takes a special personality type, and specialized training.",
+    "fr": "Bien que la construction d'un avant-poste présente déjà ses propres défis, sa bonne gestion nécessite une personnalité et un entraînement spéciaux."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "Additional cargo links can be placed at outposts.",
+      "fr": "Des liaisons supplémentaires peuvent être placées dans les avant-postes."
+     },
+     "challenge": {
+      "en": "Build cargo links on 6 different planets.",
+      "fr": "Construisez des liaisons sur 6 planètes différentes."
+     }
+    },
+    {
+     "desc": {
+      "en": "Additional robots can be constructed at outposts.",
+      "fr": "Des robots supplémentaires peuvent être construits dans les avant-postes."
+     },
+     "challenge": {
+      "en": "Construct 8 robots at outposts.",
+      "fr": "Construisez 8 robots dans des avant-postes."
+     }
+    },
+    {
+     "desc": {
+      "en": "Additional crew can be assigned at outposts.",
+      "fr": "Vous pouvez assigner davantage de personnel dans les avant-postes."
+     },
+     "challenge": {
+      "en": "Construct 10 crew stations at outposts.",
+      "fr": "Construisez 10 stations d'équipage dans des avant-postes."
+     }
+    },
+    {
+     "desc": {
+      "en": "Outpost extractors produce twice as fast.",
+      "fr": "Les extracteurs d'avant-poste produisent deux fois plus vite."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "Starfield.esm",
+   "by": null,
+   "new": false,
+   "touched_by": []
+  },
+  {
+   "id": "2C5555:Starfield.esm",
+   "edid": "Skill_Manipulation",
+   "category": "social",
+   "tier": 4,
+   "name": {
+    "en": "Manipulation",
+    "fr": "Manipulation"
+   },
+   "description": {
+    "en": "Recent studies have shown that suggestion is not an art, but a science, and as such can be weaponized to exert control over the susceptible.",
+    "fr": "Des études récentes ont démontré que la persuasion n'est pas un art, mais une science, et qu'elle peut donc devenir une arme pour influencer les esprits faibles."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "You can force a target NPC at or below your level to obey commands for a limited time.",
+      "fr": "Vous pouvez contraindre un PNJ ciblé de votre niveau ou inférieur à obéir à vos ordres pour une durée limitée."
+     },
+     "challenge": {
+      "en": "Successfully Manipulate 5 different people.",
+      "fr": "Manipulez avec succès 5 personnes différentes."
+     }
+    },
+    {
+     "desc": {
+      "en": "You can force a target NPC up to 10 levels higher than you to obey commands for a limited time.",
+      "fr": "Vous pouvez contraindre un PNJ ciblé de maximum 10 niveaux de plus que vous à obéir à vos ordres pour une durée limitée."
+     },
+     "challenge": {
+      "en": "Successfully Manipulate 10 different people.",
+      "fr": "Successfully Manipulate 10 different people."
+     }
+    },
+    {
+     "desc": {
+      "en": "You can force a target NPC up to 20 levels higher than you to obey commands for a limited time.",
+      "fr": "Vous pouvez contraindre un PNJ ciblé de maximum 20 niveaux de plus que vous à obéir à vos ordres pour une durée limitée."
+     },
+     "challenge": {
+      "en": "Successfully Manipulate 20 different people.",
+      "fr": "Successfully Manipulate 20 different people."
+     }
+    },
+    {
+     "desc": {
+      "en": "Manipulated targets now obey commands for a substantial amount of time.",
+      "fr": "Les cibles manipulées obéissent désormais à vos ordres pour une durée prolongée."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "RoyalGalaxy.esm",
+   "by": "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+   "new": false,
+   "touched_by": [
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration"
+   ]
+  },
+  {
+   "id": "2C53B3:Starfield.esm",
+   "edid": "Skill_ShipCommand",
+   "category": "social",
+   "tier": 4,
+   "name": {
+    "en": "Ship Command",
+    "fr": "Commandement de vaisseau"
+   },
+   "description": {
+    "en": "They say a ship is only as good as its crew, but that is contingent upon that crew having the right captain to lead them.",
+    "fr": "On dit qu'un vaisseau n'est rien sans un bon équipage, mais cela n'est vrai que si cet équipage est mené par le bon capitaine."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "You can have up to four active crew members.",
+      "fr": "Vous pouvez avoir jusqu'à quatre membres d'équipage actifs."
+     },
+     "challenge": {
+      "en": "Grav Jump 40 times with a Crew of 3 or more.",
+      "fr": "Grav Jump 40 times with a Crew of 3 or more."
+     }
+    },
+    {
+     "desc": {
+      "en": "You can have up to five active crew members.",
+      "fr": "Vous pouvez avoir jusqu'à cinq membres d'équipage actifs."
+     },
+     "challenge": {
+      "en": "Destroy or board 25 ships with a Crew of 4 or more.",
+      "fr": "Destroy or board 25 ships with a Crew of 4 or more."
+     }
+    },
+    {
+     "desc": {
+      "en": "You can have up to six active crew members.",
+      "fr": "Vous pouvez avoir jusqu'à six membres d'équipage actifs."
+     },
+     "challenge": {
+      "en": "Destroy or board 50 ships with a crew of 5 or more.",
+      "fr": "Détruisez ou abordez 50 vaisseaux avec un équipage de 5 membres ou plus."
+     }
+    },
+    {
+     "desc": {
+      "en": "You can have up to eight active crew members.",
+      "fr": "Vous pouvez avoir jusqu'à huit membres d'équipage actifs."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "rbt_DeadlyEffective.esm",
+   "by": "Deadly Effective - Minimal Skills Overhaul",
+   "new": false,
+   "touched_by": [
+    "Royal Galaxy - A Starfield Revamp And Cut Content Restoration",
+    "Deadly Effective - Minimal Skills Overhaul"
+   ]
+  },
+  {
+   "id": "2C53B0:Starfield.esm",
+   "edid": "Skill_Xenosociology",
+   "category": "social",
+   "tier": 4,
+   "name": {
+    "en": "Xenosociology",
+    "fr": "Xénosociologie"
+   },
+   "description": {
+    "en": "While sentient life has yet to be discovered, the galaxy's alien species are generally intelligent enough to be susceptible to the power of suggestion.",
+    "fr": "Bien qu'aucune forme de vie intelligente n'ait encore été découverte, les espèces aliens de la galaxie sont en général suffisamment développées pour être réceptives aux pouvoirs de persuasion."
+   },
+   "ranks": [
+    {
+     "desc": {
+      "en": "You can force a target alien creature up to 10 levels higher than you to stop fighting for a limited time.",
+      "fr": "Vous pouvez forcer une créature alien ciblée de maximum 10 niveaux de plus que vous à arrêter de se battre pour une durée limitée."
+     },
+     "challenge": {
+      "en": "Successfully use Pacify on 15 different aliens.",
+      "fr": "Utilisez Pacifier avec succès sur 15 aliens différents."
+     }
+    },
+    {
+     "desc": {
+      "en": "You can force a target alien creature up to 10 levels higher than you to flee for a limited time.",
+      "fr": "Vous pouvez forcer une créature alien ciblée de maximum 10 niveaux de plus que vous à s'enfuir pour une durée limitée."
+     },
+     "challenge": {
+      "en": "Successfully use Flee on 15 different aliens.",
+      "fr": "Utilisez Fuir avec succès sur 15 aliens différents."
+     }
+    },
+    {
+     "desc": {
+      "en": "You can force a target alien creature up to 10 levels higher than you to attack their allies for a limited time.",
+      "fr": "Vous pouvez forcer une créature alien ciblée de maximum 10 niveaux de plus que vous à attaquer ses alliés pour une durée limitée."
+     },
+     "challenge": {
+      "en": "Successfully use Frenzy on 15 different aliens.",
+      "fr": "Utilisez Frénésie avec succès sur 15 aliens différents."
+     }
+    },
+    {
+     "desc": {
+      "en": "You can force a target creature up to 10 levels higher than you to obey commands for a limited time.",
+      "fr": "Vous pouvez contraindre une créature ciblée de maximum 10 niveaux de plus que vous à obéir à vos ordres pour une durée limitée."
+     },
+     "challenge": {
+      "en": "",
+      "fr": ""
+     }
+    }
+   ],
+   "plugin": "Starfield.esm",
+   "by": null,
+   "new": false,
+   "touched_by": []
+  }
+ ],
+ "gmst": {
+  "iPerkSkillGroupUnlockTargetNumber": {
+   "plugin": "RoyalGalaxy.esm",
+   "raw": "03000000",
+   "first_plugin": "Starfield.esm",
+   "first_raw": "04000000"
+  }
+ }
+}

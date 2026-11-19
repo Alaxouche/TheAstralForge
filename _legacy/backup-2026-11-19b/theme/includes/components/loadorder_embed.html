@@ -1,0 +1,10 @@
+<div class="embed" data-embed>
+  <div class="embed__bar">
+    <span>{{ include.title }}</span>
+    <span class="embed__actions">
+      <button type="button" data-embed-full><span lang="en">Fullscreen</span><span lang="fr">Plein écran</span></button>
+      <a href="{{ include.src }}" target="_blank" rel="noopener noreferrer"><span lang="en">Open</span><span lang="fr">Ouvrir</span> ↗</a>
+    </span>
+  </div>
+  <iframe src="{{ include.src }}" title="{{ include.title }}" loading="lazy" width="100%" height="760"></iframe>
+</div>

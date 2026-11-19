@@ -5,11 +5,14 @@ search_exclude: true
 nav_exclude: true
 layout: skyground_readme
 modlist_id: no-mans-sky-explorer
-image: /assets/Images/no-mans-sky/background.webp
+game: "No Man's Sky"
+image: /assets/Images/no-mans-sky/screenshots/275850_72.webp
+gallery_path: "/assets/Images/no-mans-sky/screenshots/"
 project_banner:
-  image: /assets/Images/no-mans-sky/background.webp
+  image: /assets/Images/no-mans-sky/screenshots/275850_72.webp
   accent: "#ff7b29"
   subtitle: "Exploration-first list with visuals, QoL, and stability tweaks."
+  subtitle_fr: "Une liste tournée vers l'exploration : visuels, confort de jeu et stabilité."
   stats:
     - label: Mods
       value: "220+"

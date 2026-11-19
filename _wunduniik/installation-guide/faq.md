@@ -50,7 +50,7 @@ Before updating, rename any mods you added by adding the prefix `[NoDelete]`. Th
 You can copy the `loadorder.txt` from your profiles folder within the Wunduniik installation. Save the copy outside of the Wunduniik folder so it is not deleted during an update.
 
 <p align="center">
-  <img src="https://static.wixstatic.com/media/579922_eeab109cb883485ba25bc1880e60020a~mv2.png/v1/fill/w_467,h_319,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/c67f3acbb2da45cb819eb47293a64e2f840b48423e1d883fc6815947b2db2114.png">
+  <img src="/assets/Images/guides/eeab109cb883485ba25bc1880e60020a-e33892.webp" alt="Mod list with ticked mods such as Colovian Prince Set and Dawnguard Arsenal" width="852" height="582">
 </p>
 
 If you have more questions, join my Discord Server!
@@ -95,7 +95,7 @@ Avant de mettre à jour, renommez les mods que vous avez ajoutés en ajoutant le
 Vous pouvez copier le fichier `loadorder.txt` depuis votre dossier de profils dans l'installation de Wunduniik. Sauvegardez la copie en dehors du dossier Wunduniik pour qu'elle ne soit pas supprimée lors d'une mise à jour.
 
 <p align="center">
-  <img src="https://static.wixstatic.com/media/579922_eeab109cb883485ba25bc1880e60020a~mv2.png/v1/fill/w_467,h_319,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/c67f3acbb2da45cb819eb47293a64e2f840b48423e1d883fc6815947b2db2114.png">
+  <img src="/assets/Images/guides/eeab109cb883485ba25bc1880e60020a-e33892.webp" alt="Liste de mods cochés, dont Colovian Prince Set et Dawnguard Arsenal" width="852" height="582">
 </p>
 
 Si vous avez d'autres questions, rejoignez mon serveur Discord !

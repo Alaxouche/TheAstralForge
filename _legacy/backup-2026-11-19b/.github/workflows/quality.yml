@@ -1,0 +1,40 @@
+name: Quality Checks
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Build site
+        run: npm run build
+
+      # Blocking: broken internal links / images, images without alt, images hotlinked from other sites
+      - name: Check internal links and images
+        run: npm run check
+
+      # External links (Nexus, Discord, Patreon...) often refuse bots: reported, not blocking
+      - name: External link check
+        uses: lycheeverse/lychee-action@v1
+        continue-on-error: true
+        with:
+          args: >-
+            --verbose
+            --no-progress
+            --accept 200,429
+            --exclude-mail
+            _site/**/*.html

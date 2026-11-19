@@ -82,7 +82,7 @@ Some files use special characters ("ç", "ä") that can fail on some systems. To
 - Restart the download, then revert the settings.
 
 <p align="center">
- <img src="https://static.wixstatic.com/media/579922_f5f5162f09f44b7dbcdf7719ae3699df~mv2.png/v1/fill/w_578,h_542,al_c,q_85,enc_avif,quality_auto/579922_f5f5162f09f44b7dbcdf7719ae3699df~mv2.png">
+ <img src="/assets/Images/guides/f5f5162f09f44b7dbcdf7719ae3699df-fa56c3.webp" alt="Windows Region settings: system locale English (United States), Beta: Use Unicode UTF-8 unticked" width="578" height="542">
 </p>
 
 </div>
@@ -99,7 +99,7 @@ Certains fichiers utilisent des caractères spéciaux (« ç », « ä ») qui p
 - Relancez le téléchargement, puis revenez aux paramètres d'origine.
 
 <p align="center">
- <img src="https://static.wixstatic.com/media/579922_f5f5162f09f44b7dbcdf7719ae3699df~mv2.png/v1/fill/w_578,h_542,al_c,q_85,enc_avif,quality_auto/579922_f5f5162f09f44b7dbcdf7719ae3699df~mv2.png">
+ <img src="/assets/Images/guides/f5f5162f09f44b7dbcdf7719ae3699df-fa56c3.webp" alt="Paramètres régionaux de Windows : langue système English (United States), case Beta: Use Unicode UTF-8 décochée" width="578" height="542">
 </p>
 
 </div>

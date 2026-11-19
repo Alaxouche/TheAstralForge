@@ -27,7 +27,7 @@ You can create a desktop shortcut in the shortcuts dropdown.
 Mod Organizer locks your mods and load order while running an executable. Clicking unlock may corrupt your game experience.
 
 <p align="center">
-  <img src="https://static.wixstatic.com/media/579922_759ba8cb37d24e70a7c3d152be495966~mv2.png/v1/fill/w_600,h_145,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/592328821afaaf40c7506837f3347acc33a350e7a67ce8a06a2dbccca943e4e6.png">
+  <img src="/assets/Images/guides/759ba8cb37d24e70a7c3d152be495966-32b2d2.webp" alt="Mod Organizer 2 lock window shown while the game runs, with the Unlock button" width="818" height="198">
 </p>
 
 ## Switching Profiles
@@ -68,7 +68,7 @@ Vous pouvez créer un raccourci bureau dans le menu déroulant des raccourcis.
 Mod Organizer verrouille vos mods et l'ordre de chargement pendant l'exécution. Cliquer sur déverrouiller peut corrompre votre expérience de jeu.
 
 <p align="center">
-  <img src="https://static.wixstatic.com/media/579922_759ba8cb37d24e70a7c3d152be495966~mv2.png/v1/fill/w_600,h_145,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/592328821afaaf40c7506837f3347acc33a350e7a67ce8a06a2dbccca943e4e6.png">
+  <img src="/assets/Images/guides/759ba8cb37d24e70a7c3d152be495966-32b2d2.webp" alt="Fenêtre de verrouillage de Mod Organizer 2 pendant que le jeu tourne, avec le bouton Unlock" width="818" height="198">
 </p>
 
 ## Changer de Profil

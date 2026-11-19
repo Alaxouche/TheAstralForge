@@ -1,0 +1,5401 @@
+{
+ "trees": [
+  {
+   "id": "AVAlchemy",
+   "name": "Alchemy",
+   "description": "Alchemy is the art of brewing magical potions and deadly poisons.",
+   "group": "skills",
+   "by": "Adamant - A Perk Overhaul",
+   "nodes": [
+    {
+     "i": 2,
+     "x": 2.042857,
+     "y": -0.185714,
+     "links": [
+      3,
+      6,
+      7
+     ],
+     "name": "Alchemy Mastery",
+     "ranks": [
+      {
+       "req": 10,
+       "desc": "Potions and poisons you make are 25% stronger."
+      },
+      {
+       "req": 50,
+       "desc": "Potions and poisons you make are 50% stronger."
+      }
+     ]
+    },
+    {
+     "i": 3,
+     "x": 0.242857,
+     "y": 0.142857,
+     "links": [
+      4
+     ],
+     "name": "Potency",
+     "ranks": [
+      {
+       "req": 30,
+       "desc": "Potions you mix are 50% stronger."
+      },
+      {
+       "req": 70,
+       "desc": "Potions you mix are twice as strong."
+      }
+     ]
+    },
+    {
+     "i": 4,
+     "x": 1.2,
+     "y": 2.057143,
+     "links": [
+      5
+     ],
+     "name": "Apothecary",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "Potions last 50% longer."
+      },
+      {
+       "req": 80,
+       "desc": "Potions last twice as long."
+      }
+     ]
+    },
+    {
+     "i": 5,
+     "x": 1.871429,
+     "y": 4.171429,
+     "links": [],
+     "name": "Chemist",
+     "ranks": [
+      {
+       "req": 100,
+       "desc": "You create twice as many potions or poisons from the same number of ingredients."
+      }
+     ]
+    },
+    {
+     "i": 6,
+     "x": 1.3857140000000001,
+     "y": 0.928571,
+     "links": [
+      8
+     ],
+     "name": "Green Thumb",
+     "ranks": [
+      {
+       "req": 20,
+       "desc": "You gather one extra ingredient from plants."
+      },
+      {
+       "req": 60,
+       "desc": "You gather two extra ingredients from plants."
+      }
+     ]
+    },
+    {
+     "i": 8,
+     "x": 2.2,
+     "y": 1.328571,
+     "links": [],
+     "name": "Purity",
+     "ranks": [
+      {
+       "req": 90,
+       "desc": "All negative effects are removed from created potions, and all positive effects are removed from created poisons."
+      }
+     ]
+    },
+    {
+     "i": 7,
+     "x": 3.6428570000000002,
+     "y": 0.142857,
+     "links": [
+      1
+     ],
+     "name": "Concentration",
+     "ranks": [
+      {
+       "req": 30,
+       "desc": "Poisons you make are 50% stronger."
+      },
+      {
+       "req": 70,
+       "desc": "Poisons you make are twice as strong."
+      }
+     ]
+    },
+    {
+     "i": 1,
+     "x": 2.671429,
+     "y": 2.0,
+     "links": [
+      5
+     ],
+     "name": "Poisoner",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "Poisons last for 50% more hits."
+      },
+      {
+       "req": 80,
+       "desc": "Poisons last for twice as many hits."
+      }
+     ]
+    }
+   ],
+   "slug": "alchemy"
+  },
+  {
+   "id": "AVAlteration",
+   "name": "Alteration",
+   "description": "The School of Alteration governs the manipulation of the physical world. This skill makes it easier to cast spells like Waterbreathing, Feather, and Ironflesh.",
+   "group": "skills",
+   "by": "Hand to Hand - An Adamant Addon",
+   "nodes": [
+    {
+     "i": 14,
+     "x": 2.7,
+     "y": -0.185714,
+     "links": [
+      12,
+      4,
+      3
+     ],
+     "name": "Alteration Mastery",
+     "ranks": [
+      {
+       "req": 10,
+       "desc": "Alteration spells cost 25% less Magicka."
+      },
+      {
+       "req": 50,
+       "desc": "Alteration spells cost 50% less Magicka."
+      }
+     ]
+    },
+    {
+     "i": 12,
+     "x": 3.171429,
+     "y": 0.642857,
+     "links": [
+      6
+     ],
+     "name": "Mage Robes",
+     "ranks": [
+      {
+       "req": 20,
+       "desc": "You gain 50% Magicka Regeneration while wearing robes."
+      },
+      {
+       "req": 60,
+       "desc": "You gain 100% Magicka Regeneration while wearing robes."
+      }
+     ]
+    },
+    {
+     "i": 6,
+     "x": 3.385714,
+     "y": 2.628571,
+     "links": [
+      7,
+      8,
+      9
+     ],
+     "name": "Mage Armor",
+     "ranks": [
+      {
+       "req": 30,
+       "desc": "Armor spells are twice as strong while wearing robes."
+      }
+     ]
+    },
+    {
+     "i": 7,
+     "x": 4.957143,
+     "y": 4.6,
+     "links": [],
+     "name": "Magicka Flood",
+     "ranks": [
+      {
+       "req": 80,
+       "desc": "Spells and enchantments cost 10% less while wearing robes."
+      }
+     ]
+    },
+    {
+     "i": 8,
+     "x": 5.342857,
+     "y": 3.614286,
+     "links": [],
+     "name": "Magicka Current",
+     "ranks": [
+      {
+       "req": 70,
+       "desc": "You move 20% faster when casting spells while wearing robes."
+      }
+     ]
+    },
+    {
+     "i": 9,
+     "x": 4.085714,
+     "y": 5.2714289999999995,
+     "links": [],
+     "name": "Magicka Well",
+     "ranks": [
+      {
+       "req": 100,
+       "desc": "Your Magicka regenerates twice as fast when you fall below half Magicka while wearing robes."
+      }
+     ]
+    },
+    {
+     "i": 4,
+     "x": 2.214286,
+     "y": 0.657143,
+     "links": [
+      1
+     ],
+     "name": "Balance",
+     "ranks": [
+      {
+       "req": 30,
+       "desc": "Alteration spells last 50% longer."
+      },
+      {
+       "req": 60,
+       "desc": "Alteration spells last twice as long."
+      }
+     ]
+    },
+    {
+     "i": 1,
+     "x": 2.114286,
+     "y": 2.628571,
+     "links": [
+      2,
+      5,
+      10
+     ],
+     "name": "Bastion",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "You resist 50% of incoming Magicka and Stamina damage while under the effects of a flesh spell."
+      }
+     ]
+    },
+    {
+     "i": 2,
+     "x": 1.228571,
+     "y": 5.2285710000000005,
+     "links": [],
+     "name": "Spell Sip",
+     "ranks": [
+      {
+       "req": 90,
+       "desc": "You have a 20% chance to absorb the Magicka from incoming spells while under the effects of a flesh spell."
+      }
+     ]
+    },
+    {
+     "i": 5,
+     "x": -0.442857,
+     "y": 4.671429,
+     "links": [],
+     "name": "Spell Shield",
+     "ranks": [
+      {
+       "req": 70,
+       "desc": "You have 25% Magic Resistance while under the effects of a flesh spell."
+      }
+     ]
+    },
+    {
+     "i": 10,
+     "x": -0.171429,
+     "y": 3.042857,
+     "links": [],
+     "name": "Spell Strike",
+     "ranks": [
+      {
+       "req": 60,
+       "desc": "Unarmed attacks have a 50% chance to deal Fire, Frost, or Shock damage while under the effects of a flesh spell."
+      },
+      {
+       "req": 90,
+       "desc": "Unarmed attacks have a 50% chance to deal even more Fire, Frost, or Shock damage while under the effects of a flesh spell."
+      }
+     ]
+    },
+    {
+     "i": 3,
+     "x": 2.742857,
+     "y": 0.985714,
+     "links": [],
+     "name": "Barrier",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "Protection spells like Oakflesh and Fire Shell last twice as long when dual cast."
+      },
+      {
+       "req": 70,
+       "desc": "Protection spells like Oakflesh and Fire Shell last twice as long and affect all nearby allies when dual cast."
+      }
+     ]
+    }
+   ],
+   "slug": "alteration"
+  },
+  {
+   "id": "AVMarksman",
+   "name": "Archery",
+   "description": "The Archery skill governs the use of bows and arrows to attack from range.",
+   "group": "skills",
+   "by": "Adamant - A Perk Overhaul",
+   "nodes": [
+    {
+     "i": 1,
+     "x": -0.2,
+     "y": 0.04,
+     "links": [
+      4,
+      3,
+      9
+     ],
+     "name": "Archery Mastery",
+     "ranks": [
+      {
+       "req": 10,
+       "desc": "Bows and crossbows deal 25% more damage."
+      },
+      {
+       "req": 50,
+       "desc": "Bows and crossbows deal 50% more damage."
+      }
+     ]
+    },
+    {
+     "i": 4,
+     "x": 1.285714,
+     "y": 0.5857140000000001,
+     "links": [
+      8
+     ],
+     "name": "Ranger's Stance",
+     "ranks": [
+      {
+       "req": 30,
+       "desc": "You draw your bow and reload your crossbow faster."
+      },
+      {
+       "req": 70,
+       "desc": "You draw your bow and reload your crossbow faster, and you move faster while aiming a bow or crossbow."
+      }
+     ]
+    },
+    {
+     "i": 8,
+     "x": 2.214286,
+     "y": 1.814286,
+     "links": [
+      2
+     ],
+     "name": "Steady Hand",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "Zoom in while drawing a bow or crossbow to slow down time by 25%."
+      },
+      {
+       "req": 80,
+       "desc": "Zoom in while drawing a bow or crossbow to slow down time by 50%."
+      }
+     ]
+    },
+    {
+     "i": 2,
+     "x": 3.114286,
+     "y": 3.085714,
+     "links": [
+      7
+     ],
+     "name": "Power Shot",
+     "ranks": [
+      {
+       "req": 60,
+       "desc": "Bows and crossbows have a 50% chance to stagger enemies."
+      }
+     ]
+    },
+    {
+     "i": 7,
+     "x": 3.071429,
+     "y": 5.514286,
+     "links": [],
+     "name": "Pinning Shot",
+     "ranks": [
+      {
+       "req": 100,
+       "desc": "Repeated attacks from bows or crossbows reduce enemy Movement Speed by up to 50% for 10 seconds."
+      }
+     ]
+    },
+    {
+     "i": 3,
+     "x": 0.485714,
+     "y": 1.342857,
+     "links": [
+      6
+     ],
+     "name": "Eagle Eye",
+     "ranks": [
+      {
+       "req": 20,
+       "desc": "Bows have a 20% chance of dealing critical damage."
+      },
+      {
+       "req": 70,
+       "desc": "Bows have a 20% chance of dealing critical damage. This chance is doubled against enemies with full Health."
+      }
+     ]
+    },
+    {
+     "i": 6,
+     "x": 1.414286,
+     "y": 3.085714,
+     "links": [],
+     "name": "Precise Shot",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "Critical attacks with bows deal three times more damage."
+      },
+      {
+       "req": 90,
+       "desc": "Critical attacks with bows deal five times more damage."
+      }
+     ]
+    },
+    {
+     "i": 9,
+     "x": -0.342857,
+     "y": 1.6142859999999999,
+     "links": [
+      10
+     ],
+     "name": "Grim Focus",
+     "ranks": [
+      {
+       "req": 20,
+       "desc": "Crossbows deal extra bleeding damage over 10 seconds."
+      },
+      {
+       "req": 70,
+       "desc": "Crossbows deal extra bleeding damage over 10 seconds. Targets who fall below half Health take 50% extra bleeding damage."
+      }
+     ]
+    },
+    {
+     "i": 10,
+     "x": 0.457143,
+     "y": 3.542857,
+     "links": [],
+     "name": "Puncturing Shot",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "Crossbows deal three times more bleeding damage."
+      },
+      {
+       "req": 90,
+       "desc": "Crossbows deal five times more bleeding damage."
+      }
+     ]
+    }
+   ],
+   "slug": "archery"
+  },
+  {
+   "id": "AVBlock",
+   "name": "Block",
+   "description": "The Block skill governs the use of weapons and shields to defend against incoming attacks. ",
+   "group": "skills",
+   "by": "Adamant - A Perk Overhaul",
+   "nodes": [
+    {
+     "i": 1,
+     "x": 3.042857,
+     "y": -0.057143,
+     "links": [
+      2,
+      3,
+      4
+     ],
+     "name": "Block Mastery",
+     "ranks": [
+      {
+       "req": 10,
+       "desc": "Blocking and bashing are 25% more effective."
+      },
+      {
+       "req": 50,
+       "desc": "Blocking and bashing are 50% more effective."
+      }
+     ]
+    },
+    {
+     "i": 2,
+     "x": 2.028571,
+     "y": 0.357143,
+     "links": [
+      9
+     ],
+     "name": "Deadly Bash",
+     "ranks": [
+      {
+       "req": 30,
+       "desc": "Bashing an enemy deals double damage and 25% extra stagger."
+      }
+     ]
+    },
+    {
+     "i": 9,
+     "x": 1.8857140000000001,
+     "y": 1.814286,
+     "links": [
+      10
+     ],
+     "name": "Stunning Strike",
+     "ranks": [
+      {
+       "req": 60,
+       "desc": "Bashing an enemy reduces their Movement and Attack Speed by 25% for 10 seconds."
+      }
+     ]
+    },
+    {
+     "i": 10,
+     "x": 0.071429,
+     "y": 2.842857,
+     "links": [
+      11
+     ],
+     "name": "Disorienting Blow",
+     "ranks": [
+      {
+       "req": 80,
+       "desc": "Bashing an reduces their weapon and spell damge by 20% for 10 seconds."
+      }
+     ]
+    },
+    {
+     "i": 11,
+     "x": 1.942857,
+     "y": 4.085714,
+     "links": [],
+     "name": "Battering Ram",
+     "ranks": [
+      {
+       "req": 100,
+       "desc": "Bashing an enemy has a chance to knock them to the ground."
+      }
+     ]
+    },
+    {
+     "i": 3,
+     "x": 3.9,
+     "y": 0.514286,
+     "links": [
+      8
+     ],
+     "name": "Rapid Maneuvers",
+     "ranks": [
+      {
+       "req": 20,
+       "desc": "You move much faster while blocking with a shield."
+      }
+     ]
+    },
+    {
+     "i": 8,
+     "x": 3.871429,
+     "y": 1.985714,
+     "links": [
+      6
+     ],
+     "name": "Shield Wall",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "Blocking with a shield reduces incoming arrow and spell damage by 50%."
+      }
+     ]
+    },
+    {
+     "i": 6,
+     "x": 5.371429,
+     "y": 3.271429,
+     "links": [
+      7
+     ],
+     "name": "Shield Charge",
+     "ranks": [
+      {
+       "req": 70,
+       "desc": "Sprint while blocking with a shield to execute a shield charge. While charging, you resist 50% of all incoming weapon and spell damage."
+      }
+     ]
+    },
+    {
+     "i": 7,
+     "x": 3.4857139999999998,
+     "y": 4.157143,
+     "links": [],
+     "name": "Quick Reflexes",
+     "ranks": [
+      {
+       "req": 90,
+       "desc": "Blocking with a shield slows down time during an enemy power attack."
+      }
+     ]
+    },
+    {
+     "i": 4,
+     "x": 2.971429,
+     "y": 1.157143,
+     "links": [],
+     "name": "Defensive Stance",
+     "ranks": [
+      {
+       "req": 30,
+       "desc": "Blocking and bashing cost 25% less Stamina."
+      },
+      {
+       "req": 70,
+       "desc": "Blocking and bashing cost 50% less Stamina."
+      }
+     ]
+    }
+   ],
+   "slug": "block"
+  },
+  {
+   "id": "AVConjuration",
+   "name": "Conjuration",
+   "description": "The School of Conjuration governs the reanimation of the dead and the summoning of Daedra. This skill makes it easier to cast spells like Bound Sword, Revenant, and Soul Trap.",
+   "group": "skills",
+   "by": "Adamant - A Perk Overhaul",
+   "nodes": [
+    {
+     "i": 15,
+     "x": 2.3571429999999998,
+     "y": -0.3,
+     "links": [
+      1,
+      3,
+      14,
+      12
+     ],
+     "name": "Conjuration Mastery",
+     "ranks": [
+      {
+       "req": 10,
+       "desc": "Conjuration spells cost 25% less Magicka."
+      },
+      {
+       "req": 50,
+       "desc": "Conjuration spells cost 50% less Magicka."
+      }
+     ]
+    },
+    {
+     "i": 1,
+     "x": 1.085714,
+     "y": 0.228571,
+     "links": [
+      10
+     ],
+     "name": "Arcane Weapon",
+     "ranks": [
+      {
+       "req": 20,
+       "desc": "Bound weapons and shields last five times longer."
+      }
+     ]
+    },
+    {
+     "i": 10,
+     "x": 0.528571,
+     "y": 1.214286,
+     "links": [
+      13,
+      17
+     ],
+     "name": "Mystic Binding",
+     "ranks": [
+      {
+       "req": 30,
+       "desc": "Bound weapons and shields are stronger."
+      }
+     ]
+    },
+    {
+     "i": 13,
+     "x": -0.014286,
+     "y": 2.628571,
+     "links": [
+      11
+     ],
+     "name": "Soul Stealer",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "Bound weapons trap enemy souls and deal Magic damage over 10 seconds."
+      },
+      {
+       "req": 70,
+       "desc": "Bound weapons trap enemy souls and deal additional Magic damage over 10 seconds."
+      }
+     ]
+    },
+    {
+     "i": 11,
+     "x": 0.014286,
+     "y": 4.128571,
+     "links": [],
+     "name": "Haunting Curse",
+     "ranks": [
+      {
+       "req": 60,
+       "desc": "Bound weapons reduce enemy Magic Resistance by 25% for 10 seconds."
+      },
+      {
+       "req": 90,
+       "desc": "Bound weapons reduce enemy Magic Resistance by 50% for 10 seconds."
+      }
+     ]
+    },
+    {
+     "i": 17,
+     "x": 0.828571,
+     "y": 2.457143,
+     "links": [
+      18
+     ],
+     "name": "Bound Armor",
+     "ranks": [
+      {
+       "req": 60,
+       "desc": "Bound shields increase your Armor Rating by 100."
+      }
+     ]
+    },
+    {
+     "i": 18,
+     "x": 1.285714,
+     "y": 3.7,
+     "links": [],
+     "name": "Bound Aegis",
+     "ranks": [
+      {
+       "req": 80,
+       "desc": "Bound shields increase your Magic Resistance by 25%."
+      }
+     ]
+    },
+    {
+     "i": 3,
+     "x": 3.757143,
+     "y": 0.257143,
+     "links": [
+      6
+     ],
+     "name": "Dark Oath",
+     "ranks": [
+      {
+       "req": 20,
+       "desc": "Summoned creatures last twice as long."
+      }
+     ]
+    },
+    {
+     "i": 6,
+     "x": 4.542857,
+     "y": 1.2428569999999999,
+     "links": [
+      5
+     ],
+     "name": "Armor of Shadows",
+     "ranks": [
+      {
+       "req": 30,
+       "desc": "Summoned creatures gain 150 Armor Rating and 25% Magic Resistance."
+      },
+      {
+       "req": 70,
+       "desc": "Summoned creatures gain 300 Armor Rating and 50% Magic Resistance."
+      }
+     ]
+    },
+    {
+     "i": 5,
+     "x": 4.942857,
+     "y": 2.228571,
+     "links": [
+      9
+     ],
+     "name": "Daedric Pact",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "Summoned creatures have 100 extra Health, Magicka, and Stamina."
+      },
+      {
+       "req": 80,
+       "desc": "Summoned creatures have 200 extra Health, Magicka, and Stamina."
+      }
+     ]
+    },
+    {
+     "i": 9,
+     "x": 4.757143,
+     "y": 3.585714,
+     "links": [
+      2
+     ],
+     "name": "Ritual of Power",
+     "ranks": [
+      {
+       "req": 60,
+       "desc": "Summoned creatures deal 25% more damage."
+      },
+      {
+       "req": 90,
+       "desc": "Summoned creatures deal 50% more damage."
+      }
+     ]
+    },
+    {
+     "i": 2,
+     "x": 3.942857,
+     "y": 4.571429,
+     "links": [],
+     "name": "Doors of Oblivion",
+     "ranks": [
+      {
+       "req": 100,
+       "desc": "You can summon one additional creature."
+      }
+     ]
+    },
+    {
+     "i": 14,
+     "x": 3.2,
+     "y": 0.5428569999999999,
+     "links": [
+      7
+     ],
+     "name": "Undead Servant",
+     "ranks": [
+      {
+       "req": 20,
+       "desc": "Reanimated zombies last five times longer."
+      },
+      {
+       "req": 80,
+       "desc": "Reanimated zombies last until killed."
+      }
+     ]
+    },
+    {
+     "i": 7,
+     "x": 3.628571,
+     "y": 1.185714,
+     "links": [
+      8
+     ],
+     "name": "Necrosis",
+     "ranks": [
+      {
+       "req": 30,
+       "desc": "Reanimated zombies slowly restore lost Health."
+      },
+      {
+       "req": 70,
+       "desc": "Reanimated zombies quickly restore lost Health."
+      }
+     ]
+    },
+    {
+     "i": 8,
+     "x": 3.8571429999999998,
+     "y": 2.042857,
+     "links": [
+      4
+     ],
+     "name": "Corpse Preparation",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "Reanimated zombies no longer disintegrate when they die."
+      }
+     ]
+    },
+    {
+     "i": 4,
+     "x": 3.6428570000000002,
+     "y": 3.071429,
+     "links": [
+      16
+     ],
+     "name": "Army of the Dead",
+     "ranks": [
+      {
+       "req": 60,
+       "desc": "You can reanimate one additional zombie."
+      },
+      {
+       "req": 90,
+       "desc": "You can reanimate two additional zombies."
+      }
+     ]
+    },
+    {
+     "i": 16,
+     "x": 2.985714,
+     "y": 3.957143,
+     "links": [],
+     "name": "Shade of the Revenant",
+     "ranks": [
+      {
+       "req": 100,
+       "desc": "Once every 10 minutes, you can use the Mass Reanimation power to raise all nearby corpses for 120 seconds."
+      }
+     ]
+    },
+    {
+     "i": 12,
+     "x": 2.371429,
+     "y": 2.042857,
+     "links": [],
+     "name": "Cultist",
+     "ranks": [
+      {
+       "req": 30,
+       "desc": "Daedric blessings are twice as strong."
+      },
+      {
+       "req": 60,
+       "desc": "Daedric blessings are twice as strong, and you receive additional bonuses when you pray at their shrines."
+      }
+     ]
+    }
+   ],
+   "slug": "conjuration"
+  },
+  {
+   "id": "AVDestruction",
+   "name": "Destruction",
+   "description": "The School of Destruction governs the harnessing of fire, frost, shock, and other volatile energies. This skill makes it easier to cast spells like Burning Touch, Frost Rune, and Thunderbolt.",
+   "group": "skills",
+   "by": "Adamant - A Perk Overhaul",
+   "nodes": [
+    {
+     "i": 13,
+     "x": 2.242857,
+     "y": -0.414286,
+     "links": [
+      8,
+      2,
+      14
+     ],
+     "name": "Destruction Mastery",
+     "ranks": [
+      {
+       "req": 10,
+       "desc": "Destruction spells cost 25% less Magicka."
+      },
+      {
+       "req": 50,
+       "desc": "Destruction spells cost 50% less Magicka."
+      }
+     ]
+    },
+    {
+     "i": 8,
+     "x": 2.257143,
+     "y": 0.328571,
+     "links": [
+      3,
+      9,
+      1,
+      7,
+      4
+     ],
+     "name": "Elementalist",
+     "ranks": [
+      {
+       "req": 20,
+       "desc": "Fire, Frost, and Shock spells deal 25% more damage."
+      },
+      {
+       "req": 70,
+       "desc": "Fire, Frost, and Shock spells deal 50% more damage."
+      }
+     ]
+    },
+    {
+     "i": 3,
+     "x": 2.3571429999999998,
+     "y": 1.714286,
+     "links": [
+      5
+     ],
+     "name": "North Wind",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "Frost spells reduce enemy Frost Resistance by up to 50% for 10 seconds."
+      },
+      {
+       "req": 90,
+       "desc": "Frost spells reduce enemy Frost Resistance by up to 100% for 10 seconds."
+      }
+     ]
+    },
+    {
+     "i": 5,
+     "x": 2.628571,
+     "y": 2.842857,
+     "links": [
+      12
+     ],
+     "name": "Permafrost",
+     "ranks": [
+      {
+       "req": 80,
+       "desc": "Frost spells reduce enemy Movement and Attack Speed by 25% for 10 seconds."
+      }
+     ]
+    },
+    {
+     "i": 12,
+     "x": 1.985714,
+     "y": 3.842857,
+     "links": [],
+     "name": "Deep Freeze",
+     "ranks": [
+      {
+       "req": 100,
+       "desc": "Frost spells have a chance to encase enemies in ice."
+      }
+     ]
+    },
+    {
+     "i": 9,
+     "x": 3.6,
+     "y": 1.514286,
+     "links": [
+      10
+     ],
+     "name": "Firebrand",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "Fire spells brand enemies for 10 seconds. Branded targets take 25% extra damage from Fire spells."
+      },
+      {
+       "req": 90,
+       "desc": "Fire spells brand enemies for 10 seconds. Branded targets take 50% extra damage from Fire spells."
+      }
+     ]
+    },
+    {
+     "i": 10,
+     "x": 3.9,
+     "y": 2.471429,
+     "links": [
+      15
+     ],
+     "name": "Combustion",
+     "ranks": [
+      {
+       "req": 80,
+       "desc": "Fire spells ignite enemies, dealing extra damage over 10 seconds."
+      }
+     ]
+    },
+    {
+     "i": 15,
+     "x": 4.471429,
+     "y": 3.228571,
+     "links": [],
+     "name": "Wildfire",
+     "ranks": [
+      {
+       "req": 100,
+       "desc": "Fire spells have a chance to incinerate targets when they fall below half Health."
+      }
+     ]
+    },
+    {
+     "i": 1,
+     "x": 1.1142859999999999,
+     "y": 1.628571,
+     "links": [
+      6
+     ],
+     "name": "Unstable Current",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "Shock spells have a 25% chance to deal double damage."
+      },
+      {
+       "req": 90,
+       "desc": "Shock spells have a 50% chance to deal double damage."
+      }
+     ]
+    },
+    {
+     "i": 6,
+     "x": 0.785714,
+     "y": 2.871429,
+     "links": [
+      11
+     ],
+     "name": "Static Charge",
+     "ranks": [
+      {
+       "req": 80,
+       "desc": "Shock spells deal double damage to enemy Magicka."
+      }
+     ]
+    },
+    {
+     "i": 11,
+     "x": 0.157143,
+     "y": 4.014286,
+     "links": [],
+     "name": "Power Surge",
+     "ranks": [
+      {
+       "req": 100,
+       "desc": "Killing an enemy with a Shock spell has a chance to restore 100 Magicka."
+      }
+     ]
+    },
+    {
+     "i": 7,
+     "x": 1.185714,
+     "y": 0.628571,
+     "links": [
+      16
+     ],
+     "name": "Evocation",
+     "ranks": [
+      {
+       "req": 60,
+       "desc": "Destruction cloak spells last twice as long."
+      }
+     ]
+    },
+    {
+     "i": 16,
+     "x": 0.242857,
+     "y": 1.6,
+     "links": [],
+     "name": "Power of the Elements",
+     "ranks": [
+      {
+       "req": 90,
+       "desc": "Wall spells deal extra damage over time."
+      }
+     ]
+    },
+    {
+     "i": 4,
+     "x": 3.428571,
+     "y": 0.628571,
+     "links": [],
+     "name": "Rune Mage",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "You can maintain up to three runes at once."
+      },
+      {
+       "req": 80,
+       "desc": "You can maintain up to five runes at once."
+      }
+     ]
+    },
+    {
+     "i": 2,
+     "x": 0.985714,
+     "y": -0.057143,
+     "links": [
+      17
+     ],
+     "name": "Spell Surge",
+     "ranks": [
+      {
+       "req": 30,
+       "desc": "Dual casting a Destruction spell costs 20% less Magicka."
+      }
+     ]
+    },
+    {
+     "i": 17,
+     "x": 0.314286,
+     "y": 0.7,
+     "links": [],
+     "name": "Impact",
+     "ranks": [
+      {
+       "req": 60,
+       "desc": "Destruction spells have a 50% chance to stagger an opponent when dual cast."
+      }
+     ]
+    },
+    {
+     "i": 14,
+     "x": 3.3571429999999998,
+     "y": -0.042857,
+     "links": [],
+     "name": "War Mage",
+     "ranks": [
+      {
+       "req": 30,
+       "desc": "Destruction spells deal 25% more damage to staggered targets when you have a weapon equipped."
+      },
+      {
+       "req": 60,
+       "desc": "Destruction spells deal 50% more damage to staggered targets when you have a weapon equipped."
+      }
+     ]
+    }
+   ],
+   "slug": "destruction"
+  },
+  {
+   "id": "AVEnchanting",
+   "name": "Enchanting",
+   "description": "Enchanting is the art of binding magical spells to weapons and armor.",
+   "group": "skills",
+   "by": "Adamant - A Perk Overhaul",
+   "nodes": [
+    {
+     "i": 3,
+     "x": 1.957143,
+     "y": 0.028571,
+     "links": [
+      11,
+      7,
+      2,
+      5,
+      12,
+      4,
+      6
+     ],
+     "name": "Enchanting Mastery",
+     "ranks": [
+      {
+       "req": 10,
+       "desc": "Enchantments you create are 25% stronger, and soul gems restore 25% more charge."
+      },
+      {
+       "req": 50,
+       "desc": "Enchantments you create are 50% stronger, and soul gems restore 50% more charge."
+      }
+     ]
+    },
+    {
+     "i": 11,
+     "x": 2.085714,
+     "y": 1.928571,
+     "links": [],
+     "name": "Soul Stone",
+     "ranks": [
+      {
+       "req": 20,
+       "desc": "You have a small chance to find filled soul gems on slain enemies."
+      }
+     ]
+    },
+    {
+     "i": 7,
+     "x": 1.157143,
+     "y": 0.771429,
+     "links": [
+      1
+     ],
+     "name": "Channeler",
+     "ranks": [
+      {
+       "req": 30,
+       "desc": "Staves regenerate lost charge slowly outside of combat."
+      },
+      {
+       "req": 60,
+       "desc": "Staves regenerate lost charge quickly outside of combat."
+      }
+     ]
+    },
+    {
+     "i": 1,
+     "x": 0.7,
+     "y": 1.728571,
+     "links": [],
+     "name": "Overcharge",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "Staves are 50% stronger and cost 50% more when used with an empty offhand."
+      },
+      {
+       "req": 70,
+       "desc": "Staves are twice as strong and cost twice as much when used with an empty offhand."
+      }
+     ]
+    },
+    {
+     "i": 2,
+     "x": 3.271429,
+     "y": 1.185714,
+     "links": [],
+     "name": "Scribe",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "Scrolls are 50% stronger."
+      },
+      {
+       "req": 90,
+       "desc": "Scrolls are twice as strong."
+      }
+     ]
+    },
+    {
+     "i": 5,
+     "x": 1.1,
+     "y": 2.557143,
+     "links": [
+      8
+     ],
+     "name": "Insightful Enchanter",
+     "ranks": [
+      {
+       "req": 50,
+       "desc": "Skill enchantments on armor are 25% stronger."
+      }
+     ]
+    },
+    {
+     "i": 8,
+     "x": 2.157143,
+     "y": 4.971429,
+     "links": [],
+     "name": "Twin Secrets",
+     "ranks": [
+      {
+       "req": 100,
+       "desc": "You can place two enchantments on a single item."
+      }
+     ]
+    },
+    {
+     "i": 12,
+     "x": 1.028571,
+     "y": 0.257143,
+     "links": [
+      14
+     ],
+     "name": "Conduit",
+     "ranks": [
+      {
+       "req": 30,
+       "desc": "Weapon enchantments cost 50% less charge."
+      }
+     ]
+    },
+    {
+     "i": 14,
+     "x": 0.328571,
+     "y": 0.971429,
+     "links": [],
+     "name": "Soul Siphon",
+     "ranks": [
+      {
+       "req": 60,
+       "desc": "Enchanted weapons regenerate some of their lost charge when they land a killing blow."
+      }
+     ]
+    },
+    {
+     "i": 4,
+     "x": 3.428571,
+     "y": 0.342857,
+     "links": [],
+     "name": "Seeker",
+     "ranks": [
+      {
+       "req": 20,
+       "desc": "Scrolls last three times as long."
+      },
+      {
+       "req": 70,
+       "desc": "Scrolls last five times as long."
+      }
+     ]
+    },
+    {
+     "i": 6,
+     "x": 3.114286,
+     "y": 2.542857,
+     "links": [
+      8
+     ],
+     "name": "Weapon Enchanter",
+     "ranks": [
+      {
+       "req": 30,
+       "desc": "Weapon enchantments you create are 50% stronger and have 50% more charge."
+      },
+      {
+       "req": 70,
+       "desc": "Weapon enchantments you create are twice as strong and have twice as much charge."
+      }
+     ]
+    }
+   ],
+   "slug": "enchanting"
+  },
+  {
+   "id": "AVLockpicking",
+   "name": "Hand to Hand",
+   "description": "Hand to Hand is the art of fighting with fist and claw. Those who are skilled in Hand to Hand can face armed opponents without a weapon. ",
+   "group": "skills",
+   "by": "Hand to Hand - An Adamant Addon",
+   "nodes": [
+    {
+     "i": 10,
+     "x": 2.042857,
+     "y": -0.214286,
+     "links": [
+      1,
+      2,
+      4
+     ],
+     "name": "Hand to Hand Mastery",
+     "ranks": [
+      {
+       "req": 10,
+       "desc": "Unarmed attacks deal 25% more damage."
+      },
+      {
+       "req": 50,
+       "desc": "Unarmed attacks deal 50% more damage."
+      }
+     ]
+    },
+    {
+     "i": 1,
+     "x": 2.085714,
+     "y": 1.128571,
+     "links": [
+      3,
+      6,
+      8
+     ],
+     "name": "Brawler's Stance",
+     "ranks": [
+      {
+       "req": 30,
+       "desc": "Unarmed power attacks cost 20% less Stamina and deal 25% extra stagger."
+      }
+     ]
+    },
+    {
+     "i": 3,
+     "x": 0.442857,
+     "y": 2.885714,
+     "links": [
+      5
+     ],
+     "name": "Knockdown Punch",
+     "ranks": [
+      {
+       "req": 80,
+       "desc": "Unarmed power attacks have a chance to knock enemies down."
+      }
+     ]
+    },
+    {
+     "i": 5,
+     "x": 2.114286,
+     "y": 5.085714,
+     "links": [],
+     "name": "Fists of Fury",
+     "ranks": [
+      {
+       "req": 100,
+       "desc": "Repeated unarmed power attacks against a single target deal up to 50% extra damage."
+      }
+     ]
+    },
+    {
+     "i": 6,
+     "x": 3.885714,
+     "y": 2.928571,
+     "links": [
+      5
+     ],
+     "name": "Overwhelm",
+     "ranks": [
+      {
+       "req": 60,
+       "desc": "Unarmed power attacks deal 50% extra damage."
+      }
+     ]
+    },
+    {
+     "i": 8,
+     "x": 2.1428570000000002,
+     "y": 2.8571429999999998,
+     "links": [],
+     "name": "Brace",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "You resist 10% of all incoming weapon and spell damage while both hands are empty."
+      },
+      {
+       "req": 70,
+       "desc": "You resist 20% of all incoming weapon and spell damage while both hands are empty."
+      }
+     ]
+    },
+    {
+     "i": 2,
+     "x": 3.257143,
+     "y": 0.842857,
+     "links": [],
+     "name": "Heavy Blows",
+     "ranks": [
+      {
+       "req": 20,
+       "desc": "Unarmed attacks deal Stamina damage."
+      },
+      {
+       "req": 70,
+       "desc": "Unarmed attacks deal Magicka and Stamina damage."
+      }
+     ]
+    },
+    {
+     "i": 4,
+     "x": 0.885714,
+     "y": 0.828571,
+     "links": [],
+     "name": "Rapid Strikes",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "Unarmed attacks are 10% faster."
+      },
+      {
+       "req": 90,
+       "desc": "Unarmed attacks are 20% faster."
+      }
+     ]
+    }
+   ],
+   "slug": "hand-to-hand"
+  },
+  {
+   "id": "AVHeavyArmor",
+   "name": "Heavy Armor",
+   "description": "The Heavy Armor skill governs the use of thick, protective armors like Steel, Orcish, Dwarven, Ebony, and Daedric.",
+   "group": "skills",
+   "by": "Adamant - A Perk Overhaul",
+   "nodes": [
+    {
+     "i": 1,
+     "x": 2.971429,
+     "y": -0.085714,
+     "links": [
+      5,
+      4
+     ],
+     "name": "Heavy Armor Mastery",
+     "ranks": [
+      {
+       "req": 10,
+       "desc": "Heavy armor is 25% more effective and weighs 50% less."
+      },
+      {
+       "req": 50,
+       "desc": "Heavy armor is 50% more effective and weighs nothing when worn."
+      }
+     ]
+    },
+    {
+     "i": 5,
+     "x": 1.7428569999999999,
+     "y": 0.742857,
+     "links": [
+      3
+     ],
+     "name": "Juggernaut",
+     "ranks": [
+      {
+       "req": 30,
+       "desc": "Your Armor Rating is increased by 100 while wearing heavy armor."
+      }
+     ]
+    },
+    {
+     "i": 3,
+     "x": 0.485714,
+     "y": 1.957143,
+     "links": [
+      6
+     ],
+     "name": "Immovable",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "Your Injury and Stagger Resistance are increased by 50% while wearing heavy armor."
+      }
+     ]
+    },
+    {
+     "i": 6,
+     "x": -0.342857,
+     "y": 3.271429,
+     "links": [
+      2
+     ],
+     "name": "Unstoppable",
+     "ranks": [
+      {
+       "req": 60,
+       "desc": "You are immune to stagger and interrupts for 10 seconds after being staggered while wearing heavy armor."
+      }
+     ]
+    },
+    {
+     "i": 2,
+     "x": -0.4,
+     "y": 4.985714,
+     "links": [],
+     "name": "Unbreakable",
+     "ranks": [
+      {
+       "req": 90,
+       "desc": "You have a 50% chance to stagger melee attackers for 10 seconds after you are staggered while wearing heavy armor."
+      }
+     ]
+    },
+    {
+     "i": 4,
+     "x": 4.1,
+     "y": 0.785714,
+     "links": [
+      7
+     ],
+     "name": "Conditioning",
+     "ranks": [
+      {
+       "req": 20,
+       "desc": "Your Health Regeneration is increased by 50% while wearing heavy armor."
+      },
+      {
+       "req": 60,
+       "desc": "Your Health Regeneration is increased by 100% while wearing heavy armor."
+      }
+     ]
+    },
+    {
+     "i": 7,
+     "x": 5.242857,
+     "y": 1.771429,
+     "links": [
+      9
+     ],
+     "name": "Constitution",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "You resist 25% of incoming attack of opportunity damage while wearing heavy armor."
+      },
+      {
+       "req": 80,
+       "desc": "You resist 50% of incoming attack of opportunity damage while wearing heavy armor."
+      }
+     ]
+    },
+    {
+     "i": 9,
+     "x": 6.0,
+     "y": 3.0,
+     "links": [
+      10
+     ],
+     "name": "Impenetrable",
+     "ranks": [
+      {
+       "req": 70,
+       "desc": "Your Critical and Bleed Resistance are increased by 50% while wearing heavy armor."
+      }
+     ]
+    },
+    {
+     "i": 10,
+     "x": 6.3,
+     "y": 5.014286,
+     "links": [],
+     "name": "Invincible",
+     "ranks": [
+      {
+       "req": 100,
+       "desc": "Your Health no longer regenerates slower in combat while wearing heavy armor."
+      }
+     ]
+    }
+   ],
+   "slug": "heavy-armor"
+  },
+  {
+   "id": "AVMysticism",
+   "name": "Illusion",
+   "description": "The School of Illusion governs the manipulation of the mind. This skill makes it easier to cast spells like Silence, Invisibility, and Night Eye.",
+   "group": "skills",
+   "by": "Adamant - A Perk Overhaul",
+   "nodes": [
+    {
+     "i": 13,
+     "x": 1.52,
+     "y": 0.1,
+     "links": [
+      10,
+      1,
+      9,
+      4
+     ],
+     "name": "Illusion Mastery",
+     "ranks": [
+      {
+       "req": 10,
+       "desc": "Illusion spells cost 25% less Magicka."
+      },
+      {
+       "req": 50,
+       "desc": "Illusion spells cost 50% less Magicka."
+      }
+     ]
+    },
+    {
+     "i": 10,
+     "x": 3.2,
+     "y": 1.04,
+     "links": [
+      11
+     ],
+     "name": "Serenity",
+     "ranks": [
+      {
+       "req": 30,
+       "desc": "Calm spells last for one additional hit."
+      }
+     ]
+    },
+    {
+     "i": 11,
+     "x": 2.757143,
+     "y": 1.685714,
+     "links": [
+      3
+     ],
+     "name": "Tranquility",
+     "ranks": [
+      {
+       "req": 70,
+       "desc": "Silence spells dispel any magical effects on the target."
+      }
+     ]
+    },
+    {
+     "i": 3,
+     "x": 2.86,
+     "y": 2.86,
+     "links": [],
+     "name": "Stasis",
+     "ranks": [
+      {
+       "req": 90,
+       "desc": "Paralysis spells last three times as long."
+      }
+     ]
+    },
+    {
+     "i": 1,
+     "x": 0.9,
+     "y": 1.171429,
+     "links": [
+      8
+     ],
+     "name": "Captivating Presence",
+     "ranks": [
+      {
+       "req": 20,
+       "desc": "Illusion spells last 50% longer."
+      },
+      {
+       "req": 60,
+       "desc": "Illusion spells last twice as long."
+      }
+     ]
+    },
+    {
+     "i": 8,
+     "x": 1.628571,
+     "y": 2.157143,
+     "links": [
+      2
+     ],
+     "name": "Indomitable Will",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "Illusion spells are 50% stronger."
+      },
+      {
+       "req": 80,
+       "desc": "Illusion spells are twice as strong."
+      }
+     ]
+    },
+    {
+     "i": 2,
+     "x": 1.457143,
+     "y": 3.4,
+     "links": [],
+     "name": "Master of the Mind",
+     "ranks": [
+      {
+       "req": 60,
+       "desc": "Illusion spells work on undead."
+      },
+      {
+       "req": 100,
+       "desc": "Illusion spells work on undead, daedra and automatons."
+      }
+     ]
+    },
+    {
+     "i": 9,
+     "x": 0.053333,
+     "y": 0.92,
+     "links": [
+      14
+     ],
+     "name": "Howl of Rage",
+     "ranks": [
+      {
+       "req": 30,
+       "desc": "Frenzy spells increase the target's weapon damage by 50% against everyone except the caster."
+      }
+     ]
+    },
+    {
+     "i": 14,
+     "x": 0.285714,
+     "y": 1.6142859999999999,
+     "links": [
+      15
+     ],
+     "name": "Aspect of Terror",
+     "ranks": [
+      {
+       "req": 70,
+       "desc": "Fear spells reduce the target's Armor Rating by 150 and their Magic Resistance by 25%."
+      }
+     ]
+    },
+    {
+     "i": 15,
+     "x": 0.271429,
+     "y": 2.685714,
+     "links": [],
+     "name": "Voice of Authority",
+     "ranks": [
+      {
+       "req": 90,
+       "desc": "Command spells increase the target's Armor Rating by 150 and their Magic Resistance by 25%."
+      }
+     ]
+    },
+    {
+     "i": 4,
+     "x": 2.257143,
+     "y": 1.142857,
+     "links": [],
+     "name": "Guidance",
+     "ranks": [
+      {
+       "req": 30,
+       "desc": "Courage spells last three times as long."
+      }
+     ]
+    }
+   ],
+   "slug": "illusion"
+  },
+  {
+   "id": "AVLightArmor",
+   "name": "Light Armor",
+   "description": "The Light Armor skill governs the use of light, flexible armors like Leather, Scaled, Elven, and Glass.",
+   "group": "skills",
+   "by": "Adamant - A Perk Overhaul",
+   "nodes": [
+    {
+     "i": 1,
+     "x": 1.371429,
+     "y": -0.04,
+     "links": [
+      2,
+      8
+     ],
+     "name": "Light Armor Mastery",
+     "ranks": [
+      {
+       "req": 10,
+       "desc": "Light armor is 25% more effective and weighs 50% less when worn."
+      },
+      {
+       "req": 50,
+       "desc": "Light armor is 50% more effective and weighs nothing when worn."
+      }
+     ]
+    },
+    {
+     "i": 2,
+     "x": 0.414286,
+     "y": 0.714286,
+     "links": [
+      3
+     ],
+     "name": "Skirmisher",
+     "ranks": [
+      {
+       "req": 30,
+       "desc": "Your Armor Rating is increased by 100 while wearing light armor."
+      }
+     ]
+    },
+    {
+     "i": 3,
+     "x": 0.84666666,
+     "y": 1.98,
+     "links": [
+      6
+     ],
+     "name": "Survivalist",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "Your Poison and Disease Resistance are increased by 50% while wearing light armor."
+      }
+     ]
+    },
+    {
+     "i": 6,
+     "x": -0.11333334,
+     "y": 2.96,
+     "links": [
+      7
+     ],
+     "name": "Swift Steps",
+     "ranks": [
+      {
+       "req": 60,
+       "desc": "Sprinting is 20% faster and costs 50% less Stamina while wearing light armor."
+      }
+     ]
+    },
+    {
+     "i": 7,
+     "x": 0.514286,
+     "y": 4.1,
+     "links": [],
+     "name": "Fight or Flight",
+     "ranks": [
+      {
+       "req": 90,
+       "desc": "Your Movement Speed is increased by 20% for 5 seconds whenever you take melee damage while wearing light armor."
+      }
+     ]
+    },
+    {
+     "i": 8,
+     "x": 2.371429,
+     "y": 0.9428570000000001,
+     "links": [
+      4
+     ],
+     "name": "Endurance",
+     "ranks": [
+      {
+       "req": 20,
+       "desc": "Your Stamina Regeneration is increased by 50% while wearing light armor."
+      },
+      {
+       "req": 60,
+       "desc": "Your Stamina Regeneration is increased by 100% while wearing light armor."
+      }
+     ]
+    },
+    {
+     "i": 4,
+     "x": 1.62,
+     "y": 2.04,
+     "links": [
+      9
+     ],
+     "name": "Athletics",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "You move 10% faster and jump 50% higher when wearing a light armor chest piece."
+      },
+      {
+       "req": 90,
+       "desc": "You move 20% faster and jump 100% higher while wearing a light armor chest piece."
+      }
+     ]
+    },
+    {
+     "i": 9,
+     "x": 2.63333333,
+     "y": 3.08,
+     "links": [
+      5
+     ],
+     "name": "Adrenaline",
+     "ranks": [
+      {
+       "req": 70,
+       "desc": "You spend 20% less Stamina when power attacking or drawing a bow while wearing light armor."
+      }
+     ]
+    },
+    {
+     "i": 5,
+     "x": 1.92,
+     "y": 4.14,
+     "links": [],
+     "name": "Unhindered",
+     "ranks": [
+      {
+       "req": 100,
+       "desc": "You regenerate Stamina slowly when attacking, blocking, or casting a spell while wearing light armor."
+      }
+     ]
+    }
+   ],
+   "slug": "light-armor"
+  },
+  {
+   "id": "AVOneHanded",
+   "name": "One-handed",
+   "description": "The One-handed skill governs the use of smaller weapons such as swords, daggers, war axes, and maces.",
+   "group": "skills",
+   "by": "Adamant - A Perk Overhaul",
+   "nodes": [
+    {
+     "i": 7,
+     "x": 2.242857,
+     "y": -0.185714,
+     "links": [
+      4,
+      3,
+      5,
+      1,
+      6,
+      10
+     ],
+     "name": "One-handed Mastery",
+     "ranks": [
+      {
+       "req": 10,
+       "desc": "One-handed weapons deal 25% more damage."
+      },
+      {
+       "req": 50,
+       "desc": "One-handed weapons deal 50% more damage."
+      }
+     ]
+    },
+    {
+     "i": 4,
+     "x": 1.085714,
+     "y": 1.1142859999999999,
+     "links": [
+      13
+     ],
+     "name": "Bell Ringer",
+     "ranks": [
+      {
+       "req": 20,
+       "desc": "Maces deal Stamina damage."
+      },
+      {
+       "req": 70,
+       "desc": "Maces deal Magicka and Stamina damage."
+      }
+     ]
+    },
+    {
+     "i": 13,
+     "x": 0.5571429999999999,
+     "y": 1.728571,
+     "links": [],
+     "name": "Armor Breaker",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "Maces reduce enemy Armor Rating by 100 for 10 seconds."
+      },
+      {
+       "req": 90,
+       "desc": "Maces reduce enemy Armor Rating by 200 for 10 seconds."
+      }
+     ]
+    },
+    {
+     "i": 3,
+     "x": 3.14666666,
+     "y": 1.1,
+     "links": [
+      8
+     ],
+     "name": "Precise Cuts",
+     "ranks": [
+      {
+       "req": 20,
+       "desc": "Swords and daggers have a 20% chance of dealing critical damage."
+      },
+      {
+       "req": 70,
+       "desc": "Swords and daggers have a 20% chance of dealing critical damage. Your critical chance is doubled during attacks of opportunity."
+      }
+     ]
+    },
+    {
+     "i": 8,
+     "x": 3.75333333,
+     "y": 1.9,
+     "links": [],
+     "name": "Keen Edge",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "Swords and daggers deal three times more critical damage."
+      },
+      {
+       "req": 90,
+       "desc": "Swords and daggers deal five times more critical damage."
+      }
+     ]
+    },
+    {
+     "i": 5,
+     "x": 1.65333334,
+     "y": 1.1,
+     "links": [
+      12
+     ],
+     "name": "Hack and Slash",
+     "ranks": [
+      {
+       "req": 20,
+       "desc": "War axes deal extra bleeding damage over 10 seconds."
+      },
+      {
+       "req": 70,
+       "desc": "War axes deal extra bleeding damage over 10 seconds. Staggered targets take 50% extra bleeding damage."
+      }
+     ]
+    },
+    {
+     "i": 12,
+     "x": 1.24,
+     "y": 2.04,
+     "links": [],
+     "name": "Carve and Spit",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "War axes deal three times as much bleeding damage over time."
+      },
+      {
+       "req": 90,
+       "desc": "War axes deal five times as much bleeding damage over time."
+      }
+     ]
+    },
+    {
+     "i": 1,
+     "x": 2.24,
+     "y": 0.92,
+     "links": [
+      2,
+      11
+     ],
+     "name": "Fighting Stance",
+     "ranks": [
+      {
+       "req": 30,
+       "desc": "One-handed power attacks cost 20% less Stamina and deal 25% extra stagger."
+      }
+     ]
+    },
+    {
+     "i": 2,
+     "x": 2.88666666,
+     "y": 2.44,
+     "links": [
+      9
+     ],
+     "name": "Overrun",
+     "ranks": [
+      {
+       "req": 60,
+       "desc": "One-handed power attacks deal 50% extra damage."
+      }
+     ]
+    },
+    {
+     "i": 9,
+     "x": 2.385714,
+     "y": 6.4,
+     "links": [],
+     "name": "Warmaster",
+     "ranks": [
+      {
+       "req": 100,
+       "desc": "Killing an enemy with a One-handed power attack restores 100 Stamina."
+      }
+     ]
+    },
+    {
+     "i": 11,
+     "x": 1.76,
+     "y": 2.44,
+     "links": [
+      9
+     ],
+     "name": "Execute",
+     "ranks": [
+      {
+       "req": 80,
+       "desc": "One-handed power attacks deal 50% extra damage to enemies who fall below half Health."
+      }
+     ]
+    },
+    {
+     "i": 6,
+     "x": -0.257143,
+     "y": 0.271429,
+     "links": [],
+     "name": "Twin Fury",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "You resist 25% of incoming weapon and spell damage while performing a dual wield power attack."
+      },
+      {
+       "req": 70,
+       "desc": "You resist 50% of incoming weapon and spell damage while performing a dual wield power attack."
+      }
+     ]
+    },
+    {
+     "i": 10,
+     "x": -0.085714,
+     "y": 1.2,
+     "links": [],
+     "name": "Flourish",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "One-handed weapons swing 10% faster when wielded with an empty off-hand."
+      },
+      {
+       "req": 70,
+       "desc": "One-handed weapons swing 20% faster when wielded with an empty off-hand."
+      }
+     ]
+    }
+   ],
+   "slug": "one-handed"
+  },
+  {
+   "id": "AVRestoration",
+   "name": "Restoration",
+   "description": "The School of Restoration governs the manipulation of life energy. This skill makes it easier to cast spells like Fast Healing, Turn Undead, and Poison Bloom.",
+   "group": "skills",
+   "by": "Adamant - A Perk Overhaul",
+   "nodes": [
+    {
+     "i": 12,
+     "x": 2.628571,
+     "y": 0.1,
+     "links": [
+      13,
+      10,
+      3,
+      14,
+      2,
+      5,
+      11
+     ],
+     "name": "Restoration Mastery",
+     "ranks": [
+      {
+       "req": 10,
+       "desc": "Restoration spells cost 25% less Magicka."
+      },
+      {
+       "req": 50,
+       "desc": "Restoration spells cost 50% less Magicka."
+      }
+     ]
+    },
+    {
+     "i": 13,
+     "x": 1.8857140000000001,
+     "y": 1.128571,
+     "links": [
+      16
+     ],
+     "name": "Empowered Ward",
+     "ranks": [
+      {
+       "req": 20,
+       "desc": "Ward spells resist 50% of incoming weapon damage."
+      }
+     ]
+    },
+    {
+     "i": 16,
+     "x": 1.214286,
+     "y": 1.928571,
+     "links": [
+      6
+     ],
+     "name": "Radiant Ward",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "Ward spells cost 50% less Magicka."
+      }
+     ]
+    },
+    {
+     "i": 6,
+     "x": -0.085714,
+     "y": 2.557143,
+     "links": [],
+     "name": "Prismatic Ward",
+     "ranks": [
+      {
+       "req": 70,
+       "desc": "Ward spells absorb Magicka from incoming spells."
+      }
+     ]
+    },
+    {
+     "i": 10,
+     "x": 3.342857,
+     "y": 1.128571,
+     "links": [
+      18
+     ],
+     "name": "Affliction",
+     "ranks": [
+      {
+       "req": 20,
+       "desc": "Poison spells deal 25% more damage."
+      },
+      {
+       "req": 70,
+       "desc": "Poison spells deal 50% more damage."
+      }
+     ]
+    },
+    {
+     "i": 18,
+     "x": 3.971429,
+     "y": 1.942857,
+     "links": [
+      19
+     ],
+     "name": "Plague",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "Poison spells reduce enemy Poison Resistance by up to 50% for 10 seconds."
+      },
+      {
+       "req": 90,
+       "desc": "Poison spells reduce enemy Poison Resistance by up to 100% for 10 seconds."
+      }
+     ]
+    },
+    {
+     "i": 19,
+     "x": 5.4,
+     "y": 2.471429,
+     "links": [],
+     "name": "Scourge",
+     "ranks": [
+      {
+       "req": 80,
+       "desc": "Poison spells deal 50% extra damage to targets who fall below half Health."
+      },
+      {
+       "req": 100,
+       "desc": "Poison spells deal double damage to targets who fall below half Health."
+      }
+     ]
+    },
+    {
+     "i": 3,
+     "x": 2.557143,
+     "y": 1.3,
+     "links": [
+      7,
+      1
+     ],
+     "name": "Recovery",
+     "ranks": [
+      {
+       "req": 20,
+       "desc": "Healing spells are 50% stronger."
+      },
+      {
+       "req": 70,
+       "desc": "Healing spells are twice as strong."
+      }
+     ]
+    },
+    {
+     "i": 7,
+     "x": 1.928571,
+     "y": 2.1428570000000002,
+     "links": [
+      4
+     ],
+     "name": "Repose",
+     "ranks": [
+      {
+       "req": 60,
+       "desc": "Regeneration, Attunement, and Circle spells last twice as long."
+      }
+     ]
+    },
+    {
+     "i": 4,
+     "x": 2.414286,
+     "y": 3.314286,
+     "links": [
+      8
+     ],
+     "name": "Resolve",
+     "ranks": [
+      {
+       "req": 80,
+       "desc": "Healing spells are 50% stronger when the target falls below half Health."
+      }
+     ]
+    },
+    {
+     "i": 8,
+     "x": 3.4857139999999998,
+     "y": 4.114286,
+     "links": [],
+     "name": "Renewal",
+     "ranks": [
+      {
+       "req": 100,
+       "desc": "When you fall below 25% Health while in combat, you automatically heal yourself back to full. This effect can occur once every ten minutes."
+      }
+     ]
+    },
+    {
+     "i": 1,
+     "x": 3.1,
+     "y": 2.1428570000000002,
+     "links": [
+      4
+     ],
+     "name": "Respite",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "Instant healing spells such as Fast Healing and Close Wounds also restore Stamina."
+      }
+     ]
+    },
+    {
+     "i": 14,
+     "x": 1.485714,
+     "y": 0.785714,
+     "links": [
+      17
+     ],
+     "name": "Dawn's Wrath",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "Turn Undead spells are 50% stronger."
+      },
+      {
+       "req": 80,
+       "desc": "Turn Undead spells are twice as strong."
+      }
+     ]
+    },
+    {
+     "i": 17,
+     "x": 0.428571,
+     "y": 1.414286,
+     "links": [],
+     "name": "Burning Light",
+     "ranks": [
+      {
+       "req": 60,
+       "desc": "Turn Undead spells deal damage over time."
+      }
+     ]
+    },
+    {
+     "i": 2,
+     "x": -0.4,
+     "y": 1.014286,
+     "links": [],
+     "name": "Illumination",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "Regeneration and Attunement spells last twice as long when dual cast."
+      }
+     ]
+    },
+    {
+     "i": 5,
+     "x": 5.628571,
+     "y": 0.985714,
+     "links": [],
+     "name": "Pilgrim",
+     "ranks": [
+      {
+       "req": 30,
+       "desc": "Divine blessings are twice as strong."
+      },
+      {
+       "req": 60,
+       "desc": "Divine blessings are twice as strong, and you receive additional bonuses when you pray at their shrines."
+      }
+     ]
+    },
+    {
+     "i": 11,
+     "x": 3.742857,
+     "y": 0.771429,
+     "links": [
+      15
+     ],
+     "name": "Necromage",
+     "ranks": [
+      {
+       "req": 70,
+       "desc": "All spells are more effective against undead, including the caster if they're undead."
+      }
+     ]
+    },
+    {
+     "i": 15,
+     "x": 4.771429,
+     "y": 1.357143,
+     "links": [],
+     "name": "Power of the Light",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "Sun spells deal extra damage over time."
+      },
+      {
+       "req": 90,
+       "desc": "Sun spells deal even more damage over time."
+      }
+     ]
+    }
+   ],
+   "slug": "restoration"
+  },
+  {
+   "id": "AVPickpocket",
+   "name": "Security",
+   "description": "Security is the art of opening locks and picking pockets. Those who are skilled in Security can find hidden treasures, disarm an unaware target, and silently poison their foes. ",
+   "group": "skills",
+   "by": "Hand to Hand - An Adamant Addon",
+   "nodes": [
+    {
+     "i": 8,
+     "x": 1.5,
+     "y": -0.228571,
+     "links": [
+      4
+     ],
+     "name": "Security Mastery",
+     "ranks": [
+      {
+       "req": 10,
+       "desc": "You are 25% more likely to succeed at lockpicking and pickpocketing."
+      },
+      {
+       "req": 50,
+       "desc": "You are 50% more likely to succeed at lockpicking and pickpocketing."
+      }
+     ]
+    },
+    {
+     "i": 4,
+     "x": 1.8857140000000001,
+     "y": 0.485714,
+     "links": [
+      3,
+      5,
+      10,
+      9
+     ],
+     "name": "Golden Touch",
+     "ranks": [
+      {
+       "req": 20,
+       "desc": "You find more gold when opening chests and picking pockets."
+      }
+     ]
+    },
+    {
+     "i": 3,
+     "x": 2.528571,
+     "y": 1.7571430000000001,
+     "links": [
+      6
+     ],
+     "name": "Sleight of Hand",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "You are 50% more likely to succeed at pickpocketing while undetected."
+      }
+     ]
+    },
+    {
+     "i": 6,
+     "x": 3.1,
+     "y": 2.842857,
+     "links": [
+      7
+     ],
+     "name": "Misdirection",
+     "ranks": [
+      {
+       "req": 60,
+       "desc": "Your chance to succeed at pickpocketing can now reach 100%."
+      }
+     ]
+    },
+    {
+     "i": 7,
+     "x": 3.6428570000000002,
+     "y": 3.9,
+     "links": [],
+     "name": "Perfect Touch",
+     "ranks": [
+      {
+       "req": 80,
+       "desc": "You can pickpocket equipped armor and jewelry"
+      },
+      {
+       "req": 100,
+       "desc": "You can pickpocket equipped weapons, armor, and jewelry."
+      }
+     ]
+    },
+    {
+     "i": 5,
+     "x": 3.185714,
+     "y": 0.742857,
+     "links": [],
+     "name": "Poisoned Fruit",
+     "ranks": [
+      {
+       "req": 30,
+       "desc": "Poisons that you place in enemy pockets are 50% stronger and last twice as slong."
+      },
+      {
+       "req": 70,
+       "desc": "Poisons that you place in enemy pockets are twice as strong and last three times as slong."
+      }
+     ]
+    },
+    {
+     "i": 10,
+     "x": 0.642857,
+     "y": 0.757143,
+     "links": [],
+     "name": "Deep Pockets",
+     "ranks": [
+      {
+       "req": 30,
+       "desc": "Your Carry Weight is increased by 50."
+      },
+      {
+       "req": 60,
+       "desc": "Your Carry Weight is increased by 100."
+      }
+     ]
+    },
+    {
+     "i": 9,
+     "x": 1.128571,
+     "y": 1.2571430000000001,
+     "links": [
+      1
+     ],
+     "name": "Locksmith",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "Your lockpicks start close to the opening position, and their position no longer resets upon breaking."
+      }
+     ]
+    },
+    {
+     "i": 1,
+     "x": 0.385714,
+     "y": 2.014286,
+     "links": [
+      2
+     ],
+     "name": "Dungeon Delver",
+     "ranks": [
+      {
+       "req": 70,
+       "desc": "You find more rare loot in dungeons."
+      }
+     ]
+    },
+    {
+     "i": 2,
+     "x": -0.357143,
+     "y": 2.814286,
+     "links": [],
+     "name": "Treasure Hunter",
+     "ranks": [
+      {
+       "req": 90,
+       "desc": "You have a chance to find valuable treasure in any chest."
+      }
+     ]
+    }
+   ],
+   "slug": "security"
+  },
+  {
+   "id": "AVSmithing",
+   "name": "Smithing",
+   "description": "Smithing is the art of forging weapons and armor from raw materials.",
+   "group": "skills",
+   "by": "Adamant - A Perk Overhaul",
+   "nodes": [
+    {
+     "i": 6,
+     "x": 4.057143,
+     "y": 0.5428569999999999,
+     "links": [
+      2,
+      3,
+      4
+     ],
+     "name": "Smithing Mastery",
+     "ranks": [
+      {
+       "req": 10,
+       "desc": "You can temper all items by one additional tier."
+      },
+      {
+       "req": 50,
+       "desc": "You can temper all items by two additional tiers."
+      }
+     ]
+    },
+    {
+     "i": 2,
+     "x": 5.371429,
+     "y": 1.557143,
+     "links": [
+      5
+     ],
+     "name": "Blacksmith",
+     "ranks": [
+      {
+       "req": 30,
+       "desc": "You can temper all items by one additional tier."
+      }
+     ]
+    },
+    {
+     "i": 5,
+     "x": 6.314286,
+     "y": 2.3,
+     "links": [
+      8
+     ],
+     "name": "Armorer",
+     "ranks": [
+      {
+       "req": 70,
+       "desc": "You can temper all items by one additional tier."
+      }
+     ]
+    },
+    {
+     "i": 8,
+     "x": 5.6,
+     "y": 2.814286,
+     "links": [],
+     "name": "Forgemaster",
+     "ranks": [
+      {
+       "req": 90,
+       "desc": "You can temper all items by one additional tier."
+      }
+     ]
+    },
+    {
+     "i": 3,
+     "x": 2.5,
+     "y": 1.3,
+     "links": [
+      1
+     ],
+     "name": "Basic Smithing",
+     "ranks": [
+      {
+       "req": 20,
+       "desc": "You can create Steel and Leather items at any forge."
+      }
+     ]
+    },
+    {
+     "i": 1,
+     "x": 1.185714,
+     "y": 1.957143,
+     "links": [
+      13,
+      7
+     ],
+     "name": "Journeyman Smithing",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "You can create Dwarven, Steel Plate, and Scaled items at any forge."
+      }
+     ]
+    },
+    {
+     "i": 13,
+     "x": 2.414286,
+     "y": 2.3,
+     "links": [
+      14
+     ],
+     "name": "Rare Smithing",
+     "ranks": [
+      {
+       "req": 60,
+       "desc": "You can create Elven items at any forge."
+      }
+     ]
+    },
+    {
+     "i": 14,
+     "x": 3.7,
+     "y": 2.3,
+     "links": [
+      12
+     ],
+     "name": "Exotic Smithing",
+     "ranks": [
+      {
+       "req": 80,
+       "desc": "You can create Glass items at any forge."
+      }
+     ]
+    },
+    {
+     "i": 12,
+     "x": 4.371429,
+     "y": 2.9,
+     "links": [],
+     "name": "Mythic Smithing",
+     "ranks": [
+      {
+       "req": 100,
+       "desc": "You can create Daedric and Dragon items at any forge."
+      }
+     ]
+    },
+    {
+     "i": 7,
+     "x": 0.185714,
+     "y": 2.457143,
+     "links": [
+      10
+     ],
+     "name": "Intermediate Smithing",
+     "ranks": [
+      {
+       "req": 60,
+       "desc": "You can create Nordic and Orcish items at any forge."
+      }
+     ]
+    },
+    {
+     "i": 10,
+     "x": 1.957143,
+     "y": 2.9,
+     "links": [
+      12
+     ],
+     "name": "Advanced Smithing",
+     "ranks": [
+      {
+       "req": 80,
+       "desc": "You can create Ebony items at any forge."
+      }
+     ]
+    },
+    {
+     "i": 4,
+     "x": 4.171429,
+     "y": 1.771429,
+     "links": [],
+     "name": "Strong Back",
+     "ranks": [
+      {
+       "req": 30,
+       "desc": "Your Carry Weight is increased by 50."
+      },
+      {
+       "req": 70,
+       "desc": "Your Carry Weight is increased by 100."
+      }
+     ]
+    }
+   ],
+   "slug": "smithing"
+  },
+  {
+   "id": "AVSneak",
+   "name": "Sneak",
+   "description": "Sneaking is the art of moving unseen and unheard, and striking from the shadows. Those who are skilled in Sneak can even hide in plain sight.",
+   "group": "skills",
+   "by": "Adamant - A Perk Overhaul",
+   "nodes": [
+    {
+     "i": 3,
+     "x": 2.4857139999999998,
+     "y": -0.1,
+     "links": [
+      10,
+      7,
+      12,
+      11
+     ],
+     "name": "Sneak Mastery",
+     "ranks": [
+      {
+       "req": 10,
+       "desc": "You are 25% harder to detect when sneaking."
+      },
+      {
+       "req": 50,
+       "desc": "You are 50% harder to detect when sneaking."
+      }
+     ]
+    },
+    {
+     "i": 10,
+     "x": 1.857143,
+     "y": 0.614286,
+     "links": [
+      2
+     ],
+     "name": "Backstab",
+     "ranks": [
+      {
+       "req": 30,
+       "desc": "Sneak attacks with unarmed and one-handed weapons (excluding daggers) deal an additional 25% damage. Sneak attacks with two-handed weapons deal an additional 10% damage."
+      }
+     ]
+    },
+    {
+     "i": 2,
+     "x": 1.357143,
+     "y": 1.285714,
+     "links": [
+      9
+     ],
+     "name": "Deadly Aim",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "Sneak attacks with bows deal 20% more damage. Sneak attacks with crossbows deal 10% more damage."
+      }
+     ]
+    },
+    {
+     "i": 9,
+     "x": 2.0,
+     "y": 2.157143,
+     "links": [],
+     "name": "Assassin's Blade",
+     "ranks": [
+      {
+       "req": 50,
+       "desc": "Sneak attacks with daggers deal 0.5% more damage per level in Sneak. (capped at a total of 100% more damage at level 200 in Sneak.)"
+      }
+     ]
+    },
+    {
+     "i": 7,
+     "x": 4.0,
+     "y": 0.5428569999999999,
+     "links": [
+      6
+     ],
+     "name": "Trespasser",
+     "ranks": [
+      {
+       "req": 30,
+       "desc": "You no longer trigger traps, and you can execute a silent roll while sneaking."
+      }
+     ]
+    },
+    {
+     "i": 6,
+     "x": 4.171429,
+     "y": 1.671429,
+     "links": [
+      5
+     ],
+     "name": "Infiltrator",
+     "ranks": [
+      {
+       "req": 60,
+       "desc": "You move 25% faster while sneaking."
+      }
+     ]
+    },
+    {
+     "i": 5,
+     "x": 2.942857,
+     "y": 2.328571,
+     "links": [
+      8
+     ],
+     "name": "Shadow Warrior",
+     "ranks": [
+      {
+       "req": 100,
+       "desc": "Crouching stops combat for a moment and forces distant opponents to search for a target. (60 second cooldown)"
+      }
+     ]
+    },
+    {
+     "i": 8,
+     "x": 2.042857,
+     "y": 3.6428570000000002,
+     "links": [],
+     "name": "Muffled Movement",
+     "ranks": [
+      {
+       "req": 30,
+       "desc": "Noise from armor is reduced 25%."
+      }
+     ]
+    },
+    {
+     "i": 12,
+     "x": 3.285714,
+     "y": 0.742857,
+     "links": [
+      1
+     ],
+     "name": "Silent Casting",
+     "ranks": [
+      {
+       "req": 20,
+       "desc": "Your spells are silent to others."
+      }
+     ]
+    },
+    {
+     "i": 1,
+     "x": 3.3571429999999998,
+     "y": 1.628571,
+     "links": [],
+     "name": "Shadow Casting",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "Damage-dealing spells are 50% stronger while sneaking and undetected."
+      },
+      {
+       "req": 70,
+       "desc": "Damage-dealing spells are twice as strong while sneaking and undetected."
+      }
+     ]
+    },
+    {
+     "i": 11,
+     "x": 2.557143,
+     "y": 1.2428569999999999,
+     "links": [],
+     "name": "Deadly Aim",
+     "ranks": [
+      {
+       "req": 30,
+       "desc": "Sneak attacks with bows deal 50% more damage."
+      },
+      {
+       "req": 60,
+       "desc": "Sneak attacks with bows deal double damage."
+      }
+     ]
+    }
+   ],
+   "slug": "sneak"
+  },
+  {
+   "id": "AVSpeechcraft",
+   "name": "Speech",
+   "description": "Speech is the art of persuasion and bartering. Those who are skilled in Speech receive better prices from merchants and are more likely to convince others to do as they ask.",
+   "group": "skills",
+   "by": "Bounty Hunter - Bounty Perks",
+   "nodes": [
+    {
+     "i": 1,
+     "x": 2.4,
+     "y": -0.314286,
+     "links": [
+      4,
+      6,
+      3,
+      10,
+      12
+     ],
+     "name": "Speech Mastery",
+     "ranks": [
+      {
+       "req": 10,
+       "desc": "Buying and selling prices are 10% better."
+      },
+      {
+       "req": 50,
+       "desc": "Buying and selling prices are 20% better."
+      }
+     ]
+    },
+    {
+     "i": 4,
+     "x": 4.16666667,
+     "y": 0.26,
+     "links": [
+      9
+     ],
+     "name": "Bard",
+     "ranks": [
+      {
+       "req": 30,
+       "desc": "Bard songs increases Health, Magicka, or Stamina for you and all nearby living allies. Requires Adept proficiency with an instrument. You gain bonus expertise from playing instruments."
+      },
+      {
+       "req": 60,
+       "desc": "Bard songs increase Health, Magicka, or Stamina and grant an additional bonus to you and all nearby living allies. Requires Expert proficiency with an instrument. You gain even more expertise when playing instruments."
+      }
+     ]
+    },
+    {
+     "i": 9,
+     "x": 3.58666667,
+     "y": 1.08,
+     "links": [
+      5
+     ],
+     "name": "Inspiration",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "Bard songs are twice as strong on allies and affect summoned or reanimated minions."
+      }
+     ]
+    },
+    {
+     "i": 5,
+     "x": 4.11333334,
+     "y": 2.04,
+     "links": [],
+     "name": "Warsong",
+     "ranks": [
+      {
+       "req": 90,
+       "desc": "Bard songs grant all bonuses to allies, regardless of the instrument you play. Requires Master proficiency with an instrument."
+      }
+     ]
+    },
+    {
+     "i": 6,
+     "x": 0.5466666499999999,
+     "y": 0.1,
+     "links": [
+      7,
+      8
+     ],
+     "name": "Trade and Barter",
+     "ranks": [
+      {
+       "req": 30,
+       "desc": "Your selling prices are increased by 25%."
+      }
+     ]
+    },
+    {
+     "i": 7,
+     "x": -0.11333334,
+     "y": 1.0,
+     "links": [],
+     "name": "Black Market",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "You can sell stolen items to any merchant."
+      }
+     ]
+    },
+    {
+     "i": 8,
+     "x": 1.4666666400000001,
+     "y": 1.1,
+     "links": [
+      11
+     ],
+     "name": "Supply and Demand",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "Merchants have extra gold available for bartering."
+      },
+      {
+       "req": 80,
+       "desc": "Merchants have even more gold available for bartering."
+      }
+     ]
+    },
+    {
+     "i": 11,
+     "x": 0.6,
+     "y": 2.04,
+     "links": [
+      2
+     ],
+     "name": "Investor",
+     "ranks": [
+      {
+       "req": 70,
+       "desc": "You can invest in a shopkeeper's business to increase their available stock."
+      }
+     ]
+    },
+    {
+     "i": 2,
+     "x": 0.64666668,
+     "y": 3.14,
+     "links": [],
+     "name": "Entrepreneur",
+     "ranks": [
+      {
+       "req": 100,
+       "desc": "You can sell any item to any merchant in Tamriel."
+      }
+     ]
+    },
+    {
+     "i": 3,
+     "x": 1.6428570200000001,
+     "y": 0.457143,
+     "links": [],
+     "name": "Quick Learner",
+     "ranks": [
+      {
+       "req": 60,
+       "desc": "Training costs much less gold."
+      }
+     ]
+    },
+    {
+     "i": 10,
+     "x": 3.128571,
+     "y": 0.528571,
+     "links": [],
+     "name": "Silver Tongue",
+     "ranks": [
+      {
+       "req": 20,
+       "desc": "You are much more likely to succeed at persuasion, and can even bribe guards to ignore your crimes."
+      }
+     ]
+    },
+    {
+     "i": 12,
+     "x": 2.414286,
+     "y": 0.914286,
+     "links": [
+      13
+     ],
+     "name": "Bounty Hunter",
+     "ranks": [
+      {
+       "req": 25,
+       "desc": "25% more gold from completing bounties."
+      },
+      {
+       "req": 60,
+       "desc": "50% more gold from completing bounties."
+      }
+     ]
+    },
+    {
+     "i": 13,
+     "x": 2.214286,
+     "y": 1.957143,
+     "links": [],
+     "name": "Front Money",
+     "ranks": [
+      {
+       "req": 50,
+       "desc": "Able to ask for the bonus gold up front, instead of getting the bonus when completing the bounty."
+      }
+     ]
+    }
+   ],
+   "slug": "speech"
+  },
+  {
+   "id": "AVTwoHanded",
+   "name": "Two-handed",
+   "description": "The Two-handed skill governs the use of larger weapons such as greatswords, battleaxes, and warhammers.",
+   "group": "skills",
+   "by": "Adamant - A Perk Overhaul",
+   "nodes": [
+    {
+     "i": 7,
+     "x": 2.885714,
+     "y": -0.1,
+     "links": [
+      5,
+      1,
+      6,
+      4
+     ],
+     "name": "Two-handed Mastery",
+     "ranks": [
+      {
+       "req": 10,
+       "desc": "Two-handed weapons do 25% more damage."
+      },
+      {
+       "req": 50,
+       "desc": "Two-handed weapons do 50% more damage."
+      }
+     ]
+    },
+    {
+     "i": 5,
+     "x": 1.928571,
+     "y": 1.128571,
+     "links": [
+      11
+     ],
+     "name": "Rip and Tear",
+     "ranks": [
+      {
+       "req": 20,
+       "desc": "Battleaxes deal extra bleeding damage over 10 seconds."
+      },
+      {
+       "req": 70,
+       "desc": "Battleaxes deal extra bleeding damage over 10 seconds. Staggered targets take 50% extra bleeding damage."
+      }
+     ]
+    },
+    {
+     "i": 11,
+     "x": 1.228571,
+     "y": 2.028571,
+     "links": [],
+     "name": "Rend and Rake",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "Battleaxes deal three times more bleeding damage."
+      },
+      {
+       "req": 90,
+       "desc": "Battleaxes deal five times more bleeding damage."
+      }
+     ]
+    },
+    {
+     "i": 1,
+     "x": 2.871429,
+     "y": 0.88,
+     "links": [
+      2,
+      8,
+      3
+     ],
+     "name": "Champion's Stance",
+     "ranks": [
+      {
+       "req": 30,
+       "desc": "Two-handed power attacks cost 20% less Stamina and deal 25% extra stagger."
+      }
+     ]
+    },
+    {
+     "i": 2,
+     "x": 2.128571,
+     "y": 2.442857,
+     "links": [
+      10
+     ],
+     "name": "Massacre",
+     "ranks": [
+      {
+       "req": 80,
+       "desc": "Two-handed power attacks deal 50% more damage to enemies who fall below half Health."
+      }
+     ]
+    },
+    {
+     "i": 10,
+     "x": 2.871429,
+     "y": 7.16,
+     "links": [],
+     "name": "Berserker",
+     "ranks": [
+      {
+       "req": 100,
+       "desc": "Killing an enemy with a Two-handed power attack increases your Attack Speed by 20% for 20 seconds."
+      }
+     ]
+    },
+    {
+     "i": 8,
+     "x": 3.5,
+     "y": 2.5,
+     "links": [
+      10
+     ],
+     "name": "Overpower",
+     "ranks": [
+      {
+       "req": 60,
+       "desc": "Two-handed power attacks deal 50% extra damage."
+      }
+     ]
+    },
+    {
+     "i": 3,
+     "x": 2.828571,
+     "y": 3.114286,
+     "links": [],
+     "name": "Perfect Parry",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "Two-handed weapons have a longer parry window. Successful parries deal 25% extra stagger."
+      },
+      {
+       "req": 70,
+       "desc": "Two-handed weapons have a longer parry window. Successful parries restore 25 Stamina and deal 25% extra stagger."
+      }
+     ]
+    },
+    {
+     "i": 6,
+     "x": 1.5,
+     "y": 0.957143,
+     "links": [
+      12
+     ],
+     "name": "Skull Splitter",
+     "ranks": [
+      {
+       "req": 20,
+       "desc": "Warhammers deal Stamina damage."
+      },
+      {
+       "req": 70,
+       "desc": "Warhammers deal Magicka and Stamina damage."
+      }
+     ]
+    },
+    {
+     "i": 12,
+     "x": 0.385714,
+     "y": 1.942857,
+     "links": [],
+     "name": "Armor Crusher",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "Warhammers reduce enemy Armor Rating by 100 for 10 seconds."
+      },
+      {
+       "req": 90,
+       "desc": "Warhammers reduce enemy Armor Rating by 200 for 10 seconds."
+      }
+     ]
+    },
+    {
+     "i": 4,
+     "x": 3.714286,
+     "y": 1.014286,
+     "links": [
+      9
+     ],
+     "name": "Deep Cuts",
+     "ranks": [
+      {
+       "req": 20,
+       "desc": "Greatswords have a 20% chance to deal critical damage."
+      },
+      {
+       "req": 70,
+       "desc": "Greatswords have a 20% chance to deal critical damage. Your critical chance is doubled during attacks of opportunity."
+      }
+     ]
+    },
+    {
+     "i": 9,
+     "x": 4.6,
+     "y": 2.1428570000000002,
+     "links": [],
+     "name": "Mortal Wounds",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "Greatswords deal three times more critical damage."
+      },
+      {
+       "req": 90,
+       "desc": "Greatswords deal five times more critical damage."
+      }
+     ]
+    }
+   ],
+   "slug": "two-handed"
+  },
+  {
+   "id": "CSF_Athletics",
+   "name": "Athletics",
+   "description": "Those trained in athletics are able to run faster and maintain their stamina longer.",
+   "group": "custom",
+   "by": "Constellations - Additional Player Skills",
+   "nodes": [
+    {
+     "i": 0,
+     "x": -0.9,
+     "y": 0.0,
+     "links": [
+      1,
+      2
+     ],
+     "name": "Swift Step",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "Move 5% faster."
+      },
+      {
+       "req": 20,
+       "desc": "Move 10% faster."
+      },
+      {
+       "req": 40,
+       "desc": "Move 15% faster."
+      },
+      {
+       "req": 60,
+       "desc": "Move 20% faster."
+      },
+      {
+       "req": 80,
+       "desc": "Move 25% faster."
+      }
+     ]
+    },
+    {
+     "i": 1,
+     "x": 0.7,
+     "y": 0.3,
+     "links": [],
+     "name": "Adaptation",
+     "ranks": [
+      {
+       "req": 30,
+       "desc": "20% resistance to frost damage and +10 warmth rating."
+      },
+      {
+       "req": 60,
+       "desc": "35% resistance to frost damage and +20 warmth rating."
+      }
+     ]
+    },
+    {
+     "i": 2,
+     "x": -0.5,
+     "y": 1.8,
+     "links": [
+      3,
+      6,
+      7
+     ],
+     "name": "Fight or Flight",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "Completely restore stamina when entering combat."
+      }
+     ]
+    },
+    {
+     "i": 3,
+     "x": -2.0,
+     "y": 2.5,
+     "links": [
+      4
+     ],
+     "name": "Imposing Presence",
+     "ranks": [
+      {
+       "req": 50,
+       "desc": "Animals will not attack you."
+      }
+     ]
+    },
+    {
+     "i": 4,
+     "x": -4.2,
+     "y": 2.6,
+     "links": [
+      5
+     ],
+     "name": "Perseverance",
+     "ranks": [
+      {
+       "req": 60,
+       "desc": "Sprinting drains 25% less stamina."
+      }
+     ]
+    },
+    {
+     "i": 5,
+     "x": -6.1,
+     "y": 4.5,
+     "links": [],
+     "name": "Second Wind",
+     "ranks": [
+      {
+       "req": 90,
+       "desc": "Stamina regenerates 10 times faster out of combat."
+      }
+     ]
+    },
+    {
+     "i": 6,
+     "x": 1.0,
+     "y": 2.9,
+     "links": [],
+     "name": "Acrobat",
+     "ranks": [
+      {
+       "req": 60,
+       "desc": "90% reduced damage from falling."
+      }
+     ]
+    },
+    {
+     "i": 7,
+     "x": -0.6,
+     "y": 3.5,
+     "links": [
+      8
+     ],
+     "name": "Afterimage",
+     "ranks": [
+      {
+       "req": 70,
+       "desc": "50% chance to dodge incoming arrows while sprinting."
+      }
+     ]
+    },
+    {
+     "i": 8,
+     "x": -1.2,
+     "y": 5.2,
+     "links": [],
+     "name": "Heightened Senses",
+     "ranks": [
+      {
+       "req": 100,
+       "desc": "Time slows down when an enemy attack would be lethal."
+      }
+     ]
+    }
+   ],
+   "slug": "athletics"
+  },
+  {
+   "id": "CSF_Exploration",
+   "name": "Exploration",
+   "description": "The art of exploring and surviving in the wilds. Trained explorers can thrive in even the harshest environments.",
+   "group": "custom",
+   "by": "Firmament",
+   "nodes": [
+    {
+     "i": 0,
+     "x": -2.0,
+     "y": 0.0,
+     "links": [
+      1,
+      2,
+      6
+     ],
+     "name": "Resilience",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "You are 10% more resistant to extreme temperatures."
+      },
+      {
+       "req": 20,
+       "desc": "You are 20% more resistant to extreme temperatures."
+      },
+      {
+       "req": 40,
+       "desc": "You are 30% more resistant to extreme temperatures."
+      },
+      {
+       "req": 60,
+       "desc": "You are 40% more resistant to extreme temperatures."
+      },
+      {
+       "req": 80,
+       "desc": "You are 50% more resistant to extreme temperatures."
+      }
+     ]
+    },
+    {
+     "i": 1,
+     "x": 0.4,
+     "y": 0.3,
+     "links": [],
+     "name": "Diamond Pickaxe",
+     "ranks": [
+      {
+       "req": 30,
+       "desc": "Ore veins yield twice as much ore and gems."
+      }
+     ]
+    },
+    {
+     "i": 2,
+     "x": -0.1,
+     "y": 1.2,
+     "links": [
+      5,
+      3,
+      7
+     ],
+     "name": "Camper",
+     "ranks": [
+      {
+       "req": 30,
+       "desc": "Can wake up Well Rested after sleeping outside, and 20% bonus resistance to Fatigue."
+      },
+      {
+       "req": 50,
+       "desc": "Can wake up Well Rested after sleeping outside, and 40% bonus resistance to Fatigue."
+      }
+     ]
+    },
+    {
+     "i": 3,
+     "x": 1.6,
+     "y": 1.5,
+     "links": [
+      4
+     ],
+     "name": "Hunter",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "Animals you hit move 40% slower for a few seconds."
+      }
+     ]
+    },
+    {
+     "i": 4,
+     "x": 0.8,
+     "y": 3.2,
+     "links": [],
+     "name": "Fisherman",
+     "ranks": [
+      {
+       "req": 60,
+       "desc": "25% more chance of catching uncommon and rare fishes."
+      }
+     ]
+    },
+    {
+     "i": 5,
+     "x": -1.4,
+     "y": 2.5,
+     "links": [
+      10
+     ],
+     "name": "Field Rations",
+     "ranks": [
+      {
+       "req": 50,
+       "desc": "Food restores 50% more Hunger."
+      },
+      {
+       "req": 70,
+       "desc": "Food restores twice as much Hunger."
+      }
+     ]
+    },
+    {
+     "i": 6,
+     "x": -4.5,
+     "y": 0.9,
+     "links": [
+      8,
+      7
+     ],
+     "name": "Cartographer",
+     "ranks": [
+      {
+       "req": 35,
+       "desc": "Carrying capacity is increased by 1 for each location discovered."
+      }
+     ]
+    },
+    {
+     "i": 7,
+     "x": -2.4,
+     "y": 1.7,
+     "links": [],
+     "name": "Pilgrim",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "Praying at a shrine has a chance to clear away fog and inclement weather."
+      }
+     ]
+    },
+    {
+     "i": 8,
+     "x": -3.3,
+     "y": 2.4,
+     "links": [
+      9
+     ],
+     "name": "Wayfarer",
+     "ranks": [
+      {
+       "req": 60,
+       "desc": "Can ask innkeepers to discover new locations on your map."
+      }
+     ]
+    },
+    {
+     "i": 9,
+     "x": -2.7,
+     "y": 3.5,
+     "links": [
+      10
+     ],
+     "name": "Lay of the Land",
+     "ranks": [
+      {
+       "req": 80,
+       "desc": "Once a day, can fast travel to a location already discovered."
+      }
+     ]
+    },
+    {
+     "i": 10,
+     "x": -1.2,
+     "y": 4.0,
+     "links": [
+      11
+     ],
+     "name": "Dungeon Delver",
+     "ranks": [
+      {
+       "req": 90,
+       "desc": "Fatigue and Hunger increase 50% slower in dungeons, and 50% bonus resistance to damage from Undead."
+      }
+     ]
+    },
+    {
+     "i": 11,
+     "x": -1.5,
+     "y": 5.2,
+     "links": [],
+     "name": "Wanderer's Peace",
+     "ranks": [
+      {
+       "req": 100,
+       "desc": "Humanoid enemies have a 70% chance of being non-hostile if you approach unarmed."
+      }
+     ]
+    }
+   ],
+   "slug": "exploration"
+  },
+  {
+   "id": "CSF_HandtoHand",
+   "name": "Hand-to-hand",
+   "description": "The art of hand-to-hand combat. Those trained in this skill can strike faster and harder with their fists.",
+   "group": "custom",
+   "by": "Constellations - Additional Player Skills",
+   "nodes": [
+    {
+     "i": 0,
+     "x": 0.4,
+     "y": 0.0,
+     "links": [
+      1,
+      4
+     ],
+     "name": "Brawler",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "Unarmed attacks do 20% more damage."
+      },
+      {
+       "req": 20,
+       "desc": "Unarmed attacks do 40% more damage."
+      },
+      {
+       "req": 40,
+       "desc": "Unarmed attacks do 60% more damage."
+      },
+      {
+       "req": 60,
+       "desc": "Unarmed attacks do 80% more damage."
+      },
+      {
+       "req": 80,
+       "desc": "Unarmed attacks do twice as much damage."
+      }
+     ]
+    },
+    {
+     "i": 1,
+     "x": -0.3,
+     "y": 0.8,
+     "links": [
+      6,
+      2
+     ],
+     "name": "Fast Strike",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "Unarmed attacks are 15% faster."
+      }
+     ]
+    },
+    {
+     "i": 2,
+     "x": -1.1,
+     "y": 2.3,
+     "links": [
+      3
+     ],
+     "name": "Hysterical Strength",
+     "ranks": [
+      {
+       "req": 70,
+       "desc": "Unarmed attacks do more damage when your health is low."
+      }
+     ]
+    },
+    {
+     "i": 3,
+     "x": -1.4,
+     "y": 3.5,
+     "links": [],
+     "name": "Haymaker",
+     "ranks": [
+      {
+       "req": 100,
+       "desc": "Unarmed left or right power attacks have a 25% chance to knock down opponents."
+      }
+     ]
+    },
+    {
+     "i": 4,
+     "x": 2.0,
+     "y": 0.5,
+     "links": [
+      5
+     ],
+     "name": "Disorientation",
+     "ranks": [
+      {
+       "req": 30,
+       "desc": "Unarmed attacks briefly reduce the opponent's attack damage by 5%."
+      },
+      {
+       "req": 60,
+       "desc": "Unarmed attacks briefly reduce the opponent's attack damage by 10%."
+      }
+     ]
+    },
+    {
+     "i": 5,
+     "x": 3.0,
+     "y": 1.0,
+     "links": [],
+     "name": "Tempered Fists",
+     "ranks": [
+      {
+       "req": 50,
+       "desc": "Unarmed attacks with gauntlets do bonus damage based on their temper quality."
+      }
+     ]
+    },
+    {
+     "i": 6,
+     "x": -2.1,
+     "y": 1.0,
+     "links": [
+      7
+     ],
+     "name": "Fists of Fury",
+     "ranks": [
+      {
+       "req": 60,
+       "desc": "Dual unarmed attacks are an additional 15% faster."
+      }
+     ]
+    },
+    {
+     "i": 7,
+     "x": -2.9,
+     "y": 2.0,
+     "links": [
+      8
+     ],
+     "name": "Powerhouse",
+     "ranks": [
+      {
+       "req": 70,
+       "desc": "Dual unarmed power attacks are 50% stronger."
+      }
+     ]
+    },
+    {
+     "i": 8,
+     "x": -3.4,
+     "y": 3.0,
+     "links": [],
+     "name": "Power Combo",
+     "ranks": [
+      {
+       "req": 90,
+       "desc": "Unarmed combination power attacks cause increasing stagger on successive hits."
+      }
+     ]
+    }
+   ],
+   "slug": "hand-to-hand"
+  },
+  {
+   "id": "CSF_Horseman",
+   "name": "Horseman",
+   "description": "The art of mounted combat, and traveling the lands on horseback.",
+   "group": "custom",
+   "by": "Firmament",
+   "nodes": [
+    {
+     "i": 0,
+     "x": 1.5,
+     "y": 0.0,
+     "links": [
+      1
+     ],
+     "name": "Rider",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "Attacks on horseback do 20% more damage."
+      },
+      {
+       "req": 20,
+       "desc": "Attacks on horseback do 40% more damage."
+      },
+      {
+       "req": 40,
+       "desc": "Attacks on horseback do 60% more damage."
+      },
+      {
+       "req": 60,
+       "desc": "Attacks on horseback do 80% more damage."
+      },
+      {
+       "req": 80,
+       "desc": "Attacks on horseback do twice as much damage."
+      }
+     ]
+    },
+    {
+     "i": 1,
+     "x": -0.3,
+     "y": 0.8,
+     "links": [
+      2,
+      3
+     ],
+     "name": "Sturdy Steed",
+     "ranks": [
+      {
+       "req": 30,
+       "desc": "25% less damage on horseback and your mount moves 10% faster."
+      }
+     ]
+    },
+    {
+     "i": 2,
+     "x": 0.5,
+     "y": 2.0,
+     "links": [
+      5,
+      6
+     ],
+     "name": "High Ground",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "30% more resistant to one-handed weapons and 15% to two-handed weapons while on horseback."
+      },
+      {
+       "req": 60,
+       "desc": "60% more resistant to one-handed weapons and 30% to two-handed weapons while on horseback."
+      }
+     ]
+    },
+    {
+     "i": 3,
+     "x": -3.0,
+     "y": 1.0,
+     "links": [
+      4
+     ],
+     "name": "Messenger",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "Your mount moves 10% faster at night or when it rains."
+      }
+     ]
+    },
+    {
+     "i": 4,
+     "x": -2.0,
+     "y": 1.4,
+     "links": [],
+     "name": "Skirmisher",
+     "ranks": [
+      {
+       "req": 50,
+       "desc": "Your mount moves 20% faster when in combat with a drawn bow."
+      }
+     ]
+    },
+    {
+     "i": 5,
+     "x": -2.3,
+     "y": 2.3,
+     "links": [
+      7
+     ],
+     "name": "Knight",
+     "ranks": [
+      {
+       "req": 50,
+       "desc": "Rearing makes enemies flee for 10 seconds."
+      }
+     ]
+    },
+    {
+     "i": 6,
+     "x": 0.3,
+     "y": 3.0,
+     "links": [],
+     "name": "Nobility",
+     "ranks": [
+      {
+       "req": 50,
+       "desc": "Intimidation and Persuasion attempts are 50% more likely to be successful while on horseback."
+      }
+     ]
+    },
+    {
+     "i": 7,
+     "x": -1.0,
+     "y": 3.0,
+     "links": [
+      8,
+      9
+     ],
+     "name": "Jouster",
+     "ranks": [
+      {
+       "req": 70,
+       "desc": "Charging into enemies staggers them on impact."
+      }
+     ]
+    },
+    {
+     "i": 8,
+     "x": -0.2,
+     "y": 4.0,
+     "links": [],
+     "name": "Cavalry Charge",
+     "ranks": [
+      {
+       "req": 100,
+       "desc": "Charging into enemies has a 25% chance to paralyze them."
+      }
+     ]
+    },
+    {
+     "i": 9,
+     "x": -2.0,
+     "y": 4.0,
+     "links": [],
+     "name": "Cataphract",
+     "ranks": [
+      {
+       "req": 80,
+       "desc": "50% Armor bonus while on mount if wearing full armor."
+      }
+     ]
+    }
+   ],
+   "slug": "horseman"
+  },
+  {
+   "id": "CSF_Philosophy",
+   "name": "Philosophy",
+   "description": "The art of gaining knowledge through study and research. Philosophers are respected for their wisdom.",
+   "group": "custom",
+   "by": "Firmament",
+   "nodes": [
+    {
+     "i": 0,
+     "x": 1.0,
+     "y": 0.0,
+     "links": [
+      1,
+      2,
+      9,
+      10,
+      5
+     ],
+     "name": "Avid Reader",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "Magicka regenerates 1% faster for every 5 books you read."
+      }
+     ]
+    },
+    {
+     "i": 1,
+     "x": 3.0,
+     "y": 1.0,
+     "links": [],
+     "name": "Lucky Hand",
+     "ranks": [
+      {
+       "req": 25,
+       "desc": "Books you read for the first time have a chance to drop a scroll."
+      }
+     ]
+    },
+    {
+     "i": 2,
+     "x": 0.6,
+     "y": 1.4,
+     "links": [
+      3
+     ],
+     "name": "Bestiarist",
+     "ranks": [
+      {
+       "req": 30,
+       "desc": "Deal 5% more and take 5% less damage from Animals, Creatures, Undead, Daedra, and Automatons after killing 50 of each."
+      },
+      {
+       "req": 50,
+       "desc": "Deal 15% more and take 15% less damage from Animals, Creatures, Undead, Daedra, and Automatons after killing 100 of each."
+      },
+      {
+       "req": 70,
+       "desc": "Deal 25% more and take 25% less damage from Animals, Creatures, Undead, Daedra, and Automatons after killing 150 of each."
+      }
+     ]
+    },
+    {
+     "i": 3,
+     "x": 0.0,
+     "y": 1.9,
+     "links": [
+      4
+     ],
+     "name": "Linguist",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "Intelligent creatures you encounter have a 30% chance of being non-hostile."
+      },
+      {
+       "req": 60,
+       "desc": "Intelligent creatures you encounter have a 60% chance of being non-hostile."
+      },
+      {
+       "req": 90,
+       "desc": "Intelligent creatures you encounter have a 90% chance of being non-hostile."
+      }
+     ]
+    },
+    {
+     "i": 4,
+     "x": 0.3,
+     "y": 2.6,
+     "links": [
+      8
+     ],
+     "name": "Machinist",
+     "ranks": [
+      {
+       "req": 80,
+       "desc": "Dwarven automatons won't attack you."
+      }
+     ]
+    },
+    {
+     "i": 5,
+     "x": 1.5,
+     "y": 1.1,
+     "links": [
+      6
+     ],
+     "name": "Monk",
+     "ranks": [
+      {
+       "req": 30,
+       "desc": "Blessings last twice as long and are 50% more potent."
+      }
+     ]
+    },
+    {
+     "i": 6,
+     "x": 2.8,
+     "y": 1.6,
+     "links": [
+      7
+     ],
+     "name": "Hermit",
+     "ranks": [
+      {
+       "req": 50,
+       "desc": "+5 extra Health and Magicka per day passed without entering dialogue."
+      }
+     ]
+    },
+    {
+     "i": 7,
+     "x": 1.2,
+     "y": 2.3,
+     "links": [
+      8
+     ],
+     "name": "Cultist",
+     "ranks": [
+      {
+       "req": 70,
+       "desc": "3% more chance of doing critical damage for every daedric quest you completed."
+      }
+     ]
+    },
+    {
+     "i": 8,
+     "x": 1.6,
+     "y": 3.3,
+     "links": [],
+     "name": "Erudite",
+     "ranks": [
+      {
+       "req": 100,
+       "desc": "+1 additional perk point for every 20 books you read."
+      }
+     ]
+    },
+    {
+     "i": 9,
+     "x": -0.4,
+     "y": 1.2,
+     "links": [
+      11
+     ],
+     "name": "Tactician",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "All combat skills increase 10% faster."
+      }
+     ]
+    },
+    {
+     "i": 10,
+     "x": -1.4,
+     "y": 0.3,
+     "links": [
+      11
+     ],
+     "name": "Manipulator",
+     "ranks": [
+      {
+       "req": 40,
+       "desc": "All stealth skills increase 10% faster."
+      }
+     ]
+    },
+    {
+     "i": 11,
+     "x": -2.2,
+     "y": 2.4,
+     "links": [],
+     "name": "Advisor",
+     "ranks": [
+      {
+       "req": 50,
+       "desc": "You can offer advice to people in exchange for gold."
+      }
+     ]
+    }
+   ],
+   "slug": "philosophy"
+  },
+  {
+   "id": "CSF_Sorcery",
+   "name": "Sorcery",
+   "description": "The art of drawing power from magical objects such as staves and scrolls. Skilled sorcerers can even manipulate magic in the world around them.",
+   "group": "custom",
+   "by": "Constellations - Additional Player Skills",
+   "nodes": [
+    {
+     "i": 0,
+     "x": 0.0,
+     "y": 0.0,
+     "links": [
+      1,
+      2,
+      4
+     ],
+     "name": "Sorcerer",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "Staves are 20% more efficient."
+      },
+      {
+       "req": 20,
+       "desc": "Staves are 40% more efficient."
+      },
+      {
+       "req": 40,
+       "desc": "Staves are 60% more efficient."
+      },
+      {
+       "req": 60,
+       "desc": "Staves are 80% more efficient."
+      },
+      {
+       "req": 80,
+       "desc": "Staves are twice as efficient."
+      }
+     ]
+    },
+    {
+     "i": 1,
+     "x": 1.6,
+     "y": 0.6,
+     "links": [],
+     "name": "Incantation",
+     "ranks": [
+      {
+       "req": 20,
+       "desc": "Scrolls are 100% more powerful."
+      },
+      {
+       "req": 50,
+       "desc": "Scrolls are 150% more powerful."
+      },
+      {
+       "req": 80,
+       "desc": "Scrolls are 200% more powerful."
+      }
+     ]
+    },
+    {
+     "i": 2,
+     "x": -1.6,
+     "y": 1.0,
+     "links": [
+      3
+     ],
+     "name": "Catalyst",
+     "ranks": [
+      {
+       "req": 30,
+       "desc": "Staves are 25% more powerful."
+      },
+      {
+       "req": 60,
+       "desc": "Staves are 50% more powerful."
+      }
+     ]
+    },
+    {
+     "i": 3,
+     "x": -1.0,
+     "y": 1.9,
+     "links": [],
+     "name": "Rapid Fire",
+     "ranks": [
+      {
+       "req": 50,
+       "desc": "Staves cast 50% faster."
+      }
+     ]
+    },
+    {
+     "i": 4,
+     "x": 0.0,
+     "y": 1.2,
+     "links": [
+      5
+     ],
+     "name": "Deep Focus",
+     "ranks": [
+      {
+       "req": 30,
+       "desc": "50% less stagger while focusing a staff."
+      }
+     ]
+    },
+    {
+     "i": 5,
+     "x": 0.0,
+     "y": 2.5,
+     "links": [
+      6,
+      7
+     ],
+     "name": "Nullification",
+     "ranks": [
+      {
+       "req": 50,
+       "desc": "30% reduced damage from elemental effects while focusing a staff."
+      }
+     ]
+    },
+    {
+     "i": 6,
+     "x": -1.0,
+     "y": 3.3,
+     "links": [],
+     "name": "Attunement",
+     "ranks": [
+      {
+       "req": 60,
+       "desc": "Magicka regenerates 50% faster while wielding a staff."
+      }
+     ]
+    },
+    {
+     "i": 7,
+     "x": 1.4,
+     "y": 3.8,
+     "links": [
+      8
+     ],
+     "name": "Lightning Rod",
+     "ranks": [
+      {
+       "req": 70,
+       "desc": "Absorb 5% of hostile spells while wielding a staff, and convert absorbed magicka to staff charge."
+      }
+     ]
+    },
+    {
+     "i": 8,
+     "x": 0.0,
+     "y": 5.2,
+     "links": [],
+     "name": "Overflow",
+     "ranks": [
+      {
+       "req": 100,
+       "desc": "Reflect hostile spells you would absorb when at full magicka and staff charge."
+      }
+     ]
+    }
+   ],
+   "slug": "sorcery"
+  },
+  {
+   "id": "CSF_Dragonborn",
+   "name": "THU'UM",
+   "description": "Your Thu'um mastery. Use Perk Points to enhance your shouting technique.",
+   "group": "custom",
+   "by": "Stormcrown - A Shout Overhaul",
+   "nodes": [
+    {
+     "i": 0,
+     "x": -0.03,
+     "y": -0.4,
+     "links": [
+      1,
+      2,
+      6
+     ],
+     "name": "Dragonborn",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "Your Shouts are 25% stronger."
+      },
+      {
+       "req": null,
+       "desc": "Your Shouts are 50% stronger."
+      }
+     ]
+    },
+    {
+     "i": 1,
+     "x": -0.03,
+     "y": 0.2,
+     "links": [],
+     "name": "Dragon of the North",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "You resist 50% of incoming stagger."
+      }
+     ]
+    },
+    {
+     "i": 2,
+     "x": -1.68,
+     "y": 0,
+     "links": [
+      3
+     ],
+     "name": "Deep Breath",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "Your Shouts have a 25% chance to deal double damage."
+      },
+      {
+       "req": null,
+       "desc": "Your Shouts have a 50% chance to deal double damage."
+      }
+     ]
+    },
+    {
+     "i": 3,
+     "x": -2.62,
+     "y": 0.8,
+     "links": [
+      4
+     ],
+     "name": "Ancient Voice",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "Your Shouts have a 50% chance to stagger enemies."
+      },
+      {
+       "req": null,
+       "desc": "Your Shouts are guaranteed to stagger enemies."
+      }
+     ]
+    },
+    {
+     "i": 4,
+     "x": -2.62,
+     "y": 2.2,
+     "links": [
+      5
+     ],
+     "name": "Sharp Tongue",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "Your Shouts do 50% extra damage to enemies who fall below half Health."
+      },
+      {
+       "req": null,
+       "desc": "Your Shouts do double damage to enemies who fall below half Health."
+      }
+     ]
+    },
+    {
+     "i": 5,
+     "x": -1.2,
+     "y": 3,
+     "links": [],
+     "name": "Stormcrown",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "Your Shouts have a 25% chance to have no cooldown in combat."
+      }
+     ]
+    },
+    {
+     "i": 6,
+     "x": 1.68,
+     "y": 0,
+     "links": [
+      7
+     ],
+     "name": "Sky Above",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "Your Shouts last 50% longer."
+      },
+      {
+       "req": null,
+       "desc": "Your Shouts last twice as long."
+      }
+     ]
+    },
+    {
+     "i": 7,
+     "x": 2.62,
+     "y": 0.8,
+     "links": [
+      8
+     ],
+     "name": "Voice Within",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "Your Shouts are silent to others."
+      }
+     ]
+    },
+    {
+     "i": 8,
+     "x": 2.65,
+     "y": 2.2,
+     "links": [
+      9
+     ],
+     "name": "Windcaller",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "Your Shout cooldown is reduced by 25%."
+      },
+      {
+       "req": null,
+       "desc": "Your Shout cooldown is reduced by 50%."
+      }
+     ]
+    },
+    {
+     "i": 9,
+     "x": 1.1,
+     "y": 3,
+     "links": [],
+     "name": "Way of the Voice",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "Once an hour, when you fall below 25% Health, your Shout cooldown is reset, and your Shouts have no cooldown for 10 seconds."
+      }
+     ]
+    }
+   ],
+   "slug": "thu-um"
+  },
+  {
+   "id": "AVMagickaRateMod",
+   "name": "Vampire Lord",
+   "description": "Kill enemies with the Drain Life or bite power attack to earn perks. Each new perk requires a few more feedings.",
+   "group": "transform",
+   "by": "Scion - A Vampire Overhaul",
+   "nodes": [
+    {
+     "i": 9,
+     "x": 4.028571,
+     "y": 0.28,
+     "links": [
+      4,
+      8,
+      1,
+      6,
+      7,
+      14
+     ],
+     "name": "Nightwalker",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "You deal 25% extra damage as a Vampire Lord."
+      },
+      {
+       "req": null,
+       "desc": "You deal 50% extra damage as a Vampire Lord."
+      }
+     ]
+    },
+    {
+     "i": 4,
+     "x": 2.785714,
+     "y": 0.457143,
+     "links": [
+      12
+     ],
+     "name": "Underworld Lineage",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "As a Vampire Lord, you can cast the spells Lightning Flood and Frozen Wind."
+      },
+      {
+       "req": null,
+       "desc": "As a Vampire Lord, you can cast the spells Lightning Flood, Frozen Wind, Poison Bloom, and Blood Price."
+      }
+     ]
+    },
+    {
+     "i": 12,
+     "x": 1.542857,
+     "y": 0.871429,
+     "links": [
+      2
+     ],
+     "name": "Blood Sacrilege",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "As a Vampire Lord, you can cast the spells Corpse Curse and Conjure Deathhound."
+      },
+      {
+       "req": null,
+       "desc": "As a Vampire Lord, you can cast the spells Corpse Curse, Conjure Deathhound, Vampiric Grip, and Conjure Gargoyle."
+      }
+     ]
+    },
+    {
+     "i": 2,
+     "x": 0.142857,
+     "y": 2.0,
+     "links": [],
+     "name": "Lamae's Gift",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "As a Vampire Lord, you can summon or reanimate one additional minion."
+      },
+      {
+       "req": null,
+       "desc": "As a Vampire Lord, you can summon or reanimate two additional minions."
+      }
+     ]
+    },
+    {
+     "i": 8,
+     "x": 3.014286,
+     "y": 1.8,
+     "links": [
+      10
+     ],
+     "name": "Unearthly Will",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "As a Vampire Lord, your Health and Magicka are increased by 100."
+      }
+     ]
+    },
+    {
+     "i": 10,
+     "x": 4.028571,
+     "y": 2.74,
+     "links": [
+      11
+     ],
+     "name": "Devouring Claws",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "As a Vampire Lord, your claw attacks absorb Health from living targets."
+      }
+     ]
+    },
+    {
+     "i": 11,
+     "x": 4.028571,
+     "y": 3.68,
+     "links": [],
+     "name": "Blood Scion",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "When you enter combat as a Vampire Lord, you are surrounded with a cloud of bats that absorb Health from living targets."
+      }
+     ]
+    },
+    {
+     "i": 1,
+     "x": 5.057143,
+     "y": 1.8399999999999999,
+     "links": [
+      10
+     ],
+     "name": "Unnatural Strength",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "As a Vampire Lord, your Armor Rating is increased by 100 and your Magic Resistance is increased by 25%."
+      }
+     ]
+    },
+    {
+     "i": 6,
+     "x": 5.257143,
+     "y": 0.485714,
+     "links": [
+      3
+     ],
+     "name": "Ancient Thirst",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "Spells that absorb Health are 25% stronger."
+      },
+      {
+       "req": null,
+       "desc": "Spells that absorb Health are 50% stronger."
+      }
+     ]
+    },
+    {
+     "i": 3,
+     "x": 6.585714,
+     "y": 0.9,
+     "links": [
+      5
+     ],
+     "name": "Dread Harvest",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "Spells that absorb Health deal 50% extra damage to targets who fall below half Health."
+      },
+      {
+       "req": null,
+       "desc": "Spells that absorb Health deal double damage to targets who fall below half Health."
+      }
+     ]
+    },
+    {
+     "i": 5,
+     "x": 8.042857,
+     "y": 2.0,
+     "links": [],
+     "name": "False Life",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "Spells that absorb Health work on the undead."
+      },
+      {
+       "req": null,
+       "desc": "Spells that absorb Health work on the undead, daedra, and automatons."
+      }
+     ]
+    },
+    {
+     "i": 7,
+     "x": 5.414286,
+     "y": 1.1142859999999999,
+     "links": [
+      13
+     ],
+     "name": "Potent Blood",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "As a Vampire Lord, your Magicka Regeneration is increased by 100%."
+      }
+     ]
+    },
+    {
+     "i": 13,
+     "x": 6.328571,
+     "y": 2.014286,
+     "links": [],
+     "name": "Power of the Grave",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "As a Vampire Lord, your spells cost 25% less Magicka."
+      }
+     ]
+    },
+    {
+     "i": 14,
+     "x": 2.657143,
+     "y": 1.085714,
+     "links": [
+      15
+     ],
+     "name": "Night Power",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "As a Vampire Lord, you gain the Mist Form power."
+      }
+     ]
+    },
+    {
+     "i": 15,
+     "x": 1.828571,
+     "y": 2.057143,
+     "links": [],
+     "name": "Twilight's Embrace",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "As a Vampire Lord, you gain the Supernatural Reflexes power."
+      }
+     ]
+    }
+   ],
+   "slug": "vampire-lord"
+  },
+  {
+   "id": "AVHealRatePowerMod",
+   "name": "Werewolf",
+   "description": "New perks become available after feeding on enough corpses. Each new perk requires a few more feedings.",
+   "group": "transform",
+   "by": "Manbeast - A Werewolf Overhaul",
+   "nodes": [
+    {
+     "i": 1,
+     "x": 5.114286,
+     "y": 0.0,
+     "links": [
+      9,
+      7,
+      4,
+      5,
+      12
+     ],
+     "name": "Manbeast",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "As a Werewolf, you deal 25% extra damage."
+      },
+      {
+       "req": null,
+       "desc": "As a Werewolf, you deal 50% extra damage."
+      }
+     ]
+    },
+    {
+     "i": 9,
+     "x": 3.871429,
+     "y": 1.042857,
+     "links": [
+      10
+     ],
+     "name": "Bloody Claws",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "As a Werewolf, your claw attacks deal Bleeding damage over 10 seconds."
+      },
+      {
+       "req": null,
+       "desc": "As a Werewolf, your claw attacks deal extra Bleeding damage over 10 seconds."
+      }
+     ]
+    },
+    {
+     "i": 10,
+     "x": 3.1428570000000002,
+     "y": 2.3,
+     "links": [],
+     "name": "Savage Strength",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "As a Werewolf, your power attacks have a chance to knock enemies down."
+      }
+     ]
+    },
+    {
+     "i": 7,
+     "x": 7.414286,
+     "y": 0.642857,
+     "links": [
+      8
+     ],
+     "name": "Animal Vitality",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "Your Stamina Regeneration is increased by 50% in beast form and by 25% in mortal form."
+      },
+      {
+       "req": null,
+       "desc": "Your Stamina Regeneration is increased by 100% in beast form and by 50% in mortal form."
+      }
+     ]
+    },
+    {
+     "i": 8,
+     "x": 8.328571,
+     "y": 1.328571,
+     "links": [
+      11
+     ],
+     "name": "Animal Strength",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "Your Health Regeneration is increased by 50% in beast form and by 25% in mortal form."
+      },
+      {
+       "req": null,
+       "desc": "Your Health Regeneration is increased by 100% in beast form and by 50% in mortal form."
+      }
+     ]
+    },
+    {
+     "i": 11,
+     "x": 8.928571,
+     "y": 2.071429,
+     "links": [],
+     "name": "Animal Vigor",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "Your Movement Speed is increased by 10% in beast form and in mortal form."
+      },
+      {
+       "req": null,
+       "desc": "Your Movement Speed is increased by 10% and your unarmed damage is increased by 10 in beast form and in mortal form."
+      }
+     ]
+    },
+    {
+     "i": 4,
+     "x": 2.828571,
+     "y": 0.4,
+     "links": [
+      2
+     ],
+     "name": "Primal Instinct",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "You learn the Howl of Terror."
+      },
+      {
+       "req": null,
+       "desc": "You learn the Howl of Terror and the Howl of Rage."
+      }
+     ]
+    },
+    {
+     "i": 2,
+     "x": 1.7428569999999999,
+     "y": 0.9,
+     "links": [
+      3
+     ],
+     "name": "Pack Leader",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "You learn the Howl of the Pack."
+      },
+      {
+       "req": null,
+       "desc": "You learn the Howl of the Pack and the Howl of the Moon."
+      }
+     ]
+    },
+    {
+     "i": 3,
+     "x": 0.228571,
+     "y": 2.3,
+     "links": [],
+     "name": "Call of the Blood",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "As a Werewolf, your Howl cooldown is reduced by 25%."
+      },
+      {
+       "req": null,
+       "desc": "As a Werewolf, your Howl cooldown is reduced by 50%."
+      }
+     ]
+    },
+    {
+     "i": 5,
+     "x": 6.471429,
+     "y": 1.1142859999999999,
+     "links": [
+      6
+     ],
+     "name": "Hircine's Bounty",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "As a Werewolf, when you fall below half Health, your Health regenerates twice as fast."
+      }
+     ]
+    },
+    {
+     "i": 6,
+     "x": 7.242857,
+     "y": 2.328571,
+     "links": [],
+     "name": "Hircine's Rage",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "As a Werewolf, when you fall below half Health, you take 25% less damage from all sources."
+      }
+     ]
+    },
+    {
+     "i": 12,
+     "x": 5.128571,
+     "y": 1.371429,
+     "links": [
+      13
+     ],
+     "name": "Feral Speed",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "As a Werewolf, your Movement Speed is increased by 20%."
+      }
+     ]
+    },
+    {
+     "i": 13,
+     "x": 5.528571,
+     "y": 2.428571,
+     "links": [
+      14
+     ],
+     "name": "Beastly Might",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "As a Werewolf, your Health and Stamina are increased by 100."
+      }
+     ]
+    },
+    {
+     "i": 14,
+     "x": 4.985714,
+     "y": 3.3,
+     "links": [],
+     "name": "Thick Hide",
+     "ranks": [
+      {
+       "req": null,
+       "desc": "As a Werewolf, your Armor Rating is increased by 100 and your Magic Resistance is increased by 25%."
+      }
+     ]
+    }
+   ],
+   "slug": "werewolf"
+  }
+ ]
+}

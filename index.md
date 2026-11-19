@@ -1,8 +1,6 @@
 ---
 title: Home
 layout: skyground_home
-nav_order: 1
-description: "Official documentation for **The Astral Forge** modlists."
+description: "Curated modlists for Skyrim SE, Cyberpunk 2077, Starfield and No Man's Sky, with install guides, changelogs and load orders."
 permalink: /
 ---
-

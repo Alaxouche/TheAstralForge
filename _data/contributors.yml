@@ -3,43 +3,78 @@ benefits:
   - Priority support on Discord for installation and troubleshooting
   - Your name listed as a supporter on the site
   - Help decide future list improvements and features
+benefits_fr:
+  - Accès anticipé aux aperçus et aux nouvelles de la feuille de route
+  - Aide prioritaire sur Discord pour l'installation et le dépannage
+  - Votre nom dans la liste des soutiens sur le site
+  - Votre avis compte sur les prochaines améliorations des listes
 
 impact:
   - Hardware and testing resources for stable builds
   - Time for bug fixing, balancing, and compatibility checks
   - Documentation, guides, and installation support
   - Asset licensing and tooling for better visuals
+impact_fr:
+  - Du matériel et des moyens de test pour des versions stables
+  - Du temps pour corriger les bugs, équilibrer et vérifier la compatibilité
+  - La documentation, les guides et l'aide à l'installation
+  - Des licences et des outils pour de meilleurs visuels
 
 tiers:
   - name: "Jarl"
     amount: "$1.50 / month (+VAT)"
+    amount_fr: "1,50 $ / mois (+TVA)"
     perks:
       - Discord role and advantages
       - Priority suggestions for mods
       - Listed in the credits menu and pages
       - Access to Discord
+    perks_fr:
+      - Rôle et avantages sur Discord
+      - Suggestions de mods prioritaires
+      - Nom dans le menu des crédits et sur les pages
+      - Accès au Discord
   - name: "Dragon Priest"
     amount: "$3 / month (+VAT)"
+    amount_fr: "3 $ / mois (+TVA)"
     perks:
       - Discord role and advantages
       - Priority suggestions for mods
       - Listed in the credits menu and pages
       - Access to Discord
+    perks_fr:
+      - Rôle et avantages sur Discord
+      - Suggestions de mods prioritaires
+      - Nom dans le menu des crédits et sur les pages
+      - Accès au Discord
   - name: "Greybeard"
     amount: "$6 / month (+VAT)"
+    amount_fr: "6 $ / mois (+TVA)"
     perks:
       - Discord role and advantages
       - Priority suggestions for mods
       - Listed in the credits menu and pages
       - Access to Discord
+    perks_fr:
+      - Rôle et avantages sur Discord
+      - Suggestions de mods prioritaires
+      - Nom dans le menu des crédits et sur les pages
+      - Accès au Discord
   - name: "Daedric Prince"
     amount: "$10 / month (+VAT)"
+    amount_fr: "10 $ / mois (+TVA)"
     perks:
       - Custom weapon named after you integrated into Wunduniik
       - Discord role and advantages
       - Listed in the credits menu and pages
       - Priority suggestions for mods
       - Access to Discord
+    perks_fr:
+      - Une arme à votre nom intégrée à Wunduniik
+      - Rôle et avantages sur Discord
+      - Nom dans le menu des crédits et sur les pages
+      - Suggestions de mods prioritaires
+      - Accès au Discord
 
 recent:
   - name: "justin young"

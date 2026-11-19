@@ -28,12 +28,12 @@ Krentoraan was designed to be used with Cabbage ENB for NAT III Weather. Krentor
 
 1. Disable the current active preset ((ENB) Cabbage ENB - Krentoraan Edit - Clear by default):
 <p align="center">
-    <img src="https://static.wixstatic.com/media/579922_07e367e948ae44d186a20946870246cf~mv2.png/v1/fill/w_712,h_371,al_c,lg_1,q_85,enc_avif,quality_auto/579922_07e367e948ae44d186a20946870246cf~mv2.png" >
+    <img src="/assets/Images/guides/07e367e948ae44d186a20946870246cf-37eb09.webp" alt="Mod Organizer 2: right-click menu on the ENB presets in the left panel" width="751" height="388">
 </p>
 2. Enable the preset you want to use.
 3. Clear overwrite to delete the ENB Shader Cache:
 <p align="center">
-    <img src="https://static.wixstatic.com/media/579922_7b4dcdecd048480b9393151600b1f903~mv2.png/v1/fill/w_719,h_335,al_c,lg_1,q_85,enc_avif,quality_auto/579922_7b4dcdecd048480b9393151600b1f903~mv2.png" >
+    <img src="/assets/Images/guides/7b4dcdecd048480b9393151600b1f903-8f80e5.webp" alt="Mod Organizer 2: right-click menu on Overwrite, with Clear Overwrite" width="772" height="359">
 </p>
 
 ## Increasing Krentoraan Performance
@@ -46,7 +46,7 @@ Krentoraan comes with 3 profiles: Performance, Standard, and Ultra, automaticall
 - **Ultra** (14+ GB VRAM): Dense Forests with ultra dense flora and Grass Lods
 
 <p align="center">
-    <img src="https://static.wixstatic.com/media/579922_349e8144acad4d0183354432f0602cb1~mv2.png/v1/fill/w_600,h_245,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/3b4e2d65f56f9178bbbad61edea29b3d1b3db469301776c6b449d80ffb953f62.png" >
+    <img src="/assets/Images/guides/349e8144acad4d0183354432f0602cb1-12cafe.webp" alt="Mod Organizer 2 profile drop-down with the Standard and Ultra profiles" width="1576" height="644">
 </p>
 
 ### External Performance Tools
@@ -81,12 +81,12 @@ Krentoraan a été conçu pour Cabbage ENB for NAT III Weather. Krentoraan utili
 
 1. Désactivez le preset actif ((ENB) Cabbage ENB - Krentoraan Edit - Clear par défaut) :
 <p align="center">
-    <img src="https://static.wixstatic.com/media/579922_07e367e948ae44d186a20946870246cf~mv2.png/v1/fill/w_712,h_371,al_c,lg_1,q_85,enc_avif,quality_auto/579922_07e367e948ae44d186a20946870246cf~mv2.png" >
+    <img src="/assets/Images/guides/07e367e948ae44d186a20946870246cf-37eb09.webp" alt="Mod Organizer 2 : menu clic droit sur les presets ENB du panneau de gauche" width="751" height="388">
 </p>
 2. Activez le preset souhaité.
 3. Videz l'overwrite pour supprimer le cache de shaders ENB :
 <p align="center">
-    <img src="https://static.wixstatic.com/media/579922_7b4dcdecd048480b9393151600b1f903~mv2.png/v1/fill/w_719,h_335,al_c,lg_1,q_85,enc_avif,quality_auto/579922_7b4dcdecd048480b9393151600b1f903~mv2.png" >
+    <img src="/assets/Images/guides/7b4dcdecd048480b9393151600b1f903-8f80e5.webp" alt="Mod Organizer 2 : menu clic droit sur Overwrite, avec Clear Overwrite" width="772" height="359">
 </p>
 
 ## Améliorer les Performances de Krentoraan
@@ -99,7 +99,7 @@ Krentoraan est livré avec 3 profils : Performance, Standard et Ultra, assignés
 - **Ultra** (14+ Go VRAM) : Forêts denses avec flore ultra dense et LODs d'herbe
 
 <p align="center">
-    <img src="https://static.wixstatic.com/media/579922_349e8144acad4d0183354432f0602cb1~mv2.png/v1/fill/w_600,h_245,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/3b4e2d65f56f9178bbbad61edea29b3d1b3db469301776c6b449d80ffb953f62.png" >
+    <img src="/assets/Images/guides/349e8144acad4d0183354432f0602cb1-12cafe.webp" alt="Liste déroulante des profils de Mod Organizer 2 avec les profils Standard et Ultra" width="1576" height="644">
 </p>
 
 ### Outils de Performance Externes
