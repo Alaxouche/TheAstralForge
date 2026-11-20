@@ -410,7 +410,19 @@ const CL_RE = /<details>\s*<summary>([\s\S]*?)<\/summary>([\s\S]*?)<\/details>/g
 function changelogStatic(content) {
   if ((content.match(CL_RE) || []).length < 3) return content;
   let i = 0;
+  // Section headings were written three ways over the years ("### Additions", "# Additions:", or a
+  // plain "Additions:" line): every version gets the same <h3> label, so headings and counters match.
+  const CL_LABEL = { add: 'Additions', rem: 'Removals', fix: 'Fixes and Tweaks', upd: 'Updates' };
+  const kindOf = (t) => { t = stripTags(t).trim(); return t.length <= 32 ? (CL_KINDS.find(([, re]) => re.test(t)) || [])[0] : null; };
+  const normalize = (body) => body
+    .replace(/<h[1-6]((?:\s[^>]*)?)>([\s\S]*?)<\/h[1-6]>/g, (m, attrs, inner) => { const k = kindOf(inner); return k ? `<h3${attrs}>${CL_LABEL[k]}</h3>` : /^<h[12]/.test(m) ? `<h3${attrs}>${inner}</h3>` : m; })
+    .replace(/<p>((?:(?!<\/p>)[\s\S]){1,60})<\/p>(?=\s*<ul>)/g, (m, inner) => {
+      const t = stripTags(inner).trim();
+      const k = /:\s*$/.test(t) || /^<strong>[\s\S]*<\/strong>$/.test(inner.trim()) ? kindOf(t.replace(/:\s*$/, '')) : null;
+      return k ? `<h3>${CL_LABEL[k]}</h3>` : m;
+    });
   return content.replace(CL_RE, (m, sum, body) => {
+    body = normalize(body);
     const counts = {};
     for (const [, h3, , ul] of body.matchAll(/<h3[^>]*>([\s\S]*?)<\/h3>((?:(?!<h3)[\s\S])*?)<ul>([\s\S]*?)<\/ul>/g)) {
       const k = CL_KINDS.find(([, re]) => re.test(stripTags(h3)));
@@ -664,7 +676,8 @@ async function build() {
       title: idx.title || collectionNames[key]?.name || key,
       game: idx.game || '',
       image: banner.image || idx.image || '/assets/Images/generic_background.webp',
-      accent: banner.accent || '#a78bfa',
+      // Every list uses the site gold (asked by the user, Nov 2026); project_banner.accent is no longer used
+      accent: 'var(--gold)',
       // emblem drawn by scripts/make-modlist-emblems.py, shown on the home panel
       emblem: exists(`assets/logos/emblems/${key}.svg`) ? `/assets/logos/emblems/${key}.svg` : null,
       subtitle: banner.subtitle || '',

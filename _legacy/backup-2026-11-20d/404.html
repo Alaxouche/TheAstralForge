@@ -1,0 +1,13 @@
+---
+title: Page not found
+layout: page
+permalink: /404
+---
+{% include page_hero.html eyebrow="404" title_en="Page not found" title_fr="Page introuvable" lead_en="The link is probably from the old wiki. Try the search, the guides are all still here." lead_fr="Le lien vient sûrement de l'ancien wiki. Essayez la recherche, tous les guides sont toujours là." image="/assets/Images/hex-void.webp" image_light="/assets/Images/hex-void-light.webp" hex=true %}
+
+<section class="wrap section">
+  <div class="actions">
+    <a class="btn btn--solid" href="{{ '/' | relative_url }}"><span lang="en">Back home</span><span lang="fr">Retour à l'accueil</span></a>
+    <button class="btn" type="button" data-search-open><span lang="en">Search</span><span lang="fr">Rechercher</span></button>
+  </div>
+</section>

@@ -5,7 +5,7 @@ Reads the page list from _site/search.json (so run `npm run build` first), write
 assets/og/<slug>.jpg (1200 x 630) and assets/og/manifest.json. The build points og:image
 at the picture when it exists, and falls back to the emblem card otherwise.
 
-Modlist pages: the list's own screenshot, darkened, with its accent colour.
+Modlist pages: the list's own screenshot, darkened, with the site gold.
 Other pages: the honeycomb header (assets/Images/hex-hero.webp).
 Unchanged pages are skipped (hash of their text and of this script's STYLE), stale pictures removed.
 """
@@ -22,7 +22,7 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / 'assets' / 'og'
 W, H = 1200, 630
-STYLE = '2'                      # bump to redraw every picture after a design change
+STYLE = '3'                      # bump to redraw every picture after a design change
 FONT = ROOT / 'theme' / 'assets' / 'fonts' / 'jost-latin.woff2'
 GOLD = (201, 169, 110)
 HI = (236, 233, 226)
@@ -121,7 +121,7 @@ def card(page, ml, emblem, hexbg, cache):
         if key not in cache:
             cache[key] = shade(cover(ROOT / key, W, H).filter(ImageFilter.GaussianBlur(1.6)), 0.86) if key and (ROOT / key).exists() else hexbg
         im = cache[key].copy()
-        accent = hex_rgb(ml['accent'])
+        accent = GOLD                       # one colour for every list
         kicker = f"{page['s']}  ·  {ml['game']}".upper() if ml['game'] else page['s'].upper()
     else:
         im = hexbg.copy()

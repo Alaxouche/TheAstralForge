@@ -11,6 +11,7 @@ Images sharing a geometry can be cross-faded. Edges fade into the page backgroun
 (#07080a dark, #f4f1ea light). Deterministic: same output on every run.
 With names after out_dir, only those images are written.
 """
+import math
 import sys
 from pathlib import Path
 import numpy as np
@@ -153,6 +154,46 @@ VARIANTS = {
     'hex-void-light': dict(W=2560, H=1000, theme='light', level=0.6, spots=[(0.86, 0.5, 220, 0.6)], R=50.0, cx=0.6, tilt=0.3,
                            void=(0.86, 0.5, 150), vig=(0.66, 0.5, 0.7)),
 }
+
+def void_tiles(name='hex-void', shrink=0.955):
+    """Outlines of the missing tiles of a 'void' variant, in the image's pixel coordinates.
+    404.html draws them in an SVG with the image's viewBox and preserveAspectRatio slice (the same
+    framing as object-fit: cover), so they sit exactly over the holes and can fall away."""
+    v = VARIANTS[name]
+    W, H, R, cxf, tilt = v['W'], v['H'], v.get('R', 58.0), v.get('cx', 0.56), v.get('tilt', 0.38)
+    g = geometry(W, H, R, cxf, tilt)
+    vx, vy, vr = v['void']
+    u0, v0, d0 = g['to_plane'](vx, vy)
+    d = np.sqrt(((g['cu'] - u0) * d0) ** 2 + ((g['cv'] - v0) * d0 * 1.15) ** 2)
+    hole = ((d < vr) & (g['rnd'] > 0.18)) | (d < vr * 0.55)
+    keys = sorted({(int(a), int(b)) for a, b in zip(g['rx'][hole].ravel(), g['rz'][hole].ravel())})
+    vrow = g['vrow']
+    ys = np.arange(H, dtype=np.float32)
+    tiles = []
+    for rx, rz in keys:
+        cu, cv = R * S3 * (rx + rz / 2), R * 1.5 * rz
+        pts = []
+        for k in range(6):
+            a = math.radians(30 + 60 * k)
+            pu, pv = cu + R * shrink * math.cos(a), cv + R * shrink * math.sin(a)
+            y = float(np.interp(pv, vrow, ys))
+            depth = (1 - tilt) + tilt * y / H
+            pts.append((pu * depth + W * cxf, y))
+        cx_, cy_ = sum(p[0] for p in pts) / 6, sum(p[1] for p in pts) / 6
+        tiles.append({'p': ' '.join(f'{x:.1f},{y:.1f}' for x, y in pts), 'x': round(cx_, 1), 'y': round(cy_, 1)})
+    # fall order: from the centre of the hole outwards
+    cx0, cy0 = W * vx, H * vy
+    tiles.sort(key=lambda t: (t['x'] - cx0) ** 2 + (t['y'] - cy0) ** 2)
+    return {'w': W, 'h': H, 'tiles': tiles}
+
+
+if __name__ == '__main__' and sys.argv[1:2] == ['--void-tiles']:
+    import json
+    out = Path(__file__).resolve().parent.parent / '_data' / 'hex_void_tiles.json'
+    data = void_tiles()
+    out.write_text(json.dumps(data, indent=1), encoding='utf-8')
+    print(out, len(data['tiles']), 'tiles')
+    sys.exit(0)
 
 if __name__ == '__main__':
     out = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(__file__).resolve().parent.parent / 'assets' / 'Images'

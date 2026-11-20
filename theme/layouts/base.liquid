@@ -116,7 +116,7 @@
         <p class="footer__h">Modlists</p>
         <ul>
           {%- for m in site.modlists %}
-          <li><a href="{{ m.url | relative_url }}">{{ m.title }}</a></li>
+          <li><a href="{{ m.url | relative_url }}">{{ m.title }}</a><span class="footer__live">v<span data-live="{{ m.title }}" data-field="version">{{ m.live.version }}</span> <span class="sep" aria-hidden="true"></span> <time data-live="{{ m.title }}" data-field="updated" datetime="{{ m.live.updated }}">{{ m.live.updated | reltime }}</time></span></li>
           {%- endfor %}
         </ul>
       </div>

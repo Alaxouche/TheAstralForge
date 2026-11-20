@@ -1,0 +1,803 @@
+/* The Astral Forge, site.js (no dependencies) */
+(function () {
+  'use strict';
+  var root = document.documentElement;
+  var $ = function (s, c) { return (c || document).querySelector(s); };
+  var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
+  var store = {
+    get: function (k, s) { try { return (s || localStorage).getItem(k); } catch (e) { return null; } },
+    set: function (k, v, s) { try { (s || localStorage).setItem(k, v); } catch (e) {} }
+  };
+  var cssLink = document.querySelector('link[href*="/assets/site.css"]');
+  var base = cssLink ? cssLink.getAttribute('href').split('/assets/site.css')[0] : '';
+  var canHover = matchMedia('(hover: hover) and (pointer: fine)').matches;
+  var calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var lang = function () { return root.getAttribute('data-lang') === 'fr' ? 'fr' : 'en'; };
+  var norm = function (s) { return String(s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]/g, ''); };
+
+  var MODLIST_JSON = 'https://raw.githubusercontent.com/Alaxouche/Wunduniik/main/modlist.json';
+  var DISCORD_ID = '750268919201398805';
+
+  /* =========================================================
+     Count-up numbers ("2900+", "502 GB", "4791")
+     ========================================================= */
+  function countUp(el) {
+    if (calm) return;
+    var target = el.dataset.final || el.textContent.trim();
+    var m = target.match(/^(\d[\d\s,.]*)(.*)$/);
+    if (!m) return;
+    var n = parseFloat(m[1].replace(/[\s,]/g, ''));
+    if (!isFinite(n) || n < 10) return;
+    el.dataset.final = target;
+    var start = performance.now(), dur = 1100;
+    cancelAnimationFrame(el._cu);
+    (function frame(t) {
+      var k = Math.min(1, (t - start) / dur), e = 1 - Math.pow(1 - k, 3);
+      var fin = el.dataset.final, mm = fin.match(/^(\d[\d\s,.]*)(.*)$/);
+      if (!mm) { el.textContent = fin; return; }
+      var goal = parseFloat(mm[1].replace(/[\s,]/g, ''));
+      el.textContent = k < 1 ? Math.round(goal * e) + mm[2] : fin;
+      if (k < 1) el._cu = requestAnimationFrame(frame);
+    })(start);
+  }
+  var countIO = 'IntersectionObserver' in window ? new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) { if (en.isIntersecting) { countUp(en.target); countIO.unobserve(en.target); } });
+  }, { threshold: .6 }) : null;
+  $$('[data-count]').forEach(function (el) { if (countIO && !el.closest('.panel')) countIO.observe(el); });
+
+  /* =========================================================
+     Rune decode effect for titles
+     ========================================================= */
+  var RUNES = 'ᚠᚢᚦᚨᚱᚲᚷᚹᚺᚾᛁᛃᛇᛈᛉᛊᛏᛒᛖᛗᛚᛜᛞᛟ✦';
+  function scramble(el, delay) {
+    if (calm) return;
+    var final = el.dataset.text || (el.dataset.text = el.textContent);
+    // Screen readers keep the real title while the runes play.
+    el.setAttribute('aria-label', final);
+    clearTimeout(el._st); cancelAnimationFrame(el._sr);
+    el._st = setTimeout(function () {
+      var start = performance.now(), dur = 900;
+      (function frame(t) {
+        var k = Math.min(1, (t - start) / dur), out = '';
+        for (var i = 0; i < final.length; i++) {
+          var c = final[i];
+          out += (c === ' ' || i / final.length < k * 1.2 - .2) ? c : RUNES[Math.random() * RUNES.length | 0];
+        }
+        el.textContent = k < 1 ? out : final;
+        if (k < 1) el._sr = requestAnimationFrame(frame);
+      })(start);
+    }, delay || 0);
+  }
+
+  /* Run fn with the latest pointer event once per frame (one layout read per frame at most) */
+  function pointerFrame(el, fn) {
+    var ev = null, queued = false;
+    el.addEventListener('pointermove', function (e) {
+      ev = e;
+      if (queued) return;
+      queued = true;
+      requestAnimationFrame(function () { queued = false; fn(ev); });
+    }, { passive: true });
+  }
+
+  /* =========================================================
+     Home: expanding panels
+     ========================================================= */
+  var hero = $('[data-hero]');
+  if (hero) {
+    var panels = $$('.panel', hero);
+    var setOn = function (p) {
+      var was = $('.panel.is-on', hero);
+      hero.classList.toggle('has-on', !!p);
+      panels.forEach(function (x) { x.classList.toggle('is-on', x === p); });
+      if (p && p !== was) {
+        $$('[data-scramble]', p).forEach(function (t) { scramble(t, 380); });
+        $$('[data-count]', p).forEach(function (n) { setTimeout(function () { countUp(n); }, 450); });
+      }
+    };
+    panels.forEach(function (p) {
+      if (canHover) {
+        p.addEventListener('mouseenter', function () { setOn(p); });
+      }
+      p.addEventListener('focusin', function () { setOn(p); });
+      p.addEventListener('click', function (e) {
+        if (e.target.closest('a, button')) return;
+        if (!p.classList.contains('is-on')) { setOn(p); return; }
+        if (p.dataset.href) location.href = p.dataset.href;
+      });
+      p.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' && e.target === p && p.dataset.href) location.href = p.dataset.href;
+      });
+    });
+    if (canHover) hero.addEventListener('mouseleave', function () { setOn(null); });
+    // The Forge's lit picture sits at opacity 0 until its panel opens: decode it while the page is
+    // idle, so the first open does not stall on a 2560 px decode in the middle of the animation.
+    (window.requestIdleCallback || function (f) { setTimeout(f, 1500); })(function () {
+      $$('.panel__bg--lit', hero).forEach(function (img) {
+        if (img.offsetParent === null || !img.decode) return; // the other theme's picture (display: none)
+        img.loading = 'eager';
+        img.decode().catch(function () {});
+      });
+    });
+    document.addEventListener('keydown', function (e) {
+      // Leave the keys alone while a dialog or the menu is open, or with modifiers held.
+      if ($('dialog[open]') || (drawer && drawer.classList.contains('is-open'))) return;
+      if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
+      if (e.key === 'Escape') setOn(null);
+      if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft' && e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
+      if (document.activeElement && /input|textarea|select/i.test(document.activeElement.tagName)) return;
+      e.preventDefault();
+      var i = panels.indexOf($('.panel.is-on', hero));
+      var fwd = e.key === 'ArrowRight' || e.key === 'ArrowDown';
+      var n = panels[(i + (fwd ? 1 : -1) + panels.length) % panels.length];
+      setOn(n); n.focus({ preventScroll: true });
+    });
+  }
+
+  /* =========================================================
+     Nav, drawer, reading progress, parallax
+     ========================================================= */
+  var nav = $('[data-nav]'), progress = $('[data-progress]'), prose = $('.prose'), plx = $$('[data-parallax]');
+  var ticking = false;
+  // Reads (scroll position, prose box) come before every write, and the first run waits for the
+  // next frame: reading scrollY while the page is still being built forced a full layout of long
+  // pages (about 150 ms on a 3000-line changelog), then the scripts below dirtied it again.
+  function onScroll() {
+    ticking = false;
+    var y = scrollY, ih = innerHeight, r = progress && prose ? prose.getBoundingClientRect() : null;
+    if (nav && !hero) nav.classList.toggle('is-solid', y > 40);
+    if (r) {
+      var total = r.height - ih * .6;
+      var p = total > 0 ? Math.min(1, Math.max(0, -r.top / total)) : 0;
+      progress.style.transform = 'scaleX(' + p + ')';
+    }
+    if (plx.length && !calm && y < ih) plx.forEach(function (el) { el.style.transform = 'translate3d(0,' + (y * .35) + 'px,0) scale(1.06)'; });
+    if (toTop) toTop.classList.toggle('is-on', y > ih * 1.5);
+  }
+  addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+  requestAnimationFrame(onScroll);
+
+  /* Overlays (mobile menu, mobile docs sidebar): Escape closes, focus moves in on
+     open and back to the button on close, Tab stays inside while open. */
+  function overlay(panel, opener, onToggle) {
+    var last = null;
+    function set(open) {
+      if (panel.classList.contains('is-open') === open) return;
+      panel.classList.toggle('is-open', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+      $$('[aria-controls="' + panel.id + '"]').forEach(function (b) { b.setAttribute('aria-expanded', open); });
+      if (onToggle) onToggle(open);
+      if (open) {
+        last = document.activeElement;
+        var first = $('a, button', panel);
+        if (first) setTimeout(function () { first.focus({ preventScroll: true }); }, 60);
+      } else if (last && document.contains(last) && last.offsetParent !== null) last.focus({ preventScroll: true });
+    }
+    panel.addEventListener('keydown', function (e) {
+      if (!panel.classList.contains('is-open')) return;
+      if (e.key === 'Escape') { e.preventDefault(); set(false); return; }
+      if (e.key !== 'Tab') return;
+      var f = $$('a[href], button:not([disabled]), input', panel).filter(function (x) { return x.offsetParent !== null; });
+      if (!f.length) return;
+      var a = f[0], z = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === a) { e.preventDefault(); z.focus(); }
+      else if (!e.shiftKey && document.activeElement === z) { e.preventDefault(); a.focus(); }
+    });
+    return set;
+  }
+
+  var drawer = $('[data-drawer]'), menuBtn = $('[data-menu-toggle]');
+  if (drawer && menuBtn) {
+    var setDrawer = overlay(drawer, menuBtn);
+    menuBtn.addEventListener('click', function () { setDrawer(!drawer.classList.contains('is-open')); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && drawer.classList.contains('is-open')) setDrawer(false);
+    });
+    drawer.addEventListener('click', function (e) { if (e.target.closest('a')) setDrawer(false); });
+    // The drawer only exists below 900px: close it if the window grows past that.
+    matchMedia('(min-width: 901px)').addEventListener('change', function (m) { if (m.matches) setDrawer(false); });
+  }
+
+  /* Back to top (long changelogs, guides) */
+  var toTop = $('[data-totop]');
+  if (toTop) {
+    toTop.addEventListener('click', function () {
+      scrollTo({ top: 0, behavior: calm ? 'auto' : 'smooth' });
+      var m = $('#main'); if (m) m.focus({ preventScroll: true });
+    });
+  }
+
+  /* Hub bands follow the cursor */
+  if (canHover && !calm) $$('[data-tilt]').forEach(function (b) {
+    var img = $('.band__bg', b);
+    pointerFrame(b, function (e) {
+      var r = b.getBoundingClientRect();
+      var x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+      img.style.setProperty('--tx', (x * -24) + 'px'); img.style.setProperty('--ty', (y * -16) + 'px');
+    });
+    b.addEventListener('pointerleave', function () { img.style.setProperty('--tx', '0px'); img.style.setProperty('--ty', '0px'); });
+  });
+
+  /* =========================================================
+     Language
+     ========================================================= */
+  /* Attributes can't hold <span lang> pairs: the English value is in the attribute,
+     the French one in data-ph-fr (placeholder), data-aria-fr (aria-label), data-title-fr (title). */
+  var ATTRS = [['placeholder', 'phFr', 'phEn'], ['aria-label', 'ariaFr', 'ariaEn'], ['title', 'titleFr', 'titleEn'], ['alt', 'altFr', 'altEn']];
+  function localizeAttrs() {
+    var fr = lang() === 'fr';
+    $$('[data-ph-fr], [data-aria-fr], [data-title-fr], [data-alt-fr]').forEach(function (el) {
+      ATTRS.forEach(function (a) {
+        if (!el.dataset[a[1]]) return;
+        if (el.dataset[a[2]] == null) el.dataset[a[2]] = el.getAttribute(a[0]) || '';
+        el.setAttribute(a[0], fr ? el.dataset[a[1]] : el.dataset[a[2]]);
+      });
+    });
+    // Elements that cannot hold <span lang> (e.g. <option>): French text in data-text-fr
+    $$('[data-text-fr]').forEach(function (el) {
+      if (el.dataset.textEn == null) el.dataset.textEn = el.textContent;
+      el.textContent = fr ? el.dataset.textFr : el.dataset.textEn;
+    });
+  }
+  localizeAttrs();
+
+  $$('[data-lang-toggle]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var next = lang() === 'fr' ? 'en' : 'fr';
+      root.setAttribute('data-lang', next); root.lang = next;
+      store.set('sg-lang', next);
+      buildToc(); renderTimes(); localizeAttrs();
+    });
+  });
+
+  /* Theme: dark by default, light when the visitor picks it (localStorage['taf-theme']).
+     The <head> script applies the stored choice before the first paint. */
+  var themeMeta = $('meta[name="theme-color"]');
+  function syncTheme() {
+    var light = root.getAttribute('data-theme') === 'light';
+    $$('[data-theme-toggle]').forEach(function (b) { b.setAttribute('aria-pressed', light); });
+    if (themeMeta) themeMeta.content = light ? '#f4f1ea' : '#07080a';
+  }
+  $$('[data-theme-toggle]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+      root.setAttribute('data-theme', next);
+      store.set('taf-theme', next);
+      syncTheme();
+    });
+  });
+  syncTheme();
+
+  /* =========================================================
+     Live data: modlist.json (version, size, last update)
+     ========================================================= */
+  function relTime(iso) {
+    var d = new Date(iso);
+    if (isNaN(d)) return '';
+    var s = (d - Date.now()) / 1000, a = Math.abs(s);
+    var rtf = new Intl.RelativeTimeFormat(lang(), { numeric: 'auto' });
+    if (a < 3600) return rtf.format(Math.round(s / 60), 'minute');
+    if (a < 86400) return rtf.format(Math.round(s / 3600), 'hour');
+    if (a < 86400 * 30) return rtf.format(Math.round(s / 86400), 'day');
+    if (a < 86400 * 365) return rtf.format(Math.round(s / (86400 * 30.4)), 'month');
+    return rtf.format(Math.round(s / (86400 * 365)), 'year');
+  }
+  function renderTimes() {
+    $$('time[data-field="updated"]').forEach(function (t) {
+      var iso = t.getAttribute('datetime');
+      if (!iso) return;
+      t.textContent = relTime(iso);
+      t.title = new Date(iso).toLocaleDateString(lang(), { day: 'numeric', month: 'long', year: 'numeric' });
+    });
+  }
+  renderTimes();
+
+  function applyLive(list) {
+    var byTitle = {};
+    list.forEach(function (e) { byTitle[norm(e.title)] = e; });
+    $$('[data-live]').forEach(function (el) {
+      var e = byTitle[norm(el.dataset.live)];
+      if (!e) return;
+      var meta = e.download_metadata || {}, f = el.dataset.field, v = null;
+      if (f === 'updated') { if (e.dateUpdated) el.setAttribute('datetime', e.dateUpdated); return; }
+      if (f === 'version') v = e.version;
+      if (f === 'size' && meta.TotalSize) v = Math.round(meta.TotalSize / 1e9) + ' GB';
+      if (f === 'archives' && meta.NumberOfArchives) v = String(meta.NumberOfArchives);
+      if (v == null) return;
+      if (el.hasAttribute('data-count')) el.dataset.final = v;
+      if (el.textContent !== v) {
+        el.textContent = v;
+        el.classList.remove('is-fresh-value');
+        requestAnimationFrame(function () { requestAnimationFrame(function () { el.classList.add('is-fresh-value'); }); });
+      }
+    });
+    $$('[data-fresh]').forEach(function (el) {
+      var e = byTitle[norm(el.dataset.fresh)];
+      if (e && e.dateUpdated && (Date.now() - new Date(e.dateUpdated)) < 45 * 86400000) el.hidden = false;
+    });
+    renderTimes();
+  }
+  /* Discord members online */
+  // The count now shows in the nav on every page: cache it 5 minutes per tab.
+  function showDiscord(n) {
+    $$('[data-discord-count]').forEach(function (el) { el.textContent = n.toLocaleString(lang()); });
+    $$('[data-discord-online]').forEach(function (el) { el.hidden = false; });
+    $$('[data-discord-fallback]').forEach(function (el) { el.hidden = true; });
+    $$('.nav__cta').forEach(function (a) {
+      a.setAttribute('aria-label', 'Discord, ' + n + (lang() === 'fr' ? ' membres en ligne' : ' members online'));
+    });
+  }
+  /* Live data: /api/live (functions/api/live.js on Cloudflare) answers with the lists and the
+     Discord count in one same-site request; GitHub and Discord are only called directly when it is
+     missing (local dev server) or fails. Cached per tab: lists 10 min, Discord 5 min. */
+  var slimLists = function (d) {
+    return d.map(function (e) { return { title: e.title, version: e.version, dateUpdated: e.dateUpdated, download_metadata: e.download_metadata }; });
+  };
+  var gotLists = function (list) { store.set('taf-live', JSON.stringify({ t: Date.now(), d: list }), sessionStorage); applyLive(list); };
+  var gotDiscord = function (n) { store.set('taf-discord', JSON.stringify({ t: Date.now(), n: n }), sessionStorage); showDiscord(n); };
+  var needLists = false, needDiscord = false;
+  if ($('[data-live], [data-fresh]')) {
+    var cached = store.get('taf-live', sessionStorage);
+    try { cached = cached && JSON.parse(cached); } catch (e) { cached = null; }
+    if (cached && Date.now() - cached.t < 10 * 60 * 1000) applyLive(cached.d); else needLists = true;
+  }
+  if ($('[data-discord-online]')) {
+    var dc = null;
+    try { dc = JSON.parse(store.get('taf-discord', sessionStorage)); } catch (e) {}
+    if (dc && Date.now() - dc.t < 5 * 60 * 1000) showDiscord(dc.n); else needDiscord = true;
+  }
+  var direct = function () {
+    if (needLists) fetch(MODLIST_JSON, { cache: 'no-cache' })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) { if (Array.isArray(d)) gotLists(slimLists(d)); }).catch(function () {});
+    if (needDiscord) fetch('https://discord.com/api/guilds/' + DISCORD_ID + '/widget.json')
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) { if (d && d.presence_count) gotDiscord(d.presence_count); }).catch(function () {});
+  };
+  if (needLists || needDiscord) fetch(base + '/api/live')
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (d) {
+      if (!d) return direct();
+      if (needLists && Array.isArray(d.modlists)) { gotLists(slimLists(d.modlists)); needLists = false; }
+      if (needDiscord && d.discord && d.discord.online) { gotDiscord(d.discord.online); needDiscord = false; }
+      if (needLists || needDiscord) direct();
+    }).catch(direct);
+
+  /* =========================================================
+     Docs sidebar + section outline
+     ========================================================= */
+  var side = $('[data-side]');
+  if (side) {
+    var toggleSide = overlay(side);
+    matchMedia('(min-width: 961px)').addEventListener('change', function (m) { if (m.matches) toggleSide(false); });
+    $$('[data-side-open]').forEach(function (b) { b.addEventListener('click', function () { toggleSide(true); }); });
+    $$('[data-side-close]').forEach(function (b) { b.addEventListener('click', function () { toggleSide(false); }); });
+    side.addEventListener('click', function (e) { if (e.target.closest('a')) toggleSide(false); });
+  }
+  var tocObserver;
+  function buildToc() {
+    var list = $('[data-side-toc]');
+    if (!list) return;
+    // No offsetParent / innerText here: both force a layout of the whole page
+    var cur = lang();
+    var heads = $$('.prose h2[id]').filter(function (h) {
+      var block = h.parentNode.closest('[lang]');
+      return (!block || block === root || block.getAttribute('lang') === cur) && !h.classList.contains('is-dup') && !h.closest('details, .doc-cta');
+    });
+    list.innerHTML = '';
+    if (tocObserver) tocObserver.disconnect();
+    var map = {};
+    heads.forEach(function (h) {
+      var a = document.createElement('a');
+      // Heading text without the other language's span and the anchor (no layout read, unlike innerText)
+      var c = h.cloneNode(true);
+      $$('[lang]:not([lang="' + cur + '"]), .anchor', c).forEach(function (x) { x.remove(); });
+      a.href = '#' + h.id; a.textContent = c.textContent.replace(/\s+/g, ' ').trim();
+      var li = document.createElement('li'); li.appendChild(a); list.appendChild(li);
+      map[h.id] = a;
+    });
+    if (!heads.length) return;
+    tocObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        $$('a', list).forEach(function (a) { a.classList.remove('is-active'); a.removeAttribute('aria-current'); });
+        if (map[en.target.id]) { map[en.target.id].classList.add('is-active'); map[en.target.id].setAttribute('aria-current', 'location'); }
+      });
+    }, { rootMargin: '-90px 0px -65% 0px' });
+    heads.forEach(function (h) { tocObserver.observe(h); });
+  }
+  buildToc();
+
+  /* =========================================================
+     Lightbox
+     ========================================================= */
+  /* (lightbox lives in the enhancements module below) */
+
+  /* =========================================================
+     Search (Ctrl+K or /)
+     ========================================================= */
+  var dlg = $('#search'), input = $('#search-input'), results = $('#search-results'), status = $('#search-status'), index = null, active = 0;
+  var say = function (msg) { if (status) status.textContent = msg; };
+  function esc(s) { return s.replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  var low = function (s) { return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''); };
+  function openSearch() {
+    if (!dlg) return;
+    if (drawer) drawer.classList.remove('is-open');
+    dlg.showModal(); input.value = ''; results.innerHTML = ''; input.focus();
+    var qk = $('[data-search-quick]'); if (qk) qk.hidden = false;
+    if (!index) fetch(base + '/search.json').then(function (r) { return r.json(); }).then(function (d) { index = d; run(); });
+  }
+  function run() {
+    var q = low(input.value.trim());
+    var quick = $('[data-search-quick]');
+    if (quick) quick.hidden = !!q;
+    if (!index || !q) { results.innerHTML = ''; say(''); return; }
+    var terms = q.split(/\s+/), hits = [];
+    index.forEach(function (p) {
+      var t = low(p.t + ' ' + p.s), x = low(p.x), score = 0;
+      for (var i = 0; i < terms.length; i++) {
+        var inT = t.indexOf(terms[i]) !== -1, inX = x.indexOf(terms[i]) !== -1;
+        if (!inT && !inX) return;
+        score += (inT ? 10 : 0) + (inX ? 1 : 0);
+      }
+      var pos = x.indexOf(terms[0]);
+      var snip = pos === -1 ? p.x.slice(0, 120) : (pos > 40 ? '…' : '') + p.x.slice(Math.max(0, pos - 40), pos + 100);
+      hits.push({ p: p, score: score, snip: snip });
+    });
+    hits.sort(function (a, b) { return b.score - a.score; });
+    active = 0;
+    var re = new RegExp('(' + terms.map(function (t) { return t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }).join('|') + ')', 'gi');
+    results.innerHTML = hits.length ? hits.slice(0, 12).map(function (h, i) {
+      return '<li><a href="' + base + h.p.u + '"' + (i === 0 ? ' class="is-active"' : '') + '><span class="r-title">' + esc(h.p.t) + '</span>' +
+        (h.p.s ? '<span class="r-sec">' + esc(h.p.s) + '</span>' : '') +
+        '<span class="r-snip">' + esc(h.snip).replace(re, '<mark>$1</mark>') + '</span></a></li>';
+    }).join('') : '<li class="r-empty">' + (lang() === 'fr' ? 'Rien trouvé.' : 'Nothing found.') + '</li>';
+    var n = Math.min(hits.length, 12);
+    say(lang() === 'fr' ? (n ? n + ' résultat' + (n > 1 ? 's' : '') + ', flèches haut et bas pour choisir' : 'Aucun résultat')
+      : (n ? n + ' result' + (n > 1 ? 's' : '') + ', use up and down arrows to choose' : 'No results'));
+  }
+  if (dlg) {
+    input.addEventListener('input', run);
+    input.addEventListener('keydown', function (e) {
+      var items = $$('a', results);
+      if (!items.length) return;
+      if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        items[active].classList.remove('is-active');
+        active = (active + (e.key === 'ArrowDown' ? 1 : -1) + items.length) % items.length;
+        items[active].classList.add('is-active');
+        items[active].scrollIntoView({ block: 'nearest' });
+      } else if (e.key === 'Enter') { location.href = items[active].href; }
+    });
+    dlg.addEventListener('click', function (e) {
+      if (e.target === dlg) dlg.close();
+      var q = e.target.closest('[data-q]');
+      if (q) { input.value = q.getAttribute('data-q'); run(); input.focus(); }
+    });
+  }
+  $$('[data-search-open]').forEach(function (b) { b.addEventListener('click', openSearch); });
+  document.addEventListener('keydown', function (e) {
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); openSearch(); }
+    else if (e.key === '/' && !/input|textarea|select/i.test(document.activeElement.tagName)) { e.preventDefault(); openSearch(); }
+  });
+
+  /* =========================================================
+     FAQ search, gallery filters, embeds, bug report
+     ========================================================= */
+  var faqSearch = $('[data-faq-search]');
+  if (faqSearch) faqSearch.addEventListener('input', function () {
+    var q = low(faqSearch.value.trim()), shown = 0;
+    $$('.faq__item').forEach(function (it) {
+      var ok = !q || low(it.textContent).indexOf(q) !== -1;
+      it.hidden = !ok;
+      if (ok && it.offsetParent !== null) shown++;
+    });
+    var empty = $('[data-faq-empty]');
+    if (empty) empty.hidden = shown > 0;
+  });
+
+  $$('[data-filter-group]').forEach(function (group) {
+    var items = $$('[data-modlist]', group.nextElementSibling);
+    group.addEventListener('click', function (e) {
+      var b = e.target.closest('[data-filter]');
+      if (!b) return;
+      $$('[data-filter]', group).forEach(function (x) { x.classList.toggle('is-active', x === b); });
+      var f = b.getAttribute('data-filter');
+      items.forEach(function (it) { it.hidden = f !== 'all' && it.getAttribute('data-modlist') !== f; });
+    });
+  });
+
+  $$('[data-embed-full]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var el = b.closest('[data-embed]');
+      if (document.fullscreenElement) document.exitFullscreen();
+      else if (el.requestFullscreen) el.requestFullscreen();
+    });
+  });
+
+  var bug = $('[data-bug]');
+  if (bug) {
+    var form = $('form', bug), pre = $('[data-bug-preview]', bug);
+    var render = function () {
+      var f = form.elements;
+      pre.textContent = '**' + (f.type.value || 'Bug report') + (f.project.value ? ' / ' + f.project.value : '') + '**\n' +
+        (f.contact.value ? 'From: ' + f.contact.value + '\n' : '') +
+        (f.title.value ? 'Summary: ' + f.title.value + '\n' : '') +
+        (f.details.value ? '\n' + f.details.value + '\n' : '') +
+        (f.links.value ? '\nLinks:\n' + f.links.value.split('\n').filter(Boolean).map(function (l) { return '- ' + l; }).join('\n') : '');
+    };
+    form.addEventListener('input', render);
+    // Send: POST /api/report (functions/api/report.js) forwards the report to the Discord channel.
+    // When it is not available (local server, not configured), the preview below stays the way out.
+    var opened = Date.now(), sending = false;
+    var status = $('[data-bug-status]', bug), sendBtn = $('[data-bug-send]', bug);
+    var say = function (en, fr, kind) { status.textContent = lang() === 'fr' ? fr : en; status.dataset.kind = kind || ''; };
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (sending) return;
+      var f = form.elements;
+      if (f.title.value.trim().length < 5 || f.details.value.trim().length < 20) {
+        say('Add a summary (5 characters or more) and some details (20 or more).', 'Ajoutez un résumé (5 caractères ou plus) et des détails (20 ou plus).', 'error');
+        return;
+      }
+      sending = true; sendBtn.disabled = true;
+      say('Sending…', 'Envoi…');
+      fetch(base + '/api/report', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ title: f.title.value, type: f.type.value, project: f.project.value, contact: f.contact.value,
+          details: f.details.value, links: f.links.value, website: f.website.value, elapsed: Date.now() - opened })
+      }).then(function (r) { return r.json().catch(function () { return { ok: false }; }).then(function (d) { return { status: r.status, d: d }; }); })
+        .then(function (res) {
+          if (res.d && res.d.ok) {
+            say('Sent. Thanks! Answers come in the support channel on Discord.', 'Envoyé, merci ! Les réponses arrivent dans le canal de support du Discord.', 'ok');
+            form.reset(); render(); opened = Date.now();
+          } else if (res.status === 429) {
+            say('Too many reports right now. Wait a minute and send again.', 'Trop d\'envois pour le moment. Attendez une minute puis renvoyez.', 'error');
+          } else {
+            say('Sending is not available. Copy the preview below and post it in the support channel.', 'L\'envoi n\'est pas disponible. Copiez l\'aperçu ci-dessous et publiez-le dans le canal de support.', 'error');
+          }
+        })
+        .catch(function () { say('Sending failed. Copy the preview below and post it on Discord.', 'L\'envoi a échoué. Copiez l\'aperçu ci-dessous et publiez-le sur Discord.', 'error'); })
+        .then(function () { sending = false; sendBtn.disabled = false; });
+    });
+    render();
+    $('[data-bug-copy]', bug).addEventListener('click', function (e) {
+      var btn = e.currentTarget, label = btn.innerHTML;
+      if (navigator.clipboard) navigator.clipboard.writeText(pre.textContent).then(function () {
+        btn.textContent = '✓';
+        setTimeout(function () { btn.innerHTML = label; }, 1500);
+      });
+    });
+  }
+
+  /* Reveal on scroll */
+  if ('IntersectionObserver' in window && !calm) {
+    var els = $$('.band, .tier, .cta, .masonry__item, .shots, .section-title, .stats');
+    els.forEach(function (el) { el.classList.add('reveal'); });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('is-in'); io.unobserve(en.target); } });
+    }, { rootMargin: '0px 0px -6% 0px' });
+    els.forEach(function (el) { io.observe(el); });
+  }
+
+  /* The previous site registered a caching service worker: remove it. */
+  if ('serviceWorker' in navigator) navigator.serviceWorker.getRegistrations().then(function (rs) { rs.forEach(function (r) { r.unregister(); }); }).catch(function () {});
+})();
+
+/* =====================================================================
+   Enhancements: lightbox, anchors, code copy, changelog tools,
+   guide progress, page transitions
+   ===================================================================== */
+(function () {
+  'use strict';
+  var root = document.documentElement;
+  var $ = function (s, c) { return (c || document).querySelector(s); };
+  var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
+  var calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var lang = function () { return root.getAttribute('data-lang') === 'fr' ? 'fr' : 'en'; };
+  var tr = function (en, fr) { return lang() === 'fr' ? fr : en; };
+  var low = function (s) { return String(s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''); };
+  var refreshers = [];
+  document.addEventListener('click', function (e) {
+    if (e.target.closest('[data-lang-toggle]')) setTimeout(function () { refreshers.forEach(function (f) { f(); }); }, 0);
+  });
+
+  /* Toast */
+  function toast(msg) {
+    var t = $('[data-toast]');
+    if (!t) return;
+    t.textContent = msg; t.classList.add('is-on');
+    clearTimeout(t._t); t._t = setTimeout(function () { t.classList.remove('is-on'); }, 1800);
+  }
+
+  /* ---------- Lightbox with navigation ---------- */
+  $$('.prose img').forEach(function (img) {
+    if (img.closest('a, button, .shots, .doc-cta')) return;
+    // Thumbnails carry their full-size original in data-zoom already
+    if (!img.hasAttribute('data-zoom')) img.setAttribute('data-zoom', img.getAttribute('src'));
+    img.classList.add('is-zoomable');
+  });
+  var lb = $('#lightbox');
+  if (lb && lb.showModal) {
+    var lbImg = $('[data-lb-img]', lb), lbCap = $('[data-lb-cap]', lb), lbCount = $('[data-lb-count]', lb);
+    var group = [], idx = 0;
+    var altOf = function (el) { return el.tagName === 'IMG' ? el.alt : (($('img', el) || {}).alt || ''); };
+    var show = function (i) {
+      idx = (i + group.length) % group.length;
+      var el = group[idx], src = el.getAttribute('data-zoom');
+      lbImg.classList.remove('is-in');
+      var pre = new Image();
+      pre.onload = pre.onerror = function () {
+        lbImg.src = src; lbImg.alt = altOf(el);
+        requestAnimationFrame(function () { lbImg.classList.add('is-in'); });
+      };
+      pre.src = src;
+      lbCap.textContent = altOf(el);
+      lbCount.textContent = (idx + 1) + ' / ' + group.length;
+      lb.classList.toggle('is-single', group.length < 2);
+      [idx + 1, idx - 1].forEach(function (j) { var n = group[(j + group.length) % group.length]; if (n) new Image().src = n.getAttribute('data-zoom'); });
+    };
+    document.addEventListener('click', function (e) {
+      var z = e.target.closest('[data-zoom]');
+      if (!z) return;
+      e.preventDefault();
+      var scope = z.closest('.masonry, .shots__grid, .strip, .prose') || document;
+      group = $$('[data-zoom]', scope).filter(function (x) { return x.offsetParent !== null; });
+      if (!group.length) group = [z];
+      lb.showModal(); show(Math.max(0, group.indexOf(z)));
+    });
+    $('[data-lb-prev]', lb).addEventListener('click', function () { show(idx - 1); });
+    $('[data-lb-next]', lb).addEventListener('click', function () { show(idx + 1); });
+    $('[data-lb-close]', lb).addEventListener('click', function () { lb.close(); });
+    lb.addEventListener('click', function (e) { if (e.target === lb || e.target.classList.contains('lightbox__stage')) lb.close(); });
+    lb.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft') show(idx - 1);
+      if (e.key === 'ArrowRight') show(idx + 1);
+    });
+    var sx = null;
+    lb.addEventListener('pointerdown', function (e) { sx = e.clientX; });
+    lb.addEventListener('pointerup', function (e) {
+      if (sx === null) return;
+      var dx = e.clientX - sx; sx = null;
+      if (Math.abs(dx) > 50) show(idx + (dx < 0 ? 1 : -1));
+    });
+  }
+
+  /* ---------- Section anchors (click = copy link) ---------- */
+  var anchorLabel = function () {
+    $$('.anchor').forEach(function (a) { a.setAttribute('aria-label', tr('Copy the link to this section', 'Copier le lien de cette section')); });
+  };
+  refreshers.push(anchorLabel);
+  $$('.prose h2[id], .prose h3[id]').forEach(function (h) {
+    if (h.closest('details, .doc-cta') || h.classList.contains('is-dup')) return;
+    var a = document.createElement('a');
+    a.href = '#' + h.id; a.className = 'anchor';
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      history.replaceState(null, '', '#' + h.id);
+      h.scrollIntoView({ behavior: calm ? 'auto' : 'smooth' });
+      if (navigator.clipboard) navigator.clipboard.writeText(location.href).then(function () { toast(tr('Link copied', 'Lien copié')); });
+    });
+    h.appendChild(a);
+  });
+  anchorLabel();
+
+  /* ---------- Copy buttons on code blocks ---------- */
+  $$('.prose pre').forEach(function (pre) {
+    var text = pre.textContent;
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'copy';
+    var label = function () { b.textContent = tr('Copy', 'Copier'); };
+    label(); refreshers.push(label);
+    b.addEventListener('click', function () {
+      if (navigator.clipboard) navigator.clipboard.writeText(text.trim()).then(function () { toast(tr('Copied', 'Copié')); });
+    });
+    pre.appendChild(b);
+  });
+
+  /* ---------- Changelog tools ---------- */
+  // Summaries, the open latest version and the tools bar are rendered by build.mjs
+  // (changelogStatic), so nothing moves after load; this only wires search and expand-all.
+  var tools = $('[data-cl-tools]');
+  var logs = tools ? $$('details', tools.parentNode).filter(function (d) { return d.parentNode === tools.parentNode; }) : [];
+  if (tools && logs.length) {
+    var q = $('[data-cl-q]', tools), found = $('[data-cl-found]', tools), all = $('[data-cl-all]', tools), allOpen = false;
+    found.setAttribute('role', 'status');
+    var labels = function () {
+      q.placeholder = tr('Find a mod in the changelog…', 'Chercher un mod dans le changelog…');
+      q.setAttribute('aria-label', q.placeholder);
+      all.setAttribute('aria-expanded', allOpen);
+      all.textContent = allOpen ? tr('Collapse all', 'Tout replier') : tr('Expand all', 'Tout déplier');
+    };
+    labels(); refreshers.push(labels);
+    all.addEventListener('click', function () {
+      allOpen = !allOpen;
+      logs.forEach(function (d, i) { if (!d.hidden) d.open = allOpen || (!q.value && i === 0); });
+      labels();
+    });
+    var filter = function () {
+      var v = low(q.value.trim()), n = 0;
+      $$('.cl-hit', tools.parentNode).forEach(function (x) { x.classList.remove('cl-hit'); });
+      logs.forEach(function (d, i) {
+        if (!v) { d.hidden = false; d.open = allOpen || i === 0; return; }
+        var lis = $$('li', d).filter(function (li) { return low(li.textContent).indexOf(v) !== -1; });
+        var ok = lis.length > 0 || low($('summary', d).textContent).indexOf(v) !== -1;
+        d.hidden = !ok; d.open = ok;
+        lis.forEach(function (li) { li.classList.add('cl-hit'); });
+        if (ok) n++;
+      });
+      found.textContent = v ? (n ? n + ' ' + tr(n > 1 ? 'versions' : 'version', n > 1 ? 'versions' : 'version') : tr('No match', 'Aucun résultat')) : '';
+    };
+    var tq;
+    q.addEventListener('input', function () { clearTimeout(tq); tq = setTimeout(filter, 120); });
+    refreshers.push(filter);
+  }
+
+
+  /* ---------- YouTube: load the player only when asked (see youtubeFacade in build.mjs) ---------- */
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a.yt[data-yt]');
+    if (!a || e.ctrlKey || e.metaKey || e.shiftKey || e.button > 0) return;
+    e.preventDefault();
+    var f = document.createElement('iframe');
+    f.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(a.getAttribute('data-yt')) + '?autoplay=1&rel=0';
+    f.title = tr('YouTube video', 'Vidéo YouTube');
+    f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+    f.allowFullscreen = true;
+    f.className = 'yt yt--live';
+    a.replaceWith(f);
+    f.focus();
+  });
+
+
+  /* Read marks and step ticks were removed (Nov 2026): clear what older versions stored */
+  try { localStorage.removeItem('taf-read'); localStorage.removeItem('taf-ticks'); } catch (e) {}
+
+  /* ---------- Glossary tooltips: keep the bubble in the window, Escape closes it ----------
+     Layout is only read when a term is hovered or focused, never while the page loads. */
+  var placeTip = function (gl) {
+    var t = $('.gl__tip', gl);
+    if (!t) return;
+    t.style.setProperty('--dx', '0px'); gl.classList.remove('is-below', 'is-off');
+    var r = t.getBoundingClientRect(), pad = 12, dx = 0;
+    if (r.left < pad) dx = pad - r.left;
+    else if (r.right > innerWidth - pad) dx = innerWidth - pad - r.right;
+    if (dx) t.style.setProperty('--dx', Math.round(dx) + 'px');
+    if (r.top < 84) gl.classList.add('is-below');
+  };
+  document.addEventListener('mouseover', function (e) {
+    var g = e.target.closest && e.target.closest('.gl');
+    if (g && !g.contains(e.relatedTarget)) placeTip(g);
+  });
+  document.addEventListener('focusin', function (e) { if (e.target.classList && e.target.classList.contains('gl')) placeTip(e.target); });
+  document.addEventListener('mouseout', function (e) {
+    var g = e.target.closest && e.target.closest('.gl');
+    if (g && !g.contains(e.relatedTarget)) g.classList.remove('is-off');
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    $$('.gl:hover, .gl:focus').forEach(function (g) { g.classList.add('is-off'); });
+  });
+
+  /* ---------- Page transitions: morph the modlist title into the docs hero ---------- */
+  var hero = $('[data-hero]');
+  if (hero) hero.addEventListener('click', function (e) {
+    var p = e.target.closest('.panel');
+    if (!p) return;
+    var t = $('[data-vt]', p);
+    $$('[data-vt]', hero).forEach(function (x) { x.style.viewTransitionName = ''; });
+    if (t && p.classList.contains('is-on')) t.style.viewTransitionName = t.getAttribute('data-vt');
+  }, true);
+
+  /* ---------- Keyboard maps: the legend buttons show one category at a time ---------- */
+  $$('[data-kbmap]').forEach(function (map) {
+    map.addEventListener('click', function (e) {
+      var b = e.target.closest('[data-kb-cat]');
+      if (!b) return;
+      var cat = b.getAttribute('data-kb-cat');
+      if (cat && map.getAttribute('data-show') === cat) cat = ''; // a second click shows everything again
+      if (cat) map.setAttribute('data-show', cat); else map.removeAttribute('data-show');
+      $$('[data-kb-cat]', map).forEach(function (x) { x.setAttribute('aria-pressed', String(x.getAttribute('data-kb-cat') === cat)); });
+    });
+  });
+})();

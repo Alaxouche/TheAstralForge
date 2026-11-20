@@ -1390,3 +1390,58 @@ html[data-lang="en"] .sk-alt { display: none; }
 .form__status[data-kind="error"] { color: #e08a83; }
 :root[data-theme="light"] .form__status[data-kind="ok"] { color: #276b3e; }
 :root[data-theme="light"] .form__status[data-kind="error"] { color: #b03a30; }
+
+/* =====================================================================
+   Visual pass (Nov 2026): hub emblems, forged section dividers, gallery captions,
+   living footer, 404 falling tiles
+   ===================================================================== */
+
+/* Hub bands: the list's emblem before the "Open the docs" button */
+.band__body { grid-template-columns: 70px 1fr auto auto; }
+.band__mark { width: 64px; height: 64px; opacity: .8; transition: opacity .5s, transform .9s var(--out); }
+.band:hover .band__mark { opacity: 1; transform: rotate(-6deg) scale(1.06); }
+@media (hover: none), (max-width: 760px) {
+  .band__body { grid-template-columns: 1fr; }
+  .band__mark { position: absolute; top: 0; right: var(--gutter); width: 48px; height: 48px; }
+}
+
+/* Guides: section divider = a gold line fading at both ends with the site star in the middle */
+.prose h2 { border-top: 0; background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--gold) 55%, transparent) 50%, transparent) top / 100% 1px no-repeat; }
+.prose h2::after {
+  content: ""; position: absolute; top: -5px; left: 50%; width: 11px; height: 11px; margin-left: -5.5px; background: var(--gold);
+  clip-path: polygon(50% 0, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0 50%, 40% 40%);
+}
+.prose > h1 + h2, .prose > div > h1 + h2, .prose > div:first-of-type > h2:first-child, .doc-head + h2,
+.prose .doc-cta h2, .prose h2.is-dup { background: none; }
+.prose > h1 + h2::after, .prose > div > h1 + h2::after, .prose > div:first-of-type > h2:first-child::after, .doc-head + h2::after,
+.prose .doc-cta h2::after, .prose h2.is-dup::after { content: none; }
+
+/* Lightbox caption: title, then author / list / Discord link */
+.lightbox__stage figcaption { display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center; max-width: min(820px, 92vw); }
+.lightbox__title { text-transform: none; letter-spacing: .04em; font-size: 15px; color: var(--hi); }
+.lightbox__meta { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 18px; }
+.lightbox__meta a { color: var(--gold); }
+.lightbox__meta a:hover { color: var(--hi); }
+
+/* Footer: each list with its live version and age; the emblem as a very faint watermark */
+.footer { position: relative; overflow: hidden; }
+.footer::before {
+  content: ""; position: absolute; right: -60px; bottom: -90px; width: 420px; height: 420px; pointer-events: none;
+  background: url("logos/emblem.webp") center / contain no-repeat; opacity: .022; filter: var(--logo-filter);
+}
+.footer__grid, .footer .wrap { position: relative; }
+.footer__live { display: block; margin-top: 2px; font-size: 12px; letter-spacing: .05em; color: var(--dim); font-variant-numeric: tabular-nums; }
+.footer__live .sep { width: 5px; height: 5px; margin: 0 6px; vertical-align: 1px; }
+.footer ul { gap: 12px; }
+@media (max-width: 860px) { .footer::before { width: 300px; height: 300px; right: -70px; bottom: -70px; } }
+
+/* 404: the missing tiles fall away once when the page opens (404.html, _data/hex_void_tiles.json) */
+.phero__tiles { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+.phero__tiles polygon { fill: var(--tile, #101114); stroke: rgba(201, 169, 110, .35); stroke-width: 2; transform-box: fill-box; transform-origin: 50% 50%;
+  animation: tile-fall 1.25s cubic-bezier(.55, 0, .85, .35) both; animation-delay: calc(.55s + var(--k) * 70ms); }
+:root[data-theme="light"] .phero__tiles polygon { --tile: #efebe2; stroke: rgba(122, 91, 34, .4); }
+@keyframes tile-fall {
+  0% { transform: none; opacity: 1; }
+  100% { transform: translate(var(--dx), 520px) rotate(var(--r)); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) { .phero__tiles { display: none; } }

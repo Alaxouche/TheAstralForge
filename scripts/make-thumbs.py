@@ -42,6 +42,14 @@ for f in sorted(SRC.rglob('*')):
             entry['t'][str(tw)] = '/' + dest.relative_to(ROOT).as_posix()
     manifest['/' + f.relative_to(ROOT).as_posix()] = entry
 
+# Thumbnails whose original is gone (e.g. community screenshots removed by the Discord sync)
+kept = {p for e in manifest.values() for p in e['t'].values()}
+removed = 0
+for t in OUT.rglob('*.webp'):
+    if '/' + t.relative_to(ROOT).as_posix() not in kept:
+        t.unlink()
+        removed += 1
+
 OUT.mkdir(parents=True, exist_ok=True)
 (OUT / 'manifest.json').write_text(json.dumps(manifest, indent=1, ensure_ascii=False), encoding='utf8')
-print(f'{len(manifest)} images, {made} thumbnails written')
+print(f'{len(manifest)} images, {made} thumbnails written, {removed} stale removed')

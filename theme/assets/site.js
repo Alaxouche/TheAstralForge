@@ -389,7 +389,10 @@
     var map = {};
     heads.forEach(function (h) {
       var a = document.createElement('a');
-      a.href = '#' + h.id; a.textContent = h.textContent.trim();
+      // Heading text without the other language's span and the anchor (no layout read, unlike innerText)
+      var c = h.cloneNode(true);
+      $$('[lang]:not([lang="' + cur + '"]), .anchor', c).forEach(function (x) { x.remove(); });
+      a.href = '#' + h.id; a.textContent = c.textContent.replace(/\s+/g, ' ').trim();
       var li = document.createElement('li'); li.appendChild(a); list.appendChild(li);
       map[h.id] = a;
     });
@@ -629,7 +632,20 @@
         requestAnimationFrame(function () { lbImg.classList.add('is-in'); });
       };
       pre.src = src;
-      lbCap.textContent = altOf(el);
+      // Caption: the picture's text, then author, list and Discord link for community screenshots
+      lbCap.textContent = '';
+      var capT = document.createElement('span'); capT.className = 'lightbox__title'; capT.textContent = altOf(el); lbCap.appendChild(capT);
+      var who = el.getAttribute('data-lb-author'), list = el.getAttribute('data-lb-list'), link = el.getAttribute('data-lb-link');
+      if (who || list || link) {
+        var meta = document.createElement('span'); meta.className = 'lightbox__meta';
+        if (who) { var a1 = document.createElement('span'); a1.textContent = tr('By ', 'Par ') + who; meta.appendChild(a1); }
+        if (list) { var a2 = document.createElement('span'); a2.textContent = list; meta.appendChild(a2); }
+        if (link && /^https:\/\/discord\.com\//.test(link)) {
+          var a3 = document.createElement('a'); a3.href = link; a3.target = '_blank'; a3.rel = 'noopener noreferrer';
+          a3.textContent = tr('See on Discord', 'Voir sur Discord') + ' \u2197'; meta.appendChild(a3);
+        }
+        lbCap.appendChild(meta);
+      }
       lbCount.textContent = (idx + 1) + ' / ' + group.length;
       lb.classList.toggle('is-single', group.length < 2);
       [idx + 1, idx - 1].forEach(function (j) { var n = group[(j + group.length) % group.length]; if (n) new Image().src = n.getAttribute('data-zoom'); });

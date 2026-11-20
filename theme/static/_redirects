@@ -1,0 +1,6 @@
+# Cloudflare Pages redirects (copied to the root of _site by build.mjs).
+# Old addresses that still circulate (search engines, old bookmarks, the previous site's search index).
+/krentoraan/k_installation-guide /krentoraan/installation-guide/ 301
+/krentoraan/k_installation-guide/ /krentoraan/installation-guide/ 301
+/wunduniik/installation-guide/g_system-requirements /wunduniik/installation-guide/system-requirements/ 301
+/wunduniik/installation-guide/g_system-requirements/ /wunduniik/installation-guide/system-requirements/ 301

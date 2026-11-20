@@ -17,6 +17,7 @@ description: "Every modlist hosted on The Astral Forge."
         <span class="band__name">{{ m.title }}</span>
         <span class="band__desc">{% if m.subtitle_fr %}<span lang="en">{{ m.subtitle }}</span><span lang="fr">{{ m.subtitle_fr }}</span>{% else %}{{ m.subtitle }}{% endif %}</span>
       </span>
+      {%- if m.emblem %}<img class="band__mark" src="{{ m.emblem | relative_url }}" alt="" width="640" height="640" loading="lazy" decoding="async">{% endif %}
       <span class="band__go"><span lang="en">Open the docs</span><span lang="fr">Voir la doc</span> →</span>
     </span>
     <span class="band__bar"></span>
