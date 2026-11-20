@@ -15,7 +15,7 @@ project_banner:
   subtitle_fr: "Modlist phare pour Skyrim SE : visuels, refontes du gameplay et contenu riche."
   stats:
     - label: Mods
-      value: "2900+"
+      value: "3600+"
     - label: Size
       value: "200 GB"
     - label: Version
@@ -39,7 +39,7 @@ Wunduniik is a comprehensive modlist for The Elder Scrolls V: Skyrim Anniversary
 
 ## About This Modlist
 
-This modlist transforms Skyrim into a visually stunning and deeply immersive experience. It includes hundreds of carefully selected and configured mods that work together seamlessly.
+This modlist transforms Skyrim into a visually stunning and deeply immersive experience. It includes more than 3,600 mods, selected and configured to work together.
 
 ### Key Features
 
@@ -66,7 +66,7 @@ Wunduniik est une modlist complète pour The Elder Scrolls V: Skyrim Anniversary
 
 ## À Propos de Cette Modlist
 
-Cette modlist transforme Skyrim en une expérience visuellement époustouflante et profondément immersive. Elle inclut des centaines de mods soigneusement sélectionnés et configurés qui fonctionnent ensemble de manière harmonieuse.
+Cette modlist transforme Skyrim en une expérience visuellement époustouflante et profondément immersive. Elle réunit plus de 3 600 mods, choisis et configurés pour fonctionner ensemble.
 
 ### Fonctionnalités Clés
 

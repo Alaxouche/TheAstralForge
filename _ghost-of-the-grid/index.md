@@ -15,7 +15,7 @@ project_banner:
   subtitle_fr: "Une liste Cyberpunk 2077 baignée de néons, pensée pour l'ambiance et un gameplay peaufiné."
   stats:
     - label: Mods
-      value: "1600+"
+      value: "1300+"
     - label: Size
       value: "90 GB"
     - label: Version

@@ -813,4 +813,354 @@
       $$('[data-kb-cat]', map).forEach(function (x) { x.setAttribute('aria-pressed', String(x.getAttribute('data-kb-cat') === cat)); });
     });
   });
+  /* ---------- Mod contents, install estimator, authors wall (layouts and figures from scripts/contents.mjs) ---------- */
+  var fmtB = function (b, L) {
+    var fr = (L || lang()) === 'fr', v, u;
+    if (b >= 1e9) { v = b / 1e9; u = fr ? 'Go' : 'GB'; } else if (b >= 1e6) { v = b / 1e6; u = fr ? 'Mo' : 'MB'; } else { v = b / 1e3; u = fr ? 'ko' : 'KB'; }
+    var s = v >= 100 ? String(Math.round(v)) : v.toFixed(1).replace(/\.0$/, '');
+    return (fr ? s.replace('.', ',') : s) + ' ' + u;
+  };
+  var fmtN = function (n, L) { return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, (L || lang()) === 'fr' ? ' ' : ','); };
+  var escH = function (s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;'); };
+  var nexusUrl = function (s) { return 'https://www.nexusmods.com/' + s.replace('/', '/mods/'); };
+  var getJson = function (url) { return fetch(url).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }); };
+
+  $$('[data-tmap]').forEach(function (w) {
+    var map = $('.tm', w), panel = $('[data-tm-panel]', w), id = w.getAttribute('data-tmap');
+    var data = null, loading = null, cur = null, timer = 0;
+    // Labels only where they fit: all reads first, then all writes
+    function fit() {
+      var cells = $$('.tm__c', map);
+      var sizes = cells.map(function (c) { return [c.offsetWidth, c.offsetHeight]; });
+      cells.forEach(function (c, i) {
+        var s = sizes[i], f = s[0] >= 78 && s[1] >= 40 ? 2 : s[0] >= 46 && s[1] >= 20 ? 1 : 0;
+        c.classList.toggle('is-lab', f === 2); c.classList.toggle('is-name', f === 1);
+      });
+    }
+    requestAnimationFrame(fit);
+    addEventListener('resize', function () { clearTimeout(timer); timer = setTimeout(fit, 150); });
+    $$('.tm-seg', w).forEach(function (b) {
+      b.addEventListener('click', function () {
+        map.classList.add('is-anim');
+        map.setAttribute('data-m', b.getAttribute('data-metric'));
+        $$('.tm-seg', w).forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+        setTimeout(fit, calm ? 0 : 600);
+      });
+    });
+    function render() {
+      if (!data || !cur) return;
+      var g = data.g[cur[0]], s = g && g.s[cur[1]];
+      if (!s) return;
+      var bytes = 0;
+      var items = s.m.map(function (m) {
+        bytes += m[3];
+        var name = m[2] ? '<a href="' + nexusUrl(m[2]) + '" target="_blank" rel="noopener">' + escH(m[0]) + '</a>' : escH(m[0]);
+        return '<li><span>' + name + '</span><span class="tm-mods__s">' + fmtB(m[3]) + '</span>' +
+          (m[1] ? '<span class="tm-mods__a">' + escH(m[1]) + '</span>' : '') + '</li>';
+      }).join('');
+      panel.innerHTML = '<p class="tm-panel__crumb">' + escH(g.n) + '</p><h3>' + escH(s.n === g.n && g.s.length === 1 ? tr('All mods', 'Tous les mods') : s.n) + '</h3>' +
+        '<p class="tm-panel__meta">' + fmtN(s.m.length) + ' mods · ' + fmtB(bytes) + ' · ' + tr('in Mod Organizer order', 'dans l’ordre de Mod Organizer') + '</p>' +
+        '<ul class="tm-mods">' + items + '</ul>';
+    }
+    function show(gi, si, scroll) {
+      cur = [gi, si];
+      $$('.tm__c.is-sel', map).forEach(function (x) { x.classList.remove('is-sel'); });
+      var cell = $('.tm__c[data-g="' + gi + '"][data-s="' + si + '"]', map);
+      if (cell) cell.classList.add('is-sel');
+      if (!loading) loading = getJson('/assets/data/contents-' + id + '.json');
+      loading.then(function (d) {
+        data = d; render();
+        if (scroll) panel.scrollIntoView({ block: 'start', behavior: calm ? 'auto' : 'smooth' });
+      }).catch(function () {
+        loading = null;
+        panel.innerHTML = '<p class="tm-panel__hint">' + tr('The mod list could not be loaded. Try again in a moment.', 'La liste des mods n’a pas pu être chargée. Réessayez dans un instant.') + '</p>';
+      });
+    }
+    w.addEventListener('click', function (e) {
+      var b = e.target.closest('.tm__c, .tm-list__s');
+      if (!b) return;
+      var fromList = b.classList.contains('tm-list__s');
+      show(+b.getAttribute('data-g'), +b.getAttribute('data-s'), fromList || panel.getBoundingClientRect().top > innerHeight * 0.75);
+    });
+    refreshers.push(render);
+  });
+
+  /* Install time estimator: same formula as estimate() in scripts/contents.mjs */
+  var ests = $$('[data-est]');
+  if (ests.length) {
+    var EST_KEY = 'taf-est';
+    var state = { mbit: 100, acc: 'premium', disk: 'nvme' };
+    try { var saved = JSON.parse(localStorage.getItem(EST_KEY) || 'null'); if (saved && saved.mbit) state = saved; } catch (e) { /* storage blocked */ }
+    var dur = function (sec, L) {
+      var fr = L === 'fr';
+      if (sec < 3600) return Math.max(1, Math.round(sec / 60)) + ' min';
+      var h = sec / 3600;
+      if (h >= 48) { var dd = (h / 24).toFixed(1).replace(/\.0$/, ''); return (fr ? dd.replace('.', ',') : dd) + ' ' + (fr ? 'jours' : 'days'); }
+      var hh = Math.floor(h), mm = Math.round((h - hh) * 60 / 5) * 5;
+      return mm === 60 ? (hh + 1) + ' h' : mm ? hh + ' h ' + (mm < 10 ? '0' : '') + mm : hh + ' h';
+    };
+    var paint = function (el) {
+      var c = JSON.parse(el.getAttribute('data-est')), L = el.getAttribute('data-lang');
+      var d = { nxN: +el.getAttribute('data-nxn'), nxB: +el.getAttribute('data-nxb'), otB: +el.getAttribute('data-otb'), inst: +el.getAttribute('data-inst') };
+      var line = state.mbit / 8 * (c.e || 0.85) * 1e6, total = d.nxB + d.otB, dl, cap = 0;
+      if (state.acc === 'premium') dl = total / line;
+      else {
+        cap = (state.acc === 'adblock' ? c.a : c.f) * 1e6;
+        dl = Math.max(d.nxB / Math.min(cap, line), total / line, d.nxN * (c.k || 10));
+      }
+      var inst = d.inst / ((c.i[state.disk] || 30) * 1e6);
+      $('[data-est-dl]', el).textContent = '≈ ' + dur(dl, L);
+      $('[data-est-in]', el).textContent = '≈ ' + dur(inst, L);
+      $('[data-est-tot]', el).textContent = '≈ ' + dur(dl + inst, L);
+      var capTxt = String(cap / 1e6).replace('.', L === 'fr' ? ',' : '.');
+      $('[data-est-note]', el).textContent = state.acc === 'premium'
+        ? (L === 'fr' ? 'Les ' + fmtN(d.nxN, L) + ' fichiers Nexus se téléchargent tout seuls.' : 'All ' + fmtN(d.nxN, L) + ' Nexus files download on their own.')
+        : (L === 'fr' ? 'Sans Premium, vous cliquez sur « Slow download » une fois par fichier Nexus : ' + fmtN(d.nxN, L) + ' clics, avec un débit Nexus limité à ' + capTxt + ' Mo/s.'
+          : 'Without Premium you click "Slow download" once per Nexus file: ' + fmtN(d.nxN, L) + ' clicks, with Nexus downloads capped at ' + capTxt + ' MB/s.');
+      var sp = $('[data-est-speed]', el);
+      if (document.activeElement !== sp) sp.value = state.mbit;
+      $$('input[type=radio]', el).forEach(function (r) { r.checked = state[r.name.split('-').pop()] === r.value; });
+    };
+    var paintAll = function () { ests.forEach(paint); };
+    var save = function () { try { localStorage.setItem(EST_KEY, JSON.stringify(state)); } catch (e) { /* storage blocked */ } };
+    ests.forEach(function (el) {
+      el.addEventListener('input', function (e) {
+        var t = e.target;
+        if (t.matches('[data-est-speed]')) { var v = parseFloat(t.value); if (!(v > 0)) return; state.mbit = Math.min(10000, v); }
+        else if (t.type === 'radio') state[t.name.split('-').pop()] = t.value;
+        else return;
+        save(); paintAll();
+      });
+      el.addEventListener('click', function (e) {
+        var b = e.target.closest('[data-est-preset]');
+        if (!b) return;
+        state.mbit = +b.getAttribute('data-est-preset');
+        save(); paintAll();
+      });
+    });
+    paintAll();
+  }
+
+  /* Authors wall: search, filter by list, the mods of one author in a dialog */
+  var aw = $('[data-authors]');
+  if (aw) {
+    var q = $('[data-aw-q]', aw), countEl = $('[data-aw-count]', aw), dlg = $('[data-aw-dlg]', aw);
+    var people = $$('.aw__grid .aw__a', aw), secs = $$('.aw__sec', aw), chips = $$('.aw-chip', aw);
+    var pick = 'all', authors = null, loadingA = null, openIdx = -1;
+    people.forEach(function (b) { b._k = low($('.aw__name', b).textContent); b._l = ' ' + b.getAttribute('data-l') + ' '; });
+    var filter = function () {
+      var term = low(q.value.trim()), n = 0;
+      people.forEach(function (b) {
+        var ok = (!term || b._k.indexOf(term) !== -1) && (pick === 'all' || b._l.indexOf(' ' + pick + ' ') !== -1);
+        b.hidden = !ok; if (ok) n++;
+      });
+      secs.forEach(function (s) { s.hidden = !$('.aw__a:not([hidden])', s); });
+      countEl.textContent = fmtN(n) + ' ' + (n === 1 ? tr('author', 'auteur') : tr('authors', 'auteurs'));
+    };
+    var choose = function (chip) {
+      pick = chip.getAttribute('data-list');
+      chips.forEach(function (c) { c.setAttribute('aria-pressed', String(c === chip)); });
+      var id = chip.getAttribute('data-id');
+      try { history.replaceState(null, '', id ? '?list=' + encodeURIComponent(id) : location.pathname); } catch (e) { /* file:// */ }
+      filter();
+    };
+    chips.forEach(function (c) { c.addEventListener('click', function () { choose(c); }); });
+    q.addEventListener('input', filter);
+    var want = new URLSearchParams(location.search).get('list');
+    var preset = want && chips.filter(function (c) { return c.getAttribute('data-id') === want; })[0];
+    if (preset) choose(preset); else filter();
+
+    var renderDlg = function () {
+      if (openIdx < 0 || !authors) return;
+      var a = authors.a[openIdx];
+      $('[data-aw-t]', dlg).textContent = a[0];
+      var html = '<p>' + fmtN(a[1].length) + ' ' + (a[1].length === 1 ? tr('mod page on Nexus Mods', 'page de mod sur Nexus Mods') : tr('mod pages on Nexus Mods', 'pages de mods sur Nexus Mods')) + '</p>';
+      authors.l.forEach(function (title, li) {
+        var mods = a[1].filter(function (m) { return m[2].indexOf(li) !== -1; });
+        if (!mods.length) return;
+        html += '<p class="aw-dlg__list">' + escH(title) + '</p><ul>' + mods.map(function (m) {
+          return '<li><a href="' + nexusUrl(m[1]) + '" target="_blank" rel="noopener">' + escH(m[0]) + '</a></li>';
+        }).join('') + '</ul>';
+      });
+      $('[data-aw-body]', dlg).innerHTML = html;
+    };
+    var openDlg = function (idx, name) {
+      openIdx = idx;
+      $('[data-aw-t]', dlg).textContent = name;
+      $('[data-aw-body]', dlg).innerHTML = '<p>' + tr('Loading…', 'Chargement…') + '</p>';
+      if (dlg.showModal) { if (!dlg.open) dlg.showModal(); } else dlg.setAttribute('open', '');
+      if (!loadingA) loadingA = getJson('/assets/data/authors.json');
+      loadingA.then(function (d) { authors = d; renderDlg(); }).catch(function () {
+        loadingA = null;
+        $('[data-aw-body]', dlg).innerHTML = '<p>' + tr('The list could not be loaded. Try again in a moment.', 'La liste n’a pas pu être chargée. Réessayez dans un instant.') + '</p>';
+      });
+    };
+    var closeDlg = function () { openIdx = -1; if (dlg.close) dlg.close(); else dlg.removeAttribute('open'); };
+    aw.addEventListener('click', function (e) {
+      var b = e.target.closest('.aw__a');
+      if (b) { openDlg(+b.getAttribute('data-a'), $('.aw__name', b).textContent); return; }
+      if (e.target.closest('[data-aw-close]') || e.target === dlg) closeDlg();
+    });
+    dlg.addEventListener('close', function () { openIdx = -1; });
+    refreshers.push(filter, renderDlg);
+  }
+  /* ---------- Guided troubleshooting (scripts/troubleshoot.mjs renders every node; this shows one at a time) ---------- */
+  $$('[data-ts]').forEach(function (ts) {
+    var path = $('[data-ts-path]', ts), back = $('[data-ts-back]', ts), restart = $('[data-ts-restart]', ts);
+    var hist = []; // [{node, label}]
+    var show = function (id, focus) {
+      $$('.ts__node', ts).forEach(function (n) { n.hidden = n.getAttribute('data-node') !== id; });
+      path.innerHTML = hist.map(function (h) { return '<li>' + h.label + '</li>'; }).join('');
+      back.hidden = !hist.length; restart.hidden = !hist.length;
+      var cur = $('.ts__node[data-node="' + id + '"]', ts);
+      if (focus && cur) {
+        var target = $('.ts__q, .ts__kicker', cur);
+        if (target) { target.setAttribute('tabindex', '-1'); target.focus({ preventScroll: true }); }
+        var r = ts.getBoundingClientRect();
+        if (r.top < 70 || r.top > innerHeight * 0.6) ts.scrollIntoView({ block: 'start', behavior: calm ? 'auto' : 'smooth' });
+      }
+    };
+    ts.addEventListener('click', function (e) {
+      var o = e.target.closest('[data-go]');
+      if (o) {
+        var from = o.closest('.ts__node').getAttribute('data-node');
+        hist.push({ node: from, label: o.innerHTML });
+        show(o.getAttribute('data-go'), true);
+        return;
+      }
+      if (e.target.closest('[data-ts-back]') && hist.length) { show(hist.pop().node, true); return; }
+      if (e.target.closest('[data-ts-restart]')) { hist = []; show('start', true); }
+    });
+  });
+
+  /* ---------- Crash log reader: names in the log -> mods of the list (/assets/data/files-<id>.json) ---------- */
+  $$('[data-crash]').forEach(function (box) {
+    var id = box.getAttribute('data-crash'), game = box.getAttribute('data-game');
+    var input = $('[data-cr-in]', box), out = $('[data-cr-out]', box), fileIn = $('[data-cr-file]', box);
+    var index = null, lastText = '';
+    var load = function () {
+      if (!index) index = Promise.all([getJson('/assets/data/files-' + id + '.json'), getJson('/assets/data/contents-' + id + '.json')])
+        .then(function (r) {
+          var mods = {};
+          r[1].g.forEach(function (g) { g.s.forEach(function (s) { s.m.forEach(function (m) { mods[m[0]] = { a: m[1], u: m[2], g: g.n }; }); }); });
+          return { files: r[0], mods: mods };
+        }).catch(function (e) { index = null; throw e; });
+      return index;
+    };
+    // Game, system and logger files: never a lead by themselves
+    var BASE = /^(skyrimse\.exe|skyrim\.esm|update\.esm|dawnguard\.esm|hearthfires\.esm|dragonborn\.esm|cc[a-z]{3}sse\d{3}.*\.es[lm]|skse64_.*\.dll|skse64_loader\.exe|crashlogger\.dll|starfield\.exe|starfield\.esm|constellation\.esm|oldmars\.esm|shatteredspace\.esm|sfbgs.*\.esm|blueprintships-starfield\.esm|sfse_.*\.dll|trainwreck\.dll|cyberpunk2077\.exe|ntdll\.dll|kernel32\.dll|kernelbase\.dll|ucrtbase\.dll|msvcp\d.*\.dll|vcruntime\d.*\.dll|concrt\d+\.dll|user32\.dll|gdi32\.dll|win32u\.dll|combase\.dll|ole32\.dll|oleaut32\.dll|rpcrt4\.dll|sechost\.dll|advapi32\.dll|ws2_32\.dll|bcrypt.*\.dll|crypt.*\.dll|d3d\d+\.dll|d3dcompiler.*\.dll|dxcore\.dll|xinput.*\.dll|dinput8\.dll|winmm\.dll|shell32\.dll|shlwapi\.dll|cfgmgr32\.dll|setupapi\.dll|wintrust\.dll|imm32\.dll|version\.dll|uxtheme\.dll|dwmapi\.dll|powrprof\.dll|dbghelp\.dll|nvapi64\.dll|steam_api64\.dll|gameoverlayrenderer64\.dll|xaudio2_\d\.dll|mf.*\.dll|winhttp\.dll|iphlpapi\.dll|nsi\.dll|msvcrt\.dll|apphelp\.dll|clbcatq\.dll|wldp\.dll|amsi\.dll|dbgcore\.dll|textinputframework\.dll|coremessaging\.dll|coreuicomponents\.dll|wininet\.dll|hid\.dll|devobj\.dll|bink.*\.dll|ffx_.*\.dll|amd_.*\.dll|nvngx.*\.dll|sl\.\w+\.dll|libxess.*\.dll)$/i;
+    var GPU = /^(nvwgf2umx|nvwgf2um|nvoglv64|nvgpucomp64|nvldumdx|amdxx64|atidxx64|amdxc64|amdihk64|igd10iumd64|igdumdim64|igc64|igdgmm64)\.dll$/i;
+    var WEIGHT = { 'PROBABLE CALL STACK': 5, 'POSSIBLE RELEVANT OBJECTS': 4, 'REGISTERS': 3, 'STACK': 1, HEAD: 4 };
+    var LIST_SECTIONS = /^(MODULES|SKSE PLUGINS|PLUGINS|SCRIPT EXTENDER PLUGINS|SFSE PLUGINS|GAME PLUGINS|SYSTEM SPECS|SETTINGS)$/;
+    var LABEL = {
+      'PROBABLE CALL STACK': ['call stack', 'pile d’appels'], 'POSSIBLE RELEVANT OBJECTS': ['relevant objects', 'objets concernés'],
+      REGISTERS: ['registers', 'registres'], STACK: ['stack', 'pile'], HEAD: ['error line', 'ligne d’erreur'], LOG: ['error or warning lines', 'lignes d’erreur ou d’avertissement']
+    };
+
+    function analyse(text, idx) {
+      var lines = text.split(/\r?\n/), sec = 'HEAD', frame = 0;
+      var structured = /^\s*PROBABLE CALL STACK:?\s*$/m.test(text);
+      var ERR = /\b(error|errors|warn|warning|fail|failed|fatal|exception|crash|could not|unable)\b|\[(E|W|ERR|WARN)\]/i;
+      var hits = {}, head = [], gpu = false, pageFile = null, ram = null, exception = '';
+      var add = function (key, where, w) {
+        var k = key.toLowerCase().replace(/^.*[\\/]/, '');
+        if (GPU.test(k)) { if (where === 'PROBABLE CALL STACK' || where === 'HEAD') gpu = true; return; }
+        // A proxy DLL such as dxgi.dll can be a mod (ReShade, ENB): only skip system names the list does not ship
+        if (!idx.files[k] && (BASE.test(k) || /^(dxgi|d3d11|d3d12|dinput8|version|winmm)\.dll$/.test(k))) return;
+        var h = hits[k] || (hits[k] = { name: key.replace(/^.*[\\/]/, ''), score: 0, where: {} });
+        h.score += w; h.where[where] = (h.where[where] || 0) + 1;
+      };
+      lines.forEach(function (line) {
+        var m = structured && /^\s*([A-Z][A-Z0-9 _\-\/]+?)(?:\s*\(\d+\))?:\s*$/.exec(line);
+        if (m) { sec = m[1].trim(); frame = 0; return; }
+        if (structured && sec === 'HEAD' && head.length < 4 && line.trim()) head.push(line.trim());
+        if (/Unhandled exception/i.test(line) && !exception) exception = line.trim();
+        if (sec === 'SYSTEM SPECS') {
+          var pf = /PAGE FILE:\s*([\d.]+)\s*GiB\s*\/\s*([\d.]+)\s*GiB/i.exec(line); if (pf) pageFile = [+pf[1], +pf[2]];
+          var rm = /RAM:\s*([\d.]+)\s*GiB\s*\/\s*([\d.]+)\s*GiB/i.exec(line); if (rm) ram = [+rm[1], +rm[2]];
+        }
+        if (LIST_SECTIONS.test(sec)) return;
+        // Crash logger logs: weight by section. Other logs (RED4ext, redscript, CET) also list every file they
+        // load, so only their error and warning lines count.
+        var where = structured ? (WEIGHT[sec] != null ? sec : null) : (ERR.test(line) ? 'LOG' : null);
+        if (!where) return;
+        var w = WEIGHT[where] || 3;
+        if (where === 'PROBABLE CALL STACK' && /^\s*\[\s*\d+\s*\]/.test(line)) { frame++; if (frame <= 3) w = 8; }
+        // quoted plugin names, names after a path separator (they may hold spaces), bare names, CET mod folders
+        var re = /"([^"\r\n]+?\.(?:esp|esm|esl))"|[\\\/]([^\\\/\r\n:"<>|]+?\.(?:dll|asi|esp|esm|esl|archive|reds|xl))\b|([A-Za-z0-9_\-+.]+\.(?:dll|asi|esp|esm|esl|archive|reds|xl))\b|cyber_engine_tweaks[\\\/]mods[\\\/]([^\\\/\r\n]+)[\\\/]/gi, t;
+        while ((t = re.exec(line))) add(t[1] || t[2] || t[3] || t[4], where, w);
+      });
+      var mods = {}, loose = [];
+      Object.keys(hits).forEach(function (k) {
+        var h = hits[k], folder = idx.files[k];
+        if (!folder) { loose.push(h); return; }
+        var mo = mods[folder] || (mods[folder] = { folder: folder, score: 0, files: [], where: {} });
+        mo.score += h.score; mo.files.push(h.name);
+        Object.keys(h.where).forEach(function (s) { mo.where[s] = (mo.where[s] || 0) + h.where[s]; });
+      });
+      var list = Object.keys(mods).map(function (k) { return mods[k]; }).sort(function (a, b) { return b.score - a.score; });
+      loose.sort(function (a, b) { return b.score - a.score; });
+      return { structured: structured, head: head, exception: exception, gpu: gpu, pageFile: pageFile, ram: ram, mods: list.slice(0, 10), loose: loose.slice(0, 6), total: list.length };
+    }
+
+    function render(r, idx) {
+      var fr = lang() === 'fr', h = '';
+      if (!r.structured && !r.mods.length && !r.loose.length) {
+        out.innerHTML = '<p class="cr__none">' + tr('No crash log section found, and no error or warning line names a file of the list. For a crash log, paste the whole file from the first line.',
+          'Aucune section de journal de crash, et aucune ligne d’erreur ou d’avertissement ne cite un fichier de la liste. Pour un journal de crash, collez le fichier entier depuis la première ligne.') + '</p>';
+        return;
+      }
+      if (r.head.length) h += '<div class="cr__head">' + r.head.map(function (l) { return '<code>' + escH(l) + '</code>'; }).join('') + (r.exception && r.head.indexOf(r.exception) === -1 ? '<code>' + escH(r.exception) + '</code>' : '') + '</div>';
+      var hints = [];
+      if (r.gpu) hints.push(tr('The graphics driver is in the call stack: update it with a clean install, and remove any overclock while you test.',
+        'Le pilote graphique est dans la pile d’appels : mettez-le à jour en installation propre, et retirez tout overclocking pendant vos tests.'));
+      if (r.pageFile && r.pageFile[1] && r.pageFile[0] / r.pageFile[1] > 0.9) hints.push(tr('The page file was ' + Math.round(r.pageFile[0] / r.pageFile[1] * 100) + '% full: set it as the system requirements page says.',
+        'Le fichier d’échange était plein à ' + Math.round(r.pageFile[0] / r.pageFile[1] * 100) + ' % : réglez-le comme l’indique la configuration requise.'));
+      if (r.ram && r.ram[1] && r.ram[0] / r.ram[1] > 0.92) hints.push(tr('RAM was almost full when the game crashed.', 'La RAM était presque pleine au moment du plantage.'));
+      if (r.structured && !r.mods.length) hints.push(tr('No mod of the list is named in the parts that matter. Such crashes often come from memory, the graphics driver or a broken save: check the page file and the driver, then ask on Discord with the log.',
+        'Aucun mod de la liste n’est cité dans les parties utiles. Ces plantages viennent souvent de la mémoire, du pilote graphique ou d’une sauvegarde abîmée : vérifiez le fichier d’échange et le pilote, puis demandez sur Discord avec le journal.'));
+      if (hints.length) h += '<ul class="cr__hints">' + hints.map(function (x) { return '<li>' + x + '</li>'; }).join('') + '</ul>';
+      if (r.mods.length) {
+        var max = r.mods[0].score;
+        h += '<h3 class="cr__h">' + tr('Mods of the list named in the log', 'Mods de la liste cités dans le journal') + '</h3><ol class="cr__mods">' + r.mods.map(function (m) {
+          var info = idx.mods[m.folder] || {};
+          var name = info.u ? '<a href="' + nexusUrl(info.u) + '" target="_blank" rel="noopener">' + escH(m.folder) + '</a>' : escH(m.folder);
+          var where = Object.keys(m.where).map(function (s) { var l = LABEL[s] || [s, s]; return (fr ? l[1] : l[0]) + ' ×' + m.where[s]; }).join(', ');
+          return '<li><span class="cr__score" aria-hidden="true"><i style="width:' + Math.max(6, Math.round(m.score / max * 100)) + '%"></i></span>' +
+            '<span class="cr__name">' + name + '</span><span class="cr__meta">' + escH(m.files.slice(0, 4).join(', ')) + (m.files.length > 4 ? '…' : '') +
+            (info.g ? ' · ' + escH(info.g) : '') + (info.a ? ' · ' + escH(info.a) : '') + '</span><span class="cr__where">' + where + '</span></li>';
+        }).join('') + '</ol>';
+      }
+      if (r.loose.length) h += '<p class="cr__loose">' + tr('Named in the log but not part of the list (a mod you added, or a program running next to the game): ', 'Cités dans le journal mais absents de la liste (un mod ajouté par vous, ou un programme qui tourne à côté du jeu) : ') +
+        r.loose.map(function (x) { return '<code>' + escH(x.name) + '</code>'; }).join(', ') + '</p>';
+      h += '<p class="cr__note">' + tr('A lead, not a verdict: the first mod here is often the one that crashed, not always the one at fault. Share the log file on Discord with the list version if you need help.',
+        'Une piste, pas un verdict : le premier mod ici est souvent celui qui a planté, pas toujours le fautif. Partagez le fichier du journal sur Discord avec la version de la liste si vous avez besoin d’aide.') + '</p>';
+      out.innerHTML = h;
+    }
+
+    var run = function () {
+      var text = input.value;
+      if (!text.trim()) { out.innerHTML = '<p class="cr__none">' + tr('Paste a log or open a file first.', 'Collez un journal ou ouvrez un fichier d’abord.') + '</p>'; return; }
+      lastText = text;
+      out.innerHTML = '<p class="cr__none">' + tr('Reading…', 'Lecture…') + '</p>';
+      load().then(function (idx) { render(analyse(text, idx), idx); }).catch(function () {
+        out.innerHTML = '<p class="cr__none">' + tr('The list data could not be loaded. Try again in a moment.', 'Les données de la liste n’ont pas pu être chargées. Réessayez dans un instant.') + '</p>';
+      });
+    };
+    $('[data-cr-go]', box).addEventListener('click', run);
+    fileIn.addEventListener('change', function () {
+      var f = fileIn.files && fileIn.files[0];
+      if (!f) return;
+      if (f.size > 8e6) { out.innerHTML = '<p class="cr__none">' + tr('This file is too large to be a crash log.', 'Ce fichier est trop gros pour être un journal de crash.') + '</p>'; return; }
+      f.text().then(function (t) { input.value = t; run(); });
+    });
+    box.addEventListener('dragover', function (e) { e.preventDefault(); box.classList.add('is-drop'); });
+    box.addEventListener('dragleave', function () { box.classList.remove('is-drop'); });
+    box.addEventListener('drop', function (e) {
+      e.preventDefault(); box.classList.remove('is-drop');
+      var f = e.dataTransfer.files && e.dataTransfer.files[0];
+      if (f && f.size <= 8e6) f.text().then(function (t) { input.value = t; run(); });
+    });
+    refreshers.push(function () { if (lastText && index) index.then(function (idx) { render(analyse(lastText, idx), idx); }); });
+  });
 })();

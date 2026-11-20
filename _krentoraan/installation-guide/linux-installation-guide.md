@@ -8,81 +8,83 @@ reading_mode_default: true
 
 <div lang="en" markdown="1">
 
-# Krentoraan on Linux: A User's Guide 🐧
+# Krentoraan on Linux
 
-Krentoraan is not officially supported on Linux by the modlist's creator, Alaxouche. However, with a few extra steps, the Wabbajack installation can be adapted to work successfully. This guide assumes you have a basic understanding of Linux and Mod Organizer 2 (MO2).
+Krentoraan is not officially supported on Linux by the modlist's creator, Alaxouche. Players have installed Alaxouche's lists on Linux with community tools. This guide assumes you have a basic understanding of Linux and Mod Organizer 2 (MO2). Read the Windows pages of this guide too: the game requirements (Steam, Anniversary Edition upgrade, English game, game files of version 1.6.1170) are the same.
 
-### 1. The Omni-Guide's Installation Process
+### 1. Install the list
 
-The process involves two main steps: first, installing Wabbajack via Proton, and then using the Omni-guide's automation script to install the modpack itself.
+The Omni-Guides "Wabbajack via Proton" guide and the `omni-guides.sh` script that older versions of this page linked to are marked as superseded. Their author replaced them with **Jackify**, a Linux application that installs and configures Wabbajack modlists on Linux and Steam Deck.
 
-*   **Install Wabbajack:** Follow the instructions in the [Wabbajack via Proton Guide](https://github.com/Omni-guides/Wabbajack-Modlist-Linux/wiki/Wabbajack-via-Proton).
-*   **Install the Modpack:** Once Wabbajack is installed, use the [omni-guides.sh automation script](https://github.com/Omni-guides/Wabbajack-Modlist-Linux/wiki/Using-the-omni%E2%80%90guides.sh-Automation-Script) to install the modpack.
+*   **Read the guide:** [Installing a Modlist with Jackify](https://github.com/Omni-guides/Jackify/wiki/Installing-a-Modlist-with-Jackify). Jackify is downloaded from [Nexus Mods](https://www.nexusmods.com/site/mods/1427) and is still alpha software.
+*   **Before you start:** Jackify needs Steam (not the Snap version), Protontricks and a Nexus Mods account (Premium for fully automatic downloads). Its guide recommends GE-Proton 10-14, the highest version it advises for ENB lists.
+*   **Install:** in Jackify, choose **Modlist Tasks**, then **Install a Modlist (Automated)**, select Skyrim Special Edition, log in to Nexus, pick **Krentoraan**, set the install and download folders (avoid spaces in the paths), then **Start Installation**.
+*   Jackify creates a Steam shortcut for the list. Launch it from your Steam library: it opens Mod Organizer 2.
+
+{: .note }
+Wabbajack itself added a Linux beta in version 4.3.2.0 (October 2026). It is a first beta. This guide has not been tested with it.
 
 > **Note:** When you launch Mod Organizer 2 for the first time, an error from the **Frame Gen Compatibility Checker** may appear. This is expected on Linux. Simply click **OK** to dismiss the message and continue.
 
-### 2. Configure Mod Organizer 2
+### 2. Start the game
 
-*   In MO2, locate the executable dropdown menu (top right corner).
-*   Change the selected launcher to **Krentoraan Legacy**.
+*   In MO2, check that a Krentoraan profile is selected.
+*   In the executable drop-down (next to **Run**), select **Krentoraan Launcher**, then click **Run**.
+*   Do not click **Unlock** in MO2 while the game runs.
 
 ### 3. Handling Frame Generation
 
-The **Frame Gen Compatibility Checker** will give an error on Linux. Click **OK** whenever it appears. To enable frame generation at your own risk, enable the **(ENB) ENB Frame Gen** mod under section **16.1 ENBSERIES - Core Files** in MO2.
+The **Frame Gen Compatibility Checker** will give an error on Linux. Click **OK** whenever it appears. Frame generation comes from the mod **(ENB) ENB Frame Generation**, in separator **16.2 ENBSERIES - CORE FILES**. It is enabled in the Standard and Ultra profiles and disabled in the Performance profile. Using it on Linux is at your own risk.
 
 ### 4. Troubleshooting
 
 #### Game Closes Immediately After Launch
 
-*   In MO2, open the executable dropdown and select **Edit**.
-*   Click **+** → **Add from file...**
-*   Navigate to your modpack's `Game Root` folder, select `SkyrimSELauncher.exe`, click **Open** → **OK**.
-*   Select the newly added **SkyrimSELauncher** and click **Run**.
+*   In MO2, select the **Skyrim Special Edition Launcher** executable (it is already in the list and points to `Game Root\SkyrimSELauncher.exe`) and click **Run**.
 *   The vanilla launcher will open and select a graphics preset. Close it.
-*   Change the MO2 executable back to **Krentoraan Legacy**.
+*   Change the MO2 executable back to **Krentoraan Launcher**.
 
-### 5. Enjoy Krentoraan on Linux! 🎉
-
-You should now be able to launch Krentoraan on Linux. For further issues, refer to the **Wabbajack Discord server in the #unofficial-linux-help channel**.
+For further issues, use the [Jackify wiki](https://github.com/Omni-guides/Jackify/wiki) or ask on Alaxouche's Discord server.
 
 </div>
 <div lang="fr" markdown="1">
 
-# Krentoraan sur Linux : Guide Utilisateur 🐧
+# Krentoraan sur Linux
 
-Krentoraan n'est pas officiellement supporté sur Linux par le créateur de la modlist, Alaxouche. Cependant, avec quelques étapes supplémentaires, l'installation Wabbajack peut être adaptée pour fonctionner avec succès. Ce guide suppose que vous avez une compréhension basique de Linux et de Mod Organizer 2 (MO2).
+Krentoraan n'est pas officiellement pris en charge sur Linux par le créateur de la modlist, Alaxouche. Des joueurs ont installé les listes d'Alaxouche sur Linux avec des outils de la communauté. Ce guide suppose que vous avez des bases sur Linux et sur Mod Organizer 2 (MO2). Lisez aussi les pages Windows de ce guide : les exigences sur le jeu (Steam, mise à niveau Anniversary Edition, jeu en anglais, fichiers du jeu en version 1.6.1170) sont les mêmes.
 
-### 1. Processus d'Installation du Guide Omni
+### 1. Installer la liste
 
-Le processus implique deux étapes principales : d'abord installer Wabbajack via Proton, puis utiliser le script d'automatisation du guide Omni.
+Le guide Omni-Guides « Wabbajack via Proton » et le script `omni-guides.sh`, cités par les anciennes versions de cette page, sont marqués comme remplacés. Leur auteur les a remplacés par **Jackify**, une application Linux qui installe et configure les modlists Wabbajack sur Linux et Steam Deck.
 
-*   **Installer Wabbajack :** Suivez les instructions du [Guide Wabbajack via Proton](https://github.com/Omni-guides/Wabbajack-Modlist-Linux/wiki/Wabbajack-via-Proton).
-*   **Installer la Modpack :** Une fois Wabbajack installé, utilisez le [script d'automatisation omni-guides.sh](https://github.com/Omni-guides/Wabbajack-Modlist-Linux/wiki/Using-the-omni%E2%80%90guides.sh-Automation-Script).
+*   **Lisez le guide :** [Installing a Modlist with Jackify](https://github.com/Omni-guides/Jackify/wiki/Installing-a-Modlist-with-Jackify) (en anglais). Jackify se télécharge sur [Nexus Mods](https://www.nexusmods.com/site/mods/1427) et reste un logiciel en version alpha.
+*   **Avant de commencer :** Jackify a besoin de Steam (pas de la version Snap), de Protontricks et d'un compte Nexus Mods (Premium pour des téléchargements entièrement automatiques). Son guide recommande GE-Proton 10-14, la version la plus haute qu'il conseille pour les listes ENB.
+*   **Installation :** dans Jackify, choisissez **Modlist Tasks**, puis **Install a Modlist (Automated)**, sélectionnez Skyrim Special Edition, connectez-vous à Nexus, choisissez **Krentoraan**, indiquez les dossiers d'installation et de téléchargement (évitez les espaces dans les chemins), puis **Start Installation**.
+*   Jackify crée un raccourci Steam pour la liste. Lancez-le depuis votre bibliothèque Steam : il ouvre Mod Organizer 2.
+
+{: .note }
+Wabbajack lui-même propose une bêta Linux depuis la version 4.3.2.0 (octobre 2026). C'est une première bêta. Ce guide n'a pas été testé avec elle.
 
 > **Note :** Lors du premier lancement de MO2, une erreur du **Frame Gen Compatibility Checker** peut apparaître. C'est attendu sur Linux. Cliquez simplement sur **OK** pour continuer.
 
-### 2. Configurer Mod Organizer 2
+### 2. Lancer le jeu
 
-*   Dans MO2, trouvez le menu déroulant des exécutables (coin supérieur droit).
-*   Changez le lanceur sélectionné pour **Krentoraan Legacy**.
+*   Dans MO2, vérifiez qu'un profil Krentoraan est sélectionné.
+*   Dans la liste déroulante des exécutables (à côté de **Run**), choisissez **Krentoraan Launcher**, puis cliquez sur **Run**.
+*   Ne cliquez pas sur **Unlock** dans MO2 pendant que le jeu tourne.
 
-### 3. Gestion de la Génération de Frames
+### 3. Gestion de la Génération d'Images
 
-Le **Frame Gen Compatibility Checker** donnera une erreur sur Linux. Cliquez sur **OK** à chaque fois. Pour activer la génération de frames à vos risques, activez le mod **(ENB) ENB Frame Gen** dans la section **16.1 ENBSERIES - Core Files** de MO2.
+Le **Frame Gen Compatibility Checker** donnera une erreur sur Linux. Cliquez sur **OK** à chaque fois. La génération d'images vient du mod **(ENB) ENB Frame Generation**, dans le séparateur **16.2 ENBSERIES - CORE FILES**. Il est activé dans les profils Standard et Ultra et désactivé dans le profil Performance. L'utiliser sur Linux se fait à vos risques.
 
 ### 4. Dépannage
 
 #### Le Jeu Se Ferme Immédiatement Après le Lancement
 
-*   Dans MO2, ouvrez le menu déroulant des exécutables → **Modifier**.
-*   Cliquez sur **+** → **Ajouter depuis un fichier...**
-*   Naviguez vers le dossier `Game Root` de votre modpack, sélectionnez `SkyrimSELauncher.exe`, cliquez sur **Ouvrir** → **OK**.
-*   Sélectionnez le nouveau **SkyrimSELauncher** et cliquez sur **Exécuter**.
-*   Le lanceur vanilla s'ouvre et sélectionne un preset graphique. Fermez-le.
-*   Remettez l'exécutable MO2 sur **Krentoraan Legacy**.
+*   Dans MO2, choisissez l'exécutable **Skyrim Special Edition Launcher** (il est déjà dans la liste et pointe vers `Game Root\SkyrimSELauncher.exe`) et cliquez sur **Run**.
+*   Le lanceur vanilla s'ouvre et choisit un préréglage graphique. Fermez-le.
+*   Remettez l'exécutable MO2 sur **Krentoraan Launcher**.
 
-### 5. Profitez de Krentoraan sur Linux ! 🎉
-
-Vous devriez maintenant pouvoir lancer Krentoraan sur Linux. Pour tout problème supplémentaire, consultez le **serveur Discord Wabbajack dans le canal #unofficial-linux-help**.
+Pour d'autres problèmes, consultez le [wiki de Jackify](https://github.com/Omni-guides/Jackify/wiki) ou demandez sur le serveur Discord d'Alaxouche.
 
 </div>

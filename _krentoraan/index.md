@@ -15,7 +15,7 @@ project_banner:
   subtitle_fr: "Une liste Skyrim SE soignée, axée sur des visuels épurés et un gameplay équilibré."
   stats:
     - label: Mods
-      value: "900+"
+      value: "1300+"
     - label: Size
       value: "75 GB"
     - label: Version

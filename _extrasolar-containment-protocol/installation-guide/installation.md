@@ -23,7 +23,7 @@ There is no workaround for a pirated copy of Starfield. If you ask for support w
 In the Windows API (with some exceptions), the maximum length for a file path is 260 characters. Keep your installation paths short to avoid issues.
 
 {: .note }
-The list cannot be installed in the same folder that Wabbajack is in. They must be completely separated.
+The list cannot be installed in the same folder that Wabbajack is in, nor in the Starfield game folder. They must be completely separated.
 
 Here is an example of a well-configured installation folder:
 - `C:\Games\ExtrasolarContainmentProtocol\`
@@ -36,9 +36,11 @@ For the Wabbajack installation to proceed without problems, you must connect or 
 
 ## Preparing Starfield
 
-1. Open Steam and ensure Starfield is installed and up to date.
-2. Launch the game at least once through Steam to generate the initial configuration files.
-3. Close the game completely before proceeding.
+1. In Steam, install Starfield and both expansions: **Shattered Space** and **Terran Armada**. The list requires all three.
+2. Make sure the game is on version **1.16.244**. The script extender (SFSE) and Address Library files in the list are built for this exact version.
+3. Launch the game at least once through Steam, up to the main menu. This creates the settings files in `Documents\My Games\Starfield`.
+4. Close the game completely before proceeding.
+5. In Steam, right-click Starfield → **Properties** → **Updates**, and set automatic updates to **Only update this game when I launch it**. When a new Starfield update comes out, wait for the list to be updated before you let Steam install it: a new game version stops SFSE plugins from loading until their authors update them.
 
 {: .warning }
 > Do not have any mods installed in Starfield's data folder before running Wabbajack. This can cause conflicts and installation failures.
@@ -61,7 +63,7 @@ Il n'y a pas de solution de contournement pour une copie piratée de Starfield. 
 Dans l'API Windows (avec quelques exceptions), la longueur maximale d'un chemin de fichier est de 260 caractères. Gardez vos chemins d'installation courts pour éviter les problèmes.
 
 {: .note }
-La liste ne peut pas être installée dans le même dossier que Wabbajack. Ils doivent être complètement séparés.
+La liste ne peut pas être installée dans le même dossier que Wabbajack, ni dans le dossier du jeu Starfield. Ils doivent être complètement séparés.
 
 Voici un exemple de dossier d'installation bien configuré :
 - `C:\Games\ExtrasolarContainmentProtocol\`
@@ -74,9 +76,11 @@ Pour que l'installation Wabbajack se déroule sans problème, vous devez vous co
 
 ## Préparer Starfield
 
-1. Ouvrez Steam et assurez-vous que Starfield est installé et à jour.
-2. Lancez le jeu au moins une fois via Steam pour générer les fichiers de configuration initiaux.
-3. Fermez complètement le jeu avant de continuer.
+1. Dans Steam, installez Starfield et les deux extensions : **Shattered Space** et **Terran Armada**. La liste a besoin des trois.
+2. Vérifiez que le jeu est en version **1.16.244**. Le script extender (SFSE) et l'Address Library de la liste sont faits pour cette version précise.
+3. Lancez le jeu au moins une fois via Steam, jusqu'au menu principal. Cela crée les fichiers de réglages dans `Documents\My Games\Starfield`.
+4. Fermez complètement le jeu avant de continuer.
+5. Dans Steam, clic droit sur Starfield → **Propriétés** → **Mises à jour**, et réglez les mises à jour automatiques sur l'option qui ne met le jeu à jour qu'à son lancement (**Only update this game when I launch it** dans Steam en anglais). Quand une nouvelle mise à jour de Starfield sort, attendez que la liste soit mise à jour avant de laisser Steam l'installer : une nouvelle version du jeu empêche les plugins SFSE de se charger tant que leurs auteurs ne les ont pas mis à jour.
 
 {: .warning }
 > N'ayez aucun mod installé dans le dossier data de Starfield avant de lancer Wabbajack. Cela peut causer des conflits et des échecs d'installation.

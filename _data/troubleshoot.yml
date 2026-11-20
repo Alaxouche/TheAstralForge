@@ -1,0 +1,251 @@
+# Guided troubleshooting on each list's Troubleshooting page ({{ modlist.id | troubleshooter }}, scripts/troubleshoot.mjs).
+# Every answer repeats a fix that already exists in the guides, FAQ or known issues: keep it that way.
+#
+# Node:    id: { q: {en, fr}, opts: [ {l: {en, fr}, go: node, only: [...]} ] }   a question
+#          id: { a: {en, fr}, extra: [ {only: [...], en, fr} ], links: [...] }    an answer
+# only:    list ids (wunduniik, krentoraan, ghost-of-the-grid, no-mans-sky-explorer, extrasolar-containment-protocol)
+#          or games (skyrim, cyberpunk, nms, starfield). Without it, the entry is for every list.
+# links:   {page: <page title in the list's sidebar, or "self" for this page>, h: {en, fr} heading of the section
+#          (a list of spellings is fine; {list} is replaced by the list name), label: {en, fr} (optional), only: [...]}
+#          The build drops a link whose page does not exist for that list, and the anchor when the heading is missing.
+
+start:
+  q: { en: "What is going wrong?", fr: "Qu'est-ce qui ne va pas ?" }
+  opts:
+    - { l: { en: "Wabbajack: a download fails or the install stops", fr: "Wabbajack : un téléchargement échoue ou l'installation s'arrête" }, go: wj }
+    - { l: { en: "The game does not start, or closes right away", fr: "Le jeu ne se lance pas, ou se ferme aussitôt" }, go: launch }
+    - { l: { en: "The game crashes while I play or load", fr: "Le jeu plante pendant que je joue ou charge" }, go: crash }
+    - { l: { en: "It runs, but slowly or with stutter", fr: "Il tourne, mais lentement ou par saccades" }, go: a_perf }
+    - { l: { en: "The game looks vanilla, mods do not seem to load", fr: "Le jeu a l'air vanilla, les mods ne semblent pas chargés" }, go: a_mods }
+    - { l: { en: "A quest, a character or an object is broken", fr: "Une quête, un personnage ou un objet est cassé" }, go: a_ingame }
+    - { l: { en: "It started after I updated the list", fr: "C'est arrivé après une mise à jour de la liste" }, go: upd }
+
+wj:
+  q: { en: "What does Wabbajack report?", fr: "Que signale Wabbajack ?" }
+  opts:
+    - { l: { en: "A file failed to download", fr: "Un fichier n'a pas pu être téléchargé" }, go: a_wj_dl }
+    - { l: { en: "Game files are missing or have the wrong version", fr: "Des fichiers du jeu manquent ou n'ont pas la bonne version" }, go: a_wj_game }
+    - { l: { en: "Nothing, it seems stuck", fr: "Rien, il semble bloqué" }, go: a_wj_stuck }
+    - { l: { en: "A French translation mod fails to download", fr: "Un mod de traduction française ne se télécharge pas" }, go: a_wj_fr, only: [wunduniik] }
+
+a_wj_dl:
+  a:
+    en: "Run Wabbajack again with the same installation and downloads folders: it keeps what is already downloaded and retries the rest. If one file keeps failing, download it by hand and put it in your downloads folder, next to the other archives. Without Nexus Premium, check that Wabbajack is still logged in to Nexus Mods."
+    fr: "Relancez Wabbajack avec les mêmes dossiers d'installation et de téléchargements : il garde ce qui est déjà téléchargé et réessaie le reste. Si un fichier échoue toujours, téléchargez-le à la main et placez-le dans votre dossier de téléchargements, à côté des autres archives. Sans Nexus Premium, vérifiez que Wabbajack est toujours connecté à Nexus Mods."
+  extra:
+    - only: [ghost-of-the-grid]
+      en: "Run Wabbajack at least twice before reporting a failed download. If a mod author deleted the old file, the list needs an update: wait for it."
+      fr: "Relancez Wabbajack au moins deux fois avant de signaler un téléchargement raté. Si l'auteur d'un mod a supprimé l'ancien fichier, la liste doit être mise à jour : attendez-la."
+  links:
+    - { page: "Wabbajack Installation", h: { en: "Problems With Installation", fr: "Problèmes d'Installation" } }
+
+a_wj_game:
+  a:
+    en: "Wabbajack checks your game files before it installs anything. The game must be installed from the store, in the version the list needs, with every required DLC."
+    fr: "Wabbajack vérifie les fichiers du jeu avant d'installer quoi que ce soit. Le jeu doit être installé depuis la boutique, dans la version demandée par la liste, avec tous les DLC requis."
+  extra:
+    - only: [skyrim]
+      en: "For Skyrim: the Anniversary Edition upgrade must be installed and the game language set to English in Steam. Let Steam keep the game up to date and do not downgrade it yourself: log in to Steam inside Wabbajack when it offers it, and it fetches the files of the version the list runs on."
+      fr: "Pour Skyrim : la mise à niveau Anniversary Edition doit être installée et la langue du jeu réglée sur anglais dans Steam. Laissez Steam tenir le jeu à jour et ne le rétrogradez pas vous-même : connectez-vous à Steam dans Wabbajack quand il le propose, et il récupère les fichiers de la version utilisée par la liste."
+    - only: [cyberpunk]
+      en: "For Cyberpunk 2077: Phantom Liberty must be installed, and the game must be on the patch your list version needs. Turn off automatic updates so the store does not move it."
+      fr: "Pour Cyberpunk 2077 : Phantom Liberty doit être installé, et le jeu doit être sur le patch demandé par votre version de la liste. Désactivez les mises à jour automatiques pour que la boutique ne le change pas."
+    - only: [nms]
+      en: "For No Man's Sky: update the game to the version the list needs, launch it once from Steam or GOG, and empty the GAMEDATA\\MODS folder of any mod you installed by hand."
+      fr: "Pour No Man's Sky : mettez le jeu à jour vers la version demandée par la liste, lancez-le une fois depuis Steam ou GOG, et videz le dossier GAMEDATA\\MODS de tout mod installé à la main."
+    - only: [starfield]
+      en: "For Starfield: install the game and both expansions, Shattered Space and Terran Armada, on the version the list needs, and launch it once from Steam up to the main menu."
+      fr: "Pour Starfield : installez le jeu et ses deux extensions, Shattered Space et Terran Armada, dans la version demandée par la liste, et lancez-le une fois depuis Steam jusqu'au menu principal."
+  links:
+    - { page: "System Requirements" }
+    - { page: "Installation", h: { en: ["Necessary Tweaks", "Game Version and Updates"], fr: ["Modifications Nécessaires", "Version du Jeu et Mises à Jour"] } }
+    - { page: "Installation", h: { en: "Preparing Starfield", fr: "Préparer Starfield" }, only: [starfield] }
+    - { page: "Wabbajack Installation", h: { en: "Problems With Installation", fr: "Problèmes d'Installation" }, only: [skyrim] }
+
+a_wj_stuck:
+  a:
+    en: "Large lists spend a long time on steps that show little progress, such as hashing, extracting and building archives: give it time. If nothing moves at all, close Wabbajack and start it again with the same folders. It picks up where it stopped."
+    fr: "Les grosses listes passent beaucoup de temps sur des étapes qui avancent peu à l'écran, comme le calcul des empreintes, l'extraction ou la construction des archives : laissez-lui du temps. Si plus rien ne bouge, fermez Wabbajack et relancez-le avec les mêmes dossiers. Il reprend là où il s'était arrêté."
+  links:
+    - { page: "Wabbajack Installation", h: { en: "Problems With Installation", fr: "Problèmes d'Installation" } }
+
+a_wj_fr:
+  a:
+    en: "Some file names use characters such as ç and ä that fail to download on some Windows settings. Set your PC region to English (United States), untick \"Use Unicode UTF-8\", restart the download, then put your settings back."
+    fr: "Certains noms de fichiers contiennent des caractères comme ç ou ä qui échouent avec certains réglages de Windows. Réglez la région du PC sur anglais (États-Unis), décochez « Utiliser Unicode UTF-8 », relancez le téléchargement, puis remettez vos réglages."
+  links:
+    - { page: "Wabbajack Installation", h: { en: "Problems With Installation", fr: "Problèmes d'Installation" } }
+
+launch:
+  q: { en: "How do you start the game?", fr: "Comment lancez-vous le jeu ?" }
+  opts:
+    - { l: { en: "From Steam, GOG or the game's launcher", fr: "Depuis Steam, GOG ou le lanceur du jeu" }, go: a_launch_store }
+    - { l: { en: "From Mod Organizer 2, with the list's executable", fr: "Depuis Mod Organizer 2, avec l'exécutable de la liste" }, go: launch2 }
+
+a_launch_store:
+  a:
+    en: "The mods only exist inside Mod Organizer 2. Open ModOrganizer.exe in the list folder, check the profile at the top left, pick the list's executable in the drop-down at the top right and press Run. Started from the store, the game runs without the list."
+    fr: "Les mods n'existent que dans Mod Organizer 2. Ouvrez ModOrganizer.exe dans le dossier de la liste, vérifiez le profil en haut à gauche, choisissez l'exécutable de la liste dans le menu en haut à droite et cliquez sur Run. Lancé depuis la boutique, le jeu démarre sans la liste."
+  links:
+    - { page: "Using The List", h: { en: "Starting The List", fr: "Démarrer la Liste" } }
+
+launch2:
+  q: { en: "What happens?", fr: "Que se passe-t-il ?" }
+  opts:
+    - { l: { en: "An error names a missing DLL or a file it cannot find", fr: "Une erreur cite une DLL manquante ou un fichier introuvable" }, go: a_launch_dll }
+    - { l: { en: "Nothing, or the game closes after a few seconds", fr: "Rien, ou le jeu se ferme au bout de quelques secondes" }, go: a_launch_quiet }
+    - { l: { en: "Mod Organizer shows a window with an Unlock button", fr: "Mod Organizer affiche une fenêtre avec un bouton Unlock" }, go: a_unlock }
+
+a_launch_dll:
+  a:
+    en: "An antivirus probably blocked or removed a file, or a runtime the list needs is missing. Add the list folder and the downloads folder to your antivirus exclusions, restore what it quarantined, and install the applications listed on the system requirements page. Then run Wabbajack again on the same folders: it puts back any missing file."
+    fr: "Un antivirus a probablement bloqué ou supprimé un fichier, ou un composant nécessaire à la liste manque. Ajoutez le dossier de la liste et celui des téléchargements aux exclusions de l'antivirus, restaurez ce qu'il a mis en quarantaine, et installez les applications listées dans la configuration requise. Relancez ensuite Wabbajack sur les mêmes dossiers : il remet les fichiers manquants."
+  links:
+    - { page: "System Requirements", h: { en: "Exclusions and AntiVirus", fr: "Exclusions et Antivirus" } }
+    - { page: "System Requirements", h: { en: "Necessary And Useful Applications", fr: "Applications Nécessaires et Utiles" } }
+    - { page: "Post Installation", h: { en: "Antivirus Exclusions", fr: "Exclusions Antivirus" }, only: [starfield] }
+
+a_launch_quiet:
+  a:
+    en: "Check the antivirus exclusions first, then the game version: script extenders and many mods stop working when the game updates."
+    fr: "Vérifiez d'abord les exclusions de l'antivirus, puis la version du jeu : les extenseurs de script et beaucoup de mods cessent de fonctionner quand le jeu se met à jour."
+  extra:
+    - only: [skyrim]
+      en: "The list runs its own copy of Skyrim from its Game Root folder, so a Steam update does not affect it. Do not move or edit that folder."
+      fr: "La liste lance sa propre copie de Skyrim depuis son dossier Game Root, donc une mise à jour de Steam ne la touche pas. Ne déplacez pas ce dossier et n'y touchez pas."
+    - only: [cyberpunk]
+      en: "Cyberpunk 2077 must stay on the patch your list version needs, with Phantom Liberty installed. If the store updated the game, wait for the list update that supports the new patch."
+      fr: "Cyberpunk 2077 doit rester sur le patch demandé par votre version de la liste, avec Phantom Liberty installé. Si la boutique a mis le jeu à jour, attendez la mise à jour de la liste qui prend en charge le nouveau patch."
+    - only: [nms]
+      en: "Hello Games patches No Man's Sky often, and a patch can stop mods from working until the list is updated."
+      fr: "Hello Games met souvent No Man's Sky à jour, et un patch peut empêcher les mods de fonctionner jusqu'à la mise à jour de la liste."
+    - only: [starfield]
+      en: "Starfield must stay on the version the list needs: the script extender (SFSE) is built for that exact version."
+      fr: "Starfield doit rester dans la version demandée par la liste : l'extenseur de script (SFSE) est conçu pour cette version précise."
+  links:
+    - { page: "System Requirements", h: { en: "Exclusions and AntiVirus", fr: "Exclusions et Antivirus" } }
+    - { page: "System Requirements" , label: { en: "Required game version", fr: "Version du jeu requise" } }
+    - { page: "Installation", h: { en: "Game Version and Updates", fr: "Version du Jeu et Mises à Jour" }, only: [cyberpunk] }
+    - { page: "Using The List", h: { en: "When The Game Updates", fr: "Quand le Jeu se Met à Jour" }, only: [nms] }
+    - { page: "Post Installation", h: { en: "SFSE (Starfield Script Extender)", fr: "SFSE (Starfield Script Extender)" }, only: [starfield] }
+
+a_unlock:
+  a:
+    en: "Do not click Unlock. Mod Organizer locks itself while the game runs so that nothing changes under it; unlocking can break the session. Close the game normally and Mod Organizer unlocks on its own."
+    fr: "Ne cliquez pas sur Unlock. Mod Organizer se verrouille pendant que le jeu tourne pour que rien ne change sous ses pieds ; le déverrouiller peut casser la session. Fermez le jeu normalement et Mod Organizer se déverrouille tout seul."
+  links:
+    - { page: "Using The List", h: { en: "Do Not Click Unlock!", fr: "Ne Cliquez Pas sur Déverrouiller !" } }
+
+crash:
+  q: { en: "When does it crash?", fr: "Quand plante-t-il ?" }
+  opts:
+    - { l: { en: "During the intro or the first minutes of a new game", fr: "Pendant l'intro ou les premières minutes d'une nouvelle partie" }, go: a_crash_intro }
+    - { l: { en: "When loading a save or moving between areas", fr: "En chargeant une sauvegarde ou en changeant de zone" }, go: a_crash_load }
+    - { l: { en: "At random while playing", fr: "Au hasard pendant la partie" }, go: a_crash_log }
+
+a_crash_intro:
+  a:
+    en: "The scripted opening is the least stable moment with this many mods."
+    fr: "L'ouverture scriptée est le moment le moins stable avec autant de mods."
+  extra:
+    - only: [wunduniik]
+      en: "The vanilla Helgen intro is not supported: use the alternate start. To begin the main quest later, rent a room at Helgen's inn and sleep there twice."
+      fr: "L'intro vanilla d'Helgen n'est pas prise en charge : utilisez le départ alternatif. Pour lancer la quête principale plus tard, louez une chambre à l'auberge d'Helgen et dormez-y deux fois."
+    - only: [krentoraan]
+      en: "Try the intro again, or restart the game once."
+      fr: "Recommencez l'intro, ou relancez le jeu une fois."
+    - only: [cyberpunk]
+      en: "Retry the intro: once the opening sequence is over, stability improves."
+      fr: "Recommencez l'intro : une fois la séquence d'ouverture terminée, la stabilité s'améliore."
+    - only: [starfield]
+      en: "Start a new game: loading a save made without the list is not supported."
+      fr: "Commencez une nouvelle partie : charger une sauvegarde faite sans la liste n'est pas pris en charge."
+    - only: [nms]
+      en: "If it crashes every time, check the game version and read the crash section below."
+      fr: "Si le jeu plante à chaque fois, vérifiez la version du jeu et lisez la section sur les plantages ci-dessous."
+  links:
+    - { page: "Known Issues" }
+    - { page: "Using The List", h: { en: "New Game vs. Existing Save", fr: "Nouvelle Partie vs. Sauvegarde Existante" }, only: [starfield] }
+    - { page: "self", h: { en: "Crash Logs", fr: "Journaux de crash" } }
+
+a_crash_load:
+  a:
+    en: "Crashes while loading are most often a memory problem. Check that the page file is set as the system requirements page says, update your graphics driver, and install the applications the list needs. If it keeps crashing at the same place, read the crash log."
+    fr: "Les plantages au chargement viennent le plus souvent de la mémoire. Vérifiez que le fichier d'échange est réglé comme l'indique la configuration requise, mettez à jour le pilote graphique et installez les applications nécessaires à la liste. Si le jeu plante toujours au même endroit, lisez le journal de crash."
+  links:
+    - { page: "System Requirements", h: { en: "PageFile Configuration", fr: ["Configuration du Fichier d'Échange", "Configuration du Fichier d'Échange (PageFile)"] } }
+    - { page: "self", h: { en: "Read Your Crash Log", fr: "Lire votre journal de crash" } }
+    - { page: "Known Issues" }
+
+a_crash_log:
+  a:
+    en: "Random crashes need the crash log: find it with the steps below and paste it in the reader. Then share the log file on Discord with the list version and what you were doing."
+    fr: "Les plantages au hasard demandent le journal de crash : trouvez-le avec les étapes ci-dessous et collez-le dans le lecteur. Partagez ensuite le fichier sur Discord avec la version de la liste et ce que vous faisiez."
+  extra:
+    - only: [nms]
+      en: "The list has no crash logger for No Man's Sky. Check the game version first: most crashes come right after a game patch."
+      fr: "La liste n'a pas d'enregistreur de crash pour No Man's Sky. Vérifiez d'abord la version du jeu : la plupart des plantages arrivent juste après un patch."
+  links:
+    - { page: "self", h: { en: "Crash Logs", fr: "Journaux de crash" } }
+    - { page: "Known Issues" }
+
+a_perf:
+  a:
+    en: "Start with a lighter profile: the list ships profiles for different hardware, and you switch with the drop-down at the top left of Mod Organizer 2. Then lower the settings given in the guide."
+    fr: "Commencez par un profil plus léger : la liste fournit des profils pour différentes machines, et on en change avec le menu en haut à gauche de Mod Organizer 2. Baissez ensuite les réglages indiqués dans le guide."
+  extra:
+    - only: [krentoraan]
+      en: "Krentoraan's Profile Assistant picks a profile from your VRAM and screen resolution at the first launch of Mod Organizer; you can still switch by hand."
+      fr: "L'assistant de profil de Krentoraan choisit un profil d'après votre VRAM et votre résolution au premier lancement de Mod Organizer ; vous pouvez toujours en changer à la main."
+    - only: [nms]
+      en: "No Man's Sky - Explorer has a single profile: lower the in-game graphics settings."
+      fr: "No Man's Sky - Explorer n'a qu'un profil : baissez les réglages graphiques du jeu."
+  links:
+    - { page: "Post Installation", h: { en: "Increasing {list} Performance", fr: "Améliorer les Performances de {list}" } }
+    - { page: "Using The List", h: { en: "Switching Profiles", fr: "Changer de Profil" } }
+    - { page: "Post Installation", h: { en: "Profiles", fr: "Profils" } }
+    - { page: "System Requirements" }
+
+a_mods:
+  a:
+    en: "Start the game from Mod Organizer 2 with the list's executable, never from the store, and check the profile at the top left."
+    fr: "Lancez le jeu depuis Mod Organizer 2 avec l'exécutable de la liste, jamais depuis la boutique, et vérifiez le profil en haut à gauche."
+  extra:
+    - only: [nms]
+      en: "If mods still do not load, open Binaries\\SETTINGS\\GCMODSETTINGS.MXML in the game folder and check that DisableAllMods is false; a big game update can switch every mod off. Deleting that file also works: the game writes a new one."
+      fr: "Si les mods ne se chargent toujours pas, ouvrez Binaries\\SETTINGS\\GCMODSETTINGS.MXML dans le dossier du jeu et vérifiez que DisableAllMods vaut false ; une grosse mise à jour du jeu peut couper tous les mods. Supprimer ce fichier marche aussi : le jeu en écrit un nouveau."
+    - only: [wunduniik]
+      en: "When you leave the game and a window asks to keep load order changes, answer No. A purple map means a mod loads below the map plugins: move the extra plugins above them."
+      fr: "Quand vous quittez le jeu et qu'une fenêtre propose de garder les changements de l'ordre de chargement, répondez Non. Une carte violette veut dire qu'un mod se charge sous les plugins de carte : remontez les plugins ajoutés au-dessus d'eux."
+  links:
+    - { page: "Using The List", h: { en: "Starting The List", fr: "Démarrer la Liste" } }
+    - { page: "Using The List", h: { en: "If Mods Do Not Load", fr: "Si les Mods ne se Chargent Pas" }, only: [nms] }
+
+a_ingame:
+  a:
+    en: "Look at the known issues first: most problems we know about are there, with a workaround. If yours is not, report it on Discord with the steps to make it happen again."
+    fr: "Regardez d'abord les problèmes connus : la plupart de ceux que nous connaissons y sont, avec une solution. Si le vôtre n'y est pas, signalez-le sur Discord avec les étapes pour le reproduire."
+  links:
+    - { page: "Known Issues" }
+
+upd:
+  q: { en: "Did the changelog of the new version say New save?", fr: "Le changelog de la nouvelle version indiquait-il « Nouvelle partie » ?" }
+  opts:
+    - { l: { en: "Yes, or I did not check", fr: "Oui, ou je n'ai pas regardé" }, go: a_upd_save }
+    - { l: { en: "No", fr: "Non" }, go: a_upd_other }
+
+a_upd_save:
+  a:
+    en: "A version marked New save is not compatible with games started on an older version: start a new game. The changelog marks each version, and the update guide says how to keep your old saves aside."
+    fr: "Une version marquée « Nouvelle partie » n'est pas compatible avec les parties commencées sur une version précédente : commencez une nouvelle partie. Le changelog l'indique pour chaque version, et le guide de mise à jour explique comment mettre vos anciennes sauvegardes de côté."
+  links:
+    - { page: "Changelog" }
+    - { page: "Updating the List" }
+
+a_upd_other:
+  a:
+    en: "Check that Wabbajack finished without errors and that you picked the same folders as before. Mods you added yourself are deleted by the update unless their folder name starts with [NoDelete]. If the game updated at the same time, check the required game version."
+    fr: "Vérifiez que Wabbajack a terminé sans erreur et que vous avez choisi les mêmes dossiers qu'avant. Les mods ajoutés par vous sont supprimés par la mise à jour, sauf si le nom de leur dossier commence par [NoDelete]. Si le jeu s'est mis à jour en même temps, vérifiez la version du jeu requise."
+  links:
+    - { page: "Updating the List" }
+    - { page: "System Requirements" }

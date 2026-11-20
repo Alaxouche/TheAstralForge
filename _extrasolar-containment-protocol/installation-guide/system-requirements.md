@@ -28,7 +28,7 @@ Exécuter la liste depuis des disques durs (HDD) ou des lecteurs externes est **
 
 </div>
 
-<div class="modlist-size" data-modlist-size data-modlist-source="https://raw.githubusercontent.com/Alaxouche/extrasolar-containment-protocol/main/modlist.json" data-modlist-title="Extrasolar Containment Protocol">
+<div class="modlist-size" data-modlist-size data-modlist-source="https://raw.githubusercontent.com/Alaxouche/Wunduniik/main/modlist.json" data-modlist-title="Extrasolar Containment Protocol">
   <strong>Space required:</strong>
   <span data-modlist-total>Loading...</span> total,
   including <span data-modlist-install>Loading...</span> for install
@@ -42,7 +42,7 @@ Exécuter la liste depuis des disques durs (HDD) ou des lecteurs externes est **
 
 <div lang="en" markdown="1">
 
-> If the space requirement is uncomfortable, you can delete downloads once installed. You can also set your download location to a different drive.
+> If the space requirement is uncomfortable, you can delete downloads once installed. You can also set your download location to a different drive. The Wabbajack troubleshooting FAQ recommends keeping an extra 40 to 60 GB free on top of these numbers during installation.
 {: .note }
 
 | Configuration         | CPU        | GPU                | RAM          | Storage                | Display          | FPS |
@@ -53,8 +53,7 @@ Exécuter la liste depuis des disques durs (HDD) ou des lecteurs externes est **
 
 ## Necessary And Useful Applications
 
-Please ensure you have the latest .NET version installed and also [Visual C++ x64](https://aka.ms/vs/16/release/vc_redist.x64.exe):
-[https://dotnet.microsoft.com/download/dotnet/5.0/runtime](https://dotnet.microsoft.com/download/dotnet/5.0/runtime)
+Install the [.NET 8 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/8.0) and [Visual C++ x64](https://aka.ms/vs/16/release/vc_redist.x64.exe), then restart your PC. The [Wabbajack troubleshooting FAQ](https://wiki.wabbajack.org/user_documentation/Troubleshooting%20FAQ.html) lists both as the fix for texture conversion (texconv) errors during installation.
 
 ## PageFile Configuration
 
@@ -76,7 +75,7 @@ Make sure to add your Starfield installation folder, your Wabbajack folder, and 
 </div>
 <div lang="fr" markdown="1">
 
-> Si l'espace requis vous pose problème, vous pouvez supprimer les téléchargements une fois l'installation terminée.
+> Si l'espace requis vous pose problème, vous pouvez supprimer les téléchargements une fois l'installation terminée. Vous pouvez aussi placer le dossier de téléchargement sur un autre disque. La FAQ de dépannage de Wabbajack conseille de garder 40 à 60 Go libres en plus de ces chiffres pendant l'installation.
 {: .note }
 
 | Configuration          | CPU        | GPU                | RAM          | Stockage               | Écran            | FPS |
@@ -87,8 +86,7 @@ Make sure to add your Starfield installation folder, your Wabbajack folder, and 
 
 ## Applications Nécessaires et Utiles
 
-Assurez-vous d'avoir la dernière version de .NET installée ainsi que [Visual C++ x64](https://aka.ms/vs/16/release/vc_redist.x64.exe) :
-[https://dotnet.microsoft.com/download/dotnet/5.0/runtime](https://dotnet.microsoft.com/download/dotnet/5.0/runtime)
+Installez le [.NET 8 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/8.0) et [Visual C++ x64](https://aka.ms/vs/16/release/vc_redist.x64.exe), puis redémarrez votre PC. La [FAQ de dépannage de Wabbajack](https://wiki.wabbajack.org/user_documentation/Troubleshooting%20FAQ.html) indique ces deux installations comme solution aux erreurs de conversion de textures (texconv) pendant l'installation.
 
 ## Configuration du Fichier d'Échange
 

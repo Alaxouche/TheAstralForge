@@ -9,7 +9,8 @@
     "check": "node scripts/check-site.mjs",
     "thumbs": "python scripts/make-thumbs.py",
     "og": "python scripts/make-og.py",
-    "hex": "python scripts/make-hexfield.py"
+    "hex": "python scripts/make-hexfield.py",
+    "contents": "python scripts/modlist-contents.py"
   },
   "devDependencies": {
     "esbuild": "0.28.2",

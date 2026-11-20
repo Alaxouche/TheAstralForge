@@ -6,48 +6,79 @@ nav_order: 7
 reading_mode_default: true
 ---
 
-# Wunduniik on Linux: A User's Guide 🐧
+<div lang="en" markdown="1">
 
-Wunduniik V6 is not officially supported on Linux by the modlist's creator, Alaxouche. However, with a few extra steps, the Wabbajack installation can be adapted to work successfully. This guide assumes you have a basic understanding of Linux and Mod Organizer 2 (MO2).
+# Wunduniik on Linux
 
-### 1. The Omni-Guide's Installation Process
+Wunduniik is not officially supported on Linux by the modlist's creator, Alaxouche. Players have installed it on Linux with community tools. This guide assumes you have a basic understanding of Linux and Mod Organizer 2 (MO2). Read the Windows pages of this guide too: the game requirements (Steam, Anniversary Edition upgrade, English game) are the same.
 
-The process involves two main steps: first, installing Wabbajack via Proton, and then using the Omni-guide's automation script to install the modpack itself.
+### 1. Install the list
 
-*   **Install Wabbajack:** Follow the instructions in the [Wabbajack via Proton Guide](https://github.com/Omni-guides/Wabbajack-Modlist-Linux/wiki/Wabbajack-via-Proton).
-*   **Install the Modpack:** Once Wabbajack is installed, use the [omni-guides.sh automation script](https://github.com/Omni-guides/Wabbajack-Modlist-Linux/wiki/Using-the-omni%E2%80%90guides.sh-Automation-Script) to install the modpack.
+The Omni-Guides "Wabbajack via Proton" guide and the `omni-guides.sh` script that older versions of this page linked to are marked as superseded. Their author replaced them with **Jackify**, a Linux application that installs and configures Wabbajack modlists on Linux and Steam Deck.
 
-> **Note:** When you launch Mod Organizer 2 for the first time after the installation finishes, an error from the **Frame Gen Compatibility Checker** will appear. This is expected because the checker does not work on Linux. Simply click **OK** to dismiss the message and continue.
+*   **Read the guide:** [Installing a Modlist with Jackify](https://github.com/Omni-guides/Jackify/wiki/Installing-a-Modlist-with-Jackify). Jackify is downloaded from [Nexus Mods](https://www.nexusmods.com/site/mods/1427) and is still alpha software.
+*   **Before you start:** Jackify needs Steam (not the Snap version), Protontricks and a Nexus Mods account (Premium for fully automatic downloads). Its guide recommends GE-Proton 10-14.
+*   **Install:** in Jackify, choose **Modlist Tasks**, then **Install a Modlist (Automated)**, select Skyrim Special Edition, log in to Nexus, pick **Wunduniik**, set the install and download folders (avoid spaces in the paths), then **Start Installation**.
+*   Jackify creates a Steam shortcut for the list. Launch it from your Steam library: it opens Mod Organizer 2.
 
-### 2. Configure Mod Organizer 2
+{: .note }
+Wabbajack itself added a Linux beta in version 4.3.2.0 (October 2026). It is a first beta. This guide has not been tested with it.
 
-Once Wabbajack has successfully completed its installation, you need to make a few specific changes inside Mod Organizer 2 (MO2) to properly launch Wunduniik.
+### 2. Start the game
 
-*   In MO2, locate the executable dropdown menu (it's usually in the top right corner).
-*   Change the selected launcher from the default to **Wunduniik Legacy**.
+*   In MO2, check that a Wunduniik profile is selected.
+*   In the executable drop-down (next to **Run**), select **Wunduniik Launcher**, then click **Run**.
+*   Do not click **Unlock** in MO2 while the game runs.
+*   The first launch is slow, longer still on Steam Deck.
 
-### 3. Handling Frame Generation
-
-As mentioned, the **Frame Gen Compatibility Checker** will give an error on launch and will not work on Linux. You can safely click **OK** whenever this error appears.
-
-If you would like to enable frame generation, you may do so at your own risk. To attempt this, you must enable the **"(ENB) ENB Frame Gen"** mod, which is located under section **16.1 ENBSERIES - Core Files** in the main mod list panel of Mod Organizer 2.
-
-### 4. Troubleshooting
+### 3. Troubleshooting
 
 #### Game Closes Immediately After Launch
 
 If the game immediately closes after a brief loading screen (specifically after showing the `VFS` loading), do the following:
 
-*   In MO2, open the executable dropdown menu and select **Edit**.
-*   Click the **+** button at the top of the list to add a new executable.
-*   Select **Add from file...**
-*   Navigate to your modpack's installation folder, then open the `Game Root` folder.
-*   Select `SkyrimSELauncher.exe` and click **Open**.
-*   Press **OK** to save the new executable.
-*   Now, select the newly added **SkyrimSELauncher** from the executable dropdown and click **Run**.
+*   In MO2, select the **Skyrim Special Edition Launcher** executable (it is already in the list and points to `Game Root\SkyrimSELauncher.exe`) and click **Run**.
 *   The vanilla launcher will open and automatically select a graphics preset for you. You do not need to change anything.
-*   **Close the vanilla launcher window** and change the MO2 executable back to **Wunduniik Legacy**.
+*   **Close the vanilla launcher window** and change the MO2 executable back to **Wunduniik Launcher**.
 
-### 5. Enjoy Wunduniik V6 on Linux! 🎉
+For further issues, use the [Jackify wiki](https://github.com/Omni-guides/Jackify/wiki) or ask on the Wunduniik Discord server.
 
-You should now be able to launch Wunduniik V6 and play it on your Linux machine. If you encounter any further issues, please refer to the **Wabbajack Discord server in the #unofficial-linux-help channel** for troubleshooting assistance.```
+</div>
+<div lang="fr" markdown="1">
+
+# Wunduniik sur Linux
+
+Wunduniik n'est pas officiellement pris en charge sur Linux par le créateur de la modlist, Alaxouche. Des joueurs l'ont installé sur Linux avec des outils de la communauté. Ce guide suppose que vous avez des bases sur Linux et sur Mod Organizer 2 (MO2). Lisez aussi les pages Windows de ce guide : les exigences sur le jeu (Steam, mise à niveau Anniversary Edition, jeu en anglais) sont les mêmes.
+
+### 1. Installer la liste
+
+Le guide Omni-Guides « Wabbajack via Proton » et le script `omni-guides.sh`, cités par les anciennes versions de cette page, sont marqués comme remplacés. Leur auteur les a remplacés par **Jackify**, une application Linux qui installe et configure les modlists Wabbajack sur Linux et Steam Deck.
+
+*   **Lisez le guide :** [Installing a Modlist with Jackify](https://github.com/Omni-guides/Jackify/wiki/Installing-a-Modlist-with-Jackify) (en anglais). Jackify se télécharge sur [Nexus Mods](https://www.nexusmods.com/site/mods/1427) et reste un logiciel en version alpha.
+*   **Avant de commencer :** Jackify a besoin de Steam (pas de la version Snap), de Protontricks et d'un compte Nexus Mods (Premium pour des téléchargements entièrement automatiques). Son guide recommande GE-Proton 10-14.
+*   **Installation :** dans Jackify, choisissez **Modlist Tasks**, puis **Install a Modlist (Automated)**, sélectionnez Skyrim Special Edition, connectez-vous à Nexus, choisissez **Wunduniik**, indiquez les dossiers d'installation et de téléchargement (évitez les espaces dans les chemins), puis **Start Installation**.
+*   Jackify crée un raccourci Steam pour la liste. Lancez-le depuis votre bibliothèque Steam : il ouvre Mod Organizer 2.
+
+{: .note }
+Wabbajack lui-même propose une bêta Linux depuis la version 4.3.2.0 (octobre 2026). C'est une première bêta. Ce guide n'a pas été testé avec elle.
+
+### 2. Lancer le jeu
+
+*   Dans MO2, vérifiez qu'un profil Wunduniik est sélectionné.
+*   Dans la liste déroulante des exécutables (à côté de **Run**), choisissez **Wunduniik Launcher**, puis cliquez sur **Run**.
+*   Ne cliquez pas sur **Unlock** dans MO2 pendant que le jeu tourne.
+*   Le premier lancement est lent, encore plus sur Steam Deck.
+
+### 3. Dépannage
+
+#### Le Jeu Se Ferme Immédiatement Après le Lancement
+
+Si le jeu se ferme juste après un court écran de chargement (précisément après l'affichage du chargement `VFS`), faites ceci :
+
+*   Dans MO2, choisissez l'exécutable **Skyrim Special Edition Launcher** (il est déjà dans la liste et pointe vers `Game Root\SkyrimSELauncher.exe`) et cliquez sur **Run**.
+*   Le lanceur vanilla s'ouvre et choisit automatiquement un préréglage graphique. Vous n'avez rien à changer.
+*   **Fermez la fenêtre du lanceur vanilla** et remettez l'exécutable MO2 sur **Wunduniik Launcher**.
+
+Pour d'autres problèmes, consultez le [wiki de Jackify](https://github.com/Omni-guides/Jackify/wiki) ou demandez sur le serveur Discord de Wunduniik.
+
+</div>

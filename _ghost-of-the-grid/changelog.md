@@ -10,6 +10,598 @@ In this section you will find changelogs for the modlist since its release. You 
 <div style="margin-bottom: 1rem;"></div>
 
 <details markdown="1">
+<summary>v4.0.0.0 - November 20, 2026</summary>
+
+**Update Importance:** MAJOR  
+**NOT SAVE COMPATIBLE**  
+**Requires Cyberpunk 2077 patch 2.5** 
+
+___
+
+# Additions:
+- Added 10 New Quickhacks - Netrunner's Arsenal
+- Added Acceptable Loss - Full Story Combat Gig
+- Added Accidental fast travel bug fix
+- Added ACM - Appearance Creator Mod
+- Added Actual Chrome Compression
+- Added ACU - Character Preset Manager
+- Added Air Traffic Fix
+- Added Airdrop Crash Fix
+- Added Appearance Runtime Plugin
+- Added Attachment Compatibility
+- Added Authentic Shift Sound Mixer (Enhance Vehicle Audio and Radio EQs)
+- Added Better Phone UI - Messages and Contacts Overhaul - Photo Gallery
+- Added Black Chrome - Cyberware Expansion
+- Added BlackWall Knifes
+- Added Blackwall Takedown - New Quickhack
+- Added Blade Runner Ads
+- Added Blade Runner Font - Replacement
+- Added Blade Runner ringtone and SMS sound replacer
+- Added Blinking Death - Immersive V Death Cam
+- Added Blur Begone (Clear Materials)
+- Added Broken Screens And Signs Fix
+- Added Brutalist H10 Apartment - Minor Patches
+- Added Buckshot Boomstick - Custom Perk Tree for Shotguns
+- Added Bullet Ballet - Custom Perk Tree for Pistol Play
+- Added Car Selection Menu
+- Added City Turrets Unlocked
+- Added Crowd Voice Unlocked
+- Added Curbside - Improved Vehicle Summoning
+- Added Custom Perk Framework
+- Added Custom Weapon Colours
+- Added Cyber Rich Presence - Discord RPC
+- Added CyberBane - Reputation and Nemesis Overhaul
+- Added Cyberpsychosis Overdrive
+- Added DAISHO - Smart Grenade
+- Added Dark Future - Urban Survival Gameplay
+- Added Dark Future Core
+- Added Dash Fix
+- Added Dash Sound Remake (AudioXL)
+- Added Dead Ringer - Full story gig
+- Added Dead Shot - Custom Perk Tree for Snipers
+- Added Delamain Combat Mode
+- Added Description Revival
+- Added DistrictMemory
+- Added Double Jump Sound Remake (AudioXL)
+- Added Drone Companions Revamp (2.5)
+- Added Dual Wielding Fix
+- Added Dynamic City Density
+- Added E3 Menu Background
+- Added E3 Smart Windows
+- Added Eagul's Multicolored Hair Pack CCXL
+- Added Eden Plaza - Charter Hill Player Penthouse (World Builder)
+- Added Enter Blackwall - New Interactive Quickhack
+- Added Expanded Dual Wielding
+- Added Filter Saves by Lifepath and Type
+- Added First person running animation
+- Added Ford Hennessey VelociRaptor 6x6 (weaponized) - Remastered
+- Added Game 2.5 Load Game Menu QoL
+- Added Game v2.0 patch - No Forced Weapon On Carrying Bodies
+- Added Glamdoc Unlocked
+- Added Glen Apartment Corpo Elevator
+- Added Gorilla Arms Sound Remake (AudioXL)
+- Added Gravitas - New Custom Cyberware
+- Added Gravitational Force - New Quickhack
+- Added Guitar Gigs Across Night City
+- Added Hair 33 Sidecut Multicolour CCXL (Fem V)
+- Added Hangout Romances
+- Added Hothead Restored Gig (Cut Content Quest)
+- Added HUD Painter
+- Added I Love Adverts
+- Added Iconic Weapon Loadouts - Morgan Blackhand - Sympathy for the Devil
+- Added Identity Character Studio
+- Added Immersive Audio Distance
+- Added Immersive Helmet View
+- Added Immersive Injection Marks - Fading Injector Scars
+- Added Immersive Knockdown
+- Added Impact FX
+- Added Interior Audio
+- Added Jackie Car Shield E3 Restoration
+- Added Jig Jig Alley Facelift
+- Added Johnny Hair Collection - CCXL MCH
+- Added Join Trauma Team - AV Rescue Shifts
+- Added Judy Flirts on Dates
+- Added KAFU UI - HUD Painter preset
+- Added Katana Pack 2
+- Added Keep Drawing The Line (ricochet preview)
+- Added Kiroshi Optics Night Vision Mod
+- Added Light Candle For Johnny
+- Added LIPSTICK ENHANCER - Plumpy Lips - Misalignment Fix - Both V - NPCs
+- Added Local Shadows Flickering Fix
+- Added Lucy Apartment Remastered 2025 2.5 fix
+- Added LUT Switcher 2 (Custom Pack Support - LUT Adjustments - Hotkeys) - LUTs
+- Added Main Menu Backgrounds (Change Background - Make Your Own)
+- Added Malorian Arms CODA
+- Added Megabuilding H10 Window Garden
+- Added Menu Curator
+- Added Militech Anchor Nail Stake Gun
+- Added Militech M15
+- Added Militech WDG3
+- Added Missile Rain - New Cyberware And Quickhack
+- Added Modded Save Loading Screen Fix
+- Added More Useable Type 2067 Sight
+- Added More Vigilant Enemies
+- Added Much Better Contracts (Repeatable Gigs)
+- Added NCPD Prevention Police Enhancement
+- Added New Fixer - Hodan Warsame
+- Added Night City Glamdoc Colors
+- Added Night City Glass Impacts
+- Added NightCityDiary
+- Added NightCityTexts
+- Added No More Hard-coded Keybinds (Better Controls Menu continued)
+- Added NPCs use Turn Signals - (Traffic Immersion Patch)
+- Added Olymp Outfit
+- Added Perks And Skills Fixes
+- Added Playable Guitar Weapon - Play Your Songs
+- Added Projectile Launcher Sound Remake (AudioXL)
+- Added Quickhack Combos - 21 New Synergies
+- Added Quickhack Loadouts
+- Added Rasetsu Sound Remake (AudioXL)
+- Added Realistic Footprints
+- Added RedHttpClient
+- Added RedIMGRetriever
+- Added Regicide - King's Gun Edgerunners 2
+- Added Relentless Audio Addon
+- Added RELENTLESS-Live Dismemberment
+- Added Relic Enhanced
+- Added Remove Mods (mod.io) Menu and Mod Verification popup
+- Added RentDay
+- Added Respect Your Weapon 2.0
+- Added Return Imogen
+- Added Return Ticket - Full Story Gig
+- Added Ripperdoc Vendor UI Enhancements
+- Added Sanguine-A Blood Pool Simulation
+- Added Scanner Sound Remake (AudioXL)
+- Added Sea Wall Towers Detailed
+- Added Secret Ending Dialogue Highlighter
+- Added SFX Toggle (Mute Sounds and Combat Music)
+- Added Skillful (character progression - skill proficiency - character leveling - perk development - cyberware capacity)
+- Added Skillful Attributes (scale attributes with skill proficiencies)
+- Added Skyfall - Immersive AV Crash Events
+- Added Slaught-O-Matic Platinum
+- Added Slaught-O-Matic QoL
+- Added Sleeves
+- Added Slots Slots Slots - Cyberware Arms With Mod Slots
+- Added Slots Slots Slots - More Cyberdeck Quickhack Slots
+- Added Slots Slots Slots - More Weapon Mod Slots
+- Added Sound SFX Fixes
+- Added Specialized Ripperdocs
+- Added Spy in the Jungle - Mark Bana Holo Fix
+- Added Stand Still Please
+- Added Sybeeria Atelier
+- Added Tartarus - Custom Malorian 3516 (Blackwall)
+- Added The Getaway Turn Signals
+- Added Throwing Weapon Kerenzikov Fix
+- Added Thunderclap - New Quickhack
+- Added Torrent (Lightning with Physically Accurate Rain)
+- Added Trauma Team Response
+- Added Treason and Defy - Iconinc Nue
+- Added Unlock FrameGen sm86
+- Added Usable Umbrellas - Stay dry out there
+- Added Veegee Lingxiao Guard Outfit
+- Added Vehicle manufacturer fix
+- Added Wardrobe UI Improvements
+- Added Watson Tattoo Shops
+- Added Weapon Conditioning (Tier System Overhaul)
+- Added Weapon Loadouts
+- Added Weapon Skin Icons
+- Added Weapon Sound Remake (AudioXL)
+- Added WeatherExposure
+- Added Widow's Web - New Quickhack
+- Added World Builder
+- Added Zeusico's Atelier
+
+# Fixes and Tweaks:
+- Fixed stutters and instability
+- Fixed broken icons
+- Fixed crashes on character creation
+- Cleaned ALL broken mods 
+- New dashboard to choose your own settings
+- Better settings per profiles
+
+# Removals:
+- Removed 8ug8ear Romance Hangout Addon (Quest)
+- Removed A Moment of Contemplation - Cinematic Stillness HUD
+- Removed All Foods Cache - New Iconic Weapons
+- Removed Arasaka Kurogane
+- Removed Arasaka Weapons Pack
+- Removed Barbed Wire Knockout Effect Disabled
+- Removed Blade Runner 2049 Spinner (Weaponized)
+- Removed Casino Reforged (Access - fixes and miscs)
+- Removed Casino Reforged - Assets pack
+- Removed Casino Reforged - Phase 2 - Access road and entrance
+- Removed Choom Memory Booster
+- Removed Cinematic Immunity
+- Removed Cinematic Look
+- Removed CINO EBLC-CRAB 2042 (Garage)
+- Removed Compact Weapon Mod Slots - Better UI for Extra Attachments
+- Removed Cynosure Experimental Weapons
+- Removed Dedra's Truck Simulator (Convoy Delivery Mod)
+- Removed Dewdrop Inn Enhanced
+- Removed DigitalVixen Core
+- Removed Discord RPC 2
+- Removed Effects Rendering Fix
+- Removed Enhanced Auto Fixer Locations
+- Removed Enterable Interiors
+- Removed Extra Interiors
+- Removed Film Grain Fix
+- Removed Ford Hennessey VelociRaptor 6x6 (weaponized)
+- Removed FrameGen Ghosting 'Fix' for FSR 3.1 FG
+- Removed Gambling Props - Poker Chips and Playing Cards
+- Removed Green Health Icon (Bounce Back and Maxdoc)
+- Removed Hardcore Netrunning
+- Removed High Res Named NPCs AIO - MonstrrMagic Texture Series
+- Removed Horizon Sandstorm Flickering Fix
+- Removed Immersive Grenades
+- Removed Immersive Healing
+- Removed Immersive Hit
+- Removed Immersive Hit Sounds
+- Removed Immersive Scanner
+- Removed ImmersiveHUD
+- Removed Improved Vegetation LODs
+- Removed Know What You Say
+- Removed Light Beams Fix
+- Removed Low Life Effect
+- Removed Midnight Arms Gravemaker
+- Removed NCPD and MaxTac Spawn Tweak (District specific police behavior)
+- Removed Night City Skyscraper Rooftop Collision
+- Removed No More Menu Backgrounds
+- Removed Nue and Tamayura - Compact Edition
+- Removed Open Night City
+- Removed Pachinko Button - Gambling System
+- Removed Particles Flickering Fix (Watson)
+- Removed Playable Blackjack - Gambling System
+- Removed Playable Roulette - Gambling System
+- Removed Preem Menu (Background Blur - Pause Menu - Animated Snow)
+- Removed Punish Cruelty
+- Removed RAM bar fix
+- Removed Realistic Glass Damage
+- Removed Ripperdoc Cyberware Specializations
+- Removed RippersXL
+- Removed s-77 oni helmet
+- Removed Sandevistan CCXL Tattoo
+- Removed Skippy-chan
+- Removed Skippy-chan - Weapon Skin
+- Removed Stout From Behind
+- Removed Street Vendors
+- Removed Toasty Flamethrower
+- Removed Unity - Compact Edition V2
+- Removed Vanilla Rain Effect Fix
+- Removed VegaCPMods G-58 Dian
+- Removed VegaCPMods Katana
+- Removed VegaCPMods Knife
+- Removed VegaCPMods Leg Cyberware
+- Removed VegaCPMods Machete
+- Removed VegaCPMods Resources
+- Removed VegaCPMods Vendor
+- Removed Vehicle Navigation System (VNS)
+- Removed Weapon Sound Remake - AudioXL
+- Removed Welcome back my dear Skippy
+- Removed Who Was That Again
+
+# Updates:
+- Updated (Poser) Photo Mode-EX
+- Updated 4x Magazine Framework
+- Updated 4x Poster Framework
+- Updated 4x Vending Machine Framework
+- Updated 707 Tactical Virtual Atelier Store
+- Updated Advanced Crash Reporter
+- Updated Alternative Phone Icon
+- Updated Always First Equip
+- Updated Anti-Theft Measures - Vehicle Security
+- Updated Apartment Birds
+- Updated Apartment Toys
+- Updated Appearance Menu Mod
+- Updated ArchiveXL
+- Updated Audi R8 V10+
+- Updated Audioware
+- Updated AudioXL
+- Updated AudioXL - Equalizers - Volume - Mute
+- Updated Aurore Romanced (Lady Marmalade)
+- Updated Authentic Shift (QoL Gear Ratios Shifts Audio Sound ASMR and OPTIONAL Tuning System)
+- Updated Auto Drive Enhanced
+- Updated Ballistic Helmet Visor Down Masc V Reworked
+- Updated Better Leveling Addon - Graven's Attribute Expansion
+- Updated Better Leveling Addon - UI
+- Updated Better Quality Sort
+- Updated Better UI Character Lighting
+- Updated Big Hologram Ads
+- Updated Biotechnica Cache - New Iconic Weapons
+- Updated Black Budget Classified Limbs - Iconic Cyberarms Pack
+- Updated Blade Runner 2077 Proxima Edition V7900.0 Final Cut
+- Updated Bloat Begone (Remove Unwanted Menu Elements and Ads)
+- Updated Bolt Shot FX Reset Fix
+- Updated Canyon Bridge
+- Updated Canyon construction ramp
+- Updated Canyon Explorer
+- Updated Canyon Fixes
+- Updated Carmageddon 2077 (GoreRunner Addon)
+- Updated CCXL - More Cyberware
+- Updated CET Window Manager
+- Updated Chopper - New Custom Weapon
+- Updated Clear Windows
+- Updated Clear Windows - Cars Edition
+- Updated Codeware
+- Updated Computer Scrolling
+- Updated Crowd Props Restored
+- Updated Crowd Variety Restored
+- Updated Cutscene Weapon Swapper
+- Updated Cyber Engine Tweaks
+- Updated CyberMetrics - Ingame Performance Display
+- Updated Cyberware-EX
+- Updated Damage Scaling and Balance - Extended
+- Updated Database Fixes
+- Updated Decals Flickering Fix
+- Updated Deceptious Quest Core
+- Updated Dogtown Natural History Museum Enhanced
+- Updated Driver Spawn Distance Overhaul (No More Ghost Riders)
+- Updated Drug Dealer - Become a Kingpin
+- Updated Enhanced Air Traffic
+- Updated Enhanced Craft
+- Updated Environmental Weapon Handling
+- Updated Epistrophy Delamain Despawn Fix
+- Updated Equipment-EX
+- Updated EX-1 Energy Guns
+- Updated Examine Anything
+- Updated Exploded Vehicles Smoke Overhaul VFX
+- Updated Explosion Feedback
+- Updated Extra Hands (cyberware)
+- Updated Extra Iconics
+- Updated Fast Travel from anywhere to everywhere - Redscript
+- Updated Fast Travel Time
+- Updated Faster Vehicle Knockback Animation
+- Updated Filthy Access Points
+- Updated FindMyRide - Vehicle Search and Filter
+- Updated Finisher Overhaul
+- Updated Fixed NPC Vehicle Reactions
+- Updated Flaming Crotch Man Romanced
+- Updated Flashback Fixer
+- Updated FX Begone (Full Vignette Removal and Modular Effects Options)
+- Updated Game World Boundary Removed
+- Updated Gamepad Button Hold Indicator Fix
+- Updated General Shadows Fixes
+- Updated General Vehicles Fixes
+- Updated Ghost In the Mesh - Performance Meshes
+- Updated Glen Apartment Expanded - Redux
+- Updated Gone Away - Better Partner Suspended Behaviour
+- Updated GoreRunner (Blood and Carnage Overhaul)
+- Updated H10 Apartment Exterior Trash Remover
+- Updated Happier Tower Ending (Judy)
+- Updated Here's Brendan
+- Updated Highway H10 Rework
+- Updated HUD Fixes - fix disappearing HUD element and quest dialogs
+- Updated I Really Want to Stay at Your.. Dwelling
+- Updated Immersion Extension - Reed's Train Ambush Reminiscence
+- Updated Immersion Patch - Minor Activities Quest Fixes
+- Updated Immersion Patch - NCART Train Motion Fixes
+- Updated Immersive Explosion Decals
+- Updated Immersive Explosions
+- Updated Immersive Main Menu Audio - Music
+- Updated Immersive Night City Fixes
+- Updated Immersive Night City Fixes - CORE
+- Updated Immersive Rippers
+- Updated Immersive Rippers - Dogtown
+- Updated Immersive Road Crossing
+- Updated Improved Northside Motel
+- Updated Improved Vehicle Glass Destruction Effects
+- Updated Improved Vehicle Lights Draw Distance
+- Updated In Cold Blood - NPC Execution Fix
+- Updated In-World Navigation
+- Updated Informative Healthbar
+- Updated Inplace Streamingsectors Nulled
+- Updated Inside The Metro - Walk In Train Carriage
+- Updated Inventory Adjustments Hub
+- Updated Inventory Free View
+- Updated Japantown Apartment View Enhanced
+- Updated Japantown North Verticality Expanded
+- Updated Kabuki Gun Range Enhanced
+- Updated Kolac Expanded
+- Updated Kriostech Virtual Atelier
+- Updated Leaky Interiors Fixed
+- Updated Life Coach (Immersive Boost)
+- Updated Lifepath Bonuses and Gang-Corp Traits
+- Updated Limited HUD
+- Updated Load Begone
+- Updated Loot Icons Extension
+- Updated LUT Switcher 2 (Custom Pack Support - LUT Adjustments - Hotkeys)
+- Updated Manavortex Material Library
+- Updated Mancinella Suppressor
+- Updated Map Exit Nuclear Explosion Fix
+- Updated Map Waypoint Bug Fixes
+- Updated Mark To Sell
+- Updated Material and Texture Override (Crashes Resolved)
+- Updated Mazda MX-5 Miata - Addons
+- Updated Mechs of Night City
+- Updated Megingjord (hover legs cyberware)
+- Updated Melee Attack Variety
+- Updated Metro Pocket Guide
+- Updated Midnight Arms NYX-13
+- Updated Militech Regional Headquarters (Militech Tower)
+- Updated Mitsubishi Lancer Evo 9 MR - Addons
+- Updated Mod Configuration Menu
+- Updated Mod Settings
+- Updated More Weapon Filters
+- Updated Named Saves
+- Updated Native Interactions Framework
+- Updated Native Settings UI
+- Updated Native Settings UI Side Menu Add-on
+- Updated NC Fashion Virtual Atelier
+- Updated NC Mediascape Enhancer
+- Updated NCI Addon - Badlands and Pacifica
+- Updated NCPD Cache - New Iconic Weapons
+- Updated NCPD Fixes
+- Updated Need More Smoke FX
+- Updated Negative Balance - Full Story Gig
+- Updated New Game Plus - Native
+- Updated New Lifepath Intro - Fresh Start
+- Updated New Quest - Encore
+- Updated New Quest - One More Light
+- Updated NIGHT CITY ALIVE - Low Density
+- Updated Night City Cinematic Loading Screens
+- Updated Night City Flooded
+- Updated Night City Immersive Debris
+- Updated Night City Interactions - Core
+- Updated NightlyNow Core
+- Updated Nissan 350Z v2 - ArchiveXL
+- Updated Nissan GT-R 'Lone Wanderer'
+- Updated Nissan Skyline R31 GTS-R - ArchiveXL
+- Updated Nissan Skyline R32 - Addons
+- Updated Nitrous
+- Updated No Camera Auto Centering
+- Updated No Default Equipped Weapon In Inventory
+- Updated No More Milky Glass Plus Eyes AO
+- Updated No Shooting Delay
+- Updated Not So Good Draw Distance Mod
+- Updated Nova Optics (Vehicle Exposure Fix and Visuals Customization)
+- Updated NPC Actions Stutter Fix
+- Updated NPC CCXL Hair - Masc
+- Updated Nulled Angle Correction
+- Updated Numerals Get Commas
+- Updated Orbital Air Traffic Enhanced
+- Updated Osprey Expanded
+- Updated Outdoor V - City Camp
+- Updated Panam Romanced Enhanced
+- Updated Parking Spots Enhanced
+- Updated Perk Addition Framework
+- Updated Ping (Menu Search - Mod Support)
+- Updated Plan C
+- Updated Quadra Turbo-Z
+- Updated Quest Trigger Fixes (2.3 Supported)
+- Updated QuestGuide - Quest Overview with Native UI
+- Updated Quickhack Fixes
+- Updated Quickhack Hotkeys
+- Updated Radial Menu Upgrade for Idle-Computer-TV Anywhere mods
+- Updated RadioExt
+- Updated Rasetsu Expanded
+- Updated Ray Traced Lighting Fixes
+- Updated re INPUT Mod Loader
+- Updated Real Vendor Names
+- Updated Rebeccas Apartment DLC
+- Updated RED4ext
+- Updated RedData
+- Updated RedFileSystem
+- Updated RedFunctions
+- Updated RedLogger
+- Updated RedProfiler
+- Updated Redscript
+- Updated Redscript Configuration Framework
+- Updated RedWindows
+- Updated ReFRACT (Interior Vehicle Reflections - Material Refractions)
+- Updated ReImagined
+- Updated Reinforcements System
+- Updated ReLUX (Lighting Redux - Accurate Lighting)
+- Updated ReLUX Plus (Riders on the Storm)
+- Updated Rent a Hotel
+- Updated Rent a Motel
+- Updated Repeatable NCPD Gigs
+- Updated Replace Weapon Mods
+- Updated Reset Attributes always available - Redscript
+- Updated Rita Wheeler Romanced
+- Updated River Romanced Enhanced
+- Updated Road Name Sign Fixes and Additions
+- Updated RT(Ray Tracing) PT(Path Tracing) Contact Shadow FIX
+- Updated Running Man - New Sprinting Perks
+- Updated Sabbath7991 Weapon and Attachment Shops - Virtual Atelier
+- Updated Scannable Stash
+- Updated Second Heart Fix
+- Updated Set Bonuses
+- Updated Sheng Noods Ramenshop
+- Updated Shift (Customizable Dynamic Vehicle Camera)
+- Updated Silent Silencers and Throwing Knives
+- Updated Skip Unskippable Cutscenes Braindance Rides Dialogue Phone Calls - Speed Up Time Acceleration - Fast Quick Replay The Game - NPC Talk Faster
+- Updated Solvind EMKV90-TOR 2042 (Garage)
+- Updated Spawned NPC Post Combat Fix - Low Density
+- Updated SPLAT Physics Realistic Ragdoll Overhaul
+- Updated Stealthrunner - Stealth Gameplay Expansion
+- Updated Taxi Work in Night City
+- Updated The Nullifier
+- Updated The RVC00N Dumpster - Collarless CrystalJock Bomber (M-F) (GS) (AXL)
+- Updated The RVC00N Dumpster 2 - PinkyDude's Virtual Shop
+- Updated The RVC00N Dumpster 3 - PinkyDude's Virtual Atelier
+- Updated Thorton Merrimac Necromancer
+- Updated Time Dilation Overhaul
+- Updated Toyota Celica Supra A60 - ArchiveXL
+- Updated Toyota GT86 - Addons
+- Updated Traffic Radio Fix
+- Updated Trigger Mode Control
+- Updated True Flashlight - Immersive Tactical Lighting Gadget
+- Updated TV Anywhere
+- Updated TweakXL
+- Updated Undermine Quest Series
+- Updated Unequip unremovable scopes
+- Updated Untrack Quest Ultimate - No Main Quest re-tracking - No leftovers
+- Updated Use Your Fridge
+- Updated V's Edgerunners Mansion Reloaded
+- Updated V's Pacifica Cabana Hideout
+- Updated Valentino Chino Pants (Fem Masc - ArchiveXL)
+- Updated Vectors of Joi
+- Updated Veegee Baseball Cap Hair - CCXL - BOTH V
+- Updated Veegee Jewelry Shop
+- Updated VEEGEE SHOP 4
+- Updated Vehicle Destruction Mesh Fix
+- Updated Vehicle Handling Settings
+- Updated Vehicle Turret Core
+- Updated Virtual Atelier
+- Updated Virtual Car Dealer
+- Updated Virtual Car Dealer - Sorting
+- Updated Visual Effects Fixes
+- Updated Visual Holsters (Automatic Clothes Swap)
+- Updated Weapon and Scope Skin Changer Plus
+- Updated Weapon Handling Control
+- Updated Weather Condition - Dress for the Forecast
+- Updated Window Switcher
+- Updated Window Utils
+- Updated World Advert Configurator
+
+</details>
+
+<details markdown="1">
+<summary>v3.5.1.0 - October 21, 2026</summary>
+
+**Update Importance:** MINOR  
+**SAVE COMPATIBLE** 
+
+___
+
+# Additions:
+- Added 8ug8ear Romance Hangout Addon (Quest)
+- Added Black Budget Classified Limbs - Iconic Cyberarms Pack
+- Added Driver Spawn Distance Overhaul (No More Ghost Riders)
+- Added Realistic Glass Damage
+- Added Visual Effects Fixes
+
+# Removals:
+- Removed Immersive Relic malfunctions
+- Removed Virtual Atelier - Gender Filter and Crash Guard
+
+# Updates:
+- Updated Adaptive Sliders
+- Updated Always First Equip
+- Updated ArchiveXL
+- Updated Audi R8 V10+
+- Updated Better Quality Sort
+- Updated Codeware
+- Updated Crowd Umbrellas Restored
+- Updated FindMyRide - Vehicle Search and Filter
+- Updated Finisher Overhaul
+- Updated Ghost In the Mesh - Performance Meshes
+- Updated Gone Away - Better Partner Suspended Behaviour
+- Updated GoreRunner (Blood and Carnage Overhaul)
+- Updated Here's Brendan
+- Updated Mod Configuration Menu
+- Updated NC Fashion Virtual Atelier
+- Updated Nissan Skyline R34 V-Spec II - ArchiveXL
+- Updated Preem Hair (Optional Judy Hair Colors)
+- Updated QuestGuide - Quest Overview with Native UI
+- Updated Quickhack Fixes
+- Updated The RVC00N Dumpster 3 - PinkyDude's Virtual Atelier
+- Updated Time Dilation Overhaul
+- Updated TweakXL
+- Updated Vehicle Turret Core
+
+</details>
+
+<details markdown="1">
 <summary>v3.5.0.0 - October 18, 2026</summary>
 
 **Update Importance:** MAJOR  

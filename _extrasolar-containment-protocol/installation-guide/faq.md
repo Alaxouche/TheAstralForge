@@ -22,12 +22,13 @@ Large modlists with many assets take longer to load. This is normal. Make sure y
 
 **The game crashes on startup. What do I do?**
 1. Ensure you launched via Mod Organizer 2 and not Steam directly.
-2. Check that your antivirus is not blocking any files.
-3. Verify your system meets the minimum requirements.
-4. Join the [Discord server](https://discord.gg/vKuB7nazBk) and report the issue with your crash log.
+2. Check that the game is on version 1.16.244 and that Shattered Space and Terran Armada are installed in Steam.
+3. Check that your antivirus is not blocking any files.
+4. Verify your system meets the minimum requirements.
+5. Join the [Discord server](https://discord.gg/vKuB7nazBk) and report the issue with your crash log.
 
 **Where are my crash logs?**
-`Documents\My Games\Starfield\SFSE\Logs\`
+The list includes the Trainwreck crash logger. Crash logs are written to `Documents\My Games\Starfield\SFSE\Crashlogs\`. The logs of the SFSE plugins themselves are in `Documents\My Games\Starfield\SFSE\Logs\`.
 
 **Can I update mid-playthrough?**
 This depends on the update. Major updates are generally not save-safe. Check the changelog for each update for compatibility information.
@@ -54,12 +55,13 @@ Les grandes modlists avec de nombreux assets prennent plus de temps à charger. 
 
 **Le jeu plante au démarrage. Que faire ?**
 1. Assurez-vous d'avoir lancé via Mod Organizer 2 et non directement via Steam.
-2. Vérifiez que votre antivirus ne bloque aucun fichier.
-3. Vérifiez que votre système répond aux exigences minimales.
-4. Rejoignez le [serveur Discord](https://discord.gg/vKuB7nazBk) et signalez le problème avec votre journal de crash.
+2. Vérifiez que le jeu est en version 1.16.244 et que Shattered Space et Terran Armada sont installés dans Steam.
+3. Vérifiez que votre antivirus ne bloque aucun fichier.
+4. Vérifiez que votre système répond aux exigences minimales.
+5. Rejoignez le [serveur Discord](https://discord.gg/vKuB7nazBk) et signalez le problème avec votre journal de crash.
 
 **Où se trouvent mes journaux de crash ?**
-`Documents\My Games\Starfield\SFSE\Logs\`
+La liste inclut le journal de crash Trainwreck. Les journaux de crash sont écrits dans `Documents\My Games\Starfield\SFSE\Crashlogs\`. Les journaux des plugins SFSE eux-mêmes se trouvent dans `Documents\My Games\Starfield\SFSE\Logs\`.
 
 **Puis-je mettre à jour en cours de partie ?**
 Cela dépend de la mise à jour. Les mises à jour majeures ne sont généralement pas compatibles avec les sauvegardes existantes. Consultez le journal des modifications pour chaque mise à jour.

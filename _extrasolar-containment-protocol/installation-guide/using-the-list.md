@@ -11,7 +11,7 @@ nav_order: 5
 
 ## Starting The List
 
-Open `ModOrganizer.exe` from your Extrasolar Containment Protocol installation folder and launch the game through the executables dropdown — select the **SFSE** launcher. As the modlist can be quite large, it may take some time to load. **THIS IS NORMAL, DON'T PANIC!**
+Open `ModOrganizer.exe` from your Extrasolar Containment Protocol installation folder and launch the game through the executables dropdown: select **Extrasolar Containment Protocol Launcher** (it starts the game through SFSE), then press **Run**. As the modlist can be quite large, it may take some time to load. **THIS IS NORMAL, DON'T PANIC!**
 
 {: .note }
 You can create a desktop shortcut from the shortcuts dropdown in Mod Organizer 2.
@@ -26,9 +26,9 @@ You can create a desktop shortcut from the shortcuts dropdown in Mod Organizer 2
 
 Mod Organizer 2 locks your mods, load order, and other executables while running an executable. This is to prevent you from making changes while the game is running. Clicking unlock may corrupt your game experience.
 
-## Configuring MCM / Settings
+## Configuring Mod Settings
 
-Where applicable, MCMs and in-game settings have been pre-configured. However, you can adjust them to your personal preferences. Be careful when modifying pre-set configurations — note down any default values before changing them in case you need to revert.
+Where applicable, mod settings have been pre-configured. Many SFSE mods have their options in the in-game mod control panel of SFSE Menu Framework, opened with **F1** (gamepad: press START twice). You can adjust them to your personal preferences. Be careful when modifying pre-set configurations: note down any default values before changing them in case you need to revert.
 
 {: .warning }
 > Some settings are loaded automatically on new game start. Make sure to wait for all background processes to finish before making changes.
@@ -44,7 +44,7 @@ Extrasolar Containment Protocol is designed to be started on a **new game**. Loa
 
 ## Démarrer la Liste
 
-Ouvrez `ModOrganizer.exe` depuis votre dossier d'installation Extrasolar Containment Protocol et lancez le jeu via le menu déroulant des exécutables — sélectionnez le lanceur **SFSE**. Comme la modlist peut être assez grande, le chargement peut prendre du temps. **C'EST NORMAL, NE PANIQUEZ PAS !**
+Ouvrez `ModOrganizer.exe` depuis votre dossier d'installation Extrasolar Containment Protocol et lancez le jeu via le menu déroulant des exécutables : sélectionnez **Extrasolar Containment Protocol Launcher** (il démarre le jeu via SFSE), puis appuyez sur **Run**. Comme la modlist peut être assez grande, le chargement peut prendre du temps. **C'EST NORMAL, NE PANIQUEZ PAS !**
 
 {: .note }
 Vous pouvez créer un raccourci bureau depuis le menu déroulant des raccourcis dans Mod Organizer 2.
@@ -59,9 +59,9 @@ Vous pouvez créer un raccourci bureau depuis le menu déroulant des raccourcis 
 
 Mod Organizer 2 verrouille vos mods, l'ordre de chargement et les autres exécutables pendant l'exécution. Cela vous empêche de faire des modifications pendant que le jeu tourne. Cliquer sur déverrouiller peut corrompre votre expérience de jeu.
 
-## Configuration des MCM / Paramètres
+## Configuration des Réglages des Mods
 
-Le cas échéant, les MCM et les paramètres en jeu ont été préconfigurés. Cependant, vous pouvez les ajuster selon vos préférences. Soyez prudent lors de la modification des configurations préréglées — notez les valeurs par défaut avant de les modifier au cas où vous devriez revenir en arrière.
+Le cas échéant, les réglages des mods ont été préconfigurés. De nombreux mods SFSE ont leurs options dans le panneau de contrôle des mods de SFSE Menu Framework, ouvert en jeu avec **F1** (manette : deux appuis sur START). Vous pouvez les ajuster selon vos préférences. Soyez prudent lors de la modification des configurations préréglées : notez les valeurs par défaut avant de les modifier au cas où vous devriez revenir en arrière.
 
 {: .warning }
 > Certains paramètres sont chargés automatiquement au démarrage d'une nouvelle partie. Assurez-vous d'attendre que tous les processus d'arrière-plan soient terminés avant d'apporter des modifications.

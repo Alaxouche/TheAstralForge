@@ -32,31 +32,31 @@
   {
     "id": "ghost-of-the-grid",
     "title": "Ghost of the Grid",
-    "version": "3.5.1.0",
-    "dateUpdated": "2026-10-21T17:38:24.7055325Z",
+    "version": "4.0.0.0",
+    "dateUpdated": "2026-11-20T15:11:07.9722754Z",
     "download_metadata": {
-      "Hash": "Q12Zo19ui2M=",
-      "Size": 12960711,
-      "NumberOfArchives": 1368,
-      "SizeOfArchives": 30347251364,
-      "NumberOfInstalledFiles": 23727,
-      "SizeOfInstalledFiles": 30613464103,
-      "TotalSize": 60960715467
+      "Hash": "gA3TtYSxy70=",
+      "Size": 24572971,
+      "NumberOfArchives": 1469,
+      "SizeOfArchives": 31067228208,
+      "NumberOfInstalledFiles": 34519,
+      "SizeOfInstalledFiles": 32248778264,
+      "TotalSize": 63316006472
     }
   },
   {
     "id": "no-mans-sky-explorer",
     "title": "No Man's Sky - Explorer",
-    "version": "3.0.2.0",
-    "dateUpdated": "2026-10-21T04:50:15.2049613Z",
+    "version": "3.1.0.0",
+    "dateUpdated": "2026-11-20T12:24:56.25517Z",
     "download_metadata": {
-      "Hash": "IUEoU4GGpmE=",
-      "Size": 2554217,
-      "NumberOfArchives": 217,
-      "SizeOfArchives": 1355215228,
-      "NumberOfInstalledFiles": 18757,
-      "SizeOfInstalledFiles": 2076745013,
-      "TotalSize": 3431960241
+      "Hash": "QY+kTonhgXs=",
+      "Size": 2699820,
+      "NumberOfArchives": 225,
+      "SizeOfArchives": 1372956654,
+      "NumberOfInstalledFiles": 22755,
+      "SizeOfInstalledFiles": 2204935526,
+      "TotalSize": 3577892180
     }
   },
   {

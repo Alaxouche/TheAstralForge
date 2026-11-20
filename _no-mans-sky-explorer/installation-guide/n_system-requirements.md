@@ -41,12 +41,12 @@ Comme No Man's Sky Explorer est une modlist axée sur les graphismes, vous devez
 </div>
 
 <noscript>
-   <p><strong>Space required:</strong> 12 GB total (approx. 10 GB install + 2 GB downloads).</p>
+   <p><strong>Space required:</strong> about 3.6 GB total (2.2 GB install + 1.4 GB downloads).</p>
 </noscript>
 
 <div lang="en" markdown="1">
 
-> If the space requirement is uncomfortable, you can delete downloads once installed.
+> If space is tight, you can delete the downloads folder once the list is installed. Wabbajack will download those files again at the next list update.
 {: .note }
 
 | Configuration         | CPU        | GPU                | RAM          | Storage                | Display          | FPS  |
@@ -57,12 +57,8 @@ Comme No Man's Sky Explorer est une modlist axée sur les graphismes, vous devez
 
 ## Necessary And Useful Applications
 
-Please ensure you have the latest .NET version installed:
-[https://dotnet.microsoft.com/download/dotnet/5.0/runtime](https://dotnet.microsoft.com/download/dotnet/5.0/runtime), and also [Visual C++ x64](https://aka.ms/vs/16/release/vc_redist.x64.exe).
-
-<p align="center">
-     <img src="/assets/Images/guides/microsoft-net-5-0-installation-10f760.webp" alt=".NET download page: the Download x64 buttons for console and desktop apps are highlighted" width="500" height="312">
-</p>
+- [Wabbajack](https://github.com/wabbajack-tools/wabbajack/releases/latest): always use the latest release (4.3.2.2 on November 5, 2026). Wabbajack ships its own .NET runtime, so you do not need to install .NET separately.
+- [Visual C++ Redistributable x64](https://aka.ms/vc14/vc_redist.x64.exe), latest supported version from Microsoft.
 
 ## PageFile Configuration
 
@@ -81,15 +77,15 @@ Please ensure you have the latest .NET version installed:
 
 ## Exclusions and AntiVirus
 
-<img src="/assets/Images/guides/1d3150dfc46844dfaf1d657e56c723d3-39fd15.webp" alt="Windows Exploit protection, program settings for GoaT.exe: Code integrity guard and Control flow guard overrides" width="527" height="634">
+<img src="/assets/Images/guides/1d3150dfc46844dfaf1d657e56c723d3-39fd15.webp" alt="Windows Exploit protection, program settings of an executable: Control flow guard (CFG) set to override system settings, switched Off" width="527" height="634">
 
-- Exclude **1)** `NMS.exe`, **2)** the game folder, and **3)** the shader cache folder from antivirus
+- Exclude **1)** `NMS.exe` (in `Binaries`), **2)** the game folder, and **3)** the shader cache folder (`GAMEDATA\SHADERCACHE` in the game folder) from your antivirus
 - Exclude from Control Flow Guard: Start → **Exploit Protection** → **Program Settings** → Add **NMS.exe** → **Control flow guard (CFG)** → **Override** → **Off**
 
 </div>
 <div lang="fr" markdown="1">
 
-> Si l'espace requis vous pose problème, vous pouvez supprimer les téléchargements une fois l'installation terminée.
+> Si la place manque, vous pouvez supprimer le dossier des téléchargements une fois la liste installée. Wabbajack retéléchargera ces fichiers à la prochaine mise à jour de la liste.
 {: .note }
 
 | Configuration          | CPU        | GPU                 | RAM          | Stockage               | Écran            | FPS  |
@@ -100,12 +96,8 @@ Please ensure you have the latest .NET version installed:
 
 ## Applications Nécessaires et Utiles
 
-Assurez-vous d'avoir la dernière version de .NET installée :
-[https://dotnet.microsoft.com/download/dotnet/5.0/runtime](https://dotnet.microsoft.com/download/dotnet/5.0/runtime), ainsi que [Visual C++ x64](https://aka.ms/vs/16/release/vc_redist.x64.exe).
-
-<p align="center">
-     <img src="/assets/Images/guides/microsoft-net-5-0-installation-10f760.webp" alt="Page de téléchargement de .NET : les boutons Download x64 des applications console et bureau sont mis en avant" width="500" height="312">
-</p>
+- [Wabbajack](https://github.com/wabbajack-tools/wabbajack/releases/latest) : utilisez toujours la dernière version (4.3.2.2 au 5 novembre 2026). Wabbajack embarque son propre environnement .NET, vous n'avez donc pas besoin d'installer .NET à part.
+- [Visual C++ Redistributable x64](https://aka.ms/vc14/vc_redist.x64.exe), dernière version prise en charge par Microsoft.
 
 ## Configuration du Fichier d'Échange
 
@@ -124,9 +116,9 @@ Assurez-vous d'avoir la dernière version de .NET installée :
 
 ## Exclusions et Antivirus
 
-<img src="/assets/Images/guides/1d3150dfc46844dfaf1d657e56c723d3-39fd15.webp" alt="Protection contre les exploits de Windows, paramètres du programme GoaT.exe : options Code integrity guard et Control flow guard" width="527" height="634">
+<img src="/assets/Images/guides/1d3150dfc46844dfaf1d657e56c723d3-39fd15.webp" alt="Protection contre les exploits de Windows, paramètres d'un exécutable : Control flow guard (CFG) en remplacement des paramètres système, désactivé" width="527" height="634">
 
-- Excluez **1)** `NMS.exe`, **2)** le dossier du jeu, et **3)** le dossier du cache de shaders de votre antivirus
+- Excluez de votre antivirus **1)** `NMS.exe` (dans `Binaries`), **2)** le dossier du jeu, et **3)** le dossier du cache de shaders (`GAMEDATA\SHADERCACHE` dans le dossier du jeu)
 - Excluez du Control Flow Guard : Démarrer → **Protection contre les attaques** → **Paramètres du programme** → Ajoutez **NMS.exe** → **Protection du flux de contrôle (CFG)** → **Remplacer** → **Désactivé**
 
 </div>

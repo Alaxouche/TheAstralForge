@@ -17,6 +17,10 @@ reading_mode_default: true
 Before installing the modlist, here are some things you must do:
 There is no workaround for a pirated copy of Skyrim, or pirated Creation Club content. If you ask for support with anything pirated, you will be banned.
 
+- Install Skyrim Special Edition from Steam with the **Anniversary Edition** upgrade. The list uses all the Creation Club content included in Anniversary Edition.
+- Set the game language to **English** in Steam (game properties, Language). Wabbajack needs the English voice files.
+- Krentoraan 1.3.0 needs the files of game version 1.6.1170, and Steam now installs a newer version. Wabbajack fixes this itself once you log in to Steam inside it (see [Wabbajack Installation]({{ '/krentoraan/installation-guide/wabbajack-installation/' | relative_url }})).
+
 {: .warning}
 > **WARNING**
 >
@@ -25,7 +29,7 @@ There is no workaround for a pirated copy of Skyrim, or pirated Creation Club co
 In the Windows API (with some exceptions), the maximum length for a file path is 260 characters.
 
 {: .note }
-The list cannot be installed in the same folders that Wabbajack is in. They must be completely separated.
+The list cannot be installed in the same folders that Wabbajack is in. They must be completely separated. Do not install it inside the Skyrim game folder, in Program Files or in OneDrive either.
 
 Here is an example of a well-configured modlist installation folder:
 <img src="/assets/Images/guides/f339dfc9a93540a68ca394155f3349b7-b3d7a0.webp" alt="File Explorer: install folder Games (F:) > Games > Wunduniik - Skyrim SE" width="927" height="142">
@@ -36,6 +40,7 @@ Here is an example of a well-configured modlist installation folder:
 
 For the Wabbajack installation to proceed without issues, you must connect to or create accounts for the following websites:
 - [Nexus Mods](https://www.nexusmods.com/) (Premium recommended for faster installation)
+- Steam, inside Wabbajack: needed so that Wabbajack can download the 1.6.1170 game files from Steam.
 
 </div>
 <div lang="fr" markdown="1">
@@ -49,6 +54,10 @@ For the Wabbajack installation to proceed without issues, you must connect to or
 Avant d'installer la modlist, voici quelques choses que vous devez faire :
 Il n'y a pas de solution de contournement pour une copie piratée de Skyrim ou du contenu Creation Club piraté. Si vous demandez de l'aide pour quoi que ce soit de piraté, vous serez banni.
 
+- Installez Skyrim Special Edition depuis Steam avec la mise à niveau **Anniversary Edition**. La liste utilise tout le contenu Creation Club inclus dans l'Anniversary Edition.
+- Réglez la langue du jeu sur **anglais** dans Steam (propriétés du jeu, Langue). Wabbajack a besoin des fichiers de voix anglais.
+- Krentoraan 1.3.0 a besoin des fichiers de la version 1.6.1170 du jeu, et Steam installe désormais une version plus récente. Wabbajack règle cela lui-même une fois connecté à Steam (voir [Installation Wabbajack]({{ '/krentoraan/installation-guide/wabbajack-installation/' | relative_url }})).
+
 {: .warning}
 > **AVERTISSEMENT**
 >
@@ -57,7 +66,7 @@ Il n'y a pas de solution de contournement pour une copie piratée de Skyrim ou d
 Dans l'API Windows (avec quelques exceptions), la longueur maximale d'un chemin de fichier est de 260 caractères.
 
 {: .note }
-La liste ne peut pas être installée dans les mêmes dossiers que Wabbajack. Ils doivent être complètement séparés.
+La liste ne peut pas être installée dans les mêmes dossiers que Wabbajack. Ils doivent être complètement séparés. Ne l'installez pas non plus dans le dossier du jeu Skyrim, dans Program Files ou dans OneDrive.
 
 Voici un exemple de dossier d'installation bien configuré :
 <img src="/assets/Images/guides/f339dfc9a93540a68ca394155f3349b7-b3d7a0.webp" alt="Explorateur de fichiers : dossier d'installation Games (F:) > Games > Wunduniik - Skyrim SE" width="927" height="142">
@@ -68,5 +77,6 @@ Voici un exemple de dossier d'installation bien configuré :
 
 Pour que l'installation Wabbajack se déroule sans problème, vous devez vous connecter à ou créer des comptes sur :
 - [Nexus Mods](https://www.nexusmods.com/) (Premium recommandé pour une installation plus rapide)
+- Steam, dans Wabbajack : nécessaire pour que Wabbajack télécharge les fichiers 1.6.1170 du jeu depuis Steam.
 
 </div>

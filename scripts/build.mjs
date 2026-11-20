@@ -16,6 +16,8 @@ import { Marked } from 'marked';
 import yaml from 'js-yaml';
 import { transformSync } from 'esbuild';
 import { keymapHtml, gaugeHtml, cpPerksHtml, sfSkillsHtml } from './visuals.mjs';
+import { contentsMapHtml, contentsJson, estimatorHtml, authorsModel, authorsJson, authorsWallHtml, fmtInt } from './contents.mjs';
+import { troubleshooterHtml, crashReaderHtml, headingIds } from './troubleshoot.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = path.join(ROOT, '_site');
@@ -298,6 +300,11 @@ const QUICK = {
   'Changelog': ['refresh', (_, m) => [`Every version. Latest: v<span data-live="${m.title}" data-field="version">${m.live.version}</span>`, `Toutes les versions. Dernière : v<span data-live="${m.title}" data-field="version">${m.live.version}</span>`]],
   'Known Issues': ['alert', () => ['Problems we know about and how to fix them', 'Les problèmes connus et comment les régler']],
   'Load Order': ['layers', () => ['Every mod and plugin in the list, in order', 'Tous les mods et plugins de la liste, dans l\'ordre']],
+  'Troubleshooting': ['help', () => ['Find your problem in a few questions, read a crash log', 'Trouvez votre problème en quelques questions, lisez un journal de crash']],
+  'Mod Contents': ['chart', (_, m) => (m.contents
+    ? [`${fmtInt(m.contents.totals.mods, 'en')} mods in ${m.contents.totals.sections} sections, by disk space and by count`,
+      `${fmtInt(m.contents.totals.mods, 'fr')} mods en ${m.contents.totals.sections} sections, par espace disque et par nombre`]
+    : ['What the list is made of', 'De quoi la liste est faite'])],
 };
 const biHtml = (en, fr) => `<span lang="en">${en}</span><span lang="fr">${fr}</span>`;
 const escHtml = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;');
@@ -487,7 +494,7 @@ function srcsetOf(src) {
 const GL_SKIP_TAGS = new Set(['a', 'code', 'pre', 'kbd', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'summary', 'button', 'script', 'style',
   'svg', 'title', 'textarea', 'select', 'option', 'label', 'figcaption', 'abbr', 'dt',
   'table']); // tables scroll sideways (overflow), which would clip the tooltip
-const GL_SKIP_CLASS = /\b(?:gl|kbmap|kb|gauge|sk-board|pt-grid|pt-table|sk-table|issue-status|quick|doc-cta|steps|pager|tags|cl-tools|stats|yt|anchor|copy|shots|features)\b/;
+const GL_SKIP_CLASS = /\b(?:gl|kbmap|kb|gauge|sk-board|pt-grid|pt-table|sk-table|issue-status|quick|doc-cta|steps|pager|tags|cl-tools|stats|yt|anchor|copy|shots|features|tmw|tm|est|aw|ts|cr)\b/;
 const GL_VOID = new Set(['area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'source', 'track', 'wbr']);
 let GLOSSARY = null;
 function glossaryEntries(list) {
@@ -630,6 +637,45 @@ async function build() {
   engine.registerFilter('gauge', (data, lang) => gaugeHtml(data, lang));
   engine.registerFilter('cp_perks', (data) => cpPerksHtml(data));
   engine.registerFilter('sf_skills', (data) => sfSkillsHtml(data));
+  // What is inside each list (_data/contents_<id>.json from scripts/modlist-contents.py)
+  const contents = Object.fromEntries(Object.entries(data).filter(([k]) => k.startsWith('contents_')).map(([k, v]) => [k.slice(9), v]));
+  const snapOf = (id) => ((data.modlist_snapshot || []).find((x) => x.id === id) || {}).download_metadata || {};
+  engine.registerFilter('contents_map', (id) => contentsMapHtml(contents[id]));
+  engine.registerFilter('install_estimator', (id, lang) => (contents[id] && data.install_estimator
+    ? estimatorHtml({ ...contents[id], inst: snapOf(id).SizeOfInstalledFiles || contents[id].totals.installed }, data.install_estimator, lang) : ''));
+  let authorsCache = null;
+  const authorsOf = () => (authorsCache ||= authorsModel(contents, modlists));
+  engine.registerFilter('authors_wall', () => authorsWallHtml(authorsOf()));
+  // Troubleshooting: links to sections of the list's own pages (page title aliases, heading ids as the
+  // Markdown renderer makes them). A missing page drops the link; a missing heading drops the anchor.
+  const PAGE_ALIASES = { 'System Requirements': ['System Requirements', 'System Requirement'], Installation: ['Installation', 'Pre-Installation'] };
+  const resolveLink = (id, l) => {
+    const self = l.page === 'self';
+    const names = self ? ['Troubleshooting'] : PAGE_ALIASES[l.page] || [l.page];
+    const pg = pages.find((x) => x.collection === id && names.includes(x.title));
+    if (!pg) return null;
+    const ml = modlists.find((m) => m.id === id) || {};
+    const alts = (v) => (v == null ? [] : Array.isArray(v) ? v : [v]).map((t) => t.replace('{list}', ml.title || ''));
+    let aEn = '', aFr = '', hEn = '', hFr = '';
+    if (l.h) {
+      const hs = headingIds(pg.body, slugify);
+      const en = alts(l.h.en), fr = alts(l.h.fr);
+      const iEn = hs.findIndex((x) => en.includes(x.text));
+      if (iEn !== -1) { aEn = hs[iEn].id; hEn = hs[iEn].text; }
+      const iFr = hs.findIndex((x, i) => fr.includes(x.text) && (i !== iEn || !en.includes(x.text)));
+      if (iFr !== -1) { aFr = hs[iFr].id; hFr = hs[iFr].text; }
+      if (!aEn && !aFr && self) return null;
+    }
+    const url = self ? '' : relativeUrl(pg.url);
+    const tEn = pg.title, tFr = FR[pg.title] || pg.title;
+    const lab = (t, h) => (self ? h || t : h ? `${t} › ${h}` : t);
+    return {
+      hrefEn: url + (aEn ? '#' + aEn : '') || '#', hrefFr: url + (aFr ? '#' + aFr : '') || '#',
+      labelEn: l.label ? l.label.en : lab(tEn, hEn), labelFr: l.label ? l.label.fr : lab(tFr, hFr),
+    };
+  };
+  engine.registerFilter('troubleshooter', (id) => troubleshooterHtml(data.troubleshoot, id, resolveLink));
+  engine.registerFilter('crash_reader', (id) => crashReaderHtml(id));
   // {{ src | thumb: 480 }} → thumbnail URL (or src); {{ src | srcset }} → "t480 480w, ..., src 2560w" (or '')
   try { THUMBS = JSON.parse(read('assets/Images/_thumbs/manifest.json')); } catch { THUMBS = {}; }
   GLOSSARY = glossaryEntries(data.glossary);
@@ -683,6 +729,7 @@ async function build() {
       subtitle: banner.subtitle || '',
       subtitle_fr: banner.subtitle_fr || '',
       stats: banner.stats || [],
+      contents: data['contents_' + key] || null,
     };
   });
 
@@ -793,7 +840,8 @@ async function build() {
     if (modlist) {
       // Section icons (h2 only)
       content = content.replace(/<h2 id="([^"]+)"/g, (m, id) => { const ic = sectionIcon(id); return ic ? `${m} data-icon="${ic}"` : m; });
-      content = changelogStatic(content);
+      // Changelog pages only: the contents page also has <details> blocks
+      if (page.url.includes('/changelog/')) content = changelogStatic(content);
       if (page.url === modlist.url) {
         // Overview: text "Quick Links" lists become cards placed under the stats
         content = content.replace(/<h2 id="(?:quick-links|liens-rapides)[^>]*>[\s\S]*?<\/h2>\s*<ul>[\s\S]*?<\/ul>\s*/g, '');
@@ -822,6 +870,14 @@ async function build() {
     const { body } = parseFrontMatter(read(f));
     writeOut(f, (await engine.parseAndRender(body, { site })).trimStart());
   }
+
+  /* Mod lists loaded on demand by the contents pages and the authors wall */
+  for (const [id, c] of Object.entries(contents)) {
+    writeOut(`assets/data/contents-${id}.json`, contentsJson(c));
+    // Key file -> mod folder, for the crash log reader
+    if (c.files) writeOut(`assets/data/files-${id}.json`, JSON.stringify(c.files));
+  }
+  if (Object.keys(contents).length) writeOut('assets/data/authors.json', authorsJson(authorsOf()));
 
   /* Search index + sitemap */
   writeOut('search.json', JSON.stringify(searchIndex));

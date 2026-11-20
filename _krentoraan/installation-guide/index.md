@@ -11,9 +11,9 @@ reading_mode_default: true
 
 # Preamble
 
-This mod list is for Skyrim Special Edition 1.6.1170. You must use this list with Anniversary Edition and the current updates of Skyrim. This list will not work with Skyrim Legendary Edition nor with Skyrim Special Edition version 1.5.97 and versions lower than 1.6.1170.
+This mod list is for Skyrim Special Edition on Steam with the Anniversary Edition upgrade: it uses all the Creation Club content that comes with Anniversary Edition. Krentoraan 1.3.0 was built on game version 1.6.1170, and Wabbajack installs that version in the list's `Game Root` folder. Steam has updated the game since (to 1.7.104 in November 2026), so Wabbajack will report wrong-version game files: log in to Steam inside Wabbajack and it downloads the 1.6.1170 files for you. Do not downgrade the game yourself. This list will not work with Skyrim Legendary Edition, nor with Special Edition without the Anniversary upgrade.
 
-This list will only work with a legitimate Steam install of this game. It will not work with any other platform (like GOG). This modlist is focused on clean visuals and balanced gameplay.
+This list will only work with a legitimate Steam install of this game. It will not work with any other platform (like GOG). Install the game in English: Wabbajack needs the English voice files. This modlist is focused on clean visuals and balanced gameplay.
 
 > "I decided to create this modlist because people kept asking how I got Skyrim to look so good. I know that when you begin, it can be hard to mod correctly and you can quickly be lost, but following this guide will help you build the Skyrim of your dreams! This very extended and detailed modlist will help you understand modding, minimizing bugs and conflicts to allow for a completely immersive gameplay experience. This is how I think the game is perfect, but if you think something could be better, the choice is yours. For each graphic mod I use 2K resolution, but you should install a range between 1K and 4K (8K sometimes, if your PC can handle it). I don't recommend installing less than 1K resolution textures."
 
@@ -28,9 +28,9 @@ This modlist is based on my personal preferences. It improves the vanilla game t
 
 # Préambule
 
-Cette modlist est conçue pour Skyrim Special Edition 1.6.1170. Vous devez utiliser cette liste avec Anniversary Edition et les mises à jour actuelles de Skyrim. Cette liste ne fonctionnera pas avec Skyrim Legendary Edition ni avec Skyrim Special Edition version 1.5.97 ou antérieure.
+Cette modlist est conçue pour Skyrim Special Edition sur Steam avec la mise à niveau Anniversary Edition : elle utilise tout le contenu Creation Club fourni avec l'Anniversary Edition. Krentoraan 1.3.0 a été construite sur la version 1.6.1170 du jeu, et Wabbajack installe cette version dans le dossier `Game Root` de la liste. Steam a mis le jeu à jour depuis (en 1.7.104 en novembre 2026) : Wabbajack signalera donc des fichiers du jeu dans la mauvaise version. Connectez-vous à Steam dans Wabbajack et il téléchargera les fichiers 1.6.1170 pour vous. Ne rétrogradez pas le jeu vous-même. Cette liste ne fonctionnera pas avec Skyrim Legendary Edition, ni avec la Special Edition sans la mise à niveau Anniversary.
 
-Cette liste ne fonctionnera qu'avec une installation Steam légitime du jeu. Elle ne fonctionnera pas sur d'autres plateformes (comme GOG). Cette modlist est axée sur des visuels propres et un gameplay équilibré.
+Cette liste ne fonctionnera qu'avec une installation Steam légitime du jeu. Elle ne fonctionnera pas sur d'autres plateformes (comme GOG). Installez le jeu en anglais : Wabbajack a besoin des fichiers de voix anglais. Cette modlist est axée sur des visuels propres et un gameplay équilibré.
 
 > « J'ai décidé de créer cette modlist parce que les gens me demandaient sans cesse comment j'avais rendu Skyrim si beau. Je sais qu'au début, il peut être difficile de modder correctement et on peut vite se perdre, mais ce guide vous aidera à construire le Skyrim de vos rêves ! Cette modlist très complète et détaillée vous aidera à comprendre le modding en minimisant les bugs et les conflits pour une expérience de jeu totalement immersive. C'est ainsi que je pense que le jeu est parfait, mais si vous pensez que quelque chose pourrait être mieux, le choix est le vôtre. Pour chaque mod graphique, j'utilise la résolution 2K, mais vous devriez installer entre 1K et 4K (8K parfois, si votre PC peut le supporter). Je ne recommande pas d'installer des textures en dessous de la résolution 1K. »
 

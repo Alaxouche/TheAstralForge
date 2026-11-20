@@ -17,7 +17,7 @@ project_banner:
   subtitle_fr: "Une modlist Starfield axée sur l'immersion, les visuels et une exploration élargie."
   stats:
     - label: Mods
-      value: "TBD"
+      value: "750+"
     - label: Size
       value: "TBD"
     - label: Version

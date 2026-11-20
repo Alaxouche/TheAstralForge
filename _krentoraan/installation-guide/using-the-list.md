@@ -11,7 +11,7 @@ nav_order: 5
 
 ## Starting The List
 
-Open `Mod Organizer.exe` and launch **Krentoraan Launcher** through the executables. As the modlist can be quite large, loading may take some time. **THIS IS NORMAL — DON'T PANIC!**
+Open `ModOrganizer.exe` in the Krentoraan install folder, select **Krentoraan Launcher** in the executables drop-down and click **Run**. As the modlist can be quite large, loading may take some time. **THIS IS NORMAL, DON'T PANIC!**
 
 {: .note }
 You can create a desktop shortcut in the shortcuts dropdown.
@@ -43,8 +43,6 @@ All MCMs have been pre-configured via Settings Loader mods. Note the default val
   <img src="/assets/Images/guides/c4ff17623e75454fb3686b5ab9b850a9-dfe38d.webp" alt="Keyboard map of the list's key bindings, colour-coded by function" width="1262" height="493">
 </p>
 
-The keymap is also available in-game using the **F8** key. Press Tab to close it.
-
 </div>
 <div lang="fr" markdown="1">
 
@@ -52,7 +50,7 @@ The keymap is also available in-game using the **F8** key. Press Tab to close it
 
 ## Démarrer la Liste
 
-Ouvrez `Mod Organizer.exe` et lancez **Krentoraan Launcher** via les exécutables. Le chargement du jeu peut prendre un certain temps. **C'EST NORMAL — NE PANIQUEZ PAS !**
+Ouvrez `ModOrganizer.exe` dans le dossier d'installation de Krentoraan, choisissez **Krentoraan Launcher** dans la liste déroulante des exécutables et cliquez sur **Run**. Le chargement du jeu peut prendre un certain temps. **C'EST NORMAL, NE PANIQUEZ PAS !**
 
 {: .note }
 Vous pouvez créer un raccourci bureau dans le menu déroulant des raccourcis.
@@ -83,7 +81,5 @@ Tous les MCM ont été préconfigurés via des mods Settings Loader. Notez les v
 <p align="center">
   <img src="/assets/Images/guides/c4ff17623e75454fb3686b5ab9b850a9-dfe38d.webp" alt="Plan du clavier avec les raccourcis de la liste, colorés par fonction" width="1262" height="493">
 </p>
-
-La carte des touches est également disponible en jeu avec la touche **F8**. Appuyez sur Tab pour fermer.
 
 </div>

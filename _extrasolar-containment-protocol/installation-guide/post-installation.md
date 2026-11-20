@@ -12,11 +12,9 @@ reading_mode_default: true
 
 ## INI Configuration
 
-After the Wabbajack installation is complete, you may need to adjust a few INI settings for your specific hardware configuration.
+The list's profiles do not use profile-specific INI files. The game reads its settings from `Documents\My Games\Starfield`: `StarfieldPrefs.ini` and `StarfieldCustom.ini`, created when you launched the game through Steam.
 
-1. Navigate to your Starfield installation folder inside the modlist directory.
-2. Open `StarfieldCustom.ini` (create it if it does not exist at `Documents\My Games\Starfield\`).
-3. Ensure your resolution is correctly set:
+Set your resolution, display mode and upscaling in the game's display settings. The game saves them in `StarfieldPrefs.ini`. If you change the resolution by hand, it is in that file, under `[Display]`:
 
 ```ini
 [Display]
@@ -28,13 +26,12 @@ Replace these values with your actual screen resolution.
 
 ## Profiles
 
-Extrasolar Containment Protocol may include multiple profiles for different hardware configurations:
+Extrasolar Containment Protocol comes with two profiles. Both have the same gameplay mods; only the texture and performance mods change:
 
-- **Performance**: Reduced visual quality for lower-end hardware
-- **Standard**: Balanced visuals and performance
-- **Ultra**: Maximum visual quality for high-end hardware
+- **Extrasolar Containment Protocol - Ultra**: uses Skurkbro's Retexture Project (architecture and landscape textures). This is the profile Wabbajack selects by default.
+- **Extrasolar Containment Protocol - Performance**: for lower-end hardware. Replaces Skurkbro's Retexture Project with Starfield Performance Textures, and adds Starfield Performance BOOST and Optimax - Performance.
 
-Select the appropriate profile in Mod Organizer 2 before launching the game.
+Select the profile in the profile dropdown at the top left of Mod Organizer 2 before launching the game.
 
 ## Antivirus Exclusions
 
@@ -46,7 +43,7 @@ Before launching the game, make sure your antivirus software is not interfering 
 
 ## SFSE (Starfield Script Extender)
 
-Extrasolar Containment Protocol requires SFSE. It is included in the modlist, but you must always launch the game through Mod Organizer 2 using the SFSE executable — **never launch through Steam directly**.
+Extrasolar Containment Protocol requires SFSE. It is included in the modlist. Always launch the game from Mod Organizer 2 with the **Extrasolar Containment Protocol Launcher** executable. **Never launch through Steam directly.**
 
 </div>
 <div lang="fr" markdown="1">
@@ -55,11 +52,9 @@ Extrasolar Containment Protocol requires SFSE. It is included in the modlist, bu
 
 ## Configuration des INIs
 
-Après l'installation Wabbajack, vous devrez peut-être ajuster quelques paramètres INI pour votre configuration matérielle.
+Les profils de la liste n'utilisent pas de fichiers INI propres au profil. Le jeu lit ses réglages dans `Documents\My Games\Starfield` : `StarfieldPrefs.ini` et `StarfieldCustom.ini`, créés lorsque vous avez lancé le jeu via Steam.
 
-1. Naviguez vers votre dossier d'installation Starfield dans le répertoire de la modlist.
-2. Ouvrez `StarfieldCustom.ini` (créez-le s'il n'existe pas dans `Documents\My Games\Starfield\`).
-3. Assurez-vous que votre résolution est correctement configurée :
+Réglez la résolution, le mode d'affichage et l'upscaling dans les options d'affichage du jeu. Le jeu les enregistre dans `StarfieldPrefs.ini`. Si vous modifiez la résolution à la main, elle se trouve dans ce fichier, sous `[Display]` :
 
 ```ini
 [Display]
@@ -71,13 +66,12 @@ Remplacez ces valeurs par votre résolution d'écran réelle.
 
 ## Profils
 
-Extrasolar Containment Protocol peut inclure plusieurs profils pour différentes configurations matérielles :
+Extrasolar Containment Protocol est fourni avec deux profils. Les deux ont les mêmes mods de gameplay ; seuls les mods de textures et de performances changent :
 
-- **Performance** : Qualité visuelle réduite pour le matériel d'entrée de gamme
-- **Standard** : Visuels et performances équilibrés
-- **Ultra** : Qualité visuelle maximale pour le matériel haut de gamme
+- **Extrasolar Containment Protocol - Ultra** : utilise Skurkbro's Retexture Project (textures d'architecture et de paysages). C'est le profil que Wabbajack sélectionne par défaut.
+- **Extrasolar Containment Protocol - Performance** : pour le matériel plus modeste. Remplace Skurkbro's Retexture Project par Starfield Performance Textures, et ajoute Starfield Performance BOOST et Optimax - Performance.
 
-Sélectionnez le profil approprié dans Mod Organizer 2 avant de lancer le jeu.
+Sélectionnez le profil dans le menu déroulant des profils, en haut à gauche de Mod Organizer 2, avant de lancer le jeu.
 
 ## Exclusions Antivirus
 
@@ -89,6 +83,6 @@ Avant de lancer le jeu, assurez-vous que votre antivirus n'interfère pas avec l
 
 ## SFSE (Starfield Script Extender)
 
-Extrasolar Containment Protocol nécessite SFSE. Il est inclus dans la modlist, mais vous devez toujours lancer le jeu via Mod Organizer 2 en utilisant l'exécutable SFSE — **ne lancez jamais directement via Steam**.
+Extrasolar Containment Protocol nécessite SFSE. Il est inclus dans la modlist. Lancez toujours le jeu depuis Mod Organizer 2 avec l'exécutable **Extrasolar Containment Protocol Launcher**. **Ne lancez jamais le jeu directement via Steam.**
 
 </div>

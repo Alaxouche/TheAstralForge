@@ -41,7 +41,7 @@ Comme Wunduniik est une modlist axée sur les graphismes, vous devez disposer d'
 </div>
 
 <noscript>
-  <p><strong>Space required:</strong> 500 GB total (approx. 300 GB install + 180 GB downloads).</p>
+  <p><strong>Space required:</strong> about 502 GB total (311 GB install + 190 GB downloads).</p>
 </noscript>
 
 <div lang="en" markdown="1">
@@ -58,7 +58,7 @@ Comme Wunduniik est une modlist axée sur les graphismes, vous devez disposer d'
 ## Necessary And Useful Applications
 
 For the modlist to work you must have some apps: Please ensure you have the latest .NET Runtime installed. Download the desktop app installer and console app x64 from Microsoft here:
-[https://dotnet.microsoft.com/en-us/download/dotnet/9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0), and also [Visual C++ x64](https://aka.ms/vs/16/release/vc_redist.x64.exe).
+[https://dotnet.microsoft.com/en-us/download](https://dotnet.microsoft.com/en-us/download), and also the latest [Visual C++ Redistributable x64](https://aka.ms/vc14/vc_redist.x64.exe). Wabbajack itself already includes its own .NET runtime.
 
 <p align="center">
      <img src="/assets/Images/guides/microsoft-net-5-0-installation-10f760.webp" alt=".NET download page: the Download x64 buttons for console and desktop apps are highlighted" width="500" height="312">
@@ -74,7 +74,7 @@ To help you with the INIs configuration, I highly recommend installing [Sublime 
 
 To fix this, you'll want to have a bigger pagefile. A pagefile is a file on your disk Windows will use when there is not enough RAM available.
 
-**Never disable the pagefile** – this may lead to various issues on your system, such as this Skyrim crash. If you've never touched the pagefile, try performing the following steps:
+**Never disable the pagefile**: this may lead to various issues on your system, including Skyrim crashes. If you've never touched the pagefile, try performing the following steps:
 
 1. Press **Windows + R** on your keyboard
 2. Type `sysdm.cpl,3`
@@ -99,7 +99,8 @@ To fix this, you'll want to have a bigger pagefile. A pagefile is a file on your
 
 <img src="/assets/Images/guides/1d3150dfc46844dfaf1d657e56c723d3-39fd15.webp" alt="Windows Exploit protection, program settings for GoaT.exe: Code integrity guard and Control flow guard overrides" width="527" height="634">
 
-- Exclude **1)** `gamename.exe`, **2)** the game folder, and **3)** the shader cache folder from Windows Defender (or other) antivirus
+- Exclude **1)** `SkyrimSE.exe` and `skse64_loader.exe`, **2)** the Wunduniik install folder (it holds the game copy in `Game Root`), and **3)** the shader cache folder from Windows Defender (or other) antivirus
+- The install folder contains `Windows Exclusion.bat`. Run it to add the Windows Defender exclusions for you: it asks for administrator rights, then excludes the install folder, the two Skyrim folders in Documents and AppData, the game, SKSE and Mod Organizer. `Windows Exclusion.bat /remove` undoes it. It only works with Windows Defender: with another antivirus, add the exclusions by hand.
 - Also exclude the game from Control Flow Guard:
   1. Click **Start**
   2. Type **Exploit Protection**
@@ -128,7 +129,7 @@ To fix this, you'll want to have a bigger pagefile. A pagefile is a file on your
 ## Applications Nécessaires et Utiles
 
 Pour que la modlist fonctionne, vous devez disposer de certaines applications. Veuillez vous assurer que le dernier runtime .NET est installé. Téléchargez l'installateur de l'application bureau et l'application console x64 depuis Microsoft ici :
-[https://dotnet.microsoft.com/en-us/download/dotnet/9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0), ainsi que [Visual C++ x64](https://aka.ms/vs/16/release/vc_redist.x64.exe).
+[https://dotnet.microsoft.com/fr-fr/download](https://dotnet.microsoft.com/fr-fr/download), ainsi que la dernière version de [Visual C++ Redistributable x64](https://aka.ms/vc14/vc_redist.x64.exe). Wabbajack embarque déjà son propre runtime .NET.
 
 <p align="center">
      <img src="/assets/Images/guides/microsoft-net-5-0-installation-10f760.webp" alt="Page de téléchargement de .NET : les boutons Download x64 des applications console et bureau sont mis en avant" width="500" height="312">
@@ -144,7 +145,7 @@ Pour vous aider avec la configuration des INIs, je recommande vivement d'install
 
 Pour corriger cela, vous devrez augmenter la taille du fichier d'échange. Un fichier d'échange est un fichier sur votre disque que Windows utilisera lorsque la RAM disponible est insuffisante.
 
-**Ne désactivez jamais le fichier d'échange** — cela peut entraîner divers problèmes sur votre système, y compris ce crash de Skyrim. Si vous n'avez jamais modifié le fichier d'échange, effectuez les étapes suivantes :
+**Ne désactivez jamais le fichier d'échange** : cela peut entraîner divers problèmes sur votre système, y compris des crashs de Skyrim. Si vous n'avez jamais modifié le fichier d'échange, effectuez les étapes suivantes :
 
 1. Appuyez sur **Windows + R** sur votre clavier
 2. Tapez `sysdm.cpl,3`
@@ -169,7 +170,8 @@ Pour corriger cela, vous devrez augmenter la taille du fichier d'échange. Un fi
 
 <img src="/assets/Images/guides/1d3150dfc46844dfaf1d657e56c723d3-39fd15.webp" alt="Protection contre les exploits de Windows, paramètres du programme GoaT.exe : options Code integrity guard et Control flow guard" width="527" height="634">
 
-- Excluez **1)** `gamename.exe`, **2)** le dossier du jeu, et **3)** le dossier du cache de shaders de Windows Defender (ou autre) antivirus
+- Excluez **1)** `SkyrimSE.exe` et `skse64_loader.exe`, **2)** le dossier d'installation de Wunduniik (il contient la copie du jeu dans `Game Root`), et **3)** le dossier du cache de shaders de Windows Defender (ou autre) antivirus
+- Le dossier d'installation contient `Windows Exclusion.bat`. Lancez-le pour ajouter les exclusions de Windows Defender à votre place : il demande les droits administrateur, puis exclut le dossier d'installation, les deux dossiers Skyrim de Documents et d'AppData, le jeu, SKSE et Mod Organizer. `Windows Exclusion.bat /remove` annule tout. Il ne fonctionne qu'avec Windows Defender : avec un autre antivirus, ajoutez les exclusions à la main.
 - Excluez également le jeu du Control Flow Guard :
   1. Cliquez sur **Démarrer**
   2. Tapez **Protection contre les attaques**

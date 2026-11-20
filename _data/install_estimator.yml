@@ -1,0 +1,21 @@
+# Assumptions behind the install time estimator (Wabbajack install pages, scripts/contents.mjs).
+# They are printed under the estimator, so keep them true. Adjust them when real installs show other times.
+
+# Nexus Mods download caps without Premium, in MB/s (help.nexusmods.com/article/96, checked Nov 2026).
+# Premium is uncapped. The cap is shared by every file downloading at the same time.
+nexus_free_mbs: 3.0
+nexus_free_adblock_mbs: 1.5
+
+# Without Premium, Wabbajack opens each Nexus file page and waits for a click on "Slow download":
+# seconds per file (page load + click).
+click_seconds: 10
+
+# Share of the line speed actually reached (protocol overhead, servers).
+efficiency: 0.85
+
+# Install phase, in MB of installed files per second (extraction, patching, BSA building, hashing).
+# Rough figures: CPU and antivirus matter as much as the drive.
+install_mbs:
+  nvme: 40
+  sata: 30
+  hdd: 12

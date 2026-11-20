@@ -32,7 +32,7 @@ Comme Krentoraan est une modlist axée sur les graphismes, vous devez disposer d
 
 </div>
 
-<div class="modlist-size" data-modlist-size data-modlist-source="https://raw.githubusercontent.com/Alaxouche/Krentoraan/main/modlist.json" data-modlist-title="Krentoraan">
+<div class="modlist-size" data-modlist-size data-modlist-source="https://raw.githubusercontent.com/Alaxouche/Wunduniik/main/modlist.json" data-modlist-title="Krentoraan">
   <strong>Space required:</strong>
   <span data-modlist-total>Loading...</span> total,
   including <span data-modlist-install>Loading...</span> for install
@@ -41,7 +41,7 @@ Comme Krentoraan est une modlist axée sur les graphismes, vous devez disposer d
 </div>
 
 <noscript>
-  <p><strong>Space required:</strong> 75 GB total (approx. 50 GB install + 25 GB downloads).</p>
+  <p><strong>Space required:</strong> about 267 GB total (152 GB install + 115 GB downloads).</p>
 </noscript>
 
 <div lang="en" markdown="1">
@@ -58,7 +58,7 @@ Comme Krentoraan est une modlist axée sur les graphismes, vous devez disposer d
 ## Necessary And Useful Applications
 
 For the modlist to work you must have some apps: Please ensure you have the latest .NET Runtime installed. Download the desktop app installer and console app x64 from Microsoft here:
-[https://dotnet.microsoft.com/en-us/download/dotnet/9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0), and also [Visual C++ x64](https://aka.ms/vs/16/release/vc_redist.x64.exe).
+[https://dotnet.microsoft.com/en-us/download](https://dotnet.microsoft.com/en-us/download), and also the latest [Visual C++ Redistributable x64](https://aka.ms/vc14/vc_redist.x64.exe). Wabbajack itself already includes its own .NET runtime.
 
 <p align="center">
      <img src="/assets/Images/guides/microsoft-net-5-0-installation-10f760.webp" alt=".NET download page: the Download x64 buttons for console and desktop apps are highlighted" width="500" height="312">
@@ -74,7 +74,7 @@ To help you with the INIs configuration, I highly recommend installing [Sublime 
 
 To fix this, you'll want to have a bigger pagefile. A pagefile is a file on your disk Windows will use when there is not enough RAM available.
 
-**Never disable the pagefile** – this may lead to various issues on your system. If you've never touched the pagefile, try performing the following steps:
+**Never disable the pagefile**: this may lead to various issues on your system. If you've never touched the pagefile, try performing the following steps:
 
 1. Press **Windows + R** on your keyboard
 2. Type `sysdm.cpl,3`
@@ -99,7 +99,8 @@ To fix this, you'll want to have a bigger pagefile. A pagefile is a file on your
 
 <img src="/assets/Images/guides/1d3150dfc46844dfaf1d657e56c723d3-39fd15.webp" alt="Windows Exploit protection, program settings for GoaT.exe: Code integrity guard and Control flow guard overrides" width="527" height="634">
 
-- Exclude **1)** `gamename.exe`, **2)** the game folder, and **3)** the shader cache folder from Windows Defender (or other) antivirus
+- Exclude **1)** `SkyrimSE.exe` and `skse64_loader.exe`, **2)** the Krentoraan install folder (it holds the game copy in `Game Root`), and **3)** the shader cache folder from Windows Defender (or other) antivirus
+- The install folder contains `Windows Exclusion.bat`. Right-click it and choose **Run as administrator**: it adds the install folder to the Windows Defender exclusions (answer **A** for automatic, or **M** to open Windows Security and do it yourself). It only works with Windows Defender.
 - Also exclude the game from Control Flow Guard:
   1. Click **Start** → Type **Exploit Protection** → **Program Settings**
   2. Click **Add program to customize** → **Add by program name**
@@ -123,7 +124,7 @@ To fix this, you'll want to have a bigger pagefile. A pagefile is a file on your
 ## Applications Nécessaires et Utiles
 
 Pour que la modlist fonctionne, vous devez disposer de certaines applications. Veuillez vous assurer que le dernier runtime .NET est installé. Téléchargez depuis Microsoft :
-[https://dotnet.microsoft.com/en-us/download/dotnet/9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0), ainsi que [Visual C++ x64](https://aka.ms/vs/16/release/vc_redist.x64.exe).
+[https://dotnet.microsoft.com/fr-fr/download](https://dotnet.microsoft.com/fr-fr/download), ainsi que la dernière version de [Visual C++ Redistributable x64](https://aka.ms/vc14/vc_redist.x64.exe). Wabbajack embarque déjà son propre runtime .NET.
 
 <p align="center">
      <img src="/assets/Images/guides/microsoft-net-5-0-installation-10f760.webp" alt="Page de téléchargement de .NET : les boutons Download x64 des applications console et bureau sont mis en avant" width="500" height="312">
@@ -140,7 +141,7 @@ Pour la configuration des INIs, je recommande vivement d'installer [Sublime Text
 1. Appuyez sur **Windows + R** → tapez `sysdm.cpl,3` → **Entrée**
 2. Dans **Performances** → **Paramètres** → onglet **Avancé** → **Mémoire virtuelle** → **Modifier…**
 3. Désactivez **Gérer automatiquement...**
-4. Cliquez sur **Taille personnalisée :** : Initial 20480 Mo / Maximum 40960 Mo
+4. Cliquez sur **Taille personnalisée** : initiale 20480 Mo, maximale 40960 Mo
 5. **Définir** → **Appliquer** → **OK** → Redémarrez
 
 ---
@@ -151,7 +152,8 @@ Pour la configuration des INIs, je recommande vivement d'installer [Sublime Text
 
 <img src="/assets/Images/guides/1d3150dfc46844dfaf1d657e56c723d3-39fd15.webp" alt="Protection contre les exploits de Windows, paramètres du programme GoaT.exe : options Code integrity guard et Control flow guard" width="527" height="634">
 
-- Excluez **1)** `gamename.exe`, **2)** le dossier du jeu, et **3)** le dossier du cache de shaders de votre antivirus
+- Excluez **1)** `SkyrimSE.exe` et `skse64_loader.exe`, **2)** le dossier d'installation de Krentoraan (il contient la copie du jeu dans `Game Root`), et **3)** le dossier du cache de shaders de votre antivirus
+- Le dossier d'installation contient `Windows Exclusion.bat`. Faites un clic droit dessus et choisissez **Exécuter en tant qu'administrateur** : il ajoute le dossier d'installation aux exclusions de Windows Defender (répondez **A** pour le faire automatiquement, ou **M** pour ouvrir la Sécurité Windows et le faire vous-même). Il ne fonctionne qu'avec Windows Defender.
 - Excluez également le jeu du Control Flow Guard :
   1. Démarrer → **Protection contre les attaques** → **Paramètres du programme**
   2. **Ajouter un programme** → **Par nom** → tapez **SKSE64_Loader.exe**

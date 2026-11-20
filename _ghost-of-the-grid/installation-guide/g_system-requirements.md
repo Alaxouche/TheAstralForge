@@ -41,7 +41,7 @@ Comme Ghost of the Grid est une modlist axée sur les graphismes, vous devez dis
 </div>
 
 <noscript>
-   <p><strong>Space required:</strong> 90 GB total (approx. 65 GB install + 25 GB downloads).</p>
+   <p><strong>Space required:</strong> 61 GB total (approx. 31 GB install + 30 GB downloads).</p>
 </noscript>
 
 <div lang="en" markdown="1">
@@ -51,18 +51,15 @@ Comme Ghost of the Grid est une modlist axée sur les graphismes, vous devez dis
 
 | Configuration         | CPU        | GPU                | RAM          | Storage                | Display          | FPS |
 |-----------------------|------------|--------------------|--------------|------------------------|------------------|-----|
-| **Minimum Specs**     | i5-7600k   | Nvidia GTX 2080    | 16 GB DDR4   | 500 GB SATA II SSD     | FHD 60 Hz        | 45  |
+| **Minimum Specs**     | i5-7600k   | Nvidia RTX 2080    | 16 GB DDR4   | 500 GB SATA II SSD     | FHD 60 Hz        | 45  |
 | **Recommended Specs** | i7-9700k   | Nvidia RTX 3060 Ti | 32 GB DDR4   | 1 TB SATA III/M.2 SSD  | FHD 60 Hz        | 60  |
 | **Author's Specs**    | i5-10400f  | Nvidia RTX 3090    | 32 GB DDR4   | 1 TB M.2 SSD           | 2K 180 Hz        | 60+ |
 
 ## Necessary And Useful Applications
 
-Please ensure you have the latest .NET version installed:
-[https://dotnet.microsoft.com/download/dotnet/5.0/runtime](https://dotnet.microsoft.com/download/dotnet/5.0/runtime), and also [Visual C++ x64](https://aka.ms/vs/16/release/vc_redist.x64.exe).
+Wabbajack ships with the .NET runtime it needs: you don't have to install .NET separately.
 
-<p align="center">
-     <img src="/assets/Images/guides/microsoft-net-5-0-installation-10f760.webp" alt=".NET download page: the Download x64 buttons for console and desktop apps are highlighted" width="500" height="312">
-</p>
+Install the latest [Microsoft Visual C++ Redistributable (x64)](https://aka.ms/vc14/vc_redist.x64.exe), the permanent link Microsoft gives for the current version.
 
 ## PageFile Configuration
 
@@ -83,8 +80,8 @@ Please ensure you have the latest .NET version installed:
 
 <img src="/assets/Images/guides/1d3150dfc46844dfaf1d657e56c723d3-39fd15.webp" alt="Windows Exploit protection, program settings for GoaT.exe: Code integrity guard and Control flow guard overrides" width="527" height="634">
 
-- Exclude **1)** `gamename.exe`, **2)** the game folder, and **3)** the shader cache folder from antivirus
-- Exclude from Control Flow Guard: Start → **Exploit Protection** → **Program Settings** → Add **Cyberpunk2077.exe** → **Control flow guard (CFG)** → **Override** → **Off**
+- Exclude **1)** `Cyberpunk2077.exe` (in `bin\x64` of the game folder), **2)** the game folder, **3)** the Ghost of the Grid install and downloads folders, and **4)** the shader cache folder from antivirus
+- Exclude from Control Flow Guard: Start → **Exploit Protection** → **Program Settings** → Add **Cyberpunk2077.exe** → **Control flow guard (CFG)** → **Override** → **Off**. The screenshot shows these settings for another program: use `Cyberpunk2077.exe`.
 
 </div>
 <div lang="fr" markdown="1">
@@ -94,18 +91,15 @@ Please ensure you have the latest .NET version installed:
 
 | Configuration          | CPU        | GPU                 | RAM          | Stockage               | Écran            | FPS |
 |------------------------|------------|---------------------|--------------|------------------------|------------------|-----|
-| **Config. Minimum**    | i5-7600k   | Nvidia GTX 2080     | 16 Go DDR4   | 500 Go SATA II SSD     | FHD 60 Hz        | 45  |
+| **Config. Minimum**    | i5-7600k   | Nvidia RTX 2080     | 16 Go DDR4   | 500 Go SATA II SSD     | FHD 60 Hz        | 45  |
 | **Config. Recommandée**| i7-9700k   | Nvidia RTX 3060 Ti  | 32 Go DDR4   | 1 To SATA III/M.2 SSD  | FHD 60 Hz        | 60  |
 | **Config. de l'Auteur**| i5-10400f  | Nvidia RTX 3090     | 32 Go DDR4   | 1 To M.2 SSD           | 2K 180 Hz        | 60+ |
 
 ## Applications Nécessaires et Utiles
 
-Assurez-vous d'avoir la dernière version de .NET installée :
-[https://dotnet.microsoft.com/download/dotnet/5.0/runtime](https://dotnet.microsoft.com/download/dotnet/5.0/runtime), ainsi que [Visual C++ x64](https://aka.ms/vs/16/release/vc_redist.x64.exe).
+Wabbajack embarque le runtime .NET dont il a besoin : inutile d'installer .NET à part.
 
-<p align="center">
-     <img src="/assets/Images/guides/microsoft-net-5-0-installation-10f760.webp" alt="Page de téléchargement de .NET : les boutons Download x64 des applications console et bureau sont mis en avant" width="500" height="312">
-</p>
+Installez la dernière version de [Microsoft Visual C++ Redistributable (x64)](https://aka.ms/vc14/vc_redist.x64.exe), le lien permanent fourni par Microsoft pour la version actuelle.
 
 ## Configuration du Fichier d'Échange
 
@@ -126,7 +120,7 @@ Assurez-vous d'avoir la dernière version de .NET installée :
 
 <img src="/assets/Images/guides/1d3150dfc46844dfaf1d657e56c723d3-39fd15.webp" alt="Protection contre les exploits de Windows, paramètres du programme GoaT.exe : options Code integrity guard et Control flow guard" width="527" height="634">
 
-- Excluez **1)** `gamename.exe`, **2)** le dossier du jeu, et **3)** le dossier du cache de shaders de votre antivirus
-- Excluez du Control Flow Guard : Démarrer → **Protection contre les attaques** → **Paramètres du programme** → Ajoutez **Cyberpunk2077.exe** → **Protection du flux de contrôle (CFG)** → **Remplacer** → **Désactivé**
+- Excluez de votre antivirus **1)** `Cyberpunk2077.exe` (dans `bin\x64` du dossier du jeu), **2)** le dossier du jeu, **3)** les dossiers d'installation et de téléchargements de Ghost of the Grid, et **4)** le dossier du cache de shaders
+- Excluez du Control Flow Guard : Démarrer → **Protection contre les attaques** → **Paramètres du programme** → Ajoutez **Cyberpunk2077.exe** → **Protection du flux de contrôle (CFG)** → **Remplacer** → **Désactivé**. La capture montre ces réglages pour un autre programme : utilisez `Cyberpunk2077.exe`.
 
 </div>
