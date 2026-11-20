@@ -1,9 +1,12 @@
 {%- comment -%}
-  Cinematic page header. Params: eyebrow (+ eyebrow_fr), title / title_en + title_fr, lead_en, lead_fr, image.
+  Cinematic page header. Params: eyebrow (+ eyebrow_fr), title / title_en + title_fr, lead_en, lead_fr, image, image_light (shown instead in the light theme, lazy), hex (true when the image is one of the honeycomb backgrounds).
 {%- endcomment -%}
 {%- assign ph_img = include.image | default: '/assets/Images/AstralForge_Background_Dark.webp' -%}
-<header class="phero">
-  <img class="phero__bg" src="{{ ph_img | relative_url }}" srcset="{{ ph_img | srcset }}" sizes="100vw" alt="" fetchpriority="high" decoding="async" data-parallax>
+<header class="phero{% if include.hex %} phero--hex{% endif %}">
+  <img class="phero__bg{% if include.image_light %} theme-d{% endif %}" src="{{ ph_img | relative_url }}" srcset="{{ ph_img | srcset }}" sizes="100vw" alt="" fetchpriority="high" decoding="async" data-parallax>
+  {%- if include.image_light %}
+  <img class="phero__bg theme-l" src="{{ include.image_light | relative_url }}" srcset="{{ include.image_light | srcset }}" sizes="100vw" alt="" loading="lazy" decoding="async" data-parallax>
+  {%- endif %}
   <div class="wrap phero__inner">
     {%- if include.eyebrow %}
     <span class="eyebrow"><span class="diamond is-full"></span>{% if include.eyebrow_fr %}<span lang="en">{{ include.eyebrow }}</span><span lang="fr">{{ include.eyebrow_fr }}</span>{% else %}{{ include.eyebrow }}{% endif %}</span>

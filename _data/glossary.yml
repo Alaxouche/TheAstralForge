@@ -1,0 +1,159 @@
+# Glossary shown as tooltips in the guides (build.mjs: glossarize).
+# The first occurrence of a term on a page, in each language block, gets a dotted underline and a
+# tooltip. Not applied to headings, links, code, keyboard maps, changelogs and load orders.
+#   match: regular expressions (JavaScript, "u" flag) tried on the page text; they are case-sensitive
+#          unless the entry has "i: true". Apostrophes may come as ', ’ or &#39; in the HTML.
+#   name:  the full name shown in bold at the top of the tooltip.
+# Keep definitions short, concrete and true for these lists. No em dash.
+
+- id: wabbajack
+  match: ['Wabbajack']
+  name: Wabbajack
+  en: "The installer that builds the whole list for you: it downloads every mod from its original page and puts each file where the list expects it."
+  fr: "L'installateur qui construit toute la liste pour vous : il télécharge chaque mod depuis sa page d'origine et place chaque fichier là où la liste l'attend."
+
+- id: mo2
+  match: ['Mod Organizer 2', 'Mod Organizer', 'MO2']
+  name: Mod Organizer 2 (MO2)
+  en: "The mod manager the list runs in. Each mod stays in its own folder and the game sees them through a virtual folder, so the game directory stays clean. Start the game from it."
+  fr: "Le gestionnaire de mods dans lequel tourne la liste. Chaque mod reste dans son propre dossier et le jeu les voit à travers un dossier virtuel : le dossier du jeu reste propre. Lancez le jeu depuis MO2."
+
+- id: enb
+  match: ['ENB']
+  name: ENB
+  en: "A graphics injector (ENBSeries) that redraws Skyrim's lighting, shadows and effects on top of the game. A preset is one set of its settings."
+  fr: "Un injecteur graphique (ENBSeries) qui redessine l'éclairage, les ombres et les effets de Skyrim par-dessus le jeu. Un preset est un ensemble de ses réglages."
+
+- id: reshade
+  match: ['ReShade']
+  name: ReShade
+  en: "A post-processing injector that adds image effects (sharpening, colour grading, ambient occlusion) on top of a game."
+  fr: "Un injecteur de post-traitement qui ajoute des effets d'image (netteté, étalonnage des couleurs, occlusion ambiante) par-dessus un jeu."
+
+- id: ctd
+  match: ['CTD']
+  name: CTD (crash to desktop)
+  en: "The game closes on its own and drops you back on the Windows desktop, usually without an error message."
+  fr: "Le jeu se ferme tout seul et vous ramène au bureau de Windows, en général sans message d'erreur."
+
+- id: skse
+  match: ['SKSE']
+  name: SKSE (Skyrim Script Extender)
+  en: "Extends Skyrim's scripting so mods can do more. Many mods of the list need it; Mod Organizer starts it with the game."
+  fr: "Étend les scripts de Skyrim pour que les mods puissent en faire plus. Beaucoup de mods de la liste en ont besoin ; Mod Organizer le lance avec le jeu."
+
+- id: sfse
+  match: ['SFSE']
+  name: SFSE (Starfield Script Extender)
+  en: "Extends Starfield's scripting so mods can do more. Mods that need it do not load without it; Mod Organizer starts it with the game."
+  fr: "Étend les scripts de Starfield pour que les mods puissent en faire plus. Les mods qui en dépendent ne se chargent pas sans lui ; Mod Organizer le lance avec le jeu."
+
+- id: cet
+  match: ['Cyber Engine Tweaks', 'CET']
+  name: Cyber Engine Tweaks (CET)
+  en: "A Cyberpunk 2077 modding framework: it runs Lua mods and opens an in-game overlay with their menus. It asks you to bind its overlay key at the first launch."
+  fr: "Un framework de modding pour Cyberpunk 2077 : il fait tourner les mods Lua et ouvre une surcouche en jeu avec leurs menus. Il vous demande d'assigner sa touche au premier lancement."
+
+- id: redscript
+  match: ['redscript']
+  name: redscript
+  en: "The compiler for Cyberpunk 2077 script mods. At launch it merges the mods' scripts with the game's; a compile error message at startup comes from it."
+  fr: "Le compilateur des mods de script de Cyberpunk 2077. Au lancement, il fusionne les scripts des mods avec ceux du jeu ; un message d'erreur de compilation au démarrage vient de lui."
+
+- id: lod
+  match: ['LOD']
+  name: LOD (level of detail)
+  en: "Simplified models and textures for what is far away, so distant land, trees and buildings can be drawn without their full cost."
+  fr: "Des modèles et textures simplifiés pour ce qui est loin, afin d'afficher le relief, les arbres et les bâtiments lointains sans leur coût complet."
+
+- id: dyndolod
+  match: ['DynDOLOD']
+  name: DynDOLOD
+  en: "A tool that generates Skyrim's distant LOD for objects and trees from the list's own mods."
+  fr: "Un outil qui génère le LOD lointain des objets et des arbres de Skyrim à partir des mods de la liste."
+
+- id: pagefile
+  match: ['pagefile', 'page file', "fichier d(?:'|’|&#39;)échange"]
+  i: true
+  name: Pagefile
+  en: "Space on a drive that Windows uses as extra memory when the RAM is full. Big lists need a large one, or the game can crash."
+  fr: "De l'espace disque que Windows utilise comme mémoire supplémentaire quand la RAM est pleine. Les grosses listes en demandent un grand, sinon le jeu peut planter."
+
+- id: vram
+  match: ['VRAM']
+  name: VRAM
+  en: "The graphics card's own memory. Textures live there; when it runs out, the game stutters or crashes."
+  fr: "La mémoire propre de la carte graphique. Les textures y sont stockées ; quand elle est pleine, le jeu saccade ou plante."
+
+- id: loadorder
+  match: ['load order', 'ordre de chargement']
+  i: true
+  name: Load order
+  en: "The order in which plugins load. When two of them change the same thing, the one loaded last wins. The list's order is already set: do not sort it."
+  fr: "L'ordre dans lequel les plugins se chargent. Quand deux d'entre eux modifient la même chose, le dernier chargé l'emporte. L'ordre de la liste est déjà réglé : ne le triez pas."
+
+- id: mcm
+  match: ['MCM']
+  name: MCM (Mod Configuration Menu)
+  en: "The in-game menu, under the pause menu, where mods show their settings."
+  fr: "Le menu en jeu, dans le menu pause, où les mods affichent leurs réglages."
+
+- id: plugin
+  match: ['ESP', 'ESM', 'ESL']
+  name: Plugins (.esp, .esm, .esl)
+  en: "Data files that add or change things in the game (items, quests, places). Their order is the load order."
+  fr: "Des fichiers de données qui ajoutent ou modifient des éléments du jeu (objets, quêtes, lieux). Leur ordre est l'ordre de chargement."
+
+- id: archive
+  match: ['BA2', 'BSA']
+  name: BSA / BA2 archives
+  en: "Bethesda archive files that pack a mod's meshes, textures and sounds into one file."
+  fr: "Des archives Bethesda qui regroupent les modèles, textures et sons d'un mod dans un seul fichier."
+
+- id: ini
+  match: ['INI']
+  name: INI files
+  en: "Plain-text settings files that the game and many mods read at launch."
+  fr: "Des fichiers de réglages en texte brut que le jeu et beaucoup de mods lisent au lancement."
+
+- id: proton
+  match: ['Proton']
+  name: Proton
+  en: "Valve's compatibility layer that runs Windows games on Linux and on the Steam Deck."
+  fr: "La couche de compatibilité de Valve qui fait tourner les jeux Windows sous Linux et sur le Steam Deck."
+
+- id: framegen
+  match: ['Frame Generation', 'Frame Gen']
+  name: Frame generation
+  en: "The graphics card inserts generated frames between the rendered ones to raise the frame rate (DLSS 3, FSR 3). It adds a little input latency."
+  fr: "La carte graphique insère des images générées entre les images calculées pour augmenter le nombre d'images par seconde (DLSS 3, FSR 3). Elle ajoute un peu de latence."
+
+- id: dlss
+  match: ['DLSS']
+  name: DLSS
+  en: "NVIDIA's upscaler for RTX cards: the game renders at a lower resolution and DLSS rebuilds a sharp image, for more frames per second."
+  fr: "L'upscaler de NVIDIA pour les cartes RTX : le jeu calcule l'image en plus basse résolution et DLSS reconstruit une image nette, pour plus d'images par seconde."
+
+- id: vcredist
+  match: ['Visual C\+\+']
+  name: Visual C++ Redistributable
+  en: "Microsoft runtime libraries that many mod DLLs need. Install the versions the guide links."
+  fr: "Des bibliothèques d'exécution Microsoft dont beaucoup de DLL de mods ont besoin. Installez les versions indiquées par le guide."
+
+- id: dotnet
+  match: ['\.NET(?: Desktop Runtime)?']
+  name: .NET
+  en: "A Microsoft runtime that some modding tools need to run. The guide says which version to install."
+  fr: "Un environnement d'exécution Microsoft dont certains outils de modding ont besoin. Le guide indique quelle version installer."
+
+- id: ssd
+  match: ['SSD']
+  name: SSD
+  en: "A solid-state drive. Much faster than a hard disk (HDD): the list loads faster and stutters less when installed on one."
+  fr: "Un disque à mémoire flash. Bien plus rapide qu'un disque dur (HDD) : la liste charge plus vite et saccade moins quand elle y est installée."
+
+- id: ae
+  match: ['Anniversary Edition']
+  name: Anniversary Edition
+  en: "The paid upgrade of Skyrim Special Edition that bundles the Creation Club content released with it."
+  fr: "La mise à niveau payante de Skyrim Special Edition qui regroupe le contenu Creation Club sorti avec elle."

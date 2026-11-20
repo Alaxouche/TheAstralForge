@@ -4,7 +4,7 @@ layout: page
 permalink: /hub/
 description: "Every modlist hosted on The Astral Forge."
 ---
-{% include page_hero.html eyebrow="The Astral Forge" title_en="Modlists" title_fr="Modlists" lead_en="Five lists across four games. Each one has an install guide, a changelog, its load order and the known issues." lead_fr="Cinq listes sur quatre jeux. Pour chacune : un guide d'installation, un changelog, l'ordre de chargement et les problèmes connus." image="/assets/Images/Skyrim/enb_2026-2-28_18-36-25_572.webp" %}
+{% include page_hero.html eyebrow="The Astral Forge" title_en="Modlists" title_fr="Modlists" lead_en="Five lists across four games. Each one has an install guide, a changelog, its load order and the known issues." lead_fr="Cinq listes sur quatre jeux. Pour chacune : un guide d'installation, un changelog, l'ordre de chargement et les problèmes connus." image="/assets/Images/hex-hero.webp" image_light="/assets/Images/hex-hero-light.webp" hex=true %}
 
 <section class="bands">
   {%- for m in site.modlists %}

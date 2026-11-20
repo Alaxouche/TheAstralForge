@@ -27,7 +27,7 @@ Pendant que vous jouez avec la liste, vous pourriez rencontrer quelques problèm
 	<article class="issue-card">
 		<header class="issue-card__header">
 			<h3><span lang="en">Bikers fail to load at distance</span><span lang="fr">Les motards ne se chargent pas à distance</span></h3>
-			<span class="issue-status issue-status--in-progress">In progress</span>
+			<span class="issue-status issue-status--in-progress"><span lang="en">In progress</span><span lang="fr">En cours</span></span>
 		</header>
 		<p class="issue-card__summary"><span lang="en">NPC bikes can appear empty when streaming in at high speed.</span><span lang="fr">Les motos des PNJ peuvent apparaître vides lors du chargement à grande vitesse.</span></p>
 		<details class="issue-workaround">
@@ -52,7 +52,7 @@ Pendant que vous jouez avec la liste, vous pourriez rencontrer quelques problèm
 	<article class="issue-card">
 		<header class="issue-card__header">
 			<h3><span lang="en">CTD during the first act</span><span lang="fr">CTD pendant le premier acte</span></h3>
-			<span class="issue-status issue-status--in-progress">In progress</span>
+			<span class="issue-status issue-status--in-progress"><span lang="en">In progress</span><span lang="fr">En cours</span></span>
 		</header>
 		<p class="issue-card__summary"><span lang="en">Crashes can happen during the scripted intro sequence.</span><span lang="fr">Des crashs peuvent survenir pendant la séquence d'intro scriptée.</span></p>
 		<details class="issue-workaround">

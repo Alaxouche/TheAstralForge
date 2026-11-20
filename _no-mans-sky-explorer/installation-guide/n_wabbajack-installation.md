@@ -30,8 +30,6 @@ Downloading and installing No Man's Sky - Explorer can take a while. Follow the 
 
 **Even if Wabbajack says installation complete, this doesn't mean you have finished. You must follow the rest of the installation guide.**
 
-**Installation Video:**
-
 </div>
 <div lang="fr" markdown="1">
 
@@ -57,23 +55,6 @@ Le téléchargement et l'installation de No Man's Sky - Explorer peuvent prendre
 
 **Même si Wabbajack dit que l'installation est terminée, vous n'avez pas fini. Vous devez suivre le reste du guide d'installation.**
 
-**Vidéo d'installation :**
-
-</div>
-
-<div class="video-tutorials-wrapper" style="margin: 2rem 0;">
-  <div class="video-player-wrapper">
-    <div id="wabbajack-video-player" class="video-player">
-      <iframe
-        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-        class="video-iframe"
-        style="width: 100%; height: 100%;">
-      </iframe>
-    </div>
-  </div>
 </div>
 
 <div lang="en" markdown="1">

@@ -14,6 +14,7 @@ import { fileURLToPath } from 'node:url';
 import { Liquid } from 'liquidjs';
 import { Marked } from 'marked';
 import yaml from 'js-yaml';
+import { transformSync } from 'esbuild';
 import { keymapHtml, gaugeHtml, cpPerksHtml, sfSkillsHtml } from './visuals.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -164,6 +165,10 @@ const markdown = createMarkdown();
 function renderMarkdown(src) {
   // kramdown's markdown="1" is implicit in CommonMark when a blank line follows the tag.
   src = src.replace(/\s+markdown="1"/g, '');
+  // Raw HTML blocks written with tab indentation and blank lines (known issue cards): in CommonMark a
+  // blank line ends the HTML block and the next indented tag becomes a code block. Pure-HTML blocks
+  // (no markdown inside) are dedented and their blank lines dropped.
+  src = src.replace(/^<div class="issue-grid">[\s\S]*?^<\/div>/gm, (b) => b.replace(/^[ \t]+/gm, '').replace(/\n\s*\n/g, '\n'));
   let html = markdown.parse(src);
   // kramdown block IAL → callouts: "{: .note }" before a paragraph or a blockquote.
   html = html
@@ -205,8 +210,8 @@ function postProcessHtml(html) {
     // external links open in a new tab
     .replace(/<a href="(https?:\/\/(?!theastralforge\.com)[^"]+)"(?![^>]*target=)/g,
       '<a href="$1" target="_blank" rel="noopener noreferrer"')
-    // lazy images
-    .replace(/<img (?![^>]*loading=)/g, '<img loading="lazy" decoding="async" ');
+    // lazy images (not the hero picture marked fetchpriority: it is the LCP element and must load at once)
+    .replace(/<img (?![^>]*(?:loading|fetchpriority)=)/g, '<img loading="lazy" decoding="async" ');
 }
 
 /* ------------------------------------------------------------------ */
@@ -429,37 +434,6 @@ function changelogStatic(content) {
   });
 }
 
-/* Guide pages: top-level numbered lists (not inside li / details / blockquote / table, 2+ items)
-   get the checklist class and their progress bar in the HTML; site.js adds the tick buttons. */
-function checklistStatic(content) {
-  const tagRe = /<(\/?)(ol|ul|li|details|blockquote|table)\b[^>]*>/g;
-  const stack = [], found = [];
-  let m;
-  while ((m = tagRe.exec(content))) {
-    const [tag, close, name] = m;
-    if (!close) {
-      const top = stack[stack.length - 1];
-      if (name === 'li' && top && top.cand) top.items++;
-      const cand = name === 'ol' && !stack.some((s) => ['li', 'details', 'blockquote', 'table'].includes(s.name));
-      stack.push({ name, cand, items: 0, at: m.index, len: tag.length });
-    } else {
-      let s;
-      while (stack.length && (s = stack.pop()).name !== name);
-      if (s && s.name === 'ol' && s.cand && s.items > 1) found.push(s);
-    }
-  }
-  if (!found.length) return content;
-  found.sort((a, b) => b.at - a.at); // insert from the end so earlier offsets stay valid
-  for (const s of found) {
-    const n = s.items;
-    const bar = '<div class="checklist__bar"><span class="checklist__count" role="status">' + biHtml(`0 / ${n} steps done`, `0 / ${n} étapes faites`) +
-      '</span><span class="checklist__track" aria-hidden="true"><span></span></span><button type="button" class="checklist__reset" hidden></button></div>\n';
-    const open = content.slice(s.at, s.at + s.len);
-    const withClass = /class="/.test(open) ? open.replace('class="', 'class="checklist ') : open.replace('<ol', '<ol class="checklist"');
-    content = content.slice(0, s.at) + bar + withClass + content.slice(s.at + s.len);
-  }
-  return content;
-}
 
 /* "6 months ago" / "il y a 6 mois" at build time, same thresholds as relTime() in site.js */
 function relTimeBi(iso, now = Date.now()) {
@@ -491,6 +465,85 @@ function srcsetOf(src) {
   if (!e || !e.t) return '';
   const parts = Object.entries(e.t).filter(([, t]) => fs.existsSync(path.join(ROOT, t))).map(([w, t]) => `${encodeURI(t)} ${w}w`);
   return parts.length ? [...parts, `${src} ${e.w}w`].join(', ') : '';
+}
+
+/* Glossary tooltips (_data/glossary.yml). The first occurrence of each term on a page, in each
+   language block, becomes <span class="gl">term<span class="gl__tip" role="tooltip">…</span></span>.
+   Only text inside .prose or .faq__answer is touched, never headings, links, code, buttons, summaries
+   or the drawn widgets (keyboard maps, gauges, skill boards). Runs on the final HTML, after the
+   search index, so the definitions do not leak into search results. */
+const GL_SKIP_TAGS = new Set(['a', 'code', 'pre', 'kbd', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'summary', 'button', 'script', 'style',
+  'svg', 'title', 'textarea', 'select', 'option', 'label', 'figcaption', 'abbr', 'dt',
+  'table']); // tables scroll sideways (overflow), which would clip the tooltip
+const GL_SKIP_CLASS = /\b(?:gl|kbmap|kb|gauge|sk-board|pt-grid|pt-table|sk-table|issue-status|quick|doc-cta|steps|pager|tags|cl-tools|stats|yt|anchor|copy|shots|features)\b/;
+const GL_VOID = new Set(['area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'source', 'track', 'wbr']);
+let GLOSSARY = null;
+function glossaryEntries(list) {
+  return (list || []).map((g) => ({
+    ...g,
+    re: new RegExp(`(?<![\\p{L}\\p{N}_.])(?:${g.match.join('|')})(?![\\p{L}\\p{N}_])`, g.i ? 'iu' : 'u'),
+  }));
+}
+function glossarize(html) {
+  if (!GLOSSARY || !GLOSSARY.length) return html;
+  const esc = (t) => String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  const seen = {};
+  const stack = []; // {name, allow, skip, lang}
+  let n = 0;
+  const out = [];
+  const tagRe = /<!--[\s\S]*?-->|<\/?([a-zA-Z][\w-]*)\b[^>]*>/g;
+  let last = 0, m;
+  const top = () => stack[stack.length - 1] || { allow: false, skip: false, lang: 'x' };
+  const tip = (g, lang) => {
+    const id = `gl-${g.id}-${++n}`;
+    const def = lang === 'en' || lang === 'fr' ? esc(g[lang])
+      : `<span lang="en">${esc(g.en)}</span><span lang="fr">${esc(g.fr)}</span>`;
+    return [id, `<span class="gl__tip" role="tooltip" id="${id}"><strong>${esc(g.name)}</strong> ${def}</span>`];
+  };
+  const doText = (text) => {
+    const ctx = top();
+    if (!ctx.allow || ctx.skip || !text.trim()) return text;
+    const done = (seen[ctx.lang] = seen[ctx.lang] || new Set());
+    let res = '', rest = text;
+    for (;;) {
+      let best = null;
+      for (const g of GLOSSARY) {
+        if (done.has(g.id)) continue;
+        const r = g.re.exec(rest);
+        if (r && (!best || r.index < best.r.index)) best = { g, r };
+      }
+      if (!best) break;
+      const { g, r } = best;
+      done.add(g.id);
+      const [id, t] = tip(g, ctx.lang);
+      res += rest.slice(0, r.index) + `<span class="gl" tabindex="0" aria-describedby="${id}">${r[0]}${t}</span>`;
+      rest = rest.slice(r.index + r[0].length);
+    }
+    return res + rest;
+  };
+  while ((m = tagRe.exec(html))) {
+    out.push(doText(html.slice(last, m.index)));
+    last = tagRe.lastIndex;
+    const tag = m[0], name = (m[1] || '').toLowerCase();
+    out.push(tag);
+    if (!name || tag.startsWith('<!--')) continue;
+    if (tag[1] === '/') {
+      for (let i = stack.length - 1; i >= 0; i--) if (stack[i].name === name) { stack.length = i; break; }
+      continue;
+    }
+    if (GL_VOID.has(name) || tag.endsWith('/>')) continue;
+    const parent = top();
+    const cls = (tag.match(/\sclass="([^"]*)"/) || [])[1] || '';
+    const lang = (tag.match(/\slang="([a-z]+)"/) || [])[1];
+    stack.push({
+      name,
+      allow: parent.allow || /\b(?:prose|faq__answer)\b/.test(cls),
+      skip: parent.skip || GL_SKIP_TAGS.has(name) || GL_SKIP_CLASS.test(cls),
+      lang: lang || parent.lang,
+    });
+  }
+  out.push(doText(html.slice(last)));
+  return out.join('');
 }
 
 /* "Key Features" bullet list (- **Title**: text) → alternating text / screenshot rows. */
@@ -567,6 +620,7 @@ async function build() {
   engine.registerFilter('sf_skills', (data) => sfSkillsHtml(data));
   // {{ src | thumb: 480 }} → thumbnail URL (or src); {{ src | srcset }} → "t480 480w, ..., src 2560w" (or '')
   try { THUMBS = JSON.parse(read('assets/Images/_thumbs/manifest.json')); } catch { THUMBS = {}; }
+  GLOSSARY = glossaryEntries(data.glossary);
   engine.registerFilter('thumb', (s, w = 480) => relativeUrl(thumbOf(s, w)));
   engine.registerFilter('srcset', (s) => srcsetOf(s).split(', ').filter(Boolean)
     .map((p) => { const i = p.lastIndexOf(' '); return relativeUrl(p.slice(0, i)) + p.slice(i); }).join(', '));
@@ -611,6 +665,8 @@ async function build() {
       game: idx.game || '',
       image: banner.image || idx.image || '/assets/Images/generic_background.webp',
       accent: banner.accent || '#a78bfa',
+      // emblem drawn by scripts/make-modlist-emblems.py, shown on the home panel
+      emblem: exists(`assets/logos/emblems/${key}.svg`) ? `/assets/logos/emblems/${key}.svg` : null,
       subtitle: banner.subtitle || '',
       subtitle_fr: banner.subtitle_fr || '',
       stats: banner.stats || [],
@@ -685,10 +741,13 @@ async function build() {
         const i = seq.findIndex((s) => s.url === page.url);
         if (i === -1) continue;
         prev = seq[i - 1] || null; next = seq[i + 1] || null;
-        // "Step n / N" (and the checklists) only for the install guide: a game guide is not read in order
+        // "Step n / N" only for the install guide: a game guide is not read in order
         if (/install/i.test(item.title)) step = { i: i + 1, n: seq.length, urls: seq.map((s) => s.url), items: seq };
       }
     }
+    // Social preview drawn by scripts/make-og.py (assets/og/<url with / as -->.jpg), when it exists
+    const ogSlug = page.url.replace(/^\/|\/$/g, '').replace(/\//g, '--') || 'home';
+    page.og_image = exists(`assets/og/${ogSlug}.jpg`) ? `/assets/og/${ogSlug}.jpg` : null;
     const ctx = { site, page, modlist, nav: page.collection ? navs[page.collection] : null, prev, next, step };
     let content = await engine.parseAndRender(page.body, ctx);
     // Pages using the 'page' layout are hand-written HTML: skip Markdown.
@@ -722,7 +781,6 @@ async function build() {
       // Section icons (h2 only)
       content = content.replace(/<h2 id="([^"]+)"/g, (m, id) => { const ic = sectionIcon(id); return ic ? `${m} data-icon="${ic}"` : m; });
       content = changelogStatic(content);
-      if (step) content = checklistStatic(content);
       if (page.url === modlist.url) {
         // Overview: text "Quick Links" lists become cards placed under the stats
         content = content.replace(/<h2 id="(?:quick-links|liens-rapides)[^>]*>[\s\S]*?<\/h2>\s*<ul>[\s\S]*?<\/ul>\s*/g, '');
@@ -733,7 +791,8 @@ async function build() {
     }
     const inner = await engine.renderFile(layoutFor(page), { ...ctx, content });
     const html = await engine.renderFile('base.liquid', { ...ctx, content: inner });
-    writeOut(urlToFile(page.url), frenchSpacing(html));
+    const glossed = (modlist && !/\/(?:changelog|loadorder)\//.test(page.url)) || page.url === '/faq/' || page.url === '/hub/';
+    writeOut(urlToFile(page.url), frenchSpacing(glossed ? glossarize(html) : html));
 
     if (page.url !== '/404') {
       const text = content.replace(/<(script|style)[\s\S]*?<\/\1>/g, ' ').replace(/<[^>]+>/g, ' ')
@@ -753,6 +812,10 @@ async function build() {
 
   /* Search index + sitemap */
   writeOut('search.json', JSON.stringify(searchIndex));
+  // What this build used, compared hourly with modlist.json by workers/rebuild (no timestamp in the
+  // signature: an unchanged list must not trigger a rebuild)
+  writeOut('build-info.json', JSON.stringify({ builtAt: new Date().toISOString(),
+    lists: (data.modlist_snapshot || []).map((x) => ({ title: x.title, version: x.version, dateUpdated: x.dateUpdated })) }));
   const urls = pages.filter((p) => p.url !== '/404' && p.sitemap !== false).map((p) => p.url).sort();
   writeOut('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${
     urls.map((u) => `  <url><loc>${siteUrl}${relativeUrl(u)}</loc></url>`).join('\n')}\n</urlset>\n`);
@@ -760,7 +823,14 @@ async function build() {
   /* Static files */
   copyDir(path.join(ROOT, 'assets/Images'), path.join(OUT, 'assets/Images'));
   copyDir(path.join(ROOT, 'assets/logos'), path.join(OUT, 'assets/logos'));
-  copyDir(path.join(THEME, 'assets'), path.join(OUT, 'assets'));
+  if (exists('assets/og')) copyDir(path.join(ROOT, 'assets/og'), path.join(OUT, 'assets/og'));
+  // site.css / site.js are written minified (esbuild, dev dependency only); the rest is copied as is
+  copyDir(path.join(THEME, 'assets'), path.join(OUT, 'assets'), (f) => !/[\\/]site\.(css|js)$/.test(f));
+  for (const [f, loader] of [['site.css', 'css'], ['site.js', 'js']]) {
+    const src = fs.readFileSync(path.join(THEME, 'assets', f), 'utf8');
+    const target = loader === 'css' ? ['chrome111', 'edge111', 'firefox121', 'safari16.4'] : 'es2019';
+    writeOut('assets/' + f, transformSync(src, { loader, minify: true, target, legalComments: 'none' }).code);
+  }
   copyDir(path.join(THEME, 'static'), OUT);
   for (const f of ['CNAME']) if (exists(f)) copyFileIfChanged(path.join(ROOT, f), path.join(OUT, f));
 

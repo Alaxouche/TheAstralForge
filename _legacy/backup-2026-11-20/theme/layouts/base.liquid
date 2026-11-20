@@ -1,0 +1,175 @@
+{%- assign is_home = false %}{% if page.layout == 'skyground_home' %}{% assign is_home = true %}{% endif -%}
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- if is_home %}
+  <title>{{ site.title }} | Modlists Skyrim, Cyberpunk 2077, Starfield</title>
+  {%- else %}
+  <title>{{ page.title }}{% if modlist and modlist.title != page.title %} · {{ modlist.title }}{% endif %} | {{ site.title }}</title>
+  {%- endif %}
+  {%- assign desc = page.description | default: modlist.subtitle | default: site.description | strip_html %}
+  <meta name="description" content="{{ desc | escape }}">
+  <meta property="og:title" content="{{ page.title | default: site.title | escape }}">
+  <meta property="og:description" content="{{ desc | escape }}">
+  <meta property="og:image" content="{{ page.image | default: modlist.image | default: '/assets/logos/emblem-og.jpg' | absolute_url }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta name="theme-color" content="#07080a">
+  <script>
+    (function () {
+      var d = document.documentElement, l;
+      try { l = localStorage.getItem('sg-lang'); } catch (e) {}
+      if (l !== 'en' && l !== 'fr') l = (navigator.language || '').slice(0, 2) === 'fr' ? 'fr' : 'en';
+      d.setAttribute('data-lang', l); d.lang = l;
+    })();
+  </script>
+  {%- comment %} Jost is self-hosted (theme/assets/fonts, SIL OFL): no request to Google, no render-blocking stylesheet {% endcomment %}
+  <link rel="preload" href="{{ '/assets/fonts/jost-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}?v={{ site.version }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/logos/emblem-32.png' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/assets/logos/emblem-180.png' | relative_url }}">
+  <link rel="manifest" href="{{ '/manifest.webmanifest' | relative_url }}">
+  <link rel="alternate" type="application/atom+xml" title="The Astral Forge: releases" href="{{ '/releases.xml' | relative_url }}">
+  {%- if page.modlist_id %}
+  <link rel="alternate" type="application/atom+xml" title="{{ page.title }}: releases" href="{{ '/feeds/' | append: page.modlist_id | append: '.xml' | relative_url }}">
+  {%- endif %}
+  <script src="{{ '/assets/site.js' | relative_url }}?v={{ site.version }}" defer></script>
+</head>
+<body{% if is_home %} class="is-home"{% endif %}>
+  <a class="skip" href="#main"><span lang="en">Skip to content</span><span lang="fr">Aller au contenu</span></a>
+  {%- assign alert = site.data.alerts | where: "enabled", true | first %}
+  {%- if alert %}
+  <div class="alert"><strong>{{ alert.label | default: 'Info' }}</strong> {% if alert.message_fr %}<span lang="en">{{ alert.message }}</span><span lang="fr">{{ alert.message_fr }}</span>{% else %}{{ alert.message }}{% endif %}{% if alert.link_url %} <a href="{{ alert.link_url | relative_url }}">{% if alert.link_text_fr %}<span lang="en">{{ alert.link_text }}</span><span lang="fr">{{ alert.link_text_fr }}</span>{% else %}{{ alert.link_text }}{% endif %}</a>{% endif %}</div>
+  {%- endif %}
+
+  <header class="nav{% if is_home %} nav--home{% endif %}" data-nav{% if modlist %} style="--accent: {{ modlist.accent }}"{% endif %}>
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <img src="{{ '/assets/logos/emblem-mark.webp' | relative_url }}" alt="" width="46" height="46">
+      <span>The Astral Forge</span>
+    </a>
+    {%- if modlist %}
+    <a class="nav__ctx" href="{{ modlist.url | relative_url }}"><span class="diamond is-full"></span>{{ modlist.title }}</a>
+    {%- endif %}
+    <nav class="nav__links" aria-label="Main" data-aria-fr="Principal">
+      <a class="btn nav__page" href="{{ '/hub/' | relative_url }}"{% if page.collection or page.url == '/hub/' %} aria-current="page"{% endif %}>Modlists</a>
+      <a class="btn nav__page" href="{{ '/gallery/' | relative_url }}"{% if page.url == '/gallery/' %} aria-current="page"{% endif %}><span lang="en">Gallery</span><span lang="fr">Galerie</span></a>
+      <a class="btn nav__page" href="{{ '/faq/' | relative_url }}"{% if page.url == '/faq/' %} aria-current="page"{% endif %}>FAQ</a>
+      <a class="btn nav__page" href="{{ '/contributors/' | relative_url }}"{% if page.url == '/contributors/' %} aria-current="page"{% endif %}><span lang="en">Support</span><span lang="fr">Soutenir</span></a>
+      <a class="nav__cta" href="https://discord.gg/alaxouche-s-modding-hub-750268919201398805" target="_blank" rel="noopener noreferrer">Discord<span class="nav__online" data-discord-online hidden><span class="pulse"></span><span data-discord-count></span></span></a>
+      <button class="nav__tool" type="button" data-search-open aria-label="Search (Ctrl+K)" data-aria-fr="Rechercher (Ctrl+K)" aria-keyshortcuts="Control+K /">
+        <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+      <button class="nav__tool" type="button" data-lang-toggle aria-label="Version française" data-aria-fr="English version"><span lang="en">FR</span><span lang="fr">EN</span></button>
+      <button class="nav__tool nav__menu" type="button" data-menu-toggle aria-label="Menu" aria-expanded="false" aria-controls="drawer">
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 8h16M4 16h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+    </nav>
+    <span class="nav__progress" data-progress aria-hidden="true"></span>
+  </header>
+  <nav class="nav__drawer" id="drawer" data-drawer aria-label="Menu">
+    <a href="{{ '/' | relative_url }}"><span lang="en">Home</span><span lang="fr">Accueil</span></a>
+    <a href="{{ '/hub/' | relative_url }}">Modlists</a>
+    <a href="{{ '/gallery/' | relative_url }}"><span lang="en">Gallery</span><span lang="fr">Galerie</span></a>
+    <a href="{{ '/faq/' | relative_url }}">FAQ</a>
+    <a href="{{ '/contributors/' | relative_url }}"><span lang="en">Support</span><span lang="fr">Soutenir</span></a>
+    <a href="{{ '/report-a-bug/' | relative_url }}"><span lang="en">Report a bug</span><span lang="fr">Signaler un bug</span></a>
+    <a href="https://discord.gg/alaxouche-s-modding-hub-750268919201398805" target="_blank" rel="noopener noreferrer">Discord</a>
+  </nav>
+
+  <main id="main" tabindex="-1">
+{{ content }}
+  </main>
+
+  {%- unless is_home %}
+  <footer class="footer">
+    <div class="wrap footer__grid">
+      <div>
+        <a class="brand" href="{{ '/' | relative_url }}">
+          <img src="{{ '/assets/logos/emblem-mark.webp' | relative_url }}" alt="" width="46" height="46" loading="lazy">
+          <span>The Astral Forge</span>
+        </a>
+        <p class="footer__about"><span lang="en">Wabbajack modlists maintained by Alaxouche since 2020. Guides, changelogs and load orders for each one.</span><span lang="fr">Des modlists Wabbajack maintenues par Alaxouche depuis 2020. Guides, changelogs et ordres de chargement pour chacune.</span></p>
+      </div>
+      <div>
+        <p class="footer__h">Modlists</p>
+        <ul>
+          {%- for m in site.modlists %}
+          <li><a href="{{ m.url | relative_url }}">{{ m.title }}</a></li>
+          {%- endfor %}
+        </ul>
+      </div>
+      <div>
+        <p class="footer__h"><span lang="en">Resources</span><span lang="fr">Ressources</span></p>
+        <ul>
+          <li><a href="{{ '/faq/' | relative_url }}">FAQ</a></li>
+          <li><a href="{{ '/gallery/' | relative_url }}"><span lang="en">Gallery</span><span lang="fr">Galerie</span></a></li>
+          <li><a href="{{ '/contributors/' | relative_url }}"><span lang="en">Contributors</span><span lang="fr">Contributeurs</span></a></li>
+          <li><a href="{{ '/report-a-bug/' | relative_url }}"><span lang="en">Report a bug</span><span lang="fr">Signaler un bug</span></a></li>
+          <li><a href="{{ '/releases.xml' | relative_url }}"><span lang="en">Releases feed</span><span lang="fr">Flux des versions</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__h"><span lang="en">Community</span><span lang="fr">Communauté</span></p>
+        <ul>
+          <li><a href="https://discord.gg/alaxouche-s-modding-hub-750268919201398805" target="_blank" rel="noopener noreferrer">Discord <span class="online" data-discord-online hidden><span class="pulse"></span><span data-discord-count></span></span></a></li>
+          <li><a href="https://patreon.com/Alaxouche" target="_blank" rel="noopener noreferrer">Patreon</a></li>
+          <li><a href="https://ko-fi.com/alaxouche" target="_blank" rel="noopener noreferrer">Ko-fi</a></li>
+          <li><a href="https://youtube.com/@alaxouche" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+          <li><a href="https://next.nexusmods.com/profile/AlaxoucheModding" target="_blank" rel="noopener noreferrer">Nexus Mods</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="footer__bottom">
+        <span>© {{ site.year }} The Astral Forge</span>
+        <span><span lang="en">Made by</span><span lang="fr">Réalisé par</span> <a href="https://next.nexusmods.com/profile/AlaxoucheModding" target="_blank" rel="noopener noreferrer">Alaxouche</a></span>
+      </div>
+    </div>
+  </footer>
+  {%- endunless %}
+
+  <dialog class="search" id="search" aria-label="Search" data-aria-fr="Recherche">
+    <div class="search__box">
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <input type="search" id="search-input" placeholder="Search guides, changelogs, mods…" data-ph-fr="Chercher un guide, un changelog, un mod…" aria-label="Search the site" data-aria-fr="Rechercher sur le site" aria-controls="search-results" autocomplete="off" spellcheck="false">
+      <kbd aria-hidden="true">ESC</kbd>
+    </div>
+    <p class="sr-only" id="search-status" role="status" aria-live="polite"></p>
+    <ol class="search__results" id="search-results"></ol>
+    <div class="search__quick" data-search-quick>
+      <p class="search__label"><span lang="en">Install guides</span><span lang="fr">Guides d'installation</span></p>
+      <div class="search__chips">
+        {%- for m in site.modlists %}{% assign g = m.nav | where: 'title', 'Installation Guide' | first %}
+        <a class="chip" href="{% if g %}{{ g.url | relative_url }}{% else %}{{ m.url | relative_url }}{% endif %}"><span class="dot-star" style="--c: {{ m.accent }}"></span>{{ m.title }}</a>
+        {%- endfor %}
+      </div>
+      <p class="search__label"><span lang="en">Try</span><span lang="fr">Essayez</span></p>
+      <div class="search__chips">
+        <button class="chip" type="button" data-q="pagefile">pagefile</button>
+        <button class="chip" type="button" data-q="crash">crash</button>
+        <button class="chip" type="button" data-q="ENB">ENB</button>
+        <button class="chip" type="button" data-q="Nexus premium">Nexus premium</button>
+        <button class="chip" type="button" data-q="Linux">Linux</button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Image viewer" data-aria-fr="Visionneuse d'images">
+    <figure class="lightbox__stage"><img alt="" data-lb-img><figcaption data-lb-cap></figcaption></figure>
+    <button class="lightbox__nav lightbox__nav--prev" type="button" data-lb-prev aria-label="Previous image" data-aria-fr="Image précédente">←</button>
+    <button class="lightbox__nav lightbox__nav--next" type="button" data-lb-next aria-label="Next image" data-aria-fr="Image suivante">→</button>
+    <span class="lightbox__count" data-lb-count aria-live="polite"></span>
+    <button class="lightbox__close" type="button" data-lb-close aria-label="Close" data-aria-fr="Fermer">✕</button>
+  </dialog>
+  <div class="toast" data-toast role="status" aria-live="polite"></div>
+  {%- unless is_home %}
+  <button class="totop" type="button" data-totop aria-label="Back to top" data-aria-fr="Retour en haut">
+    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  {%- endunless %}
+  <script type="speculationrules">{"prefetch":[{"where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/*.xml"}}]},"eagerness":"moderate"}]}</script>
+</body>
+</html>

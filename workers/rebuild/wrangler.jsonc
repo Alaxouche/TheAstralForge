@@ -1,0 +1,9 @@
+{
+  // Deploy from this folder: npx wrangler deploy   (see README.md)
+  "name": "taf-rebuild",
+  "main": "worker.js",
+  "compatibility_date": "2026-09-01",
+  // Every hour at minute 7 (UTC). A rebuild only starts when a modlist changed.
+  "triggers": { "crons": ["7 * * * *"] },
+  "observability": { "enabled": true }
+}

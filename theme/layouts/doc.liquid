@@ -83,7 +83,8 @@
     {%- endif %}
     {%- if is_overview %}{% assign guide = modlist.nav | where: 'title', 'Installation Guide' | first %}
     <section class="doc-cta" aria-labelledby="doc-cta-title">
-      <img src="{{ modlist.image | relative_url }}" alt="" loading="lazy" decoding="async">
+      <img class="doc-cta__hex theme-d" src="{{ '/assets/Images/hex-hero.webp' | thumb: 960 }}" alt="" loading="lazy" decoding="async">
+      <img class="doc-cta__hex theme-l" src="{{ '/assets/Images/hex-hero-light.webp' | thumb: 960 }}" alt="" loading="lazy" decoding="async">
       <h2 id="doc-cta-title" class="doc-cta__title"><span lang="en">Install {{ modlist.title }}</span><span lang="fr">Installer {{ modlist.title }}</span></h2>
       <p><span lang="en">The guide covers every step, from the system requirements to the first launch. Stuck somewhere? Ask in the help channel on Discord.</span><span lang="fr">Le guide couvre chaque étape, de la configuration requise au premier lancement. Bloqué quelque part ? Demandez dans le canal d'aide du Discord.</span></p>
       <div class="actions">

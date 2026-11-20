@@ -110,6 +110,15 @@
       });
     });
     if (canHover) hero.addEventListener('mouseleave', function () { setOn(null); });
+    // The Forge's lit picture sits at opacity 0 until its panel opens: decode it while the page is
+    // idle, so the first open does not stall on a 2560 px decode in the middle of the animation.
+    (window.requestIdleCallback || function (f) { setTimeout(f, 1500); })(function () {
+      $$('.panel__bg--lit', hero).forEach(function (img) {
+        if (img.offsetParent === null || !img.decode) return; // the other theme's picture (display: none)
+        img.loading = 'eager';
+        img.decode().catch(function () {});
+      });
+    });
     document.addEventListener('keydown', function (e) {
       // Leave the keys alone while a dialog or the menu is open, or with modifiers held.
       if ($('dialog[open]') || (drawer && drawer.classList.contains('is-open'))) return;
@@ -128,22 +137,25 @@
   /* =========================================================
      Nav, drawer, reading progress, parallax
      ========================================================= */
-  var nav = $('[data-nav]'), progress = $('[data-progress]'), prose = $('.prose'), plx = $('[data-parallax]');
+  var nav = $('[data-nav]'), progress = $('[data-progress]'), prose = $('.prose'), plx = $$('[data-parallax]');
   var ticking = false;
+  // Reads (scroll position, prose box) come before every write, and the first run waits for the
+  // next frame: reading scrollY while the page is still being built forced a full layout of long
+  // pages (about 150 ms on a 3000-line changelog), then the scripts below dirtied it again.
   function onScroll() {
     ticking = false;
-    var y = scrollY;
+    var y = scrollY, ih = innerHeight, r = progress && prose ? prose.getBoundingClientRect() : null;
     if (nav && !hero) nav.classList.toggle('is-solid', y > 40);
-    if (progress && prose) {
-      var r = prose.getBoundingClientRect(), total = r.height - innerHeight * .6;
+    if (r) {
+      var total = r.height - ih * .6;
       var p = total > 0 ? Math.min(1, Math.max(0, -r.top / total)) : 0;
       progress.style.transform = 'scaleX(' + p + ')';
     }
-    if (plx && !calm && y < innerHeight) plx.style.transform = 'translate3d(0,' + (y * .35) + 'px,0) scale(1.06)';
-    if (toTop) toTop.classList.toggle('is-on', y > innerHeight * 1.5);
+    if (plx.length && !calm && y < ih) plx.forEach(function (el) { el.style.transform = 'translate3d(0,' + (y * .35) + 'px,0) scale(1.06)'; });
+    if (toTop) toTop.classList.toggle('is-on', y > ih * 1.5);
   }
   addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
-  onScroll();
+  requestAnimationFrame(onScroll);
 
   /* Overlays (mobile menu, mobile docs sidebar): Escape closes, focus moves in on
      open and back to the button on close, Tab stays inside while open. */
@@ -193,7 +205,6 @@
       scrollTo({ top: 0, behavior: calm ? 'auto' : 'smooth' });
       var m = $('#main'); if (m) m.focus({ preventScroll: true });
     });
-    onScroll();
   }
 
   /* Hub bands follow the cursor */
@@ -239,6 +250,24 @@
     });
   });
 
+  /* Theme: dark by default, light when the visitor picks it (localStorage['taf-theme']).
+     The <head> script applies the stored choice before the first paint. */
+  var themeMeta = $('meta[name="theme-color"]');
+  function syncTheme() {
+    var light = root.getAttribute('data-theme') === 'light';
+    $$('[data-theme-toggle]').forEach(function (b) { b.setAttribute('aria-pressed', light); });
+    if (themeMeta) themeMeta.content = light ? '#f4f1ea' : '#07080a';
+  }
+  $$('[data-theme-toggle]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+      root.setAttribute('data-theme', next);
+      store.set('taf-theme', next);
+      syncTheme();
+    });
+  });
+  syncTheme();
+
   /* =========================================================
      Live data: modlist.json (version, size, last update)
      ========================================================= */
@@ -278,7 +307,8 @@
       if (el.hasAttribute('data-count')) el.dataset.final = v;
       if (el.textContent !== v) {
         el.textContent = v;
-        el.classList.remove('is-fresh-value'); void el.offsetWidth; el.classList.add('is-fresh-value');
+        el.classList.remove('is-fresh-value');
+        requestAnimationFrame(function () { requestAnimationFrame(function () { el.classList.add('is-fresh-value'); }); });
       }
     });
     $$('[data-fresh]').forEach(function (el) {
@@ -287,20 +317,6 @@
     });
     renderTimes();
   }
-  if ($('[data-live], [data-fresh]')) {
-    var cached = store.get('taf-live', sessionStorage);
-    try { cached = cached && JSON.parse(cached); } catch (e) { cached = null; }
-    if (cached && Date.now() - cached.t < 10 * 60 * 1000) applyLive(cached.d);
-    else fetch(MODLIST_JSON, { cache: 'no-cache' })
-      .then(function (r) { return r.ok ? r.json() : null; })
-      .then(function (d) {
-        if (!Array.isArray(d)) return;
-        var slim = d.map(function (e) { return { title: e.title, version: e.version, dateUpdated: e.dateUpdated, download_metadata: e.download_metadata }; });
-        store.set('taf-live', JSON.stringify({ t: Date.now(), d: slim }), sessionStorage);
-        applyLive(slim);
-      }).catch(function () {});
-  }
-
   /* Discord members online */
   // The count now shows in the nav on every page: cache it 5 minutes per tab.
   function showDiscord(n) {
@@ -311,18 +327,41 @@
       a.setAttribute('aria-label', 'Discord, ' + n + (lang() === 'fr' ? ' membres en ligne' : ' members online'));
     });
   }
+  /* Live data: /api/live (functions/api/live.js on Cloudflare) answers with the lists and the
+     Discord count in one same-site request; GitHub and Discord are only called directly when it is
+     missing (local dev server) or fails. Cached per tab: lists 10 min, Discord 5 min. */
+  var slimLists = function (d) {
+    return d.map(function (e) { return { title: e.title, version: e.version, dateUpdated: e.dateUpdated, download_metadata: e.download_metadata }; });
+  };
+  var gotLists = function (list) { store.set('taf-live', JSON.stringify({ t: Date.now(), d: list }), sessionStorage); applyLive(list); };
+  var gotDiscord = function (n) { store.set('taf-discord', JSON.stringify({ t: Date.now(), n: n }), sessionStorage); showDiscord(n); };
+  var needLists = false, needDiscord = false;
+  if ($('[data-live], [data-fresh]')) {
+    var cached = store.get('taf-live', sessionStorage);
+    try { cached = cached && JSON.parse(cached); } catch (e) { cached = null; }
+    if (cached && Date.now() - cached.t < 10 * 60 * 1000) applyLive(cached.d); else needLists = true;
+  }
   if ($('[data-discord-online]')) {
     var dc = null;
     try { dc = JSON.parse(store.get('taf-discord', sessionStorage)); } catch (e) {}
-    if (dc && Date.now() - dc.t < 5 * 60 * 1000) showDiscord(dc.n);
-    else fetch('https://discord.com/api/guilds/' + DISCORD_ID + '/widget.json')
-      .then(function (r) { return r.ok ? r.json() : null; })
-      .then(function (d) {
-        if (!d || !d.presence_count) return;
-        store.set('taf-discord', JSON.stringify({ t: Date.now(), n: d.presence_count }), sessionStorage);
-        showDiscord(d.presence_count);
-      }).catch(function () {});
+    if (dc && Date.now() - dc.t < 5 * 60 * 1000) showDiscord(dc.n); else needDiscord = true;
   }
+  var direct = function () {
+    if (needLists) fetch(MODLIST_JSON, { cache: 'no-cache' })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) { if (Array.isArray(d)) gotLists(slimLists(d)); }).catch(function () {});
+    if (needDiscord) fetch('https://discord.com/api/guilds/' + DISCORD_ID + '/widget.json')
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) { if (d && d.presence_count) gotDiscord(d.presence_count); }).catch(function () {});
+  };
+  if (needLists || needDiscord) fetch(base + '/api/live')
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (d) {
+      if (!d) return direct();
+      if (needLists && Array.isArray(d.modlists)) { gotLists(slimLists(d.modlists)); needLists = false; }
+      if (needDiscord && d.discord && d.discord.online) { gotDiscord(d.discord.online); needDiscord = false; }
+      if (needLists || needDiscord) direct();
+    }).catch(direct);
 
   /* =========================================================
      Docs sidebar + section outline
@@ -339,13 +378,18 @@
   function buildToc() {
     var list = $('[data-side-toc]');
     if (!list) return;
-    var heads = $$('.prose h2[id]').filter(function (h) { return h.offsetParent !== null && !h.closest('details, .doc-cta'); });
+    // No offsetParent / innerText here: both force a layout of the whole page
+    var cur = lang();
+    var heads = $$('.prose h2[id]').filter(function (h) {
+      var block = h.parentNode.closest('[lang]');
+      return (!block || block === root || block.getAttribute('lang') === cur) && !h.classList.contains('is-dup') && !h.closest('details, .doc-cta');
+    });
     list.innerHTML = '';
     if (tocObserver) tocObserver.disconnect();
     var map = {};
     heads.forEach(function (h) {
       var a = document.createElement('a');
-      a.href = '#' + h.id; a.textContent = h.innerText;
+      a.href = '#' + h.id; a.textContent = h.textContent.trim();
       var li = document.createElement('li'); li.appendChild(a); list.appendChild(li);
       map[h.id] = a;
     });
@@ -474,12 +518,45 @@
     var render = function () {
       var f = form.elements;
       pre.textContent = '**' + (f.type.value || 'Bug report') + (f.project.value ? ' / ' + f.project.value : '') + '**\n' +
+        (f.contact.value ? 'From: ' + f.contact.value + '\n' : '') +
         (f.title.value ? 'Summary: ' + f.title.value + '\n' : '') +
         (f.details.value ? '\n' + f.details.value + '\n' : '') +
         (f.links.value ? '\nLinks:\n' + f.links.value.split('\n').filter(Boolean).map(function (l) { return '- ' + l; }).join('\n') : '');
     };
     form.addEventListener('input', render);
-    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    // Send: POST /api/report (functions/api/report.js) forwards the report to the Discord channel.
+    // When it is not available (local server, not configured), the preview below stays the way out.
+    var opened = Date.now(), sending = false;
+    var status = $('[data-bug-status]', bug), sendBtn = $('[data-bug-send]', bug);
+    var say = function (en, fr, kind) { status.textContent = lang() === 'fr' ? fr : en; status.dataset.kind = kind || ''; };
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (sending) return;
+      var f = form.elements;
+      if (f.title.value.trim().length < 5 || f.details.value.trim().length < 20) {
+        say('Add a summary (5 characters or more) and some details (20 or more).', 'Ajoutez un résumé (5 caractères ou plus) et des détails (20 ou plus).', 'error');
+        return;
+      }
+      sending = true; sendBtn.disabled = true;
+      say('Sending…', 'Envoi…');
+      fetch(base + '/api/report', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ title: f.title.value, type: f.type.value, project: f.project.value, contact: f.contact.value,
+          details: f.details.value, links: f.links.value, website: f.website.value, elapsed: Date.now() - opened })
+      }).then(function (r) { return r.json().catch(function () { return { ok: false }; }).then(function (d) { return { status: r.status, d: d }; }); })
+        .then(function (res) {
+          if (res.d && res.d.ok) {
+            say('Sent. Thanks! Answers come in the support channel on Discord.', 'Envoyé, merci ! Les réponses arrivent dans le canal de support du Discord.', 'ok');
+            form.reset(); render(); opened = Date.now();
+          } else if (res.status === 429) {
+            say('Too many reports right now. Wait a minute and send again.', 'Trop d\'envois pour le moment. Attendez une minute puis renvoyez.', 'error');
+          } else {
+            say('Sending is not available. Copy the preview below and post it in the support channel.', 'L\'envoi n\'est pas disponible. Copiez l\'aperçu ci-dessous et publiez-le dans le canal de support.', 'error');
+          }
+        })
+        .catch(function () { say('Sending failed. Copy the preview below and post it on Discord.', 'L\'envoi a échoué. Copiez l\'aperçu ci-dessous et publiez-le sur Discord.', 'error'); })
+        .then(function () { sending = false; sendBtn.disabled = false; });
+    });
     render();
     $('[data-bug-copy]', bug).addEventListener('click', function (e) {
       var btn = e.currentTarget, label = btn.innerHTML;
@@ -653,58 +730,6 @@
     refreshers.push(filter);
   }
 
-  /* ---------- Guide checklists: numbered steps you can tick, saved in this browser ----------
-     Every top-level numbered list on a guide page. Ticks are keyed by page, list position
-     inside its language block and item count, so the EN and FR lists share them. */
-  if ($('[data-steps]')) {
-    var TK = 'taf-ticks', ticks = {};
-    try { ticks = JSON.parse(localStorage.getItem(TK) || '{}') || {}; } catch (e) {}
-    var saveTicks = function () { try { localStorage.setItem(TK, JSON.stringify(ticks)); } catch (e) {} };
-    var path = location.pathname.replace(/index\.html$/, '');
-    var seen = {};
-    var lists = $$('.prose ol.checklist'); // marked, with their bar, by build.mjs (checklistStatic)
-    var groups = {};
-    lists.forEach(function (ol) {
-      var block = ol.closest('[lang]'), bl = block ? block.getAttribute('lang') : 'x';
-      seen[bl] = (seen[bl] || 0) + 1;
-      var key = path + '|' + seen[bl] + '|' + ol.children.length;
-      (groups[key] = groups[key] || []).push(ol);
-      var bar = ol.previousElementSibling;
-      if (!bar || !bar.classList.contains('checklist__bar')) return;
-      $$(':scope > li', ol).forEach(function (li, i) {
-        var b = document.createElement('button');
-        b.type = 'button'; b.className = 'tick'; b.setAttribute('role', 'checkbox');
-        b.addEventListener('click', function () {
-          var set = ticks[key] || [], at = set.indexOf(i);
-          if (at === -1) set.push(i); else set.splice(at, 1);
-          if (set.length) ticks[key] = set; else delete ticks[key];
-          saveTicks(); paint(key);
-        });
-        li.appendChild(b);
-      });
-      $('.checklist__reset', bar).addEventListener('click', function () { delete ticks[key]; saveTicks(); paint(key); });
-    });
-    var paint = function (key) {
-      var set = ticks[key] || [];
-      groups[key].forEach(function (ol) {
-        var items = $$(':scope > li', ol), done = 0;
-        items.forEach(function (li, i) {
-          var on = set.indexOf(i) !== -1; if (on) done++;
-          li.classList.toggle('is-done', on);
-          var b = $(':scope > .tick', li);
-          b.setAttribute('aria-checked', on);
-          b.setAttribute('aria-label', tr('Mark step ' + (i + 1) + ' as done', 'Marquer l\'étape ' + (i + 1) + ' comme faite'));
-        });
-        var bar = ol.previousElementSibling;
-        $('.checklist__count', bar).textContent = done + ' / ' + items.length + ' ' + tr('steps done', 'étapes faites');
-        $('.checklist__track > span', bar).style.transform = 'scaleX(' + (done / items.length) + ')';
-        var r = $('.checklist__reset', bar); r.hidden = !done; r.textContent = tr('Reset', 'Réinitialiser');
-        bar.classList.toggle('is-complete', done === items.length);
-      });
-    };
-    Object.keys(groups).forEach(paint);
-    refreshers.push(function () { Object.keys(groups).forEach(paint); });
-  }
 
   /* ---------- YouTube: load the player only when asked (see youtubeFacade in build.mjs) ---------- */
   document.addEventListener('click', function (e) {
@@ -721,16 +746,35 @@
     f.focus();
   });
 
-  /* ---------- Guide progress: remember pages already read ---------- */
-  var KEY = 'taf-read';
-  var read = [];
-  try { read = JSON.parse(localStorage.getItem(KEY) || '[]'); } catch (e) {}
-  if ($('.prose') && $('[data-side]')) {
-    var here = location.pathname.replace(/index\.html$/, '');
-    if (read.indexOf(here) === -1) { read.push(here); try { localStorage.setItem(KEY, JSON.stringify(read.slice(-300))); } catch (e) {} }
-  }
-  var isRead = function (href) { try { return read.indexOf(new URL(href, location.href).pathname) !== -1; } catch (e) { return false; } };
-  $$('.side__item > a, [data-step-url]').forEach(function (a) { if (isRead(a.href)) a.classList.add('is-read'); });
+
+  /* Read marks and step ticks were removed (Nov 2026): clear what older versions stored */
+  try { localStorage.removeItem('taf-read'); localStorage.removeItem('taf-ticks'); } catch (e) {}
+
+  /* ---------- Glossary tooltips: keep the bubble in the window, Escape closes it ----------
+     Layout is only read when a term is hovered or focused, never while the page loads. */
+  var placeTip = function (gl) {
+    var t = $('.gl__tip', gl);
+    if (!t) return;
+    t.style.setProperty('--dx', '0px'); gl.classList.remove('is-below', 'is-off');
+    var r = t.getBoundingClientRect(), pad = 12, dx = 0;
+    if (r.left < pad) dx = pad - r.left;
+    else if (r.right > innerWidth - pad) dx = innerWidth - pad - r.right;
+    if (dx) t.style.setProperty('--dx', Math.round(dx) + 'px');
+    if (r.top < 84) gl.classList.add('is-below');
+  };
+  document.addEventListener('mouseover', function (e) {
+    var g = e.target.closest && e.target.closest('.gl');
+    if (g && !g.contains(e.relatedTarget)) placeTip(g);
+  });
+  document.addEventListener('focusin', function (e) { if (e.target.classList && e.target.classList.contains('gl')) placeTip(e.target); });
+  document.addEventListener('mouseout', function (e) {
+    var g = e.target.closest && e.target.closest('.gl');
+    if (g && !g.contains(e.relatedTarget)) g.classList.remove('is-off');
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    $$('.gl:hover, .gl:focus').forEach(function (g) { g.classList.add('is-off'); });
+  });
 
   /* ---------- Page transitions: morph the modlist title into the docs hero ---------- */
   var hero = $('[data-hero]');

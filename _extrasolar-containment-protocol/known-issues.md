@@ -27,7 +27,7 @@ Pendant que vous jouez avec la liste, vous pourriez rencontrer quelques problèm
 	<article class="issue-card">
 		<header class="issue-card__header">
 			<h3><span lang="en">No issues reported yet</span><span lang="fr">Aucun problème signalé pour l'instant</span></h3>
-			<span class="issue-status issue-status--resolved">Clear</span>
+			<span class="issue-status issue-status--resolved"><span lang="en">Clear</span><span lang="fr">RAS</span></span>
 		</header>
 		<p class="issue-card__summary"><span lang="en">No known vanilla game issues have been reported at this time.</span><span lang="fr">Aucun problème connu du jeu vanilla n'a été signalé pour l'instant.</span></p>
 	</article>
@@ -48,7 +48,7 @@ Pendant que vous jouez avec la liste, vous pourriez rencontrer quelques problèm
 	<article class="issue-card">
 		<header class="issue-card__header">
 			<h3><span lang="en">No issues reported yet</span><span lang="fr">Aucun problème signalé pour l'instant</span></h3>
-			<span class="issue-status issue-status--resolved">Clear</span>
+			<span class="issue-status issue-status--resolved"><span lang="en">Clear</span><span lang="fr">RAS</span></span>
 		</header>
 		<p class="issue-card__summary"><span lang="en">No modlist-specific issues have been reported at this time.</span><span lang="fr">Aucun problème spécifique à la modlist n'a été signalé pour l'instant.</span></p>
 	</article>

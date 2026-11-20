@@ -4,7 +4,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/AstralForge_Background-480.webp",
-   "960": "/assets/Images/_thumbs/AstralForge_Background-960.webp"
+   "960": "/assets/Images/_thumbs/AstralForge_Background-960.webp",
+   "1600": "/assets/Images/_thumbs/AstralForge_Background-1600.webp"
   }
  },
  "/assets/Images/AstralForge_Background_Dark.webp": {
@@ -12,7 +13,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/AstralForge_Background_Dark-480.webp",
-   "960": "/assets/Images/_thumbs/AstralForge_Background_Dark-960.webp"
+   "960": "/assets/Images/_thumbs/AstralForge_Background_Dark-960.webp",
+   "1600": "/assets/Images/_thumbs/AstralForge_Background_Dark-1600.webp"
   }
  },
  "/assets/Images/AstralForge_Background_Light.webp": {
@@ -20,7 +22,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/AstralForge_Background_Light-480.webp",
-   "960": "/assets/Images/_thumbs/AstralForge_Background_Light-960.webp"
+   "960": "/assets/Images/_thumbs/AstralForge_Background_Light-960.webp",
+   "1600": "/assets/Images/_thumbs/AstralForge_Background_Light-1600.webp"
   }
  },
  "/assets/Images/community/1441928834613117110.webp": {
@@ -222,7 +225,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/Cyberpunk/photomode_03122025_143534-480.webp",
-   "960": "/assets/Images/_thumbs/Cyberpunk/photomode_03122025_143534-960.webp"
+   "960": "/assets/Images/_thumbs/Cyberpunk/photomode_03122025_143534-960.webp",
+   "1600": "/assets/Images/_thumbs/Cyberpunk/photomode_03122025_143534-1600.webp"
   }
  },
  "/assets/Images/Cyberpunk/photomode_06122025_154631.webp": {
@@ -230,7 +234,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/Cyberpunk/photomode_06122025_154631-480.webp",
-   "960": "/assets/Images/_thumbs/Cyberpunk/photomode_06122025_154631-960.webp"
+   "960": "/assets/Images/_thumbs/Cyberpunk/photomode_06122025_154631-960.webp",
+   "1600": "/assets/Images/_thumbs/Cyberpunk/photomode_06122025_154631-1600.webp"
   }
  },
  "/assets/Images/Cyberpunk/photomode_10092025_135332.webp": {
@@ -238,7 +243,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/Cyberpunk/photomode_10092025_135332-480.webp",
-   "960": "/assets/Images/_thumbs/Cyberpunk/photomode_10092025_135332-960.webp"
+   "960": "/assets/Images/_thumbs/Cyberpunk/photomode_10092025_135332-960.webp",
+   "1600": "/assets/Images/_thumbs/Cyberpunk/photomode_10092025_135332-1600.webp"
   }
  },
  "/assets/Images/Cyberpunk/photomode_10092025_135519.webp": {
@@ -246,7 +252,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/Cyberpunk/photomode_10092025_135519-480.webp",
-   "960": "/assets/Images/_thumbs/Cyberpunk/photomode_10092025_135519-960.webp"
+   "960": "/assets/Images/_thumbs/Cyberpunk/photomode_10092025_135519-960.webp",
+   "1600": "/assets/Images/_thumbs/Cyberpunk/photomode_10092025_135519-1600.webp"
   }
  },
  "/assets/Images/Cyberpunk/photomode_11092025_182906.webp": {
@@ -254,7 +261,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/Cyberpunk/photomode_11092025_182906-480.webp",
-   "960": "/assets/Images/_thumbs/Cyberpunk/photomode_11092025_182906-960.webp"
+   "960": "/assets/Images/_thumbs/Cyberpunk/photomode_11092025_182906-960.webp",
+   "1600": "/assets/Images/_thumbs/Cyberpunk/photomode_11092025_182906-1600.webp"
   }
  },
  "/assets/Images/Cyberpunk/photomode_11092025_183645.webp": {
@@ -262,7 +270,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/Cyberpunk/photomode_11092025_183645-480.webp",
-   "960": "/assets/Images/_thumbs/Cyberpunk/photomode_11092025_183645-960.webp"
+   "960": "/assets/Images/_thumbs/Cyberpunk/photomode_11092025_183645-960.webp",
+   "1600": "/assets/Images/_thumbs/Cyberpunk/photomode_11092025_183645-1600.webp"
   }
  },
  "/assets/Images/Cyberpunk/photomode_11092025_202700.webp": {
@@ -270,7 +279,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/Cyberpunk/photomode_11092025_202700-480.webp",
-   "960": "/assets/Images/_thumbs/Cyberpunk/photomode_11092025_202700-960.webp"
+   "960": "/assets/Images/_thumbs/Cyberpunk/photomode_11092025_202700-960.webp",
+   "1600": "/assets/Images/_thumbs/Cyberpunk/photomode_11092025_202700-1600.webp"
   }
  },
  "/assets/Images/Cyberpunk/photomode_12092025_105010.webp": {
@@ -278,7 +288,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/Cyberpunk/photomode_12092025_105010-480.webp",
-   "960": "/assets/Images/_thumbs/Cyberpunk/photomode_12092025_105010-960.webp"
+   "960": "/assets/Images/_thumbs/Cyberpunk/photomode_12092025_105010-960.webp",
+   "1600": "/assets/Images/_thumbs/Cyberpunk/photomode_12092025_105010-1600.webp"
   }
  },
  "/assets/Images/Cyberpunk/photomode_12092025_110105.webp": {
@@ -286,7 +297,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/Cyberpunk/photomode_12092025_110105-480.webp",
-   "960": "/assets/Images/_thumbs/Cyberpunk/photomode_12092025_110105-960.webp"
+   "960": "/assets/Images/_thumbs/Cyberpunk/photomode_12092025_110105-960.webp",
+   "1600": "/assets/Images/_thumbs/Cyberpunk/photomode_12092025_110105-1600.webp"
   }
  },
  "/assets/Images/Cyberpunk/photomode_12092025_110731.webp": {
@@ -294,7 +306,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/Cyberpunk/photomode_12092025_110731-480.webp",
-   "960": "/assets/Images/_thumbs/Cyberpunk/photomode_12092025_110731-960.webp"
+   "960": "/assets/Images/_thumbs/Cyberpunk/photomode_12092025_110731-960.webp",
+   "1600": "/assets/Images/_thumbs/Cyberpunk/photomode_12092025_110731-1600.webp"
   }
  },
  "/assets/Images/Cyberpunk/photomode_22022026_172726.webp": {
@@ -302,7 +315,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/Cyberpunk/photomode_22022026_172726-480.webp",
-   "960": "/assets/Images/_thumbs/Cyberpunk/photomode_22022026_172726-960.webp"
+   "960": "/assets/Images/_thumbs/Cyberpunk/photomode_22022026_172726-960.webp",
+   "1600": "/assets/Images/_thumbs/Cyberpunk/photomode_22022026_172726-1600.webp"
   }
  },
  "/assets/Images/Cyberpunk/photomode_28112025_154634.webp": {
@@ -310,7 +324,44 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/Cyberpunk/photomode_28112025_154634-480.webp",
-   "960": "/assets/Images/_thumbs/Cyberpunk/photomode_28112025_154634-960.webp"
+   "960": "/assets/Images/_thumbs/Cyberpunk/photomode_28112025_154634-960.webp",
+   "1600": "/assets/Images/_thumbs/Cyberpunk/photomode_28112025_154634-1600.webp"
+  }
+ },
+ "/assets/Images/forge-hex-dark.webp": {
+  "w": 2560,
+  "h": 1440,
+  "t": {
+   "480": "/assets/Images/_thumbs/forge-hex-dark-480.webp",
+   "960": "/assets/Images/_thumbs/forge-hex-dark-960.webp",
+   "1600": "/assets/Images/_thumbs/forge-hex-dark-1600.webp"
+  }
+ },
+ "/assets/Images/forge-hex-light-lit.webp": {
+  "w": 2560,
+  "h": 1440,
+  "t": {
+   "480": "/assets/Images/_thumbs/forge-hex-light-lit-480.webp",
+   "960": "/assets/Images/_thumbs/forge-hex-light-lit-960.webp",
+   "1600": "/assets/Images/_thumbs/forge-hex-light-lit-1600.webp"
+  }
+ },
+ "/assets/Images/forge-hex-light.webp": {
+  "w": 2560,
+  "h": 1440,
+  "t": {
+   "480": "/assets/Images/_thumbs/forge-hex-light-480.webp",
+   "960": "/assets/Images/_thumbs/forge-hex-light-960.webp",
+   "1600": "/assets/Images/_thumbs/forge-hex-light-1600.webp"
+  }
+ },
+ "/assets/Images/forge-hex-lit.webp": {
+  "w": 2560,
+  "h": 1440,
+  "t": {
+   "480": "/assets/Images/_thumbs/forge-hex-lit-480.webp",
+   "960": "/assets/Images/_thumbs/forge-hex-lit-960.webp",
+   "1600": "/assets/Images/_thumbs/forge-hex-lit-1600.webp"
   }
  },
  "/assets/Images/generic_background.webp": {
@@ -318,7 +369,44 @@
   "h": 4167,
   "t": {
    "480": "/assets/Images/_thumbs/generic_background-480.webp",
-   "960": "/assets/Images/_thumbs/generic_background-960.webp"
+   "960": "/assets/Images/_thumbs/generic_background-960.webp",
+   "1600": "/assets/Images/_thumbs/generic_background-1600.webp"
+  }
+ },
+ "/assets/Images/hex-hero-light.webp": {
+  "w": 2560,
+  "h": 1000,
+  "t": {
+   "480": "/assets/Images/_thumbs/hex-hero-light-480.webp",
+   "960": "/assets/Images/_thumbs/hex-hero-light-960.webp",
+   "1600": "/assets/Images/_thumbs/hex-hero-light-1600.webp"
+  }
+ },
+ "/assets/Images/hex-hero.webp": {
+  "w": 2560,
+  "h": 1000,
+  "t": {
+   "480": "/assets/Images/_thumbs/hex-hero-480.webp",
+   "960": "/assets/Images/_thumbs/hex-hero-960.webp",
+   "1600": "/assets/Images/_thumbs/hex-hero-1600.webp"
+  }
+ },
+ "/assets/Images/hex-void-light.webp": {
+  "w": 2560,
+  "h": 1000,
+  "t": {
+   "480": "/assets/Images/_thumbs/hex-void-light-480.webp",
+   "960": "/assets/Images/_thumbs/hex-void-light-960.webp",
+   "1600": "/assets/Images/_thumbs/hex-void-light-1600.webp"
+  }
+ },
+ "/assets/Images/hex-void.webp": {
+  "w": 2560,
+  "h": 1000,
+  "t": {
+   "480": "/assets/Images/_thumbs/hex-void-480.webp",
+   "960": "/assets/Images/_thumbs/hex-void-960.webp",
+   "1600": "/assets/Images/_thumbs/hex-void-1600.webp"
   }
  },
  "/assets/Images/no-mans-sky/background.webp": {
@@ -326,7 +414,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/no-mans-sky/background-480.webp",
-   "960": "/assets/Images/_thumbs/no-mans-sky/background-960.webp"
+   "960": "/assets/Images/_thumbs/no-mans-sky/background-960.webp",
+   "1600": "/assets/Images/_thumbs/no-mans-sky/background-1600.webp"
   }
  },
  "/assets/Images/no-mans-sky/screenshots/275850_65.webp": {
@@ -334,7 +423,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/no-mans-sky/screenshots/275850_65-480.webp",
-   "960": "/assets/Images/_thumbs/no-mans-sky/screenshots/275850_65-960.webp"
+   "960": "/assets/Images/_thumbs/no-mans-sky/screenshots/275850_65-960.webp",
+   "1600": "/assets/Images/_thumbs/no-mans-sky/screenshots/275850_65-1600.webp"
   }
  },
  "/assets/Images/no-mans-sky/screenshots/275850_66.webp": {
@@ -342,7 +432,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/no-mans-sky/screenshots/275850_66-480.webp",
-   "960": "/assets/Images/_thumbs/no-mans-sky/screenshots/275850_66-960.webp"
+   "960": "/assets/Images/_thumbs/no-mans-sky/screenshots/275850_66-960.webp",
+   "1600": "/assets/Images/_thumbs/no-mans-sky/screenshots/275850_66-1600.webp"
   }
  },
  "/assets/Images/no-mans-sky/screenshots/275850_67.webp": {
@@ -350,7 +441,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/no-mans-sky/screenshots/275850_67-480.webp",
-   "960": "/assets/Images/_thumbs/no-mans-sky/screenshots/275850_67-960.webp"
+   "960": "/assets/Images/_thumbs/no-mans-sky/screenshots/275850_67-960.webp",
+   "1600": "/assets/Images/_thumbs/no-mans-sky/screenshots/275850_67-1600.webp"
   }
  },
  "/assets/Images/no-mans-sky/screenshots/275850_68.webp": {
@@ -358,7 +450,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/no-mans-sky/screenshots/275850_68-480.webp",
-   "960": "/assets/Images/_thumbs/no-mans-sky/screenshots/275850_68-960.webp"
+   "960": "/assets/Images/_thumbs/no-mans-sky/screenshots/275850_68-960.webp",
+   "1600": "/assets/Images/_thumbs/no-mans-sky/screenshots/275850_68-1600.webp"
   }
  },
  "/assets/Images/no-mans-sky/screenshots/275850_69.webp": {
@@ -366,7 +459,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/no-mans-sky/screenshots/275850_69-480.webp",
-   "960": "/assets/Images/_thumbs/no-mans-sky/screenshots/275850_69-960.webp"
+   "960": "/assets/Images/_thumbs/no-mans-sky/screenshots/275850_69-960.webp",
+   "1600": "/assets/Images/_thumbs/no-mans-sky/screenshots/275850_69-1600.webp"
   }
  },
  "/assets/Images/no-mans-sky/screenshots/275850_70.webp": {
@@ -374,7 +468,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/no-mans-sky/screenshots/275850_70-480.webp",
-   "960": "/assets/Images/_thumbs/no-mans-sky/screenshots/275850_70-960.webp"
+   "960": "/assets/Images/_thumbs/no-mans-sky/screenshots/275850_70-960.webp",
+   "1600": "/assets/Images/_thumbs/no-mans-sky/screenshots/275850_70-1600.webp"
   }
  },
  "/assets/Images/no-mans-sky/screenshots/275850_71.webp": {
@@ -382,7 +477,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/no-mans-sky/screenshots/275850_71-480.webp",
-   "960": "/assets/Images/_thumbs/no-mans-sky/screenshots/275850_71-960.webp"
+   "960": "/assets/Images/_thumbs/no-mans-sky/screenshots/275850_71-960.webp",
+   "1600": "/assets/Images/_thumbs/no-mans-sky/screenshots/275850_71-1600.webp"
   }
  },
  "/assets/Images/no-mans-sky/screenshots/275850_72.webp": {
@@ -390,7 +486,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/no-mans-sky/screenshots/275850_72-480.webp",
-   "960": "/assets/Images/_thumbs/no-mans-sky/screenshots/275850_72-960.webp"
+   "960": "/assets/Images/_thumbs/no-mans-sky/screenshots/275850_72-960.webp",
+   "1600": "/assets/Images/_thumbs/no-mans-sky/screenshots/275850_72-1600.webp"
   }
  },
  "/assets/Images/no-mans-sky/screenshots/275850_73.webp": {
@@ -398,7 +495,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/no-mans-sky/screenshots/275850_73-480.webp",
-   "960": "/assets/Images/_thumbs/no-mans-sky/screenshots/275850_73-960.webp"
+   "960": "/assets/Images/_thumbs/no-mans-sky/screenshots/275850_73-960.webp",
+   "1600": "/assets/Images/_thumbs/no-mans-sky/screenshots/275850_73-1600.webp"
   }
  },
  "/assets/Images/Skyrim/enb2025_11_17_14_13_06.webp": {
@@ -406,7 +504,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/Skyrim/enb2025_11_17_14_13_06-480.webp",
-   "960": "/assets/Images/_thumbs/Skyrim/enb2025_11_17_14_13_06-960.webp"
+   "960": "/assets/Images/_thumbs/Skyrim/enb2025_11_17_14_13_06-960.webp",
+   "1600": "/assets/Images/_thumbs/Skyrim/enb2025_11_17_14_13_06-1600.webp"
   }
  },
  "/assets/Images/Skyrim/enb2025_11_28_23_20_50.webp": {
@@ -414,7 +513,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/Skyrim/enb2025_11_28_23_20_50-480.webp",
-   "960": "/assets/Images/_thumbs/Skyrim/enb2025_11_28_23_20_50-960.webp"
+   "960": "/assets/Images/_thumbs/Skyrim/enb2025_11_28_23_20_50-960.webp",
+   "1600": "/assets/Images/_thumbs/Skyrim/enb2025_11_28_23_20_50-1600.webp"
   }
  },
  "/assets/Images/Skyrim/enb2025_12_1_11_56_59.webp": {
@@ -422,7 +522,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/Skyrim/enb2025_12_1_11_56_59-480.webp",
-   "960": "/assets/Images/_thumbs/Skyrim/enb2025_12_1_11_56_59-960.webp"
+   "960": "/assets/Images/_thumbs/Skyrim/enb2025_12_1_11_56_59-960.webp",
+   "1600": "/assets/Images/_thumbs/Skyrim/enb2025_12_1_11_56_59-1600.webp"
   }
  },
  "/assets/Images/Skyrim/enb2025_12_1_16_41_42.webp": {
@@ -430,7 +531,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/Skyrim/enb2025_12_1_16_41_42-480.webp",
-   "960": "/assets/Images/_thumbs/Skyrim/enb2025_12_1_16_41_42-960.webp"
+   "960": "/assets/Images/_thumbs/Skyrim/enb2025_12_1_16_41_42-960.webp",
+   "1600": "/assets/Images/_thumbs/Skyrim/enb2025_12_1_16_41_42-1600.webp"
   }
  },
  "/assets/Images/Skyrim/enb2025_12_6_14_19_46.webp": {
@@ -438,7 +540,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/Skyrim/enb2025_12_6_14_19_46-480.webp",
-   "960": "/assets/Images/_thumbs/Skyrim/enb2025_12_6_14_19_46-960.webp"
+   "960": "/assets/Images/_thumbs/Skyrim/enb2025_12_6_14_19_46-960.webp",
+   "1600": "/assets/Images/_thumbs/Skyrim/enb2025_12_6_14_19_46-1600.webp"
   }
  },
  "/assets/Images/Skyrim/enb2025_12_8_10_41_16.webp": {
@@ -446,7 +549,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/Skyrim/enb2025_12_8_10_41_16-480.webp",
-   "960": "/assets/Images/_thumbs/Skyrim/enb2025_12_8_10_41_16-960.webp"
+   "960": "/assets/Images/_thumbs/Skyrim/enb2025_12_8_10_41_16-960.webp",
+   "1600": "/assets/Images/_thumbs/Skyrim/enb2025_12_8_10_41_16-1600.webp"
   }
  },
  "/assets/Images/Skyrim/enb2025_12_8_12_21_10.webp": {
@@ -454,7 +558,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/Skyrim/enb2025_12_8_12_21_10-480.webp",
-   "960": "/assets/Images/_thumbs/Skyrim/enb2025_12_8_12_21_10-960.webp"
+   "960": "/assets/Images/_thumbs/Skyrim/enb2025_12_8_12_21_10-960.webp",
+   "1600": "/assets/Images/_thumbs/Skyrim/enb2025_12_8_12_21_10-1600.webp"
   }
  },
  "/assets/Images/Skyrim/enb2026_1_12_01_27_28.webp": {
@@ -462,7 +567,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/Skyrim/enb2026_1_12_01_27_28-480.webp",
-   "960": "/assets/Images/_thumbs/Skyrim/enb2026_1_12_01_27_28-960.webp"
+   "960": "/assets/Images/_thumbs/Skyrim/enb2026_1_12_01_27_28-960.webp",
+   "1600": "/assets/Images/_thumbs/Skyrim/enb2026_1_12_01_27_28-1600.webp"
   }
  },
  "/assets/Images/Skyrim/enb2026_1_12_01_29_16.webp": {
@@ -470,7 +576,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/Skyrim/enb2026_1_12_01_29_16-480.webp",
-   "960": "/assets/Images/_thumbs/Skyrim/enb2026_1_12_01_29_16-960.webp"
+   "960": "/assets/Images/_thumbs/Skyrim/enb2026_1_12_01_29_16-960.webp",
+   "1600": "/assets/Images/_thumbs/Skyrim/enb2026_1_12_01_29_16-1600.webp"
   }
  },
  "/assets/Images/Skyrim/enb_2026-1-15_20-40-09_695.webp": {
@@ -478,7 +585,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/Skyrim/enb_2026-1-15_20-40-09_695-480.webp",
-   "960": "/assets/Images/_thumbs/Skyrim/enb_2026-1-15_20-40-09_695-960.webp"
+   "960": "/assets/Images/_thumbs/Skyrim/enb_2026-1-15_20-40-09_695-960.webp",
+   "1600": "/assets/Images/_thumbs/Skyrim/enb_2026-1-15_20-40-09_695-1600.webp"
   }
  },
  "/assets/Images/Skyrim/enb_2026-1-30_10-36-26_587.webp": {
@@ -486,7 +594,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/Skyrim/enb_2026-1-30_10-36-26_587-480.webp",
-   "960": "/assets/Images/_thumbs/Skyrim/enb_2026-1-30_10-36-26_587-960.webp"
+   "960": "/assets/Images/_thumbs/Skyrim/enb_2026-1-30_10-36-26_587-960.webp",
+   "1600": "/assets/Images/_thumbs/Skyrim/enb_2026-1-30_10-36-26_587-1600.webp"
   }
  },
  "/assets/Images/Skyrim/enb_2026-1-30_10-36-32_139.webp": {
@@ -494,7 +603,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/Skyrim/enb_2026-1-30_10-36-32_139-480.webp",
-   "960": "/assets/Images/_thumbs/Skyrim/enb_2026-1-30_10-36-32_139-960.webp"
+   "960": "/assets/Images/_thumbs/Skyrim/enb_2026-1-30_10-36-32_139-960.webp",
+   "1600": "/assets/Images/_thumbs/Skyrim/enb_2026-1-30_10-36-32_139-1600.webp"
   }
  },
  "/assets/Images/Skyrim/enb_2026-2-13_00-50-07_307.webp": {
@@ -502,7 +612,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/Skyrim/enb_2026-2-13_00-50-07_307-480.webp",
-   "960": "/assets/Images/_thumbs/Skyrim/enb_2026-2-13_00-50-07_307-960.webp"
+   "960": "/assets/Images/_thumbs/Skyrim/enb_2026-2-13_00-50-07_307-960.webp",
+   "1600": "/assets/Images/_thumbs/Skyrim/enb_2026-2-13_00-50-07_307-1600.webp"
   }
  },
  "/assets/Images/Skyrim/enb_2026-2-22_01-19-29_028.webp": {
@@ -510,7 +621,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/Skyrim/enb_2026-2-22_01-19-29_028-480.webp",
-   "960": "/assets/Images/_thumbs/Skyrim/enb_2026-2-22_01-19-29_028-960.webp"
+   "960": "/assets/Images/_thumbs/Skyrim/enb_2026-2-22_01-19-29_028-960.webp",
+   "1600": "/assets/Images/_thumbs/Skyrim/enb_2026-2-22_01-19-29_028-1600.webp"
   }
  },
  "/assets/Images/Skyrim/enb_2026-2-28_18-36-11_274.webp": {
@@ -518,7 +630,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/Skyrim/enb_2026-2-28_18-36-11_274-480.webp",
-   "960": "/assets/Images/_thumbs/Skyrim/enb_2026-2-28_18-36-11_274-960.webp"
+   "960": "/assets/Images/_thumbs/Skyrim/enb_2026-2-28_18-36-11_274-960.webp",
+   "1600": "/assets/Images/_thumbs/Skyrim/enb_2026-2-28_18-36-11_274-1600.webp"
   }
  },
  "/assets/Images/Skyrim/enb_2026-2-28_18-36-25_572.webp": {
@@ -526,7 +639,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/Skyrim/enb_2026-2-28_18-36-25_572-480.webp",
-   "960": "/assets/Images/_thumbs/Skyrim/enb_2026-2-28_18-36-25_572-960.webp"
+   "960": "/assets/Images/_thumbs/Skyrim/enb_2026-2-28_18-36-25_572-960.webp",
+   "1600": "/assets/Images/_thumbs/Skyrim/enb_2026-2-28_18-36-25_572-1600.webp"
   }
  },
  "/assets/Images/Skyrim/enb_2026-2-3_22-17-24_633.webp": {
@@ -534,7 +648,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/Skyrim/enb_2026-2-3_22-17-24_633-480.webp",
-   "960": "/assets/Images/_thumbs/Skyrim/enb_2026-2-3_22-17-24_633-960.webp"
+   "960": "/assets/Images/_thumbs/Skyrim/enb_2026-2-3_22-17-24_633-960.webp",
+   "1600": "/assets/Images/_thumbs/Skyrim/enb_2026-2-3_22-17-24_633-1600.webp"
   }
  },
  "/assets/Images/Skyrim/enb_2026-2-7_22-12-03_248.webp": {
@@ -542,7 +657,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/Skyrim/enb_2026-2-7_22-12-03_248-480.webp",
-   "960": "/assets/Images/_thumbs/Skyrim/enb_2026-2-7_22-12-03_248-960.webp"
+   "960": "/assets/Images/_thumbs/Skyrim/enb_2026-2-7_22-12-03_248-960.webp",
+   "1600": "/assets/Images/_thumbs/Skyrim/enb_2026-2-7_22-12-03_248-1600.webp"
   }
  },
  "/assets/Images/Starfield/Starfield 2026-01-08 14-37-22_421.webp": {
@@ -550,7 +666,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/Starfield/Starfield 2026-01-08 14-37-22_421-480.webp",
-   "960": "/assets/Images/_thumbs/Starfield/Starfield 2026-01-08 14-37-22_421-960.webp"
+   "960": "/assets/Images/_thumbs/Starfield/Starfield 2026-01-08 14-37-22_421-960.webp",
+   "1600": "/assets/Images/_thumbs/Starfield/Starfield 2026-01-08 14-37-22_421-1600.webp"
   }
  },
  "/assets/Images/Starfield/Starfield 2026-01-08 14-38-14_766.webp": {
@@ -558,7 +675,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/Starfield/Starfield 2026-01-08 14-38-14_766-480.webp",
-   "960": "/assets/Images/_thumbs/Starfield/Starfield 2026-01-08 14-38-14_766-960.webp"
+   "960": "/assets/Images/_thumbs/Starfield/Starfield 2026-01-08 14-38-14_766-960.webp",
+   "1600": "/assets/Images/_thumbs/Starfield/Starfield 2026-01-08 14-38-14_766-1600.webp"
   }
  },
  "/assets/Images/Starfield/Starfield 2026-01-08 14-43-04_392.webp": {
@@ -566,7 +684,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/Starfield/Starfield 2026-01-08 14-43-04_392-480.webp",
-   "960": "/assets/Images/_thumbs/Starfield/Starfield 2026-01-08 14-43-04_392-960.webp"
+   "960": "/assets/Images/_thumbs/Starfield/Starfield 2026-01-08 14-43-04_392-960.webp",
+   "1600": "/assets/Images/_thumbs/Starfield/Starfield 2026-01-08 14-43-04_392-1600.webp"
   }
  },
  "/assets/Images/Starfield/Starfield 2026-01-09 17-36-49_554.webp": {
@@ -574,7 +693,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/Starfield/Starfield 2026-01-09 17-36-49_554-480.webp",
-   "960": "/assets/Images/_thumbs/Starfield/Starfield 2026-01-09 17-36-49_554-960.webp"
+   "960": "/assets/Images/_thumbs/Starfield/Starfield 2026-01-09 17-36-49_554-960.webp",
+   "1600": "/assets/Images/_thumbs/Starfield/Starfield 2026-01-09 17-36-49_554-1600.webp"
   }
  },
  "/assets/Images/Starfield/Starfield 2026-01-09 22-00-39_009.webp": {
@@ -582,7 +702,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/Starfield/Starfield 2026-01-09 22-00-39_009-480.webp",
-   "960": "/assets/Images/_thumbs/Starfield/Starfield 2026-01-09 22-00-39_009-960.webp"
+   "960": "/assets/Images/_thumbs/Starfield/Starfield 2026-01-09 22-00-39_009-960.webp",
+   "1600": "/assets/Images/_thumbs/Starfield/Starfield 2026-01-09 22-00-39_009-1600.webp"
   }
  },
  "/assets/Images/Starfield/Starfield 2026-01-10 12-16-17_257.webp": {
@@ -590,7 +711,8 @@
   "h": 1440,
   "t": {
    "480": "/assets/Images/_thumbs/Starfield/Starfield 2026-01-10 12-16-17_257-480.webp",
-   "960": "/assets/Images/_thumbs/Starfield/Starfield 2026-01-10 12-16-17_257-960.webp"
+   "960": "/assets/Images/_thumbs/Starfield/Starfield 2026-01-10 12-16-17_257-960.webp",
+   "1600": "/assets/Images/_thumbs/Starfield/Starfield 2026-01-10 12-16-17_257-1600.webp"
   }
  }
 }

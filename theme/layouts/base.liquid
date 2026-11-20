@@ -13,30 +13,45 @@
   <meta name="description" content="{{ desc | escape }}">
   <meta property="og:title" content="{{ page.title | default: site.title | escape }}">
   <meta property="og:description" content="{{ desc | escape }}">
-  <meta property="og:image" content="{{ page.image | default: modlist.image | default: '/assets/logos/emblem-og.jpg' | absolute_url }}">
+  {%- comment %} og_image: the page's own card (scripts/make-og.py), set by the build when it exists {% endcomment %}
+  {%- assign og_img = page.og_image | default: page.image | default: modlist.image | default: '/assets/logos/emblem-og.jpg' | absolute_url %}
+  <meta property="og:image" content="{{ og_img }}">
+  {%- if page.og_image %}
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{{ page.title | escape }}{% if modlist and modlist.title != page.title %} · {{ modlist.title | escape }}{% endif %}">
+  {%- endif %}
   <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="{{ og_img }}">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   <meta name="theme-color" content="#07080a">
-  <script>
+  {%- comment %} data-cfasync="false": Cloudflare Rocket Loader must not delay these scripts (language and theme are set before the first paint) {% endcomment %}
+  <script data-cfasync="false">
     (function () {
-      var d = document.documentElement, l;
-      try { l = localStorage.getItem('sg-lang'); } catch (e) {}
+      var d = document.documentElement, l, t;
+      try { l = localStorage.getItem('sg-lang'); t = localStorage.getItem('taf-theme'); } catch (e) {}
       if (l !== 'en' && l !== 'fr') l = (navigator.language || '').slice(0, 2) === 'fr' ? 'fr' : 'en';
       d.setAttribute('data-lang', l); d.lang = l;
+      // Dark is the house theme; light only when the visitor picked it
+      d.setAttribute('data-theme', t === 'light' ? 'light' : 'dark');
+      if (t === 'light') document.querySelector('meta[name="theme-color"]').content = '#f4f1ea';
     })();
   </script>
   {%- comment %} Jost is self-hosted (theme/assets/fonts, SIL OFL): no request to Google, no render-blocking stylesheet {% endcomment %}
   <link rel="preload" href="{{ '/assets/fonts/jost-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}?v={{ site.version }}">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/logos/emblem-32.png' | relative_url }}">
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/logos/favicon.svg' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/logos/favicon-32.png' | relative_url }}">
   <link rel="apple-touch-icon" href="{{ '/assets/logos/emblem-180.png' | relative_url }}">
   <link rel="manifest" href="{{ '/manifest.webmanifest' | relative_url }}">
   <link rel="alternate" type="application/atom+xml" title="The Astral Forge: releases" href="{{ '/releases.xml' | relative_url }}">
   {%- if page.modlist_id %}
   <link rel="alternate" type="application/atom+xml" title="{{ page.title }}: releases" href="{{ '/feeds/' | append: page.modlist_id | append: '.xml' | relative_url }}">
   {%- endif %}
-  <script src="{{ '/assets/site.js' | relative_url }}?v={{ site.version }}" defer></script>
+  <script src="{{ '/assets/site.js' | relative_url }}?v={{ site.version }}" defer data-cfasync="false"></script>
 </head>
 <body{% if is_home %} class="is-home"{% endif %}>
   <a class="skip" href="#main"><span lang="en">Skip to content</span><span lang="fr">Aller au contenu</span></a>
@@ -61,6 +76,10 @@
       <a class="nav__cta" href="https://discord.gg/alaxouche-s-modding-hub-750268919201398805" target="_blank" rel="noopener noreferrer">Discord<span class="nav__online" data-discord-online hidden><span class="pulse"></span><span data-discord-count></span></span></a>
       <button class="nav__tool" type="button" data-search-open aria-label="Search (Ctrl+K)" data-aria-fr="Rechercher (Ctrl+K)" aria-keyshortcuts="Control+K /">
         <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+      <button class="nav__tool" type="button" data-theme-toggle aria-pressed="false" aria-label="Light theme" data-aria-fr="Thème clair" title="Light theme" data-title-fr="Thème clair">
+        <svg class="theme-ico theme-ico--sun" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <svg class="theme-ico theme-ico--moon" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M19.5 14.5A7.5 7.5 0 0 1 9.5 4.5a7.5 7.5 0 1 0 10 10z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
       </button>
       <button class="nav__tool" type="button" data-lang-toggle aria-label="Version française" data-aria-fr="English version"><span lang="en">FR</span><span lang="fr">EN</span></button>
       <button class="nav__tool nav__menu" type="button" data-menu-toggle aria-label="Menu" aria-expanded="false" aria-controls="drawer">

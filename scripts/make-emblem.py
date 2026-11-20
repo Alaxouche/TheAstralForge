@@ -44,6 +44,22 @@ for s, pad in ((32, .06), (180, .14), (192, .16), (512, .16)):
     inner = round(s * (1 - 2 * pad))
     c.alpha_composite(sized(inner), ((s - inner) // 2, (s - inner) // 2))
     c.convert("RGB").save(out / f"emblem-{s}.png", optimize=True)
+# Browser tab icon: transparent, the emblem fills the whole square.
+# favicon.svg wraps a 96 px PNG and turns it dark when the browser uses a light theme
+# (a white emblem would vanish on a light tab); favicon-32.png is the fallback (Safari).
+import base64, io
+tight = emblem.crop(emblem.getbbox())
+tsq = Image.new("RGBA", (max(tight.size),) * 2, (255, 255, 255, 0))
+tsq.paste(tight, ((tsq.width - tight.width) // 2, (tsq.height - tight.height) // 2))
+tsq.resize((32, 32), Image.LANCZOS).save(out / "favicon-32.png", optimize=True)
+buf = io.BytesIO()
+tsq.resize((96, 96), Image.LANCZOS).save(buf, "PNG", optimize=True)
+b64 = base64.b64encode(buf.getvalue()).decode()
+(out / "favicon.svg").write_text(
+    '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 96 96">'
+    '<style>@media (prefers-color-scheme: light) { image { filter: brightness(0) opacity(.85); } }</style>'
+    f'<image width="96" height="96" href="data:image/png;base64,{b64}" xlink:href="data:image/png;base64,{b64}"/></svg>\n',
+    encoding="utf-8")
 og = Image.new("RGBA", (1200, 630), BG)
 og.alpha_composite(sized(420), (390, 105))
 og.convert("RGB").save(out / "emblem-og.jpg", "JPEG", quality=90, optimize=True, progressive=True)
