@@ -256,7 +256,7 @@
   function syncTheme() {
     var light = root.getAttribute('data-theme') === 'light';
     $$('[data-theme-toggle]').forEach(function (b) { b.setAttribute('aria-pressed', light); });
-    if (themeMeta) themeMeta.content = light ? '#f4f1ea' : '#07080a';
+    if (themeMeta) themeMeta.content = light ? '#f2ece3' : '#0d0a08';
   }
   $$('[data-theme-toggle]').forEach(function (btn) {
     btn.addEventListener('click', function () {

@@ -8,7 +8,7 @@
   hex-hero-light / hex-void-light   the same two for the light theme
 
 Images sharing a geometry can be cross-faded. Edges fade into the page background
-(#07080a dark, #f4f1ea light). Deterministic: same output on every run.
+(#0d0a08 dark, #f2ece3 light: the "Struck metal" palette). Deterministic: same output on every run.
 With names after out_dir, only those images are written.
 """
 import math
@@ -18,11 +18,11 @@ import numpy as np
 from PIL import Image, ImageFilter
 
 S3 = np.sqrt(3.0)
-BG_D = np.array([7, 8, 10], np.float32) / 255
-BG_L = np.array([244, 241, 234], np.float32) / 255
-GOLD = np.array([201, 169, 110], np.float32) / 255
-HOT = np.array([255, 214, 150], np.float32) / 255
-GOLD_DEEP = np.array([150, 112, 48], np.float32) / 255
+BG_D = np.array([13, 10, 8], np.float32) / 255
+BG_L = np.array([242, 236, 227], np.float32) / 255
+GOLD = np.array([214, 162, 78], np.float32) / 255
+HOT = np.array([246, 207, 122], np.float32) / 255
+GOLD_DEEP = np.array([138, 98, 34], np.float32) / 255
 
 
 def smooth(a, b, x):
@@ -103,7 +103,7 @@ def render(W, H, theme, level, spots, R=58.0, cx=0.56, tilt=0.38, void=None, vig
     if theme == 'dark':
         bg = BG_D
         base = 0.035 + 0.025 * rnd + 0.09 * np.clip(bevel, -0.4, 1)
-        col = bg + (base * face)[..., None] * np.array([0.92, 0.96, 1.05], np.float32)
+        col = bg + (base * face)[..., None] * np.array([1.06, 0.97, 0.86], np.float32)   # warm iron faces
         col = col * (1 - hole[..., None] * face[..., None])
         glow_seam = seam * (0.06 + level * (0.55 * heat + 0.9 * tile_on))
         fill = face * tile_on * (1 - hole) * level * (0.015 + 0.26 * inner)

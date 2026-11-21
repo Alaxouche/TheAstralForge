@@ -27,7 +27,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="{{ og_img }}">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
-  <meta name="theme-color" content="#07080a">
+  <meta name="theme-color" content="#0d0a08">
   {%- comment %} data-cfasync="false": Cloudflare Rocket Loader must not delay these scripts (language and theme are set before the first paint) {% endcomment %}
   <script data-cfasync="false">
     (function () {
@@ -37,11 +37,12 @@
       d.setAttribute('data-lang', l); d.lang = l;
       // Dark is the house theme; light only when the visitor picked it
       d.setAttribute('data-theme', t === 'light' ? 'light' : 'dark');
-      if (t === 'light') document.querySelector('meta[name="theme-color"]').content = '#f4f1ea';
+      if (t === 'light') document.querySelector('meta[name="theme-color"]').content = '#f2ece3';
     })();
   </script>
-  {%- comment %} Jost is self-hosted (theme/assets/fonts, SIL OFL): no request to Google, no render-blocking stylesheet {% endcomment %}
-  <link rel="preload" href="{{ '/assets/fonts/jost-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  {%- comment %} Fonts are self-hosted (theme/assets/fonts, SIL OFL): no request to Google. Preload the two faces every page paints first: Alegreya Sans for text, Cormorant for titles. Jost (wordmark only) is not preloaded: its fallback is metric-matched. {% endcomment %}
+  <link rel="preload" href="{{ '/assets/fonts/alegreya-sans-400-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ '/assets/fonts/cormorant-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}?v={{ site.version }}">
   <link rel="icon" type="image/svg+xml" href="{{ '/assets/logos/favicon.svg' | relative_url }}">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/logos/favicon-32.png' | relative_url }}">

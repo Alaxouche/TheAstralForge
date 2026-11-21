@@ -103,4 +103,4 @@ Pushing to `main` publishes the site.
 
 ## Credits
 
-Modlists and site content by Alaxouche. The Jost typeface is used under the SIL Open Font License (`theme/assets/fonts/OFL.txt`). Thanks to the mod authors listed on the [authors page](https://theastralforge.com/authors/) and to the supporters on Patreon and Ko-fi.
+Modlists and site content by Alaxouche. The typefaces Cormorant Garamond, Alegreya Sans and Jost are used under the SIL Open Font License (`theme/assets/fonts/OFL*.txt`). Thanks to the mod authors listed on the [authors page](https://theastralforge.com/authors/) and to the supporters on Patreon and Ko-fi.
