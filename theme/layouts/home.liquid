@@ -6,13 +6,13 @@
 {% endcomment -%}
 {%- assign total_mods = 0 %}{% for m in site.modlists %}{% assign total_mods = total_mods | plus: m.mods %}{% endfor %}
 <section class="forge" data-forge data-hero aria-label="The Astral Forge">
-  <div class="forge__pin">
+  <div class="forge__pin is-seal">
     <div class="forge__bgs" aria-hidden="true">
       <img class="forge__bg is-on" src="{{ '/assets/Images/forge-hex-dark.webp' | relative_url }}" srcset="{{ '/assets/Images/forge-hex-dark.webp' | srcset }}" sizes="100vw" alt="" fetchpriority="high" decoding="async">
       {%- comment %} The Forge section: the honeycomb lights up in rings that pulse out from the seal (forge.js sets the picture after load) {% endcomment %}
       <div class="forge__pulse" data-src="{{ '/assets/Images/forge-hex-pulse.webp' | relative_url }}"><i></i><i></i><i></i><i></i></div>
       {%- for m in site.modlists %}
-      <img class="forge__bg" src="{{ m.image | relative_url }}" srcset="{{ m.image | srcset }}" sizes="100vw" alt="" loading="lazy" decoding="async"{% if m.image_position_phone != '' %} style="--pos-phone: {{ m.image_position_phone }}"{% endif %}>
+      <img class="forge__bg" data-src="{{ m.image | relative_url }}" data-srcset="{{ m.image | srcset }}" sizes="100vw" alt="" decoding="async"{% if m.image_position_phone != '' %} style="--pos-phone: {{ m.image_position_phone }}"{% endif %}>
       {%- endfor %}
     </div>
     <canvas class="forge__heat" aria-hidden="true"></canvas>

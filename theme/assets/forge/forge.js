@@ -500,10 +500,12 @@ if (root) {
     if (stamp) { void slides[i].offsetWidth; slides[i].classList.add('is-stamp'); }
     marks.forEach((m, k) => m.toggleAttribute('aria-current', k === i));
   }
+  // the lists' pictures carry data-src / data-srcset until needed (home.liquid)
+  function fill(im) { im.loading = 'eager'; if (im.dataset.src && !im.getAttribute('src')) { if (im.dataset.srcset) im.srcset = im.dataset.srcset; im.src = im.dataset.src; } }
   function background(i, from) {
     const prev = bgs[shown]; shown = i;
     bgs.forEach((im) => im.classList.remove('is-reveal'));
-    const im = bgs[i]; im.loading = 'eager';
+    const im = bgs[i]; fill(im);
     if (from == null || calm) { bgs.forEach((x, k) => x.classList.toggle('is-on', k === i)); return; }
     im.style.clipPath = 'inset(50%)'; im.classList.add('is-reveal'); prev.classList.add('is-on');
     hexReveal(im, () => {
@@ -538,7 +540,8 @@ if (root) {
 
   // without the 3D scene (no WebGL, or before it has loaded) the list's emblem stands in for it
   const mark = root.querySelector('.forge__mark');
-  function setMark(i) { if (mark) mark.src = marks[i].dataset.emblem; }
+  // same picture: leave src alone, rewriting it reloads the image and Chrome logs a late largest paint (LCP)
+  function setMark(i) { const u = marks[i].dataset.emblem; if (mark && mark.getAttribute('src') !== u) mark.src = u; }
 
   let ticking = false;
   addEventListener('scroll', () => {
@@ -589,12 +592,23 @@ if (root) {
     forge.show(cur); place(); addEventListener('resize', place);
     root.classList.add('is-3d');
   };
-  // the pulse picture (every tile lit) is only needed once the page has loaded
+  // Nothing the first screen does not show may start before it is painted: Lighthouse bills every request
+  // begun before the largest paint to it, and 'load' (even a frame after it) can come before the first real paint.
+  // The seal is both the first and the largest paint here, so wait for the browser's first-contentful-paint entry.
+  let painted = false; const waiting = [];
+  const paintDone = () => { if (painted) return; painted = true; waiting.splice(0).forEach((fn) => setTimeout(fn, 0)); };
+  try {
+    new PerformanceObserver((l) => { if (l.getEntries().some((e) => e.name === 'first-contentful-paint')) paintDone(); }).observe({ type: 'paint', buffered: true });
+  } catch (e) { /* no paint timing: the fallback below */ }
+  const fallback = () => setTimeout(paintDone, 3000);
+  if (document.readyState === 'complete') fallback(); else addEventListener('load', fallback, { once: true });
+  const afterPaint = (fn) => { if (painted) setTimeout(fn, 0); else waiting.push(fn); };
   const pulse = root.querySelector('.forge__pulse');
-  const lightUp = () => { if (pulse && !calm) pulse.style.setProperty('--pulse', `url("${pulse.dataset.src}")`); };
-  if (document.readyState === 'complete') lightUp(); else addEventListener('load', lightUp, { once: true });
+  afterPaint(() => {
+    bgs.forEach(fill);                                // the lists' pictures, ready before the first strike
+    if (pulse && !calm) pulse.style.setProperty('--pulse', `url("${pulse.dataset.src}")`);   // every tile lit
+  });
 
   if (!window.WebGL2RenderingContext) root.classList.add('is-flat');
-  else if (document.readyState === 'complete') (window.requestIdleCallback || setTimeout)(start);
-  else addEventListener('load', () => (window.requestIdleCallback || setTimeout)(start), { once: true });
+  else afterPaint(() => (window.requestIdleCallback || setTimeout)(start));
 }
