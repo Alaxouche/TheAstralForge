@@ -28,13 +28,13 @@ You review front-end changes to The Astral Forge, a static documentation site fo
 - New motion has a `prefers-reduced-motion` path. New images have `alt`.
 
 **Performance**
-- Inside home panels: nothing that resizes or repaints while the width animates. Flag percentage widths on images or scrims, CSS `filter`, container queries, inherited custom properties set from pointer handlers, pointer handlers that do not go through `pointerFrame()`.
+- Home forge (`.forge`, `theme/assets/forge/forge.js`): no loop while idle (the 3D canvas redraws only during a strike), animations on transform / opacity / one-shot clip-path only, nothing inserted above the copy after load, start-up work split so no task blocks long (see "Home: the forge" in `CLAUDE.md`).
 - No infinite animation that repaints (anything other than transform and opacity).
 - No opacity in the entrance of `.phero__bg` / `.phero__inner` or whatever now holds the largest image.
 - Nothing inserted above content after load by `site.js`. Images that are the largest element keep `fetchpriority` and are not lazy.
 - No new request to another host, no new library in the browser.
 
-**Removed on the owner's request** (flag any return): glow, halo or drop-shadow on the logo; particles or embers; cursor halo; roman numerals or "Modlist II" labels on home panels; per-list accent colours; "already read" marks and step tick boxes; a dash rule before "Version"; ads.
+**Removed on the owner's request** (flag any return): glow, halo or drop-shadow on the logo; particles or embers; cursor halo; roman numerals or "Modlist II" labels on the home; per-list accent colours; "already read" marks and step tick boxes; a dash rule before "Version"; ads.
 
 **Copy**
 - No em dash or en dash in visible text. No filler phrases. French written with "vous".

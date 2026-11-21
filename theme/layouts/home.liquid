@@ -1,78 +1,74 @@
 <h1 class="skip"><span lang="en">The Astral Forge: Wabbajack modlists</span><span lang="fr">The Astral Forge : modlists Wabbajack</span></h1>
-<section class="hero" data-hero>
+{%- comment %}
+  The forge (Nov 2026): one screen of scroll per section, each one struck in on the anvil.
+  theme/assets/forge/forge.js draws the 3D scene (WebGL2) and runs the strikes; without it the first section
+  shows and the emblems on the right link to each list. Backgrounds are the pictures of the old home panels.
+{% endcomment -%}
+{%- assign total_mods = 0 %}{% for m in site.modlists %}{% assign total_mods = total_mods | plus: m.mods %}{% endfor %}
+<section class="forge" data-forge data-hero aria-label="The Astral Forge">
+  <div class="forge__pin">
+    <div class="forge__bgs" aria-hidden="true">
+      <img class="forge__bg is-on" src="{{ '/assets/Images/forge-hex-dark.webp' | relative_url }}" srcset="{{ '/assets/Images/forge-hex-dark.webp' | srcset }}" sizes="100vw" alt="" fetchpriority="high" decoding="async">
+      {%- for m in site.modlists %}
+      <img class="forge__bg" src="{{ m.image | relative_url }}" srcset="{{ m.image | srcset }}" sizes="100vw" alt="" loading="lazy" decoding="async">
+      {%- endfor %}
+    </div>
+    <div class="forge__floor" aria-hidden="true"></div>
+    <canvas class="forge__gl" aria-hidden="true"></canvas>
+    <img class="forge__mark" src="{{ '/assets/logos/emblem.webp' | relative_url }}" alt="" width="640" height="640" decoding="async">
 
-  <article class="panel panel--forge" style="--i: 0" data-href="{{ '/hub/' | relative_url }}" tabindex="0" aria-label="The Astral Forge">
-    {%- comment %} Honeycomb (scripts/make-hexfield.py): rest + lit image per theme. The light pair is lazy, so the dark theme never downloads it. {% endcomment %}
-    <img class="panel__bg panel__bg--d" src="{{ '/assets/Images/forge-hex-dark.webp' | relative_url }}" srcset="{{ '/assets/Images/forge-hex-dark.webp' | srcset }}" sizes="(max-width: 860px) 100vw, 90vw" alt="" fetchpriority="high" decoding="async">
-    <img class="panel__bg panel__bg--lit panel__bg--d" src="{{ '/assets/Images/forge-hex-lit.webp' | relative_url }}" srcset="{{ '/assets/Images/forge-hex-lit.webp' | srcset }}" sizes="(max-width: 860px) 100vw, 90vw" alt="" loading="lazy" decoding="async">
-    <img class="panel__bg panel__bg--l" src="{{ '/assets/Images/forge-hex-light.webp' | relative_url }}" srcset="{{ '/assets/Images/forge-hex-light.webp' | srcset }}" sizes="(max-width: 860px) 100vw, 90vw" alt="" loading="lazy" decoding="async">
-    <img class="panel__bg panel__bg--lit panel__bg--l" src="{{ '/assets/Images/forge-hex-light-lit.webp' | relative_url }}" srcset="{{ '/assets/Images/forge-hex-light-lit.webp' | srcset }}" sizes="(max-width: 860px) 100vw, 90vw" alt="" loading="lazy" decoding="async">
-    <div class="panel__shade"></div>
-    <div class="panel__scrim"></div>
-    <span class="panel__sheen" aria-hidden="true"></span>
-    <img class="panel__mark" src="{{ '/assets/logos/emblem.webp' | relative_url }}" alt="" width="640" height="640">
-    <div class="panel__idle">
-      <span class="panel__kicker"><span lang="en">Since 2020</span><span lang="fr">Depuis 2020</span></span>
-      <span class="panel__name">The Forge</span>
-      <span class="panel__meta"><span data-discord-online hidden><span class="pulse"></span><span data-discord-count></span> <span lang="en">online</span><span lang="fr">en ligne</span></span><span data-discord-fallback>Discord · Patreon</span></span>
+    <div class="forge__slides">
+      <article class="forge__slide is-on" aria-labelledby="forge-t0">
+        <p class="eyebrow forge__kicker"><span lang="en">Wabbajack modlists by Alaxouche</span><span lang="fr">Des modlists Wabbajack par Alaxouche</span></p>
+        <h2 class="forge__title" id="forge-t0" data-scramble>The Astral Forge</h2>
+        <p class="forge__desc">
+          <span lang="en">Wabbajack modlists for Skyrim, Cyberpunk 2077, Starfield and No Man's Sky. It started in 2020 with Wunduniik. Today there are five lists, and a Discord where players help each other get them running.</span>
+          <span lang="fr">Des modlists Wabbajack pour Skyrim, Cyberpunk 2077, Starfield et No Man's Sky. Tout a commencé en 2020 avec Wunduniik. Aujourd'hui, cinq listes et un Discord où les joueurs s'entraident pour les faire tourner.</span>
+        </p>
+        <dl class="forge__stats">
+          <div><dt>{{ 'Modlists' | bi }}</dt><dd>{{ site.modlists | size }}</dd></div>
+          <div><dt>Mods</dt><dd data-count>{{ total_mods | num }}</dd></div>
+          <div><dt><span lang="en">Since</span><span lang="fr">Depuis</span></dt><dd>2020</dd></div>
+          <div data-discord-online hidden><dt><span lang="en">Online</span><span lang="fr">En ligne</span></dt><dd><span class="pulse"></span><span data-discord-count></span></dd></div>
+        </dl>
+        <div class="actions">
+          <a class="btn btn--solid" href="https://discord.gg/alaxouche-s-modding-hub-750268919201398805" target="_blank" rel="noopener noreferrer"><span lang="en">Join the Discord</span><span lang="fr">Rejoindre le Discord</span></a>
+          <a class="btn" href="{{ '/hub/' | relative_url }}"><span lang="en">All the lists</span><span lang="fr">Toutes les listes</span></a>
+          <a class="btn" href="{{ '/gallery/' | relative_url }}"><span lang="en">Gallery</span><span lang="fr">Galerie</span></a>
+        </div>
+      </article>
+      {%- for m in site.modlists %}
+      <article class="forge__slide" aria-labelledby="forge-t{{ forloop.index }}">
+        <p class="eyebrow forge__kicker">{{ m.game }} <span class="fresh" data-fresh="{{ m.title }}" hidden><span class="pulse"></span><span lang="en">Updated</span><span lang="fr">Mis à jour</span></span></p>
+        <h2 class="forge__title" id="forge-t{{ forloop.index }}" data-scramble>{{ m.title }}</h2>
+        {%- if m.subtitle %}
+        <p class="forge__desc">{% if m.subtitle_fr %}<span lang="en">{{ m.subtitle }}</span><span lang="fr">{{ m.subtitle_fr }}</span>{% else %}{{ m.subtitle }}{% endif %}</p>
+        {%- endif %}
+        <dl class="forge__stats">
+          {%- if m.mods %}<div><dt>Mods</dt><dd data-count>{{ m.mods | num }}</dd></div>{% endif %}
+          <div><dt title="Downloads + install" data-title-fr="Téléchargements + installation"><span lang="en">Disk space</span><span lang="fr">Espace disque</span></dt><dd><span data-live="{{ m.title }}" data-field="size" data-count>{{ m.live.size }}</span>&nbsp;<span lang="en">GB</span><span lang="fr">Go</span></dd></div>
+          <div><dt>Version</dt><dd data-live="{{ m.title }}" data-field="version">{{ m.live.version }}</dd></div>
+          <div class="forge__stat--age"><dt>{{ 'Updated' | bi }}</dt><dd><time data-live="{{ m.title }}" data-field="updated" datetime="{{ m.live.updated }}">{{ m.live.updated | reltime }}</time></dd></div>
+        </dl>
+        <div class="actions">
+          <a class="btn btn--solid" href="{{ m.url | relative_url }}"><span lang="en">Open the docs</span><span lang="fr">Voir la doc</span></a>
+          {%- for item in m.nav limit: 2 %}
+          <a class="btn" href="{{ item.url | relative_url }}">{{ item.title | bi }}</a>
+          {%- endfor %}
+        </div>
+      </article>
+      {%- endfor %}
     </div>
-    <div class="panel__vert" aria-hidden="true"><span class="star"></span><span>The Forge</span></div>
-    <div class="panel__full">
-      <img class="panel__logo" src="{{ '/assets/logos/emblem.webp' | relative_url }}" alt="" width="640" height="640">
-      <h2 class="panel__title panel__title--metal" data-scramble>The Astral Forge</h2>
-      <p class="panel__desc">
-        <span lang="en">Wabbajack modlists for Skyrim, Cyberpunk 2077, Starfield and No Man's Sky. It started in 2020 with Wunduniik. Today there are five lists, and a Discord where players help each other get them running.</span>
-        <span lang="fr">Des modlists Wabbajack pour Skyrim, Cyberpunk 2077, Starfield et No Man's Sky. Tout a commencé en 2020 avec Wunduniik. Aujourd'hui, cinq listes et un Discord où les joueurs s'entraident pour les faire tourner.</span>
-      </p>
-      <p class="live-line" data-discord-online hidden><span class="pulse"></span><span data-discord-count></span>&nbsp;<span lang="en">members online on Discord right now</span><span lang="fr">membres en ligne sur le Discord en ce moment</span></p>
-      <div class="actions">
-        <a class="btn btn--solid" href="https://discord.gg/alaxouche-s-modding-hub-750268919201398805" target="_blank" rel="noopener noreferrer"><span lang="en">Join the Discord</span><span lang="fr">Rejoindre le Discord</span></a>
-        <a class="btn" href="{{ '/gallery/' | relative_url }}"><span lang="en">Gallery</span><span lang="fr">Galerie</span></a>
-        <a class="btn" href="{{ '/contributors/' | relative_url }}"><span lang="en">Support</span><span lang="fr">Soutenir</span></a>
-      </div>
-    </div>
-    <span class="panel__bar"></span>
-  </article>
 
-  {%- for m in site.modlists %}
-  <article class="panel" style="--i: {{ forloop.index }}; --accent: {{ m.accent }}" data-href="{{ m.url | relative_url }}" tabindex="0" aria-label="{{ m.title }}">
-    <img class="panel__bg" src="{{ m.image | relative_url }}" srcset="{{ m.image | srcset }}" sizes="(max-width: 860px) 100vw, 90vw" alt="" decoding="async"{% if forloop.first %} fetchpriority="high"{% endif %}>
-    <div class="panel__shade"></div>
-    <div class="panel__scrim"></div>
-    {%- if m.emblem %}
-    <img class="panel__mark" src="{{ m.emblem | relative_url }}" alt="" width="640" height="640" decoding="async">
-    {%- endif %}
-    <span class="fresh" data-fresh="{{ m.title }}" hidden><span class="pulse"></span><span lang="en">Updated</span><span lang="fr">Mis à jour</span></span>
-    <div class="panel__idle">
-      <span class="panel__kicker">{{ m.game }}</span>
-      <span class="panel__name">{{ m.title }}</span>
-      <span class="panel__meta">Version <span data-live="{{ m.title }}" data-field="version">{{ m.live.version }}</span></span>
-    </div>
-    <div class="panel__vert" aria-hidden="true"><span class="star"></span><span>{{ m.title }}</span></div>
-    <div class="panel__full">
-      {%- if m.emblem %}<img class="panel__logo panel__logo--list" src="{{ m.emblem | relative_url }}" alt="" width="640" height="640" loading="lazy" decoding="async">{% endif %}
-      <div class="eyebrow-row"><span class="badge">{{ m.game }}</span></div>
-      <h2 class="panel__title panel__title--metal" data-scramble data-vt="t-{{ m.id }}">{{ m.title }}</h2>
-      {%- if m.subtitle %}
-      <p class="panel__desc">{% if m.subtitle_fr %}<span lang="en">{{ m.subtitle }}</span><span lang="fr">{{ m.subtitle_fr }}</span>{% else %}{{ m.subtitle }}{% endif %}</p>
-      {%- endif %}
-      <dl class="panel__stats">
-        {%- if m.mods %}<div><dt>Mods</dt><dd data-count>{{ m.mods }}</dd></div>{% endif %}
-        <div><dt title="Downloads + install" data-title-fr="Téléchargements + installation"><span lang="en">Disk space</span><span lang="fr">Espace disque</span></dt><dd><span data-live="{{ m.title }}" data-field="size" data-count>{{ m.live.size }}</span>&nbsp;<span lang="en">GB</span><span lang="fr">Go</span></dd></div>
-        <div><dt>Version</dt><dd data-live="{{ m.title }}" data-field="version">{{ m.live.version }}</dd></div>
-        <div><dt>{{ 'Updated' | bi }}</dt><dd><time data-live="{{ m.title }}" data-field="updated" datetime="{{ m.live.updated }}">{{ m.live.updated | reltime }}</time></dd></div>
-      </dl>
-      <div class="actions">
-        <a class="btn btn--solid" href="{{ m.url | relative_url }}"><span lang="en">Open the docs</span><span lang="fr">Voir la doc</span></a>
-        {%- for item in m.nav limit: 2 %}
-        <a class="btn" href="{{ item.url | relative_url }}">{{ item.title | bi }}</a>
-        {%- endfor %}
-      </div>
-    </div>
-    <span class="panel__bar"></span>
-  </article>
-  {%- endfor %}
-
-  <p class="hero__hint" aria-hidden="true"><span class="star"></span><span lang="en">Pick a list</span><span lang="fr">Choisissez une liste</span></p>
+    {%- comment %} The emblems: with the script, each one strikes its section in; without it, they are plain links. {% endcomment %}
+    <nav class="forge__rail" aria-label="Modlists">
+      <a href="{{ '/hub/' | relative_url }}" data-emblem="{{ '/assets/logos/emblem.webp' | relative_url }}" aria-current="true"><i style="--m: url('{{ '/assets/logos/emblem.webp' | relative_url }}')"></i><span class="sr-only">The Astral Forge</span></a>
+      {%- for m in site.modlists %}
+      <a href="{{ m.url | relative_url }}" data-emblem="{{ m.emblem | relative_url }}"><i style="--m: url('{{ m.emblem | relative_url }}')"></i><span class="sr-only">{{ m.title }}</span></a>
+      {%- endfor %}
+    </nav>
+    <p class="forge__hint" aria-hidden="true"><span lang="en">Scroll to strike</span><span lang="fr">Faites défiler pour frapper</span></p>
+  </div>
 </section>
 <a class="home-legal" href="{{ '/legal/' | relative_url }}"><span lang="en">Legal notice and privacy</span><span lang="fr">Mentions légales et confidentialité</span></a>
+<script type="module" src="{{ '/assets/forge/forge.js' | relative_url }}?v={{ site.version }}" data-cfasync="false"></script>

@@ -7,7 +7,8 @@
 //   --theme light|dark   sets localStorage['taf-theme'] before the page loads
 //   --lang fr|en         sets localStorage['sg-lang'] before the page loads (default en)
 //   --full               whole page instead of the viewport
-//   --panel N            home page: open panel N (0 = The Forge), as a hover would
+//   --panel N            home page: strike forge section N in (0 = The Forge, 1-5 the lists); add --wait 2500
+//                        so the 3D scene, the strike and the text effects have finished
 //   --at "selector"      scroll this element to the top before the capture
 //   --js "code"          run this in the page before the capture
 //   --still              prefers-reduced-motion: reduce (entrance animations settle at once)
@@ -50,8 +51,7 @@ async function shot({ mobile, theme, lang, out }) {
     await b.send('Page.navigate', { url });
     for (let i = 0; i < 100; i++) { if (await b.evalJs('document.readyState') === 'complete') break; await sleep(100); }
     await b.evalJs('document.fonts.ready.then(() => 1)');
-    if (flags.panel != null) await b.evalJs(`(() => { const h = document.querySelector('[data-hero]'); if (!h) return;
-      const p = h.querySelectorAll('.panel'); h.classList.add('has-on'); p.forEach((x, i) => x.classList.toggle('is-on', i === ${+flags.panel})); })()`);
+    if (flags.panel != null) await b.evalJs(`(() => { const a = document.querySelectorAll('.forge__rail a')[${+flags.panel}]; if (a) a.click(); })()`);
     if (flags.at) await b.evalJs(`document.querySelector(${JSON.stringify(flags.at)})?.scrollIntoView({ block: 'start', behavior: 'instant' })`);
     if (flags.js) await b.evalJs(flags.js);
     await sleep(+(flags.wait || 1500));

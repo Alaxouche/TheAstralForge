@@ -1,7 +1,8 @@
 // Usage: node scripts/bench.mjs <url> [label] ["css to inject, to test a change"]
 // Needs the dev server running. Compare runs against each other, not against real hardware.
-// Launches headless Edge with CDP, simulates panel hovers + pointer moves for 6 s,
-// reports frame stats (rAF) and main-thread metrics deltas.
+// Launches headless Edge with CDP. On the home page it strikes a new forge section every 1.1 s for 6 s
+// (the 3D hammer, the circle reveal, the text effects); on other pages it scrolls. Reports frame stats (rAF)
+// and main-thread metrics deltas.
 import { spawn } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -42,26 +43,16 @@ if (process.argv[4]) await evalJs(`(() => { const s = document.createElement("st
 await sleep(300);
 const m0 = Object.fromEntries((await send('Performance.getMetrics')).result.metrics.map((m) => [m.name, m.value]));
 const res = await evalJs(`new Promise((done) => {
-  const hero = document.querySelector('[data-hero]');
-  const panels = hero ? [...hero.querySelectorAll('.panel')] : [];
+  const rail = [...document.querySelectorAll('.forge__rail a')];
   let frames = 0, long = 0, worst = 0, last = performance.now(), t0 = last, k = 0;
   function frame(t) {
     const dt = t - last; last = t; frames++; if (dt > 34) long++; if (dt > worst) worst = dt;
-    // pointer move every frame over the active panel
-    const p = panels[k % (panels.length || 1)];
-    if (p) {
-      const r = p.getBoundingClientRect();
-      p.dispatchEvent(new PointerEvent('pointermove', { bubbles: true, clientX: r.left + r.width * (0.3 + 0.4 * Math.sin(t / 300)), clientY: r.top + r.height * 0.5 }));
-    } else window.scrollBy(0, 6);
+    if (!rail.length) window.scrollBy(0, 6);
     if (t - t0 < 6000) requestAnimationFrame(frame);
     else done({ fps: +(frames / ((t - t0) / 1000)).toFixed(1), long, worst: Math.round(worst) });
   }
-  if (panels.length) {
-    const it = setInterval(() => {
-      k++; const p = panels[k % panels.length];
-      p.dispatchEvent(new MouseEvent('mouseenter'));
-      hero.classList.add('has-on'); panels.forEach((x) => x.classList.toggle('is-on', x === p));
-    }, 700);
+  if (rail.length) {
+    const it = setInterval(() => { k++; rail[k % rail.length].click(); }, 1100);
     setTimeout(() => clearInterval(it), 6000);
   }
   requestAnimationFrame(frame);

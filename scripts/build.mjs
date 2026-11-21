@@ -643,6 +643,7 @@ async function build() {
     return fr && fr !== s ? `<span lang="en">${esc(s)}</span><span lang="fr">${esc(fr)}</span>` : esc(s);
   });
   engine.registerFilter('reltime', (iso) => relTimeBi(iso));
+  engine.registerFilter('num', (n) => (Number.isFinite(+n) ? (+n).toLocaleString('en') : n)); // 3784 -> 3,784
   engine.registerFilter('perk_trees', (data) => perkTreesHtml(data));
   engine.registerFilter('keymap', (data, lang) => keymapHtml(data, lang));
   engine.registerFilter('gauge', (data, lang) => gaugeHtml(data, lang));
@@ -784,6 +785,7 @@ async function build() {
   const version = crypto.createHash('sha1')
     .update(fs.readFileSync(path.join(THEME, 'assets/site.css')))
     .update(fs.readFileSync(path.join(THEME, 'assets/site.js')))
+    .update(fs.readFileSync(path.join(THEME, 'assets/forge/forge.js')))
     .digest('hex').slice(0, 10);
 
   const site = {
@@ -910,12 +912,14 @@ async function build() {
   copyDir(path.join(ROOT, 'assets/Images'), path.join(OUT, 'assets/Images'));
   copyDir(path.join(ROOT, 'assets/logos'), path.join(OUT, 'assets/logos'));
   if (exists('assets/og')) copyDir(path.join(ROOT, 'assets/og'), path.join(OUT, 'assets/og'));
-  // site.css / site.js are written minified (esbuild, dev dependency only); the rest is copied as is
-  copyDir(path.join(THEME, 'assets'), path.join(OUT, 'assets'), (f) => !/[\\/]site\.(css|js)$/.test(f));
-  for (const [f, loader] of [['site.css', 'css'], ['site.js', 'js']]) {
+  // site.css / site.js / forge/forge.js (the home page module) are written minified (esbuild, dev
+  // dependency only); the rest is copied as is
+  copyDir(path.join(THEME, 'assets'), path.join(OUT, 'assets'), (f) => !/[\\/](site\.(css|js)|forge\.js)$/.test(f));
+  for (const [f, loader] of [['site.css', 'css'], ['site.js', 'js'], ['forge/forge.js', 'js']]) {
     const src = fs.readFileSync(path.join(THEME, 'assets', f), 'utf8');
-    const target = loader === 'css' ? ['chrome111', 'edge111', 'firefox121', 'safari16.4'] : 'es2019';
-    writeOut('assets/' + f, transformSync(src, { loader, minify: true, target, legalComments: 'none' }).code);
+    const esm = f.startsWith('forge/');
+    const target = loader === 'css' ? ['chrome111', 'edge111', 'firefox121', 'safari16.4'] : esm ? 'es2020' : 'es2019';
+    writeOut('assets/' + f, transformSync(src, { loader, minify: true, target, legalComments: 'none', ...(esm ? { format: 'esm' } : {}) }).code);
   }
   copyDir(path.join(THEME, 'static'), OUT);
   for (const f of ['CNAME']) if (exists(f)) copyFileIfChanged(path.join(ROOT, f), path.join(OUT, f));

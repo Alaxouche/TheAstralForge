@@ -36,14 +36,15 @@
       var fin = el.dataset.final, mm = fin.match(/^(\d[\d\s,.]*)(.*)$/);
       if (!mm) { el.textContent = fin; return; }
       var goal = parseFloat(mm[1].replace(/[\s,]/g, ''));
-      el.textContent = k < 1 ? Math.round(goal * e) + mm[2] : fin;
+      // keep the thousands separator while counting, if the final number has one (3,784)
+      el.textContent = k < 1 ? (/,/.test(mm[1]) ? Math.round(goal * e).toLocaleString('en') : Math.round(goal * e)) + mm[2] : fin;
       if (k < 1) el._cu = requestAnimationFrame(frame);
     })(start);
   }
   var countIO = 'IntersectionObserver' in window ? new IntersectionObserver(function (entries) {
     entries.forEach(function (en) { if (en.isIntersecting) { countUp(en.target); countIO.unobserve(en.target); } });
   }, { threshold: .6 }) : null;
-  $$('[data-count]').forEach(function (el) { if (countIO && !el.closest('.panel')) countIO.observe(el); });
+  $$('[data-count]').forEach(function (el) { if (countIO && !el.closest('.forge')) countIO.observe(el); });
 
   /* =========================================================
      Rune decode effect for titles
@@ -81,58 +82,11 @@
   }
 
   /* =========================================================
-     Home: expanding panels
+     Home: the forge (theme/assets/forge/forge.js, a module loaded by home.liquid) runs the page
+     and reuses the two text effects above
      ========================================================= */
   var hero = $('[data-hero]');
-  if (hero) {
-    var panels = $$('.panel', hero);
-    var setOn = function (p) {
-      var was = $('.panel.is-on', hero);
-      hero.classList.toggle('has-on', !!p);
-      panels.forEach(function (x) { x.classList.toggle('is-on', x === p); });
-      if (p && p !== was) {
-        $$('[data-scramble]', p).forEach(function (t) { scramble(t, 380); });
-        $$('[data-count]', p).forEach(function (n) { setTimeout(function () { countUp(n); }, 450); });
-      }
-    };
-    panels.forEach(function (p) {
-      if (canHover) {
-        p.addEventListener('mouseenter', function () { setOn(p); });
-      }
-      p.addEventListener('focusin', function () { setOn(p); });
-      p.addEventListener('click', function (e) {
-        if (e.target.closest('a, button')) return;
-        if (!p.classList.contains('is-on')) { setOn(p); return; }
-        if (p.dataset.href) location.href = p.dataset.href;
-      });
-      p.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter' && e.target === p && p.dataset.href) location.href = p.dataset.href;
-      });
-    });
-    if (canHover) hero.addEventListener('mouseleave', function () { setOn(null); });
-    // The Forge's lit picture sits at opacity 0 until its panel opens: decode it while the page is
-    // idle, so the first open does not stall on a 2560 px decode in the middle of the animation.
-    (window.requestIdleCallback || function (f) { setTimeout(f, 1500); })(function () {
-      $$('.panel__bg--lit', hero).forEach(function (img) {
-        if (img.offsetParent === null || !img.decode) return; // the other theme's picture (display: none)
-        img.loading = 'eager';
-        img.decode().catch(function () {});
-      });
-    });
-    document.addEventListener('keydown', function (e) {
-      // Leave the keys alone while a dialog or the menu is open, or with modifiers held.
-      if ($('dialog[open]') || (drawer && drawer.classList.contains('is-open'))) return;
-      if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
-      if (e.key === 'Escape') setOn(null);
-      if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft' && e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
-      if (document.activeElement && /input|textarea|select/i.test(document.activeElement.tagName)) return;
-      e.preventDefault();
-      var i = panels.indexOf($('.panel.is-on', hero));
-      var fwd = e.key === 'ArrowRight' || e.key === 'ArrowDown';
-      var n = panels[(i + (fwd ? 1 : -1) + panels.length) % panels.length];
-      setOn(n); n.focus({ preventScroll: true });
-    });
-  }
+  window.TAF = { scramble: scramble, countUp: countUp };
 
   /* =========================================================
      Nav, drawer, reading progress, parallax
@@ -792,16 +746,6 @@
     if (e.key !== 'Escape') return;
     $$('.gl:hover, .gl:focus').forEach(function (g) { g.classList.add('is-off'); });
   });
-
-  /* ---------- Page transitions: morph the modlist title into the docs hero ---------- */
-  var hero = $('[data-hero]');
-  if (hero) hero.addEventListener('click', function (e) {
-    var p = e.target.closest('.panel');
-    if (!p) return;
-    var t = $('[data-vt]', p);
-    $$('[data-vt]', hero).forEach(function (x) { x.style.viewTransitionName = ''; });
-    if (t && p.classList.contains('is-on')) t.style.viewTransitionName = t.getAttribute('data-vt');
-  }, true);
 
   /* ---------- Keyboard maps: the legend buttons show one category at a time ---------- */
   $$('[data-kbmap]').forEach(function (map) {

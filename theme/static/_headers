@@ -17,6 +17,9 @@
 /assets/logos/*
   Cache-Control: public, max-age=2592000
 
+/assets/forge/*
+  Cache-Control: public, max-age=2592000
+
 /assets/og/*
   Cache-Control: public, max-age=604800
 
