@@ -123,6 +123,27 @@ async function createForge(canvas, base, emblems) {
   if (pc) while (!gl.getProgramParameter(prog, pc.COMPLETION_STATUS_KHR)) await new Promise((r) => setTimeout(r, 20));
   if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) throw new Error(gl.getShaderInfoLog(fs) || gl.getShaderInfoLog(vs) || gl.getProgramInfoLog(prog));
   performance.mark('forge:shaders');
+
+  // ---------- sparks: one burst at each impact (asked for by the user, Nov 21 2026; nothing runs at rest) ----------
+  // Points drawn additively, round and soft, sized by distance; colour and size come per point from the CPU.
+  const sprog = gl.createProgram();
+  gl.attachShader(sprog, sh(gl.VERTEX_SHADER, `#version 300 es
+  layout(location=0) in vec3 aP; layout(location=1) in vec4 aC;
+  uniform mat4 uVP; uniform float uPx; out vec3 vC;
+  void main() { gl_Position = uVP * vec4(aP, 1.); gl_PointSize = max(1., aC.a * uPx / gl_Position.w); vC = aC.rgb; }`));
+  gl.attachShader(sprog, sh(gl.FRAGMENT_SHADER, `#version 300 es
+  precision mediump float; in vec3 vC; out vec4 o;
+  void main() { float d = length(gl_PointCoord - .5) * 2.; float a = clamp(1. - d, 0., 1.); a *= a; o = vec4(vC * a, 0.); }`));
+  gl.linkProgram(sprog);
+  if (!gl.getProgramParameter(sprog, gl.LINK_STATUS)) throw new Error(gl.getProgramInfoLog(sprog));
+  const SU = { vp: gl.getUniformLocation(sprog, 'uVP'), px: gl.getUniformLocation(sprog, 'uPx') };
+  const SPARKS = 90, TRAIL = 3, sdata = new Float32Array(SPARKS * TRAIL * 7);
+  const svao = gl.createVertexArray(), sbuf = gl.createBuffer();
+  gl.bindVertexArray(svao); gl.bindBuffer(gl.ARRAY_BUFFER, sbuf); gl.bufferData(gl.ARRAY_BUFFER, sdata.byteLength, gl.DYNAMIC_DRAW);
+  gl.enableVertexAttribArray(0); gl.vertexAttribPointer(0, 3, gl.FLOAT, false, 28, 0);
+  gl.enableVertexAttribArray(1); gl.vertexAttribPointer(1, 4, gl.FLOAT, false, 28, 12);
+  gl.bindVertexArray(null);
+  let sparks = [];
   const U = {}; for (const n of ['uM', 'uVP', 'uC', 'uH', 'uCol', 'uNor', 'uMR', 'uEmb', 'uEye', 'uHeatP', 'uHeat', 'uKind', 'uHot', 'uLit', 'uFront', 'uAlpha']) U[n] = gl.getUniformLocation(prog, n);
 
   // ---------- loading ----------
@@ -255,6 +276,45 @@ async function createForge(canvas, base, emblems) {
       [[m.col, 'uCol'], [m.nor, 'uNor'], [m.mr, 'uMR'], [embTex[cur], 'uEmb']].forEach(([t, n], i) => { gl.activeTexture(gl.TEXTURE0 + i); gl.bindTexture(gl.TEXTURE_2D, t || null); gl.uniform1i(U[n], i); });
       gl.bindVertexArray(m.vao); gl.drawElements(gl.TRIANGLES, m.I, m.it, 0);
     }
+    if (sparks.length) drawSparks();
+  }
+  function burst() {
+    // from the rim of the medallion, where the hammer face meets it: out and up, a few straight up
+    sparks = [];
+    for (let i = 0; i < SPARKS; i++) {
+      const a = Math.random() * Math.PI * 2, sp = .7 + Math.random() * 1.9, up = .5 + Math.random() * 2.1;
+      const r = COIN_R * (.75 + Math.random() * .3);
+      sparks.push({ p: [PIECE_X + Math.cos(a) * r, FACE_Y + COIN_H + .01, Math.sin(a) * r],
+        v: [Math.cos(a) * sp, up, Math.sin(a) * sp], age: 0, life: .35 + Math.random() * .6, size: .022 + Math.random() * .026, h: [] });
+    }
+  }
+  function stepSparks(dt) {
+    for (const k of sparks) {
+      k.h.unshift(k.p.slice()); if (k.h.length > TRAIL - 1) k.h.length = TRAIL - 1;
+      k.v[1] -= 6.5 * dt; k.v[0] *= 1 - dt * 1.2; k.v[2] *= 1 - dt * 1.2;
+      for (let j = 0; j < 3; j++) k.p[j] += k.v[j] * dt;
+      if (k.p[1] < FACE_Y - .02 && Math.abs(k.p[0] - PIECE_X) < .35 && Math.abs(k.p[2]) < .16) { k.p[1] = FACE_Y - .02; k.v[1] *= -.3; }  // bounce off the anvil face
+      k.age += dt;
+    }
+    sparks = sparks.filter((k) => k.age < k.life);
+  }
+  function drawSparks() {
+    let n = 0;
+    for (const k of sparks) {
+      const t = k.age / k.life, fade = (1 - t) ** 1.5;
+      // white-hot, then orange, then dull red
+      const col = t < .35 ? [2.2, 1.7, 1.] : t < .7 ? [1.9, .8, .18] : [1.2, .32, .07];
+      [k.p, ...k.h].forEach((q, j) => {
+        const f = fade * (1 - j / TRAIL);
+        sdata.set([q[0], q[1], q[2], col[0] * f, col[1] * f, col[2] * f, k.size * (1 - j * .25)], n * 7); n++;
+      });
+    }
+    gl.useProgram(sprog);
+    gl.uniformMatrix4fv(SU.vp, false, viewProj()); gl.uniform1f(SU.px, canvas.height * 1.6);
+    gl.blendFunc(gl.ONE, gl.ONE); gl.depthMask(false);
+    gl.bindVertexArray(svao); gl.bindBuffer(gl.ARRAY_BUFFER, sbuf); gl.bufferSubData(gl.ARRAY_BUFFER, 0, sdata, 0, n * 7);
+    gl.drawArrays(gl.POINTS, 0, n);
+    gl.depthMask(true); gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA);
   }
   function project(p) {
     const v = M.apply(viewProj(), p);
@@ -275,8 +335,10 @@ async function createForge(canvas, base, emblems) {
   let anim = 0;
   function strike(next, onImpact, dur = DUR) {
     cancelAnimationFrame(anim); emblem(next);
-    const t0 = performance.now(), rise0 = rise, lit0 = lit; let hitDone = false;
+    const t0 = performance.now(), rise0 = rise, lit0 = lit; let hitDone = false, last = t0;
     const step = (now) => {
+      const dt = Math.min(.05, (now - last) / 1000); last = now;
+      if (sparks.length) stepSparks(dt);
       const t = Math.min(1, (now - t0) / dur);
       out = t < .5 ? 1 - seg(t, 0, .26, 'out') : seg(t, .5, .85, 'in');
       angle = t < .3 ? RAISED - .12 * seg(t, .18, .3, 'out')
@@ -285,11 +347,11 @@ async function createForge(canvas, base, emblems) {
       rise = t < IMPACT ? rise0 * (1 - seg(t, 0, .3)) : seg(t, .55, 1);
       front = rise;
       lit = t < IMPACT ? mix(lit0, 1, seg(t, 0, .3)) : mix(1, REST_LIT, seg(t, .5, 1));
-      if (!hitDone && t >= IMPACT) { hitDone = true; cur = next; onImpact && onImpact(); }
+      if (!hitDone && t >= IMPACT) { hitDone = true; cur = next; burst(); onImpact && onImpact(); }
       const since = (now - t0) / 1000 - dur * IMPACT / 1000;
       if (since > 0) { heat = Math.max(0, 1 - since / 1.6) ** 2; hot = Math.max(0, 1 - since / 2.6); }
       draw();
-      if (t < 1 || heat > 0 || hot > 0) anim = requestAnimationFrame(step);
+      if (t < 1 || heat > 0 || hot > 0 || sparks.length) anim = requestAnimationFrame(step);
     };
     anim = requestAnimationFrame(step);
   }
@@ -433,13 +495,13 @@ if (root) {
     try {
       forge = await createForge(canvas, new URL('./', import.meta.url).href, marks.map((m) => m.dataset.emblem));
     } catch (err) { root.classList.add('is-flat'); return; }
-    // the standing medallion: level with the title on desktop, above the copy on phones
+    // the standing medallion takes the place and size of the stand-in emblem (.forge__mark, positioned by the
+    // CSS for desktop and phones), so the swap from the stand-in to the 3D scene does not move it either
     let hit = null;
     const rest = () => {
-      if (!hit) return;
-      if (innerWidth <= 860 || innerWidth <= innerHeight) return forge.setRest(hit.x, hit.y - innerHeight * .16, Math.min(innerWidth * .42, 190));
-      const t = slides[cur].querySelector('.forge__title').getBoundingClientRect();
-      forge.setRest(hit.x, t.top + t.height / 2, Math.min(260, Math.max(170, innerHeight * .28)));
+      if (!hit || !mark) return;
+      const r = mark.getBoundingClientRect(), p = pin.getBoundingClientRect();   // the mark is hidden, still laid out
+      forge.setRest(r.left - p.left + r.width / 2, r.top - p.top + r.height / 2, r.width);
     };
     onSlide = rest;
     const place = () => {

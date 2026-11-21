@@ -10,7 +10,7 @@
     <div class="forge__bgs" aria-hidden="true">
       <img class="forge__bg is-on" src="{{ '/assets/Images/forge-hex-dark.webp' | relative_url }}" srcset="{{ '/assets/Images/forge-hex-dark.webp' | srcset }}" sizes="100vw" alt="" fetchpriority="high" decoding="async">
       {%- for m in site.modlists %}
-      <img class="forge__bg" src="{{ m.image | relative_url }}" srcset="{{ m.image | srcset }}" sizes="100vw" alt="" loading="lazy" decoding="async">
+      <img class="forge__bg" src="{{ m.image | relative_url }}" srcset="{{ m.image | srcset }}" sizes="100vw" alt="" loading="lazy" decoding="async"{% if m.image_position_phone != '' %} style="--pos-phone: {{ m.image_position_phone }}"{% endif %}>
       {%- endfor %}
     </div>
     <div class="forge__floor" aria-hidden="true"></div>
@@ -62,9 +62,9 @@
 
     {%- comment %} The emblems: with the script, each one strikes its section in; without it, they are plain links. {% endcomment %}
     <nav class="forge__rail" aria-label="Modlists">
-      <a href="{{ '/hub/' | relative_url }}" data-emblem="{{ '/assets/logos/emblem.webp' | relative_url }}" aria-current="true"><i style="--m: url('{{ '/assets/logos/emblem.webp' | relative_url }}')"></i><span class="sr-only">The Astral Forge</span></a>
+      <a href="{{ '/hub/' | relative_url }}" data-emblem="{{ '/assets/logos/emblem.webp' | relative_url }}" aria-current="true"><i style="--m: url('{{ '/assets/logos/emblem.webp' | relative_url }}')"></i><span class="forge__name">The Astral Forge</span></a>
       {%- for m in site.modlists %}
-      <a href="{{ m.url | relative_url }}" data-emblem="{{ m.emblem | relative_url }}"><i style="--m: url('{{ m.emblem | relative_url }}')"></i><span class="sr-only">{{ m.title }}</span></a>
+      <a href="{{ m.url | relative_url }}" data-emblem="{{ m.emblem | relative_url }}"><i style="--m: url('{{ m.emblem | relative_url }}')"></i><span class="forge__name">{{ m.title }}</span></a>
       {%- endfor %}
     </nav>
     <p class="forge__hint" aria-hidden="true"><span lang="en">Scroll to strike</span><span lang="fr">Faites défiler pour frapper</span></p>

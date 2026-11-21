@@ -733,6 +733,8 @@ async function build() {
       title: idx.title || key,
       game: idx.game || '',
       image: banner.image || idx.image || '/assets/Images/generic_background.webp',
+      // where the home forge crops the picture on phones (CSS object-position), when the subject is off centre
+      image_position_phone: banner.image_position_phone || '',
       // Every list uses the site gold (asked by the user, Nov 2026); project_banner.accent is no longer used
       accent: 'var(--gold)',
       // emblem drawn by scripts/make-modlist-emblems.py, shown on the home panel

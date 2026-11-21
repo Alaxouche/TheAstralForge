@@ -1569,9 +1569,13 @@ html[data-lang="en"] .sk-alt { display: none; }
 .forge__stats dd { margin: 0 0 4px; font: 600 26px/1 var(--serif); color: var(--hi); font-variant-numeric: lining-nums tabular-nums; }
 .forge__stats [data-discord-online] dd { display: flex; align-items: center; gap: 8px; }
 
-/* Side menu: the six emblems. With the script each one strikes its section in; without it they are links. */
-.forge__rail { position: absolute; z-index: 6; right: 1.6vw; top: 50%; transform: translateY(-50%); display: grid; gap: 10px; }
-.forge__rail a { display: grid; place-items: center; width: 40px; height: 40px; }
+/* The six emblems: a row along the bottom on desktop, each with its list's name; a strip on the right on phones.
+   With the script each one strikes its section in; without it they are links. */
+.forge__rail { position: absolute; z-index: 6; left: 50%; bottom: 38px; transform: translateX(-50%); display: flex; align-items: flex-start; gap: clamp(18px, 2.6vw, 44px); }
+.forge__rail a { display: flex; flex-direction: column; align-items: center; gap: 9px; padding: 6px 4px; color: var(--muted); text-decoration: none; }
+.forge__name { font-size: 11.5px; font-weight: 500; line-height: 1.2; letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; transition: color .3s; }
+.forge__rail a:hover .forge__name { color: var(--fg); }
+.forge__rail a[aria-current] .forge__name { color: var(--brass-2); }
 .forge__rail i { width: 26px; height: 26px; background: rgba(var(--ink), .45); -webkit-mask: var(--m) center / contain no-repeat; mask: var(--m) center / contain no-repeat; transition: background .3s, transform .3s var(--out); }
 .forge__rail a:hover i { background: rgba(var(--ink), .8); }
 .forge__rail a[aria-current] i { background: var(--brass-2); transform: scale(1.3); }
@@ -1581,6 +1585,7 @@ html[data-lang="en"] .sk-alt { display: none; }
 @media (max-width: 860px), (max-aspect-ratio: 1/1) {
   .forge__slides { left: 20px; right: 20px; width: auto; top: auto; bottom: max(28px, 5svh); transform: none; }
   .forge__pin::after { content: ""; position: absolute; inset: 50% 0 0; z-index: 4; pointer-events: none; background: linear-gradient(transparent, rgba(var(--paper), .85) 35%, var(--bg)); }
+  .forge__bg { object-position: var(--pos-phone, 50% 50%); }   /* project_banner.image_position_phone */
   .forge__bgs::after { background: radial-gradient(ellipse 80% 45% at 50% 32%, rgba(var(--paper), .35), rgba(var(--paper), .75) 70%, rgba(var(--paper), .9)); }
   .forge__mark { right: auto; left: 50%; top: 30%; width: min(46vw, 220px); transform: translate(-50%, -50%); }
   .forge__title { font-size: clamp(34px, 9.5vw, 48px); }
@@ -1591,12 +1596,15 @@ html[data-lang="en"] .sk-alt { display: none; }
   .forge__stats dd { font-size: 21px; }
   .forge .actions { gap: 8px; }
   .forge .btn { padding: 11px 16px; font-size: 14.5px; }
-  .forge__rail { right: 6px; top: 84px; transform: none; gap: 2px; }
-  .forge__rail a { width: 34px; height: 34px; }
+  .forge__rail { left: auto; bottom: auto; right: 6px; top: 84px; transform: none; display: grid; gap: 2px; }
+  .forge__rail a { display: grid; place-items: center; width: 34px; height: 34px; padding: 0; }
   .forge__rail i { width: 20px; height: 20px; }
   .forge__hint { display: none; }
   /* phones: the age of the update and the third button drop out, so the copy stays below the anvil */
   .forge__stats .forge__stat--age, .forge .actions .btn:nth-child(3) { display: none; }
+}
+@media (max-width: 1180px), (max-aspect-ratio: 1/1) {
+  .forge__name { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 }
 @media (prefers-reduced-motion: reduce) {
   .forge__bg.is-reveal, .forge__slide.is-stamp, .forge__pin.is-hit .forge__gl, .forge__pin.is-hit .forge__floor, .nav--home { animation: none !important; }
