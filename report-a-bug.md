@@ -4,10 +4,10 @@ layout: page
 permalink: /report-a-bug/
 description: "Send a bug report straight to the support channel on Discord."
 ---
-{% include page_hero.html eyebrow="Help" eyebrow_fr="Aide" title_en="Report a bug" title_fr="Signaler un bug" lead_en="Fill in the form and send it: it goes straight to the support channel on Discord. Put logs and screenshots as links." lead_fr="Remplissez le formulaire et envoyez-le : il arrive directement dans le canal de support du Discord. Mettez les logs et captures sous forme de liens." image="/assets/Images/Cyberpunk/photomode_12092025_110731.webp" %}
+{% include page_hero.html eyebrow="Help" eyebrow_fr="Aide" title_en="Report a bug" title_fr="Signaler un bug" lead_en="Fill in the form and send it: it goes straight to the support channel on Discord. Put logs and screenshots as links." lead_fr="Remplissez le formulaire et envoyez-le : il arrive directement dans le canal de support du Discord. Mettez les logs et captures sous forme de liens." image="/assets/Images/forge-hex-dark.webp" image_light="/assets/Images/forge-hex-light.webp" hex=true glow=true %}
 
-<section class="wrap narrow section" data-bug>
-  <form class="form">
+<section class="wrap section bug" data-bug>
+  <form class="form hexpanel">
     <label><span><span lang="en">Summary</span><span lang="fr">Résumé</span></span><input class="input" name="title" type="text" placeholder="Short issue summary" data-ph-fr="Résumé du problème en une ligne"></label>
     <div class="form__row">
       <label><span>Type</span>
@@ -26,7 +26,7 @@ description: "Send a bug report straight to the support channel on Discord."
       <p class="form__status" data-bug-status role="status" aria-live="polite"></p>
     </div>
   </form>
-  <div class="preview">
+  <div class="preview hexpanel">
     <div class="preview__bar">
       <span class="eyebrow"><span lang="en">Preview</span><span lang="fr">Aperçu</span></span>
       <button class="btn btn--sm" type="button" data-bug-copy><span lang="en">Copy</span><span lang="fr">Copier</span></button>

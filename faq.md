@@ -4,11 +4,13 @@ layout: page
 permalink: /faq/
 description: "Answers to common questions about the modlists, installation and troubleshooting."
 ---
-{% include page_hero.html eyebrow="Help" eyebrow_fr="Aide" title_en="FAQ" title_fr="FAQ" lead_en="Common questions about the modlists, installation and troubleshooting." lead_fr="Les questions fréquentes sur les modlists, l'installation et le dépannage." image="/assets/Images/Cyberpunk/photomode_11092025_202700.webp" %}
+{% include page_hero.html eyebrow="Help" eyebrow_fr="Aide" title_en="FAQ" title_fr="FAQ" lead_en="Common questions about the modlists, installation and troubleshooting." lead_fr="Les questions fréquentes sur les modlists, l'installation et le dépannage." image="/assets/Images/forge-hex-dark.webp" image_light="/assets/Images/forge-hex-light.webp" hex=true glow=true %}
 
-<section class="wrap narrow section">
+<section class="wrap section">
+  <div class="hexpanel">
   <input class="input faq-search" type="search" data-faq-search placeholder="Search the FAQ…" data-ph-fr="Rechercher dans la FAQ…" aria-label="Search the FAQ" data-aria-fr="Rechercher dans la FAQ">
   {% include components/faq.html %}
+  </div>
 </section>
 
 <section class="cta">

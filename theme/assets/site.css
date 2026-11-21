@@ -1758,3 +1758,42 @@ html[data-lang="en"] .sk-alt { display: none; }
   .plate, .plate__bg, .planet__disc, .planet__name, .o-ring, .o-arm { transition: none; }
   .plate__bar { animation: none !important; }
 }
+
+/* =====================================================================
+   Honeycomb pages: the pointer glow (Gallery, FAQ, Supporters, Report a bug; page_hero.html glow=true).
+   The forge honeycomb is a fixed layer behind the whole page; a lit copy of it shows through a round
+   lamp that follows the mouse. The lamp (fixed radial mask) and the picture inside it move in opposite
+   directions with transforms only, so the tiles stay in register and nothing repaints. Mouse and pen only.
+   ===================================================================== */
+.hexpage { position: fixed; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; }
+.hexpage__bg, .hexpage__lamp i { position: absolute; left: 0; top: 0; width: 100vw; height: 100lvh; }
+.hexpage__bg { object-fit: cover; }
+/* a veil over the honeycomb so long text reads; lighter at the top where the hero sits */
+.hexpage::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(var(--paper), .15), rgba(var(--paper), .45) 60vh); }
+.hexpage__lamp { --R: clamp(170px, 17vw, 300px); position: absolute; left: 0; top: 0; width: calc(var(--R) * 2); height: calc(var(--R) * 2);
+  opacity: 0; transition: opacity .5s var(--out); will-change: transform;
+  -webkit-mask: radial-gradient(closest-side, #000, rgba(0, 0, 0, .55) 45%, transparent);
+          mask: radial-gradient(closest-side, #000, rgba(0, 0, 0, .55) 45%, transparent); }
+.hexpage__lamp i { will-change: transform; background: var(--glow-d, none) center / cover no-repeat; }
+:root[data-theme="light"] .hexpage__lamp i { background-image: var(--glow-l, none); }
+.hexpage.is-on .hexpage__lamp { opacity: 1; }
+/* the hero has no picture of its own here: no dimming band, so the honeycomb runs on without a seam */
+.phero--glow::after { display: none; }
+@media (hover: none), (forced-colors: active), (prefers-contrast: more) { .hexpage__lamp { display: none; } }
+@media (forced-colors: active), (prefers-contrast: more) { .hexpage { display: none; } }
+:root[data-theme="light"] .hexpage::after { background: linear-gradient(180deg, rgba(var(--paper), .2), rgba(var(--paper), .6) 60vh); }
+
+/* Content over the honeycomb: plates that keep text readable while the glow passes under them */
+.hexpanel { background: rgba(var(--paper), .84); border: 1px solid var(--line); padding: clamp(20px, 3vw, 40px); }
+.tiers.hexpanel { padding: 0; }
+.two-col > .hexpanel .section-title { margin-top: 0; }
+.faq-search + .faq, .hexpanel > .faq { margin-top: 8px; }
+/* Report a bug: form and preview side by side at full width, the preview stays in view */
+.bug { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 32px; align-items: start; }
+.bug .preview { margin-top: 0; position: sticky; top: 96px; }
+@media (max-width: 960px) { .bug { grid-template-columns: 1fr; } .bug .preview { position: static; } }
+/* Solid where the honeycomb would show through: footer, gallery filters */
+.footer { background: var(--bg); }
+.filters .chip { background: var(--bg-2); }
+.filters .chip:hover { background: var(--panel); }
+:root[data-theme="light"] .hexpanel { background: rgba(var(--paper), .9); }

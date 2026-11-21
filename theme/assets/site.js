@@ -105,6 +105,44 @@
     if (document.readyState === 'complete') lightPulse(); else addEventListener('load', lightPulse, { once: true });
   }
 
+  /* Honeycomb pages: the pointer glow (CSS "Honeycomb pages: the pointer glow"). The honeycomb is fixed to the
+     window, so pointer coordinates are its coordinates. The lamp moves to the pointer and its picture moves
+     back by the same amount, so the lit tiles line up with the background. Eased while it catches up, then
+     the loop stops; snaps straight there with reduced motion. */
+  var glow = document.querySelector('[data-glow]');
+  if (glow && matchMedia('(hover: hover)').matches) {
+    var lamp = glow.querySelector('.hexpage__lamp'), gPic = lamp.firstElementChild;
+    var gR = 0, tx = 0, ty = 0, cx = 0, cy = 0, gRun = false, gFirst = true;
+    var placeGlow = function () {
+      lamp.style.transform = 'translate3d(' + (cx - gR) + 'px,' + (cy - gR) + 'px,0)';
+      gPic.style.transform = 'translate3d(' + (gR - cx) + 'px,' + (gR - cy) + 'px,0)';
+    };
+    var stepGlow = function () {
+      cx += (tx - cx) * .2; cy += (ty - cy) * .2;
+      var done = Math.abs(tx - cx) < .5 && Math.abs(ty - cy) < .5;
+      if (done) { cx = tx; cy = ty; }
+      placeGlow();
+      gRun = !done;
+      if (gRun) requestAnimationFrame(stepGlow);
+    };
+    var lightGlow = function () {
+      glow.style.setProperty('--glow-d', 'url("' + glow.dataset.srcD + '")');
+      glow.style.setProperty('--glow-l', 'url("' + glow.dataset.srcL + '")');
+      gR = lamp.offsetWidth / 2;
+      addEventListener('resize', function () { gR = lamp.offsetWidth / 2; placeGlow(); }, { passive: true });
+      document.addEventListener('pointermove', function (e) {
+        if (e.pointerType === 'touch') return;
+        tx = e.clientX; ty = e.clientY;
+        if (gFirst || calm) { gFirst = false; cx = tx; cy = ty; placeGlow(); }
+        else if (!gRun) { gRun = true; requestAnimationFrame(stepGlow); }
+        glow.classList.add('is-on');
+      }, { passive: true });
+      // the pointer left the window
+      document.addEventListener('pointerout', function (e) { if (!e.relatedTarget) { glow.classList.remove('is-on'); gFirst = true; } });
+    };
+    if (document.readyState === 'complete') lightGlow(); else addEventListener('load', lightGlow, { once: true });
+  }
+
   /* Hub orrery: /hub/#<list id> opens on that list (the choice itself is CSS, see "Hub: the orrery") */
   var orb = location.hash && document.getElementById('orb-' + location.hash.slice(1));
   if (orb && orb.type === 'radio') orb.checked = true;
