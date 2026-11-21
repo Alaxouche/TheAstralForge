@@ -1959,3 +1959,17 @@ html:has(.dbar) { scroll-padding-top: calc(var(--navh) + var(--dbarh) + 24px); }
 html:has(.dbar__sub:not(.dbar__sub--steps)) { scroll-padding-top: calc(var(--navh) + var(--dbarh) + 76px); }
 @media (max-width: 1099px) { html:has(.dbar__sub--steps) { scroll-padding-top: calc(var(--navh) + var(--dbarh) + 76px); } }
 .dbar:has(.dbar__sub:not(.dbar__sub--steps)) + .folio .folio__rail { top: calc(var(--navh) + var(--dbarh) + 80px); max-height: calc(100vh - var(--navh) - var(--dbarh) - 100px); }
+
+
+/* ==========================================================================
+   Footer credit: Alaxouche in brass, WhisperDealer in the green of his credit on
+   themoddingbungalo.com (#6fc08e / hover #9ad9b1, 9 : 1 on --bg). Light theme: the
+   same hue darkened to pass AA on paper (#2b7046, 5.1 : 1).
+   ========================================================================== */
+.credit a { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; transition: color .2s; }
+.credit__alax { color: var(--gold); }
+.credit__alax:hover { color: var(--brass-2); }
+.credit__wd { --credit-green: #6fc08e; --credit-green-hi: #9ad9b1; color: var(--credit-green); }
+.credit__wd:hover { color: var(--credit-green-hi); }
+:root[data-theme="light"] .credit__wd { --credit-green: #2b7046; --credit-green-hi: #1f5c38; }
+@media (forced-colors: active) { .credit a { color: LinkText; } }
