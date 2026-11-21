@@ -1,8 +1,23 @@
-# The Astral Forge: notes for the next AI
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 Documentation site for Alaxouche's Wabbajack modlists (theastralforge.com). There are five lists: Wunduniik and Krentoraan (Skyrim SE), Ghost of the Grid (Cyberpunk 2077), No Man's Sky Explorer, and Extrasolar Containment Protocol (Starfield). All content is bilingual EN/FR.
 
-The site was **rebuilt in November 2026**. It no longer uses Jekyll. A small Node generator now reads the old Jekyll content (Markdown, YAML, Liquid) unchanged. The user speaks French.
+The site was **rebuilt in November 2026**. It no longer uses Jekyll. A small Node generator now reads the old Jekyll content (Markdown, YAML, Liquid) unchanged. The site owner (Alaxouche) speaks French; other contributors work in English. Answer in the language the person writes in. `README.md` is the short human introduction; this file holds the detail.
+
+## Current goal: a design of its own
+
+The November 2026 rebuild took its look from Zenematics (https://zenematics.com, source in the sibling folder `../zen-site-v1/` when it is checked out; read-only reference, never edit it). The goal now is to make The Astral Forge look like itself. What was borrowed, measured by comparing the two stylesheets:
+
+- **Palette**: the same near-black `#07080a`, bone white `#ece9e2` and muted gold (`#c9a96e` here, `#c9ab76` there).
+- **Type**: a Futura-style geometric sans (Jost here, Futura PT there; `futura-pt` is still in the `--font` fallback stack), set in wide-tracked uppercase for titles, labels and buttons.
+- **Home**: the hover accordion of full-height image panels (`flex-grow` 1 to 7, idle label / vertical label / full content, scrim and shade, bottom bar). The class names are the same: `.panel`, `.panel__idle`, `.panel__vert`, `.panel__full`, `.panel__scrim`, `.panel__shade`, `.panel__bar`, `.panel__mark`, `.panel__logo`, `.panel__title--metal`.
+- **Components**: outlined rectangular buttons with one solid bone primary (`.btn`), the eyebrow label with a small mark (`.eyebrow`, `.eyebrow-row`), the docs sidebar (`.side`, `.side__group`), `.chip`, `.tags`, `.pager`, `.kb`, `.faq__item`, the YouTube facade (`.yt__play`).
+
+What is already The Astral Forge's own and should lead the new design: the emblem (circle and sword), the 4-point star, the honeycomb fields, the modlist emblems, the slanted panel seams, the rune decoding of titles, the molten bar, the light theme, the two languages, the live data.
+
+Rules for this work: every rule in this file still applies (colour tokens, both themes, both languages, performance rules, the list of things the user had removed). Use the `astral-identity` skill for the brief and method, `visual-check` to look at the result, and the `design-reviewer` agent to review a diff before calling it done. Record each design decision the user makes in this file, as the earlier ones are.
 
 ## Commands
 
@@ -16,7 +31,13 @@ npm run og           # python scripts/make-og.py: social preview cards in assets
 npm run hex          # python scripts/make-hexfield.py: the honeycomb backgrounds (numpy + Pillow), then npm run thumbs
 npm run contents     # python scripts/modlist-contents.py [id] [local .wabbajack]: _data/contents_<id>.json from the PUBLISHED lists; run after each list release
 python scripts/supporters.py <patreon members.csv> <kofi supporters.csv> _data/contributors.yml   # rewrites recent / top supporters from the two exports (Patreon USD, Ko-fi EUR; e-mails only used to match people, never written)
+npm run shot -- <page> [out.png] [options]   # screenshot of the local site in a given state (see "Verifying visually")
+npm run bench -- http://localhost:4000/ label   # frame rate of the home panels (see "Home performance rules")
 ```
+
+- There are **no unit tests and no linter**. `npm run check` (on the built `_site/`) is the only automated gate; it blocks pull requests through `quality.yml`.
+- The `npm run thumbs / og / hex / contents` scripts call `python`. On a Windows machine where `python` is only the Microsoft Store stub, run the script with the launcher instead: `py scripts/make-thumbs.py`.
+- Project skills and agents live in `.claude/`: skills `visual-check`, `astral-identity`, `modlist-release`; agent `design-reviewer`.
 
 - **The dev server does not reload `scripts/build.mjs`.** After editing that file, restart the server. On Windows, the old Node process often keeps port 4000 (`EADDRINUSE`). Free it with:
   `netstat -ano | grep ":4000 " | grep LISTENING` then `taskkill //PID <pid> //F`.
@@ -41,7 +62,7 @@ python scripts/supporters.py <patreon members.csv> <kofi supporters.csv> _data/c
 | `_data/` | `faq.yml` (site FAQ), `wunduniik_faq.yml`, `krentoraan_faq.yml` (each entry: `question`, `answer`, `question_fr`, `answer_fr`, `tags`, `tags_fr`; `components/faq.html` renders both languages), `contributors.yml` (`same_as:` on a tier whose perks equal a lower one), `community_gallery.yml`, `alerts.yml`, `modlist_snapshot.json` |
 | `assets/Images/guides/` | Guide screenshots and YouTube thumbnails, copied from Wix / Reddit / GitHub in Nov 2026 so the guides no longer hotlink. **Guide images must stay local** (`npm run check` fails on hotlinked images). |
 | `assets/Images/_thumbs/` | Generated by `scripts/make-thumbs.py` (480 / 960 / 1600 px WebP + `manifest.json`; AVIF was tried and dropped: at the same visual quality it was not lighter). Not hand-edited. |
-| `scripts/` | `build.mjs`, `check-site.mjs`, `make-thumbs.py`, `make-emblem.py`, `bench.mjs`, plus the older `sync-discord-gallery.mjs`, `optimize-images.sh` |
+| `scripts/` | `build.mjs`, `check-site.mjs`, `make-thumbs.py`, `make-emblem.py`, `bench.mjs`, `shot.mjs`, `browser.mjs` (headless browser launcher shared by the last two), plus the older `sync-discord-gallery.mjs`, `optimize-images.sh` |
 | `functions/api/` | Cloudflare **Pages Functions**, deployed with the site by `wrangler pages deploy` (it uploads `functions/` from the directory it runs in): `live.js` (`GET /api/live`: modlist.json + Discord count in one cached same-site answer) and `report.js` (`POST /api/report`: bug form to a Discord webhook, secret `DISCORD_WEBHOOK_URL` on the Pages project). The local dev server does not run them: `site.js` falls back to GitHub / Discord directly and the bug form to copy-paste. |
 | `workers/rebuild/` | Standalone Worker (`npx wrangler deploy` from that folder, secret `DEPLOY_HOOK_URL`): hourly cron that compares GitHub's modlist.json with `/build-info.json` (written by every build) and calls the Workers Builds deploy hook when a list changed. Setup in `workers/README.md` (French, for the user). |
 | `_legacy/` | Backups: root pages and old `pages.yml` from the rebuild; `backup-2026-11-19/` (content, data, workflows, theme before the Nov 19 changes); `jekyll-theme/` (the old Jekyll theme, see below). Ignored by the build and the dev watcher. |
@@ -109,13 +130,18 @@ python scripts/supporters.py <patreon members.csv> <kofi supporters.csv> _data/c
 
 ## Verifying visually
 
-There's no Playwright. Headless Edge works. Its binary moved to `EdgeCore/<version>/` (the old `Edge/Application/` folder no longer has `msedge.exe`); check `ls "/c/Program Files (x86)/Microsoft/EdgeCore/"` if the version changed:
+There's no Playwright. `scripts/shot.mjs` drives headless Edge / Chrome over the DevTools protocol (shared launcher in `scripts/browser.mjs`, also used by `bench.mjs`; it finds the browser in `Edge/Application`, `EdgeCore/<version>/` or Chrome, or takes `CHROME_PATH`). The dev server must be running.
+
 ```bash
-"/c/Program Files (x86)/Microsoft/EdgeCore/157.0.4341.60/msedge.exe" --headless=new --disable-gpu --hide-scrollbars \
-  --virtual-time-budget=6000 --window-size=1440,900 --screenshot="<scratchpad>/x.png" "http://localhost:4000/"
+node scripts/shot.mjs home out.png --panel 1            # home with panel 1 open (0 = The Forge); a hover can't be captured, the script sets .has-on / .is-on
+node scripts/shot.mjs wunduniik/ --mobile --theme light --lang fr   # real 390 px phone viewport at 2x, light theme, French
+node scripts/shot.mjs hub/ --full --still               # whole page, reduced motion (entrances settled)
+node scripts/shot.mjs wunduniik/installation-guide/ --matrix        # dark + light x desktop + mobile, four files
 ```
-- Headless Edge can't render narrower than ~500 px. For mobile, use a test HTML page in `_site/` with 390 px `<iframe>`s (then delete it).
-- A hover state can't be captured: set the classes from the parent page (`hero.classList.add('has-on'); panel.classList.add('is-on')`).
+
+- Without an output path the PNG goes to `<tmp>/taf-shots/` and the path is printed. Other options (`--at "selector"`, `--js "code"`, `--w`, `--h`, `--wait`) are in the header of the script.
+- **In Git Bash, write page paths without the leading slash** (`hub/`, `home` for the root): Bash turns `/hub/` into `C:/Program Files/Git/hub/`. The script undoes the common case, but don't rely on it.
+- Every visual change must be looked at in **both themes and at phone width** before it is called done: `--matrix` is the quick way. The `visual-check` skill has the full routine.
 
 ## Shell pitfalls hit on Windows
 

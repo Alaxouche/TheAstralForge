@@ -7,7 +7,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import os from 'node:os';
 
-const EDGE = 'C:/Program Files (x86)/Microsoft/EdgeCore/157.0.4341.60/msedge.exe';
+import { findBrowser } from './browser.mjs';
+const EDGE = findBrowser();
 const url = process.argv[2] || 'http://localhost:4000/';
 const label = process.argv[3] || url;
 const port = 9300 + Math.floor(Math.random() * 500);
