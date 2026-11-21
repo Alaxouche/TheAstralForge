@@ -1520,15 +1520,13 @@ html[data-lang="en"] .sk-alt { display: none; }
 .forge.is-live { height: calc(var(--n, 6) * 100svh); }
 .forge__pin { position: sticky; top: 0; height: 100svh; min-height: 520px; overflow: hidden; }
 
-/* Backgrounds: the pictures of the old home panels. The next one opens as a circle from the impact. */
+/* Backgrounds: the pictures of the old home panels. The next one opens as a honeycomb from the impact. */
 .forge__bgs { position: absolute; inset: 0; }
 .forge__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; visibility: hidden; }
 .forge__bg.is-on { visibility: visible; }
-.forge__bg.is-reveal { visibility: visible; z-index: 1; animation: forge-reveal 1.1s cubic-bezier(.2, .6, .2, 1) both; }
-@keyframes forge-reveal {
-  from { clip-path: circle(0 at var(--hx, 70%) var(--hy, 45%)); }
-  to { clip-path: circle(150vmax at var(--hx, 70%) var(--hy, 45%)); }
-}
+.forge__bg.is-reveal { visibility: visible; z-index: 1; }   /* clipped to the growing honeycomb by forge.js */
+/* the glowing tiles at the front of the honeycomb, above the dimming layer, under the anvil */
+.forge__heat { position: absolute; inset: 0; z-index: 3; width: 100%; height: 100%; pointer-events: none; }
 /* one dimming layer over every picture: lighter around the anvil, darkest behind the copy */
 .forge__bgs::after { content: ""; position: absolute; inset: 0; z-index: 2;
   background: radial-gradient(ellipse 60% 70% at var(--fx, 68%) 58%, rgba(var(--paper), .35), rgba(var(--paper), .7) 70%, rgba(var(--paper), .9)),
@@ -1607,5 +1605,5 @@ html[data-lang="en"] .sk-alt { display: none; }
   .forge__name { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .forge__bg.is-reveal, .forge__slide.is-stamp, .forge__pin.is-hit .forge__gl, .forge__pin.is-hit .forge__floor, .nav--home { animation: none !important; }
+  .forge__slide.is-stamp, .forge__pin.is-hit .forge__gl, .forge__pin.is-hit .forge__floor, .nav--home { animation: none !important; }
 }

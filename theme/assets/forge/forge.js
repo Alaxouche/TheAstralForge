@@ -420,6 +420,69 @@ if (root) {
     $$('[data-count]', slide).forEach((n) => setTimeout(() => TAF.countUp && TAF.countUp(n), delay + 100));
   }
 
+  // ---- the next background opens as a honeycomb from the point of impact ----
+  // The picture is clipped to a union of hexagons (one CSS path, rebuilt each frame): a circle covers the
+  // cells well behind the front, and only the band of cells at the front is listed one by one, each growing
+  // from its centre. The tiles at the front glow brass and orange on a canvas above the dimming layer,
+  // then cool as the front moves on. Runs only during a reveal (about 1.1 s).
+  const heat = root.querySelector('.forge__heat'), hctx = heat && heat.getContext('2d');
+  const HEX_DUR = 1150, S3 = Math.sqrt(3);
+  let hexRun = 0;
+  function hexReveal(im, done) {
+    const run = ++hexRun;
+    const W = pin.clientWidth, H = pin.clientHeight;
+    const cx = parseFloat(pin.style.getPropertyValue('--hx')) || W * .7, cy = parseFloat(pin.style.getPropertyValue('--hy')) || H * .45;
+    const R = Math.max(22, Math.min(46, Math.min(W, H) / 22));       // tile radius (centre to corner)
+    const JIT = R * 1.6, GROW = R * 1.4, GLOW = R * 5;               // front raggedness, tile growth, glow tail
+    // pointy-top lattice with a tile centred on the impact
+    const cells = [];
+    const rows = Math.ceil(Math.max(cy, H - cy) / (1.5 * R)) + 1, cols = Math.ceil(Math.max(cx, W - cx) / (S3 * R)) + 2;
+    for (let r = -rows; r <= rows; r++) for (let q = -cols - rows; q <= cols + rows; q++) {
+      const x = cx + S3 * R * (q + r / 2), y = cy + 1.5 * R * r;
+      if (x < -R || x > W + R || y < -R || y > H + R) continue;
+      const h = Math.sin(q * 127.1 + r * 311.7) * 43758.5453;      // steady per-tile jitter
+      const rd = Math.hypot(x - cx, y - cy);
+      cells.push({ x, y, rd, d: rd + (h - Math.floor(h)) * JIT });
+    }
+    cells.sort((a, b) => a.d - b.d);
+    const done1 = new Map();                                        // outlines of fully grown tiles, built once
+    const far = cells[cells.length - 1].d + GROW + 2;
+    const dpr = Math.min(2, devicePixelRatio || 1);
+    if (hctx) { heat.width = Math.round(W * dpr); heat.height = Math.round(H * dpr); hctx.setTransform(dpr, 0, 0, dpr, 0, 0); }
+    const gold = (getComputedStyle(root).getPropertyValue('--gold-rgb') || '214, 162, 78').trim();
+    const corner = (x, y, s) => { let p = ''; for (let k = 0; k < 6; k++) { const a = Math.PI / 6 + k * Math.PI / 3; p += (k ? 'L' : 'M') + (x + s * Math.cos(a)).toFixed(1) + ' ' + (y + s * Math.sin(a)).toFixed(1); } return p + 'Z'; };
+    const hexPath = (c, x, y, s) => { for (let k = 0; k < 6; k++) { const a = Math.PI / 6 + k * Math.PI / 3; c[k ? 'lineTo' : 'moveTo'](x + s * Math.cos(a), y + s * Math.sin(a)); } c.closePath(); };
+    const t0 = performance.now();
+    (function frame(t) {
+      if (run !== hexRun) return;
+      const k = Math.min(1, (t - t0) / HEX_DUR), e = 1 - Math.pow(1 - k, 2.4);
+      const front = e * far;
+      // cells fully grown behind (front - GROW) are covered by one circle, minus a margin for the jitter
+      const inner = Math.max(0, front - GROW - JIT - R * 2);
+      let path = inner > 0 ? `M${(cx - inner).toFixed(1)} ${cy.toFixed(1)}a${inner} ${inner} 0 1 1 ${2 * inner} 0a${inner} ${inner} 0 1 1 ${-2 * inner} 0Z` : '';
+      if (hctx) { hctx.clearRect(0, 0, W, H); hctx.globalCompositeOperation = 'lighter'; }
+      for (const c of cells) {
+        if (c.d > front) break;
+        const g = Math.min(1, (front - c.d) / GROW);                  // 0 -> 1 as the front passes the tile
+        let o = g < 1 ? null : done1.get(c);
+        if (g === 1 && !o) done1.set(c, o = { s: corner(c.x, c.y, R + .6), p: hctx && new Path2D(corner(c.x, c.y, R - 1)) });
+        if (g < 1 || c.rd + R > inner) path += o ? o.s : corner(c.x, c.y, R * (.15 + .85 * g) + .6);
+        const age = (front - c.d) / GLOW;                              // glow: hot at the front, cools behind
+        if (hctx && age < 1) {
+          const a = Math.pow(1 - age, 1.6) * (1 - k * .5);
+          let hp = o && o.p;
+          if (!hp) { hp = new Path2D(); hexPath(hp, c.x, c.y, R * (.15 + .85 * g) - 1); }
+          hctx.fillStyle = `rgba(233, 134, 46, ${(a * .16).toFixed(3)})`; hctx.fill(hp);
+          hctx.lineWidth = 5; hctx.strokeStyle = `rgba(184, 68, 26, ${(a * .35).toFixed(3)})`; hctx.stroke(hp);
+          hctx.lineWidth = 1.4; hctx.strokeStyle = age < .35 ? `rgba(246, 207, 122, ${a.toFixed(3)})` : `rgba(${gold}, ${(a * .8).toFixed(3)})`; hctx.stroke(hp);
+        }
+      }
+      im.style.clipPath = path ? `path('${path}')` : 'inset(50%)';
+      if (k < 1) requestAnimationFrame(frame);
+      else { im.style.clipPath = ''; if (hctx) hctx.clearRect(0, 0, W, H); done(); }
+    })(t0);
+  }
+
   // ---- sections ----
   let shown = 0;
   function showSlide(i, stamp) {
@@ -432,11 +495,11 @@ if (root) {
     bgs.forEach((im) => im.classList.remove('is-reveal'));
     const im = bgs[i]; im.loading = 'eager';
     if (from == null || calm) { bgs.forEach((x, k) => x.classList.toggle('is-on', k === i)); return; }
-    void im.offsetWidth; im.classList.add('is-reveal'); prev.classList.add('is-on');
-    im.addEventListener('animationend', () => {
+    im.style.clipPath = 'inset(50%)'; im.classList.add('is-reveal'); prev.classList.add('is-on');
+    hexReveal(im, () => {
       if (shown !== i) return;
       bgs.forEach((x, k) => x.classList.toggle('is-on', k === i)); im.classList.remove('is-reveal');
-    }, { once: true });
+    });
   }
 
   let forge = null, cur = 0, want = 0, busy = false, onSlide = () => {};

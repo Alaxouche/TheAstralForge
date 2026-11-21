@@ -13,6 +13,7 @@
       <img class="forge__bg" src="{{ m.image | relative_url }}" srcset="{{ m.image | srcset }}" sizes="100vw" alt="" loading="lazy" decoding="async"{% if m.image_position_phone != '' %} style="--pos-phone: {{ m.image_position_phone }}"{% endif %}>
       {%- endfor %}
     </div>
+    <canvas class="forge__heat" aria-hidden="true"></canvas>
     <div class="forge__floor" aria-hidden="true"></div>
     <canvas class="forge__gl" aria-hidden="true"></canvas>
     <img class="forge__mark" src="{{ '/assets/logos/emblem.webp' | relative_url }}" alt="" width="640" height="640" decoding="async">
