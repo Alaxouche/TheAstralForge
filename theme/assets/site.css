@@ -311,34 +311,6 @@ strong { font-weight: 500; color: var(--hi); }
 .section-title .diamond { color: var(--gold); }
 .narrow { max-width: 920px; }
 
-/* Hub bands */
-.bands { display: flex; flex-direction: column; border-top: 1px solid var(--line); }
-.band { --accent: var(--gold); position: relative; display: flex; align-items: center; height: 190px; overflow: hidden; border-bottom: 1px solid var(--line); background: #0a0705; transition: height .8s var(--io); }
-.band__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .32; transition: opacity .8s ease, transform 1.4s var(--out); }
-.band::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(var(--paper), .95) 0%, rgba(var(--paper), .55) 50%, transparent 100%); }
-.band__body { position: relative; z-index: 1; display: grid; grid-template-columns: 70px 1fr auto; align-items: center; gap: 24px; width: 100%; max-width: var(--max); margin: 0 auto; padding-inline: var(--gutter); }
-.band__n { font-size: 12px; letter-spacing: .01em; color: var(--dim); }
-.band__kicker { font-family: var(--serif); font-size: 20px; font-style: italic; font-weight: 500; color: var(--brass-2); }
-.band__name { display: block; font-family: var(--serif); font-size: clamp(34px, 4.4vw, 62px); font-weight: 600; line-height: 1; color: var(--hi); margin-top: 4px; }
-.band__desc { display: block; max-width: 560px; color: rgba(var(--txt), .8); font-size: 16px; max-height: 0; opacity: 0; overflow: hidden; transition: max-height .8s var(--io), opacity .6s ease, margin .8s var(--io); }
-.band__go { font-size: 15px; font-weight: 500; clip-path: var(--plate); color: var(--hi); border: 1px solid rgba(var(--ink), .3); padding: 12px 22px; opacity: 0; transform: translateX(-10px); transition: opacity .5s, transform .6s var(--out); white-space: nowrap; }
-.band__bar { position: absolute; left: 0; bottom: 0; height: 2px; width: 100%; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform .9s var(--io); z-index: 2; }
-@media (hover: hover) and (min-width: 761px) {
-  .band:hover, .band:focus-visible { height: 300px; }
-  .band:hover .band__bg, .band:focus-visible .band__bg { opacity: .78; transform: scale(1.04); }
-  .band:hover .band__desc, .band:focus-visible .band__desc { max-height: 120px; opacity: 1; margin-top: 14px; }
-  .band:hover .band__go, .band:focus-visible .band__go { opacity: 1; transform: none; }
-  .band:hover .band__bar, .band:focus-visible .band__bar { transform: scaleX(1); }
-}
-@media (hover: none), (max-width: 760px) {
-  .band { height: auto; min-height: 220px; padding-block: 32px; }
-  .band__body { grid-template-columns: 1fr; gap: 8px; }
-  .band__n { display: none; }
-  .band__desc { max-height: none; opacity: 1; margin-top: 10px; font-size: 15px; }
-  .band__go { opacity: 1; transform: none; justify-self: start; margin-top: 12px; }
-  .band__bg { opacity: .45; }
-}
-
 /* FAQ */
 .faq__item { border-bottom: 1px solid var(--line); }
 .faq__item:first-child { border-top: 1px solid var(--line); }
@@ -510,11 +482,6 @@ body::after {
 .phero__bg { will-change: transform; }
 
 /* Molten bar */
-.band__bar {
-  background: linear-gradient(90deg, #5a1a08, #b8441a 20%, #f6cf7a 50%, #e9862e 70%, #5a1a08);
-  background-size: 200% 100%; height: 3px; box-shadow: 0 0 18px rgba(233, 134, 46, .55);
-}
-.band:hover .band__bar { animation: molten 3s linear infinite; }
 @keyframes molten { to { background-position: -200% 0; } }
 
 /* Freshness badges */
@@ -523,8 +490,6 @@ body::after {
   color: var(--hi); border: 1px solid rgba(var(--ink), .22); background: rgba(var(--paper), .55); backdrop-filter: blur(6px); padding: 6px 10px; line-height: 1;
 }
 .fresh[hidden] { display: none; }
-.fresh--band { position: absolute; top: 0; left: var(--gutter); }
-.band__body { position: relative; }
 
 /* Live data */
 /* Live dot: the ring is a scaled pseudo-element (transform + opacity run on the compositor;
@@ -544,10 +509,6 @@ body::after {
 .nav__progress { position: absolute; left: 0; right: 0; bottom: -1px; height: 1px; background: var(--heat); transform: scaleX(0); transform-origin: left; z-index: 1; box-shadow: 0 0 10px var(--accent); }
 .nav--home .nav__progress { display: none; }
 
-/* Hub band parallax */
-.band__bg { transform: translate(var(--tx, 0), var(--ty, 0)) scale(1.08); transition: opacity .8s ease, transform .9s var(--out); will-change: transform; }
-@media (hover: hover) and (min-width: 761px) { .band:hover .band__bg { transform: translate(var(--tx, 0), var(--ty, 0)) scale(1.12); } }
-
 @keyframes spin { to { transform: rotate(360deg); } }
 
 /* Gold underline that draws in on nav buttons */
@@ -556,7 +517,6 @@ body::after {
 .nav__links .btn:hover::after { transform: scaleX(1); transform-origin: left; }
 
 .sep { width: 6px; height: 6px; margin: 0 4px; background: var(--gold); opacity: .7; clip-path: polygon(50% 0, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0 50%, 40% 40%); }
-.fresh--band { position: static; margin-left: 14px; vertical-align: middle; letter-spacing: .01em; }
 
 /* =====================================================================
    Enhancements
@@ -684,7 +644,7 @@ body::after {
 
 /* Focus: 2px ring everywhere; inset on boxes that clip their overflow */
 :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
-.band:focus-visible, .shot:focus-visible, .masonry__item button:focus-visible { outline-offset: -4px; }
+.shot:focus-visible, .masonry__item button:focus-visible { outline-offset: -4px; }
 .input:focus-visible { box-shadow: 0 1px 0 0 var(--gold); }
 .skip:focus { font-size: 14px; letter-spacing: .01em; font-weight: 500; outline-offset: 2px; }
 main:focus { outline: none; }
@@ -1116,10 +1076,10 @@ html[data-lang="en"] .sk-alt { display: none; }
   --logo-filter: brightness(0) opacity(.86);
   color-scheme: light;
 }
-/* Dark islands: the home forge, image heroes, hub bands, CTA strips, lightbox, video thumbnails,
+/* Dark islands: the home forge, image heroes, CTA strips, lightbox, video thumbnails,
    and the nav while it floats over a dark hero */
-:root[data-theme="light"] :is(.forge, .home-legal, .phero:not(.phero--hex), .band, .cta, .lightbox, .yt, .masonry__item),
-:root[data-theme="light"] body:not(:has(.nav__drawer.is-open, .phero--hex)) .nav:not(.is-solid):not(.nav--home) {
+:root[data-theme="light"] :is(.forge, .home-legal, .phero:not(.phero--hex), .plate, .cta, .lightbox, .yt, .masonry__item),
+:root[data-theme="light"] body:not(:has(.nav__drawer.is-open, .phero--hex, .orrery)) .nav:not(.is-solid):not(.nav--home) {
   --bg: #0d0a08; --bg-2: #15100c; --panel: #1b1510;
   --fg: #e6dccd; --hi: #f4ece0; --muted: #a8998a; --dim: #8c7e70;
   --line: rgba(255, 240, 220, .09); --line-2: rgba(255, 240, 220, .18);
@@ -1218,16 +1178,6 @@ html[data-lang="en"] .sk-alt { display: none; }
    Visual pass (Nov 2026): hub emblems, forged section dividers, gallery captions,
    living footer, 404 falling tiles
    ===================================================================== */
-
-/* Hub bands: the list's emblem before the "Open the docs" button */
-.band__body { grid-template-columns: 70px 1fr auto auto; }
-.band__mark { width: 64px; height: 64px; opacity: .8; transition: opacity .5s, transform .9s var(--out); }
-.band:hover .band__mark { opacity: 1; transform: rotate(-6deg) scale(1.06); }
-@media (hover: none), (max-width: 760px) {
-  .band__body { grid-template-columns: 1fr; }
-  .band__mark { position: absolute; top: 0; right: var(--gutter); width: 48px; height: 48px; }
-  .band__kicker { display: block; padding-right: 60px; }
-}
 
 /* Guides: section divider = a gold line fading at both ends with the site star in the middle */
 .prose h2 { border-top: 0; background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--gold) 55%, transparent) 50%, transparent) top / 100% 1px no-repeat; }
@@ -1649,4 +1599,162 @@ html[data-lang="en"] .sk-alt { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   .forge__slide.is-stamp, .forge__pin.is-hit .forge__gl, .forge__pin.is-hit .forge__floor, .nav--home, .forge__pulse i { animation: none !important; }
+}
+
+/* =====================================================================
+   Hub: the orrery (Nov 2026). The site emblem in the middle, one list per ring,
+   each list's emblem as a planet. A radio per planet does the choosing (no script):
+   --k is the chosen index, the rings turn so that planet comes to the front (--turn,
+   a registered angle so it can transition), and its catalogue plate shows.
+   Every plate is in the HTML in one grid cell, so nothing moves when the choice changes.
+   ===================================================================== */
+@property --turn { syntax: "<angle>"; inherits: true; initial-value: 0deg; }
+@property --spin { syntax: "<angle>"; inherits: true; initial-value: 0deg; }
+
+.orrery {
+  --copy: min(600px, 38vw); --S: min(900px, 60vw, calc(88vw - var(--copy) - 110px)); --tilt: 62deg; --p: clamp(54px, calc(var(--S) * .115), 104px); --k: 0;
+  position: relative; overflow: hidden; padding: 128px 0 64px; border-bottom: 1px solid var(--line);
+}
+.orrery__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; mask-image: linear-gradient(180deg, #000 50%, transparent); }
+/* the home forge's pulse (see "the seal"): copies of an all-lit honeycomb, each masked to one ring around the
+   orrery (site.js sets --px / --py from the hub and the pictures after load), opacity only */
+.orrery__pulse { --px: 70%; --py: 55%; position: absolute; inset: 0; pointer-events: none; mask-image: linear-gradient(180deg, #000 50%, transparent); }
+.orrery__pulse i { --r: 16vmax; --w: 6vmax; position: absolute; inset: 0; opacity: 0; background: var(--pulse-d, none) center / cover no-repeat;
+  -webkit-mask: radial-gradient(circle at var(--px) var(--py), transparent calc(var(--r) - var(--w)), #000 var(--r), transparent calc(var(--r) + var(--w)));
+          mask: radial-gradient(circle at var(--px) var(--py), transparent calc(var(--r) - var(--w)), #000 var(--r), transparent calc(var(--r) + var(--w))); }
+:root[data-theme="light"] .orrery__pulse i { background-image: var(--pulse-l, none); }
+.orrery__pulse.is-lit i { animation: forge-pulse 5.5s ease-in-out infinite; }   /* starts with its picture */
+.orrery__pulse i:nth-child(2) { --r: 30vmax; --w: 7vmax; animation-delay: .5s; }
+.orrery__pulse i:nth-child(3) { --r: 46vmax; --w: 8vmax; animation-delay: 1s; }
+.orrery__pulse i:nth-child(4) { --r: 64vmax; --w: 9vmax; animation-delay: 1.5s; }
+/* dimming over the honeycomb and its pulse, darkest under the copy */
+.orrery::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(var(--paper), .78), rgba(var(--paper), .25) 45%, transparent 75%); }
+/* full width like the home forge: copy starts at the same place as its slides (max(gutter, 6vw)) */
+.orrery__wrap { position: relative; z-index: 2; padding-inline: max(var(--gutter), 6vw); display: grid; grid-template-columns: minmax(0, var(--copy)) minmax(0, 1fr); grid-template-rows: auto 1fr; grid-template-areas: "copy stage" "plates stage"; column-gap: clamp(24px, 4vw, 64px); }
+.orrery__copy { grid-area: copy; }
+.orrery__plates { grid-area: plates; }
+.orrery__title { font-family: var(--serif); font-size: clamp(48px, 6.4vw, 96px); font-weight: 600; letter-spacing: -.01em; line-height: .95; color: var(--hi); margin: 14px 0 16px; }
+.orrery__lead { max-width: 560px; font-size: 17px; color: rgba(var(--txt), .85); margin: 0; text-wrap: pretty; }
+.orrery .eyebrow .diamond { margin-right: 14px; }
+
+/* The stage: two planes tilted back. The scale ring stays still, the disc turns. */
+.orrery__stage { grid-area: stage; align-self: center; position: relative; justify-self: center; width: var(--S); height: calc(var(--S) * .8); perspective: calc(var(--S) * 2.4);
+  --turn: calc(var(--k) * -360deg / var(--n));
+  /* kept within half a turn of list 1, so no choice spins more than 180deg from the start (between two lists it can take the long way) */
+  --turn: calc(rem(var(--k) * -360deg / var(--n) + 540deg, 360deg) - 180deg);
+  transition: --turn 1.5s var(--io); animation: orrery-in 2.4s var(--out) both; }
+@keyframes orrery-in { from { --spin: -120deg; } }
+.orrery__fixed, .orrery__disc { position: absolute; left: 0; top: calc(var(--S) * -.04); width: var(--S); height: var(--S); }
+.orrery__fixed { transform: rotateX(var(--tilt)); }
+.orrery__disc { transform: rotateX(var(--tilt)) rotateZ(calc(var(--turn) + var(--spin))); transform-style: preserve-3d; }
+.orrery__fixed svg, .orrery__rings { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.o-line, .o-ring, .o-teeth { fill: none; }
+.o-line { stroke: rgba(var(--gold-rgb), .55); stroke-width: .4; }
+.o-faint { stroke-opacity: .45; }
+.o-tick { stroke: rgba(var(--gold-rgb), .45); stroke-width: .3; }
+.o-tick--major { stroke: rgba(var(--gold-rgb), .8); stroke-width: .5; }
+.o-pointer { fill: var(--gold); }
+.o-hub { fill: rgba(var(--gold-rgb), .07); stroke: rgba(var(--gold-rgb), .5); stroke-width: .5; }
+.o-ring { stroke: rgba(var(--gold-rgb), .3); stroke-width: .45; transition: stroke .6s; }
+.o-teeth { stroke: rgba(var(--gold-rgb), .4); stroke-width: 1.6; stroke-dasharray: .35 3.1; }
+.o-arm { stroke: rgba(var(--gold-rgb), .35); stroke-width: .6; transition: stroke .6s; }
+
+/* Sun and planets stand up from the disc: undo the turn and the tilt, then lift */
+.orrery__sun { position: absolute; left: 50%; top: 50%; width: calc(var(--S) * .13); height: calc(var(--S) * .13); margin: calc(var(--S) * -.065) 0 0 calc(var(--S) * -.065);
+  transform: rotateZ(calc(-1 * (var(--turn) + var(--spin)))) rotateX(calc(-1 * var(--tilt))) translateY(-150%); }
+.orrery__sun::after { content: ""; position: absolute; left: 50%; top: 100%; width: 1px; height: 95%; background: linear-gradient(rgba(var(--gold-rgb), .7), rgba(var(--gold-rgb), .2)); }
+.orrery__sun img { width: 100%; height: 100%; filter: var(--logo-filter); }
+.orrery__arms { position: absolute; inset: 0; transform-style: preserve-3d; }
+.orrery__arm { --a: calc(90deg + var(--i) * 360deg / var(--n)); position: absolute; left: 50%; top: 50%; width: 0; height: 0; transform: rotateZ(var(--a)); transform-style: preserve-3d; }
+/* the box is the chosen size (--p x 1.24) and the others shrink inside it, so nothing ever paints outside its
+   box: some Chromium builds (Opera GX) clipped the grown planet to its layer's bounds */
+.planet { --P: calc(var(--p) * 1.24); position: absolute; left: calc(var(--P) / -2); top: calc(var(--P) / -2); width: var(--P); height: var(--P); cursor: pointer;
+  transform: translateX(calc(var(--S) * var(--rr) / 200)) rotateZ(calc(-1 * (var(--a) + var(--turn) + var(--spin)))) rotateX(calc(-1 * var(--tilt))) translateY(calc(var(--p) * -.97)); }
+/* the rod down to the arm */
+.planet::after { content: ""; position: absolute; left: 50%; top: 100%; width: 1px; height: calc(var(--p) * .35); background: linear-gradient(rgba(var(--gold-rgb), .7), rgba(var(--gold-rgb), .15)); }
+.planet__disc { position: relative; display: grid; place-items: center; width: 100%; height: 100%; border-radius: 50%;
+  background: radial-gradient(circle at 34% 30%, var(--panel), var(--bg) 78%); border: 1px solid rgba(var(--gold-rgb), .5);
+  transform: scale(.806); transform-origin: 50% 100%; transition: transform .6s var(--out), border-color .3s; }
+.planet__disc img { width: 66%; height: 66%; filter: var(--logo-filter); opacity: .78; transition: opacity .3s; }
+.planet__name { position: absolute; left: 50%; bottom: calc(100% - var(--p) * .24); margin-bottom: 8px; transform: translateX(-50%); white-space: nowrap; font-size: 13px; line-height: 1.2; color: var(--hi); opacity: 0; transition: opacity .3s, transform .6s var(--out); }
+/* the chosen one is named by its plate; its label text stays (opacity only) so the radio keeps its name */
+.orrery__radio:not(:checked) + .planet:hover .planet__name, .orrery__radio:not(:checked):focus-visible + .planet .planet__name { opacity: 1; }
+.planet:hover .planet__disc { border-color: var(--gold); }
+.planet:hover img { opacity: 1; }
+/* the chosen planet: its rim is hot metal all the way round (a conic heat border under the iron face) */
+.orrery__radio:checked + .planet .planet__disc { transform: none; border: 3px solid transparent;
+  background: radial-gradient(circle at 34% 30%, var(--panel), var(--bg) 78%) padding-box, conic-gradient(#f6cf7a, #e9862e, #b8441a, #e9862e, #f6cf7a) border-box; }
+.orrery__radio:checked + .planet img { opacity: 1; }
+.orrery__radio:focus-visible + .planet .planet__disc { outline: 2px solid var(--gold); outline-offset: 4px; }
+
+/* The chosen index: set --k, light its ring and arm, show its plate */
+.orrery:has(.orrery__arm:nth-child(2) :checked) { --k: 1; }
+.orrery:has(.orrery__arm:nth-child(3) :checked) { --k: 2; }
+.orrery:has(.orrery__arm:nth-child(4) :checked) { --k: 3; }
+.orrery:has(.orrery__arm:nth-child(5) :checked) { --k: 4; }
+.orrery:has(.orrery__arm:nth-child(6) :checked) { --k: 5; }
+.orrery:has(.orrery__arm:nth-child(1) :checked) :is(.o-ring--0, .o-arm--0),
+.orrery:has(.orrery__arm:nth-child(2) :checked) :is(.o-ring--1, .o-arm--1),
+.orrery:has(.orrery__arm:nth-child(3) :checked) :is(.o-ring--2, .o-arm--2),
+.orrery:has(.orrery__arm:nth-child(4) :checked) :is(.o-ring--3, .o-arm--3),
+.orrery:has(.orrery__arm:nth-child(5) :checked) :is(.o-ring--4, .o-arm--4),
+.orrery:has(.orrery__arm:nth-child(6) :checked) :is(.o-ring--5, .o-arm--5) { stroke: var(--gold); }
+
+/* Catalogue plates */
+.orrery__plates { display: grid; margin-top: 36px; }
+.plate { grid-area: 1 / 1; align-self: start; position: relative; isolation: isolate; padding: 28px 32px 30px 34px; background: var(--bg); border: 1px solid rgba(var(--gold-rgb), .3); clip-path: var(--plate);
+  visibility: hidden; opacity: 0; transform: translateY(10px); transition: opacity .35s, transform .5s var(--out), visibility 0s; }
+/* the list picture (the old hub band), moving with the cursor (site.js, [data-tilt]) */
+.plate__bg { position: absolute; z-index: -2; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .58; transform: translate(var(--tx, 0), var(--ty, 0)) scale(1.08); transition: opacity .8s ease, transform .9s var(--out); }
+.plate__shade { position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg, rgba(var(--paper), .9) 0%, rgba(var(--paper), .55) 55%, rgba(var(--paper), .15) 100%), linear-gradient(0deg, rgba(var(--paper), .5), transparent 45%); }
+@media (hover: hover) { .plate:hover .plate__bg { opacity: .85; transform: translate(var(--tx, 0), var(--ty, 0)) scale(1.12); } }
+.plate::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: var(--heat-v); }
+/* the border along the cut corner (clip-path removes it) */
+.plate::after { content: ""; position: absolute; top: 0; right: 0; width: var(--cut); height: var(--cut); background: linear-gradient(to bottom left, transparent calc(50% - .7px), rgba(var(--gold-rgb), .3) calc(50% - .7px) calc(50% + .7px), transparent calc(50% + .7px)); }
+/* the molten bar runs once along the bottom each time a plate comes in */
+.plate__bar { position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: linear-gradient(90deg, #5a1a08, #b8441a 20%, #f6cf7a 50%, #e9862e 70%, #5a1a08); background-size: 200% 100%; }
+.orrery:has(.orrery__arm:nth-child(1) :checked) .plate:nth-child(1),
+.orrery:has(.orrery__arm:nth-child(2) :checked) .plate:nth-child(2),
+.orrery:has(.orrery__arm:nth-child(3) :checked) .plate:nth-child(3),
+.orrery:has(.orrery__arm:nth-child(4) :checked) .plate:nth-child(4),
+.orrery:has(.orrery__arm:nth-child(5) :checked) .plate:nth-child(5),
+.orrery:has(.orrery__arm:nth-child(6) :checked) .plate:nth-child(6) { visibility: visible; opacity: 1; transform: none; transition-delay: .3s; }
+.orrery:has(.orrery__arm:nth-child(1) :checked) .plate:nth-child(1) .plate__bar,
+.orrery:has(.orrery__arm:nth-child(2) :checked) .plate:nth-child(2) .plate__bar,
+.orrery:has(.orrery__arm:nth-child(3) :checked) .plate:nth-child(3) .plate__bar,
+.orrery:has(.orrery__arm:nth-child(4) :checked) .plate:nth-child(4) .plate__bar,
+.orrery:has(.orrery__arm:nth-child(5) :checked) .plate:nth-child(5) .plate__bar,
+.orrery:has(.orrery__arm:nth-child(6) :checked) .plate:nth-child(6) .plate__bar { animation: molten 1.8s .3s linear; }
+.plate__no { display: flex; align-items: center; gap: 8px; margin: 0; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--dim); }
+.plate__no b { font-weight: 500; color: var(--gold); }
+.plate__no .fresh { margin-left: auto; }
+.plate__name { font-family: var(--serif); font-size: clamp(38px, 3.6vw, 50px); font-weight: 600; line-height: 1; color: var(--hi); margin: 12px 0 4px; }
+.plate__game { font-family: var(--serif); font-style: italic; font-size: 20px; color: var(--gold); margin: 0 0 12px; }
+.plate__desc { max-width: 520px; color: rgba(var(--txt), .85); font-size: 16px; margin: 0 0 18px; text-wrap: pretty; }
+.plate__obs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px 16px; margin: 0 0 22px; padding: 14px 0; border-block: 1px solid var(--line); }
+.plate__obs dt { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--dim); }
+.plate__obs dd { margin: 2px 0 0; font-family: var(--serif); font-size: 22px; font-weight: 600; line-height: 1.1; color: var(--hi); font-variant-numeric: lining-nums tabular-nums; }
+
+/* Without :has() (old browsers) every plate shows, one under the other */
+@supports not selector(:has(*)) {
+  .plate { grid-area: auto; visibility: visible; opacity: 1; transform: none; margin-bottom: 16px; }
+}
+
+@media (max-width: 1100px) {
+  .orrery { --copy: 100%; --S: min(calc(100vw - 2 * var(--gutter)), 620px); --p: clamp(42px, 11.5vw, 60px); padding: 104px 0 48px; }
+  .orrery::before { background: linear-gradient(180deg, rgba(var(--paper), .7), rgba(var(--paper), .45) 40%, rgba(var(--paper), .6)); }
+  .orrery__wrap { padding-inline: var(--gutter); grid-template-columns: minmax(0, 1fr); grid-template-rows: none; grid-template-areas: "copy" "stage" "plates"; }
+  .orrery__stage { justify-self: center; height: calc(var(--S) * .74); }
+  .orrery__fixed, .orrery__disc { top: calc(var(--S) * -.1); }
+  .orrery__plates { margin-top: 8px; width: 100%; max-width: 640px; justify-self: center; }
+  .orrery__lead { font-size: 16px; }
+  .planet__name { font-size: 12px; }
+  .plate { padding: 20px 20px 22px 22px; }
+}
+@media (max-width: 480px) { .plate__obs { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (prefers-reduced-motion: reduce) {
+  .orrery__stage { transition: none; animation: none; }
+  .orrery__pulse { display: none; }
+  .plate, .plate__bg, .planet__disc, .planet__name, .o-ring, .o-arm { transition: none; }
+  .plate__bar { animation: none !important; }
 }

@@ -10,7 +10,6 @@
   };
   var cssLink = document.querySelector('link[href*="/assets/site.css"]');
   var base = cssLink ? cssLink.getAttribute('href').split('/assets/site.css')[0] : '';
-  var canHover = matchMedia('(hover: hover) and (pointer: fine)').matches;
   var calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
   var lang = function () { return root.getAttribute('data-lang') === 'fr' ? 'fr' : 'en'; };
   var norm = function (s) { return String(s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]/g, ''); };
@@ -70,16 +69,45 @@
     }, delay || 0);
   }
 
-  /* Run fn with the latest pointer event once per frame (one layout read per frame at most) */
-  function pointerFrame(el, fn) {
-    var ev = null, queued = false;
-    el.addEventListener('pointermove', function (e) {
+  /* Hub catalogue cards: the list picture follows the cursor, one layout read per frame at most */
+  if (!calm && matchMedia('(hover: hover) and (pointer: fine)').matches) document.querySelectorAll('[data-tilt]').forEach(function (card) {
+    var img = card.querySelector('.plate__bg'), ev = null, queued = false;
+    if (!img) return;
+    card.addEventListener('pointermove', function (e) {
       ev = e;
       if (queued) return;
       queued = true;
-      requestAnimationFrame(function () { queued = false; fn(ev); });
+      requestAnimationFrame(function () {
+        queued = false;
+        var r = card.getBoundingClientRect(), x = (ev.clientX - r.left) / r.width - .5, y = (ev.clientY - r.top) / r.height - .5;
+        img.style.setProperty('--tx', (x * -24) + 'px'); img.style.setProperty('--ty', (y * -16) + 'px');
+      });
     }, { passive: true });
+    card.addEventListener('pointerleave', function () { img.style.setProperty('--tx', '0px'); img.style.setProperty('--ty', '0px'); });
+  });
+
+  /* Hub orrery: the pulsing rings are centred on its hub (read after load and on resize) and their pictures
+     are only set once the page has loaded */
+  var hubPulse = document.querySelector('.orrery__pulse'), hubCentre = document.querySelector('.orrery .o-hub');
+  if (hubPulse && hubCentre && !calm) {
+    var centrePulse = function () {
+      var a = hubPulse.getBoundingClientRect(), b = hubCentre.getBoundingClientRect();
+      hubPulse.style.setProperty('--px', Math.round(b.left + b.width / 2 - a.left) + 'px');
+      hubPulse.style.setProperty('--py', Math.round(b.top + b.height / 2 - a.top) + 'px');
+    };
+    var lightPulse = function () {
+      hubPulse.style.setProperty('--pulse-d', 'url("' + hubPulse.dataset.srcD + '")');
+      hubPulse.style.setProperty('--pulse-l', 'url("' + hubPulse.dataset.srcL + '")');
+      centrePulse();
+      hubPulse.classList.add('is-lit');
+      if (window.ResizeObserver) new ResizeObserver(function () { requestAnimationFrame(centrePulse); }).observe(hubPulse);
+    };
+    if (document.readyState === 'complete') lightPulse(); else addEventListener('load', lightPulse, { once: true });
   }
+
+  /* Hub orrery: /hub/#<list id> opens on that list (the choice itself is CSS, see "Hub: the orrery") */
+  var orb = location.hash && document.getElementById('orb-' + location.hash.slice(1));
+  if (orb && orb.type === 'radio') orb.checked = true;
 
   /* =========================================================
      Home: the forge (theme/assets/forge/forge.js, a module loaded by home.liquid) runs the page
@@ -160,17 +188,6 @@
       var m = $('#main'); if (m) m.focus({ preventScroll: true });
     });
   }
-
-  /* Hub bands follow the cursor */
-  if (canHover && !calm) $$('[data-tilt]').forEach(function (b) {
-    var img = $('.band__bg', b);
-    pointerFrame(b, function (e) {
-      var r = b.getBoundingClientRect();
-      var x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
-      img.style.setProperty('--tx', (x * -24) + 'px'); img.style.setProperty('--ty', (y * -16) + 'px');
-    });
-    b.addEventListener('pointerleave', function () { img.style.setProperty('--tx', '0px'); img.style.setProperty('--ty', '0px'); });
-  });
 
   /* =========================================================
      Language
@@ -528,7 +545,7 @@
 
   /* Reveal on scroll */
   if ('IntersectionObserver' in window && !calm) {
-    var els = $$('.band, .tier, .cta, .masonry__item, .shots, .section-title, .stats');
+    var els = $$('.tier, .cta, .masonry__item, .shots, .section-title, .stats');
     els.forEach(function (el) { el.classList.add('reveal'); });
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('is-in'); io.unobserve(en.target); } });

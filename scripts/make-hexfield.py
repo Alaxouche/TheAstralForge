@@ -150,6 +150,8 @@ VARIANTS = {
     'forge-hex-light': dict(W=2560, H=1440, theme='light', level=0.12, spots=PANEL),
     'forge-hex-light-lit': dict(W=2560, H=1440, theme='light', level=1.0, spots=PANEL),
     'forge-hex-pulse': dict(W=2560, H=1440, theme='dark', level=0.5, spots=[(0.5, 0.5, 6000, 1.0)], size=(1920, 1080)),
+    # the hub's pulsing rings in the light theme (same tiling as forge-hex-light)
+    'forge-hex-light-pulse': dict(W=2560, H=1440, theme='light', level=0.5, spots=[(0.5, 0.5, 6000, 1.0)], size=(1920, 1080)),
     'hex-hero': dict(W=2560, H=1000, theme='dark', level=0.85, spots=HERO, R=50.0, cx=0.6, tilt=0.3, vig=(0.62, 0.5, 0.7)),
     'hex-hero-light': dict(W=2560, H=1000, theme='light', level=1.0, spots=HERO, R=50.0, cx=0.6, tilt=0.3, vig=(0.62, 0.5, 0.7)),
     'hex-void': dict(W=2560, H=1000, theme='dark', level=0.3, spots=[(0.86, 0.5, 220, 0.6)], R=50.0, cx=0.6, tilt=0.3,

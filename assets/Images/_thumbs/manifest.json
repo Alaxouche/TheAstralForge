@@ -310,6 +310,14 @@
    "1600": "/assets/Images/_thumbs/forge-hex-light-lit-1600.webp"
   }
  },
+ "/assets/Images/forge-hex-light-pulse.webp": {
+  "w": 1920,
+  "h": 1080,
+  "t": {
+   "480": "/assets/Images/_thumbs/forge-hex-light-pulse-480.webp",
+   "960": "/assets/Images/_thumbs/forge-hex-light-pulse-960.webp"
+  }
+ },
  "/assets/Images/forge-hex-light.webp": {
   "w": 2560,
   "h": 1440,
