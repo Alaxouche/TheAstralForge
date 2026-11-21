@@ -328,6 +328,14 @@
    "1600": "/assets/Images/_thumbs/forge-hex-lit-1600.webp"
   }
  },
+ "/assets/Images/forge-hex-pulse.webp": {
+  "w": 1920,
+  "h": 1080,
+  "t": {
+   "480": "/assets/Images/_thumbs/forge-hex-pulse-480.webp",
+   "960": "/assets/Images/_thumbs/forge-hex-pulse-960.webp"
+  }
+ },
  "/assets/Images/generic_background.webp": {
   "w": 6667,
   "h": 4167,

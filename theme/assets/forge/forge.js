@@ -6,9 +6,10 @@
 //    It renders only when something changes (a strike, a resize): nothing runs while idle.
 //    At rest the hammer is out of frame, the anvil is dark, small and sunk, and the medallion stands up level
 //    with the section title; a strike brings the anvil back, lays the medallion on it, swings once, and raises
-//    the new one.
+//    the new one. On The Forge section the site medallion is a large faded seal behind the centred copy, with
+//    no anvil: leaving it, the seal shrinks down onto the anvil; coming back, it grows out of it.
 // 2. The page: one screen of scroll per section. Each section is struck in: the hammer comes down,
-//    the background opens as a circle from the impact, the title decodes (site.js scramble), the line
+//    the background opens as a honeycomb from the impact, the title decodes (site.js scramble), the line
 //    under it types out and the numbers count up. Without WebGL the list's emblem shows instead of the
 //    3D scene; with reduced motion the sections just swap.
 async function createForge(canvas, base, emblems) {
@@ -55,7 +56,7 @@ async function createForge(canvas, base, emblems) {
   const FS = `#version 300 es
   precision highp float;
   in vec3 vW; in vec3 vN; in vec2 vT; in vec4 vK;
-  uniform sampler2D uCol, uNor, uMR, uEmb; uniform vec3 uEye, uHeatP; uniform float uHeat, uKind, uHot, uLit, uFront, uAlpha;
+  uniform sampler2D uCol, uNor, uMR, uEmb; uniform vec3 uEye, uHeatP; uniform float uHeat, uKind, uHot, uLit, uFront, uAlpha, uGhost;
   out vec4 o;
   vec3 lin(vec3 c) { return pow(c, vec3(2.2)); }
   vec3 perturb(vec3 N, vec3 p, vec2 uv) {
@@ -74,7 +75,7 @@ async function createForge(canvas, base, emblems) {
     return (spec + (1. - F) * (1. - metal) * alb / 3.14159) * col * nl;
   }
   void main() {
-    vec3 alb; float rough, metal; vec3 N = normalize(vN); vec3 emit = vec3(0.);
+    vec3 alb; float rough, metal; vec3 N = normalize(vN); vec3 emit = vec3(0.); float ga = 1.;
     if (uKind < .5) { alb = lin(texture(uCol, vT).rgb); vec2 mr = texture(uMR, vT).gb; rough = mr.x; metal = mr.y; N = perturb(N, vW, vT); }
     else if (uKind < 1.5) { alb = pow(vK.rgb, vec3(1.5)); rough = vK.a; metal = .92; }
     else {
@@ -89,6 +90,8 @@ async function createForge(canvas, base, emblems) {
       alb = mix(vec3(.2, .12, .04), vec3(1., .74, .34), raised + (1. - top) * .45);   // dark sunk field, polished raised emblem
       rough = mix(.7, .16, raised); metal = mix(.6, 1., raised);
       emit = mix(vec3(.9, .18, .02), vec3(2.4, 1.3, .45), h) * uHot * uHot;   // still glowing from the forge
+      // uGhost: the seal behind The Forge's copy keeps the raised emblem and the rim, the flat field turns clear
+      ga = mix(1., max(max(raised, h * top * .6), (1. - top) * .55) + .08, uGhost);
     }
     rough = clamp(rough, .2, 1.);
     vec3 V = normalize(uEye - vW);
@@ -110,7 +113,8 @@ async function createForge(canvas, base, emblems) {
     c += env * (F0 + (max(vec3(1. - rough), F0) - F0) * pow(1. - nv, 5.)) * (1. - rb * .6) + alb * (1. - metal) * vec3(.06, .05, .04);
     c += emit;
     c = c * (2.51 * c + .03) / (c * (2.43 * c + .59) + .14);
-    o = vec4(pow(clamp(c, 0., 1.), vec3(1. / 2.2)) * uAlpha, uAlpha);   // premultiplied
+    float a = uAlpha * ga;
+    o = vec4(pow(clamp(c, 0., 1.), vec3(1. / 2.2)) * a, a);   // premultiplied
   }`;
   // Start-up never blocks the page for long: shaders compile in the background where the browser can
   // (KHR_parallel_shader_compile), and every step below gives the main thread back before the next one.
@@ -144,7 +148,7 @@ async function createForge(canvas, base, emblems) {
   gl.enableVertexAttribArray(1); gl.vertexAttribPointer(1, 4, gl.FLOAT, false, 28, 12);
   gl.bindVertexArray(null);
   let sparks = [];
-  const U = {}; for (const n of ['uM', 'uVP', 'uC', 'uH', 'uCol', 'uNor', 'uMR', 'uEmb', 'uEye', 'uHeatP', 'uHeat', 'uKind', 'uHot', 'uLit', 'uFront', 'uAlpha']) U[n] = gl.getUniformLocation(prog, n);
+  const U = {}; for (const n of ['uM', 'uVP', 'uC', 'uH', 'uCol', 'uNor', 'uMR', 'uEmb', 'uEye', 'uHeatP', 'uHeat', 'uKind', 'uHot', 'uLit', 'uFront', 'uAlpha', 'uGhost']) U[n] = gl.getUniformLocation(prog, n);
 
   // ---------- loading ----------
   const texParams = () => {
@@ -231,7 +235,7 @@ async function createForge(canvas, base, emblems) {
   // upright from the camera, the X tilt stands it up.
   const TILT = Math.acos(.62 / Math.hypot(-.28, .62, 1));
   // where the medallion stands at rest: set by the page (level with the title) through setRest()
-  let restPos = [PIECE_X, FACE_Y + .44, .1], restScale = 1.5;
+  let restPos = [PIECE_X, FACE_Y + .44, .1], restScale = 1.5, restCoin = 1, restAnvil = .28;
   const mix = (a, b, t) => a + (b - a) * t;
   const coinM = () => {
     const sc = mix(1, restScale, rise);
@@ -267,11 +271,13 @@ async function createForge(canvas, base, emblems) {
     // at rest the anvil sinks a little and turns half transparent under the standing medallion;
     // the strike brings it back up, solid and lit (p follows the light)
     const p = (lit - REST_LIT) / (1 - REST_LIT);
-    const parts = [[anvil, M.mul(M.t(.12 * (1 - p), -SINK * (1 - p), 0), M.mul(M.s(mix(REST_SCALE, 1, p)), anvilM)), mix(REST_ALPHA, 1, p)], [coin, coinM(), 1]];
+    // the medallion fades to its rest opacity as it stands up (the seal of The Forge section is faint)
+    const parts = [[anvil, M.mul(M.t(.12 * (1 - p), -SINK * (1 - p), 0), M.mul(M.s(mix(REST_SCALE, 1, p)), anvilM)), mix(restAnvil, 1, p)], [coin, coinM(), mix(1, restCoin, rise)]];
     if (out < .999) parts.splice(1, 0, [hammer, hammerM(), 1]);
     gl.enable(gl.BLEND); gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA);
     for (const [m, mat, alpha] of parts) {
-      gl.uniform1f(U.uAlpha, alpha);
+      if (alpha < .005) continue;                     // an invisible part must not hide others in the depth buffer
+      gl.uniform1f(U.uAlpha, alpha); gl.uniform1f(U.uGhost, m === coin && restCoin < 1 ? rise : 0);
       gl.uniformMatrix4fv(U.uM, false, mat); gl.uniform3fv(U.uC, m.c); gl.uniform3fv(U.uH, m.h); gl.uniform1f(U.uKind, m.kind);
       [[m.col, 'uCol'], [m.nor, 'uNor'], [m.mr, 'uMR'], [embTex[cur], 'uEmb']].forEach(([t, n], i) => { gl.activeTexture(gl.TEXTURE0 + i); gl.bindTexture(gl.TEXTURE_2D, t || null); gl.uniform1i(U[n], i); });
       gl.bindVertexArray(m.vao); gl.drawElements(gl.TRIANGLES, m.I, m.it, 0);
@@ -359,8 +365,10 @@ async function createForge(canvas, base, emblems) {
   // the other emblems, one per idle moment
   (async () => { for (let i = 0; i < emblems.length; i++) { await pause(); await emblem(i); } performance.mark('forge:emblems'); })();
   ready = true; performance.mark('forge:ready');
-  // Put the standing medallion's centre under screen point (x, y) in CSS px, size px across, on the plane z = .1
-  function setRest(x, y, size) {
+  // Put the standing medallion's centre under screen point (x, y) in CSS px, size px across, on the plane z = .1;
+  // o.coin / o.anvil: their opacity at rest (the seal of The Forge section: faint medallion, no anvil)
+  function setRest(x, y, size, o = {}) {
+    restCoin = o.coin ?? 1; restAnvil = o.anvil ?? REST_ALPHA;
     const inv = M.inv(viewProj()), w = canvas.clientWidth, h = canvas.clientHeight;
     const at = (px, py) => {
       const nx = px / w * 2 - 1, ny = 1 - py / h * 2;
@@ -487,6 +495,7 @@ if (root) {
   let shown = 0;
   function showSlide(i, stamp) {
     slides.forEach((s, k) => { const on = k === i; s.classList.toggle('is-on', on); s.inert = !on; s.classList.remove('is-stamp'); });
+    pin.classList.toggle('is-seal', i === 0);        // The Forge: centred copy over the faded seal, pulsing honeycomb
     if (stamp) { void slides[i].offsetWidth; slides[i].classList.add('is-stamp'); }
     marks.forEach((m, k) => m.toggleAttribute('aria-current', k === i));
   }
@@ -507,7 +516,7 @@ if (root) {
     const from = cur; cur = i;
     if (!forge || calm) {
       if (forge) forge.show(i);
-      showSlide(i, false); background(i, null); reveal(slides[i]); setMark(i);
+      showSlide(i, false); background(i, null); reveal(slides[i]); setMark(i); onSlide();
       return;
     }
     busy = true; pin.classList.add('is-out');
@@ -561,10 +570,11 @@ if (root) {
     // the standing medallion takes the place and size of the stand-in emblem (.forge__mark, positioned by the
     // CSS for desktop and phones), so the swap from the stand-in to the 3D scene does not move it either
     let hit = null;
+    const SEAL = .3;                                  // opacity of the seal behind The Forge's copy
     const rest = () => {
       if (!hit || !mark) return;
       const r = mark.getBoundingClientRect(), p = pin.getBoundingClientRect();   // the mark is hidden, still laid out
-      forge.setRest(r.left - p.left + r.width / 2, r.top - p.top + r.height / 2, r.width);
+      forge.setRest(r.left - p.left + r.width / 2, r.top - p.top + r.height / 2, r.width, cur === 0 ? { coin: SEAL, anvil: 0 } : {});
     };
     onSlide = rest;
     const place = () => {
@@ -578,6 +588,11 @@ if (root) {
     forge.show(cur); place(); addEventListener('resize', place);
     root.classList.add('is-3d');
   };
+  // the pulse picture (every tile lit) is only needed once the page has loaded
+  const pulse = root.querySelector('.forge__pulse');
+  const lightUp = () => { if (pulse && !calm) pulse.style.setProperty('--pulse', `url("${pulse.dataset.src}")`); };
+  if (document.readyState === 'complete') lightUp(); else addEventListener('load', lightUp, { once: true });
+
   if (!window.WebGL2RenderingContext) root.classList.add('is-flat');
   else if (document.readyState === 'complete') (window.requestIdleCallback || setTimeout)(start);
   else addEventListener('load', () => (window.requestIdleCallback || setTimeout)(start), { once: true });

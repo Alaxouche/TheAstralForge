@@ -3,6 +3,8 @@
 
   forge-hex-dark / forge-hex-lit     home "The Forge" panel, dark theme: at rest / panel open
   forge-hex-light / forge-hex-light-lit   the same for the light theme
+  forge-hex-pulse                    home "The Forge" section: every tile lit, shown in rings that pulse out from the seal
+                                     (same framing as forge-hex-dark, saved at 1920 px: it is only ever seen blurred and faint)
   hex-hero        wide header (hub, CTA strip): hot clusters on the right, the left stays calm for text
   hex-void        404 header: a few tiles are missing and their rims glow
   hex-hero-light / hex-void-light   the same two for the light theme
@@ -147,6 +149,7 @@ VARIANTS = {
     'forge-hex-lit': dict(W=2560, H=1440, theme='dark', level=1.0, spots=PANEL),
     'forge-hex-light': dict(W=2560, H=1440, theme='light', level=0.12, spots=PANEL),
     'forge-hex-light-lit': dict(W=2560, H=1440, theme='light', level=1.0, spots=PANEL),
+    'forge-hex-pulse': dict(W=2560, H=1440, theme='dark', level=0.5, spots=[(0.5, 0.5, 6000, 1.0)], size=(1920, 1080)),
     'hex-hero': dict(W=2560, H=1000, theme='dark', level=0.85, spots=HERO, R=50.0, cx=0.6, tilt=0.3, vig=(0.62, 0.5, 0.7)),
     'hex-hero-light': dict(W=2560, H=1000, theme='light', level=1.0, spots=HERO, R=50.0, cx=0.6, tilt=0.3, vig=(0.62, 0.5, 0.7)),
     'hex-void': dict(W=2560, H=1000, theme='dark', level=0.3, spots=[(0.86, 0.5, 220, 0.6)], R=50.0, cx=0.6, tilt=0.3,
@@ -200,5 +203,8 @@ if __name__ == '__main__':
     names = sys.argv[2:] or list(VARIANTS)
     for name in names:
         p = out / f'{name}.webp'
-        render(**VARIANTS[name]).save(p, 'WEBP', quality=82, method=6)
+        v = dict(VARIANTS[name]); size = v.pop('size', None)
+        im = render(**v)
+        if size: im = im.resize(size, Image.LANCZOS)
+        im.save(p, 'WEBP', quality=80 if size else 82, method=6)
         print(p, p.stat().st_size // 1024, 'KB')
