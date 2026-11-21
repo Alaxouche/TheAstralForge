@@ -5,7 +5,7 @@ layout: page
 permalink: /contributors/
 description: "Patreon and Ko-fi: the tiers, what they pay for, and the people who support The Astral Forge."
 ---
-{% include page_hero.html eyebrow="Patreon · Ko-fi" eyebrow_fr="Patreon · Ko-fi" title_en="Supporters" title_fr="Soutiens" lead_en="Patreon and Ko-fi pay for test hardware, licences and the hours spent fixing things after every game update. Thanks to everyone listed here." lead_fr="Patreon et Ko-fi financent le matériel de test, les licences et les heures passées à tout réparer après chaque mise à jour du jeu. Merci à tous ceux qui sont listés ici." image="/assets/Images/Skyrim/enb_2026-2-7_22-12-03_248.webp" %}
+{% include page_hero.html eyebrow="Patreon · Ko-fi" eyebrow_fr="Patreon · Ko-fi" title_en="Supporters" title_fr="Soutiens" lead_en="Patreon and Ko-fi pay for test hardware, licences and the hours spent fixing things after every game update. Thanks to everyone listed here." lead_fr="Patreon et Ko-fi financent le matériel de test, les licences et les heures passées à tout réparer après chaque mise à jour du jeu. Merci à tous ceux qui sont listés ici." image="/assets/Images/forge-hex-dark.webp" image_light="/assets/Images/forge-hex-light.webp" hex=true glow=true %}
 
 <section class="wrap section">
   <div class="actions" style="margin-bottom:72px">
@@ -14,7 +14,7 @@ description: "Patreon and Ko-fi: the tiers, what they pay for, and the people wh
   </div>
 
   <h2 class="section-title"><span class="diamond"></span><span lang="en">Patreon tiers</span><span lang="fr">Niveaux Patreon</span></h2>
-  <div class="tiers">
+  <div class="tiers hexpanel">
     {%- for tier in site.data.contributors.tiers %}
     <div class="tier">
       <h3>{{ tier.name }}</h3>
@@ -28,18 +28,18 @@ description: "Patreon and Ko-fi: the tiers, what they pay for, and the people wh
   </div>
 
   <div class="two-col" style="margin-top:100px">
-    <div>
+    <div class="hexpanel">
       <h2 class="section-title"><span class="diamond"></span><span lang="en">Why contribute</span><span lang="fr">Pourquoi contribuer</span></h2>
       <ul class="list list--diamond">{% for b in site.data.contributors.benefits %}{% assign fr = site.data.contributors.benefits_fr[forloop.index0] %}<li>{% if fr %}<span lang="en">{{ b }}</span><span lang="fr">{{ fr }}</span>{% else %}{{ b }}{% endif %}</li>{% endfor %}</ul>
     </div>
-    <div>
+    <div class="hexpanel">
       <h2 class="section-title"><span class="diamond"></span><span lang="en">What it funds</span><span lang="fr">Ce que ça finance</span></h2>
       <ul class="list list--diamond">{% for i in site.data.contributors.impact %}{% assign fr = site.data.contributors.impact_fr[forloop.index0] %}<li>{% if fr %}<span lang="en">{{ i }}</span><span lang="fr">{{ fr }}</span>{% else %}{{ i }}{% endif %}</li>{% endfor %}</ul>
     </div>
   </div>
 
   <div class="two-col" style="margin-top:100px">
-    <div>
+    <div class="hexpanel">
       <h2 class="section-title"><span class="diamond"></span><span lang="en">Latest supporters</span><span lang="fr">Derniers soutiens</span></h2>
       <div class="table-wrap">
         <table>
@@ -53,7 +53,7 @@ description: "Patreon and Ko-fi: the tiers, what they pay for, and the people wh
       </div>
     </div>
     {%- if site.data.contributors.top %}
-    <div>
+    <div class="hexpanel">
       <h2 class="section-title"><span class="diamond"></span>Top 10</h2>
       <ol class="list">
         {%- for s in site.data.contributors.top %}

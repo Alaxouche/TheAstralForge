@@ -1,12 +1,23 @@
 {%- comment -%}
-  Cinematic page header. Params: eyebrow (+ eyebrow_fr), title / title_en + title_fr, lead_en, lead_fr, image, image_light (shown instead in the light theme, lazy), hex (true when the image is one of the honeycomb backgrounds), tiles (true on the 404: the missing tiles of hex-void fall away, outlines from _data/hex_void_tiles.json).
+  Cinematic page header. Params: eyebrow (+ eyebrow_fr), title / title_en + title_fr, lead_en, lead_fr, image, image_light (shown instead in the light theme, lazy), hex (true when the image is one of the honeycomb backgrounds), glow (true: image / image_light become a fixed background behind the whole page, and a lit copy of the forge honeycomb shows around the mouse pointer, see "Honeycomb pages: the pointer glow" in site.css), tiles (true on the 404: the missing tiles of hex-void fall away, outlines from _data/hex_void_tiles.json).
 {%- endcomment -%}
 {%- assign ph_img = include.image | default: '/assets/Images/AstralForge_Background_Dark.webp' -%}
-<header class="phero{% if include.hex %} phero--hex{% endif %}">
+{%- if include.glow %}
+<div class="hexpage" aria-hidden="true" data-glow data-src-d="{{ '/assets/Images/forge-hex-pulse.webp' | relative_url }}" data-src-l="{{ '/assets/Images/forge-hex-light-pulse.webp' | relative_url }}">
+  <img class="hexpage__bg theme-d" src="{{ ph_img | relative_url }}" srcset="{{ ph_img | srcset }}" sizes="100vw" alt="" fetchpriority="high" decoding="async">
+  {%- if include.image_light %}
+  <img class="hexpage__bg theme-l" src="{{ include.image_light | relative_url }}" srcset="{{ include.image_light | srcset }}" sizes="100vw" alt="" loading="lazy" decoding="async">
+  {%- endif %}
+  <div class="hexpage__lamp"><i></i></div>
+</div>
+{%- endif %}
+<header class="phero{% if include.hex %} phero--hex{% endif %}{% if include.glow %} phero--glow{% endif %}">
+  {%- unless include.glow %}
   <img class="phero__bg{% if include.image_light %} theme-d{% endif %}" src="{{ ph_img | relative_url }}" srcset="{{ ph_img | srcset }}" sizes="100vw" alt="" fetchpriority="high" decoding="async" data-parallax>
   {%- if include.image_light %}
   <img class="phero__bg theme-l" src="{{ include.image_light | relative_url }}" srcset="{{ include.image_light | srcset }}" sizes="100vw" alt="" loading="lazy" decoding="async" data-parallax>
   {%- endif %}
+  {%- endunless %}
   {%- if include.tiles and site.data.hex_void_tiles %}{% assign vt = site.data.hex_void_tiles %}
   {%- comment %} Same framing as the picture: viewBox = image size, slice = object-fit: cover {% endcomment %}
   <svg class="phero__bg phero__tiles" viewBox="0 0 {{ vt.w }} {{ vt.h }}" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false" data-parallax>

@@ -9,8 +9,8 @@ sitemap: false
   "start_url": "{{ '/' | relative_url }}",
   "scope": "{{ '/' | relative_url }}",
   "display": "standalone",
-  "background_color": "#0a0a0a",
-  "theme_color": "#0a0a0a",
+  "background_color": "#0d0a08",
+  "theme_color": "#0d0a08",
   "icons": [
     {
       "src": "{{ '/assets/logos/emblem-192.png' | relative_url }}",

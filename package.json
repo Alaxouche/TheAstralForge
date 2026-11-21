@@ -10,7 +10,9 @@
     "thumbs": "python scripts/make-thumbs.py",
     "og": "python scripts/make-og.py",
     "hex": "python scripts/make-hexfield.py",
-    "contents": "python scripts/modlist-contents.py"
+    "contents": "python scripts/modlist-contents.py",
+    "shot": "node scripts/shot.mjs",
+    "bench": "node scripts/bench.mjs"
   },
   "devDependencies": {
     "esbuild": "0.28.2",

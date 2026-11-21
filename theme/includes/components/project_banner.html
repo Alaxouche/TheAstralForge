@@ -1,8 +1,4 @@
-{%- if modlist %}
-<dl class="stats">
-  {%- if modlist.mods %}<div><dt>Mods</dt><dd data-count>{{ modlist.mods }}</dd></div>{% endif %}
-  <div><dt title="Downloads + install" data-title-fr="Téléchargements + installation"><span lang="en">Disk space</span><span lang="fr">Espace disque</span></dt><dd><span data-live="{{ modlist.title }}" data-field="size" data-count>{{ modlist.live.size }}</span>&nbsp;<span lang="en">GB</span><span lang="fr">Go</span></dd></div>
-  <div><dt>Archives</dt><dd data-live="{{ modlist.title }}" data-field="archives" data-count>{{ modlist.live.archives }}</dd></div>
-  <div><dt>Version</dt><dd data-live="{{ modlist.title }}" data-field="version">{{ modlist.live.version }}</dd></div>
-</dl>
-{%- endif %}
+{%- comment -%}
+  Kept so the overviews' include line still works: since the docs rework
+  (Nov 2026) the stats are hallmark plates in the overview header (theme/layouts/doc.liquid), so this prints nothing.
+{%- endcomment -%}

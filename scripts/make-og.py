@@ -22,15 +22,23 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / 'assets' / 'og'
 W, H = 1200, 630
-STYLE = '3'                      # bump to redraw every picture after a design change
-FONT = ROOT / 'theme' / 'assets' / 'fonts' / 'jost-latin.woff2'
-GOLD = (201, 169, 110)
-HI = (236, 233, 226)
-MUTED = (160, 154, 144)
+STYLE = '4'                      # bump to redraw every picture after a design change
+# Struck metal: Cormorant Garamond titles, brass serif italic kicker; the wordmark keeps Jost (the logo does not change)
+FONTS = ROOT / 'theme' / 'assets' / 'fonts'
+FONT = FONTS / 'jost-latin.woff2'
+SERIF = FONTS / 'cormorant-latin.woff2'
+SERIF_I = FONTS / 'cormorant-italic-latin.woff2'
+SANS = FONTS / 'alegreya-sans-500-latin.woff2'
+GOLD = (214, 162, 78)
+BRASS = (240, 201, 119)
+HI = (244, 236, 224)
+MUTED = (168, 153, 138)
+BG = (13, 10, 8)
+HEAT = [(90, 26, 8), (184, 68, 26), (233, 134, 46), (246, 207, 122)]
 
 
-def font(size, weight):
-    f = ImageFont.truetype(str(FONT), size)
+def font(size, weight, path=FONT):
+    f = ImageFont.truetype(str(path), size)
     try:
         f.set_variation_by_axes([weight])
     except Exception:
@@ -80,7 +88,7 @@ def shade(im, strength):
     ys = np.linspace(0, 1, H, dtype=np.float32)[:, None, None]
     left = (1 - strength * np.clip(1.2 - xs * 1.25, 0, 1)) * (1 - 0.25 * strength)
     bottom = 1 - 0.35 * np.clip((ys - 0.55) / 0.45, 0, 1)
-    bg = np.array([7, 8, 10], np.float32)
+    bg = np.array(BG, np.float32)
     a = bg + (a - bg) * left * bottom
     return Image.fromarray(a.clip(0, 255).astype(np.uint8))
 
@@ -103,7 +111,7 @@ def modlists():
         pb = fm['project_banner']
         out[fm.get('title')] = {
             'game': fm.get('game', ''),
-            'accent': pb.get('accent', '#c9a96e'),
+            'accent': pb.get('accent', '#d6a24e'),
             'image': (pb.get('image') or fm.get('image') or '').lstrip('/'),
         }
     return out
@@ -122,11 +130,11 @@ def card(page, ml, emblem, hexbg, cache):
             cache[key] = shade(cover(ROOT / key, W, H).filter(ImageFilter.GaussianBlur(1.6)), 0.86) if key and (ROOT / key).exists() else hexbg
         im = cache[key].copy()
         accent = GOLD                       # one colour for every list
-        kicker = f"{page['s']}  ·  {ml['game']}".upper() if ml['game'] else page['s'].upper()
+        kicker = f"{page['s']}  ·  {ml['game']}" if ml['game'] else page['s']
     else:
         im = hexbg.copy()
         accent = GOLD
-        kicker = 'WABBAJACK MODLISTS' if page['u'] == '/' else ''
+        kicker = 'Wabbajack modlists' if page['u'] == '/' else ''
     d = ImageDraw.Draw(im)
     pad = 72
     # brand row
@@ -134,20 +142,24 @@ def card(page, ml, emblem, hexbg, cache):
     tracked(d, (pad + 70, 70), 'THE ASTRAL FORGE', font(22, 500), HI, 7)
     # kicker
     if kicker:
-        tracked(d, (pad, 250), kicker, font(22, 500), accent, 6)
-    # title: largest size that fits in three lines
-    for size in (84, 76, 68, 60, 54, 48, 42):
-        f = font(size, 500)
-        lines = wrap(title.upper(), f, size * 0.08, W - pad * 2 - 40)
+        d.text((pad, 236), kicker, font=font(36, 500, SERIF_I), fill=BRASS)
+    # title: Cormorant in normal case, the largest size that fits in three lines
+    for size in (112, 100, 90, 80, 72, 64, 56):
+        f = font(size, 600, SERIF)
+        lines = wrap(title, f, 0, W - pad * 2 - 40)
         if len(lines) <= 3:
             break
-    y = 296
+    y = 286
     for ln in lines:
-        tracked(d, (pad, y), ln, f, HI, size * 0.08)
-        y += int(size * 1.08)
+        d.text((pad, y), ln, font=f, fill=HI)
+        y += int(size * 0.98)
     # footer
-    tracked(d, (pad, H - 74), 'THEASTRALFORGE.COM', font(18, 400), MUTED, 5)
-    d.rectangle((0, H - 5, W, H), fill=accent)
+    d.text((pad, H - 76), 'theastralforge.com', font=font(22, 500, SANS), fill=MUTED)
+    # molten bar: the heat gradient along the bottom edge
+    xs = np.linspace(0, 1, W)
+    stops = np.linspace(0, 1, len(HEAT))
+    bar = np.stack([np.interp(xs, stops, [c[i] for c in HEAT]) for i in range(3)], -1)
+    im.paste(Image.fromarray(np.repeat(bar[None], 6, 0).astype(np.uint8)), (0, H - 6))
     return im
 
 

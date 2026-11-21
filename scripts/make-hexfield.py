@@ -3,12 +3,14 @@
 
   forge-hex-dark / forge-hex-lit     home "The Forge" panel, dark theme: at rest / panel open
   forge-hex-light / forge-hex-light-lit   the same for the light theme
+  forge-hex-pulse                    home "The Forge" section: every tile lit, shown in rings that pulse out from the seal
+                                     (same framing as forge-hex-dark, saved at 1920 px: it is only ever seen blurred and faint)
   hex-hero        wide header (hub, CTA strip): hot clusters on the right, the left stays calm for text
   hex-void        404 header: a few tiles are missing and their rims glow
   hex-hero-light / hex-void-light   the same two for the light theme
 
 Images sharing a geometry can be cross-faded. Edges fade into the page background
-(#07080a dark, #f4f1ea light). Deterministic: same output on every run.
+(#0d0a08 dark, #f2ece3 light: the "Struck metal" palette). Deterministic: same output on every run.
 With names after out_dir, only those images are written.
 """
 import math
@@ -18,11 +20,11 @@ import numpy as np
 from PIL import Image, ImageFilter
 
 S3 = np.sqrt(3.0)
-BG_D = np.array([7, 8, 10], np.float32) / 255
-BG_L = np.array([244, 241, 234], np.float32) / 255
-GOLD = np.array([201, 169, 110], np.float32) / 255
-HOT = np.array([255, 214, 150], np.float32) / 255
-GOLD_DEEP = np.array([150, 112, 48], np.float32) / 255
+BG_D = np.array([13, 10, 8], np.float32) / 255
+BG_L = np.array([242, 236, 227], np.float32) / 255
+GOLD = np.array([214, 162, 78], np.float32) / 255
+HOT = np.array([246, 207, 122], np.float32) / 255
+GOLD_DEEP = np.array([138, 98, 34], np.float32) / 255
 
 
 def smooth(a, b, x):
@@ -103,7 +105,7 @@ def render(W, H, theme, level, spots, R=58.0, cx=0.56, tilt=0.38, void=None, vig
     if theme == 'dark':
         bg = BG_D
         base = 0.035 + 0.025 * rnd + 0.09 * np.clip(bevel, -0.4, 1)
-        col = bg + (base * face)[..., None] * np.array([0.92, 0.96, 1.05], np.float32)
+        col = bg + (base * face)[..., None] * np.array([1.06, 0.97, 0.86], np.float32)   # warm iron faces
         col = col * (1 - hole[..., None] * face[..., None])
         glow_seam = seam * (0.06 + level * (0.55 * heat + 0.9 * tile_on))
         fill = face * tile_on * (1 - hole) * level * (0.015 + 0.26 * inner)
@@ -147,6 +149,9 @@ VARIANTS = {
     'forge-hex-lit': dict(W=2560, H=1440, theme='dark', level=1.0, spots=PANEL),
     'forge-hex-light': dict(W=2560, H=1440, theme='light', level=0.12, spots=PANEL),
     'forge-hex-light-lit': dict(W=2560, H=1440, theme='light', level=1.0, spots=PANEL),
+    'forge-hex-pulse': dict(W=2560, H=1440, theme='dark', level=0.5, spots=[(0.5, 0.5, 6000, 1.0)], size=(1920, 1080)),
+    # the hub's pulsing rings in the light theme (same tiling as forge-hex-light)
+    'forge-hex-light-pulse': dict(W=2560, H=1440, theme='light', level=0.5, spots=[(0.5, 0.5, 6000, 1.0)], size=(1920, 1080)),
     'hex-hero': dict(W=2560, H=1000, theme='dark', level=0.85, spots=HERO, R=50.0, cx=0.6, tilt=0.3, vig=(0.62, 0.5, 0.7)),
     'hex-hero-light': dict(W=2560, H=1000, theme='light', level=1.0, spots=HERO, R=50.0, cx=0.6, tilt=0.3, vig=(0.62, 0.5, 0.7)),
     'hex-void': dict(W=2560, H=1000, theme='dark', level=0.3, spots=[(0.86, 0.5, 220, 0.6)], R=50.0, cx=0.6, tilt=0.3,
@@ -200,5 +205,8 @@ if __name__ == '__main__':
     names = sys.argv[2:] or list(VARIANTS)
     for name in names:
         p = out / f'{name}.webp'
-        render(**VARIANTS[name]).save(p, 'WEBP', quality=82, method=6)
+        v = dict(VARIANTS[name]); size = v.pop('size', None)
+        im = render(**v)
+        if size: im = im.resize(size, Image.LANCZOS)
+        im.save(p, 'WEBP', quality=80 if size else 82, method=6)
         print(p, p.stat().st_size // 1024, 'KB')

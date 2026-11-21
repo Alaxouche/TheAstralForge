@@ -10,7 +10,6 @@
   };
   var cssLink = document.querySelector('link[href*="/assets/site.css"]');
   var base = cssLink ? cssLink.getAttribute('href').split('/assets/site.css')[0] : '';
-  var canHover = matchMedia('(hover: hover) and (pointer: fine)').matches;
   var calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
   var lang = function () { return root.getAttribute('data-lang') === 'fr' ? 'fr' : 'en'; };
   var norm = function (s) { return String(s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]/g, ''); };
@@ -36,14 +35,15 @@
       var fin = el.dataset.final, mm = fin.match(/^(\d[\d\s,.]*)(.*)$/);
       if (!mm) { el.textContent = fin; return; }
       var goal = parseFloat(mm[1].replace(/[\s,]/g, ''));
-      el.textContent = k < 1 ? Math.round(goal * e) + mm[2] : fin;
+      // keep the thousands separator while counting, if the final number has one (3,784)
+      el.textContent = k < 1 ? (/,/.test(mm[1]) ? Math.round(goal * e).toLocaleString('en') : Math.round(goal * e)) + mm[2] : fin;
       if (k < 1) el._cu = requestAnimationFrame(frame);
     })(start);
   }
   var countIO = 'IntersectionObserver' in window ? new IntersectionObserver(function (entries) {
     entries.forEach(function (en) { if (en.isIntersecting) { countUp(en.target); countIO.unobserve(en.target); } });
   }, { threshold: .6 }) : null;
-  $$('[data-count]').forEach(function (el) { if (countIO && !el.closest('.panel')) countIO.observe(el); });
+  $$('[data-count]').forEach(function (el) { if (countIO && !el.closest('.forge')) countIO.observe(el); });
 
   /* =========================================================
      Rune decode effect for titles
@@ -55,8 +55,11 @@
     // Screen readers keep the real title while the runes play.
     el.setAttribute('aria-label', final);
     clearTimeout(el._st); cancelAnimationFrame(el._sr);
+    el.style.height = '';
     el._st = setTimeout(function () {
       var start = performance.now(), dur = 900;
+      // Runes are wider than letters: hold the height so a wrapped line can't move the page (CLS)
+      if (getComputedStyle(el).display !== 'inline') el.style.height = el.offsetHeight + 'px';
       (function frame(t) {
         var k = Math.min(1, (t - start) / dur), out = '';
         for (var i = 0; i < final.length; i++) {
@@ -65,79 +68,102 @@
         }
         el.textContent = k < 1 ? out : final;
         if (k < 1) el._sr = requestAnimationFrame(frame);
+        else el.style.height = '';
       })(start);
     }, delay || 0);
   }
 
-  /* Run fn with the latest pointer event once per frame (one layout read per frame at most) */
-  function pointerFrame(el, fn) {
-    var ev = null, queued = false;
-    el.addEventListener('pointermove', function (e) {
+  /* Hub catalogue cards: the list picture follows the cursor, one layout read per frame at most */
+  if (!calm && matchMedia('(hover: hover) and (pointer: fine)').matches) document.querySelectorAll('[data-tilt]').forEach(function (card) {
+    var img = card.querySelector('.plate__bg'), ev = null, queued = false;
+    if (!img) return;
+    card.addEventListener('pointermove', function (e) {
       ev = e;
       if (queued) return;
       queued = true;
-      requestAnimationFrame(function () { queued = false; fn(ev); });
+      requestAnimationFrame(function () {
+        queued = false;
+        var r = card.getBoundingClientRect(), x = (ev.clientX - r.left) / r.width - .5, y = (ev.clientY - r.top) / r.height - .5;
+        img.style.setProperty('--tx', (x * -24) + 'px'); img.style.setProperty('--ty', (y * -16) + 'px');
+      });
     }, { passive: true });
+    card.addEventListener('pointerleave', function () { img.style.setProperty('--tx', '0px'); img.style.setProperty('--ty', '0px'); });
+  });
+
+  /* Hub orrery: the pulsing rings are centred on its hub (read after load and on resize) and their pictures
+     are only set once the page has loaded */
+  var hubPulse = document.querySelector('.orrery__pulse'), hubCentre = document.querySelector('.orrery .o-hub');
+  if (hubPulse && hubCentre && !calm) {
+    var centrePulse = function () {
+      var a = hubPulse.getBoundingClientRect(), b = hubCentre.getBoundingClientRect();
+      hubPulse.style.setProperty('--px', Math.round(b.left + b.width / 2 - a.left) + 'px');
+      hubPulse.style.setProperty('--py', Math.round(b.top + b.height / 2 - a.top) + 'px');
+    };
+    var lightPulse = function () {
+      hubPulse.style.setProperty('--pulse-d', 'url("' + hubPulse.dataset.srcD + '")');
+      hubPulse.style.setProperty('--pulse-l', 'url("' + hubPulse.dataset.srcL + '")');
+      centrePulse();
+      hubPulse.classList.add('is-lit');
+      if (window.ResizeObserver) new ResizeObserver(function () { requestAnimationFrame(centrePulse); }).observe(hubPulse);
+    };
+    if (document.readyState === 'complete') lightPulse(); else addEventListener('load', lightPulse, { once: true });
   }
 
+  /* Honeycomb pages: the pointer glow (CSS "Honeycomb pages: the pointer glow"). The honeycomb is fixed to the
+     window, so pointer coordinates are its coordinates. The lamp moves to the pointer and its picture moves
+     back by the same amount, so the lit tiles line up with the background. Eased while it catches up, then
+     the loop stops; snaps straight there with reduced motion. */
+  var glow = document.querySelector('[data-glow]');
+  if (glow && matchMedia('(hover: hover)').matches) {
+    var lamp = glow.querySelector('.hexpage__lamp'), gPic = lamp.firstElementChild;
+    var gR = 0, tx = 0, ty = 0, cx = 0, cy = 0, gRun = false, gFirst = true;
+    var placeGlow = function () {
+      lamp.style.transform = 'translate3d(' + (cx - gR) + 'px,' + (cy - gR) + 'px,0)';
+      gPic.style.transform = 'translate3d(' + (gR - cx) + 'px,' + (gR - cy) + 'px,0)';
+    };
+    var stepGlow = function () {
+      cx += (tx - cx) * .2; cy += (ty - cy) * .2;
+      var done = Math.abs(tx - cx) < .5 && Math.abs(ty - cy) < .5;
+      if (done) { cx = tx; cy = ty; }
+      placeGlow();
+      gRun = !done;
+      if (gRun) requestAnimationFrame(stepGlow);
+    };
+    var lightGlow = function () {
+      glow.style.setProperty('--glow-d', 'url("' + glow.dataset.srcD + '")');
+      glow.style.setProperty('--glow-l', 'url("' + glow.dataset.srcL + '")');
+      gR = lamp.offsetWidth / 2;
+      addEventListener('resize', function () { gR = lamp.offsetWidth / 2; placeGlow(); }, { passive: true });
+      document.addEventListener('pointermove', function (e) {
+        if (e.pointerType === 'touch') return;
+        tx = e.clientX; ty = e.clientY;
+        if (gFirst || calm) { gFirst = false; cx = tx; cy = ty; placeGlow(); }
+        else if (!gRun) { gRun = true; requestAnimationFrame(stepGlow); }
+        glow.classList.add('is-on');
+      }, { passive: true });
+      // the pointer left the window
+      document.addEventListener('pointerout', function (e) { if (!e.relatedTarget) { glow.classList.remove('is-on'); gFirst = true; } });
+    };
+    if (document.readyState === 'complete') lightGlow(); else addEventListener('load', lightGlow, { once: true });
+  }
+
+  /* Hub orrery: /hub/#<list id> opens on that list (the choice itself is CSS, see "Hub: the orrery") */
+  var orb = location.hash && document.getElementById('orb-' + location.hash.slice(1));
+  if (orb && orb.type === 'radio') orb.checked = true;
+
   /* =========================================================
-     Home: expanding panels
+     Home: the forge (theme/assets/forge/forge.js, a module loaded by home.liquid) runs the page
+     and reuses the two text effects above
      ========================================================= */
   var hero = $('[data-hero]');
-  if (hero) {
-    var panels = $$('.panel', hero);
-    var setOn = function (p) {
-      var was = $('.panel.is-on', hero);
-      hero.classList.toggle('has-on', !!p);
-      panels.forEach(function (x) { x.classList.toggle('is-on', x === p); });
-      if (p && p !== was) {
-        $$('[data-scramble]', p).forEach(function (t) { scramble(t, 380); });
-        $$('[data-count]', p).forEach(function (n) { setTimeout(function () { countUp(n); }, 450); });
-      }
-    };
-    panels.forEach(function (p) {
-      if (canHover) {
-        p.addEventListener('mouseenter', function () { setOn(p); });
-      }
-      p.addEventListener('focusin', function () { setOn(p); });
-      p.addEventListener('click', function (e) {
-        if (e.target.closest('a, button')) return;
-        if (!p.classList.contains('is-on')) { setOn(p); return; }
-        if (p.dataset.href) location.href = p.dataset.href;
-      });
-      p.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter' && e.target === p && p.dataset.href) location.href = p.dataset.href;
-      });
-    });
-    if (canHover) hero.addEventListener('mouseleave', function () { setOn(null); });
-    // The Forge's lit picture sits at opacity 0 until its panel opens: decode it while the page is
-    // idle, so the first open does not stall on a 2560 px decode in the middle of the animation.
-    (window.requestIdleCallback || function (f) { setTimeout(f, 1500); })(function () {
-      $$('.panel__bg--lit', hero).forEach(function (img) {
-        if (img.offsetParent === null || !img.decode) return; // the other theme's picture (display: none)
-        img.loading = 'eager';
-        img.decode().catch(function () {});
-      });
-    });
-    document.addEventListener('keydown', function (e) {
-      // Leave the keys alone while a dialog or the menu is open, or with modifiers held.
-      if ($('dialog[open]') || (drawer && drawer.classList.contains('is-open'))) return;
-      if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
-      if (e.key === 'Escape') setOn(null);
-      if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft' && e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
-      if (document.activeElement && /input|textarea|select/i.test(document.activeElement.tagName)) return;
-      e.preventDefault();
-      var i = panels.indexOf($('.panel.is-on', hero));
-      var fwd = e.key === 'ArrowRight' || e.key === 'ArrowDown';
-      var n = panels[(i + (fwd ? 1 : -1) + panels.length) % panels.length];
-      setOn(n); n.focus({ preventScroll: true });
-    });
-  }
+  window.TAF = { scramble: scramble, countUp: countUp };
 
   /* =========================================================
      Nav, drawer, reading progress, parallax
      ========================================================= */
   var nav = $('[data-nav]'), progress = $('[data-progress]'), prose = $('.prose'), plx = $$('[data-parallax]');
+  // Docs: the forge path's current station fills with the reading progress (--read, only inside the path)
+  var pathHere = $('.path__st.is-here');
   var ticking = false;
   // Reads (scroll position, prose box) come before every write, and the first run waits for the
   // next frame: reading scrollY while the page is still being built forced a full layout of long
@@ -150,6 +176,7 @@
       var total = r.height - ih * .6;
       var p = total > 0 ? Math.min(1, Math.max(0, -r.top / total)) : 0;
       progress.style.transform = 'scaleX(' + p + ')';
+      if (pathHere) pathHere.style.setProperty('--read', p.toFixed(3));
     }
     if (plx.length && !calm && y < ih) plx.forEach(function (el) { el.style.transform = 'translate3d(0,' + (y * .35) + 'px,0) scale(1.06)'; });
     if (toTop) toTop.classList.toggle('is-on', y > ih * 1.5);
@@ -207,17 +234,6 @@
     });
   }
 
-  /* Hub bands follow the cursor */
-  if (canHover && !calm) $$('[data-tilt]').forEach(function (b) {
-    var img = $('.band__bg', b);
-    pointerFrame(b, function (e) {
-      var r = b.getBoundingClientRect();
-      var x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
-      img.style.setProperty('--tx', (x * -24) + 'px'); img.style.setProperty('--ty', (y * -16) + 'px');
-    });
-    b.addEventListener('pointerleave', function () { img.style.setProperty('--tx', '0px'); img.style.setProperty('--ty', '0px'); });
-  });
-
   /* =========================================================
      Language
      ========================================================= */
@@ -256,7 +272,7 @@
   function syncTheme() {
     var light = root.getAttribute('data-theme') === 'light';
     $$('[data-theme-toggle]').forEach(function (b) { b.setAttribute('aria-pressed', light); });
-    if (themeMeta) themeMeta.content = light ? '#f4f1ea' : '#07080a';
+    if (themeMeta) themeMeta.content = light ? '#f2ece3' : '#0d0a08';
   }
   $$('[data-theme-toggle]').forEach(function (btn) {
     btn.addEventListener('click', function () {
@@ -374,6 +390,17 @@
     $$('[data-side-close]').forEach(function (b) { b.addEventListener('click', function () { toggleSide(false); }); });
     side.addEventListener('click', function (e) { if (e.target.closest('a')) toggleSide(false); });
   }
+  /* Docs list bar: on narrow screens the tabs scroll sideways; bring the current one into view (one read,
+     after the first frame) */
+  var dbarCur = $$('.dbar [aria-current]');
+  if (dbarCur.length) requestAnimationFrame(function () {
+    var moves = dbarCur.map(function (a) {
+      var box = a.closest('ul, ol'), x = a.offsetLeft - box.offsetLeft - (box.clientWidth - a.offsetWidth) / 2;
+      return [box, x];
+    });
+    moves.forEach(function (m) { if (m[0].scrollWidth > m[0].clientWidth) m[0].scrollLeft = Math.max(0, m[1]); });
+  });
+
   var tocObserver;
   function buildToc() {
     var list = $('[data-side-toc]');
@@ -574,7 +601,7 @@
 
   /* Reveal on scroll */
   if ('IntersectionObserver' in window && !calm) {
-    var els = $$('.band, .tier, .cta, .masonry__item, .shots, .section-title, .stats');
+    var els = $$('.tier, .cta, .masonry__item, .shots, .section-title, .stats');
     els.forEach(function (el) { el.classList.add('reveal'); });
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('is-in'); io.unobserve(en.target); } });
@@ -792,16 +819,6 @@
     if (e.key !== 'Escape') return;
     $$('.gl:hover, .gl:focus').forEach(function (g) { g.classList.add('is-off'); });
   });
-
-  /* ---------- Page transitions: morph the modlist title into the docs hero ---------- */
-  var hero = $('[data-hero]');
-  if (hero) hero.addEventListener('click', function (e) {
-    var p = e.target.closest('.panel');
-    if (!p) return;
-    var t = $('[data-vt]', p);
-    $$('[data-vt]', hero).forEach(function (x) { x.style.viewTransitionName = ''; });
-    if (t && p.classList.contains('is-on')) t.style.viewTransitionName = t.getAttribute('data-vt');
-  }, true);
 
   /* ---------- Keyboard maps: the legend buttons show one category at a time ---------- */
   $$('[data-kbmap]').forEach(function (map) {

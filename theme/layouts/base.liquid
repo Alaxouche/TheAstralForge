@@ -27,7 +27,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="{{ og_img }}">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
-  <meta name="theme-color" content="#07080a">
+  <meta name="theme-color" content="#0d0a08">
   {%- comment %} data-cfasync="false": Cloudflare Rocket Loader must not delay these scripts (language and theme are set before the first paint) {% endcomment %}
   <script data-cfasync="false">
     (function () {
@@ -37,11 +37,12 @@
       d.setAttribute('data-lang', l); d.lang = l;
       // Dark is the house theme; light only when the visitor picked it
       d.setAttribute('data-theme', t === 'light' ? 'light' : 'dark');
-      if (t === 'light') document.querySelector('meta[name="theme-color"]').content = '#f4f1ea';
+      if (t === 'light') document.querySelector('meta[name="theme-color"]').content = '#f2ece3';
     })();
   </script>
-  {%- comment %} Jost is self-hosted (theme/assets/fonts, SIL OFL): no request to Google, no render-blocking stylesheet {% endcomment %}
-  <link rel="preload" href="{{ '/assets/fonts/jost-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  {%- comment %} Fonts are self-hosted (theme/assets/fonts, SIL OFL): no request to Google. Preload the two faces every page paints first: Alegreya Sans for text, Cormorant for titles. Jost (wordmark only) is not preloaded: its fallback is metric-matched. {% endcomment %}
+  <link rel="preload" href="{{ '/assets/fonts/alegreya-sans-400-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ '/assets/fonts/cormorant-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}?v={{ site.version }}">
   <link rel="icon" type="image/svg+xml" href="{{ '/assets/logos/favicon.svg' | relative_url }}">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/logos/favicon-32.png' | relative_url }}">
@@ -82,7 +83,7 @@
         <svg class="theme-ico theme-ico--sun" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
         <svg class="theme-ico theme-ico--moon" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M19.5 14.5A7.5 7.5 0 0 1 9.5 4.5a7.5 7.5 0 1 0 10 10z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
       </button>
-      <button class="nav__tool" type="button" data-lang-toggle aria-label="Version française" data-aria-fr="English version"><span lang="en">FR</span><span lang="fr">EN</span></button>
+      <button class="nav__tool" type="button" data-lang-toggle aria-label="FR, version française" data-aria-fr="EN, English version"><span lang="en">FR</span><span lang="fr">EN</span></button>
       <button class="nav__tool nav__menu" type="button" data-menu-toggle aria-label="Menu" aria-expanded="false" aria-controls="drawer">
         <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 8h16M4 16h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
       </button>
@@ -146,7 +147,7 @@
     <div class="wrap">
       <div class="footer__bottom">
         <span>© {{ site.year }} The Astral Forge <span class="sep" aria-hidden="true"></span> <a href="{{ '/legal/' | relative_url }}"><span lang="en">Legal notice and privacy</span><span lang="fr">Mentions légales et confidentialité</span></a></span>
-        <span><span lang="en">Made by</span><span lang="fr">Réalisé par</span> <a href="https://next.nexusmods.com/profile/AlaxoucheModding" target="_blank" rel="noopener noreferrer">Alaxouche</a></span>
+        <span class="credit"><span lang="en">Website by</span><span lang="fr">Site par</span> <a class="credit__alax" href="https://next.nexusmods.com/profile/AlaxoucheModding" target="_blank" rel="noopener noreferrer">Alaxouche</a> &amp; <a class="credit__wd" href="https://github.com/WhisperDealer" target="_blank" rel="noopener noreferrer">WhisperDealer</a></span>
       </div>
     </div>
   </footer>

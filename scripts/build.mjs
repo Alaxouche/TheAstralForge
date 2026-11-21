@@ -321,17 +321,38 @@ const QUICK = {
 const biHtml = (en, fr) => `<span lang="en">${en}</span><span lang="fr">${fr}</span>`;
 const escHtml = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;');
 
+/* Rows of the overview's honeycomb: counts that alternate odd / even (so each row sits in the gaps of the
+   one above when centred), at most 3 a row, fewest rows, the widest row in the middle when it can be. */
+function hexRows(n) {
+  let best = null;
+  const walk = (left, rows) => {
+    if (best && rows.length >= best.length) return;
+    if (left === 0) { best = rows; return; }
+    const last = rows[rows.length - 1];
+    for (const c of [3, 2, 1]) if (c <= left && (last === undefined || c % 2 !== last % 2)) walk(left - c, [...rows, c]);
+  };
+  walk(n, []);
+  // Prefer the shape that starts smaller (2-3-2 rather than 3-2-...), it reads as a cluster
+  if (best && best.length > 1 && best[0] > best[best.length - 1]) best.reverse();
+  return best || [n];
+}
+
 function quickCards(modlist, relativeUrl) {
   const items = [...modlist.nav].sort((a, b) => (b.children.length > 0) - (a.children.length > 0));
-  const cards = items.map((item) => {
+  // Grid of 6 half-columns, each tile spans 2; a row of k tiles starts at column 4 - k (centred)
+  const pos = [];
+  hexRows(items.length).forEach((k, r) => { for (let j = 0; j < k; j++) pos.push([r + 1, 4 - k + 2 * j]); });
+  const cards = items.map((item, idx) => {
     const q = QUICK[item.title];
     const [icon, desc] = q || ['star', () => ['', '']];
     const [en, fr] = desc(item.children.length + 1, modlist);
     const title = FR[item.title] && FR[item.title] !== item.title ? biHtml(escHtml(item.title), escHtml(FR[item.title])) : escHtml(item.title);
-    return `<a class="quick__card" href="${relativeUrl(item.url)}" data-icon="${icon}"><span class="quick__ico" aria-hidden="true"></span>` +
+    const [r, c] = pos[idx];
+    return `<a class="quick__card" href="${relativeUrl(item.url)}" data-icon="${icon}" style="--r:${r};--c:${c}"><span class="quick__ico" aria-hidden="true"></span>` +
       `<span class="quick__title">${title}</span>${en ? `<span class="quick__desc">${biHtml(en, fr)}</span>` : ''}<span class="quick__go" aria-hidden="true">→</span></a>`;
   });
-  return `<nav class="quick" aria-label="Quick links" data-aria-fr="Accès rapides">${cards.join('')}</nav>`;
+  const rows = hexRows(items.length).length;
+  return `<nav class="quick quick--hex" aria-label="Quick links" data-aria-fr="Accès rapides" style="--rows:${rows}">${cards.join('')}</nav>`;
 }
 
 /* ---- Skill trees (data from scripts/build-perk-trees.py, e.g. _data/perk_trees_wunduniik.json) ----
@@ -458,7 +479,7 @@ function changelogStatic(content) {
     for (const [k, , sign] of CL_KINDS) if (counts[k]) meta += `<span class="cl-count cl-count--${k}">${k === 'fix' ? counts[k] + ' fix' : k === 'upd' ? counts[k] + ' ' + biHtml('upd', 'maj') : sign + counts[k]}</span>`;
     const summary = `<summary><span class="cl-v">${escHtml(ver)}</span>${date ? `<span class="cl-date">${escHtml(date)}</span>` : ''}<span class="cl-meta">${meta}</span></summary>`;
     const tools = i === 0
-      ? '<div class="cl-tools" data-cl-tools><input class="input" type="search" data-cl-q placeholder="Find a mod in the changelog…" data-ph-fr="Chercher un mod dans le changelog…" aria-label="Find a mod in the changelog" data-aria-fr="Chercher un mod dans le changelog">' +
+      ? `<h2 class="sr-only">${biHtml('Versions', 'Versions')}</h2>` + '<div class="cl-tools" data-cl-tools><input class="input" type="search" data-cl-q placeholder="Find a mod in the changelog…" data-ph-fr="Chercher un mod dans le changelog…" aria-label="Find a mod in the changelog" data-aria-fr="Chercher un mod dans le changelog">' +
         `<span class="cl-found" data-cl-found role="status"></span><button class="btn btn--sm" type="button" data-cl-all aria-expanded="false">${biHtml('Expand all', 'Tout déplier')}</button></div>\n`
       : '';
     return `${tools}<details${i++ === 0 ? ' open' : ''}>${summary}${body}</details>`;
@@ -643,6 +664,7 @@ async function build() {
     return fr && fr !== s ? `<span lang="en">${esc(s)}</span><span lang="fr">${esc(fr)}</span>` : esc(s);
   });
   engine.registerFilter('reltime', (iso) => relTimeBi(iso));
+  engine.registerFilter('num', (n) => (Number.isFinite(+n) ? (+n).toLocaleString('en') : n)); // 3784 -> 3,784
   engine.registerFilter('perk_trees', (data) => perkTreesHtml(data));
   engine.registerFilter('keymap', (data, lang) => keymapHtml(data, lang));
   engine.registerFilter('gauge', (data, lang) => gaugeHtml(data, lang));
@@ -732,6 +754,8 @@ async function build() {
       title: idx.title || key,
       game: idx.game || '',
       image: banner.image || idx.image || '/assets/Images/generic_background.webp',
+      // where the home forge crops the picture on phones (CSS object-position), when the subject is off centre
+      image_position_phone: banner.image_position_phone || '',
       // Every list uses the site gold (asked by the user, Nov 2026); project_banner.accent is no longer used
       accent: 'var(--gold)',
       // emblem drawn by scripts/make-modlist-emblems.py, shown on the home panel
@@ -784,6 +808,7 @@ async function build() {
   const version = crypto.createHash('sha1')
     .update(fs.readFileSync(path.join(THEME, 'assets/site.css')))
     .update(fs.readFileSync(path.join(THEME, 'assets/site.js')))
+    .update(fs.readFileSync(path.join(THEME, 'assets/forge/forge.js')))
     .digest('hex').slice(0, 10);
 
   const site = {
@@ -910,12 +935,14 @@ async function build() {
   copyDir(path.join(ROOT, 'assets/Images'), path.join(OUT, 'assets/Images'));
   copyDir(path.join(ROOT, 'assets/logos'), path.join(OUT, 'assets/logos'));
   if (exists('assets/og')) copyDir(path.join(ROOT, 'assets/og'), path.join(OUT, 'assets/og'));
-  // site.css / site.js are written minified (esbuild, dev dependency only); the rest is copied as is
-  copyDir(path.join(THEME, 'assets'), path.join(OUT, 'assets'), (f) => !/[\\/]site\.(css|js)$/.test(f));
-  for (const [f, loader] of [['site.css', 'css'], ['site.js', 'js']]) {
+  // site.css / site.js / forge/forge.js (the home page module) are written minified (esbuild, dev
+  // dependency only); the rest is copied as is
+  copyDir(path.join(THEME, 'assets'), path.join(OUT, 'assets'), (f) => !/[\\/](site\.(css|js)|forge\.js)$/.test(f));
+  for (const [f, loader] of [['site.css', 'css'], ['site.js', 'js'], ['forge/forge.js', 'js']]) {
     const src = fs.readFileSync(path.join(THEME, 'assets', f), 'utf8');
-    const target = loader === 'css' ? ['chrome111', 'edge111', 'firefox121', 'safari16.4'] : 'es2019';
-    writeOut('assets/' + f, transformSync(src, { loader, minify: true, target, legalComments: 'none' }).code);
+    const esm = f.startsWith('forge/');
+    const target = loader === 'css' ? ['chrome111', 'edge111', 'firefox121', 'safari16.4'] : esm ? 'es2020' : 'es2019';
+    writeOut('assets/' + f, transformSync(src, { loader, minify: true, target, legalComments: 'none', ...(esm ? { format: 'esm' } : {}) }).code);
   }
   copyDir(path.join(THEME, 'static'), OUT);
   for (const f of ['CNAME']) if (exists(f)) copyFileIfChanged(path.join(ROOT, f), path.join(OUT, f));

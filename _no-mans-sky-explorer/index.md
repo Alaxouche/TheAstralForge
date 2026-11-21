@@ -10,6 +10,7 @@ image: /assets/Images/no-mans-sky/screenshots/275850_72.webp
 gallery_path: "/assets/Images/no-mans-sky/screenshots/"
 project_banner:
   image: /assets/Images/no-mans-sky/screenshots/275850_72.webp
+  image_position_phone: "92% 50%"   # home page on phones: the astronaut stands at the right of the picture
   accent: "#ff7b29"
   subtitle: "Bigger rewards, faster scanning and new biomes for long trips across the galaxy."
   subtitle_fr: "Des récompenses plus grosses, un scan plus rapide et de nouveaux biomes pour les longs voyages dans la galaxie."
