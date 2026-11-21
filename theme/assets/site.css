@@ -1,7 +1,9 @@
 /* The Astral Forge: "Struck metal" theme (Nov 2026). Warm iron, brass, edges fresh from the fire. */
 
 /* Fonts, all self-hosted, SIL OFL (fonts/OFL*.txt), subsets with the ranges Google Fonts uses:
-   - Cormorant Garamond (titles, kickers): variable 500-700, roman + italic
+   - Cormorant Garamond (titles, kickers): static 600 upright and 500 italic (the only weights used; about 40% lighter
+     than the variable font). Each face is declared over a weight range so 500 / 700 requests use it without faux bold.
+   - Font files are cached as immutable for a year (theme/static/_headers): give a changed font a new file name.
    - Alegreya Sans (text, labels, buttons): 400, 500, 400 italic
    - Jost: only the wordmark next to the emblem (.brand span), kept as it was
    Each family has a local fallback resized to its metrics (computed with fontTools: average glyph width
@@ -995,6 +997,8 @@ main:focus { outline: none; }
 .quick__desc { font-size: 14px; line-height: 1.45; color: var(--muted); }
 .quick__go { position: absolute; right: 18px; top: 50%; translate: 0 -50%; color: var(--gold); transition: transform .3s var(--out); }
 .quick__card:hover .quick__go { transform: translateX(4px); }
+/* the focus ring would be cut by the plate's clip-path (same rule as .btn) */
+.prose .quick__card:focus-visible, .nav__cta:focus-visible { clip-path: none; }
 @media (max-width: 600px) { .prose .quick { grid-template-columns: minmax(0, 1fr); } }
 
 /* Overview: key features as alternating text / screenshot rows */

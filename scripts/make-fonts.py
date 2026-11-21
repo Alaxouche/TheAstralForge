@@ -40,8 +40,8 @@ def build(src, name, axes=None):
         print(p, os.path.getsize(p) // 1024, 'KB')
 
 os.makedirs(OUT, exist_ok=True)
-build('CormorantGaramond.ttf', 'cormorant', {'wght': (500, 700)})
-build('CormorantGaramond-Italic.ttf', 'cormorant-italic', {'wght': (500, 600)})
+build('CormorantGaramond.ttf', 'cormorant', {'wght': 600})          # static: the site only uses 600 upright
+build('CormorantGaramond-Italic.ttf', 'cormorant-italic', {'wght': 500})   # static: 500 italic only
 build('AlegreyaSans-Regular.ttf', 'alegreya-sans-400')
 build('AlegreyaSans-Medium.ttf', 'alegreya-sans-500')
 build('AlegreyaSans-Italic.ttf', 'alegreya-sans-400i')
