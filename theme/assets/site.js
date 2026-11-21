@@ -158,6 +158,8 @@
      Nav, drawer, reading progress, parallax
      ========================================================= */
   var nav = $('[data-nav]'), progress = $('[data-progress]'), prose = $('.prose'), plx = $$('[data-parallax]');
+  // Docs: the forge path's current station fills with the reading progress (--read, only inside the path)
+  var pathHere = $('.path__st.is-here');
   var ticking = false;
   // Reads (scroll position, prose box) come before every write, and the first run waits for the
   // next frame: reading scrollY while the page is still being built forced a full layout of long
@@ -170,6 +172,7 @@
       var total = r.height - ih * .6;
       var p = total > 0 ? Math.min(1, Math.max(0, -r.top / total)) : 0;
       progress.style.transform = 'scaleX(' + p + ')';
+      if (pathHere) pathHere.style.setProperty('--read', p.toFixed(3));
     }
     if (plx.length && !calm && y < ih) plx.forEach(function (el) { el.style.transform = 'translate3d(0,' + (y * .35) + 'px,0) scale(1.06)'; });
     if (toTop) toTop.classList.toggle('is-on', y > ih * 1.5);
@@ -383,6 +386,17 @@
     $$('[data-side-close]').forEach(function (b) { b.addEventListener('click', function () { toggleSide(false); }); });
     side.addEventListener('click', function (e) { if (e.target.closest('a')) toggleSide(false); });
   }
+  /* Docs list bar: on narrow screens the tabs scroll sideways; bring the current one into view (one read,
+     after the first frame) */
+  var dbarCur = $$('.dbar [aria-current]');
+  if (dbarCur.length) requestAnimationFrame(function () {
+    var moves = dbarCur.map(function (a) {
+      var box = a.closest('ul, ol'), x = a.offsetLeft - box.offsetLeft - (box.clientWidth - a.offsetWidth) / 2;
+      return [box, x];
+    });
+    moves.forEach(function (m) { if (m[0].scrollWidth > m[0].clientWidth) m[0].scrollLeft = Math.max(0, m[1]); });
+  });
+
   var tocObserver;
   function buildToc() {
     var list = $('[data-side-toc]');

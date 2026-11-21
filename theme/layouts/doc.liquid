@@ -1,75 +1,111 @@
 {%- if modlist %}
+{%- comment -%}
+  Modlist docs, "the folio" (Nov 2026, CSS layer "Docs: the folio"):
+  - header: the list's emblem on a brass medallion, its catalogue number and hallmark plates (the overview keeps the
+    list's screenshot behind it, every other page has the honeycomb band);
+  - the list bar under it: the list's sections as tabs (sticky), a second row with a group's pages, other lists;
+  - a rail on the left: the forge path on the install guide (one station per step, the current page's headings
+    hang off its station), "On this page" elsewhere; nothing on the overview;
+  - the text, with {: .note } / {: .warning } callouts set in the right margin on wide screens.
+  Everything still comes from the Markdown, its front matter and the nav the build makes.
+{%- endcomment -%}
 {%- assign is_overview = false %}{% if page.url == modlist.url %}{% assign is_overview = true %}{% endif %}
-<header class="phero{% unless is_overview %} phero--compact{% endunless %}" style="--accent: {{ modlist.accent }}">
-  <img class="phero__bg" src="{{ modlist.image | relative_url }}" srcset="{{ modlist.image | srcset }}" sizes="100vw" alt="" fetchpriority="high" decoding="async" data-parallax>
-  <div class="wrap phero__inner">
-    <div class="eyebrow-row">
-      <span class="eyebrow"><span class="diamond is-full"></span>Documentation</span>
-      <span class="badge">{{ modlist.game }}</span>
+{%- for m in site.modlists %}{% if m.id == modlist.id %}{% assign list_no = forloop.index %}{% endif %}{% endfor %}
+{%- case modlist.game -%}
+  {%- when 'Skyrim SE' -%}{%- assign code = 'SSE' -%}
+  {%- when 'Cyberpunk 2077' -%}{%- assign code = 'CP77' -%}
+  {%- when "No Man's Sky" -%}{%- assign code = 'NMS' -%}
+  {%- when 'Starfield' -%}{%- assign code = 'SF' -%}
+  {%- else -%}{%- assign code = modlist.game | slice: 0, 3 | upcase -%}
+{%- endcase -%}
+{%- assign cur_group = nil -%}
+{%- for item in nav %}{% if page.url == item.url or page.parent == item.title %}{% assign cur_group = item %}{% endif %}{% endfor %}
+<header class="phero dhead{% if is_overview %} dhead--over{% else %} phero--hex{% endif %}" style="--accent: {{ modlist.accent }}">
+  {%- if is_overview %}
+  <img class="phero__bg dhead__shot" src="{{ modlist.image | relative_url }}" srcset="{{ modlist.image | srcset }}" sizes="100vw" alt="" fetchpriority="high" decoding="async" data-parallax>
+  {%- else %}
+  <img class="phero__bg theme-d" src="{{ '/assets/Images/hex-hero.webp' | relative_url }}" srcset="{{ '/assets/Images/hex-hero.webp' | srcset }}" sizes="100vw" alt="" fetchpriority="high" decoding="async">
+  <img class="phero__bg theme-l" src="{{ '/assets/Images/hex-hero-light.webp' | relative_url }}" srcset="{{ '/assets/Images/hex-hero-light.webp' | srcset }}" sizes="100vw" alt="" loading="lazy" decoding="async">
+  {%- endif %}
+  <div class="wrap dhead__inner">
+    <a class="dhead__medal" href="{{ modlist.url | relative_url }}" aria-label="{{ modlist.title }}" tabindex="-1">{% if modlist.emblem %}<img src="{{ modlist.emblem | relative_url }}" alt="" width="640" height="640" decoding="async">{% endif %}</a>
+    <div class="dhead__text">
+      <p class="dhead__no"><b>TAF·{{ code }}·0{{ list_no }}</b><span class="sep"></span>{{ modlist.game }}{% unless is_overview %}<span class="sep"></span><a href="{{ modlist.url | relative_url }}" style="view-transition-name: t-{{ modlist.id }}">{{ modlist.title }}</a>{% endunless %}</p>
+      {%- if is_overview %}
+      <h1 class="dhead__title" style="view-transition-name: t-{{ modlist.id }}">{{ modlist.title }}</h1>
+      {%- if modlist.subtitle %}
+      <p class="dhead__lead">{% if modlist.subtitle_fr %}<span lang="en">{{ modlist.subtitle }}</span><span lang="fr">{{ modlist.subtitle_fr }}</span>{% else %}{{ modlist.subtitle }}{% endif %}</p>
+      {%- endif %}
+      <dl class="hallmarks">
+        {%- if modlist.mods %}<div><dt>Mods</dt><dd data-count>{{ modlist.mods }}</dd></div>{% endif %}
+        <div><dt title="Downloads + install" data-title-fr="Téléchargements + installation"><span lang="en">Disk space</span><span lang="fr">Espace disque</span></dt><dd><span data-live="{{ modlist.title }}" data-field="size" data-count>{{ modlist.live.size }}</span>&nbsp;<span lang="en">GB</span><span lang="fr">Go</span></dd></div>
+        <div><dt>Archives</dt><dd data-live="{{ modlist.title }}" data-field="archives" data-count>{{ modlist.live.archives }}</dd></div>
+        <div><dt>Version</dt><dd data-live="{{ modlist.title }}" data-field="version">{{ modlist.live.version }}</dd></div>
+        <div><dt>{{ 'Updated' | bi }}</dt><dd><time data-live="{{ modlist.title }}" data-field="updated" datetime="{{ modlist.live.updated }}">{{ modlist.live.updated | reltime }}</time></dd></div>
+      </dl>
+      {%- else %}
+      <h1 class="dhead__title">{{ page.title | bi }}</h1>
+      <p class="live-line"><span class="pulse"></span>v<span data-live="{{ modlist.title }}" data-field="version">{{ modlist.live.version }}</span><span class="sep"></span><span lang="en">updated</span><span lang="fr">mis à jour</span>&nbsp;<time data-live="{{ modlist.title }}" data-field="updated" datetime="{{ modlist.live.updated }}">{{ modlist.live.updated | reltime }}</time><span class="sep"></span><span><span data-live="{{ modlist.title }}" data-field="size">{{ modlist.live.size }}</span>&nbsp;<span lang="en">GB</span><span lang="fr">Go</span></span></p>
+      {%- endif %}
     </div>
-    <p class="phero__title" style="view-transition-name: t-{{ modlist.id }}">{{ modlist.title }}</p>
-    {%- if modlist.subtitle %}
-    <p class="phero__lead">{% if modlist.subtitle_fr %}<span lang="en">{{ modlist.subtitle }}</span><span lang="fr">{{ modlist.subtitle_fr }}</span>{% else %}{{ modlist.subtitle }}{% endif %}</p>
-    {%- endif %}
-    <p class="live-line"><span class="pulse"></span>v<span data-live="{{ modlist.title }}" data-field="version">{{ modlist.live.version }}</span><span class="sep"></span><span lang="en">updated</span><span lang="fr">mis à jour</span>&nbsp;<time data-live="{{ modlist.title }}" data-field="updated" datetime="{{ modlist.live.updated }}">{{ modlist.live.updated | reltime }}</time><span class="sep"></span><span><span data-live="{{ modlist.title }}" data-field="size">{{ modlist.live.size }}</span>&nbsp;<span lang="en">GB</span><span lang="fr">Go</span></span></p>
   </div>
 </header>
 
-<div class="wrap docs" style="--accent: {{ modlist.accent }}">
-  <aside class="side" id="doc-side" data-side aria-label="Documentation">
-    <button class="side-close" type="button" data-side-close><span lang="en">Close</span><span lang="fr">Fermer</span> <span aria-hidden="true">✕</span></button>
-    <p class="side__title">Documentation</p>
-
-    <p class="side__group">Modlist</p>
-    <ul>
-      <li class="side__item">
-        <a href="{{ modlist.url | relative_url }}"{% if is_overview %} aria-current="page"{% endif %}><span class="diamond"></span>{{ 'Overview' | bi }}</a>
-        {%- if is_overview %}<ul class="side__toc" data-side-toc></ul>{% endif %}
-      </li>
-      {%- for item in nav %}{% if item.children.size == 0 %}
-      <li class="side__item">
-        <a href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}><span class="diamond"></span>{{ item.title | bi }}</a>
-        {%- if page.url == item.url %}<ul class="side__toc" data-side-toc></ul>{% endif %}
-      </li>
-      {%- endif %}{% endfor %}
-    </ul>
-
-    {%- for item in nav %}{% if item.children.size > 0 %}
-    <p class="side__group">{{ item.title | bi }}</p>
-    <ul>
-      <li class="side__item">
-        <a href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}><span class="diamond"></span>{% if item.title contains "Install" %}<span lang="en">Start here</span><span lang="fr">Commencer ici</span>{% else %}<span lang="en">Overview</span><span lang="fr">Vue d'ensemble</span>{% endif %}</a>
-        {%- if page.url == item.url %}<ul class="side__toc" data-side-toc></ul>{% endif %}
-      </li>
-      {%- for c in item.children %}
-      <li class="side__item">
-        <a href="{{ c.url | relative_url }}"{% if page.url == c.url %} aria-current="page"{% endif %}><span class="diamond"></span>{{ c.title | bi }}</a>
-        {%- if page.url == c.url %}<ul class="side__toc" data-side-toc></ul>{% endif %}
-      </li>
+<nav class="dbar" aria-label="{{ modlist.title }} documentation" data-aria-fr="Documentation de {{ modlist.title }}">
+  <div class="wrap dbar__in">
+    <a class="dbar__list" href="{{ modlist.url | relative_url }}">{% if modlist.emblem %}<img src="{{ modlist.emblem | relative_url }}" alt="" width="640" height="640" decoding="async">{% endif %}<span>{{ modlist.title }}</span></a>
+    <ul class="dbar__tabs" data-dbar>
+      <li><a href="{{ modlist.url | relative_url }}"{% if is_overview %} aria-current="page"{% endif %}>{{ 'Overview' | bi }}</a></li>
+      {%- for item in nav %}
+      <li><a href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% elsif cur_group and cur_group.url == item.url %} aria-current="true"{% endif %}>{{ item.title | bi }}</a></li>
       {%- endfor %}
     </ul>
-    {%- endif %}{% endfor %}
+    <details class="dbar__more">
+      <summary><span lang="en">Other lists</span><span lang="fr">Autres listes</span></summary>
+      <div class="dbar__menu">
+        {%- for m in site.modlists %}{% if m.id != modlist.id %}
+        <a href="{{ m.url | relative_url }}">{% if m.emblem %}<img src="{{ m.emblem | relative_url }}" alt="" width="640" height="640" loading="lazy" decoding="async">{% endif %}{{ m.title }}</a>
+        {%- endif %}{% endfor %}
+      </div>
+    </details>
+  </div>
+  {%- if cur_group and cur_group.children.size > 0 %}
+  <div class="wrap dbar__sub{% if step %} dbar__sub--steps{% endif %}">
+    <ol>
+      <li><a href="{{ cur_group.url | relative_url }}"{% if page.url == cur_group.url %} aria-current="page"{% endif %}>{% if step %}<span class="dbar__n">1</span>{% endif %}{% if cur_group.title contains "Install" %}<span lang="en">Start here</span><span lang="fr">Commencer ici</span>{% else %}<span lang="en">Overview</span><span lang="fr">Vue d'ensemble</span>{% endif %}</a></li>
+      {%- for c in cur_group.children %}
+      <li><a href="{{ c.url | relative_url }}"{% if page.url == c.url %} aria-current="page"{% endif %}>{% if step %}<span class="dbar__n">{{ forloop.index | plus: 1 }}</span>{% endif %}{{ c.title | bi }}</a></li>
+      {%- endfor %}
+    </ol>
+  </div>
+  {%- endif %}
+</nav>
 
-    <div class="side__others">
-      <p class="side__group" style="margin-top:0"><span lang="en">Other modlists</span><span lang="fr">Autres modlists</span></p>
-      {%- for m in site.modlists %}{% if m.id != modlist.id %}
-      <a href="{{ m.url | relative_url }}" style="--c: {{ m.accent }}"><span class="diamond is-full"></span>{{ m.title }}</a>
-      {%- endif %}{% endfor %}
-    </div>
+<div class="wrap folio{% if step %} folio--path{% endif %}{% if is_overview %} folio--over{% endif %}" style="--accent: {{ modlist.accent }}">
+  {%- unless is_overview %}
+  <aside class="folio__rail">
+    {%- if step %}
+    <nav class="path" aria-label="Installation steps" data-aria-fr="Étapes de l'installation">
+      <p class="rail__t"><span lang="en">Step</span><span lang="fr">Étape</span> <b>{{ step.i }}</b> / {{ step.n }}</p>
+      <ol>
+        {%- for s in step.items %}
+        <li class="path__st{% if s.url == page.url %} is-here{% elsif forloop.index < step.i %} is-before{% endif %}">
+          <a href="{{ s.url | relative_url }}"{% if s.url == page.url %} aria-current="step"{% endif %}><span class="path__n">{{ forloop.index }}</span><span class="path__name">{% if forloop.first %}<span lang="en">Start here</span><span lang="fr">Commencer ici</span>{% else %}{{ s.title | bi }}{% endif %}</span></a>
+          {%- if s.url == page.url %}<ul class="path__toc" data-side-toc></ul>{% endif %}
+        </li>
+        {%- endfor %}
+      </ol>
+    </nav>
+    {%- else %}
+    <nav class="dindex" aria-label="On this page" data-aria-fr="Sur cette page">
+      <p class="rail__t"><span lang="en">On this page</span><span lang="fr">Sur cette page</span></p>
+      <ul data-side-toc></ul>
+    </nav>
+    {%- endif %}
   </aside>
+  {%- endunless %}
 
   <article class="prose">
-    <button class="side-toggle" type="button" data-side-open aria-controls="doc-side" aria-expanded="false"><span class="diamond is-full" aria-hidden="true"></span><span lang="en">Documentation menu</span><span lang="fr">Menu de la documentation</span></button>
-    <header class="doc-head">
-      <p class="eyebrow">{{ modlist.title }} <span style="opacity:.5">·</span> {% if page.parent %}{{ page.parent | bi }}{% elsif is_overview %}Modlist{% else %}Documentation{% endif %}</p>
-      <h1 class="doc-title">{% if is_overview %}{{ 'Overview' | bi }}{% else %}{{ page.title | bi }}{% endif %}</h1>
-      {%- if step %}
-      <div class="steps" data-steps>
-        <span class="steps__label"><span lang="en">Step</span><span lang="fr">Étape</span> <strong>{{ step.i }}</strong> / {{ step.n }}</span>
-        <ol class="steps__bar">{% for s in step.items %}<li><a href="{{ s.url | relative_url }}"{% if s.url == page.url %} aria-current="step"{% endif %} aria-label="Step {{ forloop.index }} / {{ step.n }}: {{ s.title | escape }}" data-aria-fr="Étape {{ forloop.index }} / {{ step.n }} : {{ s.title | fr | escape }}" title="{{ s.title | escape }}" data-title-fr="{{ s.title | fr | escape }}"></a></li>{% endfor %}</ol>
-      </div>
-      {%- endif %}
-    </header>
 {{ content }}
     {%- if page.gallery and page.gallery.size > 0 %}
     <section class="shots">

@@ -321,17 +321,38 @@ const QUICK = {
 const biHtml = (en, fr) => `<span lang="en">${en}</span><span lang="fr">${fr}</span>`;
 const escHtml = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;');
 
+/* Rows of the overview's honeycomb: counts that alternate odd / even (so each row sits in the gaps of the
+   one above when centred), at most 3 a row, fewest rows, the widest row in the middle when it can be. */
+function hexRows(n) {
+  let best = null;
+  const walk = (left, rows) => {
+    if (best && rows.length >= best.length) return;
+    if (left === 0) { best = rows; return; }
+    const last = rows[rows.length - 1];
+    for (const c of [3, 2, 1]) if (c <= left && (last === undefined || c % 2 !== last % 2)) walk(left - c, [...rows, c]);
+  };
+  walk(n, []);
+  // Prefer the shape that starts smaller (2-3-2 rather than 3-2-...), it reads as a cluster
+  if (best && best.length > 1 && best[0] > best[best.length - 1]) best.reverse();
+  return best || [n];
+}
+
 function quickCards(modlist, relativeUrl) {
   const items = [...modlist.nav].sort((a, b) => (b.children.length > 0) - (a.children.length > 0));
-  const cards = items.map((item) => {
+  // Grid of 6 half-columns, each tile spans 2; a row of k tiles starts at column 4 - k (centred)
+  const pos = [];
+  hexRows(items.length).forEach((k, r) => { for (let j = 0; j < k; j++) pos.push([r + 1, 4 - k + 2 * j]); });
+  const cards = items.map((item, idx) => {
     const q = QUICK[item.title];
     const [icon, desc] = q || ['star', () => ['', '']];
     const [en, fr] = desc(item.children.length + 1, modlist);
     const title = FR[item.title] && FR[item.title] !== item.title ? biHtml(escHtml(item.title), escHtml(FR[item.title])) : escHtml(item.title);
-    return `<a class="quick__card" href="${relativeUrl(item.url)}" data-icon="${icon}"><span class="quick__ico" aria-hidden="true"></span>` +
+    const [r, c] = pos[idx];
+    return `<a class="quick__card" href="${relativeUrl(item.url)}" data-icon="${icon}" style="--r:${r};--c:${c}"><span class="quick__ico" aria-hidden="true"></span>` +
       `<span class="quick__title">${title}</span>${en ? `<span class="quick__desc">${biHtml(en, fr)}</span>` : ''}<span class="quick__go" aria-hidden="true">→</span></a>`;
   });
-  return `<nav class="quick" aria-label="Quick links" data-aria-fr="Accès rapides">${cards.join('')}</nav>`;
+  const rows = hexRows(items.length).length;
+  return `<nav class="quick quick--hex" aria-label="Quick links" data-aria-fr="Accès rapides" style="--rows:${rows}">${cards.join('')}</nav>`;
 }
 
 /* ---- Skill trees (data from scripts/build-perk-trees.py, e.g. _data/perk_trees_wunduniik.json) ----
