@@ -56,7 +56,7 @@ async function createForge(canvas, base, emblems) {
   const FS = `#version 300 es
   precision highp float;
   in vec3 vW; in vec3 vN; in vec2 vT; in vec4 vK;
-  uniform sampler2D uCol, uNor, uMR, uEmb; uniform vec3 uEye, uHeatP; uniform float uHeat, uKind, uHot, uLit, uFront, uAlpha, uGhost;
+  uniform sampler2D uCol, uNor, uMR, uEmb; uniform vec3 uEye, uHeatP; uniform float uHeat, uKind, uHot, uLit, uFront, uAlpha, uGhost, uDim;
   out vec4 o;
   vec3 lin(vec3 c) { return pow(c, vec3(2.2)); }
   vec3 perturb(vec3 N, vec3 p, vec2 uv) {
@@ -90,8 +90,9 @@ async function createForge(canvas, base, emblems) {
       alb = mix(vec3(.2, .12, .04), vec3(1., .74, .34), raised + (1. - top) * .45);   // dark sunk field, polished raised emblem
       rough = mix(.7, .16, raised); metal = mix(.6, 1., raised);
       emit = mix(vec3(.9, .18, .02), vec3(2.4, 1.3, .45), h) * uHot * uHot;   // still glowing from the forge
-      // uGhost: the seal behind The Forge's copy keeps the raised emblem and the rim, the flat field turns clear
-      ga = mix(1., max(max(raised, h * top * .6), (1. - top) * .55) + .08, uGhost);
+      // uGhost: the seal behind The Forge's copy keeps only the raised emblem, solid but darkened (uDim) so the
+      // copy over it stays readable; the flat field and the rim turn clear, so the gaps show what is behind
+      ga = mix(1., smoothstep(.2, .6, raised), uGhost);
     }
     rough = clamp(rough, .2, 1.);
     vec3 V = normalize(uEye - vW);
@@ -114,7 +115,7 @@ async function createForge(canvas, base, emblems) {
     c += emit;
     c = c * (2.51 * c + .03) / (c * (2.43 * c + .59) + .14);
     float a = uAlpha * ga;
-    o = vec4(pow(clamp(c, 0., 1.), vec3(1. / 2.2)) * a, a);   // premultiplied
+    o = vec4(pow(clamp(c, 0., 1.), vec3(1. / 2.2)) * mix(1., uDim, uGhost) * a, a);   // premultiplied
   }`;
   // Start-up never blocks the page for long: shaders compile in the background where the browser can
   // (KHR_parallel_shader_compile), and every step below gives the main thread back before the next one.
@@ -148,7 +149,7 @@ async function createForge(canvas, base, emblems) {
   gl.enableVertexAttribArray(1); gl.vertexAttribPointer(1, 4, gl.FLOAT, false, 28, 12);
   gl.bindVertexArray(null);
   let sparks = [];
-  const U = {}; for (const n of ['uM', 'uVP', 'uC', 'uH', 'uCol', 'uNor', 'uMR', 'uEmb', 'uEye', 'uHeatP', 'uHeat', 'uKind', 'uHot', 'uLit', 'uFront', 'uAlpha', 'uGhost']) U[n] = gl.getUniformLocation(prog, n);
+  const U = {}; for (const n of ['uM', 'uVP', 'uC', 'uH', 'uCol', 'uNor', 'uMR', 'uEmb', 'uEye', 'uHeatP', 'uHeat', 'uKind', 'uHot', 'uLit', 'uFront', 'uAlpha', 'uGhost', 'uDim']) U[n] = gl.getUniformLocation(prog, n);
 
   // ---------- loading ----------
   const texParams = () => {
@@ -271,13 +272,12 @@ async function createForge(canvas, base, emblems) {
     // at rest the anvil sinks a little and turns half transparent under the standing medallion;
     // the strike brings it back up, solid and lit (p follows the light)
     const p = (lit - REST_LIT) / (1 - REST_LIT);
-    // the medallion fades to its rest opacity as it stands up (the seal of The Forge section is faint)
-    const parts = [[anvil, M.mul(M.t(.12 * (1 - p), -SINK * (1 - p), 0), M.mul(M.s(mix(REST_SCALE, 1, p)), anvilM)), mix(restAnvil, 1, p)], [coin, coinM(), mix(1, restCoin, rise)]];
+    const parts = [[anvil, M.mul(M.t(.12 * (1 - p), -SINK * (1 - p), 0), M.mul(M.s(mix(REST_SCALE, 1, p)), anvilM)), mix(restAnvil, 1, p)], [coin, coinM(), 1]];
     if (out < .999) parts.splice(1, 0, [hammer, hammerM(), 1]);
     gl.enable(gl.BLEND); gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA);
     for (const [m, mat, alpha] of parts) {
       if (alpha < .005) continue;                     // an invisible part must not hide others in the depth buffer
-      gl.uniform1f(U.uAlpha, alpha); gl.uniform1f(U.uGhost, m === coin && restCoin < 1 ? rise : 0);
+      gl.uniform1f(U.uAlpha, alpha); gl.uniform1f(U.uGhost, m === coin && restCoin < 1 ? rise : 0); gl.uniform1f(U.uDim, restCoin);
       gl.uniformMatrix4fv(U.uM, false, mat); gl.uniform3fv(U.uC, m.c); gl.uniform3fv(U.uH, m.h); gl.uniform1f(U.uKind, m.kind);
       [[m.col, 'uCol'], [m.nor, 'uNor'], [m.mr, 'uMR'], [embTex[cur], 'uEmb']].forEach(([t, n], i) => { gl.activeTexture(gl.TEXTURE0 + i); gl.bindTexture(gl.TEXTURE_2D, t || null); gl.uniform1i(U[n], i); });
       gl.bindVertexArray(m.vao); gl.drawElements(gl.TRIANGLES, m.I, m.it, 0);
@@ -366,7 +366,8 @@ async function createForge(canvas, base, emblems) {
   (async () => { for (let i = 0; i < emblems.length; i++) { await pause(); await emblem(i); } performance.mark('forge:emblems'); })();
   ready = true; performance.mark('forge:ready');
   // Put the standing medallion's centre under screen point (x, y) in CSS px, size px across, on the plane z = .1;
-  // o.coin / o.anvil: their opacity at rest (the seal of The Forge section: faint medallion, no anvil)
+  // o.coin: brightness of the medallion at rest (below 1: the seal of The Forge section, emblem only, darkened);
+  // o.anvil: opacity of the anvil at rest (none under the seal)
   function setRest(x, y, size, o = {}) {
     restCoin = o.coin ?? 1; restAnvil = o.anvil ?? REST_ALPHA;
     const inv = M.inv(viewProj()), w = canvas.clientWidth, h = canvas.clientHeight;
@@ -570,7 +571,7 @@ if (root) {
     // the standing medallion takes the place and size of the stand-in emblem (.forge__mark, positioned by the
     // CSS for desktop and phones), so the swap from the stand-in to the 3D scene does not move it either
     let hit = null;
-    const SEAL = .3;                                  // opacity of the seal behind The Forge's copy
+    const SEAL = .32;                                 // brightness of the seal behind The Forge's copy (solid, darkened)
     const rest = () => {
       if (!hit || !mark) return;
       const r = mark.getBoundingClientRect(), p = pin.getBoundingClientRect();   // the mark is hidden, still laid out

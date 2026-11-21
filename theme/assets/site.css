@@ -1587,7 +1587,6 @@ html[data-lang="en"] .sk-alt { display: none; }
 .forge__pin { --seal-x: 50%; --seal-y: 47%; }
 .forge__pin.is-seal .forge__slides { left: 50%; width: min(780px, 88vw); transform: translate(-50%, -50%); text-align: center; }
 .forge__pin.is-seal .forge__kicker, .forge__pin.is-seal .forge__stats, .forge__pin.is-seal .actions { justify-content: center; }
-.forge__pin.is-seal .forge__desc { margin-left: auto; margin-right: auto; }
 .forge__pin.is-seal .forge__title { font-size: clamp(48px, 6.4vw, 104px); }
 .forge__pin.is-seal .forge__mark { right: auto; left: var(--seal-x); top: var(--seal-y); width: min(78svh, 64vw); transform: translate(-50%, -50%); opacity: .2; }   /* hidden by .is-3d's visibility */
 /* dimming: the usual one darkens the left half for the copy; the seal's darkens the middle */
@@ -1609,16 +1608,16 @@ html[data-lang="en"] .sk-alt { display: none; }
 .forge__pin.is-seal .forge__pulse i:nth-child(3) { animation-delay: 1s; }
 .forge__pin.is-seal .forge__pulse i:nth-child(4) { animation-delay: 1.5s; }
 @keyframes forge-pulse { 0%, 100% { opacity: 0; } 14% { opacity: .6; } 34% { opacity: 0; } }
-/* letters over the seal: a brass edge on each letter (stroke painted under the fill, so only its outer half
+/* the title over the seal: a brass edge on each letter (stroke painted under the fill, so only its outer half
    shows and the letters keep their weight), then a dark halo that parts the edge from the brass emblem */
-.forge__pin.is-seal .forge__title, .forge__pin.is-seal .forge__desc {
+.forge__pin.is-seal .forge__title {
   paint-order: stroke fill; -webkit-text-stroke: 2px rgba(var(--gold-rgb), .9);
   text-shadow: 0 0 2px rgba(var(--paper), .95), 0 0 6px rgba(var(--paper), .9), 0 0 14px rgba(var(--paper), .7); }
 .forge__pin.is-seal .forge__title { -webkit-text-stroke-width: 3px; }
-.forge__pin.is-seal .forge__desc { -webkit-text-stroke: 1.4px rgba(var(--gold-rgb), .7); }
 .forge__pin.is-seal .forge__kicker { text-shadow: 0 0 2px rgba(var(--paper), .95), 0 0 6px rgba(var(--paper), .9), 0 0 14px rgba(var(--paper), .7); }
-/* the untyped part of the line is laid out transparent: no edge or halo on it */
-.forge__pin.is-seal .forge__desc .tw-rest { -webkit-text-stroke: 0; text-shadow: none; }
+/* outline buttons on the forge: the same dark plate as the numbers, so they read over any picture or the seal */
+.forge .btn:not(.btn--solid) { background: rgba(var(--paper), .55); border-color: rgba(var(--ink), .14); }
+.forge .btn:not(.btn--solid):hover { background: rgba(var(--paper), .75); border-color: rgba(var(--gold-rgb), .75); }
 
 @media (max-width: 860px), (max-aspect-ratio: 1/1) {
   .forge__slides { left: 20px; right: 20px; width: auto; top: auto; bottom: max(28px, 5svh); transform: none; }
