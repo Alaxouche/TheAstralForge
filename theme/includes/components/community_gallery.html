@@ -11,7 +11,7 @@
   {%- for item in cg_items %}
   <figure class="masonry__item" data-modlist="{{ item.modlist }}">
     {%- assign iml = site.modlists | where: "id", item.modlist | first %}
-    <button type="button" data-zoom="{{ item.image | relative_url }}" data-lb-author="{{ item.author | escape }}" data-lb-list="{% if iml %}{{ iml.title | escape }}{% endif %}" data-lb-link="{{ item.source | escape }}"><img src="{{ item.image | thumb: 960 }}" alt="{{ item.title }}" loading="lazy" decoding="async"></button>
+    <button type="button" data-zoom="{{ item.image | relative_url }}" data-lb-author="{{ item.author | escape }}" data-lb-list="{% if iml %}{{ iml.title | escape }}{% endif %}" data-lb-link="{{ item.source | escape }}"><img src="{{ item.image | thumb: 960 }}" alt="{{ item.title }}" {% if forloop.first %}fetchpriority="high"{% else %}loading="lazy"{% endif %} decoding="async"></button>
     <figcaption>
       <span>{{ item.author }}</span>
       {%- if item.source and item.source != "" %}<a href="{{ item.source }}" target="_blank" rel="noopener noreferrer">Discord ↗</a>{% endif %}
