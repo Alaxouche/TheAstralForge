@@ -1873,7 +1873,9 @@ html[data-lang="en"] .sk-alt { display: none; }
 .dbar__n { font: 600 15px/1 var(--serif); color: var(--gold); }
 @media (min-width: 1100px) { .dbar__sub--steps { display: none; } }   /* the forge path shows the steps */
 @media (max-width: 900px) {
-  .dbar__list span, .dbar__more { display: none; }
+  .dbar__more { display: none; }
+  /* the name stays for screen readers: it is the link's only text */
+  .dbar__list span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
   .dbar__in { gap: 6px; }
   .dbar__tabs a { padding: 0 11px; font-size: 15px; }
 }

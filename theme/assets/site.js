@@ -55,8 +55,11 @@
     // Screen readers keep the real title while the runes play.
     el.setAttribute('aria-label', final);
     clearTimeout(el._st); cancelAnimationFrame(el._sr);
+    el.style.height = '';
     el._st = setTimeout(function () {
       var start = performance.now(), dur = 900;
+      // Runes are wider than letters: hold the height so a wrapped line can't move the page (CLS)
+      if (getComputedStyle(el).display !== 'inline') el.style.height = el.offsetHeight + 'px';
       (function frame(t) {
         var k = Math.min(1, (t - start) / dur), out = '';
         for (var i = 0; i < final.length; i++) {
@@ -65,6 +68,7 @@
         }
         el.textContent = k < 1 ? out : final;
         if (k < 1) el._sr = requestAnimationFrame(frame);
+        else el.style.height = '';
       })(start);
     }, delay || 0);
   }

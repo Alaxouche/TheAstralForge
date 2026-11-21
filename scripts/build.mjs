@@ -479,7 +479,7 @@ function changelogStatic(content) {
     for (const [k, , sign] of CL_KINDS) if (counts[k]) meta += `<span class="cl-count cl-count--${k}">${k === 'fix' ? counts[k] + ' fix' : k === 'upd' ? counts[k] + ' ' + biHtml('upd', 'maj') : sign + counts[k]}</span>`;
     const summary = `<summary><span class="cl-v">${escHtml(ver)}</span>${date ? `<span class="cl-date">${escHtml(date)}</span>` : ''}<span class="cl-meta">${meta}</span></summary>`;
     const tools = i === 0
-      ? '<div class="cl-tools" data-cl-tools><input class="input" type="search" data-cl-q placeholder="Find a mod in the changelog…" data-ph-fr="Chercher un mod dans le changelog…" aria-label="Find a mod in the changelog" data-aria-fr="Chercher un mod dans le changelog">' +
+      ? `<h2 class="sr-only">${biHtml('Versions', 'Versions')}</h2>` + '<div class="cl-tools" data-cl-tools><input class="input" type="search" data-cl-q placeholder="Find a mod in the changelog…" data-ph-fr="Chercher un mod dans le changelog…" aria-label="Find a mod in the changelog" data-aria-fr="Chercher un mod dans le changelog">' +
         `<span class="cl-found" data-cl-found role="status"></span><button class="btn btn--sm" type="button" data-cl-all aria-expanded="false">${biHtml('Expand all', 'Tout déplier')}</button></div>\n`
       : '';
     return `${tools}<details${i++ === 0 ? ' open' : ''}>${summary}${body}</details>`;
