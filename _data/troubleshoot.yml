@@ -5,6 +5,7 @@
 #          id: { a: {en, fr}, extra: [ {only: [...], en, fr} ], links: [...] }    an answer
 # only:    list ids (wunduniik, krentoraan, ghost-of-the-grid, no-mans-sky-explorer, extrasolar-containment-protocol)
 #          or games (skyrim, cyberpunk, nms, starfield). Without it, the entry is for every list.
+# not:     the reverse of only: the entry is for every list except those. `a` is optional when `extra` covers every list.
 # links:   {page: <page title in the list's sidebar, or "self" for this page>, h: {en, fr} heading of the section
 #          (a list of spellings is fine; {list} is replaced by the list name), label: {en, fr} (optional), only: [...]}
 #          The build drops a link whose page does not exist for that list, and the anchor when the heading is missing.
@@ -18,7 +19,8 @@ start:
     - { l: { en: "It runs, but slowly or with stutter", fr: "Il tourne, mais lentement ou par saccades" }, go: a_perf }
     - { l: { en: "The game looks vanilla, mods do not seem to load", fr: "Le jeu a l'air vanilla, les mods ne semblent pas chargés" }, go: a_mods }
     - { l: { en: "A quest, a character or an object is broken", fr: "Une quête, un personnage ou un objet est cassé" }, go: a_ingame }
-    - { l: { en: "It started after I updated the list", fr: "C'est arrivé après une mise à jour de la liste" }, go: upd }
+    - { l: { en: "It started after I updated the list", fr: "C'est arrivé après une mise à jour de la liste" }, go: upd, not: [krentoraan] }
+    - { l: { en: "It started after I updated the list", fr: "C'est arrivé après une mise à jour de la liste" }, go: a_upd_other, only: [krentoraan] }
 
 wj:
   q: { en: "What does Wabbajack report?", fr: "Que signale Wabbajack ?" }
@@ -57,7 +59,7 @@ a_wj_game:
       en: "For Starfield: install the game and both expansions, Shattered Space and Terran Armada, on the version the list needs, and launch it once from Steam up to the main menu."
       fr: "Pour Starfield : installez le jeu et ses deux extensions, Shattered Space et Terran Armada, dans la version demandée par la liste, et lancez-le une fois depuis Steam jusqu'au menu principal."
   links:
-    - { page: "System Requirements" }
+    - { page: "Installation Guide", label: { en: "Required game version", fr: "Version du jeu requise" } }
     - { page: "Installation", h: { en: ["Necessary Tweaks", "Game Version and Updates"], fr: ["Modifications Nécessaires", "Version du Jeu et Mises à Jour"] } }
     - { page: "Installation", h: { en: "Preparing Starfield", fr: "Préparer Starfield" }, only: [starfield] }
     - { page: "Wabbajack Installation", h: { en: "Problems With Installation", fr: "Problèmes d'Installation" }, only: [skyrim] }
@@ -124,7 +126,7 @@ a_launch_quiet:
       fr: "Starfield doit rester dans la version demandée par la liste : l'extenseur de script (SFSE) est conçu pour cette version précise."
   links:
     - { page: "System Requirements", h: { en: "Exclusions and AntiVirus", fr: "Exclusions et Antivirus" } }
-    - { page: "System Requirements" , label: { en: "Required game version", fr: "Version du jeu requise" } }
+    - { page: "Installation Guide", label: { en: "Required game version", fr: "Version du jeu requise" } }
     - { page: "Installation", h: { en: "Game Version and Updates", fr: "Version du Jeu et Mises à Jour" }, only: [cyberpunk] }
     - { page: "Using The List", h: { en: "When The Game Updates", fr: "Quand le Jeu se Met à Jour" }, only: [nms] }
     - { page: "Post Installation", h: { en: "SFSE (Starfield Script Extender)", fr: "SFSE (Starfield Script Extender)" }, only: [starfield] }
@@ -149,8 +151,8 @@ a_crash_intro:
     fr: "L'ouverture scriptée est le moment le moins stable avec autant de mods."
   extra:
     - only: [wunduniik]
-      en: "The vanilla Helgen intro is not supported: use the alternate start. To begin the main quest later, rent a room at Helgen's inn and sleep there twice."
-      fr: "L'intro vanilla d'Helgen n'est pas prise en charge : utilisez le départ alternatif. Pour lancer la quête principale plus tard, louez une chambre à l'auberge d'Helgen et dormez-y deux fois."
+      en: "The vanilla Helgen intro is not supported: use the alternate start. To begin the main quest later, rent a room at Helgen's inn with the \"Start Intro\" dialog option: the first night is normal, and the intro begins the next time you sleep there."
+      fr: "L'intro vanilla d'Helgen n'est pas prise en charge : utilisez le départ alternatif. Pour lancer la quête principale plus tard, louez une chambre à l'auberge d'Helgen avec l'option de dialogue « Start Intro » : la première nuit est normale, et l'intro commence la fois suivante où vous y dormez."
     - only: [krentoraan]
       en: "Try the intro again, or restart the game once."
       fr: "Recommencez l'intro, ou relancez le jeu une fois."
@@ -161,8 +163,8 @@ a_crash_intro:
       en: "Start a new game: loading a save made without the list is not supported."
       fr: "Commencez une nouvelle partie : charger une sauvegarde faite sans la liste n'est pas pris en charge."
     - only: [nms]
-      en: "If it crashes every time, check the game version and read the crash section below."
-      fr: "Si le jeu plante à chaque fois, vérifiez la version du jeu et lisez la section sur les plantages ci-dessous."
+      en: "If it crashes every time, check the game version, then go through the checks in the Crash Logs section below."
+      fr: "Si le jeu plante à chaque fois, vérifiez la version du jeu, puis suivez les vérifications de la section Journaux de crash ci-dessous."
   links:
     - { page: "Known Issues" }
     - { page: "Using The List", h: { en: "New Game vs. Existing Save", fr: "Nouvelle Partie vs. Sauvegarde Existante" }, only: [starfield] }
@@ -170,30 +172,38 @@ a_crash_intro:
 
 a_crash_load:
   a:
-    en: "Crashes while loading are most often a memory problem. Check that the page file is set as the system requirements page says, update your graphics driver, and install the applications the list needs. If it keeps crashing at the same place, read the crash log."
-    fr: "Les plantages au chargement viennent le plus souvent de la mémoire. Vérifiez que le fichier d'échange est réglé comme l'indique la configuration requise, mettez à jour le pilote graphique et installez les applications nécessaires à la liste. Si le jeu plante toujours au même endroit, lisez le journal de crash."
+    en: "Crashes while loading are most often a memory problem. Check that the page file is set as the system requirements page says, update your graphics driver, and install the applications the list needs."
+    fr: "Les plantages au chargement viennent le plus souvent de la mémoire. Vérifiez que le fichier d'échange est réglé comme l'indique la configuration requise, mettez à jour le pilote graphique et installez les applications nécessaires à la liste."
+  extra:
+    - not: [nms]
+      en: "If it keeps crashing at the same place, read the crash log."
+      fr: "Si le jeu plante toujours au même endroit, lisez le journal de crash."
+    - only: [nms]
+      en: "If it keeps crashing at the same place, go through the checks in the Crash Logs section below: the list has no crash logger for No Man's Sky."
+      fr: "Si le jeu plante toujours au même endroit, suivez les vérifications de la section Journaux de crash ci-dessous : la liste n'a pas d'enregistreur de crash pour No Man's Sky."
   links:
     - { page: "System Requirements", h: { en: "PageFile Configuration", fr: ["Configuration du Fichier d'Échange", "Configuration du Fichier d'Échange (PageFile)"] } }
-    - { page: "self", h: { en: "Read Your Crash Log", fr: "Lire votre journal de crash" } }
+    - { page: "self", h: { en: "Read Your Crash Log", fr: "Lire votre journal de crash" }, not: [nms] }
+    - { page: "self", h: { en: "Crash Logs", fr: "Journaux de crash" }, only: [nms] }
     - { page: "Known Issues" }
 
 a_crash_log:
-  a:
-    en: "Random crashes need the crash log: find it with the steps below and paste it in the reader. Then share the log file on Discord with the list version and what you were doing."
-    fr: "Les plantages au hasard demandent le journal de crash : trouvez-le avec les étapes ci-dessous et collez-le dans le lecteur. Partagez ensuite le fichier sur Discord avec la version de la liste et ce que vous faisiez."
   extra:
+    - not: [nms]
+      en: "Random crashes need the crash log: find it with the steps below and paste it in the reader. Then share the log file on Discord with the list version and what you were doing."
+      fr: "Les plantages au hasard demandent le journal de crash : trouvez-le avec les étapes ci-dessous et collez-le dans le lecteur. Partagez ensuite le fichier sur Discord avec la version de la liste et ce que vous faisiez."
     - only: [nms]
-      en: "The list has no crash logger for No Man's Sky. Check the game version first: most crashes come right after a game patch."
-      fr: "La liste n'a pas d'enregistreur de crash pour No Man's Sky. Vérifiez d'abord la version du jeu : la plupart des plantages arrivent juste après un patch."
+      en: "The list has no crash logger for No Man's Sky. Check the game version first: most crashes come right after a game patch. Then go through the checks below and report the crash on Discord with the list version and what you were doing."
+      fr: "La liste n'a pas d'enregistreur de crash pour No Man's Sky. Vérifiez d'abord la version du jeu : la plupart des plantages arrivent juste après un patch. Suivez ensuite les vérifications ci-dessous et signalez le plantage sur Discord avec la version de la liste et ce que vous faisiez."
   links:
     - { page: "self", h: { en: "Crash Logs", fr: "Journaux de crash" } }
     - { page: "Known Issues" }
 
 a_perf:
-  a:
-    en: "Start with a lighter profile: the list ships profiles for different hardware, and you switch with the drop-down at the top left of Mod Organizer 2. Then lower the settings given in the guide."
-    fr: "Commencez par un profil plus léger : la liste fournit des profils pour différentes machines, et on en change avec le menu en haut à gauche de Mod Organizer 2. Baissez ensuite les réglages indiqués dans le guide."
   extra:
+    - not: [nms]
+      en: "Start with a lighter profile: the list ships profiles for different hardware, and you switch with the drop-down at the top left of Mod Organizer 2. Then lower the settings given in the guide."
+      fr: "Commencez par un profil plus léger : la liste fournit des profils pour différentes machines, et on en change avec le menu en haut à gauche de Mod Organizer 2. Baissez ensuite les réglages indiqués dans le guide."
     - only: [krentoraan]
       en: "Krentoraan's Profile Assistant picks a profile from your VRAM and screen resolution at the first launch of Mod Organizer; you can still switch by hand."
       fr: "L'assistant de profil de Krentoraan choisit un profil d'après votre VRAM et votre résolution au premier lancement de Mod Organizer ; vous pouvez toujours en changer à la main."
@@ -201,9 +211,9 @@ a_perf:
       en: "No Man's Sky - Explorer has a single profile: lower the in-game graphics settings."
       fr: "No Man's Sky - Explorer n'a qu'un profil : baissez les réglages graphiques du jeu."
   links:
-    - { page: "Post Installation", h: { en: "Increasing {list} Performance", fr: "Améliorer les Performances de {list}" } }
-    - { page: "Using The List", h: { en: "Switching Profiles", fr: "Changer de Profil" } }
-    - { page: "Post Installation", h: { en: "Profiles", fr: "Profils" } }
+    - { page: "Post Installation", h: { en: "Increasing {list} Performance", fr: "Améliorer les Performances de {list}" }, only: [skyrim] }
+    - { page: "Using The List", h: { en: "Switching Profiles", fr: "Changer de Profil" }, only: [cyberpunk] }
+    - { page: "Post Installation", h: { en: "Profiles", fr: "Profils" }, only: [starfield] }
     - { page: "System Requirements" }
 
 a_mods:
@@ -222,9 +232,13 @@ a_mods:
     - { page: "Using The List", h: { en: "If Mods Do Not Load", fr: "Si les Mods ne se Chargent Pas" }, only: [nms] }
 
 a_ingame:
-  a:
-    en: "Look at the known issues first: most problems we know about are there, with a workaround. If yours is not, report it on Discord with the steps to make it happen again."
-    fr: "Regardez d'abord les problèmes connus : la plupart de ceux que nous connaissons y sont, avec une solution. Si le vôtre n'y est pas, signalez-le sur Discord avec les étapes pour le reproduire."
+  extra:
+    - not: [krentoraan, nms]
+      en: "Look at the known issues first: most problems we know about are there, with a workaround. If yours is not, report it on Discord with the steps to make it happen again."
+      fr: "Regardez d'abord les problèmes connus : la plupart de ceux que nous connaissons y sont, avec une solution. Si le vôtre n'y est pas, signalez-le sur Discord avec les étapes pour le reproduire."
+    - only: [krentoraan, nms]
+      en: "This list has no known issues page yet. Report the problem on Discord or with the bug form, with the steps to make it happen again: someone may already know a workaround."
+      fr: "Cette liste n'a pas encore de page de problèmes connus. Signalez le problème sur Discord ou avec le formulaire de bug, avec les étapes pour le reproduire : quelqu'un connaît peut-être déjà une solution."
   links:
     - { page: "Known Issues" }
 
@@ -246,6 +260,10 @@ a_upd_other:
   a:
     en: "Check that Wabbajack finished without errors and that you picked the same folders as before. Mods you added yourself are deleted by the update unless their folder name starts with [NoDelete]. If the game updated at the same time, check the required game version."
     fr: "Vérifiez que Wabbajack a terminé sans erreur et que vous avez choisi les mêmes dossiers qu'avant. Les mods ajoutés par vous sont supprimés par la mise à jour, sauf si le nom de leur dossier commence par [NoDelete]. Si le jeu s'est mis à jour en même temps, vérifiez la version du jeu requise."
+  extra:
+    - only: [krentoraan]
+      en: "If you continued a save from the previous version and things break, ask on Discord whether the new version needs a new game."
+      fr: "Si vous avez continué une partie de la version précédente et que des choses cassent, demandez sur Discord si la nouvelle version demande une nouvelle partie."
   links:
     - { page: "Updating the List" }
-    - { page: "System Requirements" }
+    - { page: "Installation Guide", label: { en: "Required game version", fr: "Version du jeu requise" } }

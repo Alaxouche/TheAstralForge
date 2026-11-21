@@ -1,70 +1,81 @@
+# Wunduniik FAQ. Each entry: question, answer (Markdown), question_fr, answer_fr, tags, tags_fr.
 - id: compass-undiscovered
   question: "My compass doesn't show undiscovered locations!"
   answer: "Open Compass Navigation Overhaul and set `bShowUndiscoveredLocationMarkers=1`."
-  tags:
-    - Gameplay
-    - UI
+  question_fr: "Ma boussole n'affiche pas les lieux non découverts !"
+  answer_fr: "Ouvrez Compass Navigation Overhaul et réglez `bShowUndiscoveredLocationMarkers=1`."
+  tags: [Gameplay, UI]
+  tags_fr: [Gameplay, Interface]
 - id: main-quest-start
   question: "How do I start the main quest in this list?"
   answer: |
     Head to Helgen's Inn and talk to the innkeeper. Choose the extra dialog option:
-    
+
     - "I'd like to rent a room. (Start Intro (10 gold))"
-    
+
     The first sleep is normal; the next time you sleep there, the intro will begin.
-  tags:
-    - Quests
-    - Gameplay
+  question_fr: "Comment lancer la quête principale dans cette liste ?"
+  answer_fr: |
+    Allez à l'auberge d'Helgen et parlez à l'aubergiste. Choisissez l'option de dialogue en plus :
+
+    - « I'd like to rent a room. (Start Intro (10 gold)) »
+
+    La première nuit est normale ; la fois suivante où vous dormez là, l'intro commence.
+  tags: [Quests, Gameplay]
+  tags_fr: [Quêtes, Gameplay]
 - id: keep-load-order
   question: "When I exit the game, a popup asks to keep load order changes. What should I do?"
   answer: "Click **No**. Letting the game sort plugins can break the load order."
-  tags:
-    - Mod Organizer
-    - Load Order
+  question_fr: "En quittant le jeu, une fenêtre demande de garder les changements d'ordre de chargement. Que faire ?"
+  answer_fr: "Cliquez sur **Non**. Laisser le jeu trier les plugins peut casser l'ordre de chargement."
+  tags: [Mod Organizer, Load Order]
+  tags_fr: [Mod Organizer, Ordre de chargement]
 - id: dismount-horse
   question: "How do I dismount my horse?"
   answer: "Hold **E**."
-  tags:
-    - Gameplay
+  question_fr: "Comment descendre de mon cheval ?"
+  answer_fr: "Maintenez **E**."
+  tags: [Gameplay]
+  tags_fr: [Gameplay]
 - id: target-lock
   question: "How do I use target lock?"
   answer: "Target lock comes from True Directional Movement. Change the hotkey in the TDM MCM."
-  tags:
-    - Gameplay
-    - Controls
+  question_fr: "Comment utiliser le verrouillage de cible ?"
+  answer_fr: "Le verrouillage de cible vient de True Directional Movement. Changez la touche dans le MCM de TDM."
+  tags: [Gameplay, Controls]
+  tags_fr: [Gameplay, Commandes]
 - id: purple-map
   question: "My map is all purple!"
   answer: "You have mods loaded under your map plugins. Move any additional ESPs above your map ESPs."
-  tags:
-    - Troubleshooting
-    - Load Order
+  question_fr: "Ma carte est toute violette !"
+  answer_fr: "Des mods sont chargés sous vos plugins de carte. Placez les ESP que vous avez ajoutés au-dessus des ESP de carte."
+  tags: [Troubleshooting, Load Order]
+  tags_fr: [Dépannage, Ordre de chargement]
 - id: update-modlist
   question: "How do I update my Wunduniik modlist?"
-  answer: |
-    Updating is similar to a first install:
-    
-    - Keep your existing download folder to reuse unchanged files.
-    - Download the new Wabbajack file and extract it.
-    - Open Wabbajack, select the `Wunduniik.wabbajack` file, and choose **Overwrite location**.
-    - Click **Start**.
-    
-    Note: Mods you added manually will be removed unless you rename them with the `[NoDelete]` prefix.
-  tags:
-    - Installation
-    - Updates
+  answer: "Follow [Updating the List](/wunduniik/installation-guide/updating/): what to back up, how to run the update in Wabbajack, and what the update keeps (saves, downloads, `[NoDelete]` mods)."
+  question_fr: "Comment mettre à jour ma modlist Wunduniik ?"
+  answer_fr: "Suivez [Mettre à jour la liste](/wunduniik/installation-guide/updating/) : quoi sauvegarder, comment lancer la mise à jour dans Wabbajack, et ce que la mise à jour garde (sauvegardes, téléchargements, mods `[NoDelete]`)."
+  tags: [Installation, Updates]
+  tags_fr: [Installation, Mises à jour]
 - id: nsfw-options
   question: "How do I activate the NSFW options?"
   answer: "Wunduniik no longer includes NSFW. There is an optional Bodyslide folder with nude bodies in the optional mods separator."
-  tags:
-    - Optional Mods
+  question_fr: "Comment activer les options NSFW ?"
+  answer_fr: "Wunduniik n'inclut plus de NSFW. Un dossier Bodyslide optionnel avec des corps nus se trouve dans le séparateur des mods optionnels."
+  tags: [Optional Mods]
+  tags_fr: [Mods optionnels]
 - id: widescreen-support
   question: "How do I add widescreen support?"
   answer: "Widescreen support is automatic. The mod manager detects your ratio and enables it for you."
-  tags:
-    - Display
+  question_fr: "Comment activer le support des écrans larges ?"
+  answer_fr: "C'est automatique. Le gestionnaire de mods détecte votre format d'écran et l'active pour vous."
+  tags: [Display]
+  tags_fr: [Affichage]
 - id: change-preset
   question: "I don't like the current character preset. How do I change it?"
   answer: "Press **O** to open Obody, pick a preset from the list, and it will swap your body morph."
-  tags:
-    - Gameplay
-    - Character
+  question_fr: "Le preset de personnage actuel ne me plaît pas. Comment le changer ?"
+  answer_fr: "Appuyez sur **O** pour ouvrir Obody, choisissez un preset dans la liste, et il change la morphologie du corps."
+  tags: [Gameplay, Character]
+  tags_fr: [Gameplay, Personnage]

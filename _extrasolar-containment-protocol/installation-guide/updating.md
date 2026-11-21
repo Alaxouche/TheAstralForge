@@ -19,7 +19,7 @@ A new version of Extrasolar Containment Protocol installs over the old one, in t
 2. **Back up your saves.** Starfield keeps its saves outside the list folder, in `Documents\My Games\Starfield\Saves`. The update does not touch them; copy that folder anyway before you update.
 3. **Protect the mods you added.** The update deletes every file of the list folder that is not part of the list. Rename the folder of each mod you added in Mod Organizer 2 so that it starts with `[NoDelete]`, such as `[NoDelete] My Mod`: Wabbajack keeps those.
 4. **Copy your own order.** The profile files (mod order, plugin order) are replaced by the list's. If you changed `modlist.txt` or `loadorder.txt` in your profile folder, copy them outside the list folder.
-5. **Check the game version.** Each list version is made for a given version of Starfield. If the new version needs a newer game version, update the game first; otherwise keep it where it is. The [system requirements]({{ '/extrasolar-containment-protocol/installation-guide/system-requirements/' | relative_url }}) page gives the version the list needs.
+5. **Check the game version.** Each list version is made for a given version of Starfield. If the new version needs a newer game version, update the game first; otherwise keep it where it is. The [first page of the installation guide]({{ '/extrasolar-containment-protocol/installation-guide/' | relative_url }}) gives the game version each list version needs.
 
 ## Updating
 
@@ -33,7 +33,7 @@ A new version of Extrasolar Containment Protocol installs over the old one, in t
 
 | Kept | Replaced or deleted |
 |---|---|
-| The `saves` folders inside `profiles` | The list's mods, by their new versions |
+| Your saves: they live outside the list folder | The list's mods, by their new versions |
 | The downloads folder | Mods you added, unless their name starts with `[NoDelete]` |
 | Folders and files whose name starts with `[NoDelete]` | Everything in the `overwrite` folder |
 | The `.wabbajack` file | The profile files: mod order and plugin order |
@@ -57,7 +57,7 @@ Une nouvelle version de Extrasolar Containment Protocol s'installe par-dessus l'
 2. **Sauvegardez vos parties.** Starfield range ses sauvegardes hors du dossier de la liste, dans `Documents\My Games\Starfield\Saves`. La mise à jour n'y touche pas ; copiez quand même ce dossier avant de mettre à jour.
 3. **Protégez les mods que vous avez ajoutés.** La mise à jour supprime tous les fichiers du dossier de la liste qui n'en font pas partie. Renommez dans Mod Organizer 2 le dossier de chaque mod ajouté pour qu'il commence par `[NoDelete]`, par exemple `[NoDelete] Mon mod` : Wabbajack les garde.
 4. **Copiez votre propre ordre.** Les fichiers du profil (ordre des mods, ordre des plugins) sont remplacés par ceux de la liste. Si vous avez modifié `modlist.txt` ou `loadorder.txt` dans le dossier du profil, copiez-les hors du dossier de la liste.
-5. **Vérifiez la version du jeu.** Chaque version de la liste est faite pour une version précise de Starfield. Si la nouvelle version demande une version plus récente du jeu, mettez d'abord le jeu à jour ; sinon laissez-le où il est. La page [configuration requise]({{ '/extrasolar-containment-protocol/installation-guide/system-requirements/' | relative_url }}) donne la version demandée par la liste.
+5. **Vérifiez la version du jeu.** Chaque version de la liste est faite pour une version précise de Starfield. Si la nouvelle version demande une version plus récente du jeu, mettez d'abord le jeu à jour ; sinon laissez-le où il est. La [première page du guide d'installation]({{ '/extrasolar-containment-protocol/installation-guide/' | relative_url }}) donne la version du jeu demandée par chaque version de la liste.
 
 ## Mettre à jour
 
@@ -71,7 +71,7 @@ Une nouvelle version de Extrasolar Containment Protocol s'installe par-dessus l'
 
 | Gardé | Remplacé ou supprimé |
 |---|---|
-| Les dossiers `saves` dans `profiles` | Les mods de la liste, par leurs nouvelles versions |
+| Vos sauvegardes : elles sont hors du dossier de la liste | Les mods de la liste, par leurs nouvelles versions |
 | Le dossier de téléchargements | Les mods ajoutés par vous, sauf si leur nom commence par `[NoDelete]` |
 | Les dossiers et fichiers dont le nom commence par `[NoDelete]` | Tout le contenu du dossier `overwrite` |
 | Le fichier `.wabbajack` | Les fichiers du profil : ordre des mods et ordre des plugins |

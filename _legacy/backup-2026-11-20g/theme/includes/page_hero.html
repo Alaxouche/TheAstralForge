@@ -1,0 +1,31 @@
+{%- comment -%}
+  Cinematic page header. Params: eyebrow (+ eyebrow_fr), title / title_en + title_fr, lead_en, lead_fr, image, image_light (shown instead in the light theme, lazy), hex (true when the image is one of the honeycomb backgrounds), tiles (true on the 404: the missing tiles of hex-void fall away, outlines from _data/hex_void_tiles.json).
+{%- endcomment -%}
+{%- assign ph_img = include.image | default: '/assets/Images/AstralForge_Background_Dark.webp' -%}
+<header class="phero{% if include.hex %} phero--hex{% endif %}">
+  <img class="phero__bg{% if include.image_light %} theme-d{% endif %}" src="{{ ph_img | relative_url }}" srcset="{{ ph_img | srcset }}" sizes="100vw" alt="" fetchpriority="high" decoding="async" data-parallax>
+  {%- if include.image_light %}
+  <img class="phero__bg theme-l" src="{{ include.image_light | relative_url }}" srcset="{{ include.image_light | srcset }}" sizes="100vw" alt="" loading="lazy" decoding="async" data-parallax>
+  {%- endif %}
+  {%- if include.tiles and site.data.hex_void_tiles %}{% assign vt = site.data.hex_void_tiles %}
+  {%- comment %} Same framing as the picture: viewBox = image size, slice = object-fit: cover {% endcomment %}
+  <svg class="phero__bg phero__tiles" viewBox="0 0 {{ vt.w }} {{ vt.h }}" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false" data-parallax>
+    {%- for t in vt.tiles %}{% assign dx = forloop.index0 | modulo: 5 | minus: 2 | times: 28 %}{% assign r = forloop.index0 | modulo: 3 | minus: 1 | times: 24 | plus: 9 %}
+    <polygon points="{{ t.p }}" style="--k: {{ forloop.index0 }}; --dx: {{ dx }}px; --r: {{ r }}deg"/>
+    {%- endfor %}
+  </svg>
+  {%- endif %}
+  <div class="wrap phero__inner">
+    {%- if include.eyebrow %}
+    <span class="eyebrow"><span class="diamond is-full"></span>{% if include.eyebrow_fr %}<span lang="en">{{ include.eyebrow }}</span><span lang="fr">{{ include.eyebrow_fr }}</span>{% else %}{{ include.eyebrow }}{% endif %}</span>
+    {%- endif %}
+    {%- if include.title_en %}
+    <h1 class="phero__title"><span lang="en">{{ include.title_en }}</span><span lang="fr">{{ include.title_fr | default: include.title_en }}</span></h1>
+    {%- else %}
+    <h1 class="phero__title">{{ include.title | bi }}</h1>
+    {%- endif %}
+    {%- if include.lead_en %}
+    <p class="phero__lead"><span lang="en">{{ include.lead_en }}</span><span lang="fr">{{ include.lead_fr | default: include.lead_en }}</span></p>
+    {%- endif %}
+  </div>
+</header>

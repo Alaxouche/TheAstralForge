@@ -1,5 +1,5 @@
 ---
-# Served at /robots.txt — front matter makes Jekyll process the Liquid below.
+# Served at /robots.txt: the front matter makes scripts/build.mjs process the Liquid below.
 layout: null
 sitemap: false
 ---

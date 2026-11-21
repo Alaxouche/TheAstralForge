@@ -5,15 +5,15 @@ parent: Installation Guide
 nav_order: 6
 ---
 
+{% include components/faq.html
+  title="Questions & Answers"
+  title_fr="Questions et réponses"
+  data=site.data.krentoraan_faq
+%}
+
 <div lang="en" markdown="1">
 
 # Questions & Answers
-
-{% include components/faq.html
-  title="Questions & Answers"
-  description="Quick answers about Krentoraan installs, gameplay, and updates."
-  data=site.data.krentoraan_faq
-%}
 
 ## Reporting an Issue
 

@@ -1,0 +1,151 @@
+benefits:
+  - Early access to previews and roadmap updates
+  - Priority support on Discord for installation and troubleshooting
+  - Your name listed as a supporter on the site
+  - Help decide future list improvements and features
+benefits_fr:
+  - Accès anticipé aux aperçus et aux nouvelles de la feuille de route
+  - Aide prioritaire sur Discord pour l'installation et le dépannage
+  - Votre nom dans la liste des soutiens sur le site
+  - Votre avis compte sur les prochaines améliorations des listes
+
+impact:
+  - Hardware and testing resources for stable builds
+  - Time for bug fixing, balancing, and compatibility checks
+  - Documentation, guides, and installation support
+  - Asset licensing and tooling for better visuals
+impact_fr:
+  - Du matériel et des moyens de test pour des versions stables
+  - Du temps pour corriger les bugs, équilibrer et vérifier la compatibilité
+  - La documentation, les guides et l'aide à l'installation
+  - Des licences et des outils pour de meilleurs visuels
+
+tiers:
+  - name: "Jarl"
+    amount: "$1.50 / month (+VAT)"
+    amount_fr: "1,50 $ / mois (+TVA)"
+    perks:
+      - Discord role and advantages
+      - Priority suggestions for mods
+      - Listed in the credits menu and pages
+      - Access to Discord
+    perks_fr:
+      - Rôle et avantages sur Discord
+      - Suggestions de mods prioritaires
+      - Nom dans le menu des crédits et sur les pages
+      - Accès au Discord
+  - name: "Dragon Priest"
+    amount: "$3 / month (+VAT)"
+    amount_fr: "3 $ / mois (+TVA)"
+    perks:
+      - Discord role and advantages
+      - Priority suggestions for mods
+      - Listed in the credits menu and pages
+      - Access to Discord
+    perks_fr:
+      - Rôle et avantages sur Discord
+      - Suggestions de mods prioritaires
+      - Nom dans le menu des crédits et sur les pages
+      - Accès au Discord
+  - name: "Greybeard"
+    amount: "$6 / month (+VAT)"
+    amount_fr: "6 $ / mois (+TVA)"
+    perks:
+      - Discord role and advantages
+      - Priority suggestions for mods
+      - Listed in the credits menu and pages
+      - Access to Discord
+    perks_fr:
+      - Rôle et avantages sur Discord
+      - Suggestions de mods prioritaires
+      - Nom dans le menu des crédits et sur les pages
+      - Accès au Discord
+  - name: "Daedric Prince"
+    amount: "$10 / month (+VAT)"
+    amount_fr: "10 $ / mois (+TVA)"
+    perks:
+      - Custom weapon named after you integrated into Wunduniik
+      - Discord role and advantages
+      - Listed in the credits menu and pages
+      - Priority suggestions for mods
+      - Access to Discord
+    perks_fr:
+      - Une arme à votre nom intégrée à Wunduniik
+      - Rôle et avantages sur Discord
+      - Nom dans le menu des crédits et sur les pages
+      - Suggestions de mods prioritaires
+      - Accès au Discord
+
+recent:
+  - name: "justin young"
+    platform: "Patreon"
+    amount: "$1.50"
+    date: "2026-02-03"
+  - name: "Richie Rebolios"
+    platform: "Patreon"
+    amount: "$1.50"
+    date: "2026-01-31"
+  - name: "Justin"
+    platform: "Patreon"
+    amount: "$10.00"
+    date: "2026-01-26"
+  - name: "ElPescado"
+    platform: "Patreon"
+    amount: "$1.50"
+    date: "2026-01-26"
+  - name: "Frank Brackett"
+    platform: "Patreon"
+    amount: "$6.00"
+    date: "2026-01-24"
+  - name: "Bucki"
+    platform: "Patreon"
+    amount: "$1.50"
+    date: "2026-01-20"
+  - name: "Smeagul"
+    platform: "Patreon"
+    amount: "$1.50"
+    date: "2026-01-18"
+  - name: "Loiserich"
+    platform: "Patreon"
+    amount: "$1.50"
+    date: "2026-01-17"
+  - name: "Frans Van Rooyen"
+    platform: "Patreon"
+    amount: "$6.00"
+    date: "2026-01-16"
+  - name: "fekk"
+    platform: "Patreon"
+    amount: "$1.50"
+    date: "2025-09-07"
+
+top:
+  - name: "Cuttermind"
+    platform: "Patreon"
+    total: "$130.00"
+  - name: "George Joanethis"
+    platform: "Patreon"
+    total: "$110.00"
+  - name: "Dakkon"
+    platform: "Patreon"
+    total: "$99.00"
+  - name: "justin young"
+    platform: "Patreon"
+    total: "$86.00"
+  - name: "Juan Flores"
+    platform: "Patreon"
+    total: "$80.00"
+  - name: "Laimis Rinkevicius"
+    platform: "Patreon"
+    total: "$75.56"
+  - name: "erwin gloeckler"
+    platform: "Patreon"
+    total: "$74.62"
+  - name: "Frankie G YT"
+    platform: "Patreon"
+    total: "$66.00"
+  - name: "Cathusiastic"
+    platform: "Patreon"
+    total: "$65.22"
+  - name: "Melissa dunning"
+    platform: "Patreon"
+    total: "$55.50"

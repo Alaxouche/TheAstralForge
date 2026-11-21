@@ -5,15 +5,15 @@ parent: Installation Guide
 nav_order: 6
 ---
 
+{% include components/faq.html
+  title="Questions & Answers"
+  title_fr="Questions et réponses"
+  data=site.data.wunduniik_faq
+%}
+
 <div lang="en" markdown="1">
 
 # Questions & Answers
-
-{% include components/faq.html
-  title="Questions & Answers"
-  description="Quick answers about Wunduniik installs, gameplay, and updates."
-  data=site.data.wunduniik_faq
-%}
 
 ## Reporting an Issue
 
@@ -52,6 +52,8 @@ You can copy the `loadorder.txt` from your profiles folder within the Wunduniik 
 <p align="center">
   <img src="/assets/Images/guides/eeab109cb883485ba25bc1880e60020a-e33892.webp" alt="Mod list with ticked mods such as Colovian Prince Set and Dawnguard Arsenal" width="852" height="582">
 </p>
+
+The full procedure is in [Updating the List](/wunduniik/installation-guide/updating/).
 
 If you have more questions, join my Discord Server!
 
@@ -97,6 +99,8 @@ Vous pouvez copier le fichier `loadorder.txt` depuis votre dossier de profils da
 <p align="center">
   <img src="/assets/Images/guides/eeab109cb883485ba25bc1880e60020a-e33892.webp" alt="Liste de mods cochés, dont Colovian Prince Set et Dawnguard Arsenal" width="852" height="582">
 </p>
+
+La procédure complète est dans [Mettre à jour la liste](/wunduniik/installation-guide/updating/).
 
 Si vous avez d'autres questions, rejoignez mon serveur Discord !
 

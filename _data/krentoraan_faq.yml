@@ -1,39 +1,43 @@
+# Krentoraan FAQ. Each entry: question, answer (Markdown), question_fr, answer_fr, tags, tags_fr.
 - id: install-speed
   question: "Why does Wabbajack take so long?"
-  answer: "Downloads are large and depend on Nexus/hosting speed. Install on SSD, avoid peak hours, and keep enough free disk space."
-  tags:
-    - Installation
-    - Wabbajack
-
-- id: crashes-intro
-  question: "I crash during the intro, is it normal?"
-  answer: "Some lists can be unstable during the scripted intro. Try again after the intro sequence or restart the game once."
-  tags:
-    - Stability
-    - Troubleshooting
-
+  answer: "Mostly because of Nexus Mods: without Premium, downloads are capped at about 3 MB/s (1.5 MB/s with an ad blocker) and you click once per file. The install itself is faster on an NVMe SSD. The [Wabbajack Installation](/krentoraan/installation-guide/wabbajack-installation/#how-long-will-it-take) page estimates the time for your setup."
+  question_fr: "Pourquoi Wabbajack prend-il autant de temps ?"
+  answer_fr: "Surtout à cause de Nexus Mods : sans Premium, les téléchargements sont limités à environ 3 Mo/s (1,5 Mo/s avec un bloqueur de pub) et vous cliquez une fois par fichier. L'installation elle-même est plus rapide sur un SSD NVMe. La page [Installation avec Wabbajack](/krentoraan/installation-guide/wabbajack-installation/#how-long-will-it-take) estime la durée pour votre configuration."
+  tags: [Installation, Wabbajack]
+  tags_fr: [Installation, Wabbajack]
+- id: crashes
+  question: "My game crashes. What should I do?"
+  answer: "Open [Troubleshooting](/krentoraan/troubleshooting/): a few questions lead to the fix, and the crash log reader lists the mods named in your Crash Logger log."
+  question_fr: "Mon jeu plante. Que faire ?"
+  answer_fr: "Ouvrez [Dépannage](/krentoraan/troubleshooting/) : quelques questions mènent à la solution, et le lecteur de journaux liste les mods cités dans votre journal Crash Logger."
+  tags: [Stability, Troubleshooting]
+  tags_fr: [Stabilité, Dépannage]
 - id: performance-profiles
   question: "Which performance profile should I use?"
   answer: "Krentoraan's Profile Assistant selects the right profile automatically based on your VRAM and screen resolution at first MO2 launch. You can switch manually if needed."
-  tags:
-    - Performance
-    - Profiles
-
+  question_fr: "Quel profil de performance choisir ?"
+  answer_fr: "Le Profile Assistant de Krentoraan choisit le bon profil tout seul au premier lancement de MO2, selon votre VRAM et la résolution de votre écran. Vous pouvez en changer à la main si besoin."
+  tags: [Performance, Profiles]
+  tags_fr: [Performance, Profils]
 - id: enb-change
   question: "Can I change the ENB preset?"
   answer: "Yes. Disable the active ENB preset in MO2, enable your preferred one, then clear Overwrite to regenerate the shader cache."
-  tags:
-    - ENB
-    - Post-Installation
-
+  question_fr: "Puis-je changer de preset ENB ?"
+  answer_fr: "Oui. Désactivez le preset ENB actif dans MO2, activez celui que vous préférez, puis videz Overwrite pour régénérer le cache de shaders."
+  tags: [ENB, Post-Installation]
+  tags_fr: [ENB, Post-installation]
 - id: reporting-bugs
   question: "How should I report a bug?"
-  answer: "Use the Discord support channel and include logs, steps to reproduce, and your system specs. Crash logs are found at Documents/My Games/Skyrim Special Edition/SKSE/."
-  tags:
-    - Support
-
+  answer: "Use the [bug report form](/report-a-bug/) or the Discord support channel. Include the steps to reproduce, your system specs and the crash log, found in `Documents/My Games/Skyrim Special Edition/SKSE/`."
+  question_fr: "Comment signaler un bug ?"
+  answer_fr: "Utilisez le [formulaire de signalement](/report-a-bug/) ou le canal de support du Discord. Indiquez comment reproduire le problème, votre configuration et le journal de crash, qui se trouve dans `Documents/My Games/Skyrim Special Edition/SKSE/`."
+  tags: [Support]
+  tags_fr: [Assistance]
 - id: update-frequency
   question: "How often is Krentoraan updated?"
-  answer: "Updates are posted in the changelog. Frequency depends on game patches and mod updates."
-  tags:
-    - Changelog
+  answer: "When the game or its mods need it. The current version and its date are at the top of the [overview](/krentoraan/). Krentoraan has no changelog page on this site: ask on Discord what a new version changes, then follow [Updating the List](/krentoraan/installation-guide/updating/)."
+  question_fr: "À quelle fréquence Krentoraan est-elle mise à jour ?"
+  answer_fr: "Quand le jeu ou ses mods le demandent. La version actuelle et sa date sont en haut de la [présentation](/krentoraan/). Krentoraan n'a pas de changelog sur ce site : demandez sur Discord ce que change une nouvelle version, puis suivez [Mettre à jour la liste](/krentoraan/installation-guide/updating/)."
+  tags: [Updates]
+  tags_fr: [Mises à jour]

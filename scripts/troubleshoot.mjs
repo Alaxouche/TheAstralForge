@@ -19,7 +19,7 @@ const DISCORD = 'https://discord.gg/vKuB7nazBk';
 export function troubleshooterHtml(tree, id, resolveLink) {
   if (!tree || !tree.start) return '';
   const game = GAME_OF[id];
-  const ok = (x) => !x.only || x.only.includes(id) || x.only.includes(game);
+  const ok = (x) => (!x.only || x.only.includes(id) || x.only.includes(game)) && !(x.not && (x.not.includes(id) || x.not.includes(game)));
   // Nodes reachable for this list only
   const seen = new Set();
   const walk = (k) => {
@@ -35,7 +35,7 @@ export function troubleshooterHtml(tree, id, resolveLink) {
       const opts = n.opts.filter(ok).map((o) => `<button type="button" class="ts__opt" data-go="${escA(o.go)}">${bi(esc(o.l.en), esc(o.l.fr))}</button>`).join('');
       return `<div class="ts__node" data-node="${escA(k)}"${k === 'start' ? '' : ' hidden'}><p class="ts__q">${bi(esc(n.q.en), esc(n.q.fr))}</p><div class="ts__opts">${opts}</div></div>`;
     }
-    const paras = [n.a, ...(n.extra || []).filter(ok)].map((p) => `<p>${bi(fmt(p.en), fmt(p.fr))}</p>`).join('');
+    const paras = [n.a, ...(n.extra || []).filter(ok)].filter(Boolean).map((p) => `<p>${bi(fmt(p.en), fmt(p.fr))}</p>`).join('');
     const seenLinks = new Set();
     const links = (n.links || []).filter(ok).map((l) => resolveLink(id, l)).filter((l) => {
       if (!l) return false;

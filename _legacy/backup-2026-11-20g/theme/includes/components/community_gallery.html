@@ -1,0 +1,21 @@
+{%- assign cg_items = site.data.community_gallery.items -%}
+{%- assign cg_modlists = cg_items | map: "modlist" | uniq -%}
+<div class="filters" role="toolbar" data-filter-group>
+  <button type="button" class="chip is-active" data-filter="all"><span lang="en">All</span><span lang="fr">Tout</span></button>
+  {%- for m in cg_modlists %}
+  {%- assign ml = site.modlists | where: "id", m | first %}
+  <button type="button" class="chip" data-filter="{{ m }}">{% if ml %}{{ ml.title }}{% else %}{{ m | replace: "-", " " | capitalize }}{% endif %}</button>
+  {%- endfor %}
+</div>
+<div class="masonry" data-filter-items>
+  {%- for item in cg_items %}
+  <figure class="masonry__item" data-modlist="{{ item.modlist }}">
+    {%- assign iml = site.modlists | where: "id", item.modlist | first %}
+    <button type="button" data-zoom="{{ item.image | relative_url }}" data-lb-author="{{ item.author | escape }}" data-lb-list="{% if iml %}{{ iml.title | escape }}{% endif %}" data-lb-link="{{ item.source | escape }}"><img src="{{ item.image | thumb: 960 }}" alt="{{ item.title }}" loading="lazy" decoding="async"></button>
+    <figcaption>
+      <span>{{ item.author }}</span>
+      {%- if item.source and item.source != "" %}<a href="{{ item.source }}" target="_blank" rel="noopener noreferrer">Discord ↗</a>{% endif %}
+    </figcaption>
+  </figure>
+  {%- endfor %}
+</div>

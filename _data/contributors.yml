@@ -1,13 +1,14 @@
+# "Why contribute" repeats what the Patreon tiers below give: keep both in step.
 benefits:
-  - Early access to previews and roadmap updates
-  - Priority support on Discord for installation and troubleshooting
-  - Your name listed as a supporter on the site
-  - Help decide future list improvements and features
+  - A Discord role and its advantages
+  - Your mod suggestions are looked at first
+  - Your name in the in-game credits menu and on this site
+  - "At Daedric Prince: a weapon named after you in Wunduniik"
 benefits_fr:
-  - Accès anticipé aux aperçus et aux nouvelles de la feuille de route
-  - Aide prioritaire sur Discord pour l'installation et le dépannage
-  - Votre nom dans la liste des soutiens sur le site
-  - Votre avis compte sur les prochaines améliorations des listes
+  - Un rôle Discord et ses avantages
+  - Vos suggestions de mods passent en premier
+  - Votre nom dans le menu des crédits du jeu et sur ce site
+  - "Au niveau Daedric Prince : une arme à votre nom dans Wunduniik"
 
 impact:
   - Hardware and testing resources for stable builds
@@ -35,6 +36,7 @@ tiers:
       - Nom dans le menu des crédits et sur les pages
       - Accès au Discord
   - name: "Dragon Priest"
+    same_as: "Jarl"
     amount: "$3 / month (+VAT)"
     amount_fr: "3 $ / mois (+TVA)"
     perks:
@@ -48,6 +50,7 @@ tiers:
       - Nom dans le menu des crédits et sur les pages
       - Accès au Discord
   - name: "Greybeard"
+    same_as: "Jarl"
     amount: "$6 / month (+VAT)"
     amount_fr: "6 $ / mois (+TVA)"
     perks:
@@ -76,76 +79,79 @@ tiers:
       - Suggestions de mods prioritaires
       - Accès au Discord
 
+# Generated from the Patreon and Ko-fi exports (names, totals and dates only; no e-mail).
+# recent: the ten people who gave most recently; top: the ten largest totals, both platforms together.
+# Patreon totals are USD, Ko-fi totals are EUR.
 recent:
-  - name: "justin young"
-    platform: "Patreon"
-    amount: "$1.50"
-    date: "2026-02-03"
-  - name: "Richie Rebolios"
-    platform: "Patreon"
-    amount: "$1.50"
-    date: "2026-01-31"
-  - name: "Justin"
-    platform: "Patreon"
-    amount: "$10.00"
-    date: "2026-01-26"
-  - name: "ElPescado"
-    platform: "Patreon"
-    amount: "$1.50"
-    date: "2026-01-26"
-  - name: "Frank Brackett"
-    platform: "Patreon"
-    amount: "$6.00"
-    date: "2026-01-24"
   - name: "Bucki"
     platform: "Patreon"
-    amount: "$1.50"
-    date: "2026-01-20"
+    amount: "$49.50"
+    date: "2026-11-20"
+  - name: "Keith Kelley"
+    platform: "Patreon"
+    amount: "$20.00"
+    date: "2026-11-18"
   - name: "Smeagul"
     platform: "Patreon"
-    amount: "$1.50"
-    date: "2026-01-18"
-  - name: "Loiserich"
+    amount: "$36.00"
+    date: "2026-11-18"
+  - name: "Deacon Ivory"
     platform: "Patreon"
-    amount: "$1.50"
-    date: "2026-01-17"
-  - name: "Frans Van Rooyen"
+    amount: "$13.50"
+    date: "2026-11-17"
+  - name: "Gee"
     platform: "Patreon"
-    amount: "$6.00"
-    date: "2026-01-16"
-  - name: "fekk"
+    amount: "$7.50"
+    date: "2026-11-15"
+  - name: "erwin gloeckler"
+    platform: "Patreon + Ko-fi"
+    amount: "$94.62 + 50 €"
+    date: "2026-11-14"
+  - name: "justin young"
     platform: "Patreon"
-    amount: "$1.50"
-    date: "2025-09-07"
+    amount: "$99.50"
+    date: "2026-11-03"
+  - name: "Maldan"
+    platform: "Patreon"
+    amount: "$9.00"
+    date: "2026-10-30"
+  - name: "ElPescado"
+    platform: "Patreon"
+    amount: "$46.00"
+    date: "2026-10-26"
+  - name: "JaronHerbert"
+    platform: "Ko-fi"
+    amount: "9 €"
+    date: "2026-10-24"
 
 top:
-  - name: "Cuttermind"
+  - name: "BetterBaseball34"
+    platform: "Ko-fi"
+    total: "270 €"
+  - name: "Designate Dragon"
+    platform: "Patreon + Ko-fi"
+    total: "$40.00 + 135 €"
+  - name: "erwin gloeckler"
+    platform: "Patreon + Ko-fi"
+    total: "$94.62 + 50 €"
+  - name: "Cerberus"
+    platform: "Ko-fi"
+    total: "120 €"
+  - name: "Lio1409"
     platform: "Patreon"
     total: "$130.00"
   - name: "George Joanethis"
     platform: "Patreon"
     total: "$110.00"
+  - name: "justin young"
+    platform: "Patreon"
+    total: "$99.50"
   - name: "Dakkon"
     platform: "Patreon"
     total: "$99.00"
-  - name: "justin young"
+  - name: "Frank Brackett"
     platform: "Patreon"
-    total: "$86.00"
+    total: "$84.00"
   - name: "Juan Flores"
     platform: "Patreon"
     total: "$80.00"
-  - name: "Laimis Rinkevicius"
-    platform: "Patreon"
-    total: "$75.56"
-  - name: "erwin gloeckler"
-    platform: "Patreon"
-    total: "$74.62"
-  - name: "Frankie G YT"
-    platform: "Patreon"
-    total: "$66.00"
-  - name: "Cathusiastic"
-    platform: "Patreon"
-    total: "$65.22"
-  - name: "Melissa dunning"
-    platform: "Patreon"
-    total: "$55.50"

@@ -6,8 +6,7 @@ nav_order: 2
 
 # Changelog
 
-In this section you will find changelogs for the modlist since its release. You can track down precisely everything that gets added, removed, fixed, tweaked and updated.
-<div style="margin-bottom: 1rem;"></div>
+<p><span lang="en">Every version of the list since its release: what was added, removed, fixed, tweaked and updated.</span><span lang="fr">Chaque version de la liste depuis sa sortie : ce qui a été ajouté, retiré, corrigé, ajusté et mis à jour.</span></p>
 
 <details markdown="1">
 <summary>v4.0.0.0 - November 20, 2026</summary>
@@ -845,30 +844,30 @@ ___
 ___
 
 ### Added
-- Aerial Takedowns Fix — 1.0.1.0
-- Arasaka Kurogane — 1.3.0.0
-- Badlands Train — 2.0.0.0
-- Basilisk Shadows Fix game 2.x — 1.0.0.0
-- Character Rendering Editor - Real-time Control on Skin Hair Eyes for more Realistic Shaders - Cyber Engine Tweaks — 3.0.0.0
-- CyberMetrics - Ingame Performance Display — 1.2.0.0
-- Enemy Melee Moves Unlocked — 1.0.0.0
-- Fast Travel Hologram - Big Brother — 1.0.0.0
-- Garage (Customize - Claim - Sell - Repair - Swap) — 1.0.4.0s
-- Garage Manager — 1.0.0.0
-- Immersive Explosion Decals — 2.0.0.0
-- Immersive Scanner — 1.2.0.0
-- ImmersiveHUD — 1.8.0.0
-- Input Loader — 0.2.3.0
-- Life Coach (Immersive Boost) — 1.0.0.0
-- Low Life Effect — 1.0.0.0
-- NCARTS lower and upper rail — 1.0.0.0
-- New Game Plus - Native — 1.3.2.0
-- Night City harbor trains — 1.0.0.0
-- No-Tell Motel Upper Floors Unlocked — 1.1.1.0
-- RedLogger — 1.4.1.0
-- Second Heart Resurrect Fix — 1.0.0.0
-- Vehicle Core — 1.0.0.0
-- XUtils — 1.0.2.0
+- Aerial Takedowns Fix (1.0.1.0)
+- Arasaka Kurogane (1.3.0.0)
+- Badlands Train (2.0.0.0)
+- Basilisk Shadows Fix game 2.x (1.0.0.0)
+- Character Rendering Editor - Real-time Control on Skin Hair Eyes for more Realistic Shaders - Cyber Engine Tweaks (3.0.0.0)
+- CyberMetrics - Ingame Performance Display (1.2.0.0)
+- Enemy Melee Moves Unlocked (1.0.0.0)
+- Fast Travel Hologram - Big Brother (1.0.0.0)
+- Garage (Customize - Claim - Sell - Repair - Swap) (1.0.4.0s)
+- Garage Manager (1.0.0.0)
+- Immersive Explosion Decals (2.0.0.0)
+- Immersive Scanner (1.2.0.0)
+- ImmersiveHUD (1.8.0.0)
+- Input Loader (0.2.3.0)
+- Life Coach (Immersive Boost) (1.0.0.0)
+- Low Life Effect (1.0.0.0)
+- NCARTS lower and upper rail (1.0.0.0)
+- New Game Plus - Native (1.3.2.0)
+- Night City harbor trains (1.0.0.0)
+- No-Tell Motel Upper Floors Unlocked (1.1.1.0)
+- RedLogger (1.4.1.0)
+- Second Heart Resurrect Fix (1.0.0.0)
+- Vehicle Core (1.0.0.0)
+- XUtils (1.0.2.0)
 
 ### Fixes and Tweaks:
 - Fixed installation issues due to a mod under moderation
@@ -959,41 +958,41 @@ ___
 - Zenitex Turtleneck Jacket - ArchiveXL
 
 ### Updated
-- 3D World Map Fixed — 1.4.0.0 → 1.5.0.0
-- Adaptive Sliders — 2024.0.0.0-06-10 → 20260912.0.0.0
-- Bikes of the Dark Future --- Arch V4 — 1.0.0.0 → 1.3.0.0
-- Blur Begone (Clear Materials with Refraction) — 1.26.0.0 → 1.26.1.0
-- Cinematic Immunity — 20260803.0.0.0 → 20260910.0.0.0
-- Codeware — 1.20.3.0 → 1.20.5.0
-- Drive an Aerial Vehicle - Flight Mod Using AV and Helicopter — 3.2.1.0 → 3.2.2.0
-- Engine Oil - Ultra — 4.5.1.0 → 4.5.1.0 (Nexus file 127103 → 127105)
-- Environment Textures Overhaul - ETO — 1.3.0.0 → 1.31.0.0
-- Explosion Feedback — 2.11.0.0 → 3.1.0.0
-- FlowerShop - Virtual Atelier Store — 1.12.10.0 → 1.12.11.0
-- General Vehicles Fixes — 2.81.0.0 → 2.83.0.0
-- Immersion Patch - Cyberpunk Story Quest Fixes — 1.17.0.0 → 1.18.0.0
-- Immersive Explosions — 1.1.1.0 → 1.1.2.0a
-- Informative Healthbar — 1.11.3.0 → 1.12.1.0
-- Jackie's Machete - New Iconic Weapon — 1.0.1.0 → 1.0.2.0
-- LNCLN KONTINENTAL — 2.0.0.0 → 3.0.0.0
-- Mod Configuration Menu — 0.10.2.0 → 0.10.3.0
-- NC Fashion Virtual Atelier — 10.1.0.0.f → 10.1.0.0.h
-- Negative Balance - Full Story Gig — 2.1.0.0 → 2.3.0.0
-- NIGHT CITY SKIES — 2.5.5.0 → 2.5.6.0
-- NPC Actions Stutter Fix — 0.1.0.0 → 0.11.0.0
-- RadioExt — 2.81.0.0 → 2.91.0.0
-- RedFunctions — 0.10.0.0 → 0.13.0.0
-- Redscript Configuration Framework — 2.1.6.0 → 3.0.0.0
-- RedWindows — 2.0.1.0 → 2.2.0.0
-- Road Name Sign Fixes and Additions — 1.0.0.0 → 2.0.0.0
-- Sabbath7991 Weapon and Attachment Shops - Virtual Atelier — 1.80.0.0 → 1.82.0.0
-- Scannable Stash — 1.1.0.0 → 1.1.1.0
-- Set Bonuses — 2.3.5.0u4 → 2.3.5.0u5
-- Street Location System (API) — 1.2.0.0 → 1.2.1.0
-- The Nullifier — 1.4.3.0 → 1.4.4.0
-- Toyota Celica Supra A60 - ArchiveXL — 1.0.0.0 → 1.0.2.0
-- VEEGEE SHOP 4 — 1.0.7.0 → 1.0.8.0
-- Vehicle Navigation System (VNS) — 1.7.0.0 → 1.7.3.0
+- 3D World Map Fixed (1.4.0.0 → 1.5.0.0)
+- Adaptive Sliders (2024.0.0.0-06-10 → 20260912.0.0.0)
+- Bikes of the Dark Future --- Arch V4 (1.0.0.0 → 1.3.0.0)
+- Blur Begone (Clear Materials with Refraction) (1.26.0.0 → 1.26.1.0)
+- Cinematic Immunity (20260803.0.0.0 → 20260910.0.0.0)
+- Codeware (1.20.3.0 → 1.20.5.0)
+- Drive an Aerial Vehicle - Flight Mod Using AV and Helicopter (3.2.1.0 → 3.2.2.0)
+- Engine Oil - Ultra (4.5.1.0 → 4.5.1.0, Nexus file 127103 → 127105)
+- Environment Textures Overhaul - ETO (1.3.0.0 → 1.31.0.0)
+- Explosion Feedback (2.11.0.0 → 3.1.0.0)
+- FlowerShop - Virtual Atelier Store (1.12.10.0 → 1.12.11.0)
+- General Vehicles Fixes (2.81.0.0 → 2.83.0.0)
+- Immersion Patch - Cyberpunk Story Quest Fixes (1.17.0.0 → 1.18.0.0)
+- Immersive Explosions (1.1.1.0 → 1.1.2.0a)
+- Informative Healthbar (1.11.3.0 → 1.12.1.0)
+- Jackie's Machete - New Iconic Weapon (1.0.1.0 → 1.0.2.0)
+- LNCLN KONTINENTAL (2.0.0.0 → 3.0.0.0)
+- Mod Configuration Menu (0.10.2.0 → 0.10.3.0)
+- NC Fashion Virtual Atelier (10.1.0.0.f → 10.1.0.0.h)
+- Negative Balance - Full Story Gig (2.1.0.0 → 2.3.0.0)
+- NIGHT CITY SKIES (2.5.5.0 → 2.5.6.0)
+- NPC Actions Stutter Fix (0.1.0.0 → 0.11.0.0)
+- RadioExt (2.81.0.0 → 2.91.0.0)
+- RedFunctions (0.10.0.0 → 0.13.0.0)
+- Redscript Configuration Framework (2.1.6.0 → 3.0.0.0)
+- RedWindows (2.0.1.0 → 2.2.0.0)
+- Road Name Sign Fixes and Additions (1.0.0.0 → 2.0.0.0)
+- Sabbath7991 Weapon and Attachment Shops - Virtual Atelier (1.80.0.0 → 1.82.0.0)
+- Scannable Stash (1.1.0.0 → 1.1.1.0)
+- Set Bonuses (2.3.5.0u4 → 2.3.5.0u5)
+- Street Location System (API) (1.2.0.0 → 1.2.1.0)
+- The Nullifier (1.4.3.0 → 1.4.4.0)
+- Toyota Celica Supra A60 - ArchiveXL (1.0.0.0 → 1.0.2.0)
+- VEEGEE SHOP 4 (1.0.7.0 → 1.0.8.0)
+- Vehicle Navigation System (VNS) (1.7.0.0 → 1.7.3.0)
 
 </details>
 

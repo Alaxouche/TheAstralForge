@@ -15,7 +15,8 @@ export const fmtInt = (n, lang) => (lang === 'fr' ? String(Math.round(n)).replac
   : String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, ','));
 export function fmtBytes(b, lang) {
   const fr = lang === 'fr';
-  const [v, u] = b >= 1e9 ? [b / 1e9, fr ? 'Go' : 'GB'] : b >= 1e6 ? [b / 1e6, fr ? 'Mo' : 'MB'] : [b / 1e3, fr ? 'ko' : 'KB'];
+  // thresholds a little under 1e9 / 1e6 so 999.6 MB shows as 1 GB, never "1000 MB"
+  const [v, u] = b >= 999.5e6 ? [b / 1e9, fr ? 'Go' : 'GB'] : b >= 999.5e3 ? [b / 1e6, fr ? 'Mo' : 'MB'] : [b / 1e3, fr ? 'ko' : 'KB'];
   const s = v >= 100 ? String(Math.round(v)) : v.toFixed(1).replace(/\.0$/, '');
   return (fr ? s.replace('.', ',') : s) + ' ' + u;
 }
@@ -90,7 +91,7 @@ function layouts(groups) {
 const varsOf = (pre, a) => ['x', 'y', 'w', 'h', 'hh'].slice(0, a.length).map((k, i) => `--${pre}${k}:${pct(a[i])}`).join(';');
 const TINTS = [30, 20, 26, 16, 24, 18];
 
-export function contentsMapHtml(c, listUrl = '') {
+export function contentsMapHtml(c) {
   if (!c || !c.groups) return '';
   const L = layouts(c.groups);
   const t = c.totals;

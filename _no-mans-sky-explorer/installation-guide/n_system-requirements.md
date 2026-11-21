@@ -1,6 +1,6 @@
 ---
 layout: skyground_readme
-title: System Requirement
+title: System Requirements
 parent: Installation Guide
 nav_order: 1
 ---
@@ -32,17 +32,10 @@ Comme No Man's Sky Explorer est une modlist axée sur les graphismes, vous devez
 
 </div>
 
-<div class="modlist-size" data-modlist-size data-modlist-source="https://raw.githubusercontent.com/Alaxouche/Wunduniik/main/modlist.json" data-modlist-machine="NMSExplorer">
-   <strong>Space required:</strong>
-   <span data-modlist-total>Loading...</span> total,
-   including <span data-modlist-install>Loading...</span> for install
-   and <span data-modlist-download>Loading...</span> for downloads.
-   <span data-modlist-version hidden>Version</span>
+<div class="modlist-size">
+<p lang="en"><strong>Space required:</strong> <span data-modlist-total>Loading...</span> in total, including <span data-modlist-install>Loading...</span> for the install and <span data-modlist-download>Loading...</span> for the downloads.</p>
+<p lang="fr"><strong>Espace nécessaire :</strong> <span data-modlist-total>Loading...</span> au total, dont <span data-modlist-install>Loading...</span> pour l'installation et <span data-modlist-download>Loading...</span> pour les téléchargements.</p>
 </div>
-
-<noscript>
-   <p><strong>Space required:</strong> about 3.6 GB total (2.2 GB install + 1.4 GB downloads).</p>
-</noscript>
 
 <div lang="en" markdown="1">
 
@@ -51,7 +44,7 @@ Comme No Man's Sky Explorer est une modlist axée sur les graphismes, vous devez
 
 | Configuration         | CPU        | GPU                | RAM          | Storage                | Display          | FPS  |
 |-----------------------|------------|--------------------|--------------|------------------------|------------------|------|
-| **Minimum Specs**     | i5-7600k   | Nvidia GTX 2060    | 16 GB DDR4   | 500 GB SATA II SSD     | FHD 60 Hz        | 45   |
+| **Minimum Specs**     | i5-7600k   | Nvidia RTX 2060    | 16 GB DDR4   | SATA SSD, space above  | FHD 60 Hz        | 45   |
 | **Recommended Specs** | i7-9700k   | Nvidia RTX 3060 Ti | 32 GB DDR4   | 1 TB SATA III/M.2 SSD  | FHD 60 Hz        | 60+  |
 | **Author's Specs**    | i5-10400f  | Nvidia RTX 3090    | 32 GB DDR4   | 1 TB M.2 SSD           | 2K 180 Hz        | 60+  |
 
@@ -64,16 +57,12 @@ Comme No Man's Sky Explorer est une modlist axée sur les graphismes, vous devez
 
 <img src="/assets/Images/guides/da459dcbe3be46ad934f5ed3d962eca8-e9c33a.webp" alt="Windows Virtual Memory window: custom size, initial 20480 MB and maximum 40960 MB on drive C" width="891" height="1360">
 
-**Bigger NMS modlists** need a lot of memory. **Never disable the pagefile.**
+No Man's Sky with mods uses more memory than the vanilla game. **Never disable the pagefile.** If the game crashes while loading, give Windows a fixed pagefile:
 
 1. Press **Windows + R** → type `sysdm.cpl,3` → **Enter**
 2. **Performance** → **Settings** → **Advanced** → **Virtual memory** → **Change…**
 3. Disable **Automatically manage...** → **Custom size:** Initial 20480 / Maximum 40960
 4. **Set** → **Apply** → **OK** → Restart
-
----
-
-**THIS IS NOT OPTIONAL, YOU CANNOT SKIP THIS STEP EVEN IF YOU HAVE 256 GB OF RAM.**
 
 ## Exclusions and AntiVirus
 
@@ -90,7 +79,7 @@ Comme No Man's Sky Explorer est une modlist axée sur les graphismes, vous devez
 
 | Configuration          | CPU        | GPU                 | RAM          | Stockage               | Écran            | FPS  |
 |------------------------|------------|---------------------|--------------|------------------------|------------------|------|
-| **Config. Minimum**    | i5-7600k   | Nvidia GTX 2060     | 16 Go DDR4   | 500 Go SATA II SSD     | FHD 60 Hz        | 45   |
+| **Config. Minimum**    | i5-7600k   | Nvidia RTX 2060     | 16 Go DDR4   | SSD SATA, place ci-dessus | FHD 60 Hz        | 45   |
 | **Config. Recommandée**| i7-9700k   | Nvidia RTX 3060 Ti  | 32 Go DDR4   | 1 To SATA III/M.2 SSD  | FHD 60 Hz        | 60+  |
 | **Config. de l'Auteur**| i5-10400f  | Nvidia RTX 3090     | 32 Go DDR4   | 1 To M.2 SSD           | 2K 180 Hz        | 60+  |
 
@@ -103,16 +92,12 @@ Comme No Man's Sky Explorer est une modlist axée sur les graphismes, vous devez
 
 <img src="/assets/Images/guides/da459dcbe3be46ad934f5ed3d962eca8-e9c33a.webp" alt="Fenêtre Mémoire virtuelle de Windows : taille personnalisée, initiale 20480 Mo et maximale 40960 Mo sur le lecteur C" width="891" height="1360">
 
-**Les grandes modlists NMS** nécessitent beaucoup de mémoire. **Ne désactivez jamais le fichier d'échange.**
+No Man's Sky avec des mods utilise plus de mémoire que le jeu de base. **Ne désactivez jamais le fichier d'échange.** Si le jeu plante au chargement, donnez à Windows un fichier d'échange fixe :
 
 1. **Windows + R** → tapez `sysdm.cpl,3` → **Entrée**
 2. **Performances** → **Paramètres** → **Avancé** → **Mémoire virtuelle** → **Modifier…**
 3. Désactivez **Gérer automatiquement...** → **Taille personnalisée :** Initial 20480 / Maximum 40960
 4. **Définir** → **Appliquer** → **OK** → Redémarrez
-
----
-
-**CETTE ÉTAPE N'EST PAS OPTIONNELLE, MÊME AVEC 256 GO DE RAM.**
 
 ## Exclusions et Antivirus
 

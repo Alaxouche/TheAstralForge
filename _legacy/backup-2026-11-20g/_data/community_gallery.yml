@@ -1,0 +1,227 @@
+# Community gallery shown on the homepage.
+#
+# Two ways to add entries:
+#   1. By hand — copy a block below.
+#   2. From Discord — run scripts/sync-discord-gallery.mjs (see the header
+#      of that file), which appends new screenshots posted in the gallery
+#      channels. The gallery-sync GitHub workflow can do this on a schedule.
+#
+# Fields:
+#   title    short caption
+#   author   Discord display name of whoever posted it
+#   modlist  wunduniik | krentoraan | ghost-of-the-grid |
+#            no-mans-sky-explorer | extrasolar-containment-protocol
+#   image    path under /assets/ (synced files land in /assets/Images/community/)
+#   date     YYYY-MM-DD
+#   source   link to the original Discord message (optional)
+
+items:
+  - title: "guys is this normal?  I have settings on Ultra, but this doe"
+    author: "kubskr"
+    modlist: wunduniik
+    image: /assets/Images/community/1567275741803188224-0.webp
+    date: 2026-11-03
+    source: "https://discord.com/channels/750268919201398805/1404560105726410853/1567275741803188224"
+
+  - title: "guys is this normal?  I have settings on Ultra, but this doe"
+    author: "kubskr"
+    modlist: wunduniik
+    image: /assets/Images/community/1567275741803188224-1.webp
+    date: 2026-11-03
+    source: "https://discord.com/channels/750268919201398805/1404560105726410853/1567275741803188224"
+
+  - title: "My new dragon aspect meshes and aura"
+    author: "br0sky"
+    modlist: wunduniik
+    image: /assets/Images/community/1561848479461019799.webp
+    date: 2026-10-19
+    source: "https://discord.com/channels/750268919201398805/1404560105726410853/1561848479461019799"
+
+  - title: "Screenshot by Ale-Axe-Ouche"
+    author: "Ale-Axe-Ouche"
+    modlist: wunduniik
+    image: /assets/Images/community/1561291067146637412-0.webp
+    date: 2026-10-18
+    source: "https://discord.com/channels/750268919201398805/1404560105726410853/1561291067146637412"
+
+  - title: "Screenshot by Ale-Axe-Ouche"
+    author: "Ale-Axe-Ouche"
+    modlist: wunduniik
+    image: /assets/Images/community/1561291067146637412-1.webp
+    date: 2026-10-18
+    source: "https://discord.com/channels/750268919201398805/1404560105726410853/1561291067146637412"
+
+  - title: "Screenshot by Ale-Axe-Ouche"
+    author: "Ale-Axe-Ouche"
+    modlist: wunduniik
+    image: /assets/Images/community/1561291067146637412-2.webp
+    date: 2026-10-18
+    source: "https://discord.com/channels/750268919201398805/1404560105726410853/1561291067146637412"
+
+  - title: "TRUE dragon aura finally dragon aspect looks sick now"
+    author: "br0sky"
+    modlist: wunduniik
+    image: /assets/Images/community/1560913406784045066.webp
+    date: 2026-10-17
+    source: "https://discord.com/channels/750268919201398805/1404560105726410853/1560913406784045066"
+
+  - title: "Screenshot by Stalker"
+    author: "Stalker"
+    modlist: wunduniik
+    image: /assets/Images/community/1559474028304015360.webp
+    date: 2026-10-13
+    source: "https://discord.com/channels/750268919201398805/1404560105726410853/1559474028304015360"
+
+  - title: "<@1192697275579904082> looks pretty good and runs well"
+    author: "Chauces"
+    modlist: wunduniik
+    image: /assets/Images/community/1558565654532067398-0.webp
+    date: 2026-10-10
+    source: "https://discord.com/channels/750268919201398805/1404560105726410853/1558565654532067398"
+
+  - title: "<@1192697275579904082> looks pretty good and runs well"
+    author: "Chauces"
+    modlist: wunduniik
+    image: /assets/Images/community/1558565654532067398-1.webp
+    date: 2026-10-10
+    source: "https://discord.com/channels/750268919201398805/1404560105726410853/1558565654532067398"
+
+  - title: "the snow feels very nice"
+    author: "Sleepy"
+    modlist: wunduniik
+    image: /assets/Images/community/1558160755667238993.webp
+    date: 2026-10-09
+    source: "https://discord.com/channels/750268919201398805/1404560105726410853/1558160755667238993"
+
+  - title: "Screenshot by Ale-Axe-Ouche"
+    author: "Ale-Axe-Ouche"
+    modlist: wunduniik
+    image: /assets/Images/community/1557825671789674497.webp
+    date: 2026-10-08
+    source: "https://discord.com/channels/750268919201398805/1404560105726410853/1557825671789674497"
+
+  - title: "Path tracing looks so bad lol 🤣"
+    author: "CityWidePrism"
+    modlist: ghost-of-the-grid
+    image: /assets/Images/community/1548001215537872956.webp
+    date: 2026-09-11
+    source: "https://discord.com/channels/750268919201398805/1371441554128109688/1548001215537872956"
+
+  - title: "Ah yes, the perfect weather to walk up to a Daedric statue.."
+    author: "Cast"
+    modlist: wunduniik
+    image: /assets/Images/community/1546277764708049107.webp
+    date: 2026-09-06
+    source: "https://discord.com/channels/750268919201398805/1404560105726410853/1546277764708049107"
+
+  - title: "ow yeah"
+    author: "surgeonn"
+    modlist: wunduniik
+    image: /assets/Images/community/1546225716079759381.webp
+    date: 2026-09-06
+    source: "https://discord.com/channels/750268919201398805/1404560105726410853/1546225716079759381"
+
+  - title: "Screenshot by Deadsmoke"
+    author: "Deadsmoke"
+    modlist: wunduniik
+    image: /assets/Images/community/1546021708291383346.webp
+    date: 2026-09-06
+    source: "https://discord.com/channels/750268919201398805/1404560105726410853/1546021708291383346"
+
+  - title: "Screenshot by seungwon"
+    author: "seungwon"
+    modlist: wunduniik
+    image: /assets/Images/community/1545567400542601267.webp
+    date: 2026-09-04
+    source: "https://discord.com/channels/750268919201398805/1404560105726410853/1545567400542601267"
+
+  - title: "Screenshot by seungwon"
+    author: "seungwon"
+    modlist: wunduniik
+    image: /assets/Images/community/1545567384784470127.webp
+    date: 2026-09-04
+    source: "https://discord.com/channels/750268919201398805/1404560105726410853/1545567384784470127"
+
+  - title: "Screenshot by seungwon"
+    author: "seungwon"
+    modlist: wunduniik
+    image: /assets/Images/community/1545567358129676288.webp
+    date: 2026-09-04
+    source: "https://discord.com/channels/750268919201398805/1404560105726410853/1545567358129676288"
+
+  - title: "Screenshot by seungwon"
+    author: "seungwon"
+    modlist: wunduniik
+    image: /assets/Images/community/1545567258280067183.webp
+    date: 2026-09-04
+    source: "https://discord.com/channels/750268919201398805/1404560105726410853/1545567258280067183"
+
+  - title: "Screenshot by seungwon"
+    author: "seungwon"
+    modlist: wunduniik
+    image: /assets/Images/community/1545567224394154127.webp
+    date: 2026-09-04
+    source: "https://discord.com/channels/750268919201398805/1404560105726410853/1545567224394154127"
+
+  - title: "Screenshot by Ale-Axe-Ouche"
+    author: "Ale-Axe-Ouche"
+    modlist: wunduniik
+    image: /assets/Images/community/1545486354257805335.webp
+    date: 2026-09-04
+    source: "https://discord.com/channels/750268919201398805/1404560105726410853/1545486354257805335"
+
+  - title: "Amaze amaze amaze."
+    author: "Bittersteel"
+    modlist: wunduniik
+    image: /assets/Images/community/1545284815644000338-0.webp
+    date: 2026-09-04
+    source: "https://discord.com/channels/750268919201398805/1404560105726410853/1545284815644000338"
+
+  - title: "Amaze amaze amaze."
+    author: "Bittersteel"
+    modlist: wunduniik
+    image: /assets/Images/community/1545284815644000338-1.webp
+    date: 2026-09-04
+    source: "https://discord.com/channels/750268919201398805/1404560105726410853/1545284815644000338"
+
+  - title: "Dragon hunt at dusk"
+    author: "Alaxouche"
+    modlist: wunduniik
+    image: /assets/Images/Skyrim/enb_2026-2-28_18-36-11_274.webp
+    date: 2026-02-28
+    source: ""
+
+  - title: "Northern lights over the tundra"
+    author: "Alaxouche"
+    modlist: wunduniik
+    image: /assets/Images/Skyrim/enb_2026-1-30_10-36-32_139.webp
+    date: 2026-01-30
+    source: ""
+
+  - title: "Winter ridge"
+    author: "Alaxouche"
+    modlist: krentoraan
+    image: /assets/Images/Skyrim/enb_2026-2-28_18-36-25_572.webp
+    date: 2026-02-28
+    source: ""
+
+  - title: "Old ruins"
+    author: "Alaxouche"
+    modlist: krentoraan
+    image: /assets/Images/Skyrim/enb2025_12_6_14_19_46.webp
+    date: 2025-12-06
+    source: ""
+
+  - title: "Night City in the rain"
+    author: "Alaxouche"
+    modlist: ghost-of-the-grid
+    image: /assets/Images/Cyberpunk/photomode_22022026_172726.webp
+    date: 2026-02-22
+    source: ""
+
+  - title: "Neon streets"
+    author: "Alaxouche"
+    modlist: ghost-of-the-grid
+    image: /assets/Images/Cyberpunk/photomode_06122025_154631.webp
+    date: 2025-12-06
+    source: ""

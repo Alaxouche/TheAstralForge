@@ -14,7 +14,8 @@
  *
  * Behaviour:
  *   - reads the latest 100 messages of each mapped channel;
- *   - keeps messages that contain image attachments;
+ *   - keeps messages that contain image attachments, minus the EXCLUDE list;
+ *   - strips Discord mentions and custom emoji from titles;
  *   - tags each entry with the modlist of the channel it came from;
  *   - picks the MAX_ITEMS newest entries FIRST, then downloads only those,
  *     as web-sized webp (~200 KB) via the Discord media proxy — never the
@@ -37,6 +38,14 @@ const CHANNELS = {
   '1371441554128109688': 'ghost-of-the-grid',
   '1356624589874004058': 'krentoraan',
 };
+
+/* Discord messages never shown in the gallery (help requests posted in a
+   gallery channel, etc.), by message id: the last number of the source URL.
+   Already-synced entries with these ids are dropped too. */
+const EXCLUDE = new Set([
+  '1567275741803188224', // "guys is this normal? I have settings on Ultra": troubleshooting post (Nov 2026)
+]);
+const messageId = (source) => (String(source || '').match(/\/(\d+)\/?$/) || [])[1];
 
 const ROOT = new URL('..', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1');
 const DATA_FILE = join(ROOT, '_data', 'community_gallery.yml');
@@ -89,9 +98,21 @@ function writeEntries(entries) {
   writeFileSync(DATA_FILE, `${header}\nitems:\n${body}\n`);
 }
 
+/* Removes Discord markup that means nothing outside Discord: user / role /
+   channel mentions (<@123>, <@!123>, <@&123>, <#123>), custom emoji
+   (<:name:123>, <a:name:123>) and slash command mentions (</cmd:123>). */
+function cleanDiscordText(s) {
+  return String(s || '')
+    .replace(/<(?:@[!&]?|#)\d+>/g, '')
+    .replace(/<a?:\w+:\d+>/g, '')
+    .replace(/<\/[^<>:]+:\d+>/g, '')
+    .replace(/\s+/g, ' ')
+    .replace(/^[\s,;:.]+|[\s,;:]+$/g, '');
+}
+
 function makeTitle(content, fallback) {
-  const firstLine = (content || '').split('\n')[0].replace(/https?:\/\/\S+/g, '').trim();
-  if (firstLine) return firstLine.slice(0, 60);
+  const firstLine = cleanDiscordText((content || '').split('\n')[0].replace(/https?:\/\/\S+/g, ''));
+  if (firstLine) return firstLine.slice(0, 60).trim();
   return fallback;
 }
 
@@ -114,7 +135,7 @@ for (const [channelId, modlist] of Object.entries(CHANNELS)) {
   for (const msg of messages) {
     const images = (msg.attachments || []).filter(a =>
       (a.content_type || '').startsWith('image/'));
-    if (!images.length) continue;
+    if (!images.length || EXCLUDE.has(msg.id)) continue;
 
     const source = `https://discord.com/channels/${channel.guild_id}/${channelId}/${msg.id}`;
     if (known.has(source)) continue;
@@ -136,7 +157,9 @@ for (const [channelId, modlist] of Object.entries(CHANNELS)) {
 /* Pass 2 — decide what the gallery keeps, THEN download only that.
    Manual entries (no discord source) are permanent; synced ones are capped. */
 const manual = existing.filter(e => !(e.source || '').includes('discord.com'));
-const previousSynced = existing.filter(e => (e.source || '').includes('discord.com'));
+const previousSynced = existing
+  .filter(e => (e.source || '').includes('discord.com') && !EXCLUDE.has(messageId(e.source)))
+  .map(e => ({ ...e, title: makeTitle(e.title, `Screenshot by ${e.author}`) }));
 const allSynced = [...candidates, ...previousSynced]
   .sort((a, b) => (b.date || '').localeCompare(a.date || ''))
   .slice(0, MAX_ITEMS);

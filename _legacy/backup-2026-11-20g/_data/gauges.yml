@@ -1,0 +1,164 @@
+# Stage gauges drawn on the game guide Survival pages (filter `gauge`, scripts/visuals.mjs).
+# Numbers come from _research/<list>.md, like the tables of the pages: update both together.
+# row: name, note, start (default 0), end/max, unit, ticks, approx (prefix ~), axis (text under the axis), open (last stage goes on),
+#      segs: [{to, label, value, tone}] or every: n (one segment per step).
+# tone: good, calm, 1, 2, 3 (worse and worse), a, b, c, d (parts of a sum), empty.
+
+wunduniik_needs:
+  caption:
+    en: "With Survival Mode on. Each bar starts when the need was last met."
+    fr: "Avec le Mode Survie. Chaque barre part du moment où le besoin a été satisfait."
+  rows:
+    - name: {en: Fatigue, fr: Fatigue}
+      note: {en: "Max Magicka and Stamina · cleared by 12 hours of sleep", fr: "Magie et Vigueur max · 12 heures de sommeil pour l'effacer"}
+      max: 30
+      unit: h
+      ticks: [0, 8, 12, 18, 24]
+      axis: {en: "hours since you got up from a bed", fr: "heures depuis votre lever"}
+      open: true
+      segs:
+        - {to: 8, label: Rested, tone: good}
+        - {to: 12, label: {en: No effect, fr: Sans effet}, tone: calm}
+        - {to: 18, label: Tired, value: "-10%", tone: 1}
+        - {to: 24, label: Very Tired, value: "-25%", tone: 2}
+        - {to: 30, label: Exhausted, value: "-50%", tone: 3}
+    - name: {en: Hunger, fr: Faim}
+      note: {en: "Max Magicka and Stamina · cleared by one food item", fr: "Magie et Vigueur max · un aliment pour l'effacer"}
+      max: 8
+      unit: h
+      ticks: [0, 2, 4, 6]
+      axis: {en: "hours since your last food buff ended", fr: "heures depuis la fin de votre dernier bonus de nourriture"}
+      open: true
+      segs:
+        - {to: 2, label: {en: No effect, fr: Sans effet}, tone: calm}
+        - {to: 4, label: Hungry, value: "-10%", tone: 1}
+        - {to: 6, label: Very Hungry, value: "-25%", tone: 2}
+        - {to: 8, label: Famished, value: "-50%", tone: 3}
+    - name: {en: Cold, fr: Froid}
+      note: {en: "Max Health · cleared at a fire or indoors", fr: "Santé max · s'efface près d'un feu ou à l'intérieur"}
+      max: 4
+      noaxis: true
+      axis: {en: "colder and colder: Warmth slows it down (below)", fr: "de plus en plus froid : la chaleur le ralentit (plus bas)"}
+      segs:
+        - {to: 1, label: {en: No effect, fr: Sans effet}, tone: calm}
+        - {to: 2, label: Cold, value: "-10%", tone: 1}
+        - {to: 3, label: Very Cold, value: "-25%", tone: 2}
+        - {to: 4, label: Freezing, value: "-50%", tone: 3}
+
+wunduniik_warmth:
+  caption:
+    en: "Warmth of a full outfit (chest piece, then helmet, gloves and boots together). Each point makes you get cold 0.3% slower, up to 75% at 250."
+    fr: "La chaleur d'une tenue complète (torse, puis casque, gants et bottes ensemble). Chaque point vous fait refroidir 0.3% moins vite, jusqu'à 75% à 250."
+  max: 250
+  ticks: [0, 50, 100, 150, 200, 250]
+  rows:
+    - name: {en: Clothing, fr: Vêtements}
+      note: {en: "50 · cold 15% slower", fr: "50 · refroidissement -15%"}
+      segs:
+        - {to: 20, label: {en: Chest, fr: Torse}, value: 20, tone: a}
+        - {to: 50, label: {en: "Head, hands, feet", fr: "Tête, mains, pieds"}, value: 30, tone: b}
+    - name: {en: Light armor, fr: Armure légère}
+      note: {en: "100 · cold 30% slower", fr: "100 · refroidissement -30%"}
+      segs:
+        - {to: 40, label: {en: Chest, fr: Torse}, value: 40, tone: a}
+        - {to: 100, label: {en: "Head, hands, feet", fr: "Tête, mains, pieds"}, value: 60, tone: b}
+    - name: {en: Heavy armor, fr: Armure lourde}
+      note: {en: "150 · cold 45% slower", fr: "150 · refroidissement -45%"}
+      segs:
+        - {to: 60, label: {en: Chest, fr: Torse}, value: 60, tone: a}
+        - {to: 150, label: {en: "Head, hands, feet", fr: "Tête, mains, pieds"}, value: 90, tone: b}
+    - name: {en: "Heavy armor, torch and hot stew", fr: "Armure lourde, torche et ragoût chaud"}
+      note: {en: "250 · cold 75% slower, the cap", fr: "250 · refroidissement -75%, le maximum"}
+      segs:
+        - {to: 60, label: {en: Chest, fr: Torse}, value: 60, tone: a}
+        - {to: 150, label: {en: "Head, hands, feet", fr: "Tête, mains, pieds"}, value: 90, tone: b}
+        - {to: 200, label: {en: Torch, fr: Torche}, value: "+50", tone: c}
+        - {to: 250, label: {en: Hot stew, fr: Ragoût chaud}, value: "+50", tone: d}
+
+wunduniik_health:
+  caption:
+    en: "Your Health bar, full on the left, empty on the right. Blocking or holding a ward halves the injury chance."
+    fr: "Votre barre de Santé, pleine à gauche, vide à droite. Bloquer ou tenir une protection divise le risque de blessure par deux."
+  start: 100
+  end: 0
+  unit: "%"
+  ticks: [100, 75, 50, 25, 0]
+  rows:
+    - name: {en: "Injury chance per heavy hit, Survival off", fr: "Risque de blessure par gros coup, Survie désactivée"}
+      note: Blade and Blunt
+      segs:
+        - {to: 50, label: {en: None, fr: Aucun}, tone: calm}
+        - {to: 25, value: "10%", tone: 1}
+        - {to: 0, value: "25%", tone: 2}
+    - name: {en: "Injury chance per heavy hit, Survival on", fr: "Risque de blessure par gros coup, Survie activée"}
+      note: Starfrost
+      segs:
+        - {to: 75, label: {en: None, fr: Aucun}, tone: calm}
+        - {to: 50, value: "5%", tone: 1}
+        - {to: 25, value: "25%", tone: 2}
+        - {to: 0, value: "50%", tone: 3}
+    - name: {en: "Natural Health regeneration, Survival on", fr: "Régénération naturelle de Santé, Survie activée"}
+      note: Starfrost
+      segs:
+        - {to: 50, label: {en: Almost none, fr: Quasi nulle}, tone: calm}
+        - {to: 25, value: "+100%", tone: good}
+        - {to: 0, value: {en: "another +100%", fr: "encore +100%"}, tone: good}
+
+ecp_needs:
+  caption:
+    en: "Peak Performance, after your first sleep: how many stages each need climbs if you leave it alone for two in-game days. In dangerous places Tension pauses all three, then they catch up with a penalty."
+    fr: "Peak Performance, après votre premier sommeil : le nombre de paliers que gagne chaque besoin si vous l'ignorez pendant deux jours de jeu. Dans les lieux dangereux, la Tension met les trois en pause, puis ils se rattrapent avec une pénalité."
+  max: 48
+  unit: h
+  rows:
+    - name: {en: Hunger, fr: Faim}
+      note: {en: "Health restoration · a stage every 8 hours", fr: "Régénération de santé · un palier toutes les 8 heures"}
+      every: 8
+      ticks: [0, 8, 16, 24, 32, 40, 48]
+    - name: {en: Thirst, fr: Soif}
+      note: {en: "O2 recovery speed · a stage about every 5 hours", fr: "Récupération d'O2 · un palier environ toutes les 5 heures"}
+      every: 5
+      approx: true
+      ticks: [0, 10, 20, 30, 40]
+    - name: {en: Fatigue, fr: Fatigue}
+      note: {en: "Experience gain · a stage about every 14 hours; sleep 8 hours somewhere safe to wake up Refreshed", fr: "Gain d'expérience · un palier environ toutes les 14 heures ; dormez 8 heures en lieu sûr pour vous réveiller Refreshed"}
+      every: 14
+      approx: true
+      ticks: [0, 14, 28, 42]
+
+ecp_suit:
+  caption:
+    en: "Maximum suit protection. Protection drains from the right: with Extremophile, threshold damage starts once the first 25% is gone, in extreme weather or planet conditions, unless you have 75 in the matching resistance."
+    fr: "Protection maximale de la combinaison. Elle se vide par la droite : avec Extremophile, les dégâts de seuil commencent quand les premiers 25% sont perdus, sous une météo ou des conditions extrêmes, sauf avec 75 dans la résistance adaptée."
+  max: 250
+  ticks: [0, 50, 100, 150, 200, 250]
+  rows:
+    - name: {en: Vanilla, fr: Jeu de base}
+      note: "100"
+      segs:
+        - {to: 100, label: {en: No threshold damage, fr: Pas de dégâts de seuil}, tone: calm}
+    - name: {en: With the list, fr: Avec la liste}
+      note: "150"
+      segs:
+        - {to: 112.5, label: {en: Threshold damage, fr: Dégâts de seuil}, tone: 2}
+        - {to: 150, label: {en: Safe, fr: Sans risque}, tone: good}
+    - name: {en: Environmental Conditioning rank 2, fr: Environmental Conditioning rang 2}
+      note: "250"
+      segs:
+        - {to: 187.5, label: {en: Threshold damage, fr: Dégâts de seuil}, tone: 2}
+        - {to: 250, label: {en: Safe, fr: Sans risque}, tone: good}
+
+ecp_o2:
+  caption:
+    en: "Atmo, while your suit and helmet are on: the O2 bar, full on the left."
+    fr: "Atmo, combinaison et casque portés : la barre d'O2, pleine à gauche."
+  start: 100
+  end: 0
+  unit: "%"
+  ticks: [100, 75, 50, 25, 10]
+  rows:
+    - name: O2
+      note: {en: "Under 10%: sprint speed -20%, jump height -60%", fr: "Sous 10% : vitesse de sprint -20%, hauteur de saut -60%"}
+      segs:
+        - {to: 10, label: {en: "O2 recovery drops as the bar falls, up to -60%", fr: "La récupération d'O2 baisse avec la barre, jusqu'à -60%"}, tone: 1}
+        - {to: 0, label: {en: "Sprint -20%, jump -60%", fr: "Sprint -20%, saut -60%"}, tone: 3}

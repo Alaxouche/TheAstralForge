@@ -25,7 +25,8 @@ UA = {'User-Agent': 'theastralforge-site-build'}
 # Site id <- modlist.json title
 IDS = {'Wunduniik': 'wunduniik', 'Krentoraan': 'krentoraan', 'Ghost of the Grid': 'ghost-of-the-grid',
        "No Man's Sky - Explorer": 'no-mans-sky-explorer', 'Extrasolar Containment Protocol': 'extrasolar-containment-protocol'}
-# Profile used for the contents (default: the profile with the most enabled mods)
+# Profile used for the contents (default: selected_profile of the ModOrganizer.ini the list installs,
+# i.e. the profile MO2 opens on; if that can't be read, the profile with the most enabled mods)
 PROFILE = {}
 NEXUS_DOMAIN = {'SkyrimSpecialEdition': 'skyrimspecialedition', 'Skyrim': 'skyrim', 'Cyberpunk2077': 'cyberpunk2077',
                 'NoMansSky': 'nomanssky', 'Starfield': 'starfield', 'Fallout4': 'fallout4', 'Oblivion': 'oblivion',
@@ -140,9 +141,70 @@ def clean_sep(name):
     return s or name
 
 
+# Credit fragments that name nobody once a "A - B - C" string is split
+NOT_AUTHORS = {'see credits', 'others', 'me', 'original mod', 'the community', 'expired', 'a k a', 'aka'}
+
+
 def split_authors(s):
-    parts = re.split(r'\s*(?:,|&|\+|/|\band\b)\s*', s)
-    return [p.strip() for p in parts if p.strip()]
+    """Nexus 'Author' field -> names. Cuts on , & + / 'and' and on ' - ' / ' -- ' (spaces around the
+    dash only, so 'Jean-Luc' stays whole) and on runs of 2+ spaces (Nexus strips some separators,
+    leaving 'RAN46  bellwood2206  Borearis'). Role words are dropped: 'My patches by Xtudo' -> 'Xtudo',
+    'Author Everglaid' -> 'Everglaid', 'a k a Anubis' -> 'Anubis'."""
+    out = []
+    for p in re.split(r'\s*(?:,|&|\+|/|\band\b)\s*|\s+-{1,2}\s+|\s{2,}', s):
+        p = re.sub(r'\s+', ' ', p).strip()
+        p = re.sub(r'^(?:.*\bby|a k a|aka|author|mod|animations)\s+', '', p, flags=re.I)
+        p = re.sub(r'\s+port$', '', p, flags=re.I).strip()
+        if p and p.lower() not in NOT_AUTHORS:
+            out.append(p)
+    return out
+
+
+def author_key(name):
+    """Names that differ only by case, spaces, underscores, hyphens or dots are one author."""
+    return re.sub(r'[\s_.\-]+', '', name).lower()
+
+
+def is_owner(name, owner):
+    k = author_key(name)
+    return 'alaxouche' in k or (owner and k == author_key(owner))
+
+
+def merge_authors(authors, weight=None):
+    """{name: {url: mod}} -> same map with spelling variants merged under one display name: the
+    variant credited on the most mods (tie: the one with spaces, then alphabetical)."""
+    weight = weight or {}
+    by_key = defaultdict(list)
+    for name in authors:
+        by_key[author_key(name)].append(name)
+    out = {}
+    for names in by_key.values():
+        best = max(names, key=lambda n: (weight.get(n, len(authors[n])), ' ' in n, [-ord(c) for c in n]))
+        merged = {}
+        for n in names:
+            merged.update(authors[n])
+        out[best] = merged
+    return out
+
+
+def default_profile(m, src, profiles):
+    """The profile MO2 opens after install: selected_profile in the ModOrganizer.ini the list writes."""
+    for d in m['Directives']:
+        if d['To'].replace('/', '\\').lower() != 'modorganizer.ini' or 'SourceDataID' not in d:
+            continue
+        ini = src.entry(d['SourceDataID']).decode('utf-8', 'replace')
+        mm = re.search(r'^\s*selected_profile\s*=\s*(.+?)\s*$', ini, re.M)
+        if not mm:
+            print('  warning: ModOrganizer.ini has no selected_profile')
+            return None
+        print(f"  ModOrganizer.ini ({d['$type'].split(',')[0]}): {mm.group(0).strip()}")
+        val = re.sub(r'^@ByteArray\((.*)\)$', r'\1', mm.group(1)).strip().strip('"')
+        hit = next((p for p in profiles if p.lower() == val.lower()), None)
+        if not hit:
+            print(f"  warning: selected_profile '{val}' is not one of the list's profiles")
+        return hit
+    print('  warning: no ModOrganizer.ini directive with inline content')
+    return None
 
 
 def analyse(site_id, title, src):
@@ -158,7 +220,12 @@ def analyse(site_id, title, src):
         if mm and 'SourceDataID' in d:
             profiles[mm.group(1)] = src.entry(d['SourceDataID']).decode('utf-8', 'replace').splitlines()
     enabled_of = lambda lines: [l[1:] for l in lines if l.startswith('+') and not l.endswith('_separator')]
-    prof = PROFILE.get(site_id) or max(profiles, key=lambda p: len(enabled_of(profiles[p])))
+    prof, rule = PROFILE.get(site_id), 'PROFILE override'
+    if not prof:
+        prof, rule = default_profile(m, src, profiles), 'selected_profile in ModOrganizer.ini'
+    if not prof:
+        prof, rule = max(profiles, key=lambda p: len(enabled_of(profiles[p]))), 'most enabled mods (fallback)'
+    print(f"{site_id}: profile '{prof}' ({rule}); profiles: {', '.join(sorted(profiles))}")
     lines = profiles[prof]
 
     # Bytes per mod folder and per source archive
@@ -212,7 +279,7 @@ def analyse(site_id, title, src):
                     nx = nexus(archives[h]) if h in archives else None
                     if nx and nx['author']:
                         for au in split_authors(nx['author']):
-                            if au.lower() != owner:
+                            if not is_owner(au, owner):
                                 authors[au][nx['url']] = nx['name']
                 mods.append([name, main['author'] if main else '', main['url'] if main else '', mod_bytes.get(name, 0)])
             if mods:
@@ -243,6 +310,8 @@ def analyse(site_id, title, src):
         for k in keys:
             if k not in files or prio[mod] < prio[files[k]]:
                 files[k] = mod
+
+    authors = merge_authors(authors)
 
     # Downloads (everything Wabbajack fetches; game files are copied from the game folder)
     by_source = defaultdict(lambda: [0, 0])
@@ -280,6 +349,32 @@ def main():
         t = res['totals']
         print(f"{sid} {res['version']} [{res['profile']}] mods={t['mods']} cats={t['categories']} "
               f"sections={t['sections']} authors={t['authors']} installed={t['installed'] / 1e9:.1f} GB -> {out.name} ({out.stat().st_size // 1024} KB)")
+    harmonize_authors()
+
+
+def harmonize_authors():
+    """The authors wall joins the lists by exact name, so one spelling per author across every
+    contents_<id>.json: the variant credited on the most mods over all lists."""
+    paths = sorted((ROOT / '_data').glob('contents_*.json'))
+    data = {p: json.loads(p.read_text(encoding='utf-8')) for p in paths}
+    weight, names = Counter(), defaultdict(set)
+    for d in data.values():
+        for name, mods in d.get('authors', {}).items():
+            weight[name] += len(mods)
+            names[author_key(name)].add(name)
+    best = {k: max(v, key=lambda n: (weight[n], ' ' in n, [-ord(c) for c in n])) for k, v in names.items()}
+    for p, d in data.items():
+        au = d.get('authors', {})
+        if all(best[author_key(n)] == n for n in au):
+            continue
+        merged = defaultdict(dict)
+        for n, mods in au.items():
+            merged[best[author_key(n)]].update({u: mn for mn, u in mods})
+        d['authors'] = {a: sorted(([mn, u] for u, mn in v.items()), key=lambda x: x[0].lower())
+                        for a, v in sorted(merged.items(), key=lambda kv: kv[0].lower())}
+        d.setdefault('totals', {})['authors'] = len(d['authors'])
+        p.write_text(json.dumps(d, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
+        print(f'{p.name}: author spellings aligned with the other lists')
 
 
 if __name__ == '__main__':

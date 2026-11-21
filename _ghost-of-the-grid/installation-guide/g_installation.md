@@ -76,9 +76,9 @@ Détails et captures : [Preventing auto-updates](https://wiki.redmodding.org/cyb
 
 Si vous avez déjà moddé Cyberpunk 2077 (Vortex, installation manuelle), retirez d'abord ces mods. Vérifier les fichiers du jeu dans Steam ou GOG répare les fichiers du jeu mais ne supprime pas les fichiers des mods. La [page de dépannage](https://wiki.redmodding.org/cyberpunk-2077-modding/for-mod-users/user-guide-troubleshooting) du wiki REDmodding (en anglais) explique comment revenir à un jeu propre.
 
-### RedMod
+### REDmod
 
-RedMod n'est pas nécessaire. Depuis la version 3.2.0.0, la liste ne contient plus aucun mod REDmod (voir le journal des modifications) : vous n'avez pas besoin d'installer le DLC REDmod.
+REDmod n'est pas nécessaire. Depuis la version 3.2.0.0, la liste ne contient plus aucun mod REDmod (voir le journal des modifications) : vous n'avez pas besoin d'installer le DLC REDmod.
 
 ### Emplacement d'Installation
 

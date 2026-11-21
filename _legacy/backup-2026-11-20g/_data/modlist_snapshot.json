@@ -1,0 +1,77 @@
+[
+  {
+    "id": "wunduniik",
+    "title": "Wunduniik",
+    "version": "7.3.0.0",
+    "dateUpdated": "2026-06-03T14:47:33.8471381Z",
+    "download_metadata": {
+      "Hash": "OJgb92CjmYk=",
+      "Size": 431676673,
+      "NumberOfArchives": 4791,
+      "SizeOfArchives": 190474878187,
+      "NumberOfInstalledFiles": 362378,
+      "SizeOfInstalledFiles": 311182292308,
+      "TotalSize": 501657170495
+    }
+  },
+  {
+    "id": "krentoraan",
+    "title": "Krentoraan",
+    "version": "1.3.0",
+    "dateUpdated": "2025-11-16T11:39:43.53445Z",
+    "download_metadata": {
+      "Hash": "xCEEbEp+LEY=",
+      "Size": 542912999,
+      "NumberOfArchives": 1739,
+      "SizeOfArchives": 115182211225,
+      "NumberOfInstalledFiles": 129113,
+      "SizeOfInstalledFiles": 152251724709,
+      "TotalSize": 267433935934
+    }
+  },
+  {
+    "id": "ghost-of-the-grid",
+    "title": "Ghost of the Grid",
+    "version": "4.0.0.0",
+    "dateUpdated": "2026-11-20T15:11:07.9722754Z",
+    "download_metadata": {
+      "Hash": "gA3TtYSxy70=",
+      "Size": 24572971,
+      "NumberOfArchives": 1469,
+      "SizeOfArchives": 31067228208,
+      "NumberOfInstalledFiles": 34519,
+      "SizeOfInstalledFiles": 32248778264,
+      "TotalSize": 63316006472
+    }
+  },
+  {
+    "id": "no-mans-sky-explorer",
+    "title": "No Man's Sky - Explorer",
+    "version": "3.1.0.0",
+    "dateUpdated": "2026-11-20T12:24:56.25517Z",
+    "download_metadata": {
+      "Hash": "QY+kTonhgXs=",
+      "Size": 2699820,
+      "NumberOfArchives": 225,
+      "SizeOfArchives": 1372956654,
+      "NumberOfInstalledFiles": 22755,
+      "SizeOfInstalledFiles": 2204935526,
+      "TotalSize": 3577892180
+    }
+  },
+  {
+    "id": "extrasolar-containment-protocol",
+    "title": "Extrasolar Containment Protocol",
+    "version": "2.4.1.0",
+    "dateUpdated": "2026-09-11T22:55:15.1765985Z",
+    "download_metadata": {
+      "Hash": "H8215DstslY=",
+      "Size": 9438637,
+      "NumberOfArchives": 797,
+      "SizeOfArchives": 69019356771,
+      "NumberOfInstalledFiles": 24900,
+      "SizeOfInstalledFiles": 84174386193,
+      "TotalSize": 153193742964
+    }
+  }
+]

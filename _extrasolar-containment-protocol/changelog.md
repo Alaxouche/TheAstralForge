@@ -4,8 +4,7 @@ title: Changelog
 nav_order: 2
 ---
 
-In this section you will find changelogs for the modlist since its release. You can track down precisely everything that gets added, removed, fixed, tweaked and updated.
-<div style="margin-bottom: 1rem;"></div>
+<p><span lang="en">Every version of the list since its release: what was added, removed, fixed, tweaked and updated.</span><span lang="fr">Chaque version de la liste depuis sa sortie : ce qui a été ajouté, retiré, corrigé, ajusté et mis à jour.</span></p>
 
 <details markdown="1">
 <summary>v2.4.1.0 - September 12, 2026</summary>

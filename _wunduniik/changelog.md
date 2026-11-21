@@ -4,8 +4,7 @@ title: Changelog
 nav_order: 2
 ---
 
-In this section you will find changelogs for the modlist since its release. You can track down precisely everything that gets added, removed, fixed, tweaked and updated.
-<div style="margin-bottom: 1rem;"></div>
+<p><span lang="en">Every version of the list since its release: what was added, removed, fixed, tweaked and updated.</span><span lang="fr">Chaque version de la liste depuis sa sortie : ce qui a été ajouté, retiré, corrigé, ajusté et mis à jour.</span></p>
 
 <details markdown="1">
 <summary>v7.3.0.0 - June 01, 2026</summary>
@@ -1711,7 +1710,7 @@ In this section you will find changelogs for the modlist since its release. You 
 - Fixed vampire race feeding, death, and CTD issues  
 - Fixed purple textures for some flora  
 - Fixed ground holes in Whiterun  
-- Fixed leveling up issues — you can now level up without waiting  
+- Fixed leveling up issues: you can now level up without waiting  
 - Fixed purple mannequins  
 - Fixed perk mod order issues causing locked perks  
 - Fixed water flickering in first person  

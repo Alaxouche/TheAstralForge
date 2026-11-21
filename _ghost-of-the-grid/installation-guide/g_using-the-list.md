@@ -95,7 +95,7 @@ Changez de profil via le menu déroulant en haut à gauche de MO2.
 ## Mise à Jour
 
 - Consultez toujours le journal des modifications avant de mettre à jour
-- **Sauvegardez vos sauvegardes** ou commencez une nouvelle partie après les mises à jour
+- **Sauvegardez vos parties** ou commencez une nouvelle partie après les mises à jour
 - Wabbajack supprimera tous les fichiers ne faisant pas partie de la modlist lors des mises à jour
 
 La procédure complète, avec ce que la mise à jour garde et supprime : [Mettre à jour la liste]({{ '/ghost-of-the-grid/installation-guide/updating/' | relative_url }}).

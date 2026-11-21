@@ -301,7 +301,7 @@
       var meta = e.download_metadata || {}, f = el.dataset.field, v = null;
       if (f === 'updated') { if (e.dateUpdated) el.setAttribute('datetime', e.dateUpdated); return; }
       if (f === 'version') v = e.version;
-      if (f === 'size' && meta.TotalSize) v = Math.round(meta.TotalSize / 1e9) + ' GB';
+      if (f === 'size' && meta.TotalSize) v = String(Math.round(meta.TotalSize / 1e9));
       if (f === 'archives' && meta.NumberOfArchives) v = String(meta.NumberOfArchives);
       if (v == null) return;
       if (el.hasAttribute('data-count')) el.dataset.final = v;
@@ -409,11 +409,6 @@
   buildToc();
 
   /* =========================================================
-     Lightbox
-     ========================================================= */
-  /* (lightbox lives in the enhancements module below) */
-
-  /* =========================================================
      Search (Ctrl+K or /)
      ========================================================= */
   var dlg = $('#search'), input = $('#search-input'), results = $('#search-results'), status = $('#search-status'), index = null, active = 0;
@@ -432,23 +427,30 @@
     var quick = $('[data-search-quick]');
     if (quick) quick.hidden = !!q;
     if (!index || !q) { results.innerHTML = ''; say(''); return; }
-    var terms = q.split(/\s+/), hits = [];
-    index.forEach(function (p) {
-      var t = low(p.t + ' ' + p.s), x = low(p.x), score = 0;
+    // Score: a term in the title, list name or URL counts most, then how often it appears in the text
+    // of the visitor's language; pages of the list being read come first.
+    var terms = q.split(/\s+/), hits = [], fr = lang() === 'fr';
+    var here = (location.pathname.slice(base.length).match(/^\/([^/]+)\//) || [])[1];
+    index.forEach(function (p, n) {
+      var body = fr && p.y ? p.y : p.x, title = fr && p.f ? p.f : p.t;
+      var t = low(p.t + ' ' + (p.f || '') + ' ' + p.s + ' ' + p.u.replace(/[/_-]/g, ' ')), x = low(body), score = 0;
       for (var i = 0; i < terms.length; i++) {
-        var inT = t.indexOf(terms[i]) !== -1, inX = x.indexOf(terms[i]) !== -1;
-        if (!inT && !inX) return;
-        score += (inT ? 10 : 0) + (inX ? 1 : 0);
+        // titles also match on a rough stem ("update" finds "Updating the List")
+        var stem = terms[i].length > 4 ? terms[i].replace(/(?:ing|es|e|s)$/, '') : terms[i];
+        var inT = t.indexOf(stem) !== -1, c = x.split(terms[i]).length - 1;
+        if (!inT && !c) return;
+        score += (inT ? 10 : 0) + (c ? 1 + Math.min(5, Math.log2(c)) : 0);
       }
+      if (here && p.u.indexOf('/' + here + '/') === 0) score += 4;
       var pos = x.indexOf(terms[0]);
-      var snip = pos === -1 ? p.x.slice(0, 120) : (pos > 40 ? '…' : '') + p.x.slice(Math.max(0, pos - 40), pos + 100);
-      hits.push({ p: p, score: score, snip: snip });
+      var snip = pos === -1 ? body.slice(0, 120) : (pos > 40 ? '…' : '') + body.slice(Math.max(0, pos - 40), pos + 100);
+      hits.push({ p: p, title: title, score: score, snip: snip, n: n });
     });
-    hits.sort(function (a, b) { return b.score - a.score; });
+    hits.sort(function (a, b) { return b.score - a.score || a.n - b.n; });
     active = 0;
     var re = new RegExp('(' + terms.map(function (t) { return t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }).join('|') + ')', 'gi');
     results.innerHTML = hits.length ? hits.slice(0, 12).map(function (h, i) {
-      return '<li><a href="' + base + h.p.u + '"' + (i === 0 ? ' class="is-active"' : '') + '><span class="r-title">' + esc(h.p.t) + '</span>' +
+      return '<li><a href="' + base + h.p.u + '"' + (i === 0 ? ' class="is-active"' : '') + '><span class="r-title">' + esc(h.title) + '</span>' +
         (h.p.s ? '<span class="r-sec">' + esc(h.p.s) + '</span>' : '') +
         '<span class="r-snip">' + esc(h.snip).replace(re, '<mark>$1</mark>') + '</span></a></li>';
     }).join('') : '<li class="r-empty">' + (lang() === 'fr' ? 'Rien trouvé.' : 'Nothing found.') + '</li>';
@@ -530,18 +532,18 @@
     // Send: POST /api/report (functions/api/report.js) forwards the report to the Discord channel.
     // When it is not available (local server, not configured), the preview below stays the way out.
     var opened = Date.now(), sending = false;
-    var status = $('[data-bug-status]', bug), sendBtn = $('[data-bug-send]', bug);
-    var say = function (en, fr, kind) { status.textContent = lang() === 'fr' ? fr : en; status.dataset.kind = kind || ''; };
+    var bugStatus = $('[data-bug-status]', bug), sendBtn = $('[data-bug-send]', bug);
+    var bugSay = function (en, fr, kind) { bugStatus.textContent = lang() === 'fr' ? fr : en; bugStatus.dataset.kind = kind || ''; };
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       if (sending) return;
       var f = form.elements;
       if (f.title.value.trim().length < 5 || f.details.value.trim().length < 20) {
-        say('Add a summary (5 characters or more) and some details (20 or more).', 'Ajoutez un résumé (5 caractères ou plus) et des détails (20 ou plus).', 'error');
+        bugSay('Add a summary (5 characters or more) and some details (20 or more).', 'Ajoutez un résumé (5 caractères ou plus) et des détails (20 ou plus).', 'error');
         return;
       }
       sending = true; sendBtn.disabled = true;
-      say('Sending…', 'Envoi…');
+      bugSay('Sending…', 'Envoi…');
       fetch(base + '/api/report', {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ title: f.title.value, type: f.type.value, project: f.project.value, contact: f.contact.value,
@@ -549,15 +551,15 @@
       }).then(function (r) { return r.json().catch(function () { return { ok: false }; }).then(function (d) { return { status: r.status, d: d }; }); })
         .then(function (res) {
           if (res.d && res.d.ok) {
-            say('Sent. Thanks! Answers come in the support channel on Discord.', 'Envoyé, merci ! Les réponses arrivent dans le canal de support du Discord.', 'ok');
+            bugSay('Sent. Thanks! Answers come in the support channel on Discord.', 'Envoyé, merci ! Les réponses arrivent dans le canal de support du Discord.', 'ok');
             form.reset(); render(); opened = Date.now();
           } else if (res.status === 429) {
-            say('Too many reports right now. Wait a minute and send again.', 'Trop d\'envois pour le moment. Attendez une minute puis renvoyez.', 'error');
+            bugSay('Too many reports right now. Wait a minute and send again.', 'Trop d\'envois pour le moment. Attendez une minute puis renvoyez.', 'error');
           } else {
-            say('Sending is not available. Copy the preview below and post it in the support channel.', 'L\'envoi n\'est pas disponible. Copiez l\'aperçu ci-dessous et publiez-le dans le canal de support.', 'error');
+            bugSay('Sending is not available. Copy the preview below and post it in the support channel.', 'L\'envoi n\'est pas disponible. Copiez l\'aperçu ci-dessous et publiez-le dans le canal de support.', 'error');
           }
         })
-        .catch(function () { say('Sending failed. Copy the preview below and post it on Discord.', 'L\'envoi a échoué. Copiez l\'aperçu ci-dessous et publiez-le sur Discord.', 'error'); })
+        .catch(function () { bugSay('Sending failed. Copy the preview below and post it on Discord.', 'L\'envoi a échoué. Copiez l\'aperçu ci-dessous et publiez-le sur Discord.', 'error'); })
         .then(function () { sending = false; sendBtn.disabled = false; });
     });
     render();
@@ -654,7 +656,7 @@
       var z = e.target.closest('[data-zoom]');
       if (!z) return;
       e.preventDefault();
-      var scope = z.closest('.masonry, .shots__grid, .strip, .prose') || document;
+      var scope = z.closest('.masonry, .shots__grid, .prose') || document;
       group = $$('[data-zoom]', scope).filter(function (x) { return x.offsetParent !== null; });
       if (!group.length) group = [z];
       lb.showModal(); show(Math.max(0, group.indexOf(z)));
@@ -715,7 +717,6 @@
   var logs = tools ? $$('details', tools.parentNode).filter(function (d) { return d.parentNode === tools.parentNode; }) : [];
   if (tools && logs.length) {
     var q = $('[data-cl-q]', tools), found = $('[data-cl-found]', tools), all = $('[data-cl-all]', tools), allOpen = false;
-    found.setAttribute('role', 'status');
     var labels = function () {
       q.placeholder = tr('Find a mod in the changelog…', 'Chercher un mod dans le changelog…');
       q.setAttribute('aria-label', q.placeholder);
@@ -816,7 +817,7 @@
   /* ---------- Mod contents, install estimator, authors wall (layouts and figures from scripts/contents.mjs) ---------- */
   var fmtB = function (b, L) {
     var fr = (L || lang()) === 'fr', v, u;
-    if (b >= 1e9) { v = b / 1e9; u = fr ? 'Go' : 'GB'; } else if (b >= 1e6) { v = b / 1e6; u = fr ? 'Mo' : 'MB'; } else { v = b / 1e3; u = fr ? 'ko' : 'KB'; }
+    if (b >= 999.5e6) { v = b / 1e9; u = fr ? 'Go' : 'GB'; } else if (b >= 999.5e3) { v = b / 1e6; u = fr ? 'Mo' : 'MB'; } else { v = b / 1e3; u = fr ? 'ko' : 'KB'; }
     var s = v >= 100 ? String(Math.round(v)) : v.toFixed(1).replace(/\.0$/, '');
     return (fr ? s.replace('.', ',') : s) + ' ' + u;
   };

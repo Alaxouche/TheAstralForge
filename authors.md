@@ -1,5 +1,6 @@
 ---
 title: Mod Authors
+title_fr: Auteurs des mods
 layout: page
 permalink: /authors/
 description: "The mod authors whose work is in The Astral Forge modlists."

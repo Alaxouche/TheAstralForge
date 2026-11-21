@@ -39,7 +39,7 @@ sized(128).save(out / "emblem-mark.webp", "WEBP", lossless=True, method=6)
 
 # Opaque versions (favicon, app icons, social card): white emblem on the site background
 BG = (7, 8, 10, 255)
-for s, pad in ((32, .06), (180, .14), (192, .16), (512, .16)):
+for s, pad in ((180, .14), (192, .16), (512, .16)):
     c = Image.new("RGBA", (s, s), BG)
     inner = round(s * (1 - 2 * pad))
     c.alpha_composite(sized(inner), ((s - inner) // 2, (s - inner) // 2))

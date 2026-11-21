@@ -19,7 +19,7 @@ A new version of Wunduniik installs over the old one, in the same folder. Wabbaj
 2. **Back up your saves.** Your saves are inside the list folder, in `profiles\<profile name>\saves`: the list keeps separate saves for each profile. Wabbajack leaves that folder alone during an update, but copy it somewhere outside the list folder first. A wrong folder choice or a cancelled update should never cost you a playthrough.
 3. **Protect the mods you added.** The update deletes every file of the list folder that is not part of the list. Rename the folder of each mod you added in Mod Organizer 2 so that it starts with `[NoDelete]`, such as `[NoDelete] My Mod`: Wabbajack keeps those.
 4. **Copy your own order.** The profile files (mod order, plugin order, INI files) are replaced by the list's. If you changed `modlist.txt` or `loadorder.txt` in your profile folder, copy them outside the list folder.
-5. **Check the game version.** The list runs its own copy of Skyrim from its `Game Root` folder, which the update rebuilds. Leave the Steam game as it is. The [system requirements]({{ '/wunduniik/installation-guide/system-requirements/' | relative_url }}) page gives the version the list needs.
+5. **Check the game version.** The list runs its own copy of Skyrim from its `Game Root` folder, which the update rebuilds. Leave the Steam game as it is. The [first page of the installation guide]({{ '/wunduniik/installation-guide/' | relative_url }}) gives the game version the list runs on.
 
 ## Updating
 
@@ -57,7 +57,7 @@ Une nouvelle version de Wunduniik s'installe par-dessus l'ancienne, dans le mêm
 2. **Sauvegardez vos parties.** Vos sauvegardes sont dans le dossier de la liste, dans `profiles\<nom du profil>\saves` : la liste garde des sauvegardes séparées pour chaque profil. Wabbajack ne touche pas à ce dossier pendant une mise à jour, mais copiez-le d'abord hors du dossier de la liste. Un mauvais choix de dossier ou une mise à jour annulée ne doivent jamais vous coûter une partie.
 3. **Protégez les mods que vous avez ajoutés.** La mise à jour supprime tous les fichiers du dossier de la liste qui n'en font pas partie. Renommez dans Mod Organizer 2 le dossier de chaque mod ajouté pour qu'il commence par `[NoDelete]`, par exemple `[NoDelete] Mon mod` : Wabbajack les garde.
 4. **Copiez votre propre ordre.** Les fichiers du profil (ordre des mods, ordre des plugins, fichiers INI) sont remplacés par ceux de la liste. Si vous avez modifié `modlist.txt` ou `loadorder.txt` dans le dossier du profil, copiez-les hors du dossier de la liste.
-5. **Vérifiez la version du jeu.** La liste lance sa propre copie de Skyrim depuis son dossier `Game Root`, que la mise à jour reconstruit. Laissez le jeu Steam tel quel. La page [configuration requise]({{ '/wunduniik/installation-guide/system-requirements/' | relative_url }}) donne la version demandée par la liste.
+5. **Vérifiez la version du jeu.** La liste lance sa propre copie de Skyrim depuis son dossier `Game Root`, que la mise à jour reconstruit. Laissez le jeu Steam tel quel. La [première page du guide d'installation]({{ '/wunduniik/installation-guide/' | relative_url }}) donne la version du jeu sur laquelle tourne la liste.
 
 ## Mettre à jour
 

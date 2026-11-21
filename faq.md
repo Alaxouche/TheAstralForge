@@ -14,6 +14,6 @@ description: "Answers to common questions about the modlists, installation and t
 <section class="cta">
   <img src="{{ '/assets/Images/Starfield/Starfield%202026-01-08%2014-43-04_392.webp' | relative_url }}" alt="" loading="lazy">
   <h2><span lang="en">Not in the list?</span><span lang="fr">Pas dans la liste ?</span></h2>
-  <p><span lang="en">Each list has its own help channel on Discord. Post your question with your logs and someone will take a look.</span><span lang="fr">Chaque liste a son canal d'aide sur le Discord. Postez votre question avec vos logs et quelqu'un y jettera un oeil.</span></p>
+  <p><span lang="en">Each list has its own help channel on Discord. Post your question with your logs and someone will take a look.</span><span lang="fr">Chaque liste a son canal d'aide sur le Discord. Postez votre question avec vos logs et quelqu'un y jettera un œil.</span></p>
   <a class="btn btn--solid" href="https://discord.gg/vKuB7nazBk" target="_blank" rel="noopener noreferrer"><span lang="en">Join the Discord</span><span lang="fr">Rejoindre le Discord</span></a>
 </section>

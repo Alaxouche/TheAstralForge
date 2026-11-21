@@ -1,4 +1,4 @@
-<h1 class="skip">The Astral Forge, modlists Wabbajack</h1>
+<h1 class="skip"><span lang="en">The Astral Forge: Wabbajack modlists</span><span lang="fr">The Astral Forge : modlists Wabbajack</span></h1>
 <section class="hero" data-hero>
 
   <article class="panel panel--forge" style="--i: 0" data-href="{{ '/hub/' | relative_url }}" tabindex="0" aria-label="The Astral Forge">
@@ -57,8 +57,8 @@
       <p class="panel__desc">{% if m.subtitle_fr %}<span lang="en">{{ m.subtitle }}</span><span lang="fr">{{ m.subtitle_fr }}</span>{% else %}{{ m.subtitle }}{% endif %}</p>
       {%- endif %}
       <dl class="panel__stats">
-        {%- if m.stats.size > 0 %}<div><dt>Mods</dt><dd data-count>{{ m.stats[0].value }}</dd></div>{% endif %}
-        <div><dt>{{ 'Size' | bi }}</dt><dd data-live="{{ m.title }}" data-field="size" data-count>{{ m.live.size }}</dd></div>
+        {%- if m.mods %}<div><dt>Mods</dt><dd data-count>{{ m.mods }}</dd></div>{% endif %}
+        <div><dt title="Downloads + install" data-title-fr="Téléchargements + installation"><span lang="en">Disk space</span><span lang="fr">Espace disque</span></dt><dd><span data-live="{{ m.title }}" data-field="size" data-count>{{ m.live.size }}</span>&nbsp;<span lang="en">GB</span><span lang="fr">Go</span></dd></div>
         <div><dt>Version</dt><dd data-live="{{ m.title }}" data-field="version">{{ m.live.version }}</dd></div>
         <div><dt>{{ 'Updated' | bi }}</dt><dd><time data-live="{{ m.title }}" data-field="updated" datetime="{{ m.live.updated }}">{{ m.live.updated | reltime }}</time></dd></div>
       </dl>
@@ -75,3 +75,4 @@
 
   <p class="hero__hint" aria-hidden="true"><span class="star"></span><span lang="en">Pick a list</span><span lang="fr">Choisissez une liste</span></p>
 </section>
+<a class="home-legal" href="{{ '/legal/' | relative_url }}"><span lang="en">Legal notice and privacy</span><span lang="fr">Mentions légales et confidentialité</span></a>

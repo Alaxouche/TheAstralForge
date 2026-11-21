@@ -1,28 +1,98 @@
+# Site FAQ (/faq/ and /hub/). Each entry: question, answer (Markdown), question_fr, answer_fr, tags, tags_fr.
 - id: install-speed
   question: "Why does Wabbajack take so long?"
-  answer: "Downloads are large and depend on Nexus/hosting speed. Install on SSD, avoid peak hours, and keep enough free disk space."
-  tags:
-    - Installation
-    - Wabbajack
-- id: crashes-intro
-  question: "I crash during the intro, is it normal?"
-  answer: "Some lists can be unstable during the scripted intro. Try again after the intro sequence or restart the game once."
-  tags:
-    - Stability
-    - Troubleshooting
+  answer: |
+    Mostly because of Nexus Mods. Without Premium, Nexus limits each download to about 3 MB/s (1.5 MB/s with an ad blocker) and asks for one click per file. With Premium there is no limit and no click. Then the install itself depends on your drive: an NVMe SSD is much faster than a hard drive.
+
+    Each list's **Wabbajack Installation** page has an estimator: pick your connection, Premium or not, and your drive, and it gives you the time for that list.
+  question_fr: "Pourquoi Wabbajack prend-il autant de temps ?"
+  answer_fr: |
+    Surtout à cause de Nexus Mods. Sans Premium, Nexus limite chaque téléchargement à environ 3 Mo/s (1,5 Mo/s avec un bloqueur de pub) et demande un clic par fichier. Avec Premium, il n'y a ni limite ni clic. Ensuite, l'installation dépend de votre disque : un SSD NVMe est bien plus rapide qu'un disque dur.
+
+    La page **Installation avec Wabbajack** de chaque liste a un estimateur : choisissez votre connexion, Premium ou non, et votre disque, il donne la durée pour cette liste.
+  tags: [Installation, Wabbajack]
+  tags_fr: [Installation, Wabbajack]
+- id: premium
+  question: "Do I need Nexus Premium?"
+  answer: "No. Every list installs with a free Nexus account. Without Premium you click a download button for each Nexus file and downloads are slower, so a large list takes much longer."
+  question_fr: "Faut-il Nexus Premium ?"
+  answer_fr: "Non. Chaque liste s'installe avec un compte Nexus gratuit. Sans Premium, vous cliquez sur un bouton de téléchargement pour chaque fichier Nexus et les téléchargements sont plus lents : une grosse liste prend donc beaucoup plus de temps."
+  tags: [Installation, Nexus]
+  tags_fr: [Installation, Nexus]
+- id: crashes
+  question: "My game crashes. What should I do?"
+  answer: |
+    Open the **Troubleshooting** page of your list. It asks two or three questions to find the fix, explains where the crash log is, and reads the log for you: paste it and it lists the mods it names.
+
+    - [Wunduniik](/wunduniik/troubleshooting/)
+    - [Krentoraan](/krentoraan/troubleshooting/)
+    - [Ghost of the Grid](/ghost-of-the-grid/troubleshooting/)
+    - [No Man's Sky - Explorer](/no-mans-sky-explorer/troubleshooting/)
+    - [Extrasolar Containment Protocol](/extrasolar-containment-protocol/troubleshooting/)
+  question_fr: "Mon jeu plante. Que faire ?"
+  answer_fr: |
+    Ouvrez la page **Dépannage** de votre liste. Elle pose deux ou trois questions pour trouver la solution, explique où se trouve le journal de crash et le lit pour vous : collez-le et elle liste les mods qu'il cite.
+
+    - [Wunduniik](/wunduniik/troubleshooting/)
+    - [Krentoraan](/krentoraan/troubleshooting/)
+    - [Ghost of the Grid](/ghost-of-the-grid/troubleshooting/)
+    - [No Man's Sky - Explorer](/no-mans-sky-explorer/troubleshooting/)
+    - [Extrasolar Containment Protocol](/extrasolar-containment-protocol/troubleshooting/)
+  tags: [Stability, Troubleshooting]
+  tags_fr: [Stabilité, Dépannage]
+- id: update
+  question: "How do I update a list without losing my saves?"
+  answer: |
+    Each list has an **Updating the List** page in its installation guide. It says what to back up, how to run the update in Wabbajack, and what the update keeps: saves, the downloads folder and mods you renamed with `[NoDelete]`. Everything else in the list folder is replaced.
+
+    - [Wunduniik](/wunduniik/installation-guide/updating/)
+    - [Krentoraan](/krentoraan/installation-guide/updating/)
+    - [Ghost of the Grid](/ghost-of-the-grid/installation-guide/updating/)
+    - [No Man's Sky - Explorer](/no-mans-sky-explorer/installation-guide/updating/)
+    - [Extrasolar Containment Protocol](/extrasolar-containment-protocol/installation-guide/updating/)
+  question_fr: "Comment mettre à jour une liste sans perdre mes sauvegardes ?"
+  answer_fr: |
+    Chaque liste a une page **Mettre à jour la liste** dans son guide d'installation. Elle dit quoi sauvegarder, comment lancer la mise à jour dans Wabbajack et ce que la mise à jour garde : les sauvegardes, le dossier de téléchargements et les mods renommés avec `[NoDelete]`. Tout le reste du dossier de la liste est remplacé.
+
+    - [Wunduniik](/wunduniik/installation-guide/updating/)
+    - [Krentoraan](/krentoraan/installation-guide/updating/)
+    - [Ghost of the Grid](/ghost-of-the-grid/installation-guide/updating/)
+    - [No Man's Sky - Explorer](/no-mans-sky-explorer/installation-guide/updating/)
+    - [Extrasolar Containment Protocol](/extrasolar-containment-protocol/installation-guide/updating/)
+  tags: [Updates]
+  tags_fr: [Mises à jour]
 - id: loadorder
   question: "Where can I find the load order?"
-  answer: "Each project has a Load Order page in its quick links. You can also use the search bar to find it quickly."
-  tags:
-    - Documentation
+  answer: |
+    - [Wunduniik](/wunduniik/loadorder/)
+    - [Krentoraan](/krentoraan/loadorder/)
+    - [Ghost of the Grid](/ghost-of-the-grid/loadorder/)
+    - [No Man's Sky - Explorer](/no-mans-sky-explorer/loadorder/)
+    - [Extrasolar Containment Protocol](/extrasolar-containment-protocol/loadorder/)
+
+    The **Mod Contents** page of each list also shows every mod, grouped by section, with its author and Nexus link.
+  question_fr: "Où trouver l'ordre de chargement ?"
+  answer_fr: |
+    - [Wunduniik](/wunduniik/loadorder/)
+    - [Krentoraan](/krentoraan/loadorder/)
+    - [Ghost of the Grid](/ghost-of-the-grid/loadorder/)
+    - [No Man's Sky - Explorer](/no-mans-sky-explorer/loadorder/)
+    - [Extrasolar Containment Protocol](/extrasolar-containment-protocol/loadorder/)
+
+    La page **Contenu** de chaque liste montre aussi tous les mods, rangés par section, avec leur auteur et leur lien Nexus.
+  tags: [Documentation]
+  tags_fr: [Documentation]
 - id: reporting-bugs
   question: "How should I report a bug?"
-  answer: "Use the Discord support channel and include logs, steps to reproduce, and your system specs."
-  tags:
-    - Support
+  answer: "Use the [bug report form](/report-a-bug/): it goes to the support channel on Discord. Say which list and version you play, what you did just before, and add the crash log as a link. You can also post directly in the support channel of the [Discord server](https://discord.gg/vKuB7nazBk)."
+  question_fr: "Comment signaler un bug ?"
+  answer_fr: "Utilisez le [formulaire de signalement](/report-a-bug/) : il arrive dans le canal de support du Discord. Indiquez la liste et la version que vous jouez, ce que vous faisiez juste avant, et ajoutez le journal de crash sous forme de lien. Vous pouvez aussi poster directement dans le canal de support du [serveur Discord](https://discord.gg/vKuB7nazBk)."
+  tags: [Support]
+  tags_fr: [Assistance]
 - id: update-frequency
-  question: "How often are modlists updated?"
-  answer: "Updates are posted in each changelog. Frequency depends on game patches and mod updates."
-  tags:
-    - Changelog
-
+  question: "How often are the lists updated?"
+  answer: "There is no fixed schedule: a list is updated when its game or its mods need it. The footer of every page shows the current version of each list and how long ago it came out, and each list's changelog says what changed and whether you need a new save."
+  question_fr: "À quelle fréquence les listes sont-elles mises à jour ?"
+  answer_fr: "Il n'y a pas de rythme fixe : une liste est mise à jour quand son jeu ou ses mods le demandent. Le pied de chaque page montre la version actuelle de chaque liste et son ancienneté, et le changelog de chaque liste dit ce qui a changé et s'il faut une nouvelle partie."
+  tags: [Changelog]
+  tags_fr: [Changelog]

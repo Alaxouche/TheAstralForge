@@ -147,6 +147,44 @@ export function gaugeHtml(g, lang = 'en') {
    milestones as big stars with their perks around them, lines for prerequisites. Both languages at once. */
 const bi = (en, fr) => (en === fr || !fr ? esc(en) : `<span lang="en">${esc(en)}</span><span lang="fr">${esc(fr)}</span>`);
 const biRaw = (en, fr) => `<span lang="en">${en}</span><span lang="fr">${fr}</span>`;
+
+/* Game text cleanup, shared by the Cyberpunk and Starfield tables.
+   - Dashes from the game strings (the site copy has none): a pair of spaced dashes around an aside becomes two commas,
+     a single spaced dash a colon ("Double Sprint: the ability to..."), an unspaced one between words a comma
+     ("25%, giving"), one between digits a hyphen (range). French gets " : ", which frenchSpacing() makes no-break.
+   - Cyberpunk input tokens ([Dodge], [QuickMelee]...) become the action's name in a <kbd>, in the page language.
+     No key is printed: players rebind them and the list does not change these defaults (_data/keymaps.yml).
+     An unknown token is split into words ("UseCombatGadget" -> "Use combat gadget") so a regenerated JSON stays readable. */
+const CP_INPUTS = {
+  ToggleSprint: ['Sprint', 'Sprint'],
+  QuickMelee: ['Quick melee', 'Attaque rapide au corps-à-corps'],
+  QuickExit: ['Exit vehicle', 'Sortir du véhicule'],
+  Dodge: ['Dodge', 'Esquive'],
+  IconicCyberware: ['Cyberware ability', 'Capacité du cyberware'],
+  UseCombatGadget: ['Combat gadget', 'Gadget de combat'],
+  Choice1: ['Interact', 'Interagir'], // first interaction choice: the finisher prompt
+};
+const SP = '[ \\t\\u00a0]+';
+function gameDashes(s, lang = 'en') {
+  const colon = lang === 'fr' ? ' : ' : ': ';
+  return String(s ?? '')
+    .replace(/(\d)[–—](\d)/g, '$1-$2')
+    .replace(new RegExp(`${SP}[–—]${SP}([^.!?\\n–—]+?)${SP}[–—]${SP}`, 'g'), ', $1, ')
+    .replace(new RegExp(`${SP}[–—]${SP}`, 'g'), colon)
+    .replace(/(\S)[–—](?=\S)/g, '$1, ')
+    .replace(/[–—]/g, '-');
+}
+const inputName = (id, lang) => (CP_INPUTS[id]
+  ? CP_INPUTS[id][lang === 'fr' ? 1 : 0]
+  : id.replace(/([a-z0-9])([A-Z])/g, '$1 $2').replace(/ ([A-Z])(?=[a-z])/g, (m, c) => ' ' + c.toLowerCase()));
+// escaped text in, HTML out
+const gameHtml = (escaped, lang = 'en') => gameDashes(escaped, lang)
+  .replace(/\[([A-Z][A-Za-z0-9_]*)\]/g, (m, id) => `<kbd>${esc(inputName(id, lang))}</kbd>`);
+// like bi(), for game strings (fr is often the English text when the mod has no translation)
+const biGame = (en, fr) => {
+  const e = gameHtml(esc(en), 'en');
+  return en === fr || !fr ? e : `<span lang="en">${e}</span><span lang="fr">${gameHtml(esc(fr), 'fr')}</span>`;
+};
 const CP_COL = { Left: 0, Inbetween_Left: 1, Central: 2, Inbetween_Right: 3, Right: 4 };
 const CP_ROW = { Novice: 0, Adept: 1, Expert: 2, Master: 3, Espionage: 0 };
 const slugify = (s) => String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
@@ -241,10 +279,10 @@ export function cpPerksHtml(data) {
       `<th>${biRaw('Needs', 'Requis')}</th><th>${biRaw('Effect', 'Effet')}</th></tr></thead><tbody>`;
     cpOrder(t).forEach((p, k) => {
       const lv = p.levels || [];
-      const eff = (l) => esc(l).replace(/\n+/g, '<br>');
+      const eff = (l, lang) => gameHtml(esc(l), lang).replace(/\n+/g, '<br>');
       const effect = lv.length > 1
-        ? '<ol class="pt-ranks">' + lv.map((l) => `<li>${biRaw(eff(l.en), eff(l.fr))}</li>`).join('') + '</ol>'
-        : (lv[0] ? biRaw(eff(lv[0].en), eff(lv[0].fr)) : '');
+        ? '<ol class="pt-ranks">' + lv.map((l) => `<li>${biRaw(eff(l.en, 'en'), eff(l.fr, 'fr'))}</li>`).join('') + '</ol>'
+        : (lv[0] ? biRaw(eff(lv[0].en, 'en'), eff(lv[0].fr, 'fr')) : '');
       const by = p.changed_by && p.changed_by.length
         ? `<span class="pt-mod">${biRaw('Changed by ', 'Modifié par ')}${esc(p.changed_by.join(', '))}</span>` : '';
       const needs = t.id === 'Espionage' ? 'Relic' : p.needs;
@@ -273,7 +311,7 @@ export function sfSkillsHtml(data) {
       board += `<div class="sk-tier"><span class="sk-tier__name">${bi(...SF_TIERS[tier])}</span>`;
       for (const s of list) {
         const mark = s.new ? ' is-new' : s.by ? ' is-mod' : '';
-        board += `<a class="sk-chip${mark}" href="#${slug(s)}" title="${escA(s.description.en)}"><span class="sk-chip__name">${bi(s.name.en, s.name.fr)}</span>` +
+        board += `<a class="sk-chip${mark}" href="#${slug(s)}" title="${escA(gameDashes(s.description.en))}"><span class="sk-chip__name">${bi(s.name.en, s.name.fr)}</span>` +
           (s.name.fr !== s.name.en ? `<span class="sk-alt" lang="fr">${esc(s.name.en)}</span>` : '') +
           `<span class="sk-pips" aria-hidden="true">${'<i></i>'.repeat(s.ranks.length || 4)}</span></a>`;
       }
@@ -290,8 +328,8 @@ export function sfSkillsHtml(data) {
     for (const tier of [1, 2, 3, 4]) {
       for (const s of skills.filter((x) => x.category === id && x.tier === tier)) {
         const ranks = '<ol class="pt-ranks">' + s.ranks.map((r) => {
-          const ch = r.challenge && r.challenge.en ? `<span class="sk-next">${biRaw('Next rank: ', 'Rang suivant : ')}${bi(r.challenge.en, r.challenge.fr)}</span>` : '';
-          return `<li>${bi(r.desc.en, r.desc.fr)}${ch}</li>`;
+          const ch = r.challenge && r.challenge.en ? `<span class="sk-next">${biRaw('Next rank: ', 'Rang suivant : ')}${biGame(r.challenge.en, r.challenge.fr)}</span>` : '';
+          return `<li>${biGame(r.desc.en, r.desc.fr)}${ch}</li>`;
         }).join('') + '</ol>';
         const by = s.by ? `<span class="pt-mod">${s.new ? biRaw('Added by ', 'Ajoutée par ') : biRaw('Changed by ', 'Modifiée par ')}${esc(s.by)}</span>` : '';
         html += `<tr id="${slug(s)}"><td class="pt-name">${bi(s.name.en, s.name.fr)}${s.name.fr !== s.name.en ? `<span class="sk-alt" lang="fr">${esc(s.name.en)}</span>` : ''}</td>` +

@@ -1,6 +1,6 @@
 ---
 layout: skyground_readme
-title: System Requirement
+title: System Requirements
 parent: Installation Guide
 nav_order: 1
 ---
@@ -32,17 +32,10 @@ Comme Ghost of the Grid est une modlist axée sur les graphismes, vous devez dis
 
 </div>
 
-<div class="modlist-size" data-modlist-size data-modlist-source="https://raw.githubusercontent.com/Alaxouche/Wunduniik/main/modlist.json" data-modlist-title="Ghost of the Grid">
-   <strong>Space required:</strong>
-   <span data-modlist-total>Loading...</span> total,
-   including <span data-modlist-install>Loading...</span> for install
-   and <span data-modlist-download>Loading...</span> for downloads.
-   <span data-modlist-version hidden>Version</span>
+<div class="modlist-size">
+<p lang="en"><strong>Space required:</strong> <span data-modlist-total>Loading...</span> in total, including <span data-modlist-install>Loading...</span> for the install and <span data-modlist-download>Loading...</span> for the downloads.</p>
+<p lang="fr"><strong>Espace nécessaire :</strong> <span data-modlist-total>Loading...</span> au total, dont <span data-modlist-install>Loading...</span> pour l'installation et <span data-modlist-download>Loading...</span> pour les téléchargements.</p>
 </div>
-
-<noscript>
-   <p><strong>Space required:</strong> 61 GB total (approx. 31 GB install + 30 GB downloads).</p>
-</noscript>
 
 <div lang="en" markdown="1">
 
@@ -51,7 +44,7 @@ Comme Ghost of the Grid est une modlist axée sur les graphismes, vous devez dis
 
 | Configuration         | CPU        | GPU                | RAM          | Storage                | Display          | FPS |
 |-----------------------|------------|--------------------|--------------|------------------------|------------------|-----|
-| **Minimum Specs**     | i5-7600k   | Nvidia RTX 2080    | 16 GB DDR4   | 500 GB SATA II SSD     | FHD 60 Hz        | 45  |
+| **Minimum Specs**     | i5-7600k   | Nvidia RTX 2080    | 16 GB DDR4   | SATA SSD, space above  | FHD 60 Hz        | 45  |
 | **Recommended Specs** | i7-9700k   | Nvidia RTX 3060 Ti | 32 GB DDR4   | 1 TB SATA III/M.2 SSD  | FHD 60 Hz        | 60  |
 | **Author's Specs**    | i5-10400f  | Nvidia RTX 3090    | 32 GB DDR4   | 1 TB M.2 SSD           | 2K 180 Hz        | 60+ |
 
@@ -91,7 +84,7 @@ Install the latest [Microsoft Visual C++ Redistributable (x64)](https://aka.ms/v
 
 | Configuration          | CPU        | GPU                 | RAM          | Stockage               | Écran            | FPS |
 |------------------------|------------|---------------------|--------------|------------------------|------------------|-----|
-| **Config. Minimum**    | i5-7600k   | Nvidia RTX 2080     | 16 Go DDR4   | 500 Go SATA II SSD     | FHD 60 Hz        | 45  |
+| **Config. Minimum**    | i5-7600k   | Nvidia RTX 2080     | 16 Go DDR4   | SSD SATA, place ci-dessus | FHD 60 Hz        | 45  |
 | **Config. Recommandée**| i7-9700k   | Nvidia RTX 3060 Ti  | 32 Go DDR4   | 1 To SATA III/M.2 SSD  | FHD 60 Hz        | 60  |
 | **Config. de l'Auteur**| i5-10400f  | Nvidia RTX 3090     | 32 Go DDR4   | 1 To M.2 SSD           | 2K 180 Hz        | 60+ |
 

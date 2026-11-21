@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {%- if is_home %}
-  <title>{{ site.title }} | Modlists Skyrim, Cyberpunk 2077, Starfield</title>
+  <title>{{ site.title }} | Wabbajack modlists for Skyrim, Cyberpunk 2077, No Man's Sky, Starfield</title>
   {%- else %}
   <title>{{ page.title }}{% if modlist and modlist.title != page.title %} · {{ modlist.title }}{% endif %} | {{ site.title }}</title>
   {%- endif %}
@@ -72,7 +72,8 @@
       <a class="btn nav__page" href="{{ '/hub/' | relative_url }}"{% if page.collection or page.url == '/hub/' %} aria-current="page"{% endif %}>Modlists</a>
       <a class="btn nav__page" href="{{ '/gallery/' | relative_url }}"{% if page.url == '/gallery/' %} aria-current="page"{% endif %}><span lang="en">Gallery</span><span lang="fr">Galerie</span></a>
       <a class="btn nav__page" href="{{ '/faq/' | relative_url }}"{% if page.url == '/faq/' %} aria-current="page"{% endif %}>FAQ</a>
-      <a class="btn nav__page" href="{{ '/contributors/' | relative_url }}"{% if page.url == '/contributors/' %} aria-current="page"{% endif %}><span lang="en">Support</span><span lang="fr">Soutenir</span></a>
+      <a class="btn nav__page" href="{{ '/contributors/' | relative_url }}"{% if page.url == '/contributors/' %} aria-current="page"{% endif %}><span lang="en">Supporters</span><span lang="fr">Soutiens</span></a>
+      <a class="btn nav__page" href="{{ '/report-a-bug/' | relative_url }}"{% if page.url == '/report-a-bug/' %} aria-current="page"{% endif %}><span lang="en">Report a bug</span><span lang="fr">Signaler un bug</span></a>
       <a class="nav__cta" href="https://discord.gg/alaxouche-s-modding-hub-750268919201398805" target="_blank" rel="noopener noreferrer">Discord<span class="nav__online" data-discord-online hidden><span class="pulse"></span><span data-discord-count></span></span></a>
       <button class="nav__tool" type="button" data-search-open aria-label="Search (Ctrl+K)" data-aria-fr="Rechercher (Ctrl+K)" aria-keyshortcuts="Control+K /">
         <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
@@ -93,7 +94,7 @@
     <a href="{{ '/hub/' | relative_url }}">Modlists</a>
     <a href="{{ '/gallery/' | relative_url }}"><span lang="en">Gallery</span><span lang="fr">Galerie</span></a>
     <a href="{{ '/faq/' | relative_url }}">FAQ</a>
-    <a href="{{ '/contributors/' | relative_url }}"><span lang="en">Support</span><span lang="fr">Soutenir</span></a>
+    <a href="{{ '/contributors/' | relative_url }}"><span lang="en">Supporters</span><span lang="fr">Soutiens</span></a>
     <a href="{{ '/report-a-bug/' | relative_url }}"><span lang="en">Report a bug</span><span lang="fr">Signaler un bug</span></a>
     <a href="https://discord.gg/alaxouche-s-modding-hub-750268919201398805" target="_blank" rel="noopener noreferrer">Discord</a>
   </nav>
@@ -125,7 +126,7 @@
         <ul>
           <li><a href="{{ '/faq/' | relative_url }}">FAQ</a></li>
           <li><a href="{{ '/gallery/' | relative_url }}"><span lang="en">Gallery</span><span lang="fr">Galerie</span></a></li>
-          <li><a href="{{ '/contributors/' | relative_url }}"><span lang="en">Contributors</span><span lang="fr">Contributeurs</span></a></li>
+          <li><a href="{{ '/contributors/' | relative_url }}"><span lang="en">Supporters</span><span lang="fr">Soutiens</span></a></li>
           <li><a href="{{ '/authors/' | relative_url }}"><span lang="en">Mod authors</span><span lang="fr">Auteurs des mods</span></a></li>
           <li><a href="{{ '/report-a-bug/' | relative_url }}"><span lang="en">Report a bug</span><span lang="fr">Signaler un bug</span></a></li>
           <li><a href="{{ '/releases.xml' | relative_url }}"><span lang="en">Releases feed</span><span lang="fr">Flux des versions</span></a></li>

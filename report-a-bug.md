@@ -4,7 +4,7 @@ layout: page
 permalink: /report-a-bug/
 description: "Send a bug report straight to the support channel on Discord."
 ---
-{% include page_hero.html eyebrow="Support" eyebrow_fr="Assistance" title_en="Report a bug" title_fr="Signaler un bug" lead_en="Fill in the form and send it: it goes straight to the support channel on Discord. Put logs and screenshots as links." lead_fr="Remplissez le formulaire et envoyez-le : il arrive directement dans le canal de support du Discord. Mettez les logs et captures sous forme de liens." image="/assets/Images/Cyberpunk/photomode_12092025_110731.webp" %}
+{% include page_hero.html eyebrow="Help" eyebrow_fr="Aide" title_en="Report a bug" title_fr="Signaler un bug" lead_en="Fill in the form and send it: it goes straight to the support channel on Discord. Put logs and screenshots as links." lead_fr="Remplissez le formulaire et envoyez-le : il arrive directement dans le canal de support du Discord. Mettez les logs et captures sous forme de liens." image="/assets/Images/Cyberpunk/photomode_12092025_110731.webp" %}
 
 <section class="wrap narrow section" data-bug>
   <form class="form">

@@ -28,17 +28,10 @@ Exécuter la liste depuis des disques durs (HDD) ou des lecteurs externes est **
 
 </div>
 
-<div class="modlist-size" data-modlist-size data-modlist-source="https://raw.githubusercontent.com/Alaxouche/Wunduniik/main/modlist.json" data-modlist-title="Extrasolar Containment Protocol">
-  <strong>Space required:</strong>
-  <span data-modlist-total>Loading...</span> total,
-  including <span data-modlist-install>Loading...</span> for install
-  and <span data-modlist-download>Loading...</span> for downloads.
-  <span data-modlist-version hidden>Version</span>
+<div class="modlist-size">
+<p lang="en"><strong>Space required:</strong> <span data-modlist-total>Loading...</span> in total, including <span data-modlist-install>Loading...</span> for the install and <span data-modlist-download>Loading...</span> for the downloads.</p>
+<p lang="fr"><strong>Espace nécessaire :</strong> <span data-modlist-total>Loading...</span> au total, dont <span data-modlist-install>Loading...</span> pour l'installation et <span data-modlist-download>Loading...</span> pour les téléchargements.</p>
 </div>
-
-<noscript>
-  <p><strong>Space required:</strong> Refer to the Wabbajack gallery for current size information.</p>
-</noscript>
 
 <div lang="en" markdown="1">
 
@@ -47,13 +40,13 @@ Exécuter la liste depuis des disques durs (HDD) ou des lecteurs externes est **
 
 | Configuration         | CPU        | GPU                | RAM          | Storage                | Display          | FPS |
 |-----------------------|------------|--------------------|--------------|------------------------|------------------|-----|
-| **Minimum Specs**     | i5-9600k   | Nvidia RTX 2070    | 16 GB DDR4   | 500 GB SATA III SSD    | FHD 60 Hz        | 45  |
+| **Minimum Specs**     | i5-9600k   | Nvidia RTX 2070    | 16 GB DDR4   | SATA SSD, space above  | FHD 60 Hz        | 45  |
 | **Recommended Specs** | i7-10700k  | Nvidia RTX 3080    | 32 GB DDR4   | 1 TB M.2 SSD           | FHD 60 Hz        | 60  |
 | **Author's Specs**    | i5-10400f  | Nvidia RTX 3090    | 32 GB DDR4   | 1 TB M.2 SSD           | 2K 180 Hz        | 60+ |
 
 ## Necessary And Useful Applications
 
-Install the [.NET 8 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/8.0) and [Visual C++ x64](https://aka.ms/vs/16/release/vc_redist.x64.exe), then restart your PC. The [Wabbajack troubleshooting FAQ](https://wiki.wabbajack.org/user_documentation/Troubleshooting%20FAQ.html) lists both as the fix for texture conversion (texconv) errors during installation.
+Install the latest [Microsoft Visual C++ Redistributable (x64)](https://aka.ms/vc14/vc_redist.x64.exe), then restart your PC. Wabbajack ships with the .NET runtime it needs. If the install stops on texture conversion (texconv) errors, the [Wabbajack troubleshooting FAQ](https://wiki.wabbajack.org/user_documentation/Troubleshooting%20FAQ.html) says to also install the [.NET 8 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/8.0).
 
 ## PageFile Configuration
 
@@ -80,13 +73,13 @@ Make sure to add your Starfield installation folder, your Wabbajack folder, and 
 
 | Configuration          | CPU        | GPU                | RAM          | Stockage               | Écran            | FPS |
 |------------------------|------------|--------------------|--------------|------------------------|------------------|-----|
-| **Config. Minimum**    | i5-9600k   | Nvidia RTX 2070    | 16 Go DDR4   | 500 Go SATA III SSD    | FHD 60 Hz        | 45  |
+| **Config. Minimum**    | i5-9600k   | Nvidia RTX 2070    | 16 Go DDR4   | SSD SATA, place ci-dessus | FHD 60 Hz        | 45  |
 | **Config. Recommandée**| i7-10700k  | Nvidia RTX 3080    | 32 Go DDR4   | 1 To M.2 SSD           | FHD 60 Hz        | 60  |
 | **Config. de l'Auteur**| i5-10400f  | Nvidia RTX 3090    | 32 Go DDR4   | 1 To M.2 SSD           | 2K 180 Hz        | 60+ |
 
 ## Applications Nécessaires et Utiles
 
-Installez le [.NET 8 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/8.0) et [Visual C++ x64](https://aka.ms/vs/16/release/vc_redist.x64.exe), puis redémarrez votre PC. La [FAQ de dépannage de Wabbajack](https://wiki.wabbajack.org/user_documentation/Troubleshooting%20FAQ.html) indique ces deux installations comme solution aux erreurs de conversion de textures (texconv) pendant l'installation.
+Installez la dernière version de [Microsoft Visual C++ Redistributable (x64)](https://aka.ms/vc14/vc_redist.x64.exe), puis redémarrez votre PC. Wabbajack embarque le runtime .NET dont il a besoin. Si l'installation s'arrête sur des erreurs de conversion de textures (texconv), la [FAQ de dépannage de Wabbajack](https://wiki.wabbajack.org/user_documentation/Troubleshooting%20FAQ.html) conseille d'installer aussi le [.NET 8 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/8.0).
 
 ## Configuration du Fichier d'Échange
 

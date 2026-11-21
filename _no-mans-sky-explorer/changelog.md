@@ -6,8 +6,7 @@ nav_order: 2
 
 # Changelog
 
-In this section you will find changelogs for the modlist since its release. You can track down precisely everything that gets added, removed, fixed, tweaked and updated.
-<div style="margin-bottom: 1rem;"></div>
+<p><span lang="en">Every version of the list since its release: what was added, removed, fixed, tweaked and updated.</span><span lang="fr">Chaque version de la liste depuis sa sortie : ce qui a été ajouté, retiré, corrigé, ajusté et mis à jour.</span></p>
 
 <details markdown="1">
 <summary>v3.1.0.0 - November 20, 2026</summary>

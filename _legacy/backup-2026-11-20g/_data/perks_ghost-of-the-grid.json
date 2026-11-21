@@ -1,0 +1,4401 @@
+{
+ "tiers": {
+  "Novice": 4,
+  "Adept": 9,
+  "Expert": 15,
+  "Master": 20,
+  "Espionage": 0
+ },
+ "trees": [
+  {
+   "id": "Body",
+   "perks": [
+    {
+     "id": "Body_Central_Milestone_1",
+     "name": {
+      "en": "Painkiller",
+      "fr": "Antidouleur"
+     },
+     "tier": "Novice",
+     "needs": 4,
+     "branch": "Central",
+     "milestone": true,
+     "requires": [],
+     "levels": [
+      {
+       "en": "Unlocks slow Health Regen in combat.",
+       "fr": "Déverrouille une lente régénération de santé en combat."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Body_Central_Perk_1_1",
+     "name": {
+      "en": "Speed Junkie",
+      "fr": "Accro de la vitesse"
+     },
+     "tier": "Novice",
+     "needs": 4,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Body_Central_Milestone_1"
+     ],
+     "levels": [
+      {
+       "en": "+60% Health Regen Rate while sprinting.",
+       "fr": "+60 % au taux de régénération de santé lorsque vous sprintez."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Body_Central_Perk_1_2",
+     "name": {
+      "en": "Comeback Kid",
+      "fr": "Renaissance du phénix"
+     },
+     "tier": "Novice",
+     "needs": 4,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Body_Central_Milestone_1"
+     ],
+     "levels": [
+      {
+       "en": "+1% Health Regen Rate for each percent of missing Health.",
+       "fr": "+1 % au taux de régénération de santé par point de pourcentage de santé perdue."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Body_Central_Perk_1_3",
+     "name": {
+      "en": "Army of One",
+      "fr": "Machine de guerre"
+     },
+     "tier": "Novice",
+     "needs": 4,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Body_Central_Milestone_1"
+     ],
+     "levels": [
+      {
+       "en": "+10% Health Regen Rate for each nearby enemy.",
+       "fr": "+10 % au taux de régénération de santé par ennemi à proximité."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Body_Central_Perk_1_4",
+     "name": {
+      "en": "Dorph-head",
+      "fr": "Endorphée"
+     },
+     "tier": "Novice",
+     "needs": 4,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Body_Central_Milestone_1"
+     ],
+     "levels": [
+      {
+       "en": "When using Blood Pump cyberware or a Health Item:\n+100% Mitigation Chance for 2 sec.\n\nMitigation - grants a chance to reduce incoming damage by current Mitigation Strength (default: 50%).",
+       "fr": "Après avoir utilisé le matériel cybernétique Pompe sanguine ou un objet de santé :\n+100 % de chances d'atténuation pendant 2 s\n\nL'atténuation correspond à la possibilité de réduire les dégâts subis à hauteur du degré d'atténuation actuel (par défaut, 50 %)."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Body_Right_Milestone_1",
+     "name": {
+      "en": "Fury Road",
+      "fr": "Fureur routière"
+     },
+     "tier": "Novice",
+     "needs": 4,
+     "branch": "Right",
+     "milestone": true,
+     "requires": [],
+     "levels": [
+      {
+       "en": "In vehicle collisions:\n+50% damage to enemy vehicles and their occupants.\n-50% damage to your vehicles.\n\nYou take less damage in crashes: your impact threshold rises by 2 km/h while driving and 4 km/h when hit on foot.",
+       "fr": "In vehicle collisions:\n+50% damage to enemy vehicles and their occupants.\n-50% damage to your vehicles.\n\nYou take less damage in crashes: your impact threshold rises by 2 km/h while driving and 4 km/h when hit on foot."
+      }
+     ],
+     "changed_by": [
+      "Immersive Road Crossing"
+     ]
+    },
+    {
+     "id": "Body_Left_Milestone_2",
+     "name": {
+      "en": "Die! Die! Die!",
+      "fr": "Crève ! Crève ! Crève !"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Left",
+     "milestone": true,
+     "requires": [],
+     "levels": [
+      {
+       "en": "Increased Crit Chance as Stamina decreases (max. +12.5%).",
+       "fr": "Augmentation des chances d'infliger un coup critique à mesure que l'endurance diminue (+12.5 % max.)."
+      },
+      {
+       "en": "Improved weapon handling as Stamina decreases.",
+       "fr": "Meilleur maniement des armes à mesure que l'endurance diminue."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Body_Left_Perk_2_1",
+     "name": {
+      "en": "Bullet Ballet",
+      "fr": "Ballet de balles"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Left",
+     "milestone": false,
+     "requires": [
+      "Body_Left_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "-25% bullet spread when moving.",
+       "fr": "-25 % à la dispersion des balles lorsque vous vous déplacez."
+      }
+     ],
+     "changed_by": [
+      "Perks And Skills Fixes"
+     ]
+    },
+    {
+     "id": "Body_Left_Perk_2_3",
+     "name": {
+      "en": "Don't Stop Me Now",
+      "fr": "Inarrêtable"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Left",
+     "milestone": false,
+     "requires": [
+      "Body_Left_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "When below 33% Stamina:\n+15% Mitigation Chance\n+5% Mitigation Strength",
+       "fr": "Lorsque votre endurance est inférieure à 33 % :\n+15 % de chances d'atténuation\n+5 % au degré d'atténuation"
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Body_Left_Perk_2_4",
+     "name": {
+      "en": "Like a Feather",
+      "fr": "Comme une plume"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Left",
+     "milestone": false,
+     "requires": [
+      "Body_Left_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "No movement speed penalty with Shotguns, Light Machine Guns and Heavy Machine Guns.",
+       "fr": "Pas de malus à la vitesse de déplacement avec les fusils à pompe, les mitrailleuses légères et les mitrailleuses lourdes."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Body_Right_Milestone_2",
+     "name": {
+      "en": "Wrecking Ball",
+      "fr": "Démolition"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Right",
+     "milestone": true,
+     "requires": [],
+     "levels": [
+      {
+       "en": "-15% Stamina cost for attacks with Blunt Weapons.",
+       "fr": "Consommation d'endurance - 15 % pour les attaques avec des armes contondantes."
+      },
+      {
+       "en": "Allows you to barrel into enemies while sprinting and blocking with Blunt Weapons, causing damage and a chance to knock them down.",
+       "fr": "Vous permet de percuter les ennemis en sprintant et en bloquant avec les armes contondantes, ce qui leur inflige des dégâts et vous donne une chance de les renverser."
+      }
+     ],
+     "changed_by": [
+      "Perks And Skills Fixes"
+     ]
+    },
+    {
+     "id": "Body_Right_Perk_2_1",
+     "name": {
+      "en": "Fly Swatter",
+      "fr": "Tapette à mouches"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Right",
+     "milestone": false,
+     "requires": [
+      "Body_Right_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "-40% incoming ranged damage when blocking with Blunt Weapons.",
+       "fr": "-40 % aux dégâts à distance subis lorsque vous bloquez avec une arme contondante."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Body_Right_Perk_2_2",
+     "name": {
+      "en": "Kinetic Absorption",
+      "fr": "Absorption cinétique"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Right",
+     "milestone": false,
+     "requires": [
+      "Body_Right_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "Blocking an attack gives:\n+10% Stamina\n+30% damage with Blunt Weapons for 5 sec.",
+       "fr": "Bloquer une attaque confère :\n+10 % d'endurance\n+30 % de dégâts avec les armes contondantes pendant 5 s."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Body_Right_Perk_2_3",
+     "name": {
+      "en": "Clapback",
+      "fr": "Riposte"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Right",
+     "milestone": false,
+     "requires": [
+      "Body_Right_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "+100% Knockdown chance with Defensive Attacks.\nCooldown: 10 sec.\n\n+100% Stun chance with Counterattacks.",
+       "fr": "+100 % de chances de renverser avec les attaques défensives.\nTemps de recharge : 10 s.\n\n+100 % de chances d'étourdir avec les contres."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Body_Right_Perk_2_4",
+     "name": {
+      "en": "Breakthrough",
+      "fr": "Percée"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Right",
+     "milestone": false,
+     "requires": [
+      "Body_Right_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "-40% enemy Armor for 7 sec. after hitting them with a Strong Attack.",
+       "fr": "-40 % à l'armure de l'ennemi pendant 7 s lorsque vous le touchez avec une attaque puissante."
+      }
+     ],
+     "changed_by": [
+      "Perks And Skills Fixes"
+     ]
+    },
+    {
+     "id": "Body_Left_Milestone_3",
+     "name": {
+      "en": "Spontaneous Obliteration",
+      "fr": "Annihilation spontanée"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Left",
+     "milestone": true,
+     "requires": [
+      "Body_Left_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "Increased Crit Chance as Stamina decreases (max. +12.5%).",
+       "fr": "Augmentation des chances d'infliger un coup critique à mesure que l'endurance diminue (+12.5 % max.)."
+      },
+      {
+       "en": "+10% damage against nearby enemies.",
+       "fr": "+10 % de dégâts contre les ennemis à proximité."
+      },
+      {
+       "en": "Unlocks Obliterate – the ability to sometimes instantly kill and dismember enemies at low Health.\n\nThe chance increases as enemy Health decreases (max. 20% Obliterate chance).",
+       "fr": "Déverrouille la capacité Annihiler permettant parfois de tuer instantanément et démembrer les ennemis dont la santé est faible.\n\nLes chances d'annihilation augmentent à mesure que la santé de l'ennemi diminue (20 % de chances max. d'annihilation)."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Body_Left_Perk_3_1",
+     "name": {
+      "en": "Rush of Blood",
+      "fr": "Afflux de sang"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Left",
+     "milestone": false,
+     "requires": [
+      "Body_Left_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "+20% reload speed for 8 sec. after dismembering an enemy.",
+       "fr": "+20 % à la vitesse de rechargement pendant 8 s lorsque vous démembrez un ennemi."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Body_Left_Perk_3_2",
+     "name": {
+      "en": "Skullcracker",
+      "fr": "Briseuse de crânes"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Left",
+     "milestone": false,
+     "requires": [
+      "Body_Left_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "Increases damage of Quick Melee Attacks as Stamina decreases (max. +100% at 0 Stamina).",
+       "fr": "Augmente les dégâts des attaques rapides au corps-à-corps à mesure que l'endurance diminue (+100 % max. lorsque l'endurance tombe à 0)."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Body_Left_Perk_3_3",
+     "name": {
+      "en": "Dread",
+      "fr": "Effroi"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Left",
+     "milestone": false,
+     "requires": [
+      "Body_Left_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "-15% enemy Armor when using ranged attacks.\n\nDismemberment spreads the effect to nearby enemies.",
+       "fr": "-15 % à l'armure de l'ennemi lorsque vous utilisez une attaque à distance.\n\nL'effet se propage aux ennemis à proximité en cas de démembrement."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Body_Left_Perk_3_4",
+     "name": {
+      "en": "Close-quarters Carnage",
+      "fr": "Carnage rapproché"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Left",
+     "milestone": false,
+     "requires": [
+      "Body_Left_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "Increased chance to Obliterate enemies with ranged attacks at close range (max. 10%).",
+       "fr": "Augmente les chances d'annihiler les ennemis avec des attaques à distance à courte portée (10 % max.)."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Body_Inbetween_Left_3",
+     "name": {
+      "en": "Bloodlust",
+      "fr": "Soif de sang"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Inbetween_Left",
+     "milestone": false,
+     "requires": [
+      "Body_Central_Perk_3_2",
+      "Body_Left_Perk_3_1"
+     ],
+     "levels": [
+      {
+       "en": "When Adrenaline Rush is active:\n+50 Adrenaline on dismemberment of a nearby enemy.",
+       "fr": "Lorsque le mode Poussée d'adrénaline est activé :\n+50 % d'adrénaline en cas de démembrement d'un ennemi à proximité."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Body_Central_Milestone_3",
+     "name": {
+      "en": "Adrenaline Rush",
+      "fr": "Poussée d'adrénaline"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Central",
+     "milestone": true,
+     "requires": [
+      "Body_Central_Milestone_1"
+     ],
+     "levels": [
+      {
+       "en": "+35 Max Health",
+       "fr": "+35 point(s) de santé maximale"
+      },
+      {
+       "en": "+20% Health Regen bonus to all Health Regen effects from all sources.",
+       "fr": "+20 % de régénération de santé bonus à tous les effets de régénération de santé de toutes les sources."
+      },
+      {
+       "en": "Unlocks Adrenaline Rush mode.\n\nIn addition to their base effects, Blood Pump cyberware and Health Items now also give Adrenaline equal to 30% Max Health (up to a max of 50% Max Health).\n\nAdrenaline is indicated by a yellow bar and acts like extra Health by absorbing damage. It also decays over time.\n\nAdrenaline Rush will remain active as long as you have Adrenaline available.",
+       "fr": "Déverrouille le mode Poussée d'adrénaline.\n\nEn plus de leurs effets de base, le matériel cybernétique Pompe sanguine et les objets de santé peuvent maintenant conférer une quantité d'adrénaline égale à 30 % de votre santé maximale (jusqu'à 50 % de la santé maximale).\n\nL'adrénaline est indiquée par une barre jaune et vous octroie des points de santé supplémentaires en absorbant les dégâts. Cependant, elle diminue progressivement.\n\nLe mode Poussée d'adrénaline reste actif tant que vous avez de l'adrénaline disponible."
+      }
+     ],
+     "changed_by": [
+      "Perks And Skills Fixes"
+     ]
+    },
+    {
+     "id": "Body_Central_Perk_3_1",
+     "name": {
+      "en": "Calm Mind",
+      "fr": "Esprit apaisé"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Body_Central_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "When Adrenaline Rush is active:\n+3 sec. delay before Adrenaline begins to decay.",
+       "fr": "Lorsque le mode Poussée d'adrénaline est activé :\n+3 s de délai avant que l'adrénaline commence à diminuer."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Body_Central_Perk_3_2",
+     "name": {
+      "en": "Juggernaut",
+      "fr": "Colosse"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Body_Central_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "When Adrenaline Rush is active:\n+20% movement speed\n+10% damage",
+       "fr": "Lorsque le mode Poussée d'adrénaline est activé :\n+20 % à la vitesse de déplacement\n+10 % de dégâts"
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Body_Central_Perk_3_4",
+     "name": {
+      "en": "Unstoppable Force",
+      "fr": "Force invincible"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Body_Central_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "When Adrenaline Rush is active:\nGain immunity to movement penalties and non-damaging status effects such as Knockdown, Blinding, etc.",
+       "fr": "Lorsque le mode Poussée d'adrénaline est activé :\nImmunité aux pénalités de déplacement et aux effets de statut n'infligeant pas de dégâts comme le renversement, l'aveuglement, etc."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Body_Inbetween_Right_3",
+     "name": {
+      "en": "Ripple Effect",
+      "fr": "Effet en chaîne"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Inbetween_Right",
+     "milestone": false,
+     "requires": [
+      "Body_Central_Perk_3_1",
+      "Body_Right_Perk_3_2"
+     ],
+     "levels": [
+      {
+       "en": "+15% Health for each enemy hit by Quake.",
+       "fr": "+15 % de santé par ennemi touché par Séisme."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Body_Right_Milestone_3",
+     "name": {
+      "en": "Quake",
+      "fr": "Séisme"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Right",
+     "milestone": true,
+     "requires": [
+      "Body_Right_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "-15% Stamina cost for attacks with Blunt Weapons.",
+       "fr": "Consommation d'endurance - 15 % pour les attaques avec des armes contondantes."
+      },
+      {
+       "en": "+20% attack speed with Blunt Weapons.",
+       "fr": "+20 % à la vitesse d'attaque avec les armes contondantes."
+      },
+      {
+       "en": "Press [QuickMelee] to violently slam the ground, damaging and staggering nearby enemies with a chance of Knockdown.\n\nQuake can also be performed from midair (a Superhero Landing).\n\nCooldown: 10 sec.",
+       "fr": "Appuyez sur [QuickMelee] pour frapper violemment le sol et infliger des dégâts aux ennemis à proximité, qui seront étourdis et auront une chance d'être renversés.\n\nVous pouvez aussi utiliser Séisme en l'air (un atterrissage de super-héros).\n\nTemps de recharge : 10 s."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Body_Right_Perk_3_1",
+     "name": {
+      "en": "Epicenter",
+      "fr": "Épicentre"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Right",
+     "milestone": false,
+     "requires": [
+      "Body_Right_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "When Quake is performed from midair (a Superhero Landing), its area of effect and damage scale with your fall speed and fall distance.",
+       "fr": "Lorsque vous utilisez Séisme dans les airs (un atterrissage de super-héros), sa zone d'effet et ses dégâts sont proportionnels à votre vitesse et la hauteur de votre chute."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Body_Right_Perk_3_2",
+     "name": {
+      "en": "Aftershock",
+      "fr": "Réplique"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Right",
+     "milestone": false,
+     "requires": [
+      "Body_Right_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "+30 Stamina for each enemy hit with Quake.",
+       "fr": "+30 point(s) d'endurance par ennemi touché avec Séisme."
+      }
+     ],
+     "changed_by": [
+      "Perks And Skills Fixes"
+     ]
+    },
+    {
+     "id": "Body_Master_Perk_1",
+     "name": {
+      "en": "Rip and Tear",
+      "fr": "Boucherie"
+     },
+     "tier": "Master",
+     "needs": 20,
+     "branch": "Master",
+     "milestone": false,
+     "requires": [
+      "Body_Left_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "+100% damage for the next Quick Melee Attack after shooting an enemy with a Shotgun.\n\n+100% damage for the next Shotgun shot after hitting an enemy with a Quick Melee Attack.",
+       "fr": "+100 % de dégâts avec l'attaque rapide au corps-à-corps suivante lorsque vous tirez sur un ennemi avec un fusil à pompe.\n\n+100 % de dégâts avec le tir suivant au fusil à pompe lorsque vous touchez un ennemi avec une attaque rapide au corps-à-corps."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Body_Master_Perk_2",
+     "name": {
+      "en": "Onslaught",
+      "fr": "Assaut"
+     },
+     "tier": "Master",
+     "needs": 20,
+     "branch": "Master",
+     "milestone": false,
+     "requires": [
+      "Body_Left_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "+20% ammo refill after neutralizing an enemy with a Light Machine Gun.",
+       "fr": "+20 % de ravitaillement en munitions lorsque vous neutralisez un ennemi avec une mitrailleuse légère."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Body_Master_Perk_3",
+     "name": {
+      "en": "Pain to Gain",
+      "fr": "Souffrance récompensée"
+     },
+     "tier": "Master",
+     "needs": 20,
+     "branch": "Master",
+     "milestone": false,
+     "requires": [
+      "Body_Central_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "When Adrenaline Rush is active:\n+20% Health Item recharge after neutralizing an enemy.",
+       "fr": "Lorsque le mode Poussée d'adrénaline est activé :\n+20 % de récupération des objets de santé lorsque vous neutralisez un ennemi."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Body_Master_Perk_5",
+     "name": {
+      "en": "Finisher: Savage Sling",
+      "fr": "Coup de grâce : Frappe sauvage"
+     },
+     "tier": "Master",
+     "needs": 20,
+     "branch": "Master",
+     "milestone": false,
+     "requires": [
+      "Body_Right_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "Unlocks a Blunt Weapon Finisher.\n\nPress [Choice1] when an enemy's Health is low. Enemies affected by Stun are more susceptible.\n\nRestores 20% Health.\n\nHold [Choice1] to throw the enemy instead, killing them and damaging other enemies where they land.",
+       "fr": "Déverrouille un coup de grâce d'arme contondante.\n\nAppuyez sur [Choice1] lorsque la santé d'un ennemi est faible. Les ennemis étourdis y sont plus vulnérables.\n\nRestaure 20 % de santé.\n\nMaintenez [Choice1] pour lancer l'ennemi à la place, ce qui le tuera et infligera des dégâts aux autres ennemis à proximité de son point de chute."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Body_Left_Milestone_1",
+     "name": {
+      "en": "Running Man",
+      "fr": "Homme en Fuite"
+     },
+     "tier": "Novice",
+     "needs": 4,
+     "branch": "Left",
+     "milestone": true,
+     "requires": [],
+     "levels": [
+      {
+       "en": "Allows you to sprint in any direction.",
+       "fr": "Permet de sprinter dans toutes les directions."
+      },
+      {
+       "en": "Unlocks Double Sprint – the ability to sprint faster by pressing [ToggleSprint] while already sprinting. Drains stamina.",
+       "fr": "Débloque le Sprint Double – la capacité de sprinter plus vite en appuyant sur [ToggleSprint] tout en sprintant déjà. Consomme de l'endurance."
+      }
+     ],
+     "changed_by": [
+      "Running Man - New Sprinting Perks"
+     ]
+    },
+    {
+     "id": "Body_Left_Perk_1_1",
+     "name": {
+      "en": "Second Wind",
+      "fr": "Second Souffle"
+     },
+     "tier": "Novice",
+     "needs": 4,
+     "branch": "Left",
+     "milestone": false,
+     "requires": [
+      "Body_Left_Milestone_1"
+     ],
+     "levels": [
+      {
+       "en": "Double Sprint drains 50% less stamina.",
+       "fr": "Le Sprint Double consomme 50% d'endurance en moins."
+      }
+     ],
+     "changed_by": [
+      "Running Man - New Sprinting Perks"
+     ]
+    },
+    {
+     "id": "Body_Left_Perk_1_2",
+     "name": {
+      "en": "Hit and Run",
+      "fr": "Frapper et Fuir"
+     },
+     "tier": "Novice",
+     "needs": 4,
+     "branch": "Left",
+     "milestone": false,
+     "requires": [
+      "Body_Left_Milestone_1"
+     ],
+     "levels": [
+      {
+       "en": "Allows you to make melee Fast Attacks while sprinting.",
+       "fr": "Permet d'effectuer des Attaques Rapides au corps à corps en sprintant."
+      }
+     ],
+     "changed_by": [
+      "Running Man - New Sprinting Perks"
+     ]
+    }
+   ],
+   "name": {
+    "en": "Body",
+    "fr": "Constitution",
+    "key": "Gameplay-RPG-Stats-BodyBonus"
+   }
+  },
+  {
+   "id": "Reflexes",
+   "perks": [
+    {
+     "id": "Reflexes_Left_Milestone_1",
+     "name": {
+      "en": "Stuntjock",
+      "fr": "Cascadeuse"
+     },
+     "tier": "Novice",
+     "needs": 4,
+     "branch": "Left",
+     "milestone": true,
+     "requires": [],
+     "levels": [
+      {
+       "en": "Unlocks preem new ways to exit vehicles:\n\nJump out - double-tap [QuickExit]\n\nSlide out - hold [QuickExit] while at high speed\n\nYou can also draw and fire weapons during these stunts.\n\nWhile driving:\nNo bullet spread penalty from movement\n-50% bullet spread overall",
+       "fr": "Déverrouille de nouvelles façons premios de sortir des véhicules :\n\nSortir en sautant : appuyez deux fois sur [QuickExit]\n\nSortir en faisant une glissade : maintenez [QuickExit] en roulant à grande vitesse\n\nVous pouvez aussi dégainer et tirer durant ces cascades.\n\nEn conduisant :\nPas de malus de dispersion des balles lié au déplacement\n-50 % à la dispersion des balles"
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Reflexes_Central_Milestone_1",
+     "name": {
+      "en": "Slippery",
+      "fr": "Insaisissable"
+     },
+     "tier": "Novice",
+     "needs": 4,
+     "branch": "Central",
+     "milestone": true,
+     "requires": [],
+     "levels": [
+      {
+       "en": "The faster you move, the more difficult for enemies to shoot you.\n\nEffect increases when Dashing, dodging, sliding, sprinting and vaulting.",
+       "fr": "Plus vous vous déplacez vite, plus il est difficile pour les ennemis de vous tirer dessus.\n\nL'effet augmente lorsque vous chargez, esquivez, glissez, sprintez ou sautez."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Reflexes_Central_Perk_1_1",
+     "name": {
+      "en": "Power Slide",
+      "fr": "Glissade améliorée"
+     },
+     "tier": "Novice",
+     "needs": 4,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Reflexes_Central_Milestone_1"
+     ],
+     "levels": [
+      {
+       "en": "Increased slide distance.",
+       "fr": "Augmente la distance des glissades."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Reflexes_Central_Perk_1_2",
+     "name": {
+      "en": "Muscle Memory",
+      "fr": "Mémoire musculaire"
+     },
+     "tier": "Novice",
+     "needs": 4,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Reflexes_Central_Milestone_1"
+     ],
+     "levels": [
+      {
+       "en": "Allows you to reload weapons while sprinting, sliding and vaulting.",
+       "fr": "Vous permet de recharger une arme en sprintant, en glissant ou en sautant."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Reflexes_Central_Perk_1_3",
+     "name": {
+      "en": "Parkour!",
+      "fr": "Parkour !"
+     },
+     "tier": "Novice",
+     "needs": 4,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Reflexes_Central_Milestone_1"
+     ],
+     "levels": [
+      {
+       "en": "Increased vaulting and climbing speed.",
+       "fr": "Augmente la vitesse de saut et d'escalade."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Reflexes_Central_Perk_1_4",
+     "name": {
+      "en": "Multitasker",
+      "fr": "Multitâche"
+     },
+     "tier": "Novice",
+     "needs": 4,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Reflexes_Central_Milestone_1"
+     ],
+     "levels": [
+      {
+       "en": "Allows you to shoot while sprinting, sliding and vaulting.",
+       "fr": "Vous permet de tirer en sprintant, en glissant et en sautant."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Reflexes_Left_Milestone_2",
+     "name": {
+      "en": "Ready, Rested, Reloaded",
+      "fr": "Tir continu"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Left",
+     "milestone": true,
+     "requires": [],
+     "levels": [
+      {
+       "en": "-10% Stamina cost for shooting with Assault Rifles and SMGs.",
+       "fr": "-10 % de consommation d'endurance lorsque vous tirez avec des fusils d'assaut et des mitraillettes."
+      },
+      {
+       "en": "+30% reload speed when above 50% Stamina.",
+       "fr": "+30 % à la vitesse de rechargement lorsque votre endurance est supérieure à 50 %."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Reflexes_Left_Perk_2_2",
+     "name": {
+      "en": "Spice of Life",
+      "fr": "Sel de la vie"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Left",
+     "milestone": false,
+     "requires": [
+      "Reflexes_Left_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "+15% weapon swap speed\n\n-30% bullet spread briefly after swapping weapons.",
+       "fr": "+15 % à la vitesse de changement d'arme\n\n-30 % de dispersion des balles pendant une courte durée lorsque vous changez d'arme."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Reflexes_Left_Perk_2_3",
+     "name": {
+      "en": "Mind Over Matter",
+      "fr": "Zen"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Left",
+     "milestone": false,
+     "requires": [
+      "Reflexes_Left_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "-25% recoil when aiming.",
+       "fr": "-25 % de recul lorsque vous visez."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Reflexes_Left_Perk_2_4",
+     "name": {
+      "en": "Tunnel Vision",
+      "fr": "Vision télescopique"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Left",
+     "milestone": false,
+     "requires": [
+      "Reflexes_Left_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "+20% effective range and accuracy",
+       "fr": "+20 % de précision et de portée efficace"
+      }
+     ],
+     "changed_by": [
+      "Perks And Skills Fixes"
+     ]
+    },
+    {
+     "id": "Reflexes_Central_Milestone_2",
+     "name": {
+      "en": "Dash",
+      "fr": "Charge"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Central",
+     "milestone": true,
+     "requires": [
+      "Reflexes_Central_Milestone_1"
+     ],
+     "levels": [
+      {
+       "en": "-20% Stamina cost for dodging and Dashing.",
+       "fr": "-20 % de consommation d'endurance lorsque vous esquivez et chargez."
+      },
+      {
+       "en": "Unlocks the ability to Dash.\n\nPress [Dodge] to perform a Dash.\n\nDashing replaces dodging, allowing you to cover more ground and automatically vault over low obstacles.",
+       "fr": "Déverrouille la capacité de charge.\n\nAppuyez sur [Dodge] pour effectuer une charge.\n\nLa charge remplace l'esquive. Elle vous permet de parcourir une plus grande distance et de sauter automatiquement par-dessus les obstacles bas."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Reflexes_Central_Perk_2_1",
+     "name": {
+      "en": "Mad Dash",
+      "fr": "Charge folle"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Reflexes_Central_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "+100% Dash range toward enemies.",
+       "fr": "+100 % à la portée de charge vers les ennemis."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Reflexes_Central_Perk_2_2",
+     "name": {
+      "en": "Can't Touch This",
+      "fr": "Intouchable"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Reflexes_Central_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "+100% Mitigation Chance when performing a Dash.\n\nMitigation - grants a chance to reduce incoming damage by current Mitigation Strength (default: 50%).",
+       "fr": "+100 % de chances d'atténuation lorsque vous effectuez une charge.\n\nL'atténuation correspond à la possibilité de réduire les dégâts subis à hauteur du degré d'atténuation actuel (par défaut, 50 %)."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Reflexes_Central_Perk_2_3",
+     "name": {
+      "en": "Mean Streak",
+      "fr": "Surstimulation"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Reflexes_Central_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "+40% Stamina after neutralizing an enemy while Dashing.",
+       "fr": "+40 % d'endurance lorsque vous neutralisez un ennemi en chargeant."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Reflexes_Central_Perk_2_4",
+     "name": {
+      "en": "Steady Grip",
+      "fr": "Main sûre"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Reflexes_Central_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "Allows you to shoot while Dashing.",
+       "fr": "Vous permet de tirer en chargeant."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Reflexes_Inbetween_Right_2",
+     "name": {
+      "en": "Flash and Thunderclap",
+      "fr": "Dernier samouraï"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Inbetween_Right",
+     "milestone": false,
+     "requires": [
+      "Reflexes_Central_Perk_2_1",
+      "Reflexes_Right_Perk_2_2"
+     ],
+     "levels": [
+      {
+       "en": "When performing Strong Attacks, you now automatically leap to enemies within range.\n\nThese Leap Attacks can be also performed from midair, and deal additional damage that scales with the distance of the leap (max. +50%).",
+       "fr": "Lorsque vous effectuez une attaque puissante, vous sautez automatiquement sur les ennemis à portée.\n\nVous pouvez aussi effectuer ces attaques sautées en l'air pour infliger des dégâts supplémentaires proportionnels à la distance du saut (+50 % max.)."
+      }
+     ],
+     "changed_by": [
+      "Perks And Skills Fixes"
+     ]
+    },
+    {
+     "id": "Reflexes_Right_Milestone_2",
+     "name": {
+      "en": "Lead and Steel",
+      "fr": "Protection d'acier"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Right",
+     "milestone": true,
+     "requires": [
+      "Reflexes_Central_Milestone_1"
+     ],
+     "levels": [
+      {
+       "en": "-15% Stamina cost for attacks with Blades.",
+       "fr": "Consommation d'endurance -15 % pour les attaques avec des lames."
+      },
+      {
+       "en": "Unlocks the ability to block incoming projectiles with Blades. This consumes Stamina.",
+       "fr": "Vous permet de bloquer les projectiles ennemis avec les lames, mais consomme de l'endurance."
+      }
+     ],
+     "changed_by": [
+      "Perks And Skills Fixes"
+     ]
+    },
+    {
+     "id": "Reflexes_Right_Perk_2_1",
+     "name": {
+      "en": "Bullet Deflect",
+      "fr": "Déviation des balles"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Right",
+     "milestone": false,
+     "requires": [
+      "Reflexes_Right_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "When your Stamina is above 33%, blocking projectiles will Deflect them to wherever your reticle is aimed.\n\nWell-timed blocking just before being hit increases the damage you deal with deflected bullets.",
+       "fr": "Lorsque votre endurance est supérieure à 33 %, les projectiles que vous bloquez sont déviés dans la direction où vous visez avec votre réticule.\n\nLes dégâts des balles déviées sont augmentés si vous les bloquez juste avant qu'elles vous touchent."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Reflexes_Right_Perk_2_2",
+     "name": {
+      "en": "Seeing Double",
+      "fr": "Dédoublement de la vue"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Right",
+     "milestone": false,
+     "requires": [
+      "Reflexes_Right_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "Increased damage and Stun chance with Counterattacks.",
+       "fr": "Augmente les dégâts des contres et leurs chances d'étourdir."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Reflexes_Right_Perk_2_3",
+     "name": {
+      "en": "Bullet Time",
+      "fr": "Bullet time"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Right",
+     "milestone": false,
+     "requires": [
+      "Reflexes_Right_Perk_2_1"
+     ],
+     "levels": [
+      {
+       "en": "Whenever time is slowed, Bullet Deflect does not consume Stamina and deflections automatically hit enemies for Crit Damage.",
+       "fr": "Lorsque le temps est ralenti, Déviation des balles ne consomme pas d'endurance et les balles déviées touchent automatiquement les ennemis en leur infligeant des dégâts critiques."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Reflexes_Left_Milestone_3",
+     "name": {
+      "en": "Sharpshooter",
+      "fr": "Tireuse d'élite"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Left",
+     "milestone": true,
+     "requires": [
+      "Reflexes_Left_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "+15% aim speed",
+       "fr": "+15 % à la vitesse de visée"
+      },
+      {
+       "en": "Improved weapon handling.",
+       "fr": "Meilleur maniement des armes."
+      },
+      {
+       "en": "Each successful shot grants a stack of Sharpshooter.\n7% bonus to Stamina Regen Rate and Stamina cost for 2 sec. per stack.\n\nStacks 7 times. New stacks reset duration. All stacks are removed when duration ends.",
+       "fr": "Chaque tir réussi confère une charge de Tireuse d'élite.\nBonus de 7 % au taux de régénération de l'endurance et à la consommation d'endurance par charge pendant 2 s.\n\nCumulable 7 fois. Chaque nouvelle charge réinitialise la durée. Toutes les charges sont retirées lorsque la durée est écoulée."
+      }
+     ],
+     "changed_by": [
+      "Perks And Skills Fixes"
+     ]
+    },
+    {
+     "id": "Reflexes_Left_Perk_3_1",
+     "name": {
+      "en": "Gundancer",
+      "fr": "Danse martiale"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Left",
+     "milestone": false,
+     "requires": [
+      "Reflexes_Left_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "Aiming no longer slows movement.\n\nAllows you to shoot while vaulting.",
+       "fr": "Viser ne ralentit plus les déplacements.\n\nVous permet de tirer en sautant."
+      }
+     ],
+     "changed_by": [
+      "Perks And Skills Fixes"
+     ]
+    },
+    {
+     "id": "Reflexes_Left_Perk_3_2",
+     "name": {
+      "en": "Spray and Pray",
+      "fr": "Témérité"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Left",
+     "milestone": false,
+     "requires": [
+      "Reflexes_Left_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "-10% Stamina cost for hip-firing.",
+       "fr": "-10 % de consommation d'endurance lorsque vous tirez au jugé."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Reflexes_Left_Perk_3_3",
+     "name": {
+      "en": "Practice Makes Perfect",
+      "fr": "C'est en forgeant..."
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Left",
+     "milestone": false,
+     "requires": [
+      "Reflexes_Left_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "+7% Crit Chance and Crit Damage per stack of Sharpshooter.",
+       "fr": "+7 % de chances d'infliger un coup critique et de dégâts critiques par charge de Tireuse d'élite."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Reflexes_Left_Perk_3_4",
+     "name": {
+      "en": "Shoot to Chill",
+      "fr": "Memento mori"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Left",
+     "milestone": false,
+     "requires": [
+      "Reflexes_Left_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "+4% Armor penetration for automatic weapons per stack of Sharpshooter.",
+       "fr": "+4 % de perforation d'armure avec les armes automatiques par charge de Tireuse d'élite."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Reflexes_Inbetween_Left_3",
+     "name": {
+      "en": "Air Kerenzikov",
+      "fr": "Kerenzikov aérien"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Inbetween_Left",
+     "milestone": false,
+     "requires": [
+      "Reflexes_Left_Perk_3_1",
+      "Reflexes_Central_Perk_3_2"
+     ],
+     "levels": [
+      {
+       "en": "Activating Kerenzikov in midair keeps you suspended in the air and extends its duration.",
+       "fr": "Activer le Kerenzikov en l'air vous maintient en l'air et prolonge sa durée."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Reflexes_Central_Milestone_3",
+     "name": {
+      "en": "Air Dash",
+      "fr": "Charge aérienne"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Central",
+     "milestone": true,
+     "requires": [
+      "Reflexes_Central_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "-20% Dash Stamina cost",
+       "fr": "-20 % de consommation d'endurance avec les charges"
+      },
+      {
+       "en": "+20% Dash speed",
+       "fr": "+20 % à la vitesse de charge"
+      },
+      {
+       "en": "Unlocks the ability to Dash in midair.",
+       "fr": "Déverrouille la capacité de charge aérienne."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Reflexes_Central_Perk_3_2",
+     "name": {
+      "en": "Aerial Acrobat",
+      "fr": "Acrobatie aérienne"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Reflexes_Central_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "Improves midair maneuverability.",
+       "fr": "Améliore la capacité d'action en l'air."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Reflexes_Central_Perk_3_3",
+     "name": {
+      "en": "Aerodynamic",
+      "fr": "Aérodynamique"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Reflexes_Central_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "+30% Mitigation Strength in midair.",
+       "fr": "+30 % au degré d'atténuation en l'air."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Reflexes_Right_Milestone_3",
+     "name": {
+      "en": "Finisher: Bladerunner",
+      "fr": "Coup de grâce : Lame funeste"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Right",
+     "milestone": true,
+     "requires": [
+      "Reflexes_Right_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "-15% Stamina cost for attacks with Blades.",
+       "fr": "Consommation d'endurance -15 % pour les attaques avec des lames."
+      },
+      {
+       "en": "+20% attack speed with Blades.",
+       "fr": "+20 % à la vitesse d'attaque avec les lames."
+      },
+      {
+       "en": "Unlocks a Blade Finisher.\n\nPress [Choice1] when an enemy's Health is low.\n\nRestores 25% Health.",
+       "fr": "Déverrouille un coup de grâce de lame.\n\nAppuyez sur [Choice1] lorsque la santé d'un ennemi est faible.\n\nRestaure 25 % de santé."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Reflexes_Right_Perk_3_1",
+     "name": {
+      "en": "Flash of Steel",
+      "fr": "Éclair d'acier"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Right",
+     "milestone": false,
+     "requires": [
+      "Reflexes_Right_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "+25% movement speed and attack speed for 6 sec. after performing a Finisher.",
+       "fr": "+25 % à la vitesse de déplacement et à la vitesse d'attaque pendant 6 s lorsque vous réalisez un coup de grâce."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Reflexes_Right_Perk_3_3",
+     "name": {
+      "en": "Opportunist",
+      "fr": "Opportuniste"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Right",
+     "milestone": false,
+     "requires": [
+      "Reflexes_Right_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "Enemies affected by Stagger, Stun, Blinding and Bleeding are more susceptible to Finishers.",
+       "fr": "Les ennemis affectés par un effet de renversement, d'étourdissement, d'aveuglement ou d'hémorragie sont plus vulnérables aux coups de grâce."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Reflexes_Right_Perk_3_4",
+     "name": {
+      "en": "Going the Distance",
+      "fr": "Tenir la distance"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Right",
+     "milestone": false,
+     "requires": [
+      "Reflexes_Right_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "+100% Finisher range",
+       "fr": "+100 % à la portée des coups de grâce."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Reflexes_Master_Perk_1",
+     "name": {
+      "en": "Salt in the Wound",
+      "fr": "Sel dans la plaie"
+     },
+     "tier": "Master",
+     "needs": 20,
+     "branch": "Master",
+     "milestone": false,
+     "requires": [
+      "Reflexes_Left_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "Shooting the same target a 7th consecutive time deals bonus damage equal to 100% of the total damage from the preceding shots.",
+       "fr": "Tirer sur la même cible une 7e fois de suite lui inflige des dégâts supplémentaires égaux à 100 % du total des dégâts des tirs précédents."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Reflexes_Master_Perk_2",
+     "name": {
+      "en": "Submachine Fun",
+      "fr": "Pour le plaisir de mitrailler"
+     },
+     "tier": "Master",
+     "needs": 20,
+     "branch": "Master",
+     "milestone": false,
+     "requires": [
+      "Reflexes_Left_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "Swapping Submachine Guns is faster and automatically reloads them.\n\n+22% fire rate after swapping to an SMG. Normal reloading ends the effect.",
+       "fr": "Changer de mitraillette est plus rapide et permet de la recharger automatiquement.\n\n+22 % à la cadence de tir lorsque vous sortez une mitraillette. Un rechargement normal met fin à l'effet."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Reflexes_Master_Perk_3",
+     "name": {
+      "en": "Tailwind",
+      "fr": "Vent arrière"
+     },
+     "tier": "Master",
+     "needs": 20,
+     "branch": "Master",
+     "milestone": false,
+     "requires": [
+      "Reflexes_Central_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "+25 Stamina from performing Air Dashes and double jumps.\n\nAir Dashes do not cost Stamina.",
+       "fr": "+25 d'endurance lorsque vous effectuez une charge aérienne ou un double saut.\n\nLes charges aériennes ne consomment pas d'endurance."
+      }
+     ],
+     "changed_by": [
+      "Perks And Skills Fixes"
+     ]
+    },
+    {
+     "id": "Reflexes_Master_Perk_5",
+     "name": {
+      "en": "Slaughterhouse",
+      "fr": "Massacre"
+     },
+     "tier": "Master",
+     "needs": 20,
+     "branch": "Master",
+     "milestone": false,
+     "requires": [
+      "Reflexes_Right_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "All attacks, counterattacks and deflected bullets apply Bleeding, which increases dismemberment chance.\n\nBleeding cannot kill enemies, but does make them more susceptible to Finishers.\n\n+25 Stamina from dismemberments.",
+       "fr": "Les attaques, les contres et les balles déviées causent une hémorragie, qui augmente les chances de démembrement.\n\nL'hémorragie ne peut pas tuer les ennemis, mais les rend plus vulnérables aux coups de grâce.\n\n+25 point(s) d'endurance en cas de démembrement."
+      }
+     ],
+     "changed_by": []
+    }
+   ],
+   "name": {
+    "en": "Reflexes",
+    "fr": "Réflexes",
+    "key": "Gameplay-RPG-Stats-Attributes-ReflexesName"
+   }
+  },
+  {
+   "id": "Tech",
+   "perks": [
+    {
+     "id": "Tech_Left_Milestone_1",
+     "name": {
+      "en": "Glutton for War",
+      "fr": "Belliciste"
+     },
+     "tier": "Novice",
+     "needs": 4,
+     "branch": "Left",
+     "milestone": true,
+     "requires": [],
+     "levels": [
+      {
+       "en": "5% instant recharge of Health Items and grenades after neutralizing an enemy.",
+       "fr": "+5 % de récupération instantanée des objets de santé et des grenades lorsque vous neutralisez un ennemi."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Tech_Left_Perk_1_1",
+     "name": {
+      "en": "Transfusion",
+      "fr": "Transfusion"
+     },
+     "tier": "Novice",
+     "needs": 4,
+     "branch": "Left",
+     "milestone": false,
+     "requires": [
+      "Tech_Left_Milestone_1"
+     ],
+     "levels": [
+      {
+       "en": "+30% Health from the final charge of your Health Item.",
+       "fr": "+30 % de santé avec la dernière charge de votre objet de santé."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Tech_Left_Perk_1_2",
+     "name": {
+      "en": "First Aid",
+      "fr": "Premiers soins"
+     },
+     "tier": "Novice",
+     "needs": 4,
+     "branch": "Left",
+     "milestone": false,
+     "requires": [
+      "Tech_Left_Milestone_1"
+     ],
+     "levels": [
+      {
+       "en": "+15% recharge speed for Health Items when you've only used 1 charge.",
+       "fr": "+15 % à la vitesse de récupération des objets de santé lorsque vous n'en avez utilisé qu'une charge."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Tech_Right_Milestone_1",
+     "name": {
+      "en": "Gearhead",
+      "fr": "Mécanicienne"
+     },
+     "tier": "Novice",
+     "needs": 4,
+     "branch": "Right",
+     "milestone": true,
+     "requires": [],
+     "levels": [
+      {
+       "en": "+33% vehicle health\n\nVehicle-mounted weapons receive:\n+25% damage\n-0.7 sec. lock-on time",
+       "fr": "+33 % à la santé des véhicules\n\nLes armes montées sur les véhicules ont les caractéristiques suivantes :\n+25 % de dégâts\n-0.7 s de temps de verrouillage"
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Tech_Central_Milestone_2",
+     "name": {
+      "en": "All Things Cyber",
+      "fr": "Cyberbricoleuse"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Central",
+     "milestone": true,
+     "requires": [],
+     "levels": [
+      {
+       "en": "+10% to all cyberware stat modifiers.",
+       "fr": "+10 % aux modificateurs de statistiques de tous les matériels cybernétiques."
+      },
+      {
+       "en": "-20% Cyberware Capacity cost for cyberware in the Integumentary System and Skeleton.",
+       "fr": "-20 % au coût en cyber-capacité du matériel cybernétique dans les emplacements du système tégumentaire et du squelette."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Tech_Central_Perk_2_1",
+     "name": {
+      "en": "Driver Update",
+      "fr": "Mise à jour des pilotes"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Tech_Central_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "All cyberware gain an additional stat modifier.",
+       "fr": "Ajoute un modificateur de statistiques à tous les matériels cybernétiques."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Tech_Central_Perk_2_2",
+     "name": {
+      "en": "Renaissance Punk",
+      "fr": "Dépassement des limites"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Tech_Central_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "+2/4/6/8 Cyberware Capacity for each Attribute at 4/9/15/20 or higher.",
+       "fr": "+2/4/6/8 Cyberware Capacity for each Attribute at 4/9/15/20 or higher."
+      }
+     ],
+     "changed_by": [
+      "Renaissance Punk - Perk Scaling"
+     ]
+    },
+    {
+     "id": "Tech_Central_Perk_2_3",
+     "name": {
+      "en": "Lucky Day",
+      "fr": "Jour de chance"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Tech_Central_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "+25% crafting components from looting.",
+       "fr": "+25 % de composants de fabrication récupérés."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Tech_Central_Perk_2_4",
+     "name": {
+      "en": "Chrome Constitution",
+      "fr": "Constitution de chrome"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Tech_Central_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "-5% incoming damage if all Integumentary System and Skeleton cyberware slots are filled.",
+       "fr": "-5 % de dégâts subis si tous les emplacements de matériel cybernétique du système tégumentaire et du squelette sont occupés."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Tech_Inbetween_Right_2",
+     "name": {
+      "en": "Chipware Connoisseur",
+      "fr": "Connaissance des puces"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Inbetween_Right",
+     "milestone": false,
+     "requires": [
+      "Tech_Central_Perk_2_1"
+     ],
+     "levels": [
+      {
+       "en": "When upgrading cyberware, you can choose from two stat modifier options.\n\nA third option is available at Tier 3 and higher.",
+       "fr": "Lorsque vous améliorez du matériel cybernétique, vous pouvez choisir entre deux options de modificateurs de statistiques.\n\nUne troisième option est disponible à partir du niveau 3."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Tech_Left_Milestone_2",
+     "name": {
+      "en": "Health Freak",
+      "fr": "Hypocondriaque"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Left",
+     "milestone": true,
+     "requires": [
+      "Tech_Left_Milestone_1"
+     ],
+     "levels": [
+      {
+       "en": "+8% recharge speed for Health Items and grenades.",
+       "fr": "+8 % à la vitesse de récupération des objets de santé et des grenades."
+      },
+      {
+       "en": "+1 Health Item charge.\n\n+150% recharge speed for Health Items outside of combat.",
+       "fr": "+1 charge d'objet de santé.\n\n+150 % à la vitesse de récupération des objets de santé hors combat."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Tech_Left_Perk_2_1",
+     "name": {
+      "en": "Demolitions Surplus",
+      "fr": "Surplus d'explosifs"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Left",
+     "milestone": false,
+     "requires": [
+      "Tech_Left_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "+1 max grenade charge\n\n+250% recharge speed for grenades outside of combat.",
+       "fr": "+1 charge(s) de grenade max.\n\n+250 % à la vitesse de récupération des grenades hors combat."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Tech_Left_Perk_2_2",
+     "name": {
+      "en": "Borrowed Time",
+      "fr": "Sursis"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Left",
+     "milestone": false,
+     "requires": [
+      "Tech_Left_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "100% instant recharge of a Health Item after neutralizing an enemy if you're below 25% Health and have no charges remaining.",
+       "fr": "100 % de récupération instantanée d'un objet de santé lorsque vous neutralisez un ennemi si votre santé est inférieure à 25 % et qu'il ne vous reste aucune charge."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Tech_Left_Perk_2_3",
+     "name": {
+      "en": "Field Medic",
+      "fr": "Infirmière"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Left",
+     "milestone": false,
+     "requires": [
+      "Tech_Left_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "15% faster use of Health Items in combat.",
+       "fr": "Utilisation des objets de santé 15 % plus rapide en combat."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Tech_Left_Perk_2_4",
+     "name": {
+      "en": "Coming in Hot",
+      "fr": "Ça va péter !"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Left",
+     "milestone": false,
+     "requires": [
+      "Tech_Left_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "+50% recharge speed for grenades when you have none available.",
+       "fr": "+50 % à la vitesse de récupération des grenades lorsque vous n'en avez aucune à disposition."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Tech_Central_Milestone_3",
+     "name": {
+      "en": "License to Chrome",
+      "fr": "Pro du chrome"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Central",
+     "milestone": true,
+     "requires": [
+      "Tech_Central_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "+10% to all cyberware stat modifiers.",
+       "fr": "+10 % aux modificateurs de statistiques de tous les matériels cybernétiques."
+      },
+      {
+       "en": "+40 Armor",
+       "fr": "+40 point(s) d'armure"
+      },
+      {
+       "en": "Unlocks a new cyberware slot for the Skeleton.\n\nAll Skeleton cyberware have boosted stats.",
+       "fr": "Déverrouille un nouvel emplacement de matériel cybernétique pour le squelette.\n\nTous les matériels cybernétiques du squelette ont des statistiques améliorées."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Tech_Central_Perk_3_1",
+     "name": {
+      "en": "Extended Warranty",
+      "fr": "Prolongation de garantie"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Tech_Central_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "+15% duration for all cyberware effects.",
+       "fr": "+15 % de durée pour tous les effets des matériels cybernétiques."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Tech_Central_Perk_3_2",
+     "name": {
+      "en": "Ambidextrous",
+      "fr": "Ambidextre"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Tech_Central_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "Unlocks a new cyberware slot for your Hands.",
+       "fr": "Déverrouille un nouvel emplacement de matériel cybernétique pour les mains."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Tech_Central_Perk_3_3",
+     "name": {
+      "en": "Built Different",
+      "fr": "Différente"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Tech_Central_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "Unlocks Cellular Adapter cyberware for the Integumentary System. It can be purchased and installed at ripperdoc clinics. This Perk is required to use it properly.",
+       "fr": "Déverrouille le matériel cybernétique Adaptateur cellulaire pour le système tégumentaire. Vous pouvez l'acheter et l'installer dans les cliniques de charcudocs. L'avantage est requis pour une bonne utilisation."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Tech_Central_Perk_3_4",
+     "name": {
+      "en": "Cyborg",
+      "fr": "Cyborg"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Tech_Central_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "15% reduced Cooldown for all cyberware if all available cyberware slots are filled.",
+       "fr": "Temps de recharge réduit de 15 % pour tous les matériels cybernétiques si tous les emplacements de matériel cybernétique sont occupés."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Tech_Inbetween_Left_3",
+     "name": {
+      "en": "Doomlauncher",
+      "fr": "Lanceur funeste"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Inbetween_Left",
+     "milestone": false,
+     "requires": [
+      "Tech_Left_Perk_3_01",
+      "Tech_Central_Perk_3_2"
+     ],
+     "levels": [
+      {
+       "en": "Projectile Launch System cyberware receives:\n+1 max charge(s)\n+20% recharge speed\n+25% additional recharge speed when you have no charges available.\n+200% additional recharge speed outside of combat.\n+5% instant recharge after neutralizing an enemy.\n\nIt also receives the same bonus as grenades from the Burn This City perk.",
+       "fr": "Le matériel cybernétique lance-projectile gagne :\n+1 charge(s) max.\n+20 % de vitesse de récupération\n+25 % de vitesse de récupération supplémentaire lorsque aucune charge n'est disponible.\n+200 % de vitesse de récupération supplémentaire hors combat\n+5 % de récupération instantanée lorsque vous neutralisez un ennemi.\n\nIl bénéficie également du même bonus que les grenades avec l'avantage Foutre le feu."
+      }
+     ],
+     "changed_by": [
+      "Relic Enhanced",
+      "Perks And Skills Fixes"
+     ]
+    },
+    {
+     "id": "Tech_Left_Milestone_3",
+     "name": {
+      "en": "Pyromania",
+      "fr": "Pyromanie"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Left",
+     "milestone": true,
+     "requires": [
+      "Tech_Left_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "+8% recharge speed for Health Items and grenades.",
+       "fr": "+8 % à la vitesse de récupération des objets de santé et des grenades."
+      },
+      {
+       "en": "+10% explosion radius for grenades and the Projectile Launch System.",
+       "fr": "+10 % au rayon d'explosion pour les grenades et le lance-projectile."
+      },
+      {
+       "en": "+5% movement speed and +10% explosion damage for 12 sec. after hitting an enemy in combat with an explosion from a grenade, explosive device or Projectile Launch System.\n\nIf you take damage from the explosion, the effect adds 2 stacks instead of 1.\n\nEffect stacks 5 times.",
+       "fr": "+5 % à la vitesse de déplacement et +10 % de dégâts d'explosion pendant 12 s après avoir touché un ennemi en combat avec l'explosion d'une grenade, d'un appareil explosif ou du lance-projectile.\n\nSi vous subissez des dégâts de l'explosion, l'effet ajoute 2 charges au lieu de 1.\n\nEffet cumulable 5 fois."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Tech_Left_Perk_3_01",
+     "name": {
+      "en": "Friendlier Fire",
+      "fr": "Baptême du feu"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Left",
+     "milestone": false,
+     "requires": [
+      "Tech_Left_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "+50% resistance to damage and effects from explosions you cause.",
+       "fr": "+50 % de résistance aux dégâts et aux effets des explosions causées par vous."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Tech_Left_Perk_3_2",
+     "name": {
+      "en": "Burn This City",
+      "fr": "Foutre le feu"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Left",
+     "milestone": false,
+     "requires": [
+      "Tech_Left_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "When you accumulate 5 stacks of Pyromania, they will be consumed to instantly replenish a grenade charge, but all bonuses from those stacks will remain active for 6 sec.",
+       "fr": "Lorsque vous cumulez 5 charges de Pyromanie, celles-ci sont consommées pour reconstituer instantanément une charge de grenade, mais tous les bonus de ces charges restent actifs pendant 6 s."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Tech_Left_Perk_3_3",
+     "name": {
+      "en": "Flash Sale",
+      "fr": "Promotion éclair"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Left",
+     "milestone": false,
+     "requires": [
+      "Tech_Left_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "For Flash, Smoke and Recon grenades:\nDouble grenade charges\nDouble recharge rate",
+       "fr": "Grenades aveuglantes, fumigènes et de reconnaissance :\ncharges de grenades doublées\nvitesse de charge doublée"
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Tech_Left_Perk_3_4",
+     "name": {
+      "en": "Heat Shield",
+      "fr": "Bouclier thermique"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Left",
+     "milestone": false,
+     "requires": [
+      "Tech_Left_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "+10% Mitigation Chance per stack of Pyromania.",
+       "fr": "+10 % de chances d'atténuation par charge de Pyromanie."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Tech_Right_Milestone_3",
+     "name": {
+      "en": "Bolt",
+      "fr": "Éclair"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Right",
+     "milestone": true,
+     "requires": [],
+     "levels": [
+      {
+       "en": "+20% charge speed for Tech weapons.",
+       "fr": "-20 % à la vitesse de charge des armes techniques."
+      },
+      {
+       "en": "+15% damage for charged shots with Tech weapons.",
+       "fr": "+15 % de dégâts avec les tirs chargés des armes techniques."
+      },
+      {
+       "en": "Unlocks Bolt shots. To fire a Bolt, release the trigger for a charged shot right before it fully charges:\nCounts as a fully charged shot\n+30% damage\n-50% penalty for penetrating cover\n\nFull-auto Tech weapons fire Bolts in a short burst. To continue firing Bolts in full-auto, press and hold the trigger again after firing the initial burst.",
+       "fr": "Déverrouille la capacité de tirer des éclairs. Pour tirer un éclair, relâchez la gâchette juste avant qu'un tir ne soit chargé au maximum :\ncela compte comme un tir entièrement chargé\n+30 % de dégâts\n-50 % de malus lors de la perforation d'un abri\n\nLes armes techniques en mode automatique tirent des éclairs en rafales courtes. Pour continuer à tirer des éclairs en mode automatique, maintenez la gâchette après le premier tir."
+      }
+     ],
+     "changed_by": [
+      "Perks And Skills Fixes"
+     ]
+    },
+    {
+     "id": "Tech_Right_Perk_3_1",
+     "name": {
+      "en": "In Charge",
+      "fr": "En charge"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Right",
+     "milestone": false,
+     "requires": [
+      "Tech_Right_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "Tech weapons no longer fire automatically when reaching full charge.",
+       "fr": "Les armes techniques ne tirent plus automatiquement une fois chargées au maximum."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Tech_Right_Perk_3_2",
+     "name": {
+      "en": "Internal Clock",
+      "fr": "Horloge interne"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Right",
+     "milestone": false,
+     "requires": [
+      "Tech_Right_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "Increased time window to fire a Bolt.",
+       "fr": "Élargit la fenêtre de tir des éclairs."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Tech_Right_Perk_3_3",
+     "name": {
+      "en": "Shock Value",
+      "fr": "Valeur de choc"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Right",
+     "milestone": false,
+     "requires": [
+      "Tech_Right_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "Bolt shots ignore enemy Armor.",
+       "fr": "Les éclairs ignorent l'armure de l'ennemi."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Tech_Right_Perk_3_4",
+     "name": {
+      "en": "Lightning Storm",
+      "fr": "Tempête d'éclairs"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Right",
+     "milestone": false,
+     "requires": [
+      "Tech_Right_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "+10% charge speed after firing a Bolt.\n\nStacks 3 times.\n\nSwapping weapons or firing a non-Bolt shot resets the stack.",
+       "fr": "+10 % à la vitesse de charge lorsque vous tirez un éclair.\n\nCumulable 3 fois.\n\nLe cumul des charges est réinitialisé lorsque vous changez d'arme ou tirez autre chose qu'un éclair."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Tech_Master_Perk_2",
+     "name": {
+      "en": "Ticking Time Bomb",
+      "fr": "Bombe à retardement"
+     },
+     "tier": "Master",
+     "needs": 20,
+     "branch": "Master",
+     "milestone": false,
+     "requires": [
+      "Tech_Left_Milestone_3",
+      "Tech_Central_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "Charges a powerful EMP that hits nearby enemies after 3 sec. whenever you activate Operating System cyberware (Berserk, Sandevistan) or Overclock mode.\n\nApplies Stun and deals damage proportionate to the quantity and Tier of cyberware implants you have installed.\n\n-50% incoming damage while charging the EMP.",
+       "fr": "Charge une puissante IEM qui touche les ennemis à proximité après 3 s. lorsque vous activez le matériel cybernétique du système d'exploitation (Berserk, Sandevistan) ou le mode Overclocking.\n\nÉtourdit les ennemis et inflige des dégâts proportionnels au nombre et au niveau des implants que vous avez installés.\n\n-50 % de dégâts subis lors du chargement de l'IEM."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Tech_Master_Perk_3",
+     "name": {
+      "en": "Edgerunner",
+      "fr": "Edgerunner"
+     },
+     "tier": "Master",
+     "needs": 20,
+     "branch": "Master",
+     "milestone": false,
+     "requires": [
+      "Tech_Central_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "Allows you to exceed your Cyberware Capacity by up to 50 points at the cost of -0.5% Max Health per point.\n\nWhen you neutralize an enemy during combat, there is a 0.1% chance for each point you're over capacity that you will enter a Fury state. In this state, you gain:\n+10% damage\n+30% Crit Chance\n+50% Crit Damage\n\nDuration: 12 sec.\n+3 sec. duration for each neutralization while Fury is active.",
+       "fr": "Vous permet de dépasser votre cyber-capacité de 50 points au maximum en réduisant votre santé maximale de 0.5 % par point.\n\nLorsque vous neutralisez un ennemi durant un combat, vous avez 0.1 % de chances par point au-dessus de votre capacité d'entrer en état de fureur. Cet état vous confère :\n+10 % de dégâts\n+30 % de chances d'infliger un coup critique\n+50 % de dégâts critiques\n\nDurée : 12 s.\nDurée prolongée de 3 s pour chaque neutralisation quand Fureur est activée."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Tech_Master_Perk_5",
+     "name": {
+      "en": "Chain Lightning",
+      "fr": "Éclairs en chaîne"
+     },
+     "tier": "Master",
+     "needs": 20,
+     "branch": "Master",
+     "milestone": false,
+     "requires": [
+      "Tech_Right_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "Bolt now deals Electrical damage and releases an electric arc that can electrocute up to 3 nearby enemies.",
+       "fr": "Éclair inflige maintenant des dégâts électriques et crée un arc électrique pouvant électrocuter jusqu'à 3 ennemis à proximité."
+      }
+     ],
+     "changed_by": []
+    }
+   ],
+   "name": {
+    "en": "Technical Ability",
+    "fr": "Capacité technique",
+    "key": "Gameplay-RPG-Stats-TechnicalAbilityBonus"
+   }
+  },
+  {
+   "id": "Intelligence",
+   "perks": [
+    {
+     "id": "Intelligence_Left_Milestone_1",
+     "name": {
+      "en": "Eye in the Sky",
+      "fr": "Troisième œil"
+     },
+     "tier": "Novice",
+     "needs": 4,
+     "branch": "Left",
+     "milestone": true,
+     "requires": [],
+     "levels": [
+      {
+       "en": "Automatically highlights nearby Access Points and cameras.\n\nWhen uploaded through cameras, Control quickhacks, Covert quickhacks and the Distract Enemies quickhack have:\n-1 RAM cost\n+50% duration",
+       "fr": "Identifie automatiquement les points d'accès et les caméras à proximité.\n\nSi le transfert est effectué via une caméra, les piratages rapides de Contrôle et de Furtivité et le piratage rapide Distraire les ennemis ont :\nUn coût en mémoire vive réduit de 1\nUne durée augmentée de 50 %"
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Intelligence_Left_Perk_1_1",
+     "name": {
+      "en": "Warning: Explosion Hazard",
+      "fr": "Attention : risque d'explosion"
+     },
+     "tier": "Novice",
+     "needs": 4,
+     "branch": "Left",
+     "milestone": false,
+     "requires": [
+      "Intelligence_Left_Milestone_1"
+     ],
+     "levels": [
+      {
+       "en": "+40% explosion damage from hacked devices.\n\n+80% additional explosion damage to enemies affected by quickhacks (including Distract Enemies).",
+       "fr": "+40 % de dégâts d'explosion infligés par les appareils piratés.\n\n+80 % de dégâts d'explosion supplémentaires contre les ennemis affectés par des piratages rapides (y compris Distraire les ennemis)."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Intelligence_Left_Perk_1_2",
+     "name": {
+      "en": "ForceKill Cypher",
+      "fr": "Mort aux chiffres"
+     },
+     "tier": "Novice",
+     "needs": 4,
+     "branch": "Left",
+     "milestone": false,
+     "requires": [
+      "Intelligence_Left_Milestone_1"
+     ],
+     "levels": [
+      {
+       "en": "Reduces sequence length required to hack Access Points by 1.\n\nTotal sequence length cannot be reduced below 2 characters.",
+       "fr": "Réduit la longueur de la séquence requise pour pirater les points d'accès de 1.\n\nLa longueur totale de la séquence ne peut pas descendre en dessous de 2 caractères."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Intelligence_Central_Milestone_1",
+     "name": {
+      "en": "Optimization",
+      "fr": "Optimisation"
+     },
+     "tier": "Novice",
+     "needs": 4,
+     "branch": "Central",
+     "milestone": true,
+     "requires": [],
+     "levels": [
+      {
+       "en": "+35% RAM recovery rate",
+       "fr": "+35 % au taux de récupération de mémoire vive"
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Intelligence_Central_Perk_1_1",
+     "name": {
+      "en": "Encryption",
+      "fr": "Cryptage"
+     },
+     "tier": "Novice",
+     "needs": 4,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Intelligence_Central_Milestone_1"
+     ],
+     "levels": [
+      {
+       "en": "-30% traceability for all quickhacks.",
+       "fr": "-30 % de traçabilité pour tous les piratages rapides."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Intelligence_Central_Perk_1_2",
+     "name": {
+      "en": "Proximate Propagation",
+      "fr": "Propagation de proximité"
+     },
+     "tier": "Novice",
+     "needs": 4,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Intelligence_Central_Milestone_1"
+     ],
+     "levels": [
+      {
+       "en": "Reduced RAM cost the closer you are to the target (max. -35%)",
+       "fr": "Réduction du coût en mémoire vive à mesure que vous vous rapprochez de la cible (-35 % max.)"
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Intelligence_Central_Perk_1_3",
+     "name": {
+      "en": "Subordination",
+      "fr": "Subordination"
+     },
+     "tier": "Novice",
+     "needs": 4,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Intelligence_Central_Milestone_1"
+     ],
+     "levels": [
+      {
+       "en": "+100% duration for Control quickhacks used on full-Health enemies.",
+       "fr": "+100 % de durée pour les piratages rapides de Contrôle utilisés sur les ennemis dont la santé est au maximum."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Intelligence_Right_Milestone_1",
+     "name": {
+      "en": "Carhacker",
+      "fr": "Hackeuse de voitures"
+     },
+     "tier": "Novice",
+     "needs": 4,
+     "branch": "Right",
+     "milestone": true,
+     "requires": [],
+     "levels": [
+      {
+       "en": "Unlocks Vehicle quickhacks, allowing you to remotely take control, set off alarms or even blow them up.\n\nThe availability of a given quickhack depends on the Tier of your installed cyberdeck.",
+       "fr": "Déverrouille les piratages rapides des véhicules, ce qui vous permet d'en prendre le contrôle à distance, de déclencher leur alarme ou même de les faire exploser.\n\nLa disponibilité d'un piratage rapide dépend du niveau de la cyberconsole que vous avez installée."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Intelligence_Left_Milestone_2",
+     "name": {
+      "en": "Hack Queue",
+      "fr": "File d'attente de piratage"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Left",
+     "milestone": true,
+     "requires": [
+      "Intelligence_Left_Milestone_1"
+     ],
+     "levels": [
+      {
+       "en": "+1 Max RAM",
+       "fr": "+1 au maximum d'unités de mémoire vive"
+      },
+      {
+       "en": "Unlocks quickhack queues, allowing 2 quickhacks on a single enemy.\n\nQueued quickhacks automatically upload in the order they are added.\n\n+30% upload speed for the second quickhack in a queue.",
+       "fr": "Déverrouille la mise en file d'attente des piratages rapides, ce qui vous permet de lancer jusqu'à 2 piratages rapides sur un même ennemi.\n\nLes piratages rapides dans la file d'attente se chargent automatiquement dans l'ordre où ils ont été ajoutés.\n\n+30 % à la vitesse de chargement du deuxième piratage rapide dans une file d'attente."
+      }
+     ],
+     "changed_by": [
+      "10 New Quickhacks - Netrunner's Arsenal"
+     ]
+    },
+    {
+     "id": "Intelligence_Left_Perk_2_1",
+     "name": {
+      "en": "Counter-a-hack",
+      "fr": "Contre-hack"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Left",
+     "milestone": false,
+     "requires": [
+      "Intelligence_Left_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "When you're the target of an enemy netrunner, you can quickhack them back through walls and obstacles.\n\n-1 RAM cost for such quickhacks.",
+       "fr": "Lorsque vous êtes la cible d'un netrunner ennemi, vous pouvez le contrer avec un piratage rapide à travers les murs et les obstacles.\n\n-1 au coût en mémoire vive des piratages rapides de contre."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Intelligence_Left_Perk_2_2",
+     "name": {
+      "en": "Data Recycler",
+      "fr": "Recyclage de données"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Left",
+     "milestone": false,
+     "requires": [
+      "Intelligence_Left_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "After neutralizing an enemy, recover 80% of the RAM cost from all quickhacks remaining in their queue.",
+       "fr": "Lorsque vous neutralisez un ennemi, vous récupérez 80 % de la consommation de mémoire vive de tous les piratages rapides restant dans sa file d'attente."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Intelligence_Left_Perk_2_3",
+     "name": {
+      "en": "Copy-Paste",
+      "fr": "Copier-coller"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Left",
+     "milestone": false,
+     "requires": [
+      "Intelligence_Left_Perk_2_1"
+     ],
+     "levels": [
+      {
+       "en": "When you're the target of an enemy netrunner, using a quickhack against them will also spread the quickhack's effect to their allies.",
+       "fr": "Lorsque vous êtes la cible d'un netrunner ennemi, utiliser un piratage rapide contre lui propage aussi l'effet du piratage rapide à ses alliés."
+      }
+     ],
+     "changed_by": [
+      "Perks And Skills Fixes"
+     ]
+    },
+    {
+     "id": "Intelligence_Left_Perk_2_4",
+     "name": {
+      "en": "Feedback Loop",
+      "fr": "Boucle de rétroaction"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Left",
+     "milestone": false,
+     "requires": [
+      "Intelligence_Left_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "+15% RAM recovery rate for each quickhack currently in a queue.",
+       "fr": "+15 % au taux de récupération de mémoire vive par piratage rapide actuellement dans une file d'attente."
+      }
+     ],
+     "changed_by": [
+      "Quickhack Fixes"
+     ]
+    },
+    {
+     "id": "Intelligence_Central_Milestone_2",
+     "name": {
+      "en": "Embedded Exploit",
+      "fr": "Faille intégrée"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Central",
+     "milestone": true,
+     "requires": [
+      "Intelligence_Central_Milestone_1"
+     ],
+     "levels": [
+      {
+       "en": "+10% RAM recovery rate",
+       "fr": "+10 % au taux de récupération de mémoire vive"
+      },
+      {
+       "en": "+60% quickhack damage against enemies affected by Covert or Control quickhacks. (Note: Does not increase damage for Ultimate quickhacks.)",
+       "fr": "+60 % de dégâts de piratage rapide contre les ennemis affectés par des piratages rapides de Contrôle et de Furtivité (Remarque : n'augmente pas les dégâts pour les piratages rapides ultimes)."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Intelligence_Central_Perk_2_1",
+     "name": {
+      "en": "Speculation",
+      "fr": "Spéculation"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Intelligence_Central_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "Neutralizing an enemy with a Combat quickhack recovers RAM equal to 25% of the total cost of all quickhacks affecting the target.",
+       "fr": "Neutraliser un ennemi avec un piratage rapide de Combat restaure une quantité de mémoire vive égale à 25 % du coût total de tous les piratages rapides affectant la cible."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Intelligence_Central_Perk_2_2",
+     "name": {
+      "en": "ICEpick",
+      "fr": "Pic à GLACE"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Intelligence_Central_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "-1 RAM cost for Combat quickhacks used on enemies affected by or targeted by Control quickhacks, Covert quickhacks or the Distract Enemies quickhack.",
+       "fr": "-1 au coût en mémoire vive des piratages rapides de Combat utilisés sur un ennemi affecté ou ciblé par des piratages rapides de Contrôle ou de Furtivité, ou par le piratage rapide Distraire les ennemis."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Intelligence_Central_Perk_2_3",
+     "name": {
+      "en": "System Overwhelm",
+      "fr": "Surcharge du système"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Intelligence_Central_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "+7% quickhack damage for each unique quickhack and DOT effect affecting the target.",
+       "fr": "+7 % de dégâts de piratage rapide par piratage rapide unique et effet de dégâts sur la durée affectant la cible."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Intelligence_Central_Perk_2_4",
+     "name": {
+      "en": "Shadowrunner",
+      "fr": "Conspiratrice"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Intelligence_Central_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "-100% trace progress after performing a Takedown.",
+       "fr": "-100 % de progression du traçage après avoir effectué une neutralisation."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Intelligence_Inbetween_Right_2",
+     "name": {
+      "en": "Recirculation",
+      "fr": "Recirculation"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Inbetween_Right",
+     "milestone": false,
+     "requires": [
+      "Intelligence_Central_Perk_2_1",
+      "Intelligence_Right_Perk_2_2"
+     ],
+     "levels": [
+      {
+       "en": "+2 RAM after neutralizing an enemy with a Smart weapon.\n\nIf the enemy is affected by quickhacks, restores additional RAM equal to 50% of their total RAM cost.",
+       "fr": "+2 de mémoire vive lorsque vous neutralisez un ennemi avec une arme intelligente.\n\nSi l'ennemi est affecté par des piratages rapides, vous récupérez une quantité de mémoire vive supplémentaire correspondant à 50 % de la consommation totale de mémoire vive de ces piratages rapides."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Intelligence_Inbetween_Left_2",
+     "name": {
+      "en": "Siphon",
+      "fr": "Siphonnage"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Inbetween_Left",
+     "milestone": false,
+     "requires": [
+      "Intelligence_Central_Perk_2_2"
+     ],
+     "levels": [
+      {
+       "en": "Monowire attacks recover 0.5 RAM.\n\nIncreases to 1 if the enemy is affected by or targeted by a quickhack.",
+       "fr": "Les attaques avec le monocâble restaurent 0.5 de mémoire vive.\n\nLa valeur augmente à 1 si l'ennemi est affecté ou ciblé par un piratage rapide."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Intelligence_Right_Milestone_2",
+     "name": {
+      "en": "Acquisition Specialist",
+      "fr": "Spécialiste de l'acquisition"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Right",
+     "milestone": true,
+     "requires": [],
+     "levels": [
+      {
+       "en": "10% larger targeting reticle for Smart weapons.",
+       "fr": "Augmentation de 10 % de la taille du réticule pour les armes intelligentes."
+      },
+      {
+       "en": "Reloading Smart weapons no longer interrupts target lock.\n\n+15% lock-on speed when hip-firing.\n+20% lock-on speed when aiming.",
+       "fr": "Recharger une arme intelligente n'interrompt plus le verrouillage de la cible.\n\n+15 % à la vitesse de verrouillage lorsque vous tirez au jugé.\n+20 % à la vitesse de verrouillage lorsque vous visez."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Intelligence_Right_Perk_2_1",
+     "name": {
+      "en": "No Escape",
+      "fr": "Fuite impossible"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Right",
+     "milestone": false,
+     "requires": [
+      "Intelligence_Right_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "When using Smart weapons, if the target lock on an enemy is about to end, shooting them resets it.",
+       "fr": "Lorsque vous utilisez une arme intelligente, tirer sur l'ennemi permet de réinitialiser le verrouillage de la cible s'il va bientôt prendre fin."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Intelligence_Right_Perk_2_2",
+     "name": {
+      "en": "Precision Subroutines",
+      "fr": "Sous-routines de précision"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Right",
+     "milestone": false,
+     "requires": [
+      "Intelligence_Right_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "+2% accuracy with Smart weapons for each unit in your cyberdeck's Max RAM.",
+       "fr": "+2 % de précision avec les armes intelligentes pour chaque unité de mémoire vive de votre cyberconsole."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Intelligence_Left_Milestone_3",
+     "name": {
+      "en": "Queue Acceleration",
+      "fr": "Accélération de la file d'attente"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Left",
+     "milestone": true,
+     "requires": [
+      "Intelligence_Left_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "+1 Max RAM",
+       "fr": "+1 au maximum d'unités de mémoire vive"
+      },
+      {
+       "en": "-1 RAM cost to quickhack devices and vehicles.",
+       "fr": "-1 au coût en mémoire vive des piratages rapides contre les appareils et les véhicules."
+      },
+      {
+       "en": "+1 quickhack queue size\n\n+60% upload speed for quickhacks third or later in the queue.",
+       "fr": "+1 à la taille de la file d'attente des piratages rapides\n\n+60 % à la vitesse de transfert du troisième piratage rapide et des suivants dans la file d'attente."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Intelligence_Left_Perk_3_1",
+     "name": {
+      "en": "Queue Hack_Root",
+      "fr": "Piratage racine de la file d'attente"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Left",
+     "milestone": false,
+     "requires": [
+      "Intelligence_Left_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "-1 RAM cost for the first quickhack of each unique category that is second or later in the queue.",
+       "fr": "-1 au coût en mémoire vive du premier piratage rapide de chaque catégorie unique placé en deuxième position ou plus dans la file d'attente."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Intelligence_Left_Perk_3_2",
+     "name": {
+      "en": "Queue Prioritization",
+      "fr": "Priorité de la file d'attente"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Left",
+     "milestone": false,
+     "requires": [
+      "Intelligence_Left_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "+50% upload speed for the first quickhack when you have at least 2 quickhacks queued on an enemy.",
+       "fr": "+50 % à la vitesse de transfert du premier piratage rapide lorsque vous avez placé au moins deux piratages rapides dans la file d'attente d'un ennemi."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Intelligence_Left_Perk_3_4",
+     "name": {
+      "en": "Finisher: Live Wire",
+      "fr": "Coup de grâce : Câble sous tension"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Left",
+     "milestone": false,
+     "requires": [
+      "Intelligence_Left_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "Unlocks a Monowire Finisher.\n\nPress [Choice1] when an enemy's Health is low.\n\nThe more quickhacks you have queued on an enemy, the more susceptible they are.\n\nRestores 15% Health and 5 RAM.",
+       "fr": "Déverrouille un coup de grâce de monocâble.\n\nAppuyez sur [Choice1] lorsque la santé d'un ennemi est faible.\n\nPlus l'ennemi a de piratages rapides dans sa file d'attente, plus il y devient vulnérable.\n\nRestaure 15 % de santé et 5 de mémoire vive."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Intelligence_Inbetween_Left_3",
+     "name": {
+      "en": "Blood Daemon",
+      "fr": "Daemon sanguinaire"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Inbetween_Left",
+     "milestone": false,
+     "requires": [
+      "Intelligence_Left_Perk_3_1",
+      "Intelligence_Central_Perk_3_2"
+     ],
+     "levels": [
+      {
+       "en": "When Overclock is active:\n+25 Health for each quickhack queued on an enemy at the time you neutralize them.",
+       "fr": "Lorsque le mode Overclocking est activé :\n+25 point(s) de santé par piratage rapide dans la file d'attente d'un ennemi au moment où vous le neutralisez."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Intelligence_Central_Milestone_3",
+     "name": {
+      "en": "Overclock",
+      "fr": "Overclocking"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Central",
+     "milestone": true,
+     "requires": [
+      "Intelligence_Central_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "+10% RAM recovery rate",
+       "fr": "+10 % au taux de récupération de mémoire vive"
+      },
+      {
+       "en": "+10% quickhack damage",
+       "fr": "+10 % de dégâts de piratage rapide"
+      },
+      {
+       "en": "Unlocks Overclock mode.\n\nIf you have a cyberdeck installed, press [IconicCyberware] to activate. In this mode, you can use quickhacks even with insufficient RAM, but each RAM unit over your max costs 10 Health instead.\n\nDuration: 14 sec.\nCooldown: 30 sec.",
+       "fr": "Déverrouille le mode Overclocking.\n\nSi vous avez installé une cyberconsole, appuyez sur [IconicCyberware] pour l'activer. Dans ce mode, vous pouvez utiliser des piratages rapides même si vous n'avez pas assez de mémoire vive, mais ils consomment à la place 10 point(s) de santé par unité de mémoire vive au-dessus de votre maximum.\n\nDurée : 14 s.\nTemps de recharge : 30 s."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Intelligence_Central_Perk_3_1",
+     "name": {
+      "en": "Race Against Mind",
+      "fr": "Magie noire"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Intelligence_Central_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "When Overclock is active:\nIncreased quickhack damage as Health decreases (max. +50%).\nHealth is measured when you begin upload.",
+       "fr": "Lorsque le mode Overclocking est activé :\nAugmentation des dégâts de piratage rapide à mesure que la santé diminue (+50 % max.).\nLa santé est mesurée lorsque vous lancez le transfert du piratage rapide."
+      }
+     ],
+     "changed_by": [
+      "Perks And Skills Fixes"
+     ]
+    },
+    {
+     "id": "Intelligence_Central_Perk_3_2",
+     "name": {
+      "en": "Sublimation",
+      "fr": "Sublimation"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Intelligence_Central_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "When Overclock is active, all RAM recovery effects also regenerate Health.",
+       "fr": "Lorsque le mode Overclocking est activé, tous les effets de récupération de mémoire vive régénèrent aussi de la santé."
+      }
+     ],
+     "changed_by": [
+      "Perks And Skills Fixes"
+     ]
+    },
+    {
+     "id": "Intelligence_Central_Perk_3_3",
+     "name": {
+      "en": "Power Surge",
+      "fr": "Surtension"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Intelligence_Central_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "Activating Overclock instantly restores Health equal to 5 times your Max RAM.",
+       "fr": "Activer le mode Overclocking restaure instantanément un montant de santé égal à 5 fois votre maximum de mémoire vive."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Intelligence_Right_Milestone_3",
+     "name": {
+      "en": "Target Lock Transfer",
+      "fr": "Transfert de verrouillage de cible"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Right",
+     "milestone": true,
+     "requires": [
+      "Intelligence_Right_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "10% larger targeting reticle for Smart weapons.",
+       "fr": "Augmentation de 10 % de la taille du réticule pour les armes intelligentes."
+      },
+      {
+       "en": "Switching from aiming to hip-fire does not disengage target-lock on headshots and weakspots.",
+       "fr": "Alterner entre le tir ajusté et le tir au jugé n'interrompt pas le verrouillage de la cible sur les tirs à la tête et les points faibles."
+      },
+      {
+       "en": "Switching from one Smart weapon to another no longer interrupts target lock.",
+       "fr": "Changer d'arme intelligente n'interrompt plus le verrouillage de la cible."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Intelligence_Right_Perk_3_1",
+     "name": {
+      "en": "Targeting Prism",
+      "fr": "Prisme de ciblage"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Right",
+     "milestone": false,
+     "requires": [
+      "Intelligence_Right_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "Enables multiple target locks when aiming, and increases the number of simultaneous targets for all Smart weapons by 1.",
+       "fr": "Active le verrouillage multi-cibles lorsque vous visez, et augmente le nombre de cibles simultanées pour toutes les armes intelligentes de 1."
+      }
+     ],
+     "changed_by": [
+      "Perks And Skills Fixes"
+     ]
+    },
+    {
+     "id": "Intelligence_Right_Perk_3_2",
+     "name": {
+      "en": "Terminal Velocity",
+      "fr": "Vitesse terminale"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Right",
+     "milestone": false,
+     "requires": [
+      "Intelligence_Right_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "Increased projectile velocity and lock-on range for 10 sec. after neutralizing an enemy with a Smart weapon.\n\nStacks 3 times. New stacks reset duration. All stacks are removed when duration ends.",
+       "fr": "Augmentation de la vitesse des projectiles et de la portée de verrouillage pendant 10 s lorsque vous neutralisez un ennemi avec une arme intelligente.\n\nCumulable 3 fois. Chaque nouvelle charge réinitialise la durée. Toutes les charges sont retirées lorsque la durée est écoulée."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Intelligence_Master_Perk_1",
+     "name": {
+      "en": "Queue Mastery",
+      "fr": "Maîtrise de la file d'attente"
+     },
+     "tier": "Master",
+     "needs": 20,
+     "branch": "Master",
+     "milestone": false,
+     "requires": [
+      "Intelligence_Left_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "+1 quickhack queue size\n\nThe last quickhack to fill a queue has -50% RAM cost and locks the queue until all quickhacks have uploaded.\n\n+15% damage against enemies with a locked queue.",
+       "fr": "+1 à la taille de la file d'attente des piratages rapides\n\n-50 % au coût en mémoire vive du dernier piratage rapide remplissant une file d'attente, qui la verrouille jusqu'à ce que tous les piratages rapides aient été chargés.\n\n+15 % de dégâts contre les ennemis dont la file d'attente est verrouillée."
+      }
+     ],
+     "changed_by": [
+      "Quickhack Fixes"
+     ]
+    },
+    {
+     "id": "Intelligence_Master_Perk_3",
+     "name": {
+      "en": "Spillover",
+      "fr": "Débordement"
+     },
+     "tier": "Master",
+     "needs": 20,
+     "branch": "Master",
+     "milestone": false,
+     "requires": [
+      "Intelligence_Central_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "When Overclock is active:\n+50% chance for quickhacks to spread to an additional target.",
+       "fr": "Lorsque le mode Overclocking est activé :\n+50 % de chances pour que les piratages rapides se propagent à une cible supplémentaire."
+      }
+     ],
+     "changed_by": [
+      "No Spillover out of combat"
+     ]
+    },
+    {
+     "id": "Intelligence_Master_Perk_4",
+     "name": {
+      "en": "Smart Synergy",
+      "fr": "Synergie intelligente"
+     },
+     "tier": "Master",
+     "needs": 20,
+     "branch": "Master",
+     "milestone": false,
+     "requires": [
+      "Intelligence_Central_Milestone_3",
+      "Intelligence_Right_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "When Overclock is active, Smart weapons gain:\nInstant target lock\n+25% damage if the enemy is affected by a quickhack.",
+       "fr": "Lorsque le mode Overclocking est activé, les armes intelligentes :\nVerrouillent instantanément la cible\nInfligent +25 % de dégâts si l'ennemi est affecté par un piratage rapide."
+      }
+     ],
+     "changed_by": []
+    }
+   ],
+   "name": {
+    "en": "Intelligence",
+    "fr": "Intelligence",
+    "key": "Gameplay-RPG-Stats-IntelligenceBonus"
+   }
+  },
+  {
+   "id": "Cool",
+   "perks": [
+    {
+     "id": "Cool_Left_Milestone_1",
+     "name": {
+      "en": "Road Warrior",
+      "fr": "Guerrière de la route"
+     },
+     "tier": "Novice",
+     "needs": 4,
+     "branch": "Left",
+     "milestone": true,
+     "requires": [],
+     "levels": [
+      {
+       "en": "Allows you to use Sandevistan to slow time while driving.\n\nAllows Kerenzikov to be activated when aiming and handbraking simultaneously.\n\n+25% weapon damage when your vehicle is drifting or airborne.",
+       "fr": "Vous permet d'utiliser le Sandevistan pour ralentir le temps lorsque vous conduisez.\n\nVous permet d'activer le Kerenzikov lorsque vous visez tout en utilisant le frein à main.\n\n+25 % de dégâts d'arme lorsque votre véhicule dérape ou se trouve en l'air."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Cool_Central_Milestone_1",
+     "name": {
+      "en": "Feline Footwork",
+      "fr": "Agilité féline"
+     },
+     "tier": "Novice",
+     "needs": 4,
+     "branch": "Central",
+     "milestone": true,
+     "requires": [],
+     "levels": [
+      {
+       "en": "When crouched:\n+15% movement speed\n+15% Mitigation Chance\n\nMitigation - grants a chance to reduce incoming damage by current Mitigation Strength (default: 50%).",
+       "fr": "En position accroupie :\n+15 % à la vitesse de déplacement\n+15 % de chances d'atténuation\n\nL'atténuation correspond à la possibilité de réduire les dégâts subis à hauteur du degré d'atténuation actuel (par défaut, 50 %)."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Cool_Central_Perk_1_1",
+     "name": {
+      "en": "Unexposed",
+      "fr": "À l'abri des regards"
+     },
+     "tier": "Novice",
+     "needs": 4,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Cool_Central_Milestone_1"
+     ],
+     "levels": [
+      {
+       "en": "+20% Mitigation Chance when aiming from cover.",
+       "fr": "+20 % de chances d'atténuation lorsque vous visez depuis un abri."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Cool_Central_Perk_1_2",
+     "name": {
+      "en": "Small Target",
+      "fr": "Petite cible"
+     },
+     "tier": "Novice",
+     "needs": 4,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Cool_Central_Milestone_1"
+     ],
+     "levels": [
+      {
+       "en": "+20% Mitigation Chance when crouched and not moving.",
+       "fr": "+20 % de chances d'atténuation lorsque vous restez immobile en position accroupie."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Cool_Central_Perk_1_4",
+     "name": {
+      "en": "Blind Spot",
+      "fr": "Angle mort"
+     },
+     "tier": "Novice",
+     "needs": 4,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Cool_Central_Milestone_1"
+     ],
+     "levels": [
+      {
+       "en": "When crouched, the higher your Mitigation Chance, the longer it takes for enemies to detect you.",
+       "fr": "Lorsque vous êtes en position accroupie, plus vos chances d'atténuation sont élevées, plus il faut de temps aux ennemis pour vous détecter."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Cool_Right_Milestone_1",
+     "name": {
+      "en": "Killer Instinct",
+      "fr": "Instinct de tueuse"
+     },
+     "tier": "Novice",
+     "needs": 4,
+     "branch": "Right",
+     "milestone": true,
+     "requires": [],
+     "levels": [
+      {
+       "en": "+25% damage with knives, axes and silenced guns outside of combat. They also provide a preview of estimated damage.",
+       "fr": "+25 % de dégâts avec les couteaux, les haches et les armes avec silencieux hors combat. Ces armes donnent aussi une estimation des dégâts."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Cool_Right_Perk_1_1",
+     "name": {
+      "en": "Gag Order",
+      "fr": "Loi du silence"
+     },
+     "tier": "Novice",
+     "needs": 4,
+     "branch": "Right",
+     "milestone": false,
+     "requires": [
+      "Cool_Right_Milestone_1"
+     ],
+     "levels": [
+      {
+       "en": "Landing an attack on an enemy right after they detect you will delay detection from other nearby enemies.",
+       "fr": "Réussir une attaque contre un ennemi juste après qu'il vous a détectée retardera votre détection par les autres ennemis à proximité."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Cool_Right_Perk_1_2",
+     "name": {
+      "en": "Quick Getaway",
+      "fr": "Fuite rapide"
+     },
+     "tier": "Novice",
+     "needs": 4,
+     "branch": "Right",
+     "milestone": false,
+     "requires": [
+      "Cool_Right_Milestone_1"
+     ],
+     "levels": [
+      {
+       "en": "+10% movement speed after neutralizing an enemy while undetected.\n\nDuration: 30 sec. or until you are detected.\n\nStacks 2 times. New stacks reset duration. All stacks are removed when duration ends.",
+       "fr": "+10 % à la vitesse de déplacement lorsque vous neutralisez un ennemi sans vous faire détecter.\n\nDurée : 30 s ou jusqu'à ce qu'on vous détecte.\n\nSe cumule 2 fois. Les nouvelles charges réinitialisent la durée. Toutes les charges disparaissent une fois le temps écoulé."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Cool_Left_Milestone_2",
+     "name": {
+      "en": "Focus",
+      "fr": "Concentration"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Left",
+     "milestone": true,
+     "requires": [],
+     "levels": [
+      {
+       "en": "+10% headshot and weakspot damage",
+       "fr": "+10 % aux dégâts des tirs dans la tête ou sur un point faible"
+      },
+      {
+       "en": "Unlocks Focus mode. This mode automatically activates when you aim while at full Stamina.\n\nWhen active:\nNo Stamina cost for shooting, allowing for more accurate shots.\n\nWhen it ends:\n-40 Stamina\n\nDuration: 2.5 sec.",
+       "fr": "Déverrouille le mode Concentration, qui s'active automatiquement lorsque vous visez en ayant toute votre endurance.\n\nLorsque le mode est activé :\nVos tirs ne consomment aucune endurance, ce qui augmente leur précision.\n\nÀ la fin de l'effet :\n-40 d'endurance\n\nDurée : 2.5 s"
+      }
+     ],
+     "changed_by": [
+      "Relic Enhanced",
+      "Perks And Skills Fixes"
+     ]
+    },
+    {
+     "id": "Cool_Left_Perk_2_1",
+     "name": {
+      "en": "Head to Head",
+      "fr": "Concentration mortelle"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Left",
+     "milestone": false,
+     "requires": [
+      "Cool_Left_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "When Focus is active, neutralizing an enemy with a ranged attack resets its duration.",
+       "fr": "Lorsque le mode Concentration est activé, neutraliser un ennemi avec une attaque à distance réinitialise sa durée."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Cool_Left_Perk_2_2",
+     "name": {
+      "en": "Rinse and Reload",
+      "fr": "Éternel recommencement"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Left",
+     "milestone": false,
+     "requires": [
+      "Cool_Left_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "+10% reload speed for your next reload after neutralizing an enemy while aiming.\n\nStacks 2 times. The stack resets to 0 whenever you reload or start aiming again.",
+       "fr": "+10 % à la vitesse de rechargement pour votre prochain rechargement lorsque vous neutralisez un ennemi en visant.\n\nCumulable 2 fois. Le nombre de charges est réinitialisé lorsque vous rechargez ou visez à nouveau."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Cool_Left_Perk_2_3",
+     "name": {
+      "en": "Pull!",
+      "fr": "Pull !"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Left",
+     "milestone": false,
+     "requires": [
+      "Cool_Left_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "When Focus is active, shooting grenades that are mid-air is easier and the blast is more powerful.",
+       "fr": "Lorsque le mode Concentration est activé, tirer sur des grenades alors qu'elles sont en l'air est plus facile et l'explosion est plus puissante."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Cool_Left_Perk_2_4",
+     "name": {
+      "en": "No Sweat",
+      "fr": "Facile !"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Left",
+     "milestone": false,
+     "requires": [
+      "Cool_Left_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "-50% Stamina cost from Focus mode for each enemy neutralized while it was active.",
+       "fr": "-50 % de consommation d'endurance en mode Concentration par ennemi neutralisé pendant qu'il est activé."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Cool_Inbetween_Left_2",
+     "name": {
+      "en": "Deep Breath",
+      "fr": "Inspiration profonde"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Inbetween_Left",
+     "milestone": false,
+     "requires": [
+      "Cool_Left_Perk_2_1"
+     ],
+     "levels": [
+      {
+       "en": "Slows time by 25% for you and enemies when Focus is active.",
+       "fr": "Ralentit le temps de 25 % pour vous et vos ennemis lorsque le mode Concentration est activé."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Cool_Central_Milestone_2",
+     "name": {
+      "en": "Double Trouble",
+      "fr": "Deux fois plus de fun"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Central",
+     "milestone": true,
+     "requires": [],
+     "levels": [
+      {
+       "en": "Unlocks the ability to dual wield, but each weapon deals -37.5% damage.\nWhen aiming:\n-15% recoil\n-15% bullet spread\nSimultaneous shooting with both weapons.",
+       "fr": "Déverrouille la capacité permettant de manier deux armes, mais chaque arme inflige -37.5 % de dégâts.\nLorsque vous visez :\n-15 % de recul\n-15 % de dispersion des balles\nTir simultané avec les deux armes."
+      },
+      {
+       "en": "Press [QuickMelee] to perform a Heywood Hurricane, automatically firing both dual-wield weapons for 1 sec. but with +50% bullet spread.\nAmmo spent on successful shots is automatically refilled.\nReplaces Quick Melee Attack.",
+       "fr": "Appuyez sur [QuickMelee] pour effectuer un Ouragan d'Heywood et tirer automatiquement avec vos deux armes pendant 1 seconde(s), mais avec +50 % de dispersion.\nLes munitions dépensées lors de tirs réussis sont automatiquement récupérées.\nRemplace les attaques rapides au corps-à-corps."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Cool_Central_Perk_2_1",
+     "name": {
+      "en": "Two Right Hands",
+      "fr": "Deux mains droites"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Cool_Central_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "When hip-firing with dual wield:\n-25% Stamina cost\n\nWhen aiming with dual wield:\n-20% recoil\n-20% bullet spread",
+       "fr": "Lorsque vous tirez au jugé en maniant deux armes :\n-25 % de consommation d'endurance\n\nLorsque vous visez en maniant deux armes :\n-20 % de recul\n-20 % de dispersion des balles"
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Cool_Central_Perk_2_2",
+     "name": {
+      "en": "Triple Tequila",
+      "fr": "Triple tequila"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Cool_Central_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "+10% Mitigation Chance after neutralizing an enemy when dual wielding.\nDuration: 15 sec.\nStacks 3 times.\n\nTriple Tequila stacks are consumed when performing a Heywood Hurricane, giving it +15% damage per stack.\nNote: Stacks cannot be earned during a Heywood Hurricane.",
+       "fr": "+10 % de chances d'atténuation après avoir neutralisé un ennemi en maniant deux armes.\nDurée : 15 secondes.\nCumulable jusqu'à 3 fois.\n\nLes charges de Triple tequila sont consommées en effectuant un Ouragan d'Heywood, infligeant +15 % de dégâts par charge.\nRemarque : impossible d'obtenir des charges pendant un Ouragan d'Heywood."
+      }
+     ],
+     "changed_by": [
+      "Dual Wielding Fix"
+     ]
+    },
+    {
+     "id": "Cool_Central_Perk_2_3",
+     "name": {
+      "en": "Splash of Love",
+      "fr": "Un peu d'amour"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Cool_Central_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "+50% fire rate for Heywood Hurricane.\n\nAt max stacks of Triple Tequila:\n+1 sec. duration for Heywood Hurricane.",
+       "fr": "+50 % à la cadence de tir pour l'Ouragan d'Heywood.\n\nAu nombre max de charges de Triple tequila :\n+1 s à la durée de l'Ouragan d'Heywood."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Cool_Central_Perk_2_4",
+     "name": {
+      "en": "Keep 'Em Comin'",
+      "fr": "Tournée infinie"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Cool_Central_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "+40 Stamina after neutralizing an enemy when dual wielding.\n\n+20 additional Stamina per stack of Triple Tequila.",
+       "fr": "+40 d'endurance après avoir neutralisé un ennemi en maniant deux armes.\n\n+20 d'endurance supplémentaire par charge de Triple tequila."
+      }
+     ],
+     "changed_by": [
+      "Dual Wielding Fix"
+     ]
+    },
+    {
+     "id": "Cool_Right_Milestone_2",
+     "name": {
+      "en": "Scorpion Sting",
+      "fr": "Piqûre de scorpion"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Right",
+     "milestone": true,
+     "requires": [],
+     "levels": [
+      {
+       "en": "-15% recovery time for throwable weapons in vanilla mode.\n\n+15% bounce chance for throwable weapons in immersive mode.",
+       "fr": "-15% recovery time for throwable weapons in vanilla mode.\n\n+15% bounce chance for throwable weapons in immersive mode."
+      },
+      {
+       "en": "Crit Hits, headshots and hits to weakspots with throwable weapons apply Poison for 5 sec.",
+       "fr": "Les coups critiques et les tirs dans la tête ou sur un point faible avec une arme de lancer causent un empoisonnement pendant 5 s."
+      }
+     ],
+     "changed_by": [
+      "Immersive Throwables"
+     ]
+    },
+    {
+     "id": "Cool_Right_Perk_2_1",
+     "name": {
+      "en": "Corrosion",
+      "fr": "Corrosion"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Right",
+     "milestone": false,
+     "requires": [
+      "Cool_Right_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "Allows you to apply Poison to mechs, robots, drones and turrets.",
+       "fr": "Vous permet d'empoisonner les mécas, les robots, les drones et les tourelles."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Cool_Right_Perk_2_2",
+     "name": {
+      "en": "Neurotoxin",
+      "fr": "Neurotoxine"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Right",
+     "milestone": false,
+     "requires": [
+      "Cool_Right_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "Applying Poison to an enemy via Scorpion Sting now also applies Blinding and disables sprinting for 6 sec.",
+       "fr": "Empoisonner un ennemi à l'aide de Piqûre de scorpion cause également un aveuglement et neutralise le sprint pendant 6 s."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Cool_Right_Perk_2_3",
+     "name": {
+      "en": "Accelerated Toxin Absorption",
+      "fr": "Absorption accélérée des toxines"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Right",
+     "milestone": false,
+     "requires": [
+      "Cool_Right_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "Strong Attacks and thrown weapons used against Poisoned enemies instantly deal substantial Poison damage then remove all Poison effects.",
+       "fr": "Les armes lancées et les attaques puissantes utilisées contre un ennemi empoisonné infligent instantanément des dégâts de poison conséquents, puis dissipent tous les effets de poison."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Cool_Right_Perk_2_4",
+     "name": {
+      "en": "Parasite",
+      "fr": "Parasite"
+     },
+     "tier": "Adept",
+     "needs": 9,
+     "branch": "Right",
+     "milestone": false,
+     "requires": [
+      "Cool_Right_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "+15 Health on Crit Hits and headshots with thrown weapons.",
+       "fr": "+15 point(s) de santé en cas de coup critique ou de tir dans la tête avec une arme de lancer."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Cool_Left_Milestone_3",
+     "name": {
+      "en": "Deadeye",
+      "fr": "Œil de faucon"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Left",
+     "milestone": true,
+     "requires": [
+      "Cool_Left_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "+10% headshot and weakspot damage",
+       "fr": "+10 % aux dégâts des tirs dans la tête ou sur un point faible"
+      },
+      {
+       "en": "-25% Stamina cost for shooting.",
+       "fr": "-25 % de consommation d'endurance lorsque vous tirez."
+      },
+      {
+       "en": "Unlocks Deadeye mode, which is active above 85% Stamina. When active:\n+20% headshot damage\n+20% weakspot damage\nNo bullet spread",
+       "fr": "Déverrouille le mode Œil de faucon, qui est activé lorsque votre endurance est supérieure à 85 %. Lorsque ce mode est activé :\n+20 % aux dégâts des tirs dans la tête\n+20 % aux dégâts contre les points faibles\nPas de dispersion des balles"
+      }
+     ],
+     "changed_by": [
+      "Relic Enhanced"
+     ]
+    },
+    {
+     "id": "Cool_Left_Perk_3_1",
+     "name": {
+      "en": "Quick Draw",
+      "fr": "Dégainement rapide"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Left",
+     "milestone": false,
+     "requires": [
+      "Cool_Left_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "+30% weapon swap speed when swapping to Pistols, Revolvers, Sniper Rifles and Precision Rifles.\n\n+30% Stamina when swapping during combat.",
+       "fr": "+30 % à la vitesse de changement d'arme lorsque vous sortez un pistolet, un revolver, un fusil de sniper ou un fusil de précision.\n\n+30 % d'endurance lorsque vous changez d'arme pendant un combat."
+      }
+     ],
+     "changed_by": [
+      "Perks And Skills Fixes"
+     ]
+    },
+    {
+     "id": "Cool_Left_Perk_3_2",
+     "name": {
+      "en": "High Noon",
+      "fr": "Duelliste"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Left",
+     "milestone": false,
+     "requires": [
+      "Cool_Left_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "When Deadeye is active:\n+35% reload speed for your next reload after neutralizing an enemy via headshot or weakspot.\nEffect available for 3 sec.\nSlows time by 50% during reload.",
+       "fr": "Lorsque le mode Œil de faucon est activé :\n+35 % à la vitesse de rechargement de votre rechargement suivant lorsque vous neutralisez un ennemi avec un tir dans la tête ou sur un point faible.\nEffet disponible pendant 3 s.\nRalentit le temps de 50 % durant le rechargement."
+      }
+     ],
+     "changed_by": [
+      "Perks And Skills Fixes"
+     ]
+    },
+    {
+     "id": "Cool_Left_Perk_3_3",
+     "name": {
+      "en": "Long Shot",
+      "fr": "Tir à longue distance"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Left",
+     "milestone": false,
+     "requires": [
+      "Cool_Left_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "When Deadeye is active, your shots always deal full damage regardless of distance.",
+       "fr": "Lorsque le mode Œil de faucon est activé, vos tirs infligent toujours le maximum de dégâts quelle que soit la distance."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Cool_Left_Perk_3_4",
+     "name": {
+      "en": "California Reaper",
+      "fr": "Grande Faucheuse"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Left",
+     "milestone": false,
+     "requires": [
+      "Cool_Left_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "+30% Stamina after neutralizing an enemy with a ranged attack via headshot or weakspot.",
+       "fr": "+30 % d'endurance lorsque vous neutralisez un ennemi à distance avec un tir dans la tête ou sur un point faible."
+      }
+     ],
+     "changed_by": [
+      "Perks And Skills Fixes"
+     ]
+    },
+    {
+     "id": "Cool_Central_Milestone_3",
+     "name": {
+      "en": "Ninjutsu",
+      "fr": "Ninjutsu"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Central",
+     "milestone": true,
+     "requires": [],
+     "levels": [
+      {
+       "en": "+15% crouch movement speed",
+       "fr": "+15 % à la vitesse de déplacement en position accroupie"
+      },
+      {
+       "en": "+15% Mitigation Chance when crouched.",
+       "fr": "+15 % de chances d'atténuation en position accroupie."
+      },
+      {
+       "en": "Unlocks the ability to sprint while crouching.\n\nPress [ToggleSprint] while crouching.\n\nCrouch-sprinting allows you to move more quickly while staying silent, but it consumes Stamina.",
+       "fr": "Déverrouille la capacité permettant de sprinter en position accroupie.\n\nAppuyez sur [ToggleSprint] en position accroupie.\n\nSprinter en position accroupie vous permet de vous déplacer plus rapidement sans faire de bruit, mais cela consomme de l'endurance."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Cool_Central_Perk_3_1",
+     "name": {
+      "en": "Serpentine",
+      "fr": "Subreptice"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Cool_Central_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "+30% Mitigation Chance when crouch-sprinting.",
+       "fr": "+30 % de chances d'atténuation lorsque vous sprintez en position accroupie."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Cool_Central_Perk_3_2",
+     "name": {
+      "en": "Creeping Death",
+      "fr": "Ombre de la mort"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Cool_Central_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "When Optical Camo is active or you are undetected, neutralizing an enemy grants:\n+15% Health\n+15% Stamina\n+10% movement speed for 6 sec.",
+       "fr": "Lorsque le camouflage optique est activé ou lorsque vous n'avez pas été détectée, neutraliser un ennemi vous confère :\n+15 % de santé\n+15 % d'endurance\n+10 % à la vitesse de déplacement pendant 6 s."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Cool_Central_Perk_3_4",
+     "name": {
+      "en": "Shinobi Sprint",
+      "fr": "Sprint shinobi"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Cool_Central_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "-75% Stamina cost for crouch-sprinting during combat.",
+       "fr": "-75 % de consommation d'endurance lorsque vous sprintez en position accroupie pendant un combat."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Cool_Inbetween_Left_3",
+     "name": {
+      "en": "Vanishing Act",
+      "fr": "Disparition"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Inbetween_Left",
+     "milestone": false,
+     "requires": [
+      "Cool_Central_Perk_3_2"
+     ],
+     "levels": [
+      {
+       "en": "Optical Camo activates automatically and consumes its charge gradually while crouch-sprinting or sliding",
+       "fr": "Le camouflage optique s'active automatiquement et consomme sa charge lorsque vous glissez ou sprintez en position accroupie."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Cool_Inbetween_Right_3",
+     "name": {
+      "en": "Pounce",
+      "fr": "Bond de prédateur"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Inbetween_Right",
+     "milestone": false,
+     "requires": [
+      "Cool_Right_Perk_3_2"
+     ],
+     "levels": [
+      {
+       "en": "Allows you to perform Finishers from a greater distance if you've hit the enemy with a throwable weapon.\n\nEach successful throw also makes them more susceptible to Finishers.\n\nTo perform a Finisher, press [Choice1] when an enemy's Health is low.",
+       "fr": "Vous permet de réaliser des coups de grâce de plus loin si vous avez touché l'ennemi avec une arme de lancer.\n\nChaque lancer réussi augmente aussi sa vulnérabilité aux coups de grâce.\n\nPour réaliser un coup de grâce, appuyez sur [Choice1] lorsque la santé d'un ennemi est faible."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Cool_Right_Milestone_3",
+     "name": {
+      "en": "Juggler",
+      "fr": "Jongleuse"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Right",
+     "milestone": true,
+     "requires": [
+      "Cool_Right_Milestone_2"
+     ],
+     "levels": [
+      {
+       "en": "-15% recovery time for throwable weapons in vanilla mode.\n\n+15% bounce chance for throwable weapons in immersive mode.",
+       "fr": "-15% recovery time for throwable weapons in vanilla mode.\n\n+15% bounce chance for throwable weapons in immersive mode."
+      },
+      {
+       "en": "+20% headshot and weakspot damage with throwable weapons.",
+       "fr": "+20 % aux dégâts des tirs dans la tête ou sur un point faible avec les armes de lancer."
+      },
+      {
+       "en": "Instant Cooldown reset for all throwable weapons after neutralizing an enemy with a throwable weapon via headshot, Crit Hit, or Poison.",
+       "fr": "Réinitialisation instantanée du temps de recharge de toutes les armes de lancer lorsque vous neutralisez un ennemi grâce à un tir dans la tête, un coup critique ou un empoisonnement avec une arme de lancer."
+      }
+     ],
+     "changed_by": [
+      "Immersive Throwables"
+     ]
+    },
+    {
+     "id": "Cool_Right_Perk_3_1",
+     "name": {
+      "en": "Pay It Forward",
+      "fr": "Au suivant"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Right",
+     "milestone": false,
+     "requires": [
+      "Cool_Right_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "After retrieving a thrown knife or axe from an enemy, your first melee attack with a throwable weapon gains +200% damage.",
+       "fr": "Après avoir récupéré un couteau ou une hache de lancer sur un ennemi, votre première attaque au corps-à-corps avec une arme de lancer inflige +200 % de dégâts."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Cool_Right_Perk_3_2",
+     "name": {
+      "en": "Finisher: Act of Mercy",
+      "fr": "Coup de grâce : Acte de clémence"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Right",
+     "milestone": false,
+     "requires": [
+      "Cool_Right_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "Unlocks a Throwable Weapon Finisher.\n\nPress [Choice1] when an enemy's Health is low.\n\nAutomatically activates Juggler.\n\nRestores 25% Health.",
+       "fr": "Déverrouille un coup de grâce d'arme de lancer.\n\nAppuyez sur [Choice1] lorsque la santé d'un ennemi est faible.\n\nActive automatiquement Jongleuse.\n\nRestaure 25 % de santé."
+      }
+     ],
+     "changed_by": [
+      "Melee Attacks Fixes And Enhancements"
+     ]
+    },
+    {
+     "id": "Cool_Right_Perk_3_4",
+     "name": {
+      "en": "Sleight of Hand",
+      "fr": "Tour de passe-passe"
+     },
+     "tier": "Expert",
+     "needs": 15,
+     "branch": "Right",
+     "milestone": false,
+     "requires": [
+      "Cool_Right_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "+20% Crit Damage for 8 sec. whenever Juggler is activated.\n\nStacks 5 times. New stacks reset duration. All stacks are removed when duration ends.",
+       "fr": "+20 % de dégâts critiques pendant 8 s quand Jongleuse est actif.\n\nCumulable 5 fois. Chaque nouvelle charge réinitialise la durée. Toutes les charges sont retirées lorsque la durée est écoulée."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Cool_Master_Perk_1",
+     "name": {
+      "en": "Nerves of Tungsten-Steel",
+      "fr": "Nerfs d'acier au tungstène"
+     },
+     "tier": "Master",
+     "needs": 20,
+     "branch": "Master",
+     "milestone": false,
+     "requires": [
+      "Cool_Left_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "When Deadeye is active:\nGuaranteed Crit Hits for headshots and weakspots.\nIncreased damage as distance increases (max. +25%).",
+       "fr": "Lorsque le mode Œil de faucon est activé :\nCoups critiques garantis pour les tirs dans la tête ou sur un point faible.\nAugmentation des dégâts avec la distance (+25 % max.)."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Cool_Master_Perk_2",
+     "name": {
+      "en": "Run 'N' Gun",
+      "fr": "Course mortelle"
+     },
+     "tier": "Master",
+     "needs": 20,
+     "branch": "Master",
+     "milestone": false,
+     "requires": [
+      "Cool_Left_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "Hip-firing does not consume Stamina.\n\nWhen Focus is active:\n+25% movement speed",
+       "fr": "Tirer au jugé ne consomme pas d'endurance.\n\nLorsque le mode Concentration est activé :\n+25 % à la vitesse de déplacement"
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Cool_Master_Perk_4",
+     "name": {
+      "en": "Style Over Substance",
+      "fr": "Le style avant tout"
+     },
+     "tier": "Master",
+     "needs": 20,
+     "branch": "Master",
+     "milestone": false,
+     "requires": [
+      "Cool_Central_Milestone_3",
+      "Cool_Right_Milestone_3"
+     ],
+     "levels": [
+      {
+       "en": "Guaranteed Crit Hits with thrown attacks when crouch-sprinting, sliding, dodging or Dashing; also from motorcycles when airborne, drifting or dismounting via jump.\n\nNo movement speed penalty when aiming a throwable weapon.",
+       "fr": "Coups critiques garantis avec les attaques de lancer lorsque vous sprintez en position accroupie, glissez, esquivez ou chargez ; fonctionne également à moto lorsque vous êtes en l'air, dérapez ou descendez du véhicule en sautant.\n\nPas de malus à la vitesse de déplacement lorsque vous visez avec une arme de lancer."
+      }
+     ],
+     "changed_by": []
+    }
+   ],
+   "name": {
+    "en": "Cool",
+    "fr": "Sang-froid",
+    "key": "Gameplay-RPG-Stats-Attributes-CoolName"
+   }
+  },
+  {
+   "id": "Espionage",
+   "perks": [
+    {
+     "id": "Espionage_Central_Milestone_1",
+     "name": {
+      "en": "Jailbreak",
+      "fr": "Jailbreak"
+     },
+     "tier": "Espionage",
+     "needs": 0,
+     "branch": "Central",
+     "milestone": true,
+     "requires": [],
+     "levels": [
+      {
+       "en": "Unlocks new abilities for Arm cyberware: Mantis Blades, Gorilla Arms, Projectile Launch System and Monowire.",
+       "fr": "Déverrouille de nouvelles capacités pour le matériel cybernétique des bras : lames Mantis, bras de gorille, lance-projectile et monocâble."
+      }
+     ],
+     "changed_by": [
+      "Relic Enhanced"
+     ]
+    },
+    {
+     "id": "Espionage_Central_Perk_1_1",
+     "name": {
+      "en": "Launch Capacity Override",
+      "fr": "Contournement de la capacité du lanceur"
+     },
+     "tier": "Espionage",
+     "needs": 0,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Espionage_Central_Milestone_1"
+     ],
+     "levels": [
+      {
+       "en": "+1 charge for the Projectile Launch System",
+       "fr": "+1 charge pour le lance-projectile"
+      }
+     ],
+     "changed_by": [
+      "Missile Rain - New Cyberware And Quickhack"
+     ]
+    },
+    {
+     "id": "Espionage_Central_Perk_1_2",
+     "name": {
+      "en": "Limiter Removal",
+      "fr": "Suppression du limiteur"
+     },
+     "tier": "Espionage",
+     "needs": 0,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Espionage_Central_Milestone_1"
+     ],
+     "levels": [
+      {
+       "en": "The shockwave from a charged Gorilla Arms attack now knocks down all enemies within range.",
+       "fr": "L'onde de choc d'une attaque chargée avec les bras de gorille renverse maintenant tous les ennemis à portée."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Espionage_Central_Perk_1_3",
+     "name": {
+      "en": "Data Tunneling",
+      "fr": "Tunnel de données"
+     },
+     "tier": "Espionage",
+     "needs": 0,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Espionage_Central_Milestone_1"
+     ],
+     "levels": [
+      {
+       "en": "When an enemy is affected by a Monowire-uploaded quickhack, normal Monowire attacks which hit that enemy and other enemies simultaneously will spread the quickhack to them.",
+       "fr": "Lorsqu'un ennemi est affecté par un piratage rapide transféré par le monocâble, les attaques normales avec le monocâble qui touchent simultanément cet ennemi et d'autres ennemis ont pour effet de leur propager le piratage rapide."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Espionage_Central_Perk_1_4",
+     "name": {
+      "en": "Spatial Mapping",
+      "fr": "Cartographie spatiale"
+     },
+     "tier": "Espionage",
+     "needs": 0,
+     "branch": "Central",
+     "milestone": false,
+     "requires": [
+      "Espionage_Central_Milestone_1"
+     ],
+     "levels": [
+      {
+       "en": "All Leap Attacks with Mantis Blades now cripple enemies and increase dismemberment chance against those same enemies for 10 sec.",
+       "fr": "Toutes les attaques sautées avec les lames Mantis estropient maintenant les ennemis et augmentent les chances de démembrement contre ces mêmes ennemis pendant 10 s."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Espionage_Left_Milestone_Perk",
+     "name": {
+      "en": "Emergency Cloaking",
+      "fr": "Camouflage d'urgence"
+     },
+     "tier": "Espionage",
+     "needs": 0,
+     "branch": "Left",
+     "milestone": true,
+     "requires": [],
+     "levels": [
+      {
+       "en": "Improves Optical Camo cyberware.\n\nActivating Optical Camo during combat by pressing [UseCombatGadget] will cause enemies to lose track of you, giving you a chance to exit combat.\n\nNote: To use this ability, you must have Optical Camo equipped to your Combat Gadget quickslot.",
+       "fr": "Améliore le matériel cybernétique Camouflage optique.\n\nActivez le camouflage optique en combat en appuyant sur [UseCombatGadget] pour que les ennemis perdent votre trace et avoir ainsi une chance de quitter le combat.\n\nRemarque : pour utiliser cette capacité, un camouflage optique doit être équipé dans votre emplacement rapide des gadgets de combat."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Espionage_Left_Perk_1_2",
+     "name": {
+      "en": "Sensory Protocol",
+      "fr": "Protocole sensoriel"
+     },
+     "tier": "Espionage",
+     "needs": 0,
+     "branch": "Left",
+     "milestone": false,
+     "requires": [
+      "Espionage_Left_Milestone_Perk"
+     ],
+     "levels": [
+      {
+       "en": "When crouched, becoming detected by an enemy will temporarily slow time. Dodge or Dash out of the enemy's line of sight to immediately exit combat.\n\nCooldown: 120 sec.",
+       "fr": "Lorsque vous êtes en position accroupie, le temps est ralenti temporairement si un ennemi vous détecte. Sortez de son champ de vision en faisant une esquive ou une charge pour quitter immédiatement le combat.\n\nTemps de recharge : 120 s."
+      }
+     ],
+     "changed_by": []
+    },
+    {
+     "id": "Espionage_Right_Milestone_1",
+     "name": {
+      "en": "Vulnerability Analytics",
+      "fr": "Analyse des vulnérabilités"
+     },
+     "tier": "Espionage",
+     "needs": 0,
+     "branch": "Right",
+     "milestone": true,
+     "requires": [],
+     "levels": [
+      {
+       "en": "During combat, you can now detect Vulnerabilities in enemy Armor and cyberware. Hitting Vulnerabilities gives:\n\n100% Crit Chance\n+25% Armor penetration\nWeakspot damage bonuses\n\nDealing enough damage to a Vulnerability will cause it to explode, generating an EMP blast that damages enemies within 3 m.",
+       "fr": "Pendant un combat, vous pouvez maintenant détecter les vulnérabilités dans l'armure et le matériel cybernétique d'un ennemi. Toucher une vulnérabilité offre les avantages suivants :\n\n100 % de chances d'infliger un coup critique\n+25 % de perforation d'armure\nBonus de dégâts contre les points faibles\n\nSi vous infligez assez de dégâts à une vulnérabilité, celle-ci explosera, en générant une explosion IEM infligeant des dégâts aux ennemis dans un rayon de 3 m."
+      }
+     ],
+     "changed_by": [
+      "Relic Enhanced"
+     ]
+    },
+    {
+     "id": "Espionage_Right_Perk_1_1",
+     "name": {
+      "en": "Machine Learning",
+      "fr": "Apprentissage automatique"
+     },
+     "tier": "Espionage",
+     "needs": 0,
+     "branch": "Right",
+     "milestone": false,
+     "requires": [
+      "Espionage_Right_Milestone_1"
+     ],
+     "levels": [
+      {
+       "en": "Destroying an enemy's Vulnerability grants:\n+10% frequency of new Vulnerabilities appearing\n+5% Crit Damage against Vulnerabilities\n\nDuration: 25 sec.\nEffect can stack 5 times.\nReaching max stacks doubles these effects.",
+       "fr": "Détruire une vulnérabilité ennemie offre plusieurs avantages :\n+10 % de chances pour qu'une autre vulnérabilité apparaisse\n+5 % de dégâts critiques contre les vulnérabilités\n\nDurée : 25 s.\nEffet cumulable 5 fois.\nEffets doublés lorsque vous atteignez le nombre maximum de charges."
+      }
+     ],
+     "changed_by": []
+    }
+   ],
+   "name": {
+    "en": "Relic",
+    "fr": "Relic",
+    "key": "Story-ep1-gameplay-gui-widgets-somi_perks-somi_perks-_localizationString1"
+   }
+  }
+ ]
+}

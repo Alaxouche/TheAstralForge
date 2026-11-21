@@ -20,7 +20,7 @@ This modlist is for Cyberpunk 2077 with the **Phantom Liberty** DLC installed. I
 
 Turn off automatic game updates before you install: the steps are on the [Installation]({{ '/ghost-of-the-grid/installation-guide/g_installation/' | relative_url }}) page.
 
-This list will only work with a legitimate Steam or GOG install of this game. This modlist is focused mostly on graphics and lighting.
+This list will only work with a legitimate Steam or GOG install of this game. This modlist changes both the look of Night City and how the game plays: combat, progression, economy and new content. The Game Guide explains the changes.
 
 ## Disclaimer
 
@@ -40,7 +40,7 @@ Cette modlist est conçue pour Cyberpunk 2077 avec le DLC **Phantom Liberty** in
 
 Désactivez les mises à jour automatiques du jeu avant l'installation : la marche à suivre se trouve sur la page [Installation]({{ '/ghost-of-the-grid/installation-guide/g_installation/' | relative_url }}).
 
-Cette liste ne fonctionnera qu'avec une installation Steam ou GOG légitime du jeu. Cette modlist est principalement axée sur les graphismes et l'éclairage.
+Cette liste ne fonctionnera qu'avec une installation Steam ou GOG légitime du jeu. Cette modlist change à la fois l'apparence de Night City et la façon de jouer : combat, progression, économie et nouveau contenu. Le guide de jeu explique les changements.
 
 ## Avertissement
 

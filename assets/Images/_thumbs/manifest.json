@@ -1,13 +1,4 @@
 {
- "/assets/Images/AstralForge_Background.webp": {
-  "w": 2560,
-  "h": 1440,
-  "t": {
-   "480": "/assets/Images/_thumbs/AstralForge_Background-480.webp",
-   "960": "/assets/Images/_thumbs/AstralForge_Background-960.webp",
-   "1600": "/assets/Images/_thumbs/AstralForge_Background-1600.webp"
-  }
- },
  "/assets/Images/AstralForge_Background_Dark.webp": {
   "w": 2560,
   "h": 1440,
@@ -15,15 +6,6 @@
    "480": "/assets/Images/_thumbs/AstralForge_Background_Dark-480.webp",
    "960": "/assets/Images/_thumbs/AstralForge_Background_Dark-960.webp",
    "1600": "/assets/Images/_thumbs/AstralForge_Background_Dark-1600.webp"
-  }
- },
- "/assets/Images/AstralForge_Background_Light.webp": {
-  "w": 2560,
-  "h": 1440,
-  "t": {
-   "480": "/assets/Images/_thumbs/AstralForge_Background_Light-480.webp",
-   "960": "/assets/Images/_thumbs/AstralForge_Background_Light-960.webp",
-   "1600": "/assets/Images/_thumbs/AstralForge_Background_Light-1600.webp"
   }
  },
  "/assets/Images/community/1545284815644000338-0.webp": {
@@ -201,27 +183,6 @@
    "480": "/assets/Images/_thumbs/community/1561848479461019799-480.webp",
    "960": "/assets/Images/_thumbs/community/1561848479461019799-960.webp"
   }
- },
- "/assets/Images/community/1567275741803188224-0.webp": {
-  "w": 1280,
-  "h": 720,
-  "t": {
-   "480": "/assets/Images/_thumbs/community/1567275741803188224-0-480.webp",
-   "960": "/assets/Images/_thumbs/community/1567275741803188224-0-960.webp"
-  }
- },
- "/assets/Images/community/1567275741803188224-1.webp": {
-  "w": 1280,
-  "h": 720,
-  "t": {
-   "480": "/assets/Images/_thumbs/community/1567275741803188224-1-480.webp",
-   "960": "/assets/Images/_thumbs/community/1567275741803188224-1-960.webp"
-  }
- },
- "/assets/Images/Creator-Avatar.webp": {
-  "w": 512,
-  "h": 512,
-  "t": {}
  },
  "/assets/Images/Cyberpunk/photomode_03122025_143534.webp": {
   "w": 2560,

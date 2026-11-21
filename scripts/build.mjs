@@ -36,6 +36,22 @@ function parseFrontMatter(src) {
   return { data: yaml.load(m[1]) || {}, body: src.slice(m[0].length) };
 }
 
+/* Remove every element marked lang="<drop>" (with its content): leaves the text of the other language */
+function dropLang(html, drop) {
+  const open = new RegExp(`<([a-z][\\w-]*)\\b[^>]*\\blang="${drop}"[^>]*>`, 'gi');
+  let out = '', i = 0, m;
+  while ((m = open.exec(html))) {
+    out += html.slice(i, m.index);
+    const tags = new RegExp(`<(/?)${m[1]}\\b[^>]*>`, 'gi');
+    tags.lastIndex = m.index + m[0].length;
+    let depth = 1, t;
+    while (depth && (t = tags.exec(html))) depth += t[1] ? -1 : t[0].endsWith('/>') ? 0 : 1;
+    i = t ? tags.lastIndex : html.length;
+    open.lastIndex = i;
+  }
+  return out + html.slice(i);
+}
+
 function slugify(text) {
   return String(text)
     .toLowerCase()
@@ -123,19 +139,15 @@ const FR = {
   'Known Issues': 'Problèmes connus',
   'Load Order': 'Ordre de chargement',
   'System Requirements': 'Configuration requise',
-  'System Requirement': 'Configuration requise',
   'Wabbajack Installation': 'Installation Wabbajack',
   'Post Installation': 'Post-installation',
   'Using The List': 'Utiliser la liste',
   'Linux Installation Guide': 'Guide Linux',
   'Frequently Asked Questions': 'Foire aux questions',
   'Community Gallery': 'Galerie communautaire',
-  'Contributors': 'Contributeurs',
   'Report a Bug': 'Signaler un bug',
   'Size': 'Taille',
   'Updated': 'Mise à jour',
-  'Archives': 'Archives',
-  'Version': 'Version',
 };
 
 /* ------------------------------------------------------------------ */
@@ -630,7 +642,6 @@ async function build() {
     const esc = (x) => String(x).replace(/&/g, '&amp;').replace(/</g, '&lt;');
     return fr && fr !== s ? `<span lang="en">${esc(s)}</span><span lang="fr">${esc(fr)}</span>` : esc(s);
   });
-  engine.registerFilter('slug', slugify);
   engine.registerFilter('reltime', (iso) => relTimeBi(iso));
   engine.registerFilter('perk_trees', (data) => perkTreesHtml(data));
   engine.registerFilter('keymap', (data, lang) => keymapHtml(data, lang));
@@ -648,7 +659,7 @@ async function build() {
   engine.registerFilter('authors_wall', () => authorsWallHtml(authorsOf()));
   // Troubleshooting: links to sections of the list's own pages (page title aliases, heading ids as the
   // Markdown renderer makes them). A missing page drops the link; a missing heading drops the anchor.
-  const PAGE_ALIASES = { 'System Requirements': ['System Requirements', 'System Requirement'], Installation: ['Installation', 'Pre-Installation'] };
+  const PAGE_ALIASES = { Installation: ['Installation', 'Pre-Installation'] };
   const resolveLink = (id, l) => {
     const self = l.page === 'self';
     const names = self ? ['Troubleshooting'] : PAGE_ALIASES[l.page] || [l.page];
@@ -686,7 +697,6 @@ async function build() {
   /* Collect pages */
   const pages = [];
   const collections = Object.keys(config.collections || {});
-  const collectionNames = (config.just_the_docs && config.just_the_docs.collections) || {};
 
   for (const key of collections) {
     const dir = path.join(ROOT, '_' + key);
@@ -719,7 +729,7 @@ async function build() {
     return {
       id: key,
       url: `/${key}/`,
-      title: idx.title || collectionNames[key]?.name || key,
+      title: idx.title || key,
       game: idx.game || '',
       image: banner.image || idx.image || '/assets/Images/generic_background.webp',
       // Every list uses the site gold (asked by the user, Nov 2026); project_banner.accent is no longer used
@@ -728,8 +738,10 @@ async function build() {
       emblem: exists(`assets/logos/emblems/${key}.svg`) ? `/assets/logos/emblems/${key}.svg` : null,
       subtitle: banner.subtitle || '',
       subtitle_fr: banner.subtitle_fr || '',
-      stats: banner.stats || [],
       contents: data['contents_' + key] || null,
+      // Mod count: from the published list (_data/contents_<id>.json), else the hand-written stat
+      mods: data['contents_' + key]?.totals?.mods ? String(data['contents_' + key].totals.mods)
+        : ((banner.stats || []).find((s) => s.label === 'Mods') || {}).value || null,
     };
   });
 
@@ -757,7 +769,7 @@ async function build() {
     m.live = {
       version: snap.version || '',
       updated: snap.dateUpdated || '',
-      size: meta.TotalSize ? Math.round(meta.TotalSize / 1e9) + ' GB' : '',
+      size: meta.TotalSize ? String(Math.round(meta.TotalSize / 1e9)) : '',
       archives: meta.NumberOfArchives ? String(meta.NumberOfArchives) : '',
     };
   }
@@ -787,7 +799,7 @@ async function build() {
   const searchIndex = [];
   const layoutFor = (p) => {
     if (p.layout === 'skyground_home') return 'home.liquid';
-    if (p.layout === 'skyground_base' || p.layout === 'page') return 'page.liquid';
+    if (p.layout === 'page') return 'page.liquid';
     return 'doc.liquid';
   };
 
@@ -802,7 +814,7 @@ async function build() {
         if (i === -1) continue;
         prev = seq[i - 1] || null; next = seq[i + 1] || null;
         // "Step n / N" only for the install guide: a game guide is not read in order
-        if (/install/i.test(item.title)) step = { i: i + 1, n: seq.length, urls: seq.map((s) => s.url), items: seq };
+        if (/install/i.test(item.title)) step = { i: i + 1, n: seq.length, items: seq };
       }
     }
     // Social preview drawn by scripts/make-og.py (assets/og/<url with / as -->.jpg), when it exists
@@ -816,7 +828,7 @@ async function build() {
     // Disk-space placeholders (formerly filled client-side) → values from _data/modlist_snapshot.json
     const snap = (data.modlist_snapshot || []).find((x) => x.id === page.collection);
     const meta = snap && snap.download_metadata;
-    const gb = (b) => (meta ? Math.round(b / 1e9) + ' GB' : '?');
+    const gb = (b) => (meta ? Math.round(b / 1e9) + '&nbsp;<span lang="en">GB</span><span lang="fr">Go</span>' : '?');
     content = content
       .replace(/(data-modlist-total[^>]*>)Loading.../g, (_, t) => t + gb(meta && meta.TotalSize))
       .replace(/(data-modlist-install[^>]*>)Loading.../g, (_, t) => t + gb(meta && meta.SizeOfInstalledFiles))
@@ -829,7 +841,6 @@ async function build() {
       content = content.replace(/(^\s*|<div lang="(?:en|fr)">\s*)(<h1[^>]*>[\s\S]*?<\/h1>\s*)?<h2 id="([^"]+)">([\s\S]*?)<\/h2>/g,
         (m, pre, h1 = '', id, text) => (same(slugify(text)) ? `${pre}${h1}<h2 id="${id}" class="is-dup">${text}</h2>` : m));
     }
-    page.has_h1 = /<h1[\s>]/.test(content);
     if (page.gallery_path) {
       const dir = path.join(ROOT, decodeURI(page.gallery_path));
       page.gallery = fs.existsSync(dir)
@@ -856,9 +867,15 @@ async function build() {
     writeOut(urlToFile(page.url), frenchSpacing(glossed ? glossarize(html) : html));
 
     if (page.url !== '/404') {
-      const text = content.replace(/<(script|style)[\s\S]*?<\/\1>/g, ' ').replace(/<[^>]+>/g, ' ')
-        .replace(/&[#\w]+;/g, ' ').replace(/\s+/g, ' ').trim();
-      searchIndex.push({ t: page.title, s: modlist ? modlist.title : '', u: page.url, x: text.slice(0, 30000) });
+      // One text per language (site.js searches the visitor's language), French title when there is one
+      const textOf = (h) => h.replace(/<(script|style)[\s\S]*?<\/\1>/g, ' ').replace(/<[^>]+>/g, ' ')
+        .replace(/&[#\w]+;/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 30000);
+      const en = textOf(dropLang(content, 'fr')), fr = textOf(dropLang(content, 'en'));
+      const entry = { t: page.title, s: modlist ? modlist.title : '', u: page.url, x: en };
+      const tFr = FR[page.title] || page.title_fr;
+      if (tFr && tFr !== page.title) entry.f = tFr;
+      if (fr !== en) entry.y = fr;
+      searchIndex.push(entry);
     }
   }
 
