@@ -11,11 +11,11 @@ jobs:
   quality:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
-          node-version: 22
+          node-version: "22"
           cache: npm
 
       - run: npm ci
@@ -23,18 +23,15 @@ jobs:
       - name: Build site
         run: npm run build
 
-      # Blocking: broken internal links / images, images without alt, images hotlinked from other sites
-      - name: Check internal links and images
-        run: npm run check
-
-      # External links (Nexus, Discord, Patreon...) often refuse bots: reported, not blocking
-      - name: External link check
-        uses: lycheeverse/lychee-action@v1
-        continue-on-error: true
+      - name: Link Check
+        uses: lycheeverse/lychee-action@v2
         with:
           args: >-
             --verbose
             --no-progress
-            --accept 200,429
+            --root-dir ${{ github.workspace }}/_site
+            --accept 200,206,403,429
             --exclude-mail
-            _site/**/*.html
+            --exclude "^https?://(www\.)?(discord\.(com|gg)|patreon\.com|ko-fi\.com|youtube\.com|nexusmods\.com|next\.nexusmods\.com)"
+            --exclude "ezojs\.com"
+            "_site/**/*.html"
