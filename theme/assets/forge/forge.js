@@ -51,14 +51,22 @@ async function createForge(canvas, base, emblems) {
   const VS = `#version 300 es
   layout(location=0) in vec3 aP; layout(location=1) in vec3 aN; layout(location=2) in vec2 aT; layout(location=3) in vec4 aK;
   uniform mat4 uM, uVP; uniform vec3 uC, uH;
-  out vec3 vW; out vec3 vN; out vec2 vT; out vec4 vK;
-  void main() { vec4 w = uM * vec4(uC + aP * uH, 1.); vW = w.xyz; vN = mat3(uM) * aN; vT = aT; vK = aK; gl_Position = uVP * w; }`;
+  out vec3 vW; out vec3 vN; out vec2 vT; out vec4 vK; out vec3 vL;
+  void main() { vec4 w = uM * vec4(uC + aP * uH, 1.); vW = w.xyz; vN = mat3(uM) * aN; vT = aT; vK = aK; vL = aP; gl_Position = uVP * w; }`;
   const FS = `#version 300 es
   precision highp float;
-  in vec3 vW; in vec3 vN; in vec2 vT; in vec4 vK;
+  in vec3 vW; in vec3 vN; in vec2 vT; in vec4 vK; in vec3 vL;
   uniform sampler2D uCol, uNor, uMR, uEmb; uniform vec3 uEye, uHeatP; uniform float uHeat, uKind, uHot, uLit, uFront, uAlpha, uGhost, uDim;
   out vec4 o;
   vec3 lin(vec3 c) { return pow(c, vec3(2.2)); }
+  // 3D value noise on the medallion's own coordinates (vL), so the wear stays put as it moves; no seam on the rim
+  float hash(vec3 p) { p = fract(p * vec3(.1031, .1030, .0973)); p += dot(p, p.yxz + 33.33); return fract((p.x + p.y) * p.z); }
+  float vnoise(vec3 p) {
+    vec3 i = floor(p), f = fract(p), u = f * f * (3. - 2. * f);
+    return mix(mix(mix(hash(i), hash(i + vec3(1, 0, 0)), u.x), mix(hash(i + vec3(0, 1, 0)), hash(i + vec3(1, 1, 0)), u.x), u.y),
+               mix(mix(hash(i + vec3(0, 0, 1)), hash(i + vec3(1, 0, 1)), u.x), mix(hash(i + vec3(0, 1, 1)), hash(i + vec3(1, 1, 1)), u.x), u.y), u.z);
+  }
+  float fbm(vec3 p) { float s = 0., a = .5; for (int i = 0; i < 4; i++) { s += a * vnoise(p); p = p * 2.03 + 17.1; a *= .5; } return s / .9375; }
   vec3 perturb(vec3 N, vec3 p, vec2 uv) {
     vec3 dp1 = dFdx(p), dp2 = dFdy(p); vec2 du1 = dFdx(uv), du2 = dFdy(uv);
     vec3 dp2p = cross(dp2, N), dp1p = cross(N, dp1);
@@ -85,10 +93,27 @@ async function createForge(canvas, base, emblems) {
       float h = texture(uEmb, vT).g;
       float hx = texture(uEmb, vT + e.xy).g - texture(uEmb, vT - e.xy).g;
       float hz = texture(uEmb, vT + e.yx).g - texture(uEmb, vT - e.yx).g;
-      if (top > .5) N = normalize(vec3(-hx * 14., 1., -hz * 14.));
       float raised = texture(uEmb, vT).r * top;
+      // Wear: the surface position with the rim's height in radius units (the disc is .03 thick for .13 across).
+      // Rust gathers in the sunk field and on the rim, worst towards the edge; the raised emblem is rubbed bright.
+      vec3 p = vec3(vL.x, vL.y * .23, vL.z);
+      float edge = mix(1., smoothstep(.6, 1., length(vL.xz)), top);
+      float rust = smoothstep(.6, .8, fbm(p * 3.5 + 4.) + .2 * edge - .3 * raised) * (1. - .75 * raised);
+      float pit = smoothstep(.64, .86, .55 * vnoise(p * 46.) + .45 * vnoise(p.zxy * 29. + 5.)) * (1. - raised);   // pitting
+      float crust = vnoise(p * 70. + 3.);                                          // grainy rust scale
+      float grain = fbm(p * 18.);                                                   // hammer marks, tarnish, scratches
+      // bump: two offset samples of a coarser noise, added to the emblem's bevel (top) or the rim's normal
+      vec3 q = p * 9.;
+      float b0 = vnoise(q), bx = (vnoise(q + vec3(.15, 0., 0.)) - b0) * 2., bz = (vnoise(q + vec3(0., 0., .15)) - b0) * 2.;
+      float bump = .45 + .9 * rust * (.6 + crust) + .5 * pit;
+      if (top > .5) N = normalize(vec3(-hx * 14. - bx * bump - pit * (grain - .5) * 1.5, 1., -hz * 14. - bz * bump));
+      else N = normalize(N + vec3(bx, (grain - .5) * .8, bz) * bump * .9);
       alb = mix(vec3(.2, .12, .04), vec3(1., .74, .34), raised + (1. - top) * .45);   // dark sunk field, polished raised emblem
-      rough = mix(.7, .16, raised); metal = mix(.6, 1., raised);
+      alb *= mix(.5, 1.12, grain) * (1. - .6 * pit) * mix(1., .55, smoothstep(.45, .7, fbm(p * 5. + 31.)) * (1. - raised));   // tarnish
+      vec3 rustCol = mix(vec3(.035, .014, .006), vec3(.15, .055, .018), fbm(p * 11. + 9.)) * mix(.55, 1.35, crust);
+      alb = mix(alb, rustCol, rust);
+      rough = mix(.7, .16, raised) + .18 * (grain - .5) * (1. - raised) + .1 * grain * raised;
+      rough = mix(rough, .93, rust); metal = mix(mix(.6, 1., raised), .12, rust);
       emit = mix(vec3(.9, .18, .02), vec3(2.4, 1.3, .45), h) * uHot * uHot;   // still glowing from the forge
       // uGhost: the seal behind The Forge's copy keeps only the raised emblem, solid but darkened (uDim) so the
       // copy over it stays readable; the flat field and the rim turn clear, so the gaps show what is behind
