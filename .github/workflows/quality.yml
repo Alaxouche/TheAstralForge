@@ -31,7 +31,6 @@ jobs:
             --no-progress
             --root-dir ${{ github.workspace }}/_site
             --accept 200,206,403,429
-            --exclude-mail
             --exclude "^https?://(www\.)?(discord\.(com|gg)|patreon\.com|ko-fi\.com|youtube\.com|nexusmods\.com|next\.nexusmods\.com)"
             --exclude "ezojs\.com"
             "_site/**/*.html"
